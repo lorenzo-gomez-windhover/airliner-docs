@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="vc__transmit_8h" kind="file" language="C++">
+    <compoundname>vc_transmit.h</compoundname>
+    <includedby refid="vc__app_8h" local="yes">apps/vc/fsw/src/vc_app.h</includedby>
+    <invincdepgraph>
+      <node id="405">
+        <label>apps/vc/fsw/src/vc_app.c</label>
+        <link refid="vc__app_8c"/>
+      </node>
+      <node id="404">
+        <label>apps/vc/fsw/src/vc_app.h</label>
+        <link refid="vc__app_8h"/>
+        <childnode refid="405" relation="include">
+        </childnode>
+        <childnode refid="406" relation="include">
+        </childnode>
+      </node>
+      <node id="406">
+        <label>apps/vc/fsw/src/vc_cmds.c</label>
+        <link refid="vc__cmds_8c"/>
+      </node>
+      <node id="403">
+        <label>apps/vc/fsw/src/vc_transmit.h</label>
+        <link refid="vc_transmit.h"/>
+        <childnode refid="404" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="vc__transmit_8h_1acdec9e44678c9eef9e56b34721cf3953" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 VC_Transmit_InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Transmit_InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to initialize custom transmit data structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called on app startup, reload, restart etc to initialize non-zero data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_transmit.h" line="58" column="1"/>
+        <referencedby refid="vc__app_8h_1af16152c39e475235943fd7110a4380f6" compoundref="vc__app_8c" startline="192" endline="221">VC_InitData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__transmit_8h_1a3c5dd9ee3c7e37120aaf13107f79898c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean VC_Transmit_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Transmit_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to initialize all output channels. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called once at initialization and allows the custom layer to provide specific functionality to initialize internal objects. Subsequent calls are made when a new destination is initialized.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_transmit.h" line="79" column="1"/>
+        <referencedby refid="vc__app_8h_1a51c0b9587abab9a9c01d3873824018b1" compoundref="vc__app_8c" startline="264" endline="366">VC_InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__transmit_8h_1ad7315163c2545e257913739e0b1565b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean VC_Transmit_Uninit</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Transmit_Uninit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to uninitialize all output channels. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called in preparation for loading a new configuration, allowing the custom layer to do whatever it needs with the current configuration before reconfiguration, if anything. Also, called in cleanup to close and uninitialize transmit resources.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_transmit.h" line="101" column="1"/>
+        <referencedby refid="vc__app_8h_1a7fd717bb105ffebe4363ca29364a7064" compoundref="vc__app_8c" startline="240" endline="257">VC_CleanupExit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__transmit_8h_1a47e5b346beb565deb781b4f00ecfc382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VC_Transmit_Critical_Cleanup</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Transmit_Critical_Cleanup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to perform any critical cleanup after a failuse. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called in cleanup to close and uninitialize device resources.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_transmit.h" line="139" column="1"/>
+        <referencedby refid="vc__app_8h_1a2f7a601031162e679e3dfadb4e0544cc" compoundref="vc__app_8c" startline="228" endline="233">VC_CleanupCallback</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__transmit_8h_1a1771de8cbc1fa30eceae94b58c15aa28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean VC_Address_Verification</definition>
+        <argsstring>(const char *Address)</argsstring>
+        <name>VC_Address_Verification</name>
+        <param>
+          <type>const char *</type>
+          <declname>Address</declname>
+        </param>
+        <briefdescription>
+<para>Custom function to verify a transmit address. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called to validate an address.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pointer to the address to verify.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_transmit.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="vc__transmit_8h_1af7741f2a0d23937adebaf83f0301c7dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean VC_Update_Destination</definition>
+        <argsstring>(const char *Address, uint16 Port)</argsstring>
+        <name>VC_Update_Destination</name>
+        <param>
+          <type>const char *</type>
+          <declname>Address</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>Port</declname>
+        </param>
+        <briefdescription>
+<para>Custom function to update the transmit destination. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called to validate an address.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>Uninit must be called before the destination can be updated.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the pointer to the address of destination. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the port number to send to.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_transmit.h" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="vc__transmit_8h_1ac56df9fdcead90a9fb23ccc78008649b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 VC_SendData</definition>
+        <argsstring>(uint32 ChannelID, const char *Buffer, uint32 Size)</argsstring>
+        <name>VC_SendData</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>ChannelID</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>Buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+<para>Transmit data using a previously initialized channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function transmits data using a custom transmit resource.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to a buffer containing the data to be sent. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>specifies the size of the data in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+success, returns the number of bytes sent. On error, -1 is returned </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_transmit.h" line="200" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VC_TRANSMIT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VC_TRANSMIT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="vc__transmit_8h_1acdec9e44678c9eef9e56b34721cf3953" kindref="member">VC_Transmit_InitData</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="79"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__transmit_8h_1a3c5dd9ee3c7e37120aaf13107f79898c" kindref="member">VC_Transmit_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__transmit_8h_1ad7315163c2545e257913739e0b1565b4" kindref="member">VC_Transmit_Uninit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="123"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__transmit_8h_1ad7315163c2545e257913739e0b1565b4" kindref="member">VC_Transmit_Uninit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="139"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="vc__transmit_8h_1a47e5b346beb565deb781b4f00ecfc382" kindref="member">VC_Transmit_Critical_Cleanup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="159"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__transmit_8h_1a1771de8cbc1fa30eceae94b58c15aa28" kindref="member">VC_Address_Verification</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Address);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="179"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__transmit_8h_1af7741f2a0d23937adebaf83f0301c7dc" kindref="member">VC_Update_Destination</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Address,<sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/>Port);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="vc__transmit_8h_1ac56df9fdcead90a9fb23ccc78008649b" kindref="member">VC_SendData</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>ChannelID,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>Buffer,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Size);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/vc/fsw/src/vc_transmit.h"/>
+  </compounddef>
+</doxygen>

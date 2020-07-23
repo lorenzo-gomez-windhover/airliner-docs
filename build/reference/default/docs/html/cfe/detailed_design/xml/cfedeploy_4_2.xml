@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_4_2" kind="page">
+    <compoundname>cfedeploy_4_2</compoundname>
+    <title>Sending Commands to the cFE Core and Applications</title>
+    <detaileddescription>
+<para>The following text is from the <computeroutput>readme.txt</computeroutput> file in the <computeroutput>.../tools/cmdUtil</computeroutput> directory:</para><para>cmdUtil is a command line C program that is designed to run on a host computer ( development machine, ground system, test system, etc.. ) and send commands to a CCSDS system over a UDP network socket.</para><para>This utility will format and send a CCSDS command packet over a UDP network socket. It can be used to send commands on a localhost, or a remote system. It is primarily used for cFE ( core Flight Executive ) development and testing.</para><para><heading level="4">Documentation for the cmdUtil Program: </heading>
+</para><para>The following is the help text from cmdUtil:<linebreak/>
+ <verbatim>  cmdUtil -- A CCSDS Command Client.
+      The parameters are:
+      --host : The hostname or IP address to send the command to ( default = localhost)
+      --port : The UDP port to send the command to ( default = 1234 )
+      --pktid : The Packet ID for the command being sent
+      --cmdcode : The command code for the command being sent
+      --endian : BE: Dont swap words, LE: Swap words on packet
+      --half : Add a 16 bit parameter to the packet ( hex or dec )
+      --long : Add a 32 bit parameter to the packet ( hex or dec )
+      --string : Add a fixed length string to the packet
+          The string parameter has the form &quot;NNN:StringData&quot;
+          Where NNN is the length of the parameter in the
+          command, and StringData is the string. So you could put
+          --string=&quot;32:ES_APP&quot; and it will build the string
+          parameter and pad the rest of the 32 bytes with 0&apos;s.
+      --byte : Add an 8 bit parameter to the packet ( hex or dec )
+          This one is not implemented yet, because I will have to
+          pad the other 8 bits..
+ 
+       An example of using this is:
+ 
+  ./cmdUtil --host=localhost --port=1234 --pktid=0x1803 --cmdcode=3 --half=100 --string=&quot;16:ES_APP&quot;</verbatim></para><para>There are a couple of example shell scripts to show how the cmdUtil program can be invoked: <linebreak/>
+ The <computeroutput>to-enable-tlm.sh</computeroutput> is a script that sends a single command to the Telemetry Output (TO) application.</para><para>The user can modify a copy of the <computeroutput>to-enable-tlm.sh</computeroutput> script to include the desired commands to be sent.</para><para>To send the commands, just execute the script at the command prompt like this: <verbatim>  $./to-enable-tlm.sh</verbatim></para><para><hruler/>
+</para><para><heading level="4">IMPORTANT BUG!: </heading>
+</para><para>This program currently does not handle Endianness. The underlying sendUdp function will get the endian option passed to it, but it will swap words regardless of the datatype. The endian option needs to be totally reworked to account for:<linebreak/>
+<orderedlist>
+<listitem><para>Sending on a Little Endian Host to a Big Endian target<linebreak/>
+</para></listitem><listitem><para>Sending on a Big Endian Host to a Little Endian target<linebreak/>
+</para></listitem><listitem><para>( all other combinations.. )<linebreak/>
+</para></listitem><listitem><para>Properly swapping the specific header and data fields ( rather than just the whole packet )<linebreak/>
+</para></listitem></orderedlist>
+</para><para>Right now it works when sending from a Little Endian ( x86 ) to Little Endian ( x86 ) machine ONLY!</para><para>Next: <ref refid="cfedeploy_4_3" kindref="compound">Viewing Telemetry from the cFE Core and Applications</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_4_1" kindref="compound">cFE Table Compiler</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_4" kindref="compound">cFE Tools</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

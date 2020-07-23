@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="rcin__events_8h" kind="file" language="C++">
+    <compoundname>rcin_events.h</compoundname>
+    <includedby refid="rcin__app_8h" local="yes">apps/rcin/fsw/src/rcin_app.h</includedby>
+    <invincdepgraph>
+      <node id="210">
+        <label>apps/rcin/fsw/src/rcin_app.h</label>
+        <link refid="rcin__app_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>apps/rcin/fsw/src/rcin_app.cpp</label>
+        <link refid="rcin__app_8cpp"/>
+      </node>
+      <node id="209">
+        <label>apps/rcin/fsw/src/rcin_events.h</label>
+        <link refid="rcin_events.h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627" prot="public" static="no">
+        <name>RCIN_EventIds_t</name>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2c37a140b16bb30f4b4fa893493b37e2" prot="public">
+          <name>RCIN_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a4de515723ebdf85d106d7c898ab4c2a3" prot="public">
+          <name>RCIN_INIT_INF_EID</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> task has completed initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the application major version defined in <ref refid="rcin__version_8h_1a86571d84f3248b28107106e4175446c9" kindref="member">RCIN_MAJOR_VERSION</ref>. The second <computeroutput>d</computeroutput> field contains the application minor version defined in <ref refid="rcin__version_8h_1a5386a5453a476e0c57d2e4f219429d83" kindref="member">RCIN_MINOR_VERSION</ref>. The third <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="rcin__version_8h_1a9d332ff90a1b0e6093e31b3658cdb7c9" kindref="member">RCIN_REVISION</ref>. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="rcin__platform__cfg_8h_1aba3e02c1b1fbe5039ddcbc9a5b0f74cc" kindref="member">RCIN_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a63adc8cee17caf7fdbc398697f178df4" prot="public">
+          <name>RCIN_CMD_NOOP_EID</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> Task receives a NoOp command.</para><para>The first <computeroutput>u</computeroutput> field contains the application major version defined in <ref refid="rcin__version_8h_1a86571d84f3248b28107106e4175446c9" kindref="member">RCIN_MAJOR_VERSION</ref>. The first <computeroutput>d</computeroutput> field contains the application major version defined in <ref refid="rcin__version_8h_1a86571d84f3248b28107106e4175446c9" kindref="member">RCIN_MAJOR_VERSION</ref>. The second <computeroutput>d</computeroutput> field contains the application minor version defined in <ref refid="rcin__version_8h_1a5386a5453a476e0c57d2e4f219429d83" kindref="member">RCIN_MINOR_VERSION</ref>. The third <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="rcin__version_8h_1a9d332ff90a1b0e6093e31b3658cdb7c9" kindref="member">RCIN_REVISION</ref>. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="rcin__platform__cfg_8h_1aba3e02c1b1fbe5039ddcbc9a5b0f74cc" kindref="member">RCIN_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a6f0dc50fadeba5e0ca4e8dcef266eceb" prot="public">
+          <name>RCIN_SUBSCRIBE_ERR_EID</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> Task fails to subscribe to a message at initialization.</para><para>The first <computeroutput>s</computeroutput> field contains the name of the pipe. The second <computeroutput>s</computeroutput> field contains the macro name of the message. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a65658ac93885de42f0888cdf9e6682cc" prot="public">
+          <name>RCIN_PIPE_INIT_ERR_EID</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to create %s pipe (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to create %s pipe (0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> Task fails to create a CFE Software Bus pipe at initialization.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627aa773c7a422a53ac89ce41308253cd6ad" prot="public">
+          <name>RCIN_CFGTBL_MANAGE_ERR_EID</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a55f9e6ac951e3e2b1ff42787e5f8c57c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Manage</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a3639f95e4f24b1efeecdd49b8d9afdeb" prot="public">
+          <name>RCIN_CFGTBL_GETADDR_ERR_EID</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5891f50f9d13993c93446c5344b2409e" prot="public">
+          <name>RCIN_RCVMSG_ERR_EID</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> Task has had an error reading from a pipe.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2da7cf82fbabab07b5dfd71a40960d79" prot="public">
+          <name>RCIN_MSGID_ERR_EID</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> Task has received an invalid message ID.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 16 bit hexadecimal number is the actual message ID received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5c4160805a2521f794573a69aad7ad90" prot="public">
+          <name>RCIN_CC_ERR_EID</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> Task has received an invalid message ID.</para><para>The u field contains the actual command code received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627af9e166e569ae9df37d5759ff856593ed" prot="public">
+          <name>RCIN_MSGLEN_ERR_EID</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS RCINTask has received a message with an invalid length.</para><para>The first <computeroutput>d</computeroutput> field contains the message ID. The second <computeroutput>d</computeroutput> field contains the command code. The third <computeroutput>d</computeroutput> field contains the actual length. The fourth <computeroutput>d</computeroutput> field contains the expected length. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a01e2fbebb90d43241901ff4943b468b0" prot="public">
+          <name>RCIN_INIT_ERR_EID</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;<ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> - Failed to init register cleanup callback (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;<ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> - Failed to init register cleanup callback (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> has had an error in initialization. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a78cab03b02ab295f3c02f9e13febfee1" prot="public">
+          <name>RCIN_PUBLISHING_INF_EID</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;<ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> is publishing fresh data&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;<ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> is publishing fresh data&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFO</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> is publishing fresh data or previously not publishing fresh data. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627aeeee8564f194e1b3d4b1f5acecbd623f" prot="public">
+          <name>RCIN_NOT_PUBLISHING_ERR_EID</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;<ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> is NOT publishing fresh data&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;<ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> is NOT publishing fresh data&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> is not publishing fresh data. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a15c90e4867ee0cd8fd003969ec9732a8" prot="public">
+          <name>RCIN_EVT_CNT</name>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_events.h" line="51" column="1" bodyfile="apps/rcin/fsw/src/rcin_events.h" bodystart="51" bodyend="262"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RCIN_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RCIN_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2c37a140b16bb30f4b4fa893493b37e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2c37a140b16bb30f4b4fa893493b37e2" kindref="member">RCIN_RESERVED_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a4de515723ebdf85d106d7c898ab4c2a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a4de515723ebdf85d106d7c898ab4c2a3" kindref="member">RCIN_INIT_INF_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a63adc8cee17caf7fdbc398697f178df4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a63adc8cee17caf7fdbc398697f178df4" kindref="member">RCIN_CMD_NOOP_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a6f0dc50fadeba5e0ca4e8dcef266eceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a6f0dc50fadeba5e0ca4e8dcef266eceb" kindref="member">RCIN_SUBSCRIBE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a65658ac93885de42f0888cdf9e6682cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a65658ac93885de42f0888cdf9e6682cc" kindref="member">RCIN_PIPE_INIT_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627aa773c7a422a53ac89ce41308253cd6ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627aa773c7a422a53ac89ce41308253cd6ad" kindref="member">RCIN_CFGTBL_MANAGE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a3639f95e4f24b1efeecdd49b8d9afdeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a3639f95e4f24b1efeecdd49b8d9afdeb" kindref="member">RCIN_CFGTBL_GETADDR_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5891f50f9d13993c93446c5344b2409e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5891f50f9d13993c93446c5344b2409e" kindref="member">RCIN_RCVMSG_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2da7cf82fbabab07b5dfd71a40960d79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2da7cf82fbabab07b5dfd71a40960d79" kindref="member">RCIN_MSGID_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5c4160805a2521f794573a69aad7ad90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5c4160805a2521f794573a69aad7ad90" kindref="member">RCIN_CC_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627af9e166e569ae9df37d5759ff856593ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627af9e166e569ae9df37d5759ff856593ed" kindref="member">RCIN_MSGLEN_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a01e2fbebb90d43241901ff4943b468b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a01e2fbebb90d43241901ff4943b468b0" kindref="member">RCIN_INIT_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a78cab03b02ab295f3c02f9e13febfee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a78cab03b02ab295f3c02f9e13febfee1" kindref="member">RCIN_PUBLISHING_INF_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627aeeee8564f194e1b3d4b1f5acecbd623f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627aeeee8564f194e1b3d4b1f5acecbd623f" kindref="member">RCIN_NOT_PUBLISHING_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a15c90e4867ee0cd8fd003969ec9732a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a15c90e4867ee0cd8fd003969ec9732a8" kindref="member">RCIN_EVT_CNT</ref></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}<sp/><ref refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627" kindref="member">RCIN_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>RCIN_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/rcin/fsw/src/rcin_events.h"/>
+  </compounddef>
+</doxygen>

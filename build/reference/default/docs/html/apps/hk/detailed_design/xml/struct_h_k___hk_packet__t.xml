@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_h_k___hk_packet__t" kind="struct" language="C++" prot="public">
+    <compoundname>HK_HkPacket_t</compoundname>
+    <includes refid="hk__msg_8h" local="no">hk_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_k___hk_packet__t_1ada649bc0f7a46f5559856022faa3ff00" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 HK_HkPacket_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE Software Bus Telemetry Message Header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="82" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_k___hk_packet__t_1a51536f413198ecb9616aadb677a8a805" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 HK_HkPacket_t::CmdCounter</definition>
+        <argsstring></argsstring>
+        <name>CmdCounter</name>
+        <briefdescription>
+<para>Count of valid commands received. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshktlmmnems_1_cfshktlmmnems000001"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_HK_CMDPC</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="84" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a22c7ec88a05f7337aa4693d8a7beeaf8" compoundref="hk__app_8c" startline="471" endline="487">HK_HousekeepingCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_k___hk_packet__t_1a6caa874846161f70ba9a7c5b4748036a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 HK_HkPacket_t::ErrCounter</definition>
+        <argsstring></argsstring>
+        <name>ErrCounter</name>
+        <briefdescription>
+<para>Count of invalid commands received. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshktlmmnems_1_cfshktlmmnems000002"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_HK_CMDEC</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="86" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a22c7ec88a05f7337aa4693d8a7beeaf8" compoundref="hk__app_8c" startline="471" endline="487">HK_HousekeepingCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_k___hk_packet__t_1afb7504078d89c660f33c35c2a6b85b80" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 HK_HkPacket_t::Padding</definition>
+        <argsstring></argsstring>
+        <name>Padding</name>
+        <briefdescription>
+<para>Padding to force 32 bit alignment. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshktlmmnems_1_cfshktlmmnems000003"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_HK_Padding</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="88" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_k___hk_packet__t_1a13ec0e82e1c3a1ec730ca4be0692eb83" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 HK_HkPacket_t::CombinedPacketsSent</definition>
+        <argsstring></argsstring>
+        <name>CombinedPacketsSent</name>
+        <briefdescription>
+<para>Count of combined tlm pkts sent. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshktlmmnems_1_cfshktlmmnems000004"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_HK_CmbPktSent</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="90" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a22c7ec88a05f7337aa4693d8a7beeaf8" compoundref="hk__app_8c" startline="471" endline="487">HK_HousekeepingCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_k___hk_packet__t_1a94934404119555095e342022a5ad3af1" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 HK_HkPacket_t::MissingDataCtr</definition>
+        <argsstring></argsstring>
+        <name>MissingDataCtr</name>
+        <briefdescription>
+<para>Number of times missing data was detected. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshktlmmnems_1_cfshktlmmnems000005"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_HK_MissDataCtr</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="92" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a22c7ec88a05f7337aa4693d8a7beeaf8" compoundref="hk__app_8c" startline="471" endline="487">HK_HousekeepingCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_k___hk_packet__t_1ad52b5b2f38158f48d682767f5d36bc59" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 HK_HkPacket_t::MemPoolHandle</definition>
+        <argsstring></argsstring>
+        <name>MemPoolHandle</name>
+        <briefdescription>
+<para>Memory pool handle used to get mempool diags. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshktlmmnems_1_cfshktlmmnems000006"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_HK_MemPoolHndl</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="94" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a22c7ec88a05f7337aa4693d8a7beeaf8" compoundref="hk__app_8c" startline="471" endline="487">HK_HousekeepingCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="cfshktlm_1_cfshktlm000001"><xreftitle>Name</xreftitle><xrefdescription><para>HK Application housekeeping Packet </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <location file="apps/hk/fsw/src/hk_msg.h" line="81" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="80" bodyend="97"/>
+    <listofallmembers>
+      <member refid="struct_h_k___hk_packet__t_1a51536f413198ecb9616aadb677a8a805" prot="public" virt="non-virtual"><scope>HK_HkPacket_t</scope><name>CmdCounter</name></member>
+      <member refid="struct_h_k___hk_packet__t_1a13ec0e82e1c3a1ec730ca4be0692eb83" prot="public" virt="non-virtual"><scope>HK_HkPacket_t</scope><name>CombinedPacketsSent</name></member>
+      <member refid="struct_h_k___hk_packet__t_1a6caa874846161f70ba9a7c5b4748036a" prot="public" virt="non-virtual"><scope>HK_HkPacket_t</scope><name>ErrCounter</name></member>
+      <member refid="struct_h_k___hk_packet__t_1ad52b5b2f38158f48d682767f5d36bc59" prot="public" virt="non-virtual"><scope>HK_HkPacket_t</scope><name>MemPoolHandle</name></member>
+      <member refid="struct_h_k___hk_packet__t_1a94934404119555095e342022a5ad3af1" prot="public" virt="non-virtual"><scope>HK_HkPacket_t</scope><name>MissingDataCtr</name></member>
+      <member refid="struct_h_k___hk_packet__t_1afb7504078d89c660f33c35c2a6b85b80" prot="public" virt="non-virtual"><scope>HK_HkPacket_t</scope><name>Padding</name></member>
+      <member refid="struct_h_k___hk_packet__t_1ada649bc0f7a46f5559856022faa3ff00" prot="public" virt="non-virtual"><scope>HK_HkPacket_t</scope><name>TlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

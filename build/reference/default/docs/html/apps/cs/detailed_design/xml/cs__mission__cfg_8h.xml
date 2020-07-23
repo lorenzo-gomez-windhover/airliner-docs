@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cs__mission__cfg_8h" kind="file" language="C++">
+    <compoundname>cs_mission_cfg.h</compoundname>
+    <includes local="yes">cfe_mission_cfg.h</includes>
+    <includedby refid="cs__app_8h" local="yes">apps/cs/fsw/src/cs_app.h</includedby>
+    <includedby refid="cs__verify_8h" local="yes">apps/cs/fsw/src/cs_verify.h</includedby>
+    <incdepgraph>
+      <node id="788">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="787">
+        <label>apps/cs/fsw/mission_inc/cs_mission_cfg.h</label>
+        <link refid="cs_mission_cfg.h"/>
+        <childnode refid="788" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="793">
+        <label>apps/cs/fsw/src/cs_cmds.c</label>
+        <link refid="cs__cmds_8c"/>
+      </node>
+      <node id="797">
+        <label>apps/cs/fsw/src/cs_table_cmds.c</label>
+        <link refid="cs__table__cmds_8c"/>
+      </node>
+      <node id="796">
+        <label>apps/cs/fsw/src/cs_memory_cmds.c</label>
+        <link refid="cs__memory__cmds_8c"/>
+      </node>
+      <node id="800">
+        <label>apps/cs/fsw/src/cs_verify.h</label>
+        <link refid="cs__verify_8h"/>
+        <childnode refid="790" relation="include">
+        </childnode>
+      </node>
+      <node id="792">
+        <label>apps/cs/fsw/src/cs_app.c</label>
+        <link refid="cs__app_8c"/>
+      </node>
+      <node id="790">
+        <label>apps/cs/fsw/src/cs_app.h</label>
+        <link refid="cs__app_8h"/>
+        <childnode refid="791" relation="include">
+        </childnode>
+        <childnode refid="792" relation="include">
+        </childnode>
+        <childnode refid="793" relation="include">
+        </childnode>
+        <childnode refid="794" relation="include">
+        </childnode>
+        <childnode refid="795" relation="include">
+        </childnode>
+        <childnode refid="796" relation="include">
+        </childnode>
+        <childnode refid="797" relation="include">
+        </childnode>
+        <childnode refid="798" relation="include">
+        </childnode>
+        <childnode refid="799" relation="include">
+        </childnode>
+      </node>
+      <node id="798">
+        <label>apps/cs/fsw/src/cs_table_processing.c</label>
+        <link refid="cs__table__processing_8c"/>
+      </node>
+      <node id="795">
+        <label>apps/cs/fsw/src/cs_eeprom_cmds.c</label>
+        <link refid="cs__eeprom__cmds_8c"/>
+      </node>
+      <node id="794">
+        <label>apps/cs/fsw/src/cs_compute.c</label>
+        <link refid="cs__compute_8c"/>
+      </node>
+      <node id="799">
+        <label>apps/cs/fsw/src/cs_utils.c</label>
+        <link refid="cs__utils_8c"/>
+      </node>
+      <node id="789">
+        <label>apps/cs/fsw/mission_inc/cs_mission_cfg.h</label>
+        <link refid="cs_mission_cfg.h"/>
+        <childnode refid="790" relation="include">
+        </childnode>
+        <childnode refid="800" relation="include">
+        </childnode>
+      </node>
+      <node id="791">
+        <label>apps/cs/fsw/src/cs_app_cmds.c</label>
+        <link refid="cs__app__cmds_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cs__mission__cfg_8h_1a14685855f5e163ab5ab0105a7e4ff071" prot="public" static="no">
+        <name>CS_DEFAULT_ALGORITHM</name>
+        <initializer><ref refid="cfe__mission__cfg_8h_1ae879cde370a8bb33664d990b2d5b8d17" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_DEFAULT_CRC</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfscscfg_1_cfscscfg000001"><xreftitle>Purpose</xreftitle><xrefdescription><para>default CRC algorithm</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter is the algorithm used by CS to checksum the requested data.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter is limited to either <ref refid="cfe__mission__cfg_8h_1ae879cde370a8bb33664d990b2d5b8d17" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_DEFAULT_CRC</ref>, or <ref refid="cfe__mission__cfg_8h_1aefbb9d92cd44551b03db17d5899ef231" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_CRC_16</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cs/fsw/mission_inc/cs_mission_cfg.h" line="44" column="9" bodyfile="apps/cs/fsw/mission_inc/cs_mission_cfg.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="cs__compute_8h_1a95bd2d2d9d4993241fe4f13dfc67dbc1" compoundref="cs__compute_8c" startline="354" endline="487">CS_ComputeApp</referencedby>
+        <referencedby refid="cs__compute_8h_1aa5b73a5165dbbb9bd49175428e01a9c6" compoundref="cs__compute_8c" startline="45" endline="114">CS_ComputeEepromMemory</referencedby>
+        <referencedby refid="cs__compute_8h_1a6f0219d194905a541c144973bda7c3ab" compoundref="cs__compute_8c" startline="121" endline="347">CS_ComputeTables</referencedby>
+        <referencedby refid="cs__compute_8h_1a5808579790905a4ca75253e2cf1b8a61" compoundref="cs__compute_8c" startline="894" endline="956">CS_OneShotChildTask</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>**<sp/><sp/><sp/>$Id:<sp/>cs_mission_cfg.h<sp/>1.3<sp/>2017/02/16<sp/>15:33:13EST<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Specification<sp/>for<sp/>the<sp/>CFS<sp/>Checksum<sp/>macro<sp/>constants<sp/>that<sp/>can</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/><sp/><sp/>be<sp/>configured<sp/>from<sp/>one<sp/>mission<sp/>to<sp/>another</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**<sp/>References:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.2</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>**<sp/><sp/><sp/>CFS<sp/>Development<sp/>Standards<sp/>Document</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>**<sp/><sp/><sp/>CFS<sp/>CS<sp/>Heritage<sp/>Analysis<sp/>Document</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>**<sp/><sp/><sp/>CFS<sp/>CS<sp/>CDR<sp/>Package</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cs_mission_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cs_mission_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__mission__cfg_8h" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">cfe_mission_cfg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>**<sp/>Macro<sp/>Definitions</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="cs__mission__cfg_8h_1a14685855f5e163ab5ab0105a7e4ff071" refkind="member"><highlight class="preprocessor">#define<sp/>CS_DEFAULT_ALGORITHM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_ES_DEFAULT_CRC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_cs_mission_cfg_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/cs/fsw/mission_inc/cs_mission_cfg.h"/>
+  </compounddef>
+</doxygen>

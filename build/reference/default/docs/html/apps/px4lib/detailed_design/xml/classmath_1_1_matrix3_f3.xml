@@ -1,0 +1,999 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classmath_1_1_matrix3_f3" kind="class" language="C++" prot="public">
+    <compoundname>math::Matrix3F3</compoundname>
+    <derivedcompoundref refid="classmath_1_1_dcm" prot="public" virt="non-virtual">math::Dcm</derivedcompoundref>
+    <includes refid="_matrix3_f3_8hpp" local="no">Matrix3F3.hpp</includes>
+    <innerclass refid="structmath_1_1_matrix3_f3_1_1_rot_lookup__t" prot="public">math::Matrix3F3::RotLookup_t</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428" prot="public" static="no">
+        <name>Rotation_t</name>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428af8945d8a926c6d3cd7d4e4e6612c5351" prot="public">
+          <name>ROTATION_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ac4db37ea00765dd24492eb5bae7b5f6e" prot="public">
+          <name>ROTATION_YAW_45</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a0136cf94857de963dede181e72ad27da" prot="public">
+          <name>ROTATION_YAW_90</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428abf83195704656f536a2023cfb023c411" prot="public">
+          <name>ROTATION_YAW_135</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a89d87cc76d2148d3ec570789296f6728" prot="public">
+          <name>ROTATION_YAW_180</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428aefebca91b63b3c0ec1844636d2a73bef" prot="public">
+          <name>ROTATION_YAW_225</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a95bdf37b3cc5eb56f4611228a625aa6e" prot="public">
+          <name>ROTATION_YAW_270</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428af290e13aa645868ab329446cf5292136" prot="public">
+          <name>ROTATION_YAW_315</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428adcf5d4d3cfa32a62de98deff11123983" prot="public">
+          <name>ROTATION_ROLL_180</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a65a19a8f14655ac725e7d2a364448b3b" prot="public">
+          <name>ROTATION_ROLL_180_YAW_45</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a2c880173d7494db44228202e2a61160a" prot="public">
+          <name>ROTATION_ROLL_180_YAW_90</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a45773ba15b740808df152d3e319226ca" prot="public">
+          <name>ROTATION_ROLL_180_YAW_135</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ac4ab9c3bc94e2231aba3216d07ee6319" prot="public">
+          <name>ROTATION_PITCH_180</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a8164e39310a544846bd88dcfff7d990d" prot="public">
+          <name>ROTATION_ROLL_180_YAW_225</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428aa4522fd5410bbbb3c6d88f509b22582a" prot="public">
+          <name>ROTATION_ROLL_180_YAW_270</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a739d5a1ba37ad9e76ad0b27a05a2f5a9" prot="public">
+          <name>ROTATION_ROLL_180_YAW_315</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a53f6f91d2fa77767ee196fdaffbdd532" prot="public">
+          <name>ROTATION_ROLL_90</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a0fdd719d474998d89ed004b8b256ff8e" prot="public">
+          <name>ROTATION_ROLL_90_YAW_45</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a23bdd6ba3fbc65f2c70f40013976f69b" prot="public">
+          <name>ROTATION_ROLL_90_YAW_90</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a01037cdf021582eae17980cd6ee9d6bd" prot="public">
+          <name>ROTATION_ROLL_90_YAW_135</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ad14222d919f7a5ccf0273734e27ec146" prot="public">
+          <name>ROTATION_ROLL_270</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ad3633ce62ffd1b0d301058b4b7ed2d50" prot="public">
+          <name>ROTATION_ROLL_270_YAW_45</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428adcfda67cce6706b33dba62f9acb2ab0e" prot="public">
+          <name>ROTATION_ROLL_270_YAW_90</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a0cdabe8b2ae9109fcc08c86011ca1bed" prot="public">
+          <name>ROTATION_ROLL_270_YAW_135</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a1ace363e1023f80352adbbd9ddcef159" prot="public">
+          <name>ROTATION_PITCH_90</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a01a4c5e5b0fcbd00fc1b24adb979a528" prot="public">
+          <name>ROTATION_PITCH_270</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a91849284cfe05d48600badaea1443b5a" prot="public">
+          <name>ROTATION_ROLL_270_YAW_270</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a08af7cf5d33e444b5be2ffcfbf713066" prot="public">
+          <name>ROTATION_ROLL_180_PITCH_270</name>
+          <initializer>= 27</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428af7af107a0758223fe805cb28d012b5cd" prot="public">
+          <name>ROTATION_PITCH_90_YAW_180</name>
+          <initializer>= 28</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a8af8df8277558d510636a43b064cdd5d" prot="public">
+          <name>ROTATION_PITCH_90_ROLL_90</name>
+          <initializer>= 29</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ac9b2837631c98de331312f3e49e2a7f9" prot="public">
+          <name>ROTATION_YAW_293_PITCH_68_ROLL_90</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a387d796ca33dc9714591503d48f69762" prot="public">
+          <name>ROTATION_PITCH_90_ROLL_270</name>
+          <initializer>= 31</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a30755e53015c9b6f5cdde5c30dc53b3c" prot="public">
+          <name>ROTATION_PITCH_9_YAW_180</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428acf1ecc21a3f6feace0f4ce5987a1f721" prot="public">
+          <name>ROTATION_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Rotation options enumeration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="16" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" bodystart="16" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmath_1_1_matrix3_f3_1ae88ad91df381ddd6d8f9aad6c66c36d2" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int math::Matrix3F3::SIZE</definition>
+        <argsstring></argsstring>
+        <name>SIZE</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+<para>Number of rows and columns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="63" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classmath_1_1_matrix3_f3_1aa95e76bbb45e0347cf7ffb99edf26ea7" compoundref="_matrix3_f3_8cpp" startline="270" endline="397">Inversed</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1af8de84dd9ba26c5138a21090c5b38881" compoundref="_matrix3_f3_8cpp" startline="422" endline="441">SwapCols</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1afaaaba2b11653cc52510c5188fc0656b" compoundref="_matrix3_f3_8cpp" startline="400" endline="419">SwapRows</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmath_1_1_matrix3_f3_1a01cdf45fcc584a20cc97fd2237c5c0a3" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="structmath_1_1_matrix3_f3_1_1_rot_lookup__t" kindref="compound">RotLookup_t</ref></type>
+        <definition>const Matrix3F3::RotLookup_t Matrix3F3::RotLookup</definition>
+        <argsstring>[]</argsstring>
+        <name>RotLookup</name>
+        <briefdescription>
+<para>Rotation lookup enumeration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="69" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmath_1_1_matrix3_f3_1acb952058734fd92ef2849bec517b5795" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref></type>
+        <definition>Vector3F math::Matrix3F3::nan</definition>
+        <argsstring></argsstring>
+        <name>nan</name>
+        <briefdescription>
+<para>Vector of NaN row data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="66" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classmath_1_1_matrix3_f3_1a1c69f7ff8082cc8b748b2533f3c6c19a" compoundref="_matrix3_f3_8cpp" startline="43" endline="47">Matrix3F3</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1a78727eb0ed819d2114089e710d13a3e7" compoundref="_matrix3_f3_8cpp" startline="66" endline="76">operator[]</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref></type>
+        <definition>Vector3F math::Matrix3F3::data[SIZE]</definition>
+        <argsstring>[SIZE]</argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>Vectors of row data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="371" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" bodystart="371" bodyend="-1"/>
+        <referencedby refid="classmath_1_1_dcm_1a309e9c94c2e1b849e018e7bee193aa84" compoundref="_dcm_8cpp" startline="12" endline="31">math::Dcm::Dcm</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1aae031fa4fb2d3b92ef1503fa95208aaa" compoundref="_matrix3_f3_8cpp" startline="136" endline="153">operator*</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1a6cd5100af2dd5e9d300453418233e6a4" compoundref="_matrix3_f3_8cpp" startline="187" endline="204">operator+</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1a78727eb0ed819d2114089e710d13a3e7" compoundref="_matrix3_f3_8cpp" startline="66" endline="76">operator[]</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1af8de84dd9ba26c5138a21090c5b38881" compoundref="_matrix3_f3_8cpp" startline="422" endline="441">SwapCols</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1afaaaba2b11653cc52510c5188fc0656b" compoundref="_matrix3_f3_8cpp" startline="400" endline="419">SwapRows</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1a271ed938f633b1410c6b7fe872c604fb" compoundref="_matrix3_f3_8cpp" startline="246" endline="265">ToEuler</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1aa540ef8a67d653faf9cd4bec9d23e421" compoundref="_matrix3_f3_8cpp" startline="92" endline="107">Transpose</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f3_1a52ccb50ff0b7b949f2f0780ed6dafe06" compoundref="_matrix3_f3_8cpp" startline="121" endline="132">Zero</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a96cc00a1c4d470f3b1a4754051ecc112" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix3F3::Matrix3F3</definition>
+        <argsstring>()</argsstring>
+        <name>Matrix3F3</name>
+        <briefdescription>
+<para>Matrix Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="83" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="50" bodyend="58"/>
+        <references refid="classmath_1_1_matrix3_f3_1acb952058734fd92ef2849bec517b5795" compoundref="_matrix3_f3_8hpp" startline="66">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a1c69f7ff8082cc8b748b2533f3c6c19a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix3F3::Matrix3F3</definition>
+        <argsstring>(Vector3F m0, Vector3F m1, Vector3F m2)</argsstring>
+        <name>Matrix3F3</name>
+        <param>
+          <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref></type>
+          <declname>m0</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref></type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref></type>
+          <declname>m2</declname>
+        </param>
+        <briefdescription>
+<para>Matrix Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object with passed values.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">m0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector3F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector3F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector3F specifying a row </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="99" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="43" bodyend="47"/>
+        <references refid="classmath_1_1_matrix3_f3_1acb952058734fd92ef2849bec517b5795" compoundref="_matrix3_f3_8hpp" startline="66">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1afbe06b3944b488c253a1d6f5ad9d056f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix3F3::~Matrix3F3</definition>
+        <argsstring>()</argsstring>
+        <name>~Matrix3F3</name>
+        <briefdescription>
+<para>Matrix Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="111" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a78727eb0ed819d2114089e710d13a3e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref> &amp;</type>
+        <definition>Vector3F &amp; Matrix3F3::operator[]</definition>
+        <argsstring>(uint32 i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Index Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the [] behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> specifying a row</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="129" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="66" bodyend="76"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+        <references refid="classmath_1_1_matrix3_f3_1acb952058734fd92ef2849bec517b5795" compoundref="_matrix3_f3_8hpp" startline="66">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a78eb2bdad6f06b1184a5533f728b21b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref></type>
+        <definition>Vector3F Matrix3F3::operator[]</definition>
+        <argsstring>(uint32 i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Index Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the [] behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> specifying a row</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="147" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="79" bodyend="89"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+        <references refid="classmath_1_1_matrix3_f3_1acb952058734fd92ef2849bec517b5795" compoundref="_matrix3_f3_8hpp" startline="66">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1aa540ef8a67d653faf9cd4bec9d23e421" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref></type>
+        <definition>Matrix3F3 Matrix3F3::Transpose</definition>
+        <argsstring>(void)</argsstring>
+        <name>Transpose</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Transpose Matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns this matrix transposed.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="163" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="92" bodyend="107"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a37e3011b644e63f05ec04a7366090e37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref></type>
+        <definition>Vector3F Matrix3F3::operator*</definition>
+        <argsstring>(const Vector3F &amp;vecIn)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref> &amp;</type>
+          <declname>vecIn</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication Operator Override <ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the multiplication behavior when used on this object and a #Vector3F.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vecIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector3F to perform this operation on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the multiplication as #Vector3F </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="198" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="157" bodyend="164"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1aae031fa4fb2d3b92ef1503fa95208aaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref></type>
+        <definition>Matrix3F3 Matrix3F3::operator*</definition>
+        <argsstring>(const Matrix3F3 &amp;matIn)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref> &amp;</type>
+          <declname>matIn</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the multiplication behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">matIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classmath_1_1_matrix3_f3_1a96cc00a1c4d470f3b1a4754051ecc112" kindref="member">Matrix3F3</ref> to perform this operation on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the multiplication </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="216" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="136" bodyend="153"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a83d68ca777d7d45d0ea0b2f40ff3fa3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref></type>
+        <definition>Matrix3F3 Matrix3F3::operator*</definition>
+        <argsstring>(const float &amp;scalar)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+<para>Scalar Multiplication Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the scalar multiplication behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float to perform this operation on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the multiplication </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="234" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="167" bodyend="184"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a6cd5100af2dd5e9d300453418233e6a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref></type>
+        <definition>Matrix3F3 Matrix3F3::operator+</definition>
+        <argsstring>(const Matrix3F3 &amp;matIn) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref> &amp;</type>
+          <declname>matIn</declname>
+        </param>
+        <briefdescription>
+<para>Addition Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the addition behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">matIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classmath_1_1_matrix3_f3_1a96cc00a1c4d470f3b1a4754051ecc112" kindref="member">Matrix3F3</ref> to perform this operation on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the addition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="252" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="187" bodyend="204"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a271ed938f633b1410c6b7fe872c604fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">Vector3F</ref></type>
+        <definition>Vector3F Matrix3F3::ToEuler</definition>
+        <argsstring>(void) const </argsstring>
+        <name>ToEuler</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Convert To <ref refid="classmath_1_1_euler" kindref="compound">Euler</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function computes <ref refid="classmath_1_1_euler" kindref="compound">Euler</ref> values of this matrix.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of <ref refid="classmath_1_1_euler" kindref="compound">Euler</ref> values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="308" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="246" bodyend="265"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a52ccb50ff0b7b949f2f0780ed6dafe06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Matrix3F3::Zero</definition>
+        <argsstring>(void)</argsstring>
+        <name>Zero</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Zero Matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function zeroes out all values of the matrix.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="320" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="121" bodyend="132"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+        <referencedby refid="classmath_1_1_matrix3_f3_1aa95e76bbb45e0347cf7ffb99edf26ea7" compoundref="_matrix3_f3_8cpp" startline="270" endline="397">Inversed</referencedby>
+        <referencedby refid="classmath_1_1_matrix3_f10_1a23a9e966d4a17cfb816d778f29155a0f" compoundref="_matrix3_f10_8cpp" startline="85" endline="104">math::Matrix3F10::operator*</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1aa95e76bbb45e0347cf7ffb99edf26ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref></type>
+        <definition>Matrix3F3 Matrix3F3::Inversed</definition>
+        <argsstring>(void)</argsstring>
+        <name>Inversed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Inverse Matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns this matrix inversed.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Matrix </para></simplesect>
+</para><para>inverse based on LU factorization with partial pivotting </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="337" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="270" bodyend="397"/>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="classmath_1_1_matrix3_f3_1ae88ad91df381ddd6d8f9aad6c66c36d2" compoundref="_matrix3_f3_8hpp" startline="63">SIZE</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="classmath_1_1_matrix3_f3_1a52ccb50ff0b7b949f2f0780ed6dafe06" compoundref="_matrix3_f3_8cpp" startline="121" endline="132">Zero</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1afaaaba2b11653cc52510c5188fc0656b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Matrix3F3::SwapRows</definition>
+        <argsstring>(uint8 a, uint8 b)</argsstring>
+        <name>SwapRows</name>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Swap Matrix Rows. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function swaps the passed rows with each other.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref> specifying a row to swap </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref> specifying the row to swap row a with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="352" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="400" bodyend="419"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+        <references refid="classmath_1_1_matrix3_f3_1ae88ad91df381ddd6d8f9aad6c66c36d2" compoundref="_matrix3_f3_8hpp" startline="63">SIZE</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1af8de84dd9ba26c5138a21090c5b38881" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Matrix3F3::SwapCols</definition>
+        <argsstring>(uint8 a, uint8 b)</argsstring>
+        <name>SwapCols</name>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Swap Matrix Columns. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function swaps the passed columns with each other.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref> specifying a col to swap </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref> specifying the col to swap row a with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="367" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="422" bodyend="441"/>
+        <references refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" compoundref="_matrix3_f3_8hpp" startline="371">data</references>
+        <references refid="classmath_1_1_matrix3_f3_1ae88ad91df381ddd6d8f9aad6c66c36d2" compoundref="_matrix3_f3_8hpp" startline="63">SIZE</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1af56aab5b7b61217ebe33239ce24011fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref></type>
+        <definition>Matrix3F3 Matrix3F3::Identity</definition>
+        <argsstring>(void)</argsstring>
+        <name>Identity</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Identity Matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns an identity matrix of this size.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="179" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="110" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a24f3ba438d2f594d2591d516083fa931" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref></type>
+        <definition>Matrix3F3 Matrix3F3::RotationMatrix</definition>
+        <argsstring>(Matrix3F3::Rotation_t boardRotation)</argsstring>
+        <name>RotationMatrix</name>
+        <param>
+          <type><ref refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428" kindref="member">Matrix3F3::Rotation_t</ref></type>
+          <declname>boardRotation</declname>
+        </param>
+        <briefdescription>
+<para>Rotation Matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns yaw, pitch, and roll values for the specific rotation orientation of the vehicle.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">matIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="classmath_1_1_matrix3_f3_1a96cc00a1c4d470f3b1a4754051ecc112" kindref="member">Matrix3F3</ref> to perform this operation on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+<ref refid="classmath_1_1_euler" kindref="compound">Euler</ref> matrix with roll, pitch, and yaw values. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="271" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="207" bodyend="216"/>
+        <references refid="classmath_1_1_matrix3_f3_1a8394593ca6449e277a0e277a085c2c8e" compoundref="_matrix3_f3_8cpp" startline="220" endline="242">FromEuler</references>
+        <references refid="_matrix3_f3_8hpp_1a739ede18516d2e789c3ca63b8ea6e363" compoundref="_matrix3_f3_8hpp" startline="7">M_DEG_TO_RAD_F</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix3_f3_1a8394593ca6449e277a0e277a085c2c8e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_matrix3_f3" kindref="compound">Matrix3F3</ref></type>
+        <definition>Matrix3F3 Matrix3F3::FromEuler</definition>
+        <argsstring>(float roll, float pitch, float yaw)</argsstring>
+        <name>FromEuler</name>
+        <param>
+          <type>float</type>
+          <declname>roll</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pitch</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>yaw</declname>
+        </param>
+        <briefdescription>
+<para>Generate Matrix From <ref refid="classmath_1_1_euler" kindref="compound">Euler</ref> Values. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns a rotation matrix based on passed <ref refid="classmath_1_1_euler" kindref="compound">Euler</ref> values.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">roll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying roll </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying pitch </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">yaw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying yaw</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="292" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix3F3.cpp" bodystart="220" bodyend="242"/>
+        <referencedby refid="classmath_1_1_matrix3_f3_1a24f3ba438d2f594d2591d516083fa931" compoundref="_matrix3_f3_8cpp" startline="207" endline="216">RotationMatrix</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="78">
+        <label>math::Dcm</label>
+        <link refid="classmath_1_1_dcm"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>math::Matrix3F3</label>
+        <link refid="classmath_1_1_matrix3_f3"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="81">
+        <label>math::Matrix3F3::RotLookup_t</label>
+        <link refid="structmath_1_1_matrix3_f3_1_1_rot_lookup__t"/>
+      </node>
+      <node id="80">
+        <label>math::Vector3F</label>
+        <link refid="classmath_1_1_vector3_f"/>
+      </node>
+      <node id="79">
+        <label>math::Matrix3F3</label>
+        <link refid="classmath_1_1_matrix3_f3"/>
+        <childnode refid="80" relation="usage">
+          <edgelabel>nan</edgelabel>
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="81" relation="usage">
+          <edgelabel>RotLookup</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" line="13" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix3F3.hpp" bodystart="12" bodyend="373"/>
+    <listofallmembers>
+      <member refid="classmath_1_1_matrix3_f3_1a0764ad37d23ca8cd4faf325522efede6" prot="protected" virt="non-virtual"><scope>math::Matrix3F3</scope><name>data</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a8394593ca6449e277a0e277a085c2c8e" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>FromEuler</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1af56aab5b7b61217ebe33239ce24011fe" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>Identity</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1aa95e76bbb45e0347cf7ffb99edf26ea7" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>Inversed</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a96cc00a1c4d470f3b1a4754051ecc112" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>Matrix3F3</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a1c69f7ff8082cc8b748b2533f3c6c19a" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>Matrix3F3</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1acb952058734fd92ef2849bec517b5795" prot="private" virt="non-virtual"><scope>math::Matrix3F3</scope><name>nan</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a37e3011b644e63f05ec04a7366090e37" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>operator*</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1aae031fa4fb2d3b92ef1503fa95208aaa" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>operator*</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a83d68ca777d7d45d0ea0b2f40ff3fa3a" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>operator*</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a6cd5100af2dd5e9d300453418233e6a4" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>operator+</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a78727eb0ed819d2114089e710d13a3e7" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>operator[]</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a78eb2bdad6f06b1184a5533f728b21b9" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>operator[]</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428acf1ecc21a3f6feace0f4ce5987a1f721" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_MAX</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428af8945d8a926c6d3cd7d4e4e6612c5351" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_NONE</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ac4ab9c3bc94e2231aba3216d07ee6319" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_PITCH_180</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a01a4c5e5b0fcbd00fc1b24adb979a528" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_PITCH_270</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a1ace363e1023f80352adbbd9ddcef159" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_PITCH_90</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a387d796ca33dc9714591503d48f69762" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_PITCH_90_ROLL_270</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a8af8df8277558d510636a43b064cdd5d" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_PITCH_90_ROLL_90</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428af7af107a0758223fe805cb28d012b5cd" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_PITCH_90_YAW_180</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a30755e53015c9b6f5cdde5c30dc53b3c" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_PITCH_9_YAW_180</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428adcf5d4d3cfa32a62de98deff11123983" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_180</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a08af7cf5d33e444b5be2ffcfbf713066" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_180_PITCH_270</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a45773ba15b740808df152d3e319226ca" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_180_YAW_135</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a8164e39310a544846bd88dcfff7d990d" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_180_YAW_225</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428aa4522fd5410bbbb3c6d88f509b22582a" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_180_YAW_270</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a739d5a1ba37ad9e76ad0b27a05a2f5a9" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_180_YAW_315</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a65a19a8f14655ac725e7d2a364448b3b" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_180_YAW_45</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a2c880173d7494db44228202e2a61160a" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_180_YAW_90</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ad14222d919f7a5ccf0273734e27ec146" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_270</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a0cdabe8b2ae9109fcc08c86011ca1bed" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_270_YAW_135</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a91849284cfe05d48600badaea1443b5a" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_270_YAW_270</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ad3633ce62ffd1b0d301058b4b7ed2d50" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_270_YAW_45</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428adcfda67cce6706b33dba62f9acb2ab0e" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_270_YAW_90</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a53f6f91d2fa77767ee196fdaffbdd532" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_90</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a01037cdf021582eae17980cd6ee9d6bd" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_90_YAW_135</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a0fdd719d474998d89ed004b8b256ff8e" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_90_YAW_45</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a23bdd6ba3fbc65f2c70f40013976f69b" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_ROLL_90_YAW_90</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>Rotation_t</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428abf83195704656f536a2023cfb023c411" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_YAW_135</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a89d87cc76d2148d3ec570789296f6728" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_YAW_180</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428aefebca91b63b3c0ec1844636d2a73bef" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_YAW_225</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a95bdf37b3cc5eb56f4611228a625aa6e" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_YAW_270</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ac9b2837631c98de331312f3e49e2a7f9" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_YAW_293_PITCH_68_ROLL_90</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428af290e13aa645868ab329446cf5292136" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_YAW_315</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428ac4db37ea00765dd24492eb5bae7b5f6e" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_YAW_45</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ab28bd20ac57c3fc8cdbd912f93e7e428a0136cf94857de963dede181e72ad27da" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ROTATION_YAW_90</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a24f3ba438d2f594d2591d516083fa931" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>RotationMatrix</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a01cdf45fcc584a20cc97fd2237c5c0a3" prot="private" virt="non-virtual"><scope>math::Matrix3F3</scope><name>RotLookup</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1ae88ad91df381ddd6d8f9aad6c66c36d2" prot="private" virt="non-virtual"><scope>math::Matrix3F3</scope><name>SIZE</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1af8de84dd9ba26c5138a21090c5b38881" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>SwapCols</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1afaaaba2b11653cc52510c5188fc0656b" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>SwapRows</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a271ed938f633b1410c6b7fe872c604fb" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>ToEuler</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1aa540ef8a67d653faf9cd4bec9d23e421" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>Transpose</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1a52ccb50ff0b7b949f2f0780ed6dafe06" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>Zero</name></member>
+      <member refid="classmath_1_1_matrix3_f3_1afbe06b3944b488c253a1d6f5ad9d056f" prot="public" virt="non-virtual"><scope>math::Matrix3F3</scope><name>~Matrix3F3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsdsovr" kind="page">
+    <compoundname>cfsdsovr</compoundname>
+    <title>CFS Data Storage Overview</title>
+    <detaileddescription>
+<para>The CFS DS application is responsible for storing messages in files. These files are generally stored on a storage device such as a solid state recorder but they could be stored on any file system. Another application such as CFDP must be used in order to transfer the files created by DS to the ground. The DS software context diagram is shown in Figure DS-1.</para><para><image type="html" name="CFS_DS_Context.jpg">Figure DS-1: Software Context Diagram</image>
+ <linebreak/>
+</para><para>During initialization, DS subscribes to messages from other applications as defined in the Data Storage Filter Table. The Scheduler applicaiton (SCH) sends periodic commands to DS as defined in the SCH Schedule Table which requests housekeeping from DS (note that a mission must define this request in the SCH table). Ground commands come from the Command Ingest task (CI). Messages are routed to DS by the cFE SB application. DS learns of ground updates to the DS tables throught the cFE Table Services application.</para><para>DS defines two tables: <orderedlist>
+<listitem>
+<para>Filter Table - for each message ID, specifies filter scheme, filter parametes and which file or files to write the message to. Note that each message can be written to a maximum of <ref refid="ds__platform__cfg_8h_1ac063a33ce14a4fc12d1d8c1c975432ae" kindref="member">DS_FILTERS_PER_PACKET</ref> destination files.</para><para></para></listitem>
+<listitem>
+<para>File Table - specifies information about each destination file.</para></listitem>
+</orderedlist>
+</para><para>Next: <ref refid="cfsdsopr" kindref="compound">CFS Data Storage Operation</ref> <linebreak/>
+ Prev: <ref refid="cfsdsintro" kindref="compound">CFS Data Storage Introduction</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

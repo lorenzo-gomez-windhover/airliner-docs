@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfstoovr" kind="page">
+    <compoundname>cfstoovr</compoundname>
+    <title>TO Application Overview</title>
+    <detaileddescription>
+<para>The TO Application (TO) application subscribes to and transmits Consultative Committee for Space Data Systems (CCSDS) Space Packet Protocol Telemetry packets from the cFE Software Bus to output media. The specifics of the output media are handled by the platform specific TO custom layer, contained within the build configuration.</para><para><heading level="1">TO Design Overview </heading>
+</para><para><image type="html" name="TO_Context_Diagram.png">TO Context Diagram</image>
+ <linebreak/>
+</para><para><bold>TO</bold> <bold>Activities</bold> </para><para>Process Telemetry</para><para><itemizedlist>
+<listitem><para>Implements prioritized class based filtering to make maximum use of limited bandwidth.</para></listitem><listitem><para>Messages are classified into priority based queues when scheduled by the Scheduler application.</para></listitem><listitem><para>Messages are dequeued by the TO Scheduler and written to the output port as the output port is available to be written to and as messages are available to be dequeued.</para></listitem><listitem><para>Lower priority queues are only served when the higher priority queues are empty.</para></listitem><listitem><para>Telemetry maximum rate groups are defined by the SCH application configuration but can be preempted by higher priority messages.</para></listitem></itemizedlist>
+</para><para><image type="html" name="TO_Priority_Queueing.png">TO Priority Queueing</image>
+ <linebreak/>
+</para><para><image type="html" name="TO_Executive.png">Executive</image>
+ <linebreak/>
+</para><para>The main loop, besides processing commands, calls #TO_Classifier_Run() and #TO_Scheduler_Run() for each channel. Each channel has 1 Classifier, 1 Scheduler, and 1 Output Queue but can have multiple message definitions (aka Message Flows) and Priority Queues. The rate this process executes depends on the rate that the <ref refid="to__msgids_8h_1a9d3a0792716d31c8a6b4a4ed4b8c6cf6" kindref="member">TO_SEND_TLM_MID</ref> message is scheduled at in the Scheduler configuration table. If the TO_SEND_TLM_MID is scheduled at a rate of 2Hz, this function will execute at approximately 500ms intervals.</para><para><image type="html" name="TO_Run_Classifier.png">Run Classifier</image>
+ <linebreak/>
+</para><para>This process sorts the incoming messages into Priority Queues. A message can be routed to one and only one Priority Queue. If you decide to change the Priority Queue assignment, you must either load a new configuration table or send a command to remove the Message Flow and readd the Message Flow with the new Priority Queue assignment. This classifying of messages into Priority Queues is what provides the priority based classification. All messages within a Priority Queue have the same priority. Within a Priority Queue, the order the messages are transmitted is based on the order the message was received in the Message Flow pipe. The purpose of the classification will appear clearer in the next step.</para><para><image type="html" name="TO_Run_Scheduler.png">Run Scheduler</image>
+ <linebreak/>
+</para><para>This process moves messages in a sequential fashion from the highest priority Priority Queue (the first Priority Queue) to the Output Queue. If the Output Queue is not full, it will move messages in a sequential fashion from the next highest priority Priority Queue (the second Priority Queue) to the Output Queue. This will continue until either the Output Queue is full or all Priority Queues are emptied. This will result in the FIFO Output Queue containing highest priority messages first, followed subsequently by lower priority messages.</para><para><bold>TO</bold> <bold>Structure</bold> </para><para>TO consists of 1 to n (configurable) channels and each channel is independent of the other channels. Even if the channels are configured to handle the same message identifier, the channels can handle the the message in different ways. The channels employ an output queue. It is TO&apos;s job is to subscribe to messages from the cFE Software Bus and put them into the appropriate priority queues. Messages are taken from the priority queues in priority order and put onto the output queue where they are sent to the corresponding TO output channel device. <hruler/>
+</para><para>Prev: <ref refid="cfstointro" kindref="compound">TO Application Introduction</ref> <linebreak/>
+ Next: <ref refid="cfstoopr" kindref="compound">TO Application Operation</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

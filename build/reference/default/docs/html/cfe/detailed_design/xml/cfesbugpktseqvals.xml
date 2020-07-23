@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfesbugpktseqvals" kind="page">
+    <compoundname>cfesbugpktseqvals</compoundname>
+    <title>Packet Sequence Values</title>
+    <detaileddescription>
+<para>The software bus populates the packet sequence header field for all telemetry messages that contain a current subscription. The first time a telemetry message with a new Message ID is sent, the sequence counter field in the header is set to a value of one. For subsequent sends of a message, the sequence counter is incremented by one regardless of the number of destinations for the packet. After a rollover condition the sequence counter will be a value of zero for one instance. The sequence counter is incremented in the <ref refid="cfe__sb__api_8c_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API after all the checks have passed prior to the actual sending of the message. This includes the parameter checks, the &apos;no subscribers&apos; check and the memory allocation check. Note: After passing all checks, the count is incremented regardless of whether the destinations are enabled or disabled.</para><para>Alternatively, the <ref refid="cfe__sb__api_8c_1ade2170aac98e2b761332d96e7af88ff1" kindref="member">CFE_SB_PassMsg</ref> API can be used to pass a message without altering the sequence counter provided in the message. This will also not increment the sequence counter stored by the software bus. This method of message delivery is recommended for situations where the sender did not generate the packet, such as a network interface application passing a packet from a remote system to the local software bus.</para><para>The sequence counter for command messages is not altered by the software bus.</para><para>Next: <ref refid="cfesbugmsgpipeerr" kindref="compound">Message Limit Error</ref> <linebreak/>
+ Prev: <ref refid="cfesbugrouting" kindref="compound">Message Routing</ref> <linebreak/>
+ Up To: <ref refid="cfesbugops" kindref="compound">Operation of the SB Software</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

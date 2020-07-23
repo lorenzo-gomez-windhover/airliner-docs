@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_s_c_h___diag_packet__t" kind="struct" language="C++" prot="public">
+    <compoundname>SCH_DiagPacket_t</compoundname>
+    <includes refid="sch__msg_8h" local="no">sch_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_c_h___diag_packet__t_1a3a2bacfee662c8d52108e0c77f20bb12" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 SCH_DiagPacket_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE Software Bus Telemetry Message Header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msg.h" line="232" column="1" bodyfile="apps/sch/fsw/src/sch_msg.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_h___diag_packet__t_1ae6df456ff6d74eb60796f022e14a8272" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SCH_DiagPacket_t::EntryStates[SCH_NUM_STATUS_BYTES_REQD/2]</definition>
+        <argsstring>[SCH_NUM_STATUS_BYTES_REQD/2]</argsstring>
+        <name>EntryStates</name>
+        <briefdescription>
+<para>States of each Schedule Entry. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschtlmmnems_1_cfsschtlmmnems000023"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_EntryStates</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para>Each two bits represents the state for a single entry in Schedule Definition Table. Unused=0, Enabled=1, Disabled=2 MSBs are the lowest numbered entry </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msg.h" line="234" column="1" bodyfile="apps/sch/fsw/src/sch_msg.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c_h___diag_packet__t_1a93cb215dbeda7d00db3cc4871dd28621" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgId_t</ref></type>
+        <definition>CFE_SB_MsgId_t SCH_DiagPacket_t::MsgIDs[SCH_TABLE_ENTRIES]</definition>
+        <argsstring>[SCH_TABLE_ENTRIES]</argsstring>
+        <name>MsgIDs</name>
+        <briefdescription>
+<para>Message ID of msg associated with each entry. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschtlmmnems_1_cfsschtlmmnems000024"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_MsgIDs</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msg.h" line="241" column="1" bodyfile="apps/sch/fsw/src/sch_msg.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="cfsschtlm_1_cfsschtlm000002"><xreftitle>Name</xreftitle><xrefdescription><para>Scheduler Diagnostic Telemetry format </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <location file="apps/sch/fsw/src/sch_msg.h" line="231" column="1" bodyfile="apps/sch/fsw/src/sch_msg.h" bodystart="230" bodyend="244"/>
+    <listofallmembers>
+      <member refid="struct_s_c_h___diag_packet__t_1ae6df456ff6d74eb60796f022e14a8272" prot="public" virt="non-virtual"><scope>SCH_DiagPacket_t</scope><name>EntryStates</name></member>
+      <member refid="struct_s_c_h___diag_packet__t_1a93cb215dbeda7d00db3cc4871dd28621" prot="public" virt="non-virtual"><scope>SCH_DiagPacket_t</scope><name>MsgIDs</name></member>
+      <member refid="struct_s_c_h___diag_packet__t_1a3a2bacfee662c8d52108e0c77f20bb12" prot="public" virt="non-virtual"><scope>SCH_DiagPacket_t</scope><name>TlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

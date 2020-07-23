@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_5_3" kind="page">
+    <compoundname>cfedeploy_5_3</compoundname>
+    <title>Creating the Command and Telemetry Databases</title>
+    <detaileddescription>
+<para>NOTE: The cFE Software Bus contains three commands and two telemetry packets that are needed only when the Software Bus Networking (SBN) application is present in the system. The SBN application is needed only when the standard cFE Software Bus is required to perform interprocessor communication. If the SBN application is not required, a project may want to remove these commands and telemetry packets from the ground system database. If this is the case, the following cFE SB commands may be removed:<itemizedlist>
+<listitem><para>Enable Subscription Reporting</para></listitem><listitem><para>Disable Subscription Reporting</para></listitem><listitem><para>Send Previous Subscriptions The following cFE SB telemetry packets may also be removed:</para></listitem><listitem><para>Subscription Report Packet</para></listitem><listitem><para>Previous Subscriptions Packet</para></listitem></itemizedlist>
+</para><para><orderedlist>
+<listitem>
+<para>In the <computeroutput>&apos;rdl/template&apos;</computeroutput> directory, generate all rdl files using the following perl script: <verbatim>        -&gt; create_rdls &lt;spacecraft&gt;</verbatim> Use <computeroutput>&quot;&quot;</computeroutput> in place of the <computeroutput>spacecraft</computeroutput> if you want it omitted. </para></listitem>
+<listitem>
+<para>Move the generated rdl files from the template directory up one directory to the rdl directory. </para></listitem>
+<listitem>
+<para>Move up to the <computeroutput>&apos;rdl&apos;</computeroutput> directory by entering <computeroutput>&apos;cd ..&apos;</computeroutput> at the command prompt. </para></listitem>
+<listitem>
+<para>Rename the following <computeroutput>&quot;table&quot;</computeroutput> rdls: <verbatim>        mv scx__cpu1_tst_tbl_4002.rdl scx_table_cpu1_tst_tbl_4002p.rdl
+        mv scx__cpu2_tst_tbl_4032.rdl scx_table_cpu2_tst_tbl_4032p.rdl
+        mv scx__cpu3_tst_tbl_4064.rdl scx_table_cpu3_tst_tbl_4064p.rdl</verbatim> </para></listitem>
+<listitem>
+<para>Make the following manual changes in order to ensure that the TST_TBL table rdls will compile:</para><para><itemizedlist>
+<listitem><para>Edit the <computeroutput>scx_table_cpu1_tst_tbl_4002p.rdl</computeroutput> file. <orderedlist>
+<listitem>
+<para>In the file header comments, change the second Packet Application ID: comment from 4002 to 4003 and the hex value from &apos;0FA2&apos; to &apos;0FA3&apos;. </para></listitem>
+<listitem>
+<para>Find the Packet specification for Table 2. The packet specification starts with PACKET Pxxxx APID=yyyy. Change the specification from &quot;P0FA2 APID=4002&quot; to &quot;P0FA3 APID=4003&quot;. </para></listitem>
+<listitem>
+<para>Save the changes and exit the file editor. </para></listitem>
+</orderedlist>
+</para></listitem><listitem><para>Edit the <computeroutput>scx_table_cpu2_tst_tbl_4032p.rdl</computeroutput> file. <orderedlist>
+<listitem>
+<para>In the file header comments, change the second Packet Application ID: comment from 4002 to 4003 and the hex value from &apos;0FA2&apos; to &apos;0FA3&apos;. </para></listitem>
+<listitem>
+<para>Find the Packet specification for Table 2. The packet specification starts with PACKET Pxxxx APID=yyyy. Change the specification from &quot;P0FA2 APID=4002&quot; to &quot;P0FA3 APID=4003&quot;. </para></listitem>
+<listitem>
+<para>Save the changes and exit the file editor. </para></listitem>
+</orderedlist>
+</para></listitem><listitem><para>Edit the <computeroutput>scx_table_cpu3_tst_tbl_4064p.rdl</computeroutput> file. <orderedlist>
+<listitem>
+<para>In the file header comments, change the second Packet Application ID: comment from 4064 to 4065 and the hex value from &apos;0FE0&apos; to &apos;0FE1&apos;. </para></listitem>
+<listitem>
+<para>Find the Packet specification for Table 2. The packet specification starts with PACKET Pxxxx APID=yyyy. Change the specification from &quot;P0FE0 APID=4064&quot; to &quot;P0FE1 APID=4065&quot;. </para></listitem>
+<listitem>
+<para>Save the changes and exit the file editor. </para></listitem>
+</orderedlist>
+</para></listitem></itemizedlist>
+</para></listitem>
+<listitem>
+<para>Edit the <computeroutput>cfe_shell_tlm.rdl</computeroutput> file to contain the appropriate packets for the CPUs that your mission will support. </para></listitem>
+<listitem>
+<para>Make sure that the <computeroutput>&apos;cfe_user_tlm.rdl&apos;</computeroutput> and <computeroutput>&apos;cfe_user_cmd.rdl&apos;</computeroutput> files contain entries to match the file names in the directory. If they do not, you must edit these files so that they do match the files in the directory. </para></listitem>
+<listitem>
+<para>Compile the command database by entering <computeroutput>&apos;dbcmpcmd&apos;</computeroutput> on the command line. If there were NO errors, proceed to the next step. Otherwise, correct any errors and repeat until a clean compile is achieved. </para></listitem>
+<listitem>
+<para>Load the command database by entering <computeroutput>&apos;dbloadcmd&apos;</computeroutput> on the command line. </para></listitem>
+<listitem>
+<para>Compile the telemetry database by entering <computeroutput>&apos;dbcmptlm&apos;</computeroutput> on the command line. If there were NO errors, proceed to the next step. Otherwise, correct any errors and repeat until a clean compile is achieved. </para></listitem>
+<listitem>
+<para>Load the telemetry database by entering <computeroutput>&apos;dbloadtlm&apos;</computeroutput> on the command line. </para></listitem>
+<listitem>
+<para>Enter the command <computeroutput>&apos;cd ../prc&apos;</computeroutput> and compile all the procs by entering the following command <computeroutput>&quot;stol_compiler \&lt;filename\&gt;&quot;</computeroutput>. </para></listitem>
+<listitem>
+<para>Start or re-start ASIST. If you made changes to the existing databases, you can verify your changes by opening the CMD or TLM Database Browser and selecting the ID that you changed. </para></listitem>
+<listitem>
+<para>Enter the command <computeroutput>&apos;cd template&apos;</computeroutput> and create all the procedures from the templates by entering the command <computeroutput>&apos;create_proc &lt;template filename&gt; &quot;\&lt;scid\&gt;&quot; &quot;\&lt;cpu\&gt;&quot;</computeroutput> for each template file. </para></listitem>
+<listitem>
+<para>Enter the command <computeroutput>&apos;cd ..&apos;</computeroutput> and compile all the procs just generated by entering the command <computeroutput>&quot;stol_compiler \&lt;filename\&gt;&quot;</computeroutput>. </para></listitem>
+</orderedlist>
+Next: <ref refid="cfedeploy_5_4" kindref="compound">Generating the ASIST cFE Pages</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_5_2" kindref="compound">Populating the Local Directory</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_5" kindref="compound">Building the Ground Database and Pages</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

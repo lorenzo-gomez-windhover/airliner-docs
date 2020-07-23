@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__evs__log_8c" kind="file" language="C++">
+    <compoundname>cfe_evs_log.c</compoundname>
+    <includes refid="cfe__evs__task_8h" local="yes">cfe_evs_task.h</includes>
+    <includes refid="cfe__evs__log_8h" local="yes">cfe_evs_log.h</includes>
+    <includes refid="cfe__evs_8h" local="yes">cfe_evs.h</includes>
+    <includes refid="cfe__evs__utils_8h" local="yes">cfe_evs_utils.h</includes>
+    <includes refid="cfe__fs_8h" local="yes">cfe_fs.h</includes>
+    <includes refid="cfe__error_8h" local="yes">cfe_error.h</includes>
+    <includes local="yes">cfe_psp.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="5854">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="5848">
+        <label>stdarg.h</label>
+      </node>
+      <node id="5842">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="5868">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="5873">
+        <label>cfe_evs_verify.h</label>
+        <link refid="cfe__evs__verify_8h"/>
+      </node>
+      <node id="5852">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5874">
+        <label>cfe_evs_events.h</label>
+        <link refid="cfe__evs__events_8h"/>
+      </node>
+      <node id="5839">
+        <label>evs/cfe_evs_log.c</label>
+        <link refid="cfe_evs_log.c"/>
+        <childnode refid="5840" relation="include">
+        </childnode>
+        <childnode refid="5875" relation="include">
+        </childnode>
+        <childnode refid="5864" relation="include">
+        </childnode>
+        <childnode refid="5876" relation="include">
+        </childnode>
+        <childnode refid="5870" relation="include">
+        </childnode>
+        <childnode refid="5861" relation="include">
+        </childnode>
+        <childnode refid="5868" relation="include">
+        </childnode>
+        <childnode refid="5877" relation="include">
+        </childnode>
+      </node>
+      <node id="5875">
+        <label>cfe_evs_log.h</label>
+        <link refid="cfe__evs__log_8h"/>
+        <childnode refid="5866" relation="include">
+        </childnode>
+      </node>
+      <node id="5869">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5858" relation="include">
+        </childnode>
+      </node>
+      <node id="5860">
+        <label>cfe_msgids.h</label>
+      </node>
+      <node id="5849">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="5863">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h"/>
+      </node>
+      <node id="5876">
+        <label>cfe_evs_utils.h</label>
+        <link refid="cfe__evs__utils_8h"/>
+        <childnode refid="5840" relation="include">
+        </childnode>
+      </node>
+      <node id="5865">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+      </node>
+      <node id="5866">
+        <label>cfe_evs_msg.h</label>
+        <link refid="cfe__evs__msg_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5865" relation="include">
+        </childnode>
+        <childnode refid="5844" relation="include">
+        </childnode>
+        <childnode refid="5867" relation="include">
+        </childnode>
+        <childnode refid="5862" relation="include">
+        </childnode>
+      </node>
+      <node id="5850">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="5851" relation="include">
+        </childnode>
+        <childnode refid="5852" relation="include">
+        </childnode>
+        <childnode refid="5853" relation="include">
+        </childnode>
+        <childnode refid="5854" relation="include">
+        </childnode>
+      </node>
+      <node id="5845">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="5844">
+        <label>osapi.h</label>
+        <link refid="osapi_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5845" relation="include">
+        </childnode>
+        <childnode refid="5846" relation="include">
+        </childnode>
+        <childnode refid="5847" relation="include">
+        </childnode>
+        <childnode refid="5850" relation="include">
+        </childnode>
+        <childnode refid="5855" relation="include">
+        </childnode>
+        <childnode refid="5856" relation="include">
+        </childnode>
+        <childnode refid="5857" relation="include">
+        </childnode>
+        <childnode refid="5849" relation="include">
+        </childnode>
+      </node>
+      <node id="5857">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="5877">
+        <label>string.h</label>
+      </node>
+      <node id="5872">
+        <label>private/cfe_evs_log_typedef.h</label>
+        <link refid="cfe__evs__log__typedef_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5866" relation="include">
+        </childnode>
+      </node>
+      <node id="5858">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="5840">
+        <label>cfe_evs_task.h</label>
+        <link refid="cfe__evs__task_8h"/>
+        <childnode refid="5841" relation="include">
+        </childnode>
+        <childnode refid="5872" relation="include">
+        </childnode>
+        <childnode refid="5867" relation="include">
+        </childnode>
+        <childnode refid="5860" relation="include">
+        </childnode>
+        <childnode refid="5862" relation="include">
+        </childnode>
+        <childnode refid="5844" relation="include">
+        </childnode>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5873" relation="include">
+        </childnode>
+        <childnode refid="5864" relation="include">
+        </childnode>
+        <childnode refid="5874" relation="include">
+        </childnode>
+      </node>
+      <node id="5859">
+        <label>cfe_platform_cfg.h</label>
+      </node>
+      <node id="5846">
+        <label>osconfig.h</label>
+      </node>
+      <node id="5855">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="5867">
+        <label>cfe_sb.h</label>
+        <link refid="cfe__sb_8h"/>
+        <childnode refid="5846" relation="include">
+        </childnode>
+        <childnode refid="5868" relation="include">
+        </childnode>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5858" relation="include">
+        </childnode>
+        <childnode refid="5859" relation="include">
+        </childnode>
+        <childnode refid="5869" relation="include">
+        </childnode>
+        <childnode refid="5865" relation="include">
+        </childnode>
+      </node>
+      <node id="5862">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h"/>
+        <childnode refid="5858" relation="include">
+        </childnode>
+        <childnode refid="5863" relation="include">
+        </childnode>
+      </node>
+      <node id="5843">
+        <label>cfe.h</label>
+        <link refid="cfe_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5844" relation="include">
+        </childnode>
+        <childnode refid="5858" relation="include">
+        </childnode>
+        <childnode refid="5859" relation="include">
+        </childnode>
+        <childnode refid="5860" relation="include">
+        </childnode>
+        <childnode refid="5861" relation="include">
+        </childnode>
+        <childnode refid="5862" relation="include">
+        </childnode>
+        <childnode refid="5864" relation="include">
+        </childnode>
+        <childnode refid="5870" relation="include">
+        </childnode>
+        <childnode refid="5867" relation="include">
+        </childnode>
+        <childnode refid="5865" relation="include">
+        </childnode>
+        <childnode refid="5871" relation="include">
+        </childnode>
+        <childnode refid="5868" relation="include">
+        </childnode>
+      </node>
+      <node id="5864">
+        <label>cfe_evs.h</label>
+        <link refid="cfe__evs_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5865" relation="include">
+        </childnode>
+        <childnode refid="5866" relation="include">
+        </childnode>
+        <childnode refid="5844" relation="include">
+        </childnode>
+        <childnode refid="5867" relation="include">
+        </childnode>
+      </node>
+      <node id="5856">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="5870">
+        <label>cfe_fs.h</label>
+        <link refid="cfe__fs_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5865" relation="include">
+        </childnode>
+      </node>
+      <node id="5841">
+        <label>private/cfe_private.h</label>
+        <link refid="cfe__private_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5843" relation="include">
+        </childnode>
+        <childnode refid="5859" relation="include">
+        </childnode>
+      </node>
+      <node id="5871">
+        <label>cfe_tbl.h</label>
+        <link refid="cfe__tbl_8h"/>
+        <childnode refid="5842" relation="include">
+        </childnode>
+        <childnode refid="5865" relation="include">
+        </childnode>
+        <childnode refid="5846" relation="include">
+        </childnode>
+      </node>
+      <node id="5861">
+        <label>cfe_error.h</label>
+        <link refid="cfe__error_8h"/>
+        <childnode refid="5844" relation="include">
+        </childnode>
+      </node>
+      <node id="5851">
+        <label>stdio.h</label>
+      </node>
+      <node id="5847">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="5848" relation="include">
+        </childnode>
+        <childnode refid="5849" relation="include">
+        </childnode>
+      </node>
+      <node id="5853">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cfe__evs__log_8c_1aac7a45832149c0c7b6a3fb078e5afef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EVS_AddLog</definition>
+        <argsstring>(CFE_EVS_Packet_t *EVS_PktPtr)</argsstring>
+        <name>EVS_AddLog</name>
+        <param>
+          <type><ref refid="struct_c_f_e___e_v_s___packet__t" kindref="compound">CFE_EVS_Packet_t</ref> *</type>
+          <declname>EVS_PktPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="evs/cfe_evs_log.c" line="101" column="1" bodyfile="evs/cfe_evs_log.c" bodystart="101" bodyend="153"/>
+        <references refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" compoundref="cfe__evs__task_8c" startline="133">CFE_EVS_GlobalData</references>
+        <references refid="cfe__evs__msg_8h_1aa8fa209fc98c25a0804fd3aa26092ed6" compoundref="cfe__evs__msg_8h" startline="953">CFE_EVS_LOG_DISCARD</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" compoundref="cfe__evs__task_8h" startline="160">CFE_EVS_GlobalData_t::EVS_LogPtr</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" compoundref="cfe__evs__task_8h" startline="168">CFE_EVS_GlobalData_t::EVS_SharedDataMutexID</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a8523c77fdd337b7803c4100b451a1183" compoundref="cfe__evs__task_8h" startline="166">CFE_EVS_GlobalData_t::EVS_TlmPkt</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" compoundref="cfe__evs__log__typedef_8h" startline="33">CFE_EVS_Log_t::LogCount</references>
+        <references refid="struct_c_f_e___e_v_s___tlm_pkt___payload__t_1a7452805f323826a8f0e2bd2c858f1411" compoundref="cfe__evs__msg_8h" startline="1131">CFE_EVS_TlmPkt_Payload_t::LogEnabled</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a60270d09d15e627cc93599a8226f2e6f" compoundref="cfe__evs__log__typedef_8h" startline="37">CFE_EVS_Log_t::LogEntry</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a5963fa70f7aaa43597c50b1eee2beb51" compoundref="cfe__evs__log__typedef_8h" startline="34">CFE_EVS_Log_t::LogFullFlag</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a36fa3babca40d0d3ddaea22c0122c745" compoundref="cfe__evs__log__typedef_8h" startline="35">CFE_EVS_Log_t::LogMode</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1ad122db2a6495cda57466b7adcd818e56" compoundref="cfe__evs__log__typedef_8h" startline="36">CFE_EVS_Log_t::LogOverflowCounter</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" compoundref="cfe__evs__log__typedef_8h" startline="32">CFE_EVS_Log_t::Next</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</references>
+        <references refid="struct_c_f_e___e_v_s___tlm_pkt__t_1a0de6c7a50b2117e44fa21e44f137fc97" compoundref="cfe__evs__msg_8h" startline="1147">CFE_EVS_TlmPkt_t::Payload</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <referencedby refid="cfe__evs__utils_8h_1a4e45b4b485743a0911743e025d71966a" compoundref="cfe__evs__utils_8c" startline="407" endline="452">EVS_SendPacket</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__evs__log_8c_1afb6c5a995d35fcdd25bec6faa6623985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EVS_ClearLog</definition>
+        <argsstring>(void)</argsstring>
+        <name>EVS_ClearLog</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="evs/cfe_evs_log.c" line="166" column="1" bodyfile="evs/cfe_evs_log.c" bodystart="166" bodyend="185"/>
+        <references refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" compoundref="cfe__evs__task_8c" startline="133">CFE_EVS_GlobalData</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" compoundref="cfe__evs__task_8h" startline="160">CFE_EVS_GlobalData_t::EVS_LogPtr</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" compoundref="cfe__evs__task_8h" startline="168">CFE_EVS_GlobalData_t::EVS_SharedDataMutexID</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="common__types_8h" startline="318">FALSE</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" compoundref="cfe__evs__log__typedef_8h" startline="33">CFE_EVS_Log_t::LogCount</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a60270d09d15e627cc93599a8226f2e6f" compoundref="cfe__evs__log__typedef_8h" startline="37">CFE_EVS_Log_t::LogEntry</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a5963fa70f7aaa43597c50b1eee2beb51" compoundref="cfe__evs__log__typedef_8h" startline="34">CFE_EVS_Log_t::LogFullFlag</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1ad122db2a6495cda57466b7adcd818e56" compoundref="cfe__evs__log__typedef_8h" startline="36">CFE_EVS_Log_t::LogOverflowCounter</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" compoundref="cfe__evs__log__typedef_8h" startline="32">CFE_EVS_Log_t::Next</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</references>
+        <referencedby refid="cfe__evs__task_8c_1a03453a917d882866305b6c05b99eb0b1" compoundref="cfe__evs__task_8c" startline="159" endline="257">CFE_EVS_EarlyInit</referencedby>
+        <referencedby refid="cfe__evs__task_8c_1a0cbd223682024ab83cd228752b97b9d6" compoundref="cfe__evs__task_8c" startline="480" endline="704">CFE_EVS_ProcessGroundCommand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__evs__log_8c_1a0cf8e266b4796fe4bbd597df65c6ada1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member">boolean</ref></type>
+        <definition>boolean CFE_EVS_WriteLogFileCmd</definition>
+        <argsstring>(CFE_SB_MsgPayloadPtr_t Payload)</argsstring>
+        <name>CFE_EVS_WriteLogFileCmd</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1a6b281dc368bb649b286691b370417781" kindref="member">CFE_SB_MsgPayloadPtr_t</ref></type>
+          <declname>Payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="evs/cfe_evs_log.c" line="198" column="1" bodyfile="evs/cfe_evs_log.c" bodystart="198" bodyend="290"/>
+        <references refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" compoundref="cfe__evs_8h" startline="124">CFE_EVS_DEBUG</references>
+        <references refid="cfe__evs__events_8h_1a39b65d2ef4d0726ecb0287b898f71931" compoundref="cfe__evs__events_8h" startline="121">CFE_EVS_ERR_CRLOGFILE_EID</references>
+        <references refid="cfe__evs__events_8h_1ad410f65d94a5ea70f5449dae5445b8de" compoundref="cfe__evs__events_8h" startline="105">CFE_EVS_ERR_WRLOGFILE_EID</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" compoundref="cfe__evs_8h" startline="126">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" compoundref="cfe__evs__task_8c" startline="133">CFE_EVS_GlobalData</references>
+        <references refid="cfe__evs__events_8h_1a8b0bab8493f78c6b559faa94acb9331e" compoundref="cfe__evs__events_8h" startline="551">CFE_EVS_WRLOG_EID</references>
+        <references refid="cfe__fs_8h_1a2471e8213157b8ff488b727de747b081" compoundref="cfe__fs_8h" startline="113">CFE_FS_EVS_EVENTLOG_SUBTYPE</references>
+        <references refid="cfe__fs_8h_1aaebc5949ff77f762d6c4896b53033f94" compoundref="cfe__fs__api_8c" startline="108" endline="113">CFE_FS_InitHeader</references>
+        <references refid="cfe__fs_8h_1a7f0315f283029e5ec7ade9fdfd38875d" compoundref="cfe__fs__api_8c" startline="121" endline="185">CFE_FS_WriteHeader</references>
+        <references refid="cfe__sb_8h_1afec4600af61cf4be7c6b979fb249bf8a" compoundref="cfe__sb__util_8c" startline="647" endline="693">CFE_SB_MessageStringGet</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" compoundref="cfe__evs__task_8h" startline="160">CFE_EVS_GlobalData_t::EVS_LogPtr</references>
+        <references refid="cfe__evs__utils_8c_1a8ac1f1e357a5e0bf839910e0ce9469cc" compoundref="cfe__evs__utils_8c" startline="604" endline="647">EVS_SendEvent</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" compoundref="cfe__evs__task_8h" startline="168">CFE_EVS_GlobalData_t::EVS_SharedDataMutexID</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="common__types_8h" startline="318">FALSE</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" compoundref="cfe__evs__log__typedef_8h" startline="33">CFE_EVS_Log_t::LogCount</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a60270d09d15e627cc93599a8226f2e6f" compoundref="cfe__evs__log__typedef_8h" startline="37">CFE_EVS_Log_t::LogEntry</references>
+        <references refid="struct_c_f_e___e_v_s___log_file_cmd___payload__t_1af8a12a9ef1ace4d935475855fbb06f0d" compoundref="cfe__evs__msg_8h" startline="964">CFE_EVS_LogFileCmd_Payload_t::LogFilename</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" compoundref="cfe__evs__log__typedef_8h" startline="32">CFE_EVS_Log_t::Next</references>
+        <references refid="osapi-os-filesys_8h_1af78f50e6ee6c96959e44130dd7956cf6" compoundref="osfileapi_8c" startline="363" endline="415">OS_close</references>
+        <references refid="osapi-os-filesys_8h_1a9e28b3226a066b1ea186650ed36b9b81" compoundref="osfileapi_8c" startline="132" endline="232">OS_creat</references>
+        <references refid="osapi-os-filesys_8h_1ae04bcdb87262ddb051331221f9ee4f3e" compoundref="osapi-os-filesys_8h" startline="177">OS_FS_SUCCESS</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</references>
+        <references refid="osapi-os-filesys_8h_1aa4cff610350a94b341e81af75941aecd" compoundref="osfileapi_8c" startline="463" endline="485">OS_write</references>
+        <references refid="osapi-os-filesys_8h_1aaa52ec5a86bd0722a804220fee1d51c2" compoundref="osapi-os-filesys_8h" startline="129">OS_WRITE_ONLY</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <referencedby refid="cfe__evs__task_8c_1a0cbd223682024ab83cd228752b97b9d6" compoundref="cfe__evs__task_8c" startline="480" endline="704">CFE_EVS_ProcessGroundCommand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__evs__log_8c_1a09106598875f3f8cd5c9e05ae26c7a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member">boolean</ref></type>
+        <definition>boolean CFE_EVS_SetLoggingModeCmd</definition>
+        <argsstring>(CFE_SB_MsgPayloadPtr_t Payload)</argsstring>
+        <name>CFE_EVS_SetLoggingModeCmd</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1a6b281dc368bb649b286691b370417781" kindref="member">CFE_SB_MsgPayloadPtr_t</ref></type>
+          <declname>Payload</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="evs/cfe_evs_log.c" line="303" column="1" bodyfile="evs/cfe_evs_log.c" bodystart="303" bodyend="327"/>
+        <references refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" compoundref="cfe__evs_8h" startline="124">CFE_EVS_DEBUG</references>
+        <references refid="cfe__evs__events_8h_1aeadb4447dc18e7406833bfdd64f47f73" compoundref="cfe__evs__events_8h" startline="646">CFE_EVS_ERR_LOGMODE_EID</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" compoundref="cfe__evs_8h" startline="126">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" compoundref="cfe__evs__task_8c" startline="133">CFE_EVS_GlobalData</references>
+        <references refid="cfe__evs__msg_8h_1aa8fa209fc98c25a0804fd3aa26092ed6" compoundref="cfe__evs__msg_8h" startline="953">CFE_EVS_LOG_DISCARD</references>
+        <references refid="cfe__evs__msg_8h_1a2b9064e806d5387a5124d8e96667c02e" compoundref="cfe__evs__msg_8h" startline="952">CFE_EVS_LOG_OVERWRITE</references>
+        <references refid="cfe__evs__events_8h_1ae488805521add4fc0b992c1120b5e822" compoundref="cfe__evs__events_8h" startline="631">CFE_EVS_LOGMODE_EID</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" compoundref="cfe__evs__task_8h" startline="160">CFE_EVS_GlobalData_t::EVS_LogPtr</references>
+        <references refid="cfe__evs__utils_8c_1a8ac1f1e357a5e0bf839910e0ce9469cc" compoundref="cfe__evs__utils_8c" startline="604" endline="647">EVS_SendEvent</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" compoundref="cfe__evs__task_8h" startline="168">CFE_EVS_GlobalData_t::EVS_SharedDataMutexID</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="common__types_8h" startline="318">FALSE</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a36fa3babca40d0d3ddaea22c0122c745" compoundref="cfe__evs__log__typedef_8h" startline="35">CFE_EVS_Log_t::LogMode</references>
+        <references refid="struct_c_f_e___e_v_s___mode_cmd___payload__t_1af18d50fb79c96bfcdc76222f8386942b" compoundref="cfe__evs__msg_8h" startline="994">CFE_EVS_ModeCmd_Payload_t::Mode</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <referencedby refid="cfe__evs__task_8c_1a0cbd223682024ab83cd228752b97b9d6" compoundref="cfe__evs__task_8c" startline="480" endline="704">CFE_EVS_ProcessGroundCommand</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/>File<sp/>Name:<sp/>cfe_evslog.c</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/>$Id:<sp/>cfe_evs_log.c<sp/>1.11<sp/>2014/08/22<sp/>16:53:23GMT-05:00<sp/>lwalling<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2012,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/>Title:<sp/>Event<sp/>Services<sp/>API<sp/>-<sp/>Log<sp/>Control<sp/>Interfaces</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/>Purpose:<sp/>This<sp/>module<sp/>defines<sp/>the<sp/>top<sp/>level<sp/>functions<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Event<sp/>Services<sp/>Log<sp/>control<sp/>interfaces</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>$Date:<sp/>2014/08/22<sp/>16:53:23GMT-05:00<sp/>$</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>$Revision:<sp/>1.11<sp/>$</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>$Log:<sp/>cfe_evs_log.c<sp/><sp/>$</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Revision<sp/>1.11<sp/>2014/08/22<sp/>16:53:23GMT-05:00<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Change<sp/>signed<sp/>loop<sp/>counters<sp/>to<sp/>unsigned</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Revision<sp/>1.10<sp/>2012/01/13<sp/>12:00:54EST<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Changed<sp/>license<sp/>text<sp/>to<sp/>reflect<sp/>open<sp/>source</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2011/06/01<sp/>17:45:26EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Update<sp/>Add<sp/>Log<sp/>Entry<sp/>comments,<sp/>Write<sp/>Log<sp/>File<sp/>logic<sp/>and<sp/>events,<sp/>Set<sp/>Log<sp/>Mode<sp/>events</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2011/06/01<sp/>10:32:42EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Remove<sp/>unused<sp/>reference<sp/>to<sp/>internal<sp/>ES<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2011/06/01<sp/>10:19:50EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Modify<sp/>function<sp/>CFE_EVS_WriteLogFileCmd()<sp/>to<sp/>match<sp/>prototype</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2011/05/23<sp/>15:57:11EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Change<sp/>startup<sp/>to<sp/>not<sp/>fail<sp/>if<sp/>unable<sp/>to<sp/>create<sp/>event<sp/>log,<sp/>verify<sp/>reset<sp/>area<sp/>size<sp/>and<sp/>event<sp/>log<sp/>contents</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2011/04/05<sp/>16:33:42EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Optimize<sp/>EVS<sp/>use<sp/>of<sp/>string<sp/>functions,<sp/>plus<sp/>other<sp/>performance<sp/>improvements</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2010/10/04<sp/>17:08:18EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Cleaned<sp/>up<sp/>copyright<sp/>symbol.</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2010/09/21<sp/>16:12:12EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>Added<sp/>conditional<sp/>statements<sp/>around<sp/>conditionally-used<sp/>local<sp/>variables.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2009/06/10<sp/>09:12:42EDT<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>Converted<sp/>OS_Mem*<sp/>and<sp/>OS_BSP*<sp/>calls<sp/>to<sp/>CFE_PSP_*</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:12EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/MKS-CFE-PROJECT/fsw/cfe-core/src/evs/project.pj</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>Revision<sp/>1.24<sp/>2007/07/18<sp/>15:47:59EDT<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>Jonathan<sp/>added<sp/>text<sp/>into<sp/>each<sp/>error<sp/>event<sp/>in<sp/>the<sp/>two<sp/>functions<sp/>that<sp/>write<sp/>files<sp/>(WriteLog<sp/>and<sp/>WriteAppData),<sp/>as<sp/>well<sp/>as<sp/>updated<sp/>the<sp/>doxygen<sp/>comments<sp/>in<sp/>the<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>Revision<sp/>1.23<sp/>2007/05/14<sp/>10:26:03EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>Preserve<sp/>the<sp/>EVS<sp/>Local<sp/>event<sp/>log<sp/>on<sp/>a<sp/>processor<sp/>restart:</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>-<sp/>moved<sp/>the<sp/>EVS<sp/>Log<sp/>to<sp/>the<sp/>ES<sp/>reset<sp/>data<sp/>structure</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/>-<sp/>Added<sp/>a<sp/>couple<sp/>of<sp/>EVS<sp/>Log<sp/>related<sp/>variables<sp/>into<sp/>the<sp/>EVS_Log_t<sp/>structure</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">**<sp/>-<sp/>Added<sp/>a<sp/>routine<sp/>to<sp/>the<sp/>EVS<sp/>early<sp/>init<sp/>to<sp/>get<sp/>a<sp/>pointer<sp/>to<sp/>the<sp/>EVS<sp/>Log<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/>-<sp/>Added<sp/>code<sp/>to<sp/>the<sp/>EVS<sp/>housekeeping<sp/>service<sp/>routine<sp/>to<sp/>copy<sp/>Log<sp/>variables<sp/>into<sp/>TLM</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>Revision<sp/>1.22<sp/>2007/04/03<sp/>09:27:29EDT<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="comment">**<sp/>I<sp/>added<sp/>the<sp/>SubType<sp/>to<sp/>the<sp/>cFE<sp/>file<sp/>header<sp/>for<sp/>the<sp/>event<sp/>log<sp/>and<sp/>the<sp/>write<sp/>app<sp/>data<sp/>files<sp/>in<sp/>EVS</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">**<sp/>Revision<sp/>1.21<sp/>2007/03/02<sp/>10:59:57EST<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="comment">**<sp/>The<sp/>names<sp/>of<sp/>the<sp/>command<sp/>functions<sp/>in<sp/>cfe_evs_task.c<sp/>didn&apos;t<sp/>start<sp/>with<sp/>&quot;CFE_&quot;,<sp/>so<sp/>that<sp/>has<sp/>been<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="comment">**<sp/>fixed.</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">**<sp/>Revision<sp/>1.20<sp/>2007/03/01<sp/>11:54:33EST<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="comment">**<sp/>This<sp/>cp<sp/>handles<sp/>issues<sp/>1,6,7,8<sp/>as<sp/>described<sp/>in<sp/>the<sp/>DCR</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">**<sp/>Revision<sp/>1.19<sp/>2006/11/14<sp/>15:02:55EST<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="comment">**<sp/>Removed<sp/>file<sp/>open<sp/>check</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">**<sp/>Revision<sp/>1.18<sp/>2006/10/20<sp/>16:26:59EDT<sp/>kkaudra<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="comment">**<sp/>Added<sp/>cmd<sp/>parameter<sp/>for<sp/>filenames</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">**<sp/>Revision<sp/>1.17<sp/>2006/09/01<sp/>11:17:13EDT<sp/>kkaudra<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="comment">**<sp/>IV&amp;V:Removed<sp/>osapi-os-filesys.h</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">**<sp/>Revision<sp/>1.16<sp/>2006/08/31<sp/>17:50:56EDT<sp/>kkaudra<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="comment">**<sp/>Added<sp/>event<sp/>messages<sp/>to<sp/>set<sp/>log<sp/>mode<sp/>()</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">**<sp/>Revision<sp/>1.15<sp/>2006/06/08<sp/>14:14:53EDT<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="comment">**<sp/>added<sp/>the<sp/>appropriate<sp/>legal<sp/>headers<sp/>to<sp/>all<sp/>of<sp/>the<sp/>evs<sp/>files</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>Files<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__evs__task_8h" kindref="compound">cfe_evs_task.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>EVS<sp/>internal<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__evs__log_8h" kindref="compound">cfe_evs_log.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>EVS<sp/>log<sp/>file<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__evs_8h" kindref="compound">cfe_evs.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>EVS<sp/>API<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__evs__utils_8h" kindref="compound">cfe_evs_utils.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>EVS<sp/>utility<sp/>function<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__fs_8h" kindref="compound">cfe_fs.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>File<sp/>Service<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__error_8h" kindref="compound">cfe_error.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>cFE<sp/>error<sp/>code<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_psp.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>reset<sp/>area<sp/>function<sp/>prototype<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Function<sp/>Prologue</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">**<sp/>Function<sp/>Name:<sp/><sp/><sp/><sp/><sp/><sp/>EVS_AddLog</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">**<sp/>Purpose:<sp/><sp/>This<sp/>routine<sp/>adds<sp/>an<sp/>event<sp/>packet<sp/>to<sp/>the<sp/>internal<sp/>event<sp/>log.</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="98"><highlight class="comment">**<sp/>Assumptions<sp/>and<sp/>Notes:</highlight></codeline>
+<codeline lineno="99"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="cfe__evs__log_8h_1aac7a45832149c0c7b6a3fb078e5afef7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__evs__log_8c_1aac7a45832149c0c7b6a3fb078e5afef7" kindref="member">EVS_AddLog</ref><sp/>(<ref refid="struct_c_f_e___e_v_s___packet__t" kindref="compound">CFE_EVS_Packet_t</ref><sp/>*EVS_PktPtr)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a8523c77fdd337b7803c4100b451a1183" kindref="member">EVS_TlmPkt</ref>.<ref refid="struct_c_f_e___e_v_s___tlm_pkt__t_1a0de6c7a50b2117e44fa21e44f137fc97" kindref="member">Payload</ref>.<ref refid="struct_c_f_e___e_v_s___tlm_pkt___payload__t_1a7452805f323826a8f0e2bd2c858f1411" kindref="member">LogEnabled</ref><sp/>==<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Serialize<sp/>access<sp/>to<sp/>event<sp/>log<sp/>control<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" kindref="member">OS_MutSemTake</ref>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" kindref="member">EVS_SharedDataMutexID</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a5963fa70f7aaa43597c50b1eee2beb51" kindref="member">LogFullFlag</ref><sp/>==<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>)<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a36fa3babca40d0d3ddaea22c0122c745" kindref="member">LogMode</ref><sp/>==<sp/><ref refid="cfe__evs__msg_8h_1aa8fa209fc98c25a0804fd3aa26092ed6" kindref="member">CFE_EVS_LOG_DISCARD</ref>))</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>log<sp/>is<sp/>full<sp/>and<sp/>in<sp/>discard<sp/>mode,<sp/>just<sp/>count<sp/>the<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ad122db2a6495cda57466b7adcd818e56" kindref="member">LogOverflowCounter</ref>++;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a5963fa70f7aaa43597c50b1eee2beb51" kindref="member">LogFullFlag</ref><sp/>==<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>log<sp/>is<sp/>full<sp/>and<sp/>in<sp/>wrap<sp/>mode,<sp/>count<sp/>it<sp/>and<sp/>store<sp/>it<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ad122db2a6495cda57466b7adcd818e56" kindref="member">LogOverflowCounter</ref>++;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>the<sp/>event<sp/>data<sp/>to<sp/>the<sp/>next<sp/>available<sp/>entry<sp/>in<sp/>the<sp/>log<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_PSP_MemCpy(&amp;<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a60270d09d15e627cc93599a8226f2e6f" kindref="member">LogEntry</ref>[<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" kindref="member">Next</ref>],</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EVS_PktPtr,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_f_e___e_v_s___packet__t" kindref="compound">CFE_EVS_Packet_t</ref>));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" kindref="member">Next</ref>++;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" kindref="member">Next</ref><sp/>&gt;=<sp/>CFE_EVS_LOG_MAX)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>is<sp/>important,<sp/>even<sp/>if<sp/>we<sp/>are<sp/>in<sp/>discard<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" kindref="member">Next</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Log<sp/>count<sp/>cannot<sp/>exceed<sp/>the<sp/>number<sp/>of<sp/>entries<sp/>in<sp/>the<sp/>log<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" kindref="member">LogCount</ref><sp/>&lt;<sp/>CFE_EVS_LOG_MAX)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" kindref="member">LogCount</ref>++;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" kindref="member">LogCount</ref><sp/>==<sp/>CFE_EVS_LOG_MAX)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>full<sp/>flag<sp/>and<sp/>log<sp/>count<sp/>are<sp/>somewhat<sp/>redundant<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a5963fa70f7aaa43597c50b1eee2beb51" kindref="member">LogFullFlag</ref><sp/>=<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" kindref="member">OS_MutSemGive</ref>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" kindref="member">EVS_SharedDataMutexID</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>EVS_AddLog<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="157"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Function<sp/>Prologue</highlight></codeline>
+<codeline lineno="158"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="159"><highlight class="comment">**<sp/>Function<sp/>Name:<sp/><sp/><sp/><sp/><sp/><sp/>EVS_ClearLog</highlight></codeline>
+<codeline lineno="160"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="161"><highlight class="comment">**<sp/>Purpose:<sp/><sp/>This<sp/>routine<sp/>clears<sp/>the<sp/>contents<sp/>of<sp/>the<sp/>internal<sp/>event<sp/>log.</highlight></codeline>
+<codeline lineno="162"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="163"><highlight class="comment">**<sp/>Assumptions<sp/>and<sp/>Notes:</highlight></codeline>
+<codeline lineno="164"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="165"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="cfe__evs__log_8h_1afb6c5a995d35fcdd25bec6faa6623985" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__evs__log_8c_1afb6c5a995d35fcdd25bec6faa6623985" kindref="member">EVS_ClearLog</ref><sp/>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Serialize<sp/>access<sp/>to<sp/>event<sp/>log<sp/>control<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" kindref="member">OS_MutSemTake</ref>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" kindref="member">EVS_SharedDataMutexID</ref>);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Clears<sp/>everything<sp/>but<sp/>LogMode<sp/>(overwrite<sp/>vs<sp/>discard)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" kindref="member">Next</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" kindref="member">LogCount</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a5963fa70f7aaa43597c50b1eee2beb51" kindref="member">LogFullFlag</ref><sp/>=<sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ad122db2a6495cda57466b7adcd818e56" kindref="member">LogOverflowCounter</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/>CFE_PSP_MemSet(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a60270d09d15e627cc93599a8226f2e6f" kindref="member">LogEntry</ref>,<sp/>0,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_EVS_LOG_MAX<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_f_e___e_v_s___packet__t" kindref="compound">CFE_EVS_Packet_t</ref>));</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" kindref="member">OS_MutSemGive</ref>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" kindref="member">EVS_SharedDataMutexID</ref>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>EVS_ClearLog<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="189"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Function<sp/>Prologue</highlight></codeline>
+<codeline lineno="190"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="191"><highlight class="comment">**<sp/>Function<sp/>Name:<sp/><sp/><sp/><sp/><sp/><sp/>CFE_EVS_WriteLogFileCmd</highlight></codeline>
+<codeline lineno="192"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="193"><highlight class="comment">**<sp/>Purpose:<sp/><sp/>This<sp/>routine<sp/>writes<sp/>the<sp/>contents<sp/>of<sp/>the<sp/>internal<sp/>event<sp/>log<sp/>to<sp/>a<sp/>file</highlight></codeline>
+<codeline lineno="194"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="195"><highlight class="comment">**<sp/>Assumptions<sp/>and<sp/>Notes:</highlight></codeline>
+<codeline lineno="196"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="197"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="cfe__evs__log_8h_1a0cf8e266b4796fe4bbd597df65c6ada1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="cfe__evs__log_8c_1a0cf8e266b4796fe4bbd597df65c6ada1" kindref="member">CFE_EVS_WriteLogFileCmd</ref><sp/>(<ref refid="cfe__sb_8h_1a6b281dc368bb649b286691b370417781" kindref="member">CFE_SB_MsgPayloadPtr_t</ref><sp/>Payload)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_f_e___e_v_s___log_file_cmd___payload__t" kindref="compound">CFE_EVS_LogFileCmd_Payload_t</ref><sp/>*CmdPtr<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_f_e___e_v_s___log_file_cmd___payload__t" kindref="compound">CFE_EVS_LogFileCmd_Payload_t</ref><sp/>*)Payload;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Result<sp/>=<sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogIndex;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BytesWritten;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogFileHandle;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_c_f_e___f_s___header__t" kindref="compound">CFE_FS_Header_t</ref><sp/>LogFileHdr;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogFilename[OS_MAX_PATH_LEN];</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Serialize<sp/>access<sp/>to<sp/>event<sp/>log<sp/>control<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" kindref="member">OS_MutSemTake</ref>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" kindref="member">EVS_SharedDataMutexID</ref>);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Copy<sp/>the<sp/>commanded<sp/>filename<sp/>into<sp/>local<sp/>buffer<sp/>to<sp/>ensure<sp/>size<sp/>limitation<sp/>and<sp/>to<sp/>allow<sp/>for<sp/>modification<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__sb_8h_1afec4600af61cf4be7c6b979fb249bf8a" kindref="member">CFE_SB_MessageStringGet</ref>(LogFilename,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)CmdPtr-&gt;<ref refid="struct_c_f_e___e_v_s___log_file_cmd___payload__t_1af8a12a9ef1ace4d935475855fbb06f0d" kindref="member">LogFilename</ref>,<sp/>CFE_EVS_DEFAULT_LOG_FILE,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OS_MAX_PATH_LEN,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(CmdPtr-&gt;<ref refid="struct_c_f_e___e_v_s___log_file_cmd___payload__t_1af8a12a9ef1ace4d935475855fbb06f0d" kindref="member">LogFilename</ref>));</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Create<sp/>the<sp/>log<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/>LogFileHandle<sp/>=<sp/><ref refid="osapi-os-filesys_8h_1a9e28b3226a066b1ea186650ed36b9b81" kindref="member">OS_creat</ref>(LogFilename,<sp/><ref refid="osapi-os-filesys_8h_1aaa52ec5a86bd0722a804220fee1d51c2" kindref="member">OS_WRITE_ONLY</ref>);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LogFileHandle<sp/>&lt;<sp/><ref refid="osapi-os-filesys_8h_1ae04bcdb87262ddb051331221f9ee4f3e" kindref="member">OS_FS_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__utils_8c_1a8ac1f1e357a5e0bf839910e0ce9469cc" kindref="member">EVS_SendEvent</ref>(<ref refid="cfe__evs__events_8h_1a39b65d2ef4d0726ecb0287b898f71931" kindref="member">CFE_EVS_ERR_CRLOGFILE_EID</ref>,<sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Write<sp/>Log<sp/>File<sp/>Command<sp/>Error:<sp/>OS_creat<sp/>=<sp/>0x%08X,<sp/>filename<sp/>=<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogFileHandle,<sp/>LogFilename);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>cFE<sp/>file<sp/>header<sp/>for<sp/>an<sp/>event<sp/>log<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__fs_8h_1aaebc5949ff77f762d6c4896b53033f94" kindref="member">CFE_FS_InitHeader</ref>(&amp;LogFileHdr,<sp/></highlight><highlight class="stringliteral">&quot;cFE<sp/>EVS<sp/>Log<sp/>File&quot;</highlight><highlight class="normal">,<sp/><ref refid="cfe__fs_8h_1a2471e8213157b8ff488b727de747b081" kindref="member">CFE_FS_EVS_EVENTLOG_SUBTYPE</ref>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>the<sp/>file<sp/>header<sp/>to<sp/>the<sp/>log<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>BytesWritten<sp/>=<sp/><ref refid="cfe__fs_8h_1a7f0315f283029e5ec7ade9fdfd38875d" kindref="member">CFE_FS_WriteHeader</ref>(LogFileHandle,<sp/>&amp;LogFileHdr);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(BytesWritten<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_f_e___f_s___header__t" kindref="compound">CFE_FS_Header_t</ref>))</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Is<sp/>the<sp/>log<sp/>full?<sp/>--<sp/>Doesn&apos;t<sp/>matter<sp/>if<sp/>wrap<sp/>mode<sp/>is<sp/>enabled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" kindref="member">LogCount</ref><sp/>==<sp/>CFE_EVS_LOG_MAX)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Start<sp/>with<sp/>log<sp/>entry<sp/>that<sp/>will<sp/>be<sp/>overwritten<sp/>next<sp/>(oldest)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogIndex<sp/>=<sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" kindref="member">Next</ref>;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Start<sp/>with<sp/>the<sp/>first<sp/>entry<sp/>in<sp/>the<sp/>log<sp/>(oldest)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Write<sp/>all<sp/>the<sp/>&quot;in-use&quot;<sp/>event<sp/>log<sp/>entries<sp/>to<sp/>the<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" kindref="member">LogCount</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BytesWritten<sp/>=<sp/><ref refid="osapi-os-filesys_8h_1aa4cff610350a94b341e81af75941aecd" kindref="member">OS_write</ref>(LogFileHandle,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a60270d09d15e627cc93599a8226f2e6f" kindref="member">LogEntry</ref>[LogIndex],</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_f_e___e_v_s___packet__t" kindref="compound">CFE_EVS_Packet_t</ref>));</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(BytesWritten<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_f_e___e_v_s___packet__t" kindref="compound">CFE_EVS_Packet_t</ref>))</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogIndex++;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LogIndex<sp/>&gt;=<sp/>CFE_EVS_LOG_MAX)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LogIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__utils_8c_1a8ac1f1e357a5e0bf839910e0ce9469cc" kindref="member">EVS_SendEvent</ref>(<ref refid="cfe__evs__events_8h_1ad410f65d94a5ea70f5449dae5445b8de" kindref="member">CFE_EVS_ERR_WRLOGFILE_EID</ref>,<sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Write<sp/>Log<sp/>File<sp/>Command<sp/>Error:<sp/>OS_write<sp/>=<sp/>0x%08X,<sp/>filename<sp/>=<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)BytesWritten,<sp/>LogFilename);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Process<sp/>command<sp/>handler<sp/>success<sp/>result<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" kindref="member">LogCount</ref>)</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__utils_8c_1a8ac1f1e357a5e0bf839910e0ce9469cc" kindref="member">EVS_SendEvent</ref>(<ref refid="cfe__evs__events_8h_1a8b0bab8493f78c6b559faa94acb9331e" kindref="member">CFE_EVS_WRLOG_EID</ref>,<sp/><ref refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" kindref="member">CFE_EVS_DEBUG</ref>,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Write<sp/>Log<sp/>File<sp/>Command:<sp/>%d<sp/>event<sp/>log<sp/>entries<sp/>written<sp/>to<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" kindref="member">LogCount</ref>,<sp/>LogFilename);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Result<sp/>=<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1af78f50e6ee6c96959e44130dd7956cf6" kindref="member">OS_close</ref>(LogFileHandle);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" kindref="member">OS_MutSemGive</ref>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" kindref="member">EVS_SharedDataMutexID</ref>);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(Result);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>CFE_EVS_WriteLogFileCmd<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="294"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Function<sp/>Prologue</highlight></codeline>
+<codeline lineno="295"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="296"><highlight class="comment">**<sp/>Function<sp/>Name:<sp/><sp/><sp/><sp/><sp/><sp/>CFE_EVS_SetLoggingModeCmd</highlight></codeline>
+<codeline lineno="297"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="298"><highlight class="comment">**<sp/>Purpose:<sp/><sp/>This<sp/>routine<sp/>sets<sp/>the<sp/>internal<sp/>event<sp/>log<sp/>mode.</highlight></codeline>
+<codeline lineno="299"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="300"><highlight class="comment">**<sp/>Assumptions<sp/>and<sp/>Notes:</highlight></codeline>
+<codeline lineno="301"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="302"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="cfe__evs__log_8h_1a09106598875f3f8cd5c9e05ae26c7a2b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="cfe__evs__log_8c_1a09106598875f3f8cd5c9e05ae26c7a2b" kindref="member">CFE_EVS_SetLoggingModeCmd</ref><sp/>(<ref refid="cfe__sb_8h_1a6b281dc368bb649b286691b370417781" kindref="member">CFE_SB_MsgPayloadPtr_t</ref><sp/>Payload)</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_c_f_e___e_v_s___mode_cmd___payload__t" kindref="compound">CFE_EVS_ModeCmd_Payload_t</ref><sp/>*CmdPtr<sp/>=<sp/>(<ref refid="struct_c_f_e___e_v_s___mode_cmd___payload__t" kindref="compound">CFE_EVS_ModeCmd_Payload_t</ref><sp/>*)Payload;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>Status<sp/>=<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((CmdPtr-&gt;<ref refid="struct_c_f_e___e_v_s___mode_cmd___payload__t_1af18d50fb79c96bfcdc76222f8386942b" kindref="member">Mode</ref><sp/>==<sp/><ref refid="cfe__evs__msg_8h_1a2b9064e806d5387a5124d8e96667c02e" kindref="member">CFE_EVS_LOG_OVERWRITE</ref>)<sp/>||<sp/>(CmdPtr-&gt;<ref refid="struct_c_f_e___e_v_s___mode_cmd___payload__t_1af18d50fb79c96bfcdc76222f8386942b" kindref="member">Mode</ref><sp/>==<sp/><ref refid="cfe__evs__msg_8h_1aa8fa209fc98c25a0804fd3aa26092ed6" kindref="member">CFE_EVS_LOG_DISCARD</ref>))</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Serialize<sp/>access<sp/>to<sp/>event<sp/>log<sp/>control<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" kindref="member">OS_MutSemTake</ref>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" kindref="member">EVS_SharedDataMutexID</ref>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" kindref="member">EVS_LogPtr</ref>-&gt;<ref refid="struct_c_f_e___e_v_s___log__t_1a36fa3babca40d0d3ddaea22c0122c745" kindref="member">LogMode</ref><sp/>=<sp/>CmdPtr-&gt;<ref refid="struct_c_f_e___e_v_s___mode_cmd___payload__t_1af18d50fb79c96bfcdc76222f8386942b" kindref="member">Mode</ref>;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" kindref="member">OS_MutSemGive</ref>(<ref refid="cfe__evs__task_8c_1a6c6f629ded9db9bceb4ee95f643669cf" kindref="member">CFE_EVS_GlobalData</ref>.<ref refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" kindref="member">EVS_SharedDataMutexID</ref>);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__utils_8c_1a8ac1f1e357a5e0bf839910e0ce9469cc" kindref="member">EVS_SendEvent</ref>(<ref refid="cfe__evs__events_8h_1ae488805521add4fc0b992c1120b5e822" kindref="member">CFE_EVS_LOGMODE_EID</ref>,<sp/><ref refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" kindref="member">CFE_EVS_DEBUG</ref>,</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Set<sp/>Log<sp/>Mode<sp/>Command:<sp/>Log<sp/>Mode<sp/>=<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)CmdPtr-&gt;<ref refid="struct_c_f_e___e_v_s___mode_cmd___payload__t_1af18d50fb79c96bfcdc76222f8386942b" kindref="member">Mode</ref>);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Status<sp/>=<sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs__utils_8c_1a8ac1f1e357a5e0bf839910e0ce9469cc" kindref="member">EVS_SendEvent</ref>(<ref refid="cfe__evs__events_8h_1aeadb4447dc18e7406833bfdd64f47f73" kindref="member">CFE_EVS_ERR_LOGMODE_EID</ref>,<sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Set<sp/>Log<sp/>Mode<sp/>Command<sp/>Error:<sp/>Log<sp/>Mode<sp/>=<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)CmdPtr-&gt;<ref refid="struct_c_f_e___e_v_s___mode_cmd___payload__t_1af18d50fb79c96bfcdc76222f8386942b" kindref="member">Mode</ref>);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Status;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>CFE_EVS_SetLoggingModeCmd<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>END<sp/>EVSLOG.C<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="evs/cfe_evs_log.c"/>
+  </compounddef>
+</doxygen>

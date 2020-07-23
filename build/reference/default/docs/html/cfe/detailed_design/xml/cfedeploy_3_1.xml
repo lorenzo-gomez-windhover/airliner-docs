@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_3_1" kind="page">
+    <compoundname>cfedeploy_3_1</compoundname>
+    <title>MCP750 / vxWorks 6.4 Platform</title>
+    <detaileddescription>
+<para>On the MCP750/vxWorks 6.4 platform, the cFE Core is built as a dynamic loadable vxWorks module, rather than being linked to the vxWorks kernel/BSP. The cFE core is loaded into the compact flash disk on the MCP750, so it can be started from a vxWorks shell or startup script after the kernel comes up. In order to successfully run the cFE core and cFE Applications on the MCP750, the kernel must have a few items configured to support the cFE</para><para><center> <heading level="4">cFE Core Configuration on the MCP750 PPC Board </heading>
+</center></para><para><center> </center> <center> <bold> cfe-config.mak Settings </bold> </center> <table rows="5" cols="3"><row>
+<entry thead="no"><para><bold>cfe-config.mak variable </bold> </para></entry><entry thead="no"><para><bold>Required selection </bold> </para></entry><entry thead="no"><para><bold>Notes</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>HWARCH </para></entry><entry thead="no"><para>PPC </para></entry></row>
+<row>
+<entry thead="no"><para>PLATFORM </para></entry><entry thead="no"><para>mcp750 </para></entry></row>
+<row>
+<entry thead="no"><para>OS </para></entry><entry thead="no"><para>vxworks6 </para></entry></row>
+<row>
+<entry thead="no"><para>BSP </para></entry><entry thead="no"><para>vxworks6.4 </para></entry></row>
+</table>
+</para><para><center> <heading level="4">File System Mappings on the MCP750 PPC Board </heading>
+</center></para><para><center> </center></para><para>The cFE uses the following file system mappings for the MCP750 PPC Board. The file system mappings are defined in the <computeroutput><ref refid="bsp__voltab_8c" kindref="compound">bsp_voltab.c</ref></computeroutput> file in the <computeroutput>arch/ppc/mcp750/vxworks6.2/bsp</computeroutput> directory:</para><para><center> <bold> OSAL File System Mappings </bold> </center> <table rows="5" cols="5"><row>
+<entry thead="no"><para><bold> cFE &quot;device&quot; </bold> </para></entry><entry thead="no"><para><bold> File System Type </bold> </para></entry><entry thead="no"><para><bold> cFE Path </bold> </para></entry><entry thead="no"><para><bold> Host Path </bold> </para></entry><entry thead="no"><para><bold> Notes </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>/ramdev0 </para></entry><entry thead="no"><para>Real RAM Disk ( vxWorks ) </para></entry><entry thead="no"><para>/ram </para></entry><entry thead="no"><para>RAM:0/ </para></entry><entry thead="no"><para>Created by the cFE Core. Used to store logs, data files. Preserved on a processor reset. </para></entry></row>
+<row>
+<entry thead="no"><para>/eedev0 </para></entry><entry thead="no"><para>File System Mapped ( FS_BASED) </para></entry><entry thead="no"><para>/cf </para></entry><entry thead="no"><para>eep:0/ </para></entry><entry thead="no"><para>The MCP750 Compact Flash disk is used as the Non-Volatile disk for the cFE. It is created/initialized by the BSP and mapped to the cFE in the volume table. </para></entry></row>
+<row>
+<entry thead="no"><para>/ramdev1 - /ramdev5 </para></entry><entry thead="no"><para>Real RAM Disk </para></entry><entry thead="no"><para>N/A </para></entry><entry thead="no"><para>N/A </para></entry><entry thead="no"><para>Unused table entries for applications to create new cFE based RAM disks </para></entry></row>
+<row>
+<entry thead="no"><para>/ssrdev0 - /ssrdev2 </para></entry><entry thead="no"><para>File System Mapped (FS_BASED) </para></entry><entry thead="no"><para>N/A </para></entry><entry thead="no"><para>/ssr:0/SSR1 - /ssr:0/SSR3 </para></entry><entry thead="no"><para>Unused table entries for applications to map Hard Disk device directories to &quot;pseudo&quot; SSR file systems. </para></entry></row>
+</table>
+</para><para><center> <heading level="4">How to configure the vxWorks 6.4 BSP to support the cFE </heading>
+</center></para><para><center> </center></para><para>The vxWorks 6.4 BSP for the MCP750 is built and configured as a Workbench (Eclipse) vxWorks kernel image project. All of the kernel settings are configured through the Graphical User Interface rather than the traditional &quot;config.h&quot; and &quot;configAll.h&quot; files. The vxWorks kernel image project files for the MCP750 in the <computeroutput>arch/ppc/mcp750/vxworks6.4/bsp/bsp-integration</computeroutput> directory. To setup a new vxWorks kernel image, do the following:<linebreak/>
+</para><para><orderedlist>
+<listitem>
+<para>Copy the <computeroutput> arch/ppc/mcp750/vxworks6.4/bsp/bsp-integration/mcp750 </computeroutput> directory to the <computeroutput> WindRiver/vxworks6.4/target/config </computeroutput> directory in the vxworks installation if it is not already present. </para></listitem>
+<listitem>
+<para>Copy the <computeroutput> arch/ppc/mcp750/vxworks6.4/bsp/bsp-integration/mcp750image </computeroutput> to the Workbench (Eclipse) workspace directory. On the cFE development workstation it is located in /opt/workspace. Make sure the file permissions are read and write. The cm system usually makes them read-only. The vxWorks makefiles will fail if the files remain read only. </para></listitem>
+<listitem>
+<para>Start the WindRiver Workbench IDE and import an existing vxWorks 6.x kernel image project, selecting the workspace/mcp750image project file. Now you should be able to configure and build the vxWorks kernel for the MCP750. </para></listitem>
+<listitem>
+<para>An alternative to the Workbench IDE kernel configuration is the “vxprj” command line utility. Vxprj can be used to list, add, or remove vxworks parameters to the kernel image project. It can also be used to build the vxworks kernel images. </para></listitem>
+</orderedlist>
+</para><para>Now that the vxWorks image project is setup, configure the following options for your application:</para><para><orderedlist>
+<listitem>
+<para>In the kernel configuration settings, the USER_RESERVED_MEM macro must be set to be at least as much as the sum of:<linebreak/>
+<computeroutput> #CFE_ES_RESET_AREA_SIZE + (#CFE_ES_RAM_DISK_SECTOR_SIZE * #CFE_ES_RAM_DISK_NUM_SECTORS )+ #CFE_ES_USER_RESERVED_SIZE + 0x100 </computeroutput> <linebreak/>
+( that is just for a few extra variables )<linebreak/>
+</para><para>The #CFE_ES_USER_RESERVED_SIZE can be used to allocate a chunk of memory that gets preserved on a Processor Reset. The cFE Applications can get the address and size of this memory by calling: <linebreak/>
+<computeroutput></computeroutput></para><para><computeroutput> int32 OS_BSPGetUserReservedArea(void *ptrToUserArea, uint32 *SizeOfUserArea); </computeroutput></para><para>The function prototype is in &quot;os_bsp.h&quot;.</para><para></para></listitem>
+<listitem>
+<para>Integrate the support module called cfeSupport.c : This module must be added to the vxWorks BSP. It contains a couple of functions to return the kernel text addresses and it also has the &quot;startCfeCore&quot; routine that will load and start the cFE core. Note: This is already in the vxWorks kernel image project in <computeroutput> arch/ppc/mcp750/vxworks6.4/bsp/bsp-integration/mcp750image </computeroutput> so you should not have to do this step. </para></listitem>
+<listitem>
+<para>Create a non-volatile disk. To support the cFE, there must be a non-volatile disk that contains the cFE Core loadable module, startup script, and cFE apps. For the MCP750 there is a Compact Flash disk in the board. The disk is created in the kernel as device: &quot;CF:0&quot;. This non-volatile disk device must be mapped to the cFE &apos;eedev0&apos; device in the file &quot;bsp_voltab.c&quot; ( the entry should already be in the file and the standalone BSP should already mount the CF disk ). In the event a physical EEPROM disk is not available, a vxWorks ROMFS file system, or a hostfs file system could be used. </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">How to Run the cFE on the MCP750 </heading>
+</center></para><para><center> </center> <orderedlist>
+<listitem>
+<para>Load the kernel. The custom vxWorks kernel is loaded into the MCP750 via TFTP. We use a vxWorks boot image (Rather than the Motorola boot monitor/loader) to boot the MCP750 board, TFTP the &quot;real&quot; kernel to RAM, and execute it. This vxWorks boot image also sets the network settings for the &quot;real&quot; kernel image. On our cFE development system, we keep the loadable vxWorks kernel image in a TFTP directory on the development workstation. So the vxWorks kernel image goes in <computeroutput>/tftpboot/cpu1/cfecpu1.st</computeroutput>. <computeroutput>( $ cp /opt/workspace/mcp750image/default/vxWorks /tftpboot/cpu1/cfecpu1.st )</computeroutput> </para></listitem>
+<listitem>
+<para>Decide what directory will be used to store the cFE Applications and cFE Startup File. In this example, assume that the cFE Applications will be stored in the <computeroutput>/cf:0/apps</computeroutput> directory, which will be mapped to the &quot;/cf/apps&quot; cFE path. Create the &quot;apps&quot; directory on the non-volatile disk: &quot;/eep:0/apps&quot;. </para></listitem>
+<listitem>
+<para>Copy the &quot;cfe-core.o&quot; loadable module into the non-volatile disk. On the MCP750, this is done simply by FTPing the <computeroutput>cfe-core.o</computeroutput> file to the target: <verbatim>        $ ftp 192.168.1.4
+        ftp&gt; username: target
+        ftp&gt; password: password
+        ftp&gt;  cd &quot;CF:0&quot;
+        ftp&gt; cd &quot;apps&quot;
+        ftp&gt; binary
+        ftp&gt; put cfe-core.o</verbatim> </para></listitem>
+<listitem>
+<para>For this example, also assume that the cFE Startup File is named &quot;cfe_es_startup.scr&quot;. Copy the &quot;cfe_es_startup.scr&quot; script into the non-volatile disk &quot;apps&quot; directory, using FTP as well. </para></listitem>
+<listitem>
+<para>Copy, via FTP, all of the cFE Application &quot;.o&quot; files into the non-volatile disk &quot;apps&quot; directory. Again, the apps can be FTPed to the target compact flash disk. </para></listitem>
+<listitem>
+<para>Copy, via FTP, the vxWorks startup script <computeroutput>startup.scr</computeroutput> to the Compact Flash root directory. This startup script contains the command to start the cFE core when vxWorks is finished booting. The <computeroutput>startup.scr</computeroutput> file can be found in the <computeroutput>build/cpux/exe</computeroutput> directory.</para><para>The command in the startup.scr to start the cFE core is:</para><para><verbatim>        </verbatim></para><para>Note the new parameters to the &quot;startCfeCore&quot; function. The second parameter is the image ID. It is an arbitrary integer to help identify which cFE image was booted. In a mission with two banks of EEPROM and two copies of the cFE it can be used to identify or verify the bank that is being used. No other runtime decisions are made based on this parameter. The third parameter is the full cFE path and filename of the cFE Startup File. In this example, the name is the same as the previous build. Once there are two banks of EEPROM in operation, this parameter can be used to select which EEPROM disk is used to startup the cFE Applications. </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">Exception Handling </heading>
+</center></para><para><center> </center></para><para>The <computeroutput>ppc/mcp750/vxWorks 6.4</computeroutput> port will catch all exceptions, log them, and cause a processor reset.</para><para><center> <heading level="4">BSP Panic </heading>
+</center></para><para><center> </center></para><para>If the cFE core startup fails, the generic cFE code will call the #OS_BSPPanic routine. This is a target specific routine. On the MCP750, the default action of the #OS_BSPPanic routine is to exit back to the cFE shell</para><para><center> <heading level="4">Compressed file support </heading>
+</center></para><para><center> </center></para><para>The cFE supports loading compressed cFE Application files. The files must be compressed with the &quot;gzip&quot; utility. An example: &quot;&lt;tt&gt;$ gzip ci.o&lt;/tt&gt;&quot;. This will produce the file &quot;&lt;tt&gt;ci.o.gz&lt;/tt&gt;&quot;. When the cFE code detects the &quot;&lt;tt&gt;.gz&lt;/tt&gt;&quot; file extension, it will uncompress the cFE application when loading it.</para><para>Next: <ref refid="cfedeploy_3_3" kindref="compound">BAE RAD750 / vxWorks 6.4 Platform</ref> <bold>OR</bold> <ref refid="cfedeploy_4" kindref="compound">cFE Tools</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_3" kindref="compound">Target Specific Instructions</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

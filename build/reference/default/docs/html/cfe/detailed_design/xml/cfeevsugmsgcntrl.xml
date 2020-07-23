@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeevsugmsgcntrl" kind="page">
+    <compoundname>cfeevsugmsgcntrl</compoundname>
+    <title>Event Message Control</title>
+    <detaileddescription>
+<para>In order for an application to be serviced by EVS, it must be registered with EVS. EVS provides various commands in order to control the event messages that are generated as software bus messages.</para><para><center><heading level="2">Event Message Control - By Type </heading>
+</center></para><para><center></center></para><para>The highest level of event message control that EVS provides is the ability to enable and disable event message types. As mentioned above, there are four event types. They are:</para><para><orderedlist>
+<listitem>
+<para>DEBUG <linebreak/>
+ </para></listitem>
+<listitem>
+<para>INFORMATION <linebreak/>
+ </para></listitem>
+<listitem>
+<para>ERROR <linebreak/>
+ </para></listitem>
+<listitem>
+<para>CRITICAL <linebreak/>
+ </para></listitem>
+</orderedlist>
+</para><para>When commands are sent to <ref refid="cfe__evs__msg_8h_1a5fe96bd471bcef2e09b98ebc1ca561ac" kindref="member">enable </ref> or <ref refid="cfe__evs__msg_8h_1ad700d9c74fb3622c61b610705c5f90a7" kindref="member">disable </ref> a particular type of event message, ALL event messages of the specified type are affected. Typically, event meesages of type DEBUG are disabled on-orbit. Note that EVS provides the capability to affect multiple types within one command using a bit mask. Note also that the configuration parameter #CFE_EVS_DEFAULT_TYPE_FLAG in the cfe_platform_cfg.h file specifies which event message types are enabled/disabled by default.</para><para><center><heading level="2">Event Message Control - By Application </heading>
+</center></para><para><center></center></para><para>Commands are available to <ref refid="cfe__evs__msg_8h_1a4b2b4fbf2b60e72d1b5b474309b076c7" kindref="member">enable </ref> and <ref refid="cfe__evs__msg_8h_1a8bb6c4eea9175f53d25750ad47c21ef4" kindref="member">disable </ref> the generation of event messages for a particular application. The result is that ALL event messages for the specified Application are affected (i.e. enabled or disabled).</para><para><center><heading level="2">Event Message Control - By Event Type for an Application </heading>
+</center></para><para><center></center></para><para>EVS also provides the capability to <ref refid="cfe__evs__msg_8h_1a29b41d0faceb163a3a8c2e912814ff43" kindref="member">enable </ref> / <ref refid="cfe__evs__msg_8h_1ae45b34a8813bbc0b632d19c6ba71bc17" kindref="member">disable </ref> an event type for a particular application. Note that EVS provides the capability to affect multiple event types within one command using a bit mask.</para><para><center><heading level="2">Event Message Control - Individual Events </heading>
+</center></para><para><center></center></para><para>There are two ways to control the generation of individual events depending on whether the application&apos;s event message has been registered with EVS or not.</para><para><center><heading level="3">Modifying a registered event message filter </heading>
+</center></para><para><center></center></para><para>When an application registers with EVS, the application has the option of specifying the events that it wants to register for filtering along with the <ref refid="cfeevsugmsgfilter" kindref="compound">Event Message Filtering</ref> (only the Binary Filtering Scheme exists currently). Note that applications are limited in the number of events that they can register for filtering (see #CFE_EVS_MAX_EVENT_FILTERS in cfe_platform_cfg.h for the mission defined limit). The filtering method uses a mask to determine if the message is forwarded to the software bus, making it available in telemetry (see <ref refid="cfeevsugmsgfilter" kindref="compound">Event Message Filtering</ref> for a description on filtering). Commands are available to <ref refid="cfe__evs__msg_8h_1ad2ace89952f7a556da6dd8389eed2fe6" kindref="member">modify the filter mask </ref> for any registered event.</para><para>An on-orbit mission, for example, might be experiencing a problem resulting in an application&apos;s event message being repeatedly issued, flooding the downlink. If the event message for the application is registered with EVS, then a command can be issued to set the event message filter to the specified value in order to prevent flooding of the downlink.</para><para><center><heading level="3">Adding/Removing an event message for filtering </heading>
+</center></para><para><center></center></para><para>Commands are also available to add filtering for those events that are not registered for filtering. Once an event is <ref refid="cfe__evs__msg_8h_1aa73089f56b77fa4373f01702025ab215" kindref="member">registered for filtering </ref>, the filter can be modified (see above) or <ref refid="cfe__evs__msg_8h_1a9035f262e62a9e6fa42ae1e1e706e3e2" kindref="member">removed </ref>.</para><para>An on-orbit mission, for example, might be experiencing a problem resulting in a event message being repeatedly issued, flooding the downlink. If the event message was not registered with EVS for filtering then the ground can add (i.e. register) the offending application&apos;s event for filtering (much like an application registers the event during initialization).</para><para>EVS also supports the ability to <ref refid="cfe__evs__msg_8h_1a9035f262e62a9e6fa42ae1e1e706e3e2" kindref="member">remove </ref> (i.e. unregister) an application&apos;s event message. Once it is removed, the event will no longer be filtered. Note that commands issued to disable events by event type, by application or by event type for an application are still valid and could affect this particular event.</para><para>Next: <ref refid="cfeevsugmsgfilter" kindref="compound">Event Message Filtering</ref> <linebreak/>
+ Prev: <ref refid="cfeevsuglog" kindref="compound">Local Event Log</ref> <linebreak/>
+ Up To: <ref refid="cfeevsovr" kindref="compound">cFE Event Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsfmovr" kind="page">
+    <compoundname>cfsfmovr</compoundname>
+    <title>CFS File Manager Overview</title>
+    <detaileddescription>
+<para>The CFS FM application provides onboard file system management services by processing ground commands for copying, moving, and renaming files, decompressing files, creating directories, deleting files and directories, providing file and directory informational telemetry messages, and providing open file and directory listings. The FM software context diagram is shown in Figure FM-1.</para><para><image type="html" name="CFS_FM_Context.jpg">Figure FM-1</image>
+ <linebreak/>
+</para><para>The FM application interfaces with the Command Ingest (CI) application to receive ground commands. See page <ref refid="cfsfmcmds" kindref="compound">CFS File Manager Commands</ref> for a detailed description of the FM ground commands. FM utilizes the Operating System Abstraction Layer (OSAL) API library functions for interfacing with the onboard file systems when processing ground commands. The FM application interfaces with the <ulink url="../sch/index.html">Scheduler (SCH) Application</ulink> for receiving periodic housekeeping requests. Upon receipt of a housekeeping request, FM will send its housekeeping telemetry packets on the Software Bus. Housekeeping telemetry packets are subscribed to by the Housekeeping (HK), Telemetry Output (TO), and Data Storage applications. See page <ref refid="cfsfmtlm" kindref="compound">CFS File Manager Telemetry</ref> for a detailed description of the contents of the FM housekeeping telemetry packet. <linebreak/>
+</para><para>Next: <ref refid="cfsfmopr" kindref="compound">CFS File Manager Operations</ref> <linebreak/>
+ Prev: <ref refid="cfsfmintro" kindref="compound">CFS File Manager Introduction</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

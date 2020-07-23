@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetimeugsource" kind="page">
+    <compoundname>cfetimeugsource</compoundname>
+    <title>Specifying Time Source</title>
+    <detaileddescription>
+<para>TIME configuration provides the ability to specify where the source for time data is originating - either internal or external. In hypothetical system one, the MET is internal. In system two, TIME cannot directly read the MET, therefore time data must be received from an external source.</para><para>This selection also enables a command interface to switch between internal and external input. When commanded to use internal time data, TIME will ignore the external data. However, TIME will continue to use the API function as the trigger to generate a &quot;time at the tone&quot; command packet regardless of the internal/external command selection.</para><para>Set the following definition to TRUE only for TIME servers using an external time data source.</para><para><verbatim>#define CFE_TIME_CFG_SOURCE  TRUE
+</verbatim></para><para>The remainder of this section pertains only to TIME servers configured to accept external time data.</para><para>When configured to accept external time data, TIME requires an additional definition for the type of external data (GPS, MET, spacecraft time, etc.). This selection will enable an API function specific to the selected data type. Regardless of how the time data is received, the receiver need only pass the data to the appropriate API function.</para><para>TIME servers using an external time data source must set one, and only one, of the following to TRUE, for example:</para><para><verbatim>#define CFE_TIME_CFG_SRC_MET   TRUE
+#define CFE_TIME_CFG_SRC_GPS   FALSE
+#define CFE_TIME_CFG_SRC_TIME  FALSE
+</verbatim></para><para>configuration definitions for the particular source.</para><para>If the cfe_platform_cfg.h file contains &quot;#define CFE_TIME_CFG_SOURCE  TRUE&quot; then time is configured to allow switching between internal and external time sources (see <ref refid="cfe__time__msg_8h_1a26b9af41759d4c05178503e6480bc6bd" kindref="member">CFE_TIME_SET_SOURCE_CC</ref>). If this configuration parameter is set to FALSE then the command to set the source will be rejected.</para><para>If this configuration parameter is set to TRUE then ONE and ONLY ONE of the following configuration parameters must also be set TRUE in order to specify the external time source, for example:</para><para><verbatim>#define CFE_TIME_CFG_SRC_MET   TRUE
+#define CFE_TIME_CFG_SRC_GPS   FALSE
+#define CFE_TIME_CFG_SRC_TIME  FALSE
+</verbatim></para><para>Note that Internal MET source depends on available hardware. It may be the local count of tone signals, the contents of a hardware register or an OS specific time function.</para><para>Note also that when configured to use an external time source, commands to set the time will be overwritten.</para><para><simplesect kind="see"><para>#CFE_TIME_CFG_SRC_MET, #CFE_TIME_CFG_SRC_GPS, #CFE_TIME_CFG_SRC_TIME</para></simplesect>
+Next: <ref refid="cfetimeugsignal" kindref="compound">Specifying Time Signal</ref> <linebreak/>
+ Prev: <ref refid="cfetimeugvirtualmet" kindref="compound">Virtual MET</ref> <linebreak/>
+ Up To: <ref refid="cfetimeugconfig" kindref="compound">Time Configuration</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

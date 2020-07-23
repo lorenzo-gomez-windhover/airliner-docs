@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ea__events_8h" kind="file" language="C++">
+    <compoundname>ea_events.h</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498" prot="public" static="no">
+        <name>EA_EventIds_t</name>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a18ccba771a4eb7bb5d707ddc1a79f6ea" prot="public">
+          <name>EA_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498abd169314093ff4ffe69bddf2b99c30af" prot="public">
+          <name>EA_INF_EID</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is a generic information event </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a8197833415a2ec2fc07c43fff7467675" prot="public">
+          <name>EA_INIT_INF_EID</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA Initialized. Version %d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA Initialized. Version %d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS EA Task has completed initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the Application&apos;s Major Version Number The second <computeroutput>d</computeroutput> field contains the Application&apos;s Minor Version Number The third <computeroutput>d</computeroutput> field contains the Application&apos;s Revision Number </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7e114e356d952fda77e4f483655b3d52" prot="public">
+          <name>EA_CMD_INF_EID</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA - Recvd $x cmd (us)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA - Recvd $x cmd (us)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS EA Task has received and processed a command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ab7d65e92cb791febe4fb1d89cb768536" prot="public">
+          <name>EA_INF_APP_START_EID</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;External application started&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;External application started&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an external app has been started. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a9032a183d96fc5b113bfcaf22c81f9f6" prot="public">
+          <name>EA_INF_APP_TERM_EID</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;External application terminated&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;External application terminated&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an external app has been manually stopped. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a5da136f7ea722561f1f07e48d7efedf6" prot="public">
+          <name>EA_APP_ERR_EID</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Specified app does not exist&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Specified app does not exist&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the specified external app is unaccessible or does not exist </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a0b90d591d33f93df21f500994728acc3" prot="public">
+          <name>EA_WARN_APP_UTIL_EID</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;External application exceeded utilization threshold&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;External application exceeded utilization threshold&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the external app has exceeded the utilization threshold specified in platform config </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ad79746919d729ec3e09739cd3306b227" prot="public">
+          <name>EA_ERR_EID</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when TBD </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a6621cb1d9e4724b4037d3d397ffdc2a9" prot="public">
+          <name>EA_INIT_ERR_EID</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS EA Task has had an error in initialization. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ab918f2e36d37103077d358353a351226" prot="public">
+          <name>EA_CMD_ERR_EID</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA - $commandError&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA - $commandError&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS EA Task has had an error processing a command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a653375bf0a4c3333676772489c1cfe4e" prot="public">
+          <name>EA_PIPE_ERR_EID</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA: SB pipe read error (0x%08X), app will exit&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA: SB pipe read error (0x%08X), app will exit&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS EA Task has had an error reading from a pipe. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a3434928959722938b4684f2945ad73b7" prot="public">
+          <name>EA_MSGID_ERR_EID</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA - Recvd invalid $type msgId (0x%04x)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA - Recvd invalid $type msgId (0x%04x)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS EA Task has received an invalid message ID. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ac86d4abeaa57e2cb37effdb0d0cd1d62" prot="public">
+          <name>EA_MSGLEN_ERR_EID</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;EA - Rcvd invalid msgLen: msgId=0x%08X, cmdCode=d, msgLen=d, expectedLen=d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;EA - Rcvd invalid msgLen: msgId=0x%08X, cmdCode=d, msgLen=d, expectedLen=d" </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS EA Task has received a message with a bad length. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7792d40f34cb2dcc07a408a152f7f7da" prot="public">
+          <name>EA_CHILD_TASK_START_EID</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Created child task for app start&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Created child task for app start&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the EA_StartApp function has successfully created a child task to execute the external app. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a2fefc7418c5a8058303722e5f6775f5c" prot="public">
+          <name>EA_CHILD_TASK_START_ERR_EID</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Create child tasked failed. Unable to start external application&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Create child tasked failed. Unable to start external application&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the EA_StartApp function has failed to create a child task to execute the external app. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a496ce398ffda5b7e0cbd8a7b2a7be53e" prot="public">
+          <name>EA_CMD_NOOP_EID</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd NOOP cmd (u), Version d.d.d.d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd NOOP cmd (u), Version d.d.d.d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when EA has performed a noop command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a5df9ff134c0f7041de8db81530cb8820" prot="public">
+          <name>EA_CMD_RESET_EID</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;External application exceeded utilization threshold&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;External application exceeded utilization threshold&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when EA has performed a reset command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7b48bf52628572610b18de7d7c861c34" prot="public">
+          <name>EA_CC_ERR_EID</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid cmd code (u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfseaevents_1_cfseaevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid cmd code (u)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim>    \par Type: ERROR
+
+    \par Cause:
+
+    A command with an invalid command code was received.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a920c6a3bc920c75d1db17bc6bdac855c" prot="public">
+          <name>EA_EVT_CNT</name>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_events.h" line="51" column="1" bodyfile="apps/ea/fsw/src/ea_events.h" bodystart="51" bodyend="291"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EA_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EA_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a18ccba771a4eb7bb5d707ddc1a79f6ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a18ccba771a4eb7bb5d707ddc1a79f6ea" kindref="member">EA_RESERVED_EID</ref><sp/>=<sp/>0,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498abd169314093ff4ffe69bddf2b99c30af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498abd169314093ff4ffe69bddf2b99c30af" kindref="member">EA_INF_EID</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a8197833415a2ec2fc07c43fff7467675" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a8197833415a2ec2fc07c43fff7467675" kindref="member">EA_INIT_INF_EID</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7e114e356d952fda77e4f483655b3d52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7e114e356d952fda77e4f483655b3d52" kindref="member">EA_CMD_INF_EID</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ab7d65e92cb791febe4fb1d89cb768536" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ab7d65e92cb791febe4fb1d89cb768536" kindref="member">EA_INF_APP_START_EID</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a9032a183d96fc5b113bfcaf22c81f9f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a9032a183d96fc5b113bfcaf22c81f9f6" kindref="member">EA_INF_APP_TERM_EID</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a5da136f7ea722561f1f07e48d7efedf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a5da136f7ea722561f1f07e48d7efedf6" kindref="member">EA_APP_ERR_EID</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a0b90d591d33f93df21f500994728acc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a0b90d591d33f93df21f500994728acc3" kindref="member">EA_WARN_APP_UTIL_EID</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ad79746919d729ec3e09739cd3306b227" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ad79746919d729ec3e09739cd3306b227" kindref="member">EA_ERR_EID</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a6621cb1d9e4724b4037d3d397ffdc2a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a6621cb1d9e4724b4037d3d397ffdc2a9" kindref="member">EA_INIT_ERR_EID</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ab918f2e36d37103077d358353a351226" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ab918f2e36d37103077d358353a351226" kindref="member">EA_CMD_ERR_EID</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a653375bf0a4c3333676772489c1cfe4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a653375bf0a4c3333676772489c1cfe4e" kindref="member">EA_PIPE_ERR_EID</ref><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a3434928959722938b4684f2945ad73b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a3434928959722938b4684f2945ad73b7" kindref="member">EA_MSGID_ERR_EID</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ac86d4abeaa57e2cb37effdb0d0cd1d62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498ac86d4abeaa57e2cb37effdb0d0cd1d62" kindref="member">EA_MSGLEN_ERR_EID</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7792d40f34cb2dcc07a408a152f7f7da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7792d40f34cb2dcc07a408a152f7f7da" kindref="member">EA_CHILD_TASK_START_EID</ref><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a2fefc7418c5a8058303722e5f6775f5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a2fefc7418c5a8058303722e5f6775f5c" kindref="member">EA_CHILD_TASK_START_ERR_EID</ref><sp/>=<sp/>15,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a496ce398ffda5b7e0cbd8a7b2a7be53e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a496ce398ffda5b7e0cbd8a7b2a7be53e" kindref="member">EA_CMD_NOOP_EID</ref><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a5df9ff134c0f7041de8db81530cb8820" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a5df9ff134c0f7041de8db81530cb8820" kindref="member">EA_CMD_RESET_EID</ref><sp/>=<sp/>17,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7b48bf52628572610b18de7d7c861c34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a7b48bf52628572610b18de7d7c861c34" kindref="member">EA_CC_ERR_EID</ref><sp/>=<sp/>18,</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a920c6a3bc920c75d1db17bc6bdac855c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498a920c6a3bc920c75d1db17bc6bdac855c" kindref="member">EA_EVT_CNT</ref></highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}<sp/><ref refid="ea__events_8h_1aa139210c01c83cdc3a832e6193f30498" kindref="member">EA_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EA_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/ea/fsw/src/ea_events.h"/>
+  </compounddef>
+</doxygen>

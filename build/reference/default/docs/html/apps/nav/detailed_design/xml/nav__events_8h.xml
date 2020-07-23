@@ -1,0 +1,569 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="nav__events_8h" kind="file" language="C++">
+    <compoundname>nav_events.h</compoundname>
+    <includedby refid="nav__app_8h" local="yes">apps/nav/fsw/src/nav_app.h</includedby>
+    <invincdepgraph>
+      <node id="328">
+        <label>apps/nav/fsw/src/nav_app.h</label>
+        <link refid="nav__app_8h"/>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>apps/nav/fsw/src/nav_config_utils.cpp</label>
+        <link refid="nav__config__utils_8cpp"/>
+      </node>
+      <node id="329">
+        <label>apps/nav/fsw/src/nav_app.cpp</label>
+        <link refid="nav__app_8cpp"/>
+      </node>
+      <node id="327">
+        <label>apps/nav/fsw/src/nav_events.h</label>
+        <link refid="nav_events.h"/>
+        <childnode refid="328" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731" prot="public" static="no">
+        <name>NAV_EventIds_t</name>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a3d074001e2fbe3b973311fbda9feca6a" prot="public">
+          <name>NAV_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a13cc3569e0343176d71f9d7958b39efc" prot="public">
+          <name>NAV_INIT_INF_EID</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the NAV task has completed
+ initialization.
+
+ The first \c %d field contains the application major version defined
+     in #NAV_MAJOR_VERSION.
+ The second \c %d field contains the application minor version defined
+     in #NAV_MINOR_VERSION.
+ The third \c %d field contains the application revision number defined
+     in #NAV_REVISION.
+ The fourth \c %d field contains the application revision number defined
+     in #NAV_MISSION_REV.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a9fa0e1dd0170abde4dba5cf0d27f4074" prot="public">
+          <name>NAV_CMD_NOOP_EID</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task receives a NoOp
+ command.
+
+ The first \c %u field contains the application major version defined
+     in #NAV_MAJOR_VERSION.
+ The first \c %d field contains the application major version defined
+     in #NAV_MAJOR_VERSION.
+ The second \c %d field contains the application minor version defined
+     in #NAV_MINOR_VERSION.
+ The third \c %d field contains the application revision number defined
+     in #NAV_REVISION.
+ The fourth \c %d field contains the application revision number defined
+     in #NAV_MISSION_REV.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a8cc01c36df58e5840fb534250bda8f70" prot="public">
+          <name>NAV_SUBSCRIBE_ERR_EID</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task fails to subscribe
+ to a message at initialization.
+
+ The first \c %s field contains the name of the pipe.
+ The second \c %s field contains the macro name of the message.
+ The 32 bit hexadecimal number is the error code returned by CFE.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731af891c7b4508a8454f355d086ff48f231" prot="public">
+          <name>NAV_PIPE_INIT_ERR_EID</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to create %s pipe (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to create %s pipe (0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task fails to create a
+ CFE Software Bus pipe at initialization.
+
+ The \c %s field contains the name of the pipe.
+ The 32 bit hexadecimal number is the error code returned by CFE.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a043db2eb20fbb0279c71f4f688c1ae07" prot="public">
+          <name>NAV_CFGTBL_MANAGE_ERR_EID</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ The 32 bit hexadecimal number is the error code returned by CFE
+ #CFE_TBL_Manage function.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5d27f0afcfc8ef3c1681ee112b35d055" prot="public">
+          <name>NAV_CFGTBL_GETADDR_ERR_EID</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ The 32 bit hexadecimal number is the error code returned by CFE
+ #CFE_TBL_GetAddress function.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a11432efd91a10d28749ed908e4cdfb7a" prot="public">
+          <name>NAV_RCVMSG_ERR_EID</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task has
+ had an error reading from a pipe.
+
+ The \c %s field contains the name of the pipe.
+ The 32 bit hexadecimal number is the error code returned by CFE.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5e028377ace596efd687cc82734cb94a" prot="public">
+          <name>NAV_MSGID_ERR_EID</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task has received an invalid
+ message ID.
+
+ The \c %s field contains the name of the pipe.
+ The 16 bit hexadecimal number is the actual message ID received.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a9b6b75676f87d1b02a9464e08a49564c" prot="public">
+          <name>NAV_CC_ERR_EID</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task has received an invalid
+ message ID.
+
+ The %u field contains the actual command code received.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a0fed310700fe7b7c0c061747d3794cc0" prot="public">
+          <name>NAV_MSGLEN_ERR_EID</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAVTask has
+ received a message with an invalid length.
+
+ The first \c %d field contains the message ID.
+ The second \c %d field contains the command code.
+ The third \c %d field contains the actual length.
+ The fourth \c %d field contains the expected length.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5995aba4df1cf198fbf8d970b2e7dd03" prot="public">
+          <name>NAV_CFGTBL_REG_ERR_EID</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task fails to
+ register the NAV configuration table.
+
+ The 32 bit hexadecimal number is the error code returned by CFE
+ #CFE_TBL_Register function.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae86f25f27721c1e7a49c4d4dc7b52cef" prot="public">
+          <name>NAV_CFGTBL_LOAD_ERR_EID</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task fails to
+ load the NAV configuration table.
+
+ The 32 bit hexadecimal number is the error code returned by CFE
+ #CFE_TBL_Load function.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ab017f889ead5025cd3ab8ba219f12d5b" prot="public">
+          <name>NAV_MSN_FAILED_ERR_EID</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Mission failed (%s)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Mission failed (%s)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task fails to
+ complete defined mission.
+
+ The first \c %s field contains the reason for mission failure.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a641f36351654f6198775ec407790cfc2" prot="public">
+          <name>NAV_LOW_CLEARANCE_ALT_EID</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Set altitude lower than minimum clearance : %f meters&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set altitude lower than minimum clearance : %f meters&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ altitude lower than minimum clearance.
+
+ The first \c %f field contains the altitude.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a34daa4bffe70b429db9fb16efbf7d6d0" prot="public">
+          <name>NAV_HIGH_ALT_EID</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Set altitude already higher than take off altitude&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set altitude already higher than take off altitude&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports if
+ altitude is higher than current altitude.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a8165a7fcb3432e78d2dd6c86cbd276e6" prot="public">
+          <name>NAV_ACTION_ST_EID</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Commencing %s&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Commencing %s&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ navigator action start.
+
+ The first \c %s field contains the action.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a796b69f936bed1cb298722e104a6d8d4" prot="public">
+          <name>NAV_RTL_CLIMB_ST_EID</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;RTL: Commencing climb to %d m (%d m above home)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;RTL: Commencing climb to %d m (%d m above home)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ RTL climb action start.
+
+ The first \c %d field contains the climb altitude.
+ The second \c %d field contains the altitude from home position.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a6091c519521accdfb41df1dcedbad529" prot="public">
+          <name>NAV_RTL_RETURN_ST_EID</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;RTL: Commencing return at %d m (%d m above home)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;RTL: Commencing return at %d m (%d m above home)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ RTL return action start.
+
+ The first \c %d field contains the altitude.
+ The second \c %d field contains the altitude from home position.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731aaeed2b67acde179ae5bb702618c3c72d" prot="public">
+          <name>NAV_RTL_DESCEND_ST_EID</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;RTL: Commencing descend to %d m (%d m above home)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;RTL: Commencing descend to %d m (%d m above home)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ RTL descend action start.
+
+ The first \c %d field contains the altitude.
+ The second \c %d field contains the altitude from home position.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a12de0d0bcab9bdc46b40e7c76ba3e7c5" prot="public">
+          <name>NAV_RTL_LOITER_ST_EID</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;RTL: Commencing loiter for %.1fs&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;RTL: Commencing loiter for %.1fs&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ RTL loiter action start.
+
+ The first \c %f field contains the loiter time.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a1eb362c5c0d09dfd3f3f2293ab2adbf1" prot="public">
+          <name>NAV_RTL_LOITER_EN_EID</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;RTL: Loiter completed&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;RTL: Loiter completed&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ RTL loiter action end.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a63f4cd51e935adc8b3ad8119a3cb1af5" prot="public">
+          <name>NAV_RTL_LAND_ST_EID</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;RTL: Commencing land at home&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000022"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;RTL: Commencing land at home&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ RTL land action start.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae0c88686f877817c2824cf954659f48e" prot="public">
+          <name>NAV_RTL_LAND_EN_EID</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;RTL: Land completed&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000023"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;RTL: Land completed&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ RTL land action end.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a734da8a8c2fa7c69264abb1d940b80ed" prot="public">
+          <name>NAV_RTL_LND_SFGA_EID</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Already landed, not executing RTL&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000024"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Already landed, not executing RTL&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ RTL execution when in landed state.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a67e8c7fa4ae884fc7aff536f27671119" prot="public">
+          <name>NAV_SUBSEQ_TAKEOFF_EID</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Subsequent takeoff is not allowed&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000025"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subsequent takeoff is not allowed&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS NAV Task reports
+ subsequent takeoff is requested.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae12ff7f43f94cc47a4229edc94d13df5" prot="public">
+          <name>NAV_EVT_CNT</name>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_events.h" line="50" column="1" bodyfile="apps/nav/fsw/src/nav_events.h" bodystart="50" bodyend="440"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NAV_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NAV_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a3d074001e2fbe3b973311fbda9feca6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a3d074001e2fbe3b973311fbda9feca6a" kindref="member">NAV_RESERVED_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a13cc3569e0343176d71f9d7958b39efc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a13cc3569e0343176d71f9d7958b39efc" kindref="member">NAV_INIT_INF_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a9fa0e1dd0170abde4dba5cf0d27f4074" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a9fa0e1dd0170abde4dba5cf0d27f4074" kindref="member">NAV_CMD_NOOP_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a8cc01c36df58e5840fb534250bda8f70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a8cc01c36df58e5840fb534250bda8f70" kindref="member">NAV_SUBSCRIBE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731af891c7b4508a8454f355d086ff48f231" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731af891c7b4508a8454f355d086ff48f231" kindref="member">NAV_PIPE_INIT_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a043db2eb20fbb0279c71f4f688c1ae07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a043db2eb20fbb0279c71f4f688c1ae07" kindref="member">NAV_CFGTBL_MANAGE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5d27f0afcfc8ef3c1681ee112b35d055" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5d27f0afcfc8ef3c1681ee112b35d055" kindref="member">NAV_CFGTBL_GETADDR_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a11432efd91a10d28749ed908e4cdfb7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a11432efd91a10d28749ed908e4cdfb7a" kindref="member">NAV_RCVMSG_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5e028377ace596efd687cc82734cb94a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5e028377ace596efd687cc82734cb94a" kindref="member">NAV_MSGID_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a9b6b75676f87d1b02a9464e08a49564c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a9b6b75676f87d1b02a9464e08a49564c" kindref="member">NAV_CC_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a0fed310700fe7b7c0c061747d3794cc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a0fed310700fe7b7c0c061747d3794cc0" kindref="member">NAV_MSGLEN_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5995aba4df1cf198fbf8d970b2e7dd03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a5995aba4df1cf198fbf8d970b2e7dd03" kindref="member">NAV_CFGTBL_REG_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae86f25f27721c1e7a49c4d4dc7b52cef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae86f25f27721c1e7a49c4d4dc7b52cef" kindref="member">NAV_CFGTBL_LOAD_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ab017f889ead5025cd3ab8ba219f12d5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ab017f889ead5025cd3ab8ba219f12d5b" kindref="member">NAV_MSN_FAILED_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a641f36351654f6198775ec407790cfc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a641f36351654f6198775ec407790cfc2" kindref="member">NAV_LOW_CLEARANCE_ALT_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a34daa4bffe70b429db9fb16efbf7d6d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a34daa4bffe70b429db9fb16efbf7d6d0" kindref="member">NAV_HIGH_ALT_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>15,</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a8165a7fcb3432e78d2dd6c86cbd276e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a8165a7fcb3432e78d2dd6c86cbd276e6" kindref="member">NAV_ACTION_ST_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a796b69f936bed1cb298722e104a6d8d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a796b69f936bed1cb298722e104a6d8d4" kindref="member">NAV_RTL_CLIMB_ST_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>17,</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a6091c519521accdfb41df1dcedbad529" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a6091c519521accdfb41df1dcedbad529" kindref="member">NAV_RTL_RETURN_ST_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>18,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731aaeed2b67acde179ae5bb702618c3c72d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731aaeed2b67acde179ae5bb702618c3c72d" kindref="member">NAV_RTL_DESCEND_ST_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>19,</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a12de0d0bcab9bdc46b40e7c76ba3e7c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a12de0d0bcab9bdc46b40e7c76ba3e7c5" kindref="member">NAV_RTL_LOITER_ST_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>20,</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a1eb362c5c0d09dfd3f3f2293ab2adbf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a1eb362c5c0d09dfd3f3f2293ab2adbf1" kindref="member">NAV_RTL_LOITER_EN_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>21,</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a63f4cd51e935adc8b3ad8119a3cb1af5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a63f4cd51e935adc8b3ad8119a3cb1af5" kindref="member">NAV_RTL_LAND_ST_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>22,</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae0c88686f877817c2824cf954659f48e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae0c88686f877817c2824cf954659f48e" kindref="member">NAV_RTL_LAND_EN_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>23,</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a734da8a8c2fa7c69264abb1d940b80ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a734da8a8c2fa7c69264abb1d940b80ed" kindref="member">NAV_RTL_LND_SFGA_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>24,</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a67e8c7fa4ae884fc7aff536f27671119" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731a67e8c7fa4ae884fc7aff536f27671119" kindref="member">NAV_SUBSEQ_TAKEOFF_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>25,</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="439" refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae12ff7f43f94cc47a4229edc94d13df5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731ae12ff7f43f94cc47a4229edc94d13df5" kindref="member">NAV_EVT_CNT</ref></highlight></codeline>
+<codeline lineno="440"><highlight class="normal">}<sp/><ref refid="nav__events_8h_1ac62e2f8cbc6fd5e4dd6236fa6815b731" kindref="member">NAV_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>NAV_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/nav/fsw/src/nav_events.h"/>
+  </compounddef>
+</doxygen>

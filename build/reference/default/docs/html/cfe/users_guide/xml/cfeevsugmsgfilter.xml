@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeevsugmsgfilter" kind="page">
+    <compoundname>cfeevsugmsgfilter</compoundname>
+    <title>Event Message Filtering</title>
+    <detaileddescription>
+<para>EVS uses a hexadecimal bit mask that controls how often a message is filtered. An event&apos;s filter mask is bit-wise ANDed with the event&apos;s event counter. There is one event counter for each event ID. If the result of the ANDing is zero then the message is sent.</para><para>Filter masks can be set so that one out of 1, 2, 4, 8 events are sent. Some examples of masks that use this pattern are: (0x0000, Every one), (0x0001, One of every 2), (0x0003, One of every 4), and (0x0007, One of every 8.</para><para>Filter masks can also be set so that only the first n events are sent. For example, the mask 0xFFFF generates one event message and then stops. Note that when the filter counter is reset to zero by command, this will restart the counting and enable n more events to be sent.</para><para>Event messages will be filtered until <ref refid="cfe__evs__task_8h_1a9e3a56f296db523bd0b65e7529649417" kindref="member">CFE_EVS_MAX_FILTER_COUNT</ref> events of the filtered event ID from the application have been received. After this, the filtering will become locked (no more of that event will be received by the ground) until the filter is either reset or deleted by ground command. This is to prevent the counter from rolling over, which would cause some filters to behave improperly. An event message will be sent when this maximum count is reached.</para><para>The following shows an example of how filtering works using a filter mask of x&apos;0001&apos;, resulting in sending every other event:</para><para><table rows="5" cols="7"><row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para><bold>packet x</bold> </para></entry><entry thead="no"><para><bold>packet X+1</bold> </para></entry><entry thead="no"><para><bold>packet X+2</bold> </para></entry><entry thead="no"><para><bold>packet X+3</bold> </para></entry><entry thead="no"><para><bold>packet X+4</bold> </para></entry><entry thead="no"><para><bold>...</bold> </para></entry></row>
+<row>
+<entry thead="no"><para><bold>Event ID counter</bold> </para></entry><entry thead="no"><para>x&apos;0000&apos; </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para>x&apos;0002&apos; </para></entry><entry thead="no"><para>x&apos;0003&apos; </para></entry><entry thead="no"><para>x&apos;0004&apos; </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para><bold>Event Filter mask</bold> </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para><bold>Bitwise AND results</bold> </para></entry><entry thead="no"><para>x&apos;0000&apos; </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para>x&apos;0000&apos; </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para>x&apos;0000&apos; </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para><bold>Send event?</bold> </para></entry><entry thead="no"><para>Yes </para></entry><entry thead="no"><para>No </para></entry><entry thead="no"><para>Yes </para></entry><entry thead="no"><para>No </para></entry><entry thead="no"><para>Yes </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+</table>
+</para><para>In this example, the ground uses a filter mask of x&apos;FFFE&apos; resulting in the first two events being sent and then no more.</para><para><table rows="5" cols="7"><row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para><bold>packet x</bold> </para></entry><entry thead="no"><para><bold>packet X+1</bold> </para></entry><entry thead="no"><para><bold>packet X+2</bold> </para></entry><entry thead="no"><para><bold>packet X+3</bold> </para></entry><entry thead="no"><para><bold>packet X+4</bold> </para></entry><entry thead="no"><para><bold>...</bold> </para></entry></row>
+<row>
+<entry thead="no"><para><bold>Event ID counter</bold> </para></entry><entry thead="no"><para>x&apos;0000&apos; </para></entry><entry thead="no"><para>x&apos;0001&apos; </para></entry><entry thead="no"><para>x&apos;0002&apos; </para></entry><entry thead="no"><para>x&apos;0003&apos; </para></entry><entry thead="no"><para>x&apos;0004&apos; </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para><bold>Event Filter mask</bold> </para></entry><entry thead="no"><para>x&apos;FFFE&apos; </para></entry><entry thead="no"><para>x&apos;FFFE&apos; </para></entry><entry thead="no"><para>x&apos;FFFE&apos; </para></entry><entry thead="no"><para>x&apos;FFFE&apos; </para></entry><entry thead="no"><para>x&apos;FFFE&apos; </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para><bold>Bitwise AND results</bold> </para></entry><entry thead="no"><para>x&apos;0000&apos; </para></entry><entry thead="no"><para>x&apos;0000&apos; </para></entry><entry thead="no"><para>x&apos;0002&apos; </para></entry><entry thead="no"><para>x&apos;0002&apos; </para></entry><entry thead="no"><para>x&apos;0004&apos; </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para><bold>Send event?</bold> </para></entry><entry thead="no"><para>Yes </para></entry><entry thead="no"><para>Yes </para></entry><entry thead="no"><para>No </para></entry><entry thead="no"><para>No </para></entry><entry thead="no"><para>No </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+</table>
+</para><para>See <ref refid="cfe__evs_8h" kindref="compound">cfe_evs.h</ref> for predefined macro values which can be used for masks.</para><para>Next: <ref refid="cfeevsugregistry" kindref="compound">EVS Registry</ref> <linebreak/>
+ Prev: <ref refid="cfeevsugmsgcntrl" kindref="compound">Event Message Control</ref> <linebreak/>
+ Up To: <ref refid="cfeevsovr" kindref="compound">cFE Event Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

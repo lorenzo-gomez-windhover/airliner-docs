@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__es__verify_8h" kind="file" language="C++">
+    <compoundname>cfe_es_verify.h</compoundname>
+    <includedby refid="cfe__es__task_8c" local="yes">es/cfe_es_task.c</includedby>
+    <invincdepgraph>
+      <node id="5757">
+        <label>es/cfe_es_task.c</label>
+        <link refid="cfe__es__task_8c"/>
+      </node>
+      <node id="5756">
+        <label>es/cfe_es_verify.h</label>
+        <link refid="cfe_es_verify.h"/>
+        <childnode refid="5757" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:<sp/>cfe_es_verify.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2012,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>header<sp/>file<sp/>performs<sp/>compile<sp/>time<sp/>checking<sp/>for<sp/>ES<sp/>configuration</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/>parameters.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/>References:</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.0a</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>cFE<sp/>Flight<sp/>Software<sp/>Application<sp/>Developers<sp/>Guide</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/><sp/>Notes:</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>The<sp/>upper<sp/>limits<sp/>are<sp/>somewhat<sp/>arbitrary<sp/>right<sp/>now.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/><sp/>$Log:<sp/>cfe_es_verify.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.4<sp/>2012/01/13<sp/>11:50:06GMT-05:00<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/><sp/>Changed<sp/>license<sp/>text<sp/>to<sp/>reflect<sp/>open<sp/>source</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.3<sp/>2010/10/26<sp/>16:28:46EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/><sp/>Added<sp/>CFE_ES_MAX_SHELL_CMD<sp/>test<sp/>(for<sp/>&lt;<sp/>OS_MAX_CMD_LEN)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.2<sp/>2009/07/28<sp/>18:04:06EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/><sp/>Increased<sp/>max<sp/>allowed<sp/>number<sp/>of<sp/>registered<sp/>CDS<sp/>blocks</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:10EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/><sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/><sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/MKS-CFE-PROJECT/fsw/cfe-core/src/es/project.pj</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.10<sp/>2007/07/13<sp/>10:25:21EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/><sp/>DCR4462:1<sp/>Corrected<sp/>wording<sp/>in<sp/>CFE_ES_PERF_DATA_BUFFER_SIZE<sp/>checking</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.9<sp/>2007/05/31<sp/>10:11:34EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/><sp/>Removed<sp/>CFE_ES_CPU_CONTEXT_SIZE<sp/>from<sp/>verify.h</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/><sp/>Removed<sp/>unused<sp/>variable.</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.8<sp/>2007/05/24<sp/>15:09:23EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/><sp/>App-Decompression<sp/>updates:</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/><sp/><sp/><sp/>-<sp/>Added<sp/>verify<sp/>macros<sp/>for<sp/>PERCENT_FREE<sp/>config<sp/>parameter</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/><sp/><sp/><sp/>-<sp/>Updated<sp/>comments<sp/>in<sp/>config<sp/>files</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/><sp/><sp/><sp/>-<sp/>Updated<sp/>logic<sp/>to<sp/>turn<sp/>off<sp/>check<sp/>if<sp/>RAM_DISK_PERCENT_FREE<sp/>is<sp/>0</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.7<sp/>2007/05/04<sp/>18:50:50EDT<sp/>dlkobe<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/><sp/>Added<sp/>CDS<sp/>Memory<sp/>Pool<sp/>Parameter<sp/>compile<sp/>time<sp/>verifications</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.6<sp/>2007/03/29<sp/>13:27:34EST<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/><sp/>Updated<sp/>ES<sp/>configuration<sp/>parameters<sp/>and<sp/>verification<sp/>macros.</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cfe_es_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cfe_es_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_APPLICATIONS<sp/><sp/>&lt;<sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_APPLICATIONS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>6!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_EVS_MAX_APPLICATIONS<sp/><sp/>&gt;<sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_APPLICATIONS<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>64!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_LIBRARIES<sp/><sp/>&lt;<sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_LIBRARIES<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_EVS_MAX_LIBRARIES<sp/><sp/>&gt;<sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_LIBRARIES<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>64!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_ER_LOG_ENTRIES<sp/><sp/>&lt;<sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_ER_LOG_ENTRIES<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>10!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_ER_LOG_ENTRIES<sp/><sp/>&gt;<sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_ER_LOG_ENTRIES<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>128!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_SYSTEM_LOG_SIZE<sp/><sp/>&lt;<sp/><sp/>512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_SYSTEM_LOG_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>512<sp/>Bytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_SYSTEM_LOG_SIZE<sp/><sp/>&gt;<sp/><sp/>16384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_SYSTEM_LOG_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>16K<sp/>Bytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_DEFAULT_STACK_SIZE<sp/><sp/>&lt;<sp/><sp/>2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_DEFAULT_STACK_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>2048<sp/>Bytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_DEFAULT_STACK_SIZE<sp/><sp/>&gt;<sp/><sp/>16384</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_DEFAULT_STACK_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>16K<sp/>Bytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">**<sp/>Number<sp/>of<sp/>entries<sp/>in<sp/>the<sp/>ES<sp/>Object<sp/>table<sp/>(<sp/>The<sp/>table<sp/>that<sp/>controls<sp/>core<sp/>cFE<sp/>startup<sp/>)</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_OBJECT_TABLE_SIZE<sp/><sp/>&lt;<sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_OBJECT_TABLE_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>15!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_OBJECT_TABLE_SIZE<sp/><sp/>&gt;<sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_OBJECT_TABLE_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>50!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">**<sp/>ES<sp/>Application<sp/>Control<sp/>Scan<sp/>Rate.<sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_APP_SCAN_RATE<sp/><sp/>&lt;<sp/><sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_APP_SCAN_RATE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>100<sp/>milliseconds!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_APP_SCAN_RATE<sp/><sp/>&gt;<sp/><sp/>20000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_APP_SCAN_RATE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>20<sp/>seconds!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">**<sp/>ES<sp/>Application<sp/>Kill<sp/>Timeout<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_APP_KILL_TIMEOUT<sp/><sp/>&lt;<sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_APP_KILL_TIMEOUT<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_APP_KILL_TIMEOUT<sp/><sp/>&gt;<sp/><sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_APP_KILL_TIMEOUT<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>100!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">**<sp/>ES<sp/>/<sp/>cFE<sp/>RAM<sp/>disk<sp/>parameters<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_RAM_DISK_SECTOR_SIZE<sp/><sp/>&lt;<sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_RAM_DISK_SECTOR_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>128!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_RAM_DISK_SECTOR_SIZE<sp/><sp/>&gt;<sp/><sp/>4096</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_RAM_DISK_SECTOR_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>4096!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_RAM_DISK_NUM_SECTORS<sp/><sp/>&lt;<sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_RAM_DISK_NUM_SECTORS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>128!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_RAM_DISK_NUM_SECTORS<sp/><sp/>&gt;<sp/><sp/>8192</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_RAM_DISK_NUM_SECTORS<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>8192!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_RAM_DISK_PERCENT_RESERVED<sp/><sp/>&lt;<sp/>0<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_RAM_DISK_PERCENT_RESERVED<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>0!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_RAM_DISK_PERCENT_RESERVED<sp/><sp/>&gt;<sp/>75<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_RAM_DISK_PERCENT_RESERVED<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>75!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment">**<sp/>Critical<sp/>data<sp/>store<sp/>size<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_SIZE<sp/><sp/>&lt;<sp/><sp/>(<sp/>8<sp/>*<sp/>1024<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>8Kbytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_CDS_SIZE<sp/>&gt;<sp/><sp/>(<sp/>1024<sp/>*<sp/>2048<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>2<sp/>Megabytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="148"><highlight class="comment">**<sp/>User<sp/>Reserved<sp/>Memory<sp/>Size.<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_USER_RESERVED_SIZE<sp/><sp/>&lt;<sp/><sp/>(<sp/>1<sp/>*<sp/>1024<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_USER_RESERVED_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1Kbytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_USER_RESERVED_SIZE<sp/>&gt;<sp/><sp/>(<sp/>1024<sp/>*<sp/>32768<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_USER_RESERVED_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>32<sp/>Megabytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="157"><highlight class="comment">**<sp/>ES<sp/>Reset<sp/>area<sp/>size<sp/>--<sp/>This<sp/>should<sp/>depend<sp/>on<sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="comment">**<sp/><sp/>the<sp/>size<sp/>of<sp/>the<sp/>data<sp/>structures<sp/>that<sp/>are<sp/>in<sp/>this<sp/>area.</highlight></codeline>
+<codeline lineno="159"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_RESET_AREA_SIZE<sp/><sp/>&lt;<sp/><sp/>(<sp/>150<sp/>*<sp/>1024<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_RESET_AREA_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>150Kbytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_RESET_AREA_SIZE<sp/>&gt;<sp/><sp/>(<sp/>1024<sp/>*<sp/>2048<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_RESET_AREA_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>2<sp/>Megabytes!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="comment">**<sp/>The<sp/>size<sp/>of<sp/>a<sp/>command<sp/>to<sp/>the<sp/>OS<sp/>that<sp/>lies<sp/>under<sp/>the<sp/>cFE<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_SHELL_CMD<sp/><sp/>&lt;<sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_SHELL_CMD<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>64!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_MAX_SHELL_CMD<sp/><sp/>&gt;<sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_SHELL_CMD<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>128!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="comment">**<sp/>The<sp/>size<sp/>of<sp/>a<sp/>command<sp/>to<sp/>the<sp/>OS<sp/>that<sp/>lies<sp/>under<sp/>the<sp/>cFE<sp/>must<sp/>avoid<sp/>overflow<sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_SHELL_CMD<sp/><sp/>&gt;<sp/><sp/>OS_MAX_CMD_LEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_SHELL_CMD<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>OS_MAX_CMD_LEN!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="comment">**<sp/>The<sp/>size<sp/>of<sp/>the<sp/>chunks<sp/>to<sp/>break<sp/>the<sp/>output<sp/>of<sp/>the<sp/>shell<sp/>command<sp/>into<sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/>*<sp/>to<sp/>send<sp/>down<sp/>in<sp/>telemetry<sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_SHELL_PKT<sp/><sp/>&lt;<sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_SHELL_PKT<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>32!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_MAX_SHELL_PKT<sp/><sp/>&gt;<sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_SHELL_PKT<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>128!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="comment">**<sp/>Syslog<sp/>mode<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_DEFAULT_SYSLOG_MODE<sp/><sp/>&lt;<sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_DEFAULT_SYSLOG_MODE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>0!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_DEFAULT_SYSLOG_MODE<sp/><sp/>&gt;<sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_DEFAULT_SYSLOG_MODE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="comment">**<sp/>Maximum<sp/>number<sp/>of<sp/>performance<sp/>IDs<sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_PERF_MAX_IDS<sp/><sp/>&lt;<sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_PERF_MAX_IDS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>32!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_PERF_MAX_IDS<sp/><sp/>&gt;<sp/><sp/>512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_PERF_MAX_IDS<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>512!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="comment">**<sp/>Performance<sp/>data<sp/>buffer<sp/>size</highlight></codeline>
+<codeline lineno="212"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_PERF_DATA_BUFFER_SIZE<sp/><sp/>&lt;<sp/><sp/>1025</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_PERF_DATA_BUFFER_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1025<sp/>entries!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_PERF_DATA_BUFFER_SIZE<sp/><sp/>&gt;<sp/><sp/>(1024<sp/>*<sp/>1024<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_PERF_DATA_BUFFER_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>1048576<sp/>entries!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="comment">**<sp/>Maximum<sp/>number<sp/>of<sp/>Registered<sp/>CDS<sp/>blocks</highlight></codeline>
+<codeline lineno="221"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MAX_NUM_ENTRIES<sp/><sp/>&lt;<sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MAX_NUM_ENTRIES<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>8!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_CDS_MAX_NUM_ENTRIES<sp/><sp/>&gt;<sp/><sp/>32767</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MAX_NUM_ENTRIES<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>32767!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="comment">**<sp/>Maximum<sp/>number<sp/>of<sp/>processor<sp/>resets<sp/>before<sp/>a<sp/>power-on</highlight></codeline>
+<codeline lineno="230"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_PROCESSOR_RESETS<sp/><sp/>&lt;<sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_PROCESSOR_RESETS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>0!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CFE_ES_MAX_PROCESSOR_RESETS<sp/><sp/>&gt;<sp/><sp/>1024</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_PROCESSOR_RESETS<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>1024!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="238"><highlight class="comment">**<sp/><sp/>Intermediate<sp/>ES<sp/>Memory<sp/>Pool<sp/>Block<sp/>Sizes</highlight></codeline>
+<codeline lineno="239"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_BLOCK_SIZE<sp/>&lt;<sp/>CFE_SB_MAX_SB_MSG_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_BLOCK_SIZE<sp/>must<sp/>be<sp/>larger<sp/>than<sp/>CFE_SB_MAX_SB_MSG_SIZE!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_BLOCK_SIZE<sp/>&lt;<sp/>CFE_TBL_MAX_SNGL_TABLE_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_BLOCK_SIZE<sp/>must<sp/>be<sp/>larger<sp/>than<sp/>CFE_TBL_MAX_SNGL_TABLE_SIZE!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MAX_BLOCK_SIZE<sp/>&lt;<sp/>CFE_TBL_MAX_DBL_TABLE_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MAX_BLOCK_SIZE<sp/>must<sp/>be<sp/>larger<sp/>than<sp/>CFE_TBL_MAX_DBL_TABLE_SIZE!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_01<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_01<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_02<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_02<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_03<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_03<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_04<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_04<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_05<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_06</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_05<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_06</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_06<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_06<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_07<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_07<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_08<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_09</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_08<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_09</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_09<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_09<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_10<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_10<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_11<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_11<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_12<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_12<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_13<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_13<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_14<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_14<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_15<sp/>&gt;<sp/>CFE_ES_MEM_BLOCK_SIZE_16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_15<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MEM_BLOCK_SIZE_16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_MEM_BLOCK_SIZE_16<sp/>&gt;<sp/>CFE_ES_MAX_BLOCK_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_MEM_BLOCK_SIZE_16<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_MAX_BLOCK_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="317"><highlight class="comment">**<sp/><sp/>Intermediate<sp/>ES<sp/>Critical<sp/>Data<sp/>Store<sp/>Memory<sp/>Pool<sp/>Block<sp/>Sizes</highlight></codeline>
+<codeline lineno="318"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_01<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_01<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_02<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_02<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_03<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_03<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_04<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_04<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_05<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_06</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_05<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_06</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_06<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_06<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_07<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_07<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_08<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_09</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_08<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_09</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_09<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_09<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_10<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_10<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_11<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_11<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_12<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_12<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_13<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_13<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_14<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_14<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_15<sp/>&gt;<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_15<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_16<sp/>&gt;<sp/>CFE_ES_CDS_MAX_BLOCK_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_ES_CDS_MEM_BLOCK_SIZE_16<sp/>must<sp/>be<sp/>less<sp/>than<sp/>CFE_ES_CDS_MAX_BLOCK_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_cfe_es_verify_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="es/cfe_es_verify.h"/>
+  </compounddef>
+</doxygen>

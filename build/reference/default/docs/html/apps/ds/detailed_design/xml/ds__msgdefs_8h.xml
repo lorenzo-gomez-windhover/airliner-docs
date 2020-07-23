@@ -1,0 +1,552 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ds__msgdefs_8h" kind="file" language="C++">
+    <compoundname>ds_msgdefs.h</compoundname>
+    <includedby refid="ds__app_8c" local="yes">apps/ds/fsw/src/ds_app.c</includedby>
+    <invincdepgraph>
+      <node id="615">
+        <label>apps/ds/fsw/src/ds_app.c</label>
+        <link refid="ds__app_8c"/>
+      </node>
+      <node id="614">
+        <label>apps/ds/fsw/src/ds_msgdefs.h</label>
+        <link refid="ds_msgdefs.h"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ds__msgdefs_8h_1aeea1dc965b33f9ff15e99a3d860d5b04" prot="public" static="no">
+        <name>DS_NOOP_CC</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000001"><xreftitle>Name</xreftitle><xrefdescription><para>No-Operation Command</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will increment the command execution counter and send an event containing the version number of the application. The command is often used as a general test for application &quot;aliveness&quot;.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000001"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_NOOP</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___noop_cmd__t" kindref="compound">DS_NoopCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_NOOP_CMD_EID informational event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_NOOP_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="60" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a036adb8b370a8565c5f82d6585e7d926" prot="public" static="no">
+        <name>DS_RESET_CC</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000002"><xreftitle>Name</xreftitle><xrefdescription><para>Reset Housekeeping Telemetry Counters Command</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will set the following housekeeping counters to zero:<itemizedlist>
+<listitem><para>Command Execution Counter ($sc_$cpu_DS_CMDPC)</para></listitem><listitem><para>Command Error Counter ($sc_$cpu_DS_CMDEC)</para></listitem><listitem><para>Ignored Packet Counter ($sc_$cpu_DS_IgnoredPktCnt)</para></listitem><listitem><para>Filtered Packet Counter ($sc_$cpu_DS_FilteredPktCnt)</para></listitem><listitem><para>Passed Packet Counter ($sc_$cpu_DS_PassedPktCnt)</para></listitem><listitem><para>File Access Counter ($sc_$cpu_DS_FileWriteCnt)</para></listitem><listitem><para>File Access Error Counter ($sc_$cpu_DS_FileWriteErrCnt)</para></listitem><listitem><para>Destination Table Load Counter ($sc_$cpu_DS_DestLoadCnt)</para></listitem><listitem><para>Filter Table Load Counter ($sc_$cpu_DS_FilterLoadCnt)</para></listitem><listitem><para>Destination Table Ptr Error Counter ($sc_$cpu_DS_DestPtrErrCnt)</para></listitem><listitem><para>Filter Table Ptr Error Counter ($sc_$cpu_DS_FilterPtrErrCnt)</para></listitem></itemizedlist>
+</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000002"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_ResetCtrs</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___reset_cmd__t" kindref="compound">DS_ResetCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_RESET_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_RESET_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="102" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a988e1ca6c661b06a0ba37871cd04af19" prot="public" static="no">
+        <name>DS_SET_APP_STATE_CC</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000003"><xreftitle>Name</xreftitle><xrefdescription><para>Set Enable/Disable State For DS Application</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Ena/Dis State selection for the DS application. No packets are stored while DS is disabled.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000003"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_Enable</computeroutput> </bold>(fixed command arg = enable) </para><para><bold><computeroutput>$sc_$cpu_DS_Disable</computeroutput> </bold>(fixed command arg = disable)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___app_state_cmd__t" kindref="compound">DS_AppStateCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_ENADIS_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid enable/disable state selection</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_ENADIS_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="136" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="136" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a981b2fe81bccb90d8f09a8e5847db999" prot="public" static="no">
+        <name>DS_SET_FILTER_FILE_CC</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000004"><xreftitle>Name</xreftitle><xrefdescription><para>Set Destination File For Packet Filter Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Destination File selection for the indicated entry in the Packet Filter Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000004"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetFilterFile</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___filter_file_cmd__t" kindref="compound">DS_FilterFileCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_FILE_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid filter table index</para></listitem><listitem><para>Invalid filter parameters index</para></listitem><listitem><para>Invalid destination file selection</para></listitem><listitem><para>Packet filter table is not currently loaded</para></listitem><listitem><para>Cannot modify unused packet filter table entry</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_FILE_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="173" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="173" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a765facc4c0e6374257baddf51a0b04f7" prot="public" static="no">
+        <name>DS_SET_FILTER_TYPE_CC</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000005"><xreftitle>Name</xreftitle><xrefdescription><para>Set Filter Type For Packet Filter Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Filter Type selection for the indicated entry in the Packet Filter Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000005"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetFilterType</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___filter_type_cmd__t" kindref="compound">DS_FilterTypeCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_FTYPE_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid filter table index</para></listitem><listitem><para>Invalid filter parameters index</para></listitem><listitem><para>Invalid filter type selection</para></listitem><listitem><para>Packet filter table is not currently loaded</para></listitem><listitem><para>Cannot modify unused packet filter table entry</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_FTYPE_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="210" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="210" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a2518be83bbbc5b5f439d0953bdf34ab2" prot="public" static="no">
+        <name>DS_SET_FILTER_PARMS_CC</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000006"><xreftitle>Name</xreftitle><xrefdescription><para>Set Algorithm Parameters For Packet Filter Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Algorithm Parameters for the indicated entry in the Packet Filter Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000006"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetFilterParams</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___filter_parms_cmd__t" kindref="compound">DS_FilterParmsCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_PARMS_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid filter table index</para></listitem><listitem><para>Invalid filter parameters index</para></listitem><listitem><para>Algorithm_N value cannot be greater than Algorithm_X</para></listitem><listitem><para>Packet filter table is not currently loaded</para></listitem><listitem><para>Cannot modify unused packet filter table entry</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_PARMS_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="247" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="247" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a88fa53fd482766adfee9e009444b101a" prot="public" static="no">
+        <name>DS_SET_DEST_TYPE_CC</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000007"><xreftitle>Name</xreftitle><xrefdescription><para>Set Filename Type For Destination File Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Filename Type selection for the indicated entry in the Destination File Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000007"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetFileType</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___dest_type_cmd__t" kindref="compound">DS_DestTypeCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_NTYPE_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Invalid filename type selection</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_NTYPE_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="282" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="282" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a5a27ba0c1dca9d0a05ac81aa673ad422" prot="public" static="no">
+        <name>DS_SET_DEST_STATE_CC</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000008"><xreftitle>Name</xreftitle><xrefdescription><para>Set Ena/Dis State For Destination File Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Ena/Dis State selection for the indicated entry in the Destination File Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000008"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_EnableFile</computeroutput> </bold>(fixed command arg = enable) </para><para><bold><computeroutput>$sc_$cpu_DS_DisableFile</computeroutput> </bold>(fixed command arg = disable)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___dest_state_cmd__t" kindref="compound">DS_DestStateCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_STATE_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Invalid destination state selection</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_STATE_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="318" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="318" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a4bca0449b60b5bc6bf3c4fd7fe84e013" prot="public" static="no">
+        <name>DS_SET_DEST_PATH_CC</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000009"><xreftitle>Name</xreftitle><xrefdescription><para>Set Pathname For Destination File Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Pathname portion of the filename for the indicated entry in the Destination File Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000009"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetPath</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___dest_path_cmd__t" kindref="compound">DS_DestPathCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_PATH_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Invalid pathname string (empty, no terminator, bad characters)</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_PATH_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="353" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="353" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1aae4ab4329a38869212febf33504a628c" prot="public" static="no">
+        <name>DS_SET_DEST_BASE_CC</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000010"><xreftitle>Name</xreftitle><xrefdescription><para>Set Basename For Destination File Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Basename portion of the filename for the indicated entry in the Destination File Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000010"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetBaseName</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___dest_base_cmd__t" kindref="compound">DS_DestBaseCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_BASE_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Invalid basename string (no terminator, bad characters)</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_BASE_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="388" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="388" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a10c6b212013f9dd3c79e1d2a98615df5" prot="public" static="no">
+        <name>DS_SET_DEST_EXT_CC</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000011"><xreftitle>Name</xreftitle><xrefdescription><para>Set Extension For Destination File Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the Extension portion of the filename for the indicated entry in the Destination File Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000011"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetExtension</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___dest_ext_cmd__t" kindref="compound">DS_DestExtCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_EXT_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Invalid extension string (empty, no terminator, bad characters)</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_EXT_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="423" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="423" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a49c5aa2e956b2f450d02770e657ffd9a" prot="public" static="no">
+        <name>DS_SET_DEST_SIZE_CC</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000012"><xreftitle>Name</xreftitle><xrefdescription><para>Set Max File Size For Destination File Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the max file size selection for the indicated entry in the Destination File Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000012"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetMaxFileSize</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___dest_size_cmd__t" kindref="compound">DS_DestSizeCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_SIZE_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Invalid max file size selection</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_SIZE_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="458" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="458" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1ad5d3227b691c1fcb20f88eaa977a791e" prot="public" static="no">
+        <name>DS_SET_DEST_AGE_CC</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000013"><xreftitle>Name</xreftitle><xrefdescription><para>Set Max File Age For Destination File Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the max file age selection for the indicated entry in the Destination File Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000013"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetMaxFileAge</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___dest_age_cmd__t" kindref="compound">DS_DestAgeCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_AGE_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Invalid max file age selection</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_AGE_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="493" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="493" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a0ac5bdc35d8ce4f9ccb0fa25a23d8712" prot="public" static="no">
+        <name>DS_SET_DEST_COUNT_CC</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000014"><xreftitle>Name</xreftitle><xrefdescription><para>Set Sequence Count For Destination File Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will modify the sequence count value for the indicated entry in the Destination File Table.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000014"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_SetFileSeqCtr</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___dest_count_cmd__t" kindref="compound">DS_DestCountCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_SEQ_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Invalid sequence count value</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_SEQ_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="528" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="528" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a018d95cfa040f2cffc5764a0b6e1e903" prot="public" static="no">
+        <name>DS_CLOSE_FILE_CC</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000015"><xreftitle>Name</xreftitle><xrefdescription><para>Close Destination File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will close the indicated Destination File.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000015"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_CloseFile</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___close_file_cmd__t" kindref="compound">DS_CloseFileCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_CLOSE_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid destination file table index</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_CLOSE_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="561" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="561" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a879804f0ba87d6bbf278287a98f9da2f" prot="public" static="no">
+        <name>DS_GET_FILE_INFO_CC</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000016"><xreftitle>Name</xreftitle><xrefdescription><para>Get File Info Packet</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will send the DS File Info Packet.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000016"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput></computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___get_file_info_cmd__t" kindref="compound">DS_GetFileInfoCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="struct_d_s___file_info_pkt__t" kindref="compound">DS_FileInfoPkt_t</ref> packet will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_GET_FILE_INFO_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="592" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="592" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1a7cf7a5768ac6e6699a476934180d21fa" prot="public" static="no">
+        <name>DS_ADD_MID_CC</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000017"><xreftitle>Name</xreftitle><xrefdescription><para>Add Message ID To Packet Filter Table</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will change the Message ID selection for an unused Packet Filter Table entry to the indicated value.</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000017"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_AddMID</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___add_mid_cmd__t" kindref="compound">DS_AddMidCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_ADD_MID_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Message ID is invalid (can be anything but zero)</para></listitem><listitem><para>Packet filter table is not currently loaded</para></listitem><listitem><para>Message ID already exists in packet filter table</para></listitem><listitem><para>All packet filter table entries are already in use</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_ADD_MID_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="628" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="628" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ds__msgdefs_8h_1ae33e3db035d116f3538ddd90a4a176a5" prot="public" static="no">
+        <name>DS_CLOSE_ALL_CC</name>
+        <initializer>17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdscmds_1_cfsdscmds000018"><xreftitle>Name</xreftitle><xrefdescription><para>Close All Destination Files</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will close all open Destination Files.<itemizedlist>
+<listitem><para>NOTE: Using this command may incur a performance hit based upon the number and size of the files being closed.</para></listitem></itemizedlist>
+</para></simplesect>
+<xrefsect id="cfsdscmdmnems_1_cfsdscmdmnems000018"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_DS_CloseAll</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_d_s___close_all_cmd__t" kindref="compound">DS_CloseAllCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Evidence of success may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The #DS_CLOSE_ALL_CMD_EID debug event message will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Destination file table is not currently loaded</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_DS_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>The #DS_CLOSE_ALL_CMD_ERR_EID error event message will be sent</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msgdefs.h" line="662" column="9" bodyfile="apps/ds/fsw/src/ds_msgdefs.h" bodystart="662" bodyend="-1"/>
+        <referencedby refid="ds__app_8h_1a321e295b50657b32b8ec92e937aa9aca" compoundref="ds__app_8c" startline="347" endline="493">DS_AppProcessCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>ds_msgdefs.h<sp/>1.3<sp/>2017/01/25<sp/>12:05:42EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/>The<sp/>CFS<sp/>Data<sp/>Storage<sp/>(DS)<sp/>command<sp/>codes<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ds_msgdefs_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ds_msgdefs_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DS<sp/>application<sp/>command<sp/>codes<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="ds__msgdefs_8h_1aeea1dc965b33f9ff15e99a3d860d5b04" refkind="member"><highlight class="preprocessor">#define<sp/>DS_NOOP_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="ds__msgdefs_8h_1a036adb8b370a8565c5f82d6585e7d926" refkind="member"><highlight class="preprocessor">#define<sp/>DS_RESET_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="ds__msgdefs_8h_1a988e1ca6c661b06a0ba37871cd04af19" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_APP_STATE_CC<sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="ds__msgdefs_8h_1a981b2fe81bccb90d8f09a8e5847db999" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_FILTER_FILE_CC<sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="ds__msgdefs_8h_1a765facc4c0e6374257baddf51a0b04f7" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_FILTER_TYPE_CC<sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="ds__msgdefs_8h_1a2518be83bbbc5b5f439d0953bdf34ab2" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_FILTER_PARMS_CC<sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="ds__msgdefs_8h_1a88fa53fd482766adfee9e009444b101a" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_DEST_TYPE_CC<sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="ds__msgdefs_8h_1a5a27ba0c1dca9d0a05ac81aa673ad422" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_DEST_STATE_CC<sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="ds__msgdefs_8h_1a4bca0449b60b5bc6bf3c4fd7fe84e013" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_DEST_PATH_CC<sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388" refid="ds__msgdefs_8h_1aae4ab4329a38869212febf33504a628c" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_DEST_BASE_CC<sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423" refid="ds__msgdefs_8h_1a10c6b212013f9dd3c79e1d2a98615df5" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_DEST_EXT_CC<sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="458" refid="ds__msgdefs_8h_1a49c5aa2e956b2f450d02770e657ffd9a" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_DEST_SIZE_CC<sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight></codeline>
+<codeline lineno="493" refid="ds__msgdefs_8h_1ad5d3227b691c1fcb20f88eaa977a791e" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_DEST_AGE_CC<sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528" refid="ds__msgdefs_8h_1a0ac5bdc35d8ce4f9ccb0fa25a23d8712" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SET_DEST_COUNT_CC<sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="561" refid="ds__msgdefs_8h_1a018d95cfa040f2cffc5764a0b6e1e903" refkind="member"><highlight class="preprocessor">#define<sp/>DS_CLOSE_FILE_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="592" refid="ds__msgdefs_8h_1a879804f0ba87d6bbf278287a98f9da2f" refkind="member"><highlight class="preprocessor">#define<sp/>DS_GET_FILE_INFO_CC<sp/><sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="593"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="628" refid="ds__msgdefs_8h_1a7cf7a5768ac6e6699a476934180d21fa" refkind="member"><highlight class="preprocessor">#define<sp/>DS_ADD_MID_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="629"><highlight class="normal"></highlight></codeline>
+<codeline lineno="630"><highlight class="normal"></highlight></codeline>
+<codeline lineno="662" refid="ds__msgdefs_8h_1ae33e3db035d116f3538ddd90a4a176a5" refkind="member"><highlight class="preprocessor">#define<sp/>DS_CLOSE_ALL_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="663"><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_ds_msgdefs_h_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="668"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="669"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/ds/fsw/src/ds_msgdefs.h"/>
+  </compounddef>
+</doxygen>

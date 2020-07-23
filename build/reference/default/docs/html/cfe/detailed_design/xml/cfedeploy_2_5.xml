@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_2_5" kind="page">
+    <compoundname>cfedeploy_2_5</compoundname>
+    <title>Build the cFE Core and cFE Applications</title>
+    <detaileddescription>
+<para>Once the cFE Core and cFE Applications are set up in a build/CPU directory, everything can be compiled. The cFE Core or any of the cFE Applications can be built from individual make files, or they can be built from the top-level makefile in the build/cpu[x] directory.</para><para><center> <heading level="4">Build Commands </heading>
+</center></para><para><center> </center> <table rows="19" cols="2"><row>
+<entry thead="no"><para><bold> Shell command </bold> </para></entry><entry thead="no"><para><bold> Description </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>$ cd build/comm </para></entry><entry thead="no"><para>Change to the build CPU directory for our example &quot;comm&quot; CPU. </para></entry></row>
+<row>
+<entry thead="no"><para>$ make </para></entry><entry thead="no"><para>Build the cFE Core, all cFE apps, and tables </para></entry></row>
+<row>
+<entry thead="no"><para>$ make clean </para></entry><entry thead="no"><para>Clean the cFE Core, all cFE apps, and tables </para></entry></row>
+<row>
+<entry thead="no"><para>$ make install </para></entry><entry thead="no"><para>Copy the cFE Core executable, and cFE apps into the &quot;exe&quot; directory. </para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para>$ make cfecore </para></entry><entry thead="no"><para>Build the cFE Core only. </para></entry></row>
+<row>
+<entry thead="no"><para>$ make apps </para></entry><entry thead="no"><para>Build the cFE Apps only. </para></entry></row>
+<row>
+<entry thead="no"><para>$ make cleancore </para></entry><entry thead="no"><para>Clean the cFE Core only. </para></entry></row>
+<row>
+<entry thead="no"><para>$ make installcore </para></entry><entry thead="no"><para>Install the cFE Core only. </para></entry></row>
+<row>
+<entry thead="no"><para>$ make installapps </para></entry><entry thead="no"><para>Install the cFE Apps only. </para></entry></row>
+<row>
+<entry thead="no"><para>$ make depend </para></entry><entry thead="no"><para>Recalculate the dependencies on the cFE Apps </para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para>$ cd cfe </para></entry><entry thead="no"><para>Change to the build/comm/cfe directory </para></entry></row>
+<row>
+<entry thead="no"><para>$ make </para></entry><entry thead="no"><para>Run the individual cFE Core makefile. </para></entry></row>
+<row>
+<entry thead="no"><para>$ make depend </para></entry><entry thead="no"><para>Generate dependencies for the cFE Core </para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para><nonbreakablespace/> </para></entry></row>
+<row>
+<entry thead="no"><para>$ cd ../ci </para></entry><entry thead="no"><para>Change to the build/comm/ci directory. </para></entry></row>
+<row>
+<entry thead="no"><para>$ make </para></entry><entry thead="no"><para>Run the individual CI App makefile. </para></entry></row>
+</table>
+</para><para>Once the cFE core is built and installed, the cFE core executable file will be in the build/cpu[x]/exe directory. The filename of the cFE core executable is dependent on the OS it is built for.</para><para><center> <heading level="4">cFE core executable name </heading>
+</center></para><para><center> </center> <table rows="7" cols="3"><row>
+<entry thead="no"><para><bold> Target Operating System </bold> </para></entry><entry thead="no"><para><bold> cFE Core name </bold> </para></entry><entry thead="no"><para><bold> Notes </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>vxWorks 6.x static link </para></entry><entry thead="no"><para>vxWorks.st </para></entry><entry thead="no"><para>The old MCP750 platform included the kernel and cFE core. </para></entry></row>
+<row>
+<entry thead="no"><para>vxWorks 6.x dynamic link </para></entry><entry thead="no"><para>cfe-core.o </para></entry><entry thead="no"><para>The RAD750 and MCP750 platforms use a dynamically loaded object without the kernel. </para></entry></row>
+<row>
+<entry thead="no"><para>Linux </para></entry><entry thead="no"><para>core-linux.bin </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Mac OS X </para></entry><entry thead="no"><para>core-osx.bin </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Windows/Cygwin </para></entry><entry thead="no"><para>core-cygwin.bin </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Rtems/Coldfire </para></entry><entry thead="no"><para>cfe-core.bin </para></entry><entry thead="no"><para>Newer versions of the Coldfire port will use a dynamically loaded cFE core. </para></entry></row>
+</table>
+</para><para>Next: <ref refid="cfedeploy_2_6" kindref="compound">Load and Run the cFE Core and cFE Applications</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_2_4" kindref="compound">Configure a Set of cFE Applications for Each CPU</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_2" kindref="compound">How to Configure, Build, and Run the cFE</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

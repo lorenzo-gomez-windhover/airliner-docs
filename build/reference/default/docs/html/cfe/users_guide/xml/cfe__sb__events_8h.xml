@@ -1,0 +1,910 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__sb__events_8h" kind="file" language="C++">
+    <compoundname>cfe_sb_events.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cfe__sb__events_8h_1a4575cae25667d3c3252daec7790d024b" prot="public" static="no">
+        <name>CFE_SB_INIT_EID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;cFE SB Initialized&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000133"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;cFE SB Initialized&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the Software Bus Task completes its initialization. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="85" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a6f9b10791474db7aadf819dba68cb0a5" prot="public" static="no">
+        <name>CFE_SB_CR_PIPE_BAD_ARG_EID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CreatePipeErr:Bad Input Arg:app=%s,ptr=0x%x,depth=%d,maxdepth=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000134"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CreatePipeErr:Bad Input Arg:app=%s,ptr=0x%x,depth=%d,maxdepth=%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> API receives a bad argument. In this case, a bad argument is defined by the following: A NULL PipeIdPtr, PipeDepth = 0 and PipeDepth &gt; cfg param #CFE_SB_MAX_PIPE_DEPTH </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="98" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a24c608a56ec85263903d93065d5d792a" prot="public" static="no">
+        <name>CFE_SB_MAX_PIPES_MET_EID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CreatePipeErr:Max Pipes(%d)In Use.app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000135"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CreatePipeErr:Max Pipes(%d)In Use.app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> API is called and the maximum number of pipes (defined by cfg param #CFE_SB_MAX_PIPES) are in use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="110" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1af1c1fa676f909e3ab163dba611befc70" prot="public" static="no">
+        <name>CFE_SB_CR_PIPE_ERR_EID</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CreatePipeErr:OS_QueueCreate returned %d,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000136"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CreatePipeErr:OS_QueueCreate returned %d,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> API is called and the OS returns an error when the OS returns an error from the OS_QueueCreate API. The error status returned by the OS is displayed in the event. Most commonly, this event is displayed as a result of trying to create pipes with the same name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="125" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1aa5ff1282f153a91a50a434614c1c1c1c" prot="public" static="no">
+        <name>CFE_SB_PIPE_ADDED_EID</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Pipe Created:name %s,id %d,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000137"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Pipe Created:name %s,id %d,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when a pipe was successfully created in the <ref refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="137" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1abd0005ffef2e4e68be9bd1aad47bccab" prot="public" static="no">
+        <name>CFE_SB_SUB_ARG_ERR_EID</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Subscribe Err:Bad Arg,MsgId 0x%x,PipeId %d,app %s,scope %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000138"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subscribe Err:Bad Arg,MsgId 0x%x,PipeId %d,app %s,scope %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when one of the Subscribe API&apos;s are called with an invalid MsgId. An invalid MsgId is defined as being greater than the cfg param #CFE_SB_HIGHEST_VALID_MSGID. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="152" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a04a43c8a570afab1d1a02c1456c0b0f2" prot="public" static="no">
+        <name>CFE_SB_DUP_SUBSCRIP_EID</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Duplicate Subscription,MsgId 0x%x on %s pipe,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000139"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Duplicate Subscription,MsgId 0x%x on %s pipe,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This info event message is issued when a subscription request is received that already exists in the routing table. A duplicate subscription is defined by a matching MsgId and PipeId. No other parameters are used in detecting a duplicate subscription. NOTE: By default, SB filters this event. The EVS filter algorithm allows the first event to pass through the filter, but all subsequent events with this event id will be filtered. A command must be sent to unfilter this event if the user desires to see it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="170" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1aea35c5f696a9ece8364b00ba4c3d4896" prot="public" static="no">
+        <name>CFE_SB_MAX_MSGS_MET_EID</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Subscribe Err:Max Msgs(%d)In Use,MsgId 0x%x,pipe %s,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000140"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subscribe Err:Max Msgs(%d)In Use,MsgId 0x%x,pipe %s,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when one of the SB subscribe APIs are called with a new MsgId, and SB cannot accommodate the new MsgId because the maximum number of MsgIds are in use. The maximum number of MsgIds is defined by cfg param #CFE_SB_MAX_MSG_IDS. This cfg param dictates the number of elements in the SB routing table. There is one element per MsgId. The user may monitor the routing table utilization figures (msgids currently in use, high water mark and max allowed) by sending the SB cmd to dump the SB statistics data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="187" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a6eec4a76378d6503e5e4c9bfc9484930" prot="public" static="no">
+        <name>CFE_SB_MAX_DESTS_MET_EID</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Subscribe Err:Max Dests(%d)In Use For Msg 0x%x,pipe %s,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000141"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subscribe Err:Max Dests(%d)In Use For Msg 0x%x,pipe %s,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when a subscription request is received and all destinations for that MsgId are in use. The number of destinations per msgid is a configuration parameter named #CFE_SB_MAX_DEST_PER_PKT. A destination is defined as a pipe. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="201" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a7e2ddce30ca96403f818b9e4b40103df" prot="public" static="no">
+        <name>CFE_SB_SUBSCRIPTION_RCVD_EID</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Subscription Rcvd:MsgId 0x%x on %s(%d),app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000142"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subscription Rcvd:MsgId 0x%x on %s(%d),app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when a subscription is successfully made through one of the SB Subscribe API&apos;s </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="213" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a1862fe9db898fbf8559ed03fa4dd91ef" prot="public" static="no">
+        <name>CFE_SB_UNSUB_ARG_ERR_EID</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;UnSubscribe Err:Bad Arg,MsgId 0x%x,PipeId %d,app %s,scope %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000143"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;UnSubscribe Err:Bad Arg,MsgId 0x%x,PipeId %d,app %s,scope %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when a request to unsubscribe fails due to an invalid msgid or an invalid pipeid in one of SB&apos;s unsubscribe API&apos;s. The msgid must be less than cfg param #CFE_SB_HIGHEST_VALID_MSGID and the pipeid must have been created and have a value less than cfg param #CFE_SB_MAX_PIPES. The SB pipe table may be viewed to verify its value or existence. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="228" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a1cd0fa919edd4c90ac0f3c103ffa2c3a" prot="public" static="no">
+        <name>CFE_SB_UNSUB_NO_SUBS_EID</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Unsubscribe Err:No subs for Msg 0x%x on %s,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000144"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unsubscribe Err:No subs for Msg 0x%x on %s,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This info event message is issued when a request to unsubscribe fails due to a non existent msgid/pipeid combination in the SB routing table. The SB routing table may be viewed to see a list of valid msgid/pipeid combinations. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="241" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1aa0c834952e6e0be338fa64c6ddf3e153" prot="public" static="no">
+        <name>CFE_SB_SEND_BAD_ARG_EID</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Send Err:Bad input argument,Arg 0x%x,App %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000145"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Send Err:Bad input argument,Arg 0x%x,App %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API receives an invalid (possibly NULL) ptr as an argument. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="253" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a6af4cd28e435cbca1b335f474cbf3267" prot="public" static="no">
+        <name>CFE_SB_SEND_NO_SUBS_EID</name>
+        <initializer>14</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;No subscribers for MsgId 0x%x,sender %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000146"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;No subscribers for MsgId 0x%x,sender %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This info event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API is called and there are no subscribers (therefore no destinations) for the message to be sent. Each time the SB detects this situation, the corresponding SB telemetry point is incremented.. NOTE: By default, SB filters this event. The EVS filter algorithm allows the first event to pass through the filter, but all subsequent events with this event id will be filtered. A command must be sent to unfilter this event if the user desires to see it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="271" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1ab2104f1ad4fc6d65cff6d058fd85f695" prot="public" static="no">
+        <name>CFE_SB_MSG_TOO_BIG_EID</name>
+        <initializer>15</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Send Err:Msg Too Big MsgId=0x%x,app=%s,size=%d,MaxSz=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000147"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Send Err:Msg Too Big MsgId=0x%x,app=%s,size=%d,MaxSz=%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API is called and the packet length field in the message header implies that the message size exceeds the max size defined by mission cfg param <ref refid="cfe__mission__cfg_8h_1ac5a1b99c0ee718d0a9c8148e70ddd473" kindref="member">CFE_SB_MAX_SB_MSG_SIZE</ref>. The request to send the message is denied, there is no partial packet sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="285" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1aeaa1dbff9ffe6f67e9fd71fdeebd17b8" prot="public" static="no">
+        <name>CFE_SB_GET_BUF_ERR_EID</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Send Err:Request for Buffer Failed. MsgId 0x%x,app %s,size %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000148"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Send Err:Request for Buffer Failed. MsgId 0x%x,app %s,size %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API fails to receive the necessary buffer memory from the ES memory pool. This could be an indication that the cfg param #CFE_SB_BUF_MEMORY_BYTES is set too low. To check this, send SB cmd to dump the SB statistics pkt and view the buffer memory parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="299" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1aca1ffa8b63bc24a135090f2528e936bc" prot="public" static="no">
+        <name>CFE_SB_MSGID_LIM_ERR_EID</name>
+        <initializer>17</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Send Err:Msg Limit Err MsgId 0x%x,pipe %s,sender %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000149"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Send Err:Msg Limit Err MsgId 0x%x,pipe %s,sender %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API cannot route the MsgId (displayed in event) to the pipe (displayed in the event) because the pipe currently contains the maximum number of messages of this type (MsgId). This is typically an indication that the receiver is not reading its pipe fast enough, or at all. A less typical scenerio is that the sender is sending a burst of pkts of this type (or MsgId) and the receiver (owner of &apos;pipe&apos;) cannot keep up. The subscriber of the message dictates this limit count in the &apos;MsgLim&apos; parameter of the <ref refid="cfe__sb_8h_1a5939c3681044a3d953d0fe72dd577889" kindref="member">CFE_SB_SubscribeEx</ref> API or uses the default value of 4 if using the <ref refid="cfe__sb_8h_1afc2c2db1a504f544b430f33f28be769b" kindref="member">CFE_SB_Subscribe</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="318" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a4d4d1979aae6b0a061ac3ae6a1e958cd" prot="public" static="no">
+        <name>CFE_SB_RCV_BAD_ARG_EID</name>
+        <initializer>18</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Rcv Err:Bad Input Arg:BufPtr 0x%x,pipe %d,t/o %d,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000150"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcv Err:Bad Input Arg:BufPtr 0x%x,pipe %d,t/o %d,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when an invalid paramter is passed into the <ref refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d" kindref="member">CFE_SB_RcvMsg</ref> API. Two possibile problems would be the first parameter (*BufPtr) being NULL or the third paramter (TimeOut) being less than -1. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="331" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a9ebc3fc50d63a2830404c98d01247e55" prot="public" static="no">
+        <name>CFE_SB_BAD_PIPEID_EID</name>
+        <initializer>19</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Rcv Err:PipeId %d does not exist,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000151"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcv Err:PipeId %d does not exist,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when an invalid PipeId is passed into the <ref refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d" kindref="member">CFE_SB_RcvMsg</ref> API. The SB Pipe Table shows all valid PipeIds and may be viewed for verification. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="344" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a1fc67b8b066213fbae9f916900534d23" prot="public" static="no">
+        <name>CFE_SB_DEST_BLK_ERR_EID</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Subscribe Err:Request for Destination Blk failed for Msg 0x%x,Pipe %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000152"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subscribe Err:Request for Destination Blk failed for Msg 0x%x,Pipe %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the SB receives an error from the memory pool in the attempt to obtain a new destination block. Then memory pool statistics may be viewed by sending the related ES command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="358" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a291ea8374837d7136d4a16aaf55ac320" prot="public" static="no">
+        <name>CFE_SB_SEND_INV_MSGID_EID</name>
+        <initializer>21</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Send Err:Invalid msgid in msg,MsgId 0x%x,App %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000153"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Send Err:Invalid msgid in msg,MsgId 0x%x,App %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API is called and the SB discovers that the message to send has a msg id that is invalid. It may be due to a msg id that is greater than cfg parameter #CFE_SB_HIGHEST_VALID_MSGID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="372" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a14faf18594bd890811fad4c50941dcc7" prot="public" static="no">
+        <name>CFE_SB_SUBSCRIPTION_RPT_EID</name>
+        <initializer>22</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Sending Subscription Report Msg=0x%x,Pipe=%d,Stat=0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000154"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Sending Subscription Report Msg=0x%x,Pipe=%d,Stat=0x%x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when SB subscription reporting is enabled, (which is disabled by default) and a subscription is successfully received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="384" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a1b7890c396d5bb2d151749643241b36c" prot="public" static="no">
+        <name>CFE_SB_UNSUBSCRIPTION_RPT_EID</name>
+        <initializer>24</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Sending Unsubscription Report Msg=0x%x,Pipe=%d,Stat=0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000155"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Sending Unsubscription Report Msg=0x%x,Pipe=%d,Stat=0x%x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when SB subscription reporting is enabled, (which is disabled by default) and a subscription is successfully received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="397" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1ae307373383046c5dc051941f7874fece" prot="public" static="no">
+        <name>CFE_SB_Q_FULL_ERR_EID</name>
+        <initializer>25</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Pipe Overflow,MsgId 0x%x,pipe %s,stat 0x%x,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000156"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Pipe Overflow,MsgId 0x%x,pipe %s,stat 0x%x,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API is called and encounters an error when attempting to write the msg to the destination pipe (which is an underlying queue). This could indicate that the owner of the pipe is not readings its messages fast enough or at all. It may also mean that the pipe depth is not deep enough. The pipe depth is an input parameter to the <ref refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="414" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1aad2429b7e645b488c153df98976ab8ab" prot="public" static="no">
+        <name>CFE_SB_Q_WR_ERR_EID</name>
+        <initializer>26</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Pipe Write Err,MsgId 0x%x,pipe %s,stat 0x%x,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000157"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Pipe Write Err,MsgId 0x%x,pipe %s,stat 0x%x,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API is called and encounters an error when attempting to write the msg to the destination pipe (which is an underlying queue). More precisely, the OS API <ref refid="osapi-os-core_8h_1a514794c514fed167939e3bc870d50d44" kindref="member">OS_QueuePut</ref> has returned an unexpected error. The return code is displayed in the event. For more information, the user may look up the return code in the OSAL documention or source code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="430" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1ae1ecf8ae10a18ce0df00205eac52b3f3" prot="public" static="no">
+        <name>CFE_SB_Q_RD_ERR_EID</name>
+        <initializer>27</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Pipe Read Err,pipe %s,app %s,stat 0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000158"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Pipe Read Err,pipe %s,app %s,stat 0x%x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> API is called and encounters an error when attempting to read the msg from the destination pipe (which is an underlying queue). More precisely, the OS API <ref refid="osapi-os-core_8h_1a6e563810965cdff38da7e4ec3347fce8" kindref="member">OS_QueueGet</ref> has returned an unexpected error. The return code is displayed in the event. For more information, the user may look up the return code in the OSAL documention or source code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="446" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a16e9d8e79635d0fe53cc59fd1854955a" prot="public" static="no">
+        <name>CFE_SB_CMD0_RCVD_EID</name>
+        <initializer>28</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;No-op Cmd Rcvd&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000159"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;No-op Cmd Rcvd&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This info event message is issued in response an SB NO-OP command </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="457" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a1257888d6fe11d2502da88f1f891e5f5" prot="public" static="no">
+        <name>CFE_SB_CMD1_RCVD_EID</name>
+        <initializer>29</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Counters Cmd Rcvd&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000160"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset Counters Cmd Rcvd&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued in response an SB Reset Counters command </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="468" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1aa96aa1dccc8cf0175bdf2a78a0981ab6" prot="public" static="no">
+        <name>CFE_SB_LSTSNDER_ERR1_EID</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;SB GetLastSender Err:Rcvd Null Ptr,Pipe=d,App=s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000161"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;SB GetLastSender Err:Rcvd Null Ptr,Pipe=d,App=s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when SB receives a Null pointer from the caller of CFE_SB_GetLastSenderId. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="481" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a7bb167d7131aab4c8ce94a9cd2acd7e5" prot="public" static="no">
+        <name>CFE_SB_LSTSNDER_ERR2_EID</name>
+        <initializer>31</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;SB GetLastSender Err:Rcvd Invalid Pipe=d,App=s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000162"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;SB GetLastSender Err:Rcvd Invalid Pipe=d,App=s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when SB receives an invalid pipe from the caller of CFE_SB_GetLastSenderId. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="493" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1ab2dc699d6e4487a01d584e68c164884f" prot="public" static="no">
+        <name>CFE_SB_SND_STATS_EID</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Software Bus Statistics packet sent&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000163"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Software Bus Statistics packet sent&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when SB receives a cmd to send the SB statistics pkt. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="506" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1af3cf0d01fa8726017b324aad751a6636" prot="public" static="no">
+        <name>CFE_SB_ENBL_RTE1_EID</name>
+        <initializer>33</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Enbl Route Cmd:Route does not exist.Msg 0x%x,Pipe %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000164"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Enbl Route Cmd:Route does not exist.Msg 0x%x,Pipe %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when SB receives a cmd to enable a route that does not exist in the routing table. A route is defined by a MsgId, PipeId pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="518" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a131ef397927ccec9efe2b869fdc0416e" prot="public" static="no">
+        <name>CFE_SB_ENBL_RTE2_EID</name>
+        <initializer>34</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Enabling Route,Msg 0x%x,Pipe %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000165"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Enabling Route,Msg 0x%x,Pipe %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when SB receives a cmd to enable a route and the request is successfully executed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="530" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="530" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a1081f58baded3de47d337f97f34e0891" prot="public" static="no">
+        <name>CFE_SB_ENBL_RTE3_EID</name>
+        <initializer>35</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Enbl Route Cmd:Invalid Param.Msg 0x%x,Pipe %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000166"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Enbl Route Cmd:Invalid Param.Msg 0x%x,Pipe %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when SB receives a cmd to enable a route and the MsgId or PipeId does not pass the validation checks. The MsgId must be less than cfg param #CFE_SB_HIGHEST_VALID_MSGID. The PipeId must exist and be less than cfg param #CFE_SB_MAX_PIPES. The SB pipe table may be viewed to verify the PipeId existence. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="545" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="545" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a33b1be18282083aeb1ab9ffc3e916508" prot="public" static="no">
+        <name>CFE_SB_DSBL_RTE1_EID</name>
+        <initializer>36</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Disable Route Cmd:Route does not exist,Msg 0x%x,Pipe %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000167"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Disable Route Cmd:Route does not exist,Msg 0x%x,Pipe %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when SB receives a cmd to disable a route that does not exist in the routing table. A route is defined by a MsgId, PipeId pair. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="557" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="557" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a8686092ba9fc6862c32c66e412f14229" prot="public" static="no">
+        <name>CFE_SB_DSBL_RTE2_EID</name>
+        <initializer>37</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Route Disabled,Msg 0x%x,Pipe %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000168"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Route Disabled,Msg 0x%x,Pipe %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when SB receives a cmd to disable a route and the request is successfully executed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="569" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="569" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a05ede2b452013e06401bcc7edbb160d7" prot="public" static="no">
+        <name>CFE_SB_DSBL_RTE3_EID</name>
+        <initializer>38</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Disable Route Cmd:Invalid Param.Msg 0x%x,Pipe %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000169"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Disable Route Cmd:Invalid Param.Msg 0x%x,Pipe %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when SB receives a cmd to disable a route and the MsgId or PipeId does not pass the validation checks. The MsgId must be less than cfg param #CFE_SB_HIGHEST_VALID_MSGID. The PipeId must exist and be less than cfg param #CFE_SB_MAX_PIPES. The SB pipe table may be viewed to verify the PipeId existence. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="584" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a0ed8630a775f1ef8568997ad5b4c44fd" prot="public" static="no">
+        <name>CFE_SB_SND_RTG_EID</name>
+        <initializer>39</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;%s written:Size=%d,Entries=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000170"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s written:Size=%d,Entries=%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued after the SB routing info file, pipe info file or the map info file is written and closed. This is done is response to the SB &apos;Send Routing Info&apos; cmd, the SB &apos;Send pipe Info&apos; cmd or the SB &apos;Send Map Info&apos; cmd, respectively. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="598" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a53808074e714988de6be4ba0746e0133" prot="public" static="no">
+        <name>CFE_SB_SND_RTG_ERR1_EID</name>
+        <initializer>40</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error creating file %s, stat=0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000171"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error creating file %s, stat=0x%x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the SB &apos;Send Routing Info&apos; cmd is received and the file create fails. The event displays the status received from the OS. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="612" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="612" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a1878bc4096f06ef07b922e6a7709c67d" prot="public" static="no">
+        <name>CFE_SB_GLS_INV_CALLER_EID</name>
+        <initializer>41</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;SB GetLastSender Err:Caller(%s) is not the owner of pipe %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000172"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;SB GetLastSender Err:Caller(%s) is not the owner of pipe %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the caller of CFE_SB_GetLastSenderId is not the owner of the given pipe Id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="625" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="625" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a944cc65068879d44221e357af67cc78a" prot="public" static="no">
+        <name>CFE_SB_BAD_CMD_CODE_EID</name>
+        <initializer>42</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid Cmd, Unexpected Command Code %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000173"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid Cmd, Unexpected Command Code %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the SB receives a cmd that has an unexpected cmd code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="638" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a209a49c4097521eb3570b2f6ee7456b2" prot="public" static="no">
+        <name>CFE_SB_BAD_MSGID_EID</name>
+        <initializer>43</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid Cmd, Unexpected Msg Id: 0x%04x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000174"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid Cmd, Unexpected Msg Id: 0x%04x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the SB receives a msg that has an unexpected msg id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="650" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="650" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1ad4e2c79e03bb6a421cc3d10ccdefdcc9" prot="public" static="no">
+        <name>CFE_SB_FULL_SUB_PKT_EID</name>
+        <initializer>44</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Full Sub Pkt %d Sent,Entries=%d,Stat=0x%x<linebreak/>
+&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000175"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Full Sub Pkt %d Sent,Entries=%d,Stat=0x%x<linebreak/>
+&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued in response to the &apos;Send Previous Subscriptions&apos; command and a full pkt segment is sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="663" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a165ba07fe989ec2e5e6942c4df0e18d1" prot="public" static="no">
+        <name>CFE_SB_PART_SUB_PKT_EID</name>
+        <initializer>45</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Partial Sub Pkt %d Sent,Entries=%d,Stat=0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000176"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Partial Sub Pkt %d Sent,Entries=%d,Stat=0x%x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued in response to the &apos;Send Previous Subscriptions&apos; command and a partial pkt segment is sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="675" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1aa7549492614e1ce10686f7bfed91b114" prot="public" static="no">
+        <name>CFE_SB_DEL_PIPE_ERR1_EID</name>
+        <initializer>46</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Pipe Delete Error:Bad Argument,PipedId %d,Requestor %s,Idx %d,Stat %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000177"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Pipe Delete Error:Bad Argument,PipedId %d,Requestor %s,Idx %d,Stat %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued from one of SB&apos;s subscribe API&apos;s when the function <ref refid="cfe__sb__priv_8h_1a9ef1179eae9f13d7648876b838c03b26" kindref="member">CFE_SB_GetRoutingTblIdx</ref> returns an index that is out of range. This error is not expected and is an indication that the SB internal memory has been corrupted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="690" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="690" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a72cc6ac67fa3c20a454a490c425f8245" prot="public" static="no">
+        <name>CFE_SB_PIPE_DELETED_EID</name>
+        <initializer>47</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Pipe Deleted:id %d,owner %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000178"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Pipe Deleted:id %d,owner %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when the <ref refid="cfe__sb_8h_1a268a5a36f7628873472456e02565bfcf" kindref="member">CFE_SB_DeletePipe</ref> API is called and the request is successfully completed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="702" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="702" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a7d3f99f5b0b1df63d79d862f95f7c98a" prot="public" static="no">
+        <name>CFE_SB_SUBSCRIPTION_REMOVED_EID</name>
+        <initializer>48</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Subscription Removed:Msg 0x%x on pipe %d,app %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000179"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subscription Removed:Msg 0x%x on pipe %d,app %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This debug event message is issued when <ref refid="cfe__sb_8h_1a70ea901e65f03221e3787d73733db060" kindref="member">CFE_SB_Unsubscribe</ref> API is called and the request is successfully completed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="714" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="714" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a5aac7fe818a335690905b259bca04f28" prot="public" static="no">
+        <name>CFE_SB_FILEWRITE_ERR_EID</name>
+        <initializer>49</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;File write,byte cnt err,file %s,request=%d,actual=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000180"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;File write,byte cnt err,file %s,request=%d,actual=%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when one of many SB&apos;s file write operations is unsuccessful. This event is a result of <ref refid="cfe__fs_8h_1a7f0315f283029e5ec7ade9fdfd38875d" kindref="member">CFE_FS_WriteHeader</ref> or OS_write returning something other than the number of bytes requested to be written. The requested value and the return value are displayed in the event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="728" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1afb22f9e3a04b74b2088990b6d054881f" prot="public" static="no">
+        <name>CFE_SB_SUB_INV_PIPE_EID</name>
+        <initializer>50</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Subscribe Err:Invalid Pipe Id,Msg=0x%x,PipeId=%d,App %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000181"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subscribe Err:Invalid Pipe Id,Msg=0x%x,PipeId=%d,App %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the input PipeId has a value that is not listed in the pipe table. This typically means that the pipe does not exist. The pipe table may be viewed for verification. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="741" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="741" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a6a79ab5795cfc7b6e3f00aa3a423eacb" prot="public" static="no">
+        <name>CFE_SB_SUB_INV_CALLER_EID</name>
+        <initializer>51</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Subscribe Err:Caller(%s) is not the owner of pipe %d, Msg=0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000182"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Subscribe Err:Caller(%s) is not the owner of pipe %d, Msg=0x%x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when one of the SB subscribe API&apos;s are called and the requestor is not the owner of the pipe. Only the owner of the pipe may subscribe to messages on the pipe. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="754" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="754" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1ae843b9270f5ab886241eb7bedf4517f4" prot="public" static="no">
+        <name>CFE_SB_UNSUB_INV_PIPE_EID</name>
+        <initializer>52</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Unsubscribe Err:Invalid Pipe Id Msg=0x%x,Pipe=%d,app=%s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000183"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unsubscribe Err:Invalid Pipe Id Msg=0x%x,Pipe=%d,app=%s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when one of the SB unsubscribe API&apos;s are called and the input parameter PipeId is not listed in the pipe table. This typically means that the pipe does not exist. The pipe table may be viewed for verification. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="768" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="768" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a5c82f812ce548e58235a2f8aa4beb722" prot="public" static="no">
+        <name>CFE_SB_UNSUB_INV_CALLER_EID</name>
+        <initializer>53</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Unsubscribe Err:Caller(%s) is not the owner of pipe %d,Msg=0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000184"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unsubscribe Err:Caller(%s) is not the owner of pipe %d,Msg=0x%x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when one of the SB unsubscribe API&apos;s are called and the requestor is not the owner of the pipe (or ES). Only the owner of the pipe(or ES for cleanup purposes)may unsubscribe messages from a pipe. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="781" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="781" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__events_8h_1a63c4767ce6117a70e2a7d2b7105ea646" prot="public" static="no">
+        <name>CFE_SB_DEL_PIPE_ERR2_EID</name>
+        <initializer>54</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Pipe Delete Error:Caller(%s) is not the owner of pipe %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000185"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Pipe Delete Error:Caller(%s) is not the owner of pipe %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event message is issued when the <ref refid="cfe__sb_8h_1a268a5a36f7628873472456e02565bfcf" kindref="member">CFE_SB_DeletePipe</ref> API is called by a task that is not the owner of the pipe. Pipes may be deleted only by the task that created the pipe or ES(for cleanup purposes). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_events.h" line="794" column="9" bodyfile="inc/cfe_sb_events.h" bodystart="794" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/><sp/>File:<sp/>cfe_sb_events.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2006,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>cFE<sp/>Software<sp/>Bus<sp/>(SB)<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/>References:</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.0a</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>cFE<sp/>Flight<sp/>Software<sp/>Application<sp/>Developers<sp/>Guide</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>$Log:<sp/>cfe_sb_events.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2011/12/20<sp/>10:52:41GMT-05:00<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>DCR15187:2<sp/>Removed<sp/>event<sp/>CFE_SB_MSGCNT_ERR1_EID<sp/>(23)</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2009/05/08<sp/>11:29:10EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>DCR7631:1<sp/>Removed<sp/>2<sp/>events<sp/>rergarding<sp/>index<sp/>error<sp/>and<sp/>renumbered<sp/>events</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2009/02/10<sp/>11:24:46EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>DCR1699:1<sp/>Removed<sp/>pipe<sp/>owner<sp/>in<sp/>five<sp/>events</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2009/02/03<sp/>11:03:45EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>DCR5801:2<sp/>Added<sp/>event<sp/>CFE_SB_DEST_BLK_ERR_EID</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2009/01/23<sp/>15:00:06EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>DCR5802:1<sp/>Removed<sp/>redundant<sp/>events<sp/>in<sp/>cfe_sb_buf.c</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2008/12/08<sp/>12:07:07EST<sp/>dkobe<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Updates<sp/>to<sp/>correct<sp/>doxygen<sp/>errors</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:23EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>cfe<sp/>project<sp/>on<sp/>tlserver3</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Revision<sp/>1.21<sp/>2007/09/19<sp/>14:37:06EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Removed<sp/>Use<sp/>Count<sp/>Error<sp/>events<sp/>1<sp/>and<sp/>4</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Revision<sp/>1.20<sp/>2007/07/12<sp/>16:46:22EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>DCR4680:1<sp/>Removed<sp/>events<sp/>associated<sp/>with<sp/>SB<sp/>event<sp/>log</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>Revision<sp/>1.19<sp/>2007/07/06<sp/>13:16:38EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>DCR469:1<sp/>Added<sp/>3<sp/>events<sp/>for<sp/>new<sp/>GetLastSender<sp/>code</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Revision<sp/>1.18<sp/>2007/06/02<sp/>10:10:10EDT<sp/>dlkobe</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>Added<sp/>doxygen<sp/>comments<sp/>for<sp/>User&apos;s<sp/>Guides</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Revision<sp/>1.17<sp/>2007/05/25<sp/>16:24:48EDT<sp/>dlkobe</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>Continued<sp/>updating<sp/>doxygen<sp/>comments</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Revision<sp/>1.16<sp/>2007/05/25<sp/>15:59:30EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>Added<sp/>comments<sp/>to<sp/>events</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/>Revision<sp/>1.15<sp/>2007/03/23<sp/>09:50:16EST<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>DCR3217<sp/>Removed<sp/>event<sp/>29</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>Revision<sp/>1.14<sp/>2007/03/19<sp/>14:46:00EST<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>Removed<sp/>#define<sp/>for<sp/>create<sp/>pipe<sp/>duplicate<sp/>name<sp/>event<sp/>id</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>Revision<sp/>1.13<sp/>2007/03/16<sp/>15:30:36EST<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>New<sp/>event<sp/>for<sp/>duplicate<sp/>pipe<sp/>name<sp/>check</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/>Revision<sp/>1.12<sp/>2007/03/16<sp/>14:09:04EST<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">**<sp/>Added<sp/>new<sp/>event<sp/>for<sp/>array<sp/>index<sp/>out<sp/>of<sp/>range<sp/>in<sp/>subscribe</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/>Revision<sp/>1.11<sp/>2007/03/16<sp/>09:57:54EST<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>Added<sp/>new<sp/>events<sp/>related<sp/>to<sp/>pipe<sp/>owner<sp/>checks</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cfe_sb_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cfe_sb_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">**<sp/>SB<sp/>task<sp/>event<sp/>message<sp/>ID&apos;s.</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">**<sp/>Event<sp/>ID&apos;s</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="cfe__sb__events_8h_1a4575cae25667d3c3252daec7790d024b" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_INIT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="cfe__sb__events_8h_1a6f9b10791474db7aadf819dba68cb0a5" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_CR_PIPE_BAD_ARG_EID<sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="cfe__sb__events_8h_1a24c608a56ec85263903d93065d5d792a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_MAX_PIPES_MET_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="cfe__sb__events_8h_1af1c1fa676f909e3ab163dba611befc70" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_CR_PIPE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="cfe__sb__events_8h_1aa5ff1282f153a91a50a434614c1c1c1c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_PIPE_ADDED_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="cfe__sb__events_8h_1abd0005ffef2e4e68be9bd1aad47bccab" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SUB_ARG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="cfe__sb__events_8h_1a04a43c8a570afab1d1a02c1456c0b0f2" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DUP_SUBSCRIP_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="cfe__sb__events_8h_1aea35c5f696a9ece8364b00ba4c3d4896" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_MAX_MSGS_MET_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="cfe__sb__events_8h_1a6eec4a76378d6503e5e4c9bfc9484930" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_MAX_DESTS_MET_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="cfe__sb__events_8h_1a7e2ddce30ca96403f818b9e4b40103df" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SUBSCRIPTION_RCVD_EID<sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="cfe__sb__events_8h_1a1862fe9db898fbf8559ed03fa4dd91ef" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_UNSUB_ARG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="cfe__sb__events_8h_1a1cd0fa919edd4c90ac0f3c103ffa2c3a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_UNSUB_NO_SUBS_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="cfe__sb__events_8h_1aa0c834952e6e0be338fa64c6ddf3e153" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SEND_BAD_ARG_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="cfe__sb__events_8h_1a6af4cd28e435cbca1b335f474cbf3267" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SEND_NO_SUBS_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="cfe__sb__events_8h_1ab2104f1ad4fc6d65cff6d058fd85f695" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_MSG_TOO_BIG_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="cfe__sb__events_8h_1aeaa1dbff9ffe6f67e9fd71fdeebd17b8" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_GET_BUF_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="cfe__sb__events_8h_1aca1ffa8b63bc24a135090f2528e936bc" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_MSGID_LIM_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331" refid="cfe__sb__events_8h_1a4d4d1979aae6b0a061ac3ae6a1e958cd" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_RCV_BAD_ARG_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="cfe__sb__events_8h_1a9ebc3fc50d63a2830404c98d01247e55" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_BAD_PIPEID_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358" refid="cfe__sb__events_8h_1a1fc67b8b066213fbae9f916900534d23" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DEST_BLK_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372" refid="cfe__sb__events_8h_1a291ea8374837d7136d4a16aaf55ac320" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SEND_INV_MSGID_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384" refid="cfe__sb__events_8h_1a14faf18594bd890811fad4c50941dcc7" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SUBSCRIPTION_RPT_EID<sp/><sp/><sp/><sp/><sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397" refid="cfe__sb__events_8h_1a1b7890c396d5bb2d151749643241b36c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_UNSUBSCRIPTION_RPT_EID<sp/><sp/><sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414" refid="cfe__sb__events_8h_1ae307373383046c5dc051941f7874fece" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_Q_FULL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="430" refid="cfe__sb__events_8h_1aad2429b7e645b488c153df98976ab8ab" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_Q_WR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446" refid="cfe__sb__events_8h_1ae1ecf8ae10a18ce0df00205eac52b3f3" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_Q_RD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>27</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="457" refid="cfe__sb__events_8h_1a16e9d8e79635d0fe53cc59fd1854955a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_CMD0_RCVD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="468" refid="cfe__sb__events_8h_1a1257888d6fe11d2502da88f1f891e5f5" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_CMD1_RCVD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>29</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481" refid="cfe__sb__events_8h_1aa96aa1dccc8cf0175bdf2a78a0981ab6" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_LSTSNDER_ERR1_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="493" refid="cfe__sb__events_8h_1a7bb167d7131aab4c8ce94a9cd2acd7e5" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_LSTSNDER_ERR2_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506" refid="cfe__sb__events_8h_1ab2dc699d6e4487a01d584e68c164884f" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SND_STATS_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"></highlight></codeline>
+<codeline lineno="518" refid="cfe__sb__events_8h_1af3cf0d01fa8726017b324aad751a6636" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_ENBL_RTE1_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530" refid="cfe__sb__events_8h_1a131ef397927ccec9efe2b869fdc0416e" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_ENBL_RTE2_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>34</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545" refid="cfe__sb__events_8h_1a1081f58baded3de47d337f97f34e0891" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_ENBL_RTE3_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>35</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557" refid="cfe__sb__events_8h_1a33b1be18282083aeb1ab9ffc3e916508" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DSBL_RTE1_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight></codeline>
+<codeline lineno="569" refid="cfe__sb__events_8h_1a8686092ba9fc6862c32c66e412f14229" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DSBL_RTE2_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>37</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight></codeline>
+<codeline lineno="584" refid="cfe__sb__events_8h_1a05ede2b452013e06401bcc7edbb160d7" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DSBL_RTE3_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="585"><highlight class="normal"></highlight></codeline>
+<codeline lineno="598" refid="cfe__sb__events_8h_1a0ed8630a775f1ef8568997ad5b4c44fd" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SND_RTG_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>39</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="599"><highlight class="normal"></highlight></codeline>
+<codeline lineno="600"><highlight class="normal"></highlight></codeline>
+<codeline lineno="612" refid="cfe__sb__events_8h_1a53808074e714988de6be4ba0746e0133" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SND_RTG_ERR1_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"></highlight></codeline>
+<codeline lineno="614"><highlight class="normal"></highlight></codeline>
+<codeline lineno="625" refid="cfe__sb__events_8h_1a1878bc4096f06ef07b922e6a7709c67d" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_GLS_INV_CALLER_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="626"><highlight class="normal"></highlight></codeline>
+<codeline lineno="627"><highlight class="normal"></highlight></codeline>
+<codeline lineno="638" refid="cfe__sb__events_8h_1a944cc65068879d44221e357af67cc78a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_BAD_CMD_CODE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="639"><highlight class="normal"></highlight></codeline>
+<codeline lineno="650" refid="cfe__sb__events_8h_1a209a49c4097521eb3570b2f6ee7456b2" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_BAD_MSGID_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="651"><highlight class="normal"></highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight></codeline>
+<codeline lineno="663" refid="cfe__sb__events_8h_1ad4e2c79e03bb6a421cc3d10ccdefdcc9" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_FULL_SUB_PKT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"></highlight></codeline>
+<codeline lineno="675" refid="cfe__sb__events_8h_1a165ba07fe989ec2e5e6942c4df0e18d1" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_PART_SUB_PKT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>45</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="676"><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"></highlight></codeline>
+<codeline lineno="690" refid="cfe__sb__events_8h_1aa7549492614e1ce10686f7bfed91b114" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DEL_PIPE_ERR1_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>46</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight></codeline>
+<codeline lineno="702" refid="cfe__sb__events_8h_1a72cc6ac67fa3c20a454a490c425f8245" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_PIPE_DELETED_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>47</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight></codeline>
+<codeline lineno="714" refid="cfe__sb__events_8h_1a7d3f99f5b0b1df63d79d862f95f7c98a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SUBSCRIPTION_REMOVED_EID<sp/>48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="715"><highlight class="normal"></highlight></codeline>
+<codeline lineno="728" refid="cfe__sb__events_8h_1a5aac7fe818a335690905b259bca04f28" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_FILEWRITE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>49</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="729"><highlight class="normal"></highlight></codeline>
+<codeline lineno="741" refid="cfe__sb__events_8h_1afb22f9e3a04b74b2088990b6d054881f" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SUB_INV_PIPE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="742"><highlight class="normal"></highlight></codeline>
+<codeline lineno="754" refid="cfe__sb__events_8h_1a6a79ab5795cfc7b6e3f00aa3a423eacb" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SUB_INV_CALLER_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>51</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="768" refid="cfe__sb__events_8h_1ae843b9270f5ab886241eb7bedf4517f4" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_UNSUB_INV_PIPE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>52</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="769"><highlight class="normal"></highlight></codeline>
+<codeline lineno="781" refid="cfe__sb__events_8h_1a5c82f812ce548e58235a2f8aa4beb722" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_UNSUB_INV_CALLER_EID<sp/><sp/><sp/><sp/><sp/>53</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="782"><highlight class="normal"></highlight></codeline>
+<codeline lineno="794" refid="cfe__sb__events_8h_1a63c4767ce6117a70e2a7d2b7105ea646" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DEL_PIPE_ERR2_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>54</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"></highlight></codeline>
+<codeline lineno="796"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="797"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="798"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="799"><highlight class="normal"></highlight></codeline>
+<codeline lineno="800"><highlight class="normal"></highlight></codeline>
+<codeline lineno="801"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_cfe_sb_events_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="802"><highlight class="normal"></highlight></codeline>
+<codeline lineno="803"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="804"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="805"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="806"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/cfe_sb_events.h"/>
+  </compounddef>
+</doxygen>

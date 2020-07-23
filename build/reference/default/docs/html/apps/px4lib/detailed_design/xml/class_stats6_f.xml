@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_stats6_f" kind="class" language="C++" prot="public">
+    <compoundname>Stats6F</compoundname>
+    <includes refid="_stats6_f_8hpp" local="no">Stats6F.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_stats6_f_1ac468197d1a448156ea4f2f05e7418914" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector6_f" kindref="compound">math::Vector6F</ref></type>
+        <definition>math::Vector6F Stats6F::m_Sum</definition>
+        <argsstring></argsstring>
+        <name>m_Sum</name>
+        <briefdescription>
+<para>Sum of samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="138" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="138" bodyend="-1"/>
+        <referencedby refid="class_stats6_f_1a1c6e29d4a877af33e9bf2cd9a504d5e4" compoundref="_stats6_f_8hpp" startline="95" endline="95">getMean</referencedby>
+        <referencedby refid="class_stats6_f_1a642cfe51b3721920f17f116ad60d274d" compoundref="_stats6_f_8hpp" startline="111" endline="114">getVar</referencedby>
+        <referencedby refid="class_stats6_f_1a45b7db76e0cc129378ac3505ae949375" compoundref="_stats6_f_8hpp" startline="58" endline="63">reset</referencedby>
+        <referencedby refid="class_stats6_f_1a8f8d9717b924db0196f8f7c4cc2669e0" compoundref="_stats6_f_8cpp" startline="15" endline="20">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_stats6_f_1ac28424f0d4b03a13d0c10bf5fc6af902" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector6_f" kindref="compound">math::Vector6F</ref></type>
+        <definition>math::Vector6F Stats6F::m_SumSq</definition>
+        <argsstring></argsstring>
+        <name>m_SumSq</name>
+        <briefdescription>
+<para>Sum squared of samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="141" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="141" bodyend="-1"/>
+        <referencedby refid="class_stats6_f_1a642cfe51b3721920f17f116ad60d274d" compoundref="_stats6_f_8hpp" startline="111" endline="114">getVar</referencedby>
+        <referencedby refid="class_stats6_f_1a45b7db76e0cc129378ac3505ae949375" compoundref="_stats6_f_8hpp" startline="58" endline="63">reset</referencedby>
+        <referencedby refid="class_stats6_f_1a8f8d9717b924db0196f8f7c4cc2669e0" compoundref="_stats6_f_8cpp" startline="15" endline="20">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_stats6_f_1a300ba0bcdd7958e1a5e3df89ea892b8b" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Stats6F::m_Count</definition>
+        <argsstring></argsstring>
+        <name>m_Count</name>
+        <briefdescription>
+<para>Count of samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="144" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="144" bodyend="-1"/>
+        <referencedby refid="class_stats6_f_1a8b16adf6806033d96b022acfae69a9a6" compoundref="_stats6_f_8hpp" startline="79" endline="79">getCount</referencedby>
+        <referencedby refid="class_stats6_f_1a1c6e29d4a877af33e9bf2cd9a504d5e4" compoundref="_stats6_f_8hpp" startline="95" endline="95">getMean</referencedby>
+        <referencedby refid="class_stats6_f_1a642cfe51b3721920f17f116ad60d274d" compoundref="_stats6_f_8hpp" startline="111" endline="114">getVar</referencedby>
+        <referencedby refid="class_stats6_f_1a45b7db76e0cc129378ac3505ae949375" compoundref="_stats6_f_8hpp" startline="58" endline="63">reset</referencedby>
+        <referencedby refid="class_stats6_f_1a8f8d9717b924db0196f8f7c4cc2669e0" compoundref="_stats6_f_8cpp" startline="15" endline="20">update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stats6_f_1aa2c03a19c5713816aeebae3b6e84d5d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Stats6F::Stats6F</definition>
+        <argsstring>()</argsstring>
+        <name>Stats6F</name>
+        <briefdescription>
+<para>Stats Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="20" column="1" bodyfile="apps/px4lib/fsw/src/math/Stats6F.cpp" bodystart="3" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stats6_f_1ab527f531a7f61a87af870263689a2100" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Stats6F::~Stats6F</definition>
+        <argsstring>()</argsstring>
+        <name>~Stats6F</name>
+        <briefdescription>
+<para>Stats Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="32" column="1" bodyfile="apps/px4lib/fsw/src/math/Stats6F.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stats6_f_1a8f8d9717b924db0196f8f7c4cc2669e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stats6F::update</definition>
+        <argsstring>(math::Vector6F u)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="classmath_1_1_vector6_f" kindref="compound">math::Vector6F</ref></type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+<para>Stats Update. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function updates the object with the passed value.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector6F input </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="46" column="1" bodyfile="apps/px4lib/fsw/src/math/Stats6F.cpp" bodystart="15" bodyend="20"/>
+        <references refid="classmath_1_1_vector6_f_1a8185edcd348024234b9f2761e8e5e32c" compoundref="_vector6_f_8cpp" startline="194" endline="206">math::Vector6F::EMult</references>
+        <references refid="class_stats6_f_1a300ba0bcdd7958e1a5e3df89ea892b8b" compoundref="_stats6_f_8hpp" startline="144">m_Count</references>
+        <references refid="class_stats6_f_1ac468197d1a448156ea4f2f05e7418914" compoundref="_stats6_f_8hpp" startline="138">m_Sum</references>
+        <references refid="class_stats6_f_1ac28424f0d4b03a13d0c10bf5fc6af902" compoundref="_stats6_f_8hpp" startline="141">m_SumSq</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stats6_f_1a45b7db76e0cc129378ac3505ae949375" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stats6F::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Stats Reset. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function resets the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="58" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="58" bodyend="63"/>
+        <references refid="class_stats6_f_1a300ba0bcdd7958e1a5e3df89ea892b8b" compoundref="_stats6_f_8hpp" startline="144">m_Count</references>
+        <references refid="class_stats6_f_1ac468197d1a448156ea4f2f05e7418914" compoundref="_stats6_f_8hpp" startline="138">m_Sum</references>
+        <references refid="class_stats6_f_1ac28424f0d4b03a13d0c10bf5fc6af902" compoundref="_stats6_f_8hpp" startline="141">m_SumSq</references>
+        <references refid="classmath_1_1_vector6_f_1a4a36d27aca7be516e2b07f0fb3f68985" compoundref="_vector6_f_8cpp" startline="52" endline="60">math::Vector6F::Zero</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stats6_f_1a8b16adf6806033d96b022acfae69a9a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Stats6F::getCount</definition>
+        <argsstring>()</argsstring>
+        <name>getCount</name>
+        <briefdescription>
+<para>Get Count. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the number of samples.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of samples </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="79" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="79" bodyend="79"/>
+        <references refid="class_stats6_f_1a300ba0bcdd7958e1a5e3df89ea892b8b" compoundref="_stats6_f_8hpp" startline="144">m_Count</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stats6_f_1a1c6e29d4a877af33e9bf2cd9a504d5e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector6_f" kindref="compound">math::Vector6F</ref></type>
+        <definition>math::Vector6F Stats6F::getMean</definition>
+        <argsstring>()</argsstring>
+        <name>getMean</name>
+        <briefdescription>
+<para>Get Mean. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the mean of the samples.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of samples </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="95" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="95" bodyend="95"/>
+        <references refid="class_stats6_f_1a300ba0bcdd7958e1a5e3df89ea892b8b" compoundref="_stats6_f_8hpp" startline="144">m_Count</references>
+        <references refid="class_stats6_f_1ac468197d1a448156ea4f2f05e7418914" compoundref="_stats6_f_8hpp" startline="138">m_Sum</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stats6_f_1a642cfe51b3721920f17f116ad60d274d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector6_f" kindref="compound">math::Vector6F</ref></type>
+        <definition>math::Vector6F Stats6F::getVar</definition>
+        <argsstring>()</argsstring>
+        <name>getVar</name>
+        <briefdescription>
+<para>Get Variance. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the variance of the samples.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of samples </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="111" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="111" bodyend="114"/>
+        <references refid="classmath_1_1_vector6_f_1a8185edcd348024234b9f2761e8e5e32c" compoundref="_vector6_f_8cpp" startline="194" endline="206">math::Vector6F::EMult</references>
+        <references refid="class_stats6_f_1a300ba0bcdd7958e1a5e3df89ea892b8b" compoundref="_stats6_f_8hpp" startline="144">m_Count</references>
+        <references refid="class_stats6_f_1ac468197d1a448156ea4f2f05e7418914" compoundref="_stats6_f_8hpp" startline="138">m_Sum</references>
+        <references refid="class_stats6_f_1ac28424f0d4b03a13d0c10bf5fc6af902" compoundref="_stats6_f_8hpp" startline="141">m_SumSq</references>
+        <referencedby refid="class_stats6_f_1af01515750b06591b5ac1b1f5a38fc8b4" compoundref="_stats6_f_8hpp" startline="130" endline="133">getStdDev</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stats6_f_1af01515750b06591b5ac1b1f5a38fc8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector6_f" kindref="compound">math::Vector6F</ref></type>
+        <definition>math::Vector6F Stats6F::getStdDev</definition>
+        <argsstring>()</argsstring>
+        <name>getStdDev</name>
+        <briefdescription>
+<para>Get Standard Deviation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the standard deviation of the samples.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of samples </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="130" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="130" bodyend="133"/>
+        <references refid="class_stats6_f_1a642cfe51b3721920f17f116ad60d274d" compoundref="_stats6_f_8hpp" startline="111" endline="114">getVar</references>
+        <references refid="classmath_1_1_vector6_f_1a7d62e09839efd0961b6b3854097a9b03" compoundref="_vector6_f_8cpp" startline="179" endline="191">math::Vector6F::pow</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="108">
+        <label>math::Vector6F</label>
+        <link refid="classmath_1_1_vector6_f"/>
+      </node>
+      <node id="107">
+        <label>Stats6F</label>
+        <link refid="class_stats6_f"/>
+        <childnode refid="108" relation="usage">
+          <edgelabel>m_SumSq</edgelabel>
+          <edgelabel>m_Sum</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" line="8" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats6F.hpp" bodystart="7" bodyend="145"/>
+    <listofallmembers>
+      <member refid="class_stats6_f_1a8b16adf6806033d96b022acfae69a9a6" prot="public" virt="non-virtual"><scope>Stats6F</scope><name>getCount</name></member>
+      <member refid="class_stats6_f_1a1c6e29d4a877af33e9bf2cd9a504d5e4" prot="public" virt="non-virtual"><scope>Stats6F</scope><name>getMean</name></member>
+      <member refid="class_stats6_f_1af01515750b06591b5ac1b1f5a38fc8b4" prot="public" virt="non-virtual"><scope>Stats6F</scope><name>getStdDev</name></member>
+      <member refid="class_stats6_f_1a642cfe51b3721920f17f116ad60d274d" prot="public" virt="non-virtual"><scope>Stats6F</scope><name>getVar</name></member>
+      <member refid="class_stats6_f_1a300ba0bcdd7958e1a5e3df89ea892b8b" prot="private" virt="non-virtual"><scope>Stats6F</scope><name>m_Count</name></member>
+      <member refid="class_stats6_f_1ac468197d1a448156ea4f2f05e7418914" prot="private" virt="non-virtual"><scope>Stats6F</scope><name>m_Sum</name></member>
+      <member refid="class_stats6_f_1ac28424f0d4b03a13d0c10bf5fc6af902" prot="private" virt="non-virtual"><scope>Stats6F</scope><name>m_SumSq</name></member>
+      <member refid="class_stats6_f_1a45b7db76e0cc129378ac3505ae949375" prot="public" virt="non-virtual"><scope>Stats6F</scope><name>reset</name></member>
+      <member refid="class_stats6_f_1aa2c03a19c5713816aeebae3b6e84d5d3" prot="public" virt="non-virtual"><scope>Stats6F</scope><name>Stats6F</name></member>
+      <member refid="class_stats6_f_1a8f8d9717b924db0196f8f7c4cc2669e0" prot="public" virt="non-virtual"><scope>Stats6F</scope><name>update</name></member>
+      <member refid="class_stats6_f_1ab527f531a7f61a87af870263689a2100" prot="public" virt="non-virtual"><scope>Stats6F</scope><name>~Stats6F</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_b_a_t___hk_tlm__t" kind="struct" language="C++" prot="public">
+    <compoundname>BAT_HkTlm_t</compoundname>
+    <includes refid="bat__msg_8h" local="no">bat_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1af028accbe39c07cd9acf8ce1a5695418" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 BAT_HkTlm_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE SB Tlm Msg Hdr </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="145" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1acb5d7dfa8c174b07270bcf5da9f605fc" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 BAT_HkTlm_t::usCmdCnt</definition>
+        <argsstring></argsstring>
+        <name>usCmdCnt</name>
+        <briefdescription>
+<para>Count of accepted commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsbattlmmnems_1_cfsbattlmmnems000001"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_BAT_CMDACTPCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="149" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2cd42f569b73c9b363763b65bc80a489" compoundref="bat__app_8cpp" startline="477" endline="515">BAT::ProcessAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1acdd73c1def3bf35786c4910ad7ed2bdf" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 BAT_HkTlm_t::usCmdErrCnt</definition>
+        <argsstring></argsstring>
+        <name>usCmdErrCnt</name>
+        <briefdescription>
+<para>Count of failed commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsbattlmmnems_1_cfsbattlmmnems000002"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_BAT_CMDRJCTCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="153" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2cd42f569b73c9b363763b65bc80a489" compoundref="bat__app_8cpp" startline="477" endline="515">BAT::ProcessAppCmds</referencedby>
+        <referencedby refid="class_b_a_t_1ac6295b60b9098e39e1e946ad4b7837e7" compoundref="bat__app_8cpp" startline="375" endline="415">BAT::ProcessCmdPipe</referencedby>
+        <referencedby refid="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" compoundref="bat__app_8cpp" startline="423" endline="469">BAT::ProcessDataPipe</referencedby>
+        <referencedby refid="class_b_a_t_1abd1595e48951cbef868d45939350d50e" compoundref="bat__app_8cpp" startline="547" endline="571">BAT::VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1a3d963d7a4279035bb19e8c24095c5e07" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+        <definition>uint64 BAT_HkTlm_t::Timestamp</definition>
+        <argsstring></argsstring>
+        <name>Timestamp</name>
+        <briefdescription>
+<para>Timestamp of sampled battery status. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="156" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="156" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1a93c787be35e0740de49fc1d22a2ad43c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_HkTlm_t::Voltage</definition>
+        <argsstring></argsstring>
+        <name>Voltage</name>
+        <briefdescription>
+<para>Sampled voltage. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="159" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1a0e3707e551d6da4ceb45b8a1d975d28d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_HkTlm_t::VoltageFiltered</definition>
+        <argsstring></argsstring>
+        <name>VoltageFiltered</name>
+        <briefdescription>
+<para>Filtered voltage value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="162" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1a660985a99dde96b8e928ec5c55c0be4e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_HkTlm_t::Current</definition>
+        <argsstring></argsstring>
+        <name>Current</name>
+        <briefdescription>
+<para>Sampled Current. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="165" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="165" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1a4396bd3fc4b50e5fd044c8044cacd184" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_HkTlm_t::CurrentFiltered</definition>
+        <argsstring></argsstring>
+        <name>CurrentFiltered</name>
+        <briefdescription>
+<para>Filtered current vlaue. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="168" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="168" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1aeb230770f88ab880b088f77a9b25278c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_HkTlm_t::Discharged</definition>
+        <argsstring></argsstring>
+        <name>Discharged</name>
+        <briefdescription>
+<para>Discharged mAh from battery. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="171" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="171" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1a3a7d642377cf7a99c2d05816675d8063" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_HkTlm_t::Remaining</definition>
+        <argsstring></argsstring>
+        <name>Remaining</name>
+        <briefdescription>
+<para>Percentage of battery charge remaining. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="174" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1aee0e2b8b60062b8a487b54f8a12c75f1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_HkTlm_t::Scale</definition>
+        <argsstring></argsstring>
+        <name>Scale</name>
+        <briefdescription>
+<para>Scale of voltage. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="177" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="177" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1aad23de1372ef63840068509975dccf52" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT_HkTlm_t::CellCount</definition>
+        <argsstring></argsstring>
+        <name>CellCount</name>
+        <briefdescription>
+<para>Number of cells for battery. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="180" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="180" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1aa3944f6dae824f99572e46652637e030" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool BAT_HkTlm_t::Connected</definition>
+        <argsstring></argsstring>
+        <name>Connected</name>
+        <briefdescription>
+<para>Flag for connection to battery. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="183" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1a7e3c69b1ef9bc2740fb074938118eb65" prot="public" static="no" mutable="no">
+        <type>PX4_BatteryWarningSeverity_t</type>
+        <definition>PX4_BatteryWarningSeverity_t BAT_HkTlm_t::Warning</definition>
+        <argsstring></argsstring>
+        <name>Warning</name>
+        <briefdescription>
+<para>Warning flag enumeration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="186" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="186" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">BAT::ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1ab82361ab2f64e2635930530b21e0e06c" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 BAT_HkTlm_t::WakeupCount</definition>
+        <argsstring></argsstring>
+        <name>WakeupCount</name>
+        <briefdescription>
+<para>Number of times <ref refid="class_b_a_t" kindref="compound">BAT</ref> has woken up. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="189" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="189" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" compoundref="bat__app_8cpp" startline="310" endline="368">BAT::RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1adf9f904f7e276a8f048e9753e30a4046" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 BAT_HkTlm_t::ActuatorControls0MsgCount</definition>
+        <argsstring></argsstring>
+        <name>ActuatorControls0MsgCount</name>
+        <briefdescription>
+<para>Number of ActuatorControls0 messages <ref refid="class_b_a_t" kindref="compound">BAT</ref> has successfully received. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="192" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="192" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2cd42f569b73c9b363763b65bc80a489" compoundref="bat__app_8cpp" startline="477" endline="515">BAT::ProcessAppCmds</referencedby>
+        <referencedby refid="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" compoundref="bat__app_8cpp" startline="423" endline="469">BAT::ProcessDataPipe</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___hk_tlm__t_1a61798814214f62a327cb35c84f2cac99" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 BAT_HkTlm_t::ActuatorArmedMsgCount</definition>
+        <argsstring></argsstring>
+        <name>ActuatorArmedMsgCount</name>
+        <briefdescription>
+<para>Number of ActuatorArmed messages <ref refid="class_b_a_t" kindref="compound">BAT</ref> has successfully received. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_msg.h" line="195" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="195" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a2cd42f569b73c9b363763b65bc80a489" compoundref="bat__app_8cpp" startline="477" endline="515">BAT::ProcessAppCmds</referencedby>
+        <referencedby refid="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" compoundref="bat__app_8cpp" startline="423" endline="469">BAT::ProcessDataPipe</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_b_a_t" kindref="compound">BAT</ref> application housekeeping data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="apps/bat/fsw/src/bat_msg.h" line="143" column="1" bodyfile="apps/bat/fsw/src/bat_msg.h" bodystart="142" bodyend="196"/>
+    <listofallmembers>
+      <member refid="struct_b_a_t___hk_tlm__t_1a61798814214f62a327cb35c84f2cac99" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>ActuatorArmedMsgCount</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1adf9f904f7e276a8f048e9753e30a4046" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>ActuatorControls0MsgCount</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1aad23de1372ef63840068509975dccf52" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>CellCount</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1aa3944f6dae824f99572e46652637e030" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>Connected</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1a660985a99dde96b8e928ec5c55c0be4e" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>Current</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1a4396bd3fc4b50e5fd044c8044cacd184" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>CurrentFiltered</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1aeb230770f88ab880b088f77a9b25278c" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>Discharged</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1a3a7d642377cf7a99c2d05816675d8063" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>Remaining</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1aee0e2b8b60062b8a487b54f8a12c75f1" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>Scale</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1a3d963d7a4279035bb19e8c24095c5e07" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>Timestamp</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1af028accbe39c07cd9acf8ce1a5695418" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>TlmHeader</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1acb5d7dfa8c174b07270bcf5da9f605fc" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>usCmdCnt</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1acdd73c1def3bf35786c4910ad7ed2bdf" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>usCmdErrCnt</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1a93c787be35e0740de49fc1d22a2ad43c" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>Voltage</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1a0e3707e551d6da4ceb45b8a1d975d28d" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>VoltageFiltered</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1ab82361ab2f64e2635930530b21e0e06c" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>WakeupCount</name></member>
+      <member refid="struct_b_a_t___hk_tlm__t_1a7e3c69b1ef9bc2740fb074938118eb65" prot="public" virt="non-virtual"><scope>BAT_HkTlm_t</scope><name>Warning</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

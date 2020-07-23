@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_t_o___msg_flow_list_pkt__t" kind="struct" language="C++" prot="public">
+    <compoundname>TO_MsgFlowListPkt_t</compoundname>
+    <includes refid="to__msg_8h" local="no">to_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_o___msg_flow_list_pkt__t_1aafb25c73291efe16ae02dec8f91a1c87" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 TO_MsgFlowListPkt_t::ucTlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>ucTlmHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="708" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="708" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___msg_flow_list_pkt__t_1a287b43a1ed7da226b2b9aa00997e57c1" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 TO_MsgFlowListPkt_t::ChannelIndex</definition>
+        <argsstring></argsstring>
+        <name>ChannelIndex</name>
+        <briefdescription>
+<para>Channel ID or Index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="711" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="711" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___msg_flow_list_pkt__t_1a6853e3dacf3630d33ae94219e20da79f" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_MsgFlowListPkt_t::Offset</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <briefdescription>
+<para>Offset to a set of message flow diagnostic data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="714" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="714" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___msg_flow_list_pkt__t_1a530cf78621f3c92815058963841f393f" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_o___message_flow_diag_tlm__t" kindref="compound">TO_MessageFlowDiagTlm_t</ref></type>
+        <definition>TO_MessageFlowDiagTlm_t TO_MsgFlowListPkt_t::MessageFlow[TO_MSG_FLOW_PKT_LIMIT]</definition>
+        <argsstring>[TO_MSG_FLOW_PKT_LIMIT]</argsstring>
+        <name>MessageFlow</name>
+        <briefdescription>
+<para>Message flow diagnostic data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="717" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="717" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TO diagnostic information for message flows. Split from ChannelDiagTlm_t to accommodate smaller packet sizes. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="50">
+        <label>TO_MessageFlowDiagTlm_t</label>
+        <link refid="struct_t_o___message_flow_diag_tlm__t"/>
+      </node>
+      <node id="49">
+        <label>TO_MsgFlowListPkt_t</label>
+        <link refid="struct_t_o___msg_flow_list_pkt__t"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>MessageFlow</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/to/fsw/src/to_msg.h" line="707" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="706" bodyend="719"/>
+    <listofallmembers>
+      <member refid="struct_t_o___msg_flow_list_pkt__t_1a287b43a1ed7da226b2b9aa00997e57c1" prot="public" virt="non-virtual"><scope>TO_MsgFlowListPkt_t</scope><name>ChannelIndex</name></member>
+      <member refid="struct_t_o___msg_flow_list_pkt__t_1a530cf78621f3c92815058963841f393f" prot="public" virt="non-virtual"><scope>TO_MsgFlowListPkt_t</scope><name>MessageFlow</name></member>
+      <member refid="struct_t_o___msg_flow_list_pkt__t_1a6853e3dacf3630d33ae94219e20da79f" prot="public" virt="non-virtual"><scope>TO_MsgFlowListPkt_t</scope><name>Offset</name></member>
+      <member refid="struct_t_o___msg_flow_list_pkt__t_1aafb25c73291efe16ae02dec8f91a1c87" prot="public" virt="non-virtual"><scope>TO_MsgFlowListPkt_t</scope><name>ucTlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ci__mission__cfg_8h" kind="file" language="C++">
+    <compoundname>ci_mission_cfg.h</compoundname>
+    <includedby refid="ci__app_8h" local="yes">apps/ci/fsw/src/ci_app.h</includedby>
+    <includedby refid="ci__tbldefs_8h" local="yes">apps/ci/fsw/src/ci_tbldefs.h</includedby>
+    <invincdepgraph>
+      <node id="334">
+        <label>apps/ci/fsw/src/ci_tbldefs.h</label>
+        <link refid="ci__tbldefs_8h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>apps/ci/fsw/src/ci_config_utils.c</label>
+        <link refid="ci__config__utils_8c"/>
+      </node>
+      <node id="332">
+        <label>apps/ci/fsw/src/ci_app.c</label>
+        <link refid="ci__app_8c"/>
+      </node>
+      <node id="331">
+        <label>apps/ci/fsw/src/ci_app.h</label>
+        <link refid="ci__app_8h"/>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>apps/ci/fsw/mission_inc/ci_mission_cfg.h</label>
+        <link refid="ci_mission_cfg.h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ci__mission__cfg_8h_1a4317d7c6938baac91ad90ee8999fd93c" prot="public" static="no">
+        <name>CI_MAX_RGST_CMDS</name>
+        <initializer>(100)</initializer>
+        <briefdescription>
+<para>Max number of registered commands in CI table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ci/fsw/mission_inc/ci_mission_cfg.h" line="13" column="9" bodyfile="apps/ci/fsw/mission_inc/ci_mission_cfg.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="ci__app_8h_1a34522598c662a12a5ce2841130a0f391" compoundref="ci__app_8c" startline="608" endline="691">CI_CmdRegister</referencedby>
+        <referencedby refid="ci__app_8h_1aac6594444443cdb2460bbd451a5dc438" compoundref="ci__app_8c" startline="428" endline="467">CI_GetRegisterdCmd</referencedby>
+        <referencedby refid="ci__app_8h_1a151dedfc8250c4898c8d58dd2b3733e9" compoundref="ci__app_8c" startline="841" endline="876">CI_ProcessTimeouts</referencedby>
+        <referencedby refid="ci__config__utils_8h_1a75a63a7613e873a6c80771ba6e8d3237" compoundref="ci__config__utils_8c" startline="147" endline="185">CI_ValidateConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ci__mission__cfg_8h_1a0935abe6e264baba5b98fea6a24bce6f" prot="public" static="no">
+        <name>CI_CHECKSUM_REQUIRED</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Flag for whether checksum is required for command validation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>0 for not required. 1 for required. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ci/fsw/mission_inc/ci_mission_cfg.h" line="20" column="9" bodyfile="apps/ci/fsw/mission_inc/ci_mission_cfg.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="ci__app_8h_1ad15052059435051783bf923d25cf600d" compoundref="ci__app_8c" startline="883" endline="934">CI_ValidateCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ci__mission__cfg_8h_1ae6f0c0687fc769318a18418def55f7f7" prot="public" static="no">
+        <name>CI_CMD_MAX_TIMEOUT</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para>Timeout for authorized two step commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This number represents number of CI_PROCESS_TIMEOUTS_MID messages received until timeout. CI_PROCESS_TIMEOUTS_MID is scheduled at 1hz by default so this is equivalent to seconds unless the scheduled rate changes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ci/fsw/mission_inc/ci_mission_cfg.h" line="29" column="9" bodyfile="apps/ci/fsw/mission_inc/ci_mission_cfg.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="ci__app_8h_1a0c0eda6f0d9bd3eb60bf3abf1d092dfe" compoundref="ci__app_8c" startline="474" endline="532">CI_CmdAuthorize</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CI_MISSION_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CI_MISSION_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/>CI<sp/>Mission<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="ci__mission__cfg_8h_1a4317d7c6938baac91ad90ee8999fd93c" refkind="member"><highlight class="preprocessor">#define<sp/>CI_MAX_RGST_CMDS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="ci__mission__cfg_8h_1a0935abe6e264baba5b98fea6a24bce6f" refkind="member"><highlight class="preprocessor">#define<sp/>CI_CHECKSUM_REQUIRED<sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="ci__mission__cfg_8h_1ae6f0c0687fc769318a18418def55f7f7" refkind="member"><highlight class="preprocessor">#define<sp/>CI_CMD_MAX_TIMEOUT<sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CI_MISSION_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/ci/fsw/mission_inc/ci_mission_cfg.h"/>
+  </compounddef>
+</doxygen>

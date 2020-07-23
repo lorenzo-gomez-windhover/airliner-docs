@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeevsuglog" kind="page">
+    <compoundname>cfeevsuglog</compoundname>
+    <title>Local Event Log</title>
+    <detaileddescription>
+<para>In addition to generating a software bus message, EVS logs the event message to a Local Event Log. Note that this is an optional feature that must be enabled via the cfe_platform_cfg.h file. The Local Event Log resides on the same processor as the EVS which is used to store events without relying on an external bus. In multi-processor cFE configurations the Local Event Buffer preserves event messages during non-deterministic processor initialization sequences and during failure scenarios. In order to obtain the contents of the Local Event Log, a command must be sent to write the contents of the buffer to a file which can then be sent to the ground via a file transfer mechanism.</para><para>EVS provides a command in order to <ref refid="cfe__evs__msg_8h_1ad4cdccaf19500de3b2c18a0d378bdb48" kindref="member">clear the Local Event Log </ref>.</para><para><center><heading level="2">Local Event Log Mode </heading>
+</center></para><para><center></center></para><para>EVS can be configured to control the Local Event Log to either discard or overwrite the contents of the log when it becomes full. If the mode is set to overwrite, the log is treated like a circular buffer, overwriting the oldest event message contained in the log first. This control is configured by default in the cfe_platform_cfg.h file but can be modified by <ref refid="cfe__evs__msg_8h_1ac4d074c9a4b5930a4350291009a4a20b" kindref="member">a command </ref>.</para><para>Next: <ref refid="cfeevsugmsgcntrl" kindref="compound">Event Message Control</ref> <linebreak/>
+ Prev: <ref refid="cfeevsugmsgformat" kindref="compound">Event Message Format</ref> <linebreak/>
+ Up To: <ref refid="cfeevsovr" kindref="compound">cFE Event Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

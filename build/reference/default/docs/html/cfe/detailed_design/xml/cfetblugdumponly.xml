@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetblugdumponly" kind="page">
+    <compoundname>cfetblugdumponly</compoundname>
+    <title>Dump Only Tables</title>
+    <detaileddescription>
+<para>On occasion, cFE Applications require a segment of memory in which the Application writes data. The typical cFE Table is not normally modified directly by an Application but only via Load and Activate commands from either the Ground or Stored Command Processor. However, for those situations where an Application wishes to modify the contents of a data structure and the Application is limited in its telemtry bandwidth so that the modified data cannot be telemetered, the Application can create a Dump-Only table.</para><para>Dump-Only tables are not allowed to be modified via the Load/Validate/Activate process most other tables are. They are only supposed to be modified by onboard Applications. The Operator can still command a Dump which will be processed by the table&apos;s owning Application when it manages its tables. By letting the Application perform the dump, the Operator can feel confident that the table contents are a complete snapshot in time and not corrupted by taking a snapshot while the Application was in the process of modifying its contents.</para><para>Next: <ref refid="cfetblugregistry" kindref="compound">Table Registry</ref> <linebreak/>
+ Prev: <ref refid="cfetbluguserdef" kindref="compound">User Defined Address Tables</ref> <linebreak/>
+ Up To: <ref refid="cfetblugtypes" kindref="compound">cFE Table Types and Table Options</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

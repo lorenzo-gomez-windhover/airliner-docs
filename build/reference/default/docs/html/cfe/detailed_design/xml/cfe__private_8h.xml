@@ -1,0 +1,1390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__private_8h" kind="file" language="C++">
+    <compoundname>cfe_private.h</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includes refid="cfe_8h" local="yes">cfe.h</includes>
+    <includes local="yes">cfe_platform_cfg.h</includes>
+    <includedby refid="cfe__es__api_8c" local="yes">es/cfe_es_api.c</includedby>
+    <includedby refid="cfe__es__global_8h" local="yes">es/cfe_es_global.h</includedby>
+    <includedby refid="cfe__es__cds__mempool_8h" local="yes">es/cfe_es_cds_mempool.h</includedby>
+    <includedby refid="cfe__es__apps_8c" local="yes">es/cfe_es_apps.c</includedby>
+    <includedby refid="cfe__es__cds_8c" local="yes">es/cfe_es_cds.c</includedby>
+    <includedby refid="cfe__es__cds__mempool_8c" local="yes">es/cfe_es_cds_mempool.c</includedby>
+    <includedby refid="cfe__es__erlog_8c" local="yes">es/cfe_es_erlog.c</includedby>
+    <includedby refid="cfe__es__objtab_8c" local="yes">es/cfe_es_objtab.c</includedby>
+    <includedby refid="cfe__es__perf_8c" local="yes">es/cfe_es_perf.c</includedby>
+    <includedby refid="cfe__es__shell_8c" local="yes">es/cfe_es_shell.c</includedby>
+    <includedby refid="cfe__es__start_8c" local="yes">es/cfe_es_start.c</includedby>
+    <includedby refid="cfe__es__task_8c" local="yes">es/cfe_es_task.c</includedby>
+    <includedby refid="cfe__esmempool_8c" local="yes">es/cfe_esmempool.c</includedby>
+    <includedby refid="cfe__evs__task_8h" local="yes">evs/cfe_evs_task.h</includedby>
+    <includedby refid="cfe__fs__api_8c" local="yes">fs/cfe_fs_api.c</includedby>
+    <includedby refid="cfe__fs__priv_8c" local="yes">fs/cfe_fs_priv.c</includedby>
+    <includedby refid="cfe__sb__api_8c" local="yes">sb/cfe_sb_api.c</includedby>
+    <includedby refid="cfe__sb__priv_8h" local="yes">sb/cfe_sb_priv.h</includedby>
+    <includedby refid="cfe__sb__priv_8c" local="yes">sb/cfe_sb_priv.c</includedby>
+    <includedby refid="cfe__tbl__api_8c" local="yes">tbl/cfe_tbl_api.c</includedby>
+    <includedby refid="cfe__tbl__task_8h" local="yes">tbl/cfe_tbl_task.h</includedby>
+    <includedby refid="cfe__tbl__task_8c" local="yes">tbl/cfe_tbl_task.c</includedby>
+    <incdepgraph>
+      <node id="7463">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="7457">
+        <label>stdarg.h</label>
+      </node>
+      <node id="7451">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="7477">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="7461">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7478">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7467" relation="include">
+        </childnode>
+      </node>
+      <node id="7469">
+        <label>cfe_msgids.h</label>
+      </node>
+      <node id="7458">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="7472">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h"/>
+      </node>
+      <node id="7474">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+      </node>
+      <node id="7475">
+        <label>cfe_evs_msg.h</label>
+        <link refid="cfe__evs__msg_8h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7474" relation="include">
+        </childnode>
+        <childnode refid="7453" relation="include">
+        </childnode>
+        <childnode refid="7476" relation="include">
+        </childnode>
+        <childnode refid="7471" relation="include">
+        </childnode>
+      </node>
+      <node id="7459">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="7460" relation="include">
+        </childnode>
+        <childnode refid="7461" relation="include">
+        </childnode>
+        <childnode refid="7462" relation="include">
+        </childnode>
+        <childnode refid="7463" relation="include">
+        </childnode>
+      </node>
+      <node id="7454">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="7453">
+        <label>osapi.h</label>
+        <link refid="osapi_8h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7454" relation="include">
+        </childnode>
+        <childnode refid="7455" relation="include">
+        </childnode>
+        <childnode refid="7456" relation="include">
+        </childnode>
+        <childnode refid="7459" relation="include">
+        </childnode>
+        <childnode refid="7464" relation="include">
+        </childnode>
+        <childnode refid="7465" relation="include">
+        </childnode>
+        <childnode refid="7466" relation="include">
+        </childnode>
+        <childnode refid="7458" relation="include">
+        </childnode>
+      </node>
+      <node id="7466">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="7467">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="7468">
+        <label>cfe_platform_cfg.h</label>
+      </node>
+      <node id="7455">
+        <label>osconfig.h</label>
+      </node>
+      <node id="7464">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="7476">
+        <label>cfe_sb.h</label>
+        <link refid="cfe__sb_8h"/>
+        <childnode refid="7455" relation="include">
+        </childnode>
+        <childnode refid="7477" relation="include">
+        </childnode>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7467" relation="include">
+        </childnode>
+        <childnode refid="7468" relation="include">
+        </childnode>
+        <childnode refid="7478" relation="include">
+        </childnode>
+        <childnode refid="7474" relation="include">
+        </childnode>
+      </node>
+      <node id="7471">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h"/>
+        <childnode refid="7467" relation="include">
+        </childnode>
+        <childnode refid="7472" relation="include">
+        </childnode>
+      </node>
+      <node id="7452">
+        <label>cfe.h</label>
+        <link refid="cfe_8h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7453" relation="include">
+        </childnode>
+        <childnode refid="7467" relation="include">
+        </childnode>
+        <childnode refid="7468" relation="include">
+        </childnode>
+        <childnode refid="7469" relation="include">
+        </childnode>
+        <childnode refid="7470" relation="include">
+        </childnode>
+        <childnode refid="7471" relation="include">
+        </childnode>
+        <childnode refid="7473" relation="include">
+        </childnode>
+        <childnode refid="7479" relation="include">
+        </childnode>
+        <childnode refid="7476" relation="include">
+        </childnode>
+        <childnode refid="7474" relation="include">
+        </childnode>
+        <childnode refid="7480" relation="include">
+        </childnode>
+        <childnode refid="7477" relation="include">
+        </childnode>
+      </node>
+      <node id="7473">
+        <label>cfe_evs.h</label>
+        <link refid="cfe__evs_8h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7474" relation="include">
+        </childnode>
+        <childnode refid="7475" relation="include">
+        </childnode>
+        <childnode refid="7453" relation="include">
+        </childnode>
+        <childnode refid="7476" relation="include">
+        </childnode>
+      </node>
+      <node id="7465">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="7479">
+        <label>cfe_fs.h</label>
+        <link refid="cfe__fs_8h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7474" relation="include">
+        </childnode>
+      </node>
+      <node id="7450">
+        <label>inc/private/cfe_private.h</label>
+        <link refid="cfe_private.h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7452" relation="include">
+        </childnode>
+        <childnode refid="7468" relation="include">
+        </childnode>
+      </node>
+      <node id="7480">
+        <label>cfe_tbl.h</label>
+        <link refid="cfe__tbl_8h"/>
+        <childnode refid="7451" relation="include">
+        </childnode>
+        <childnode refid="7474" relation="include">
+        </childnode>
+        <childnode refid="7455" relation="include">
+        </childnode>
+      </node>
+      <node id="7470">
+        <label>cfe_error.h</label>
+        <link refid="cfe__error_8h"/>
+        <childnode refid="7453" relation="include">
+        </childnode>
+      </node>
+      <node id="7460">
+        <label>stdio.h</label>
+      </node>
+      <node id="7456">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="7457" relation="include">
+        </childnode>
+        <childnode refid="7458" relation="include">
+        </childnode>
+      </node>
+      <node id="7462">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7492">
+        <label>es/cfe_es_objtab.c</label>
+        <link refid="cfe__es__objtab_8c"/>
+      </node>
+      <node id="7493">
+        <label>es/cfe_es_shell.c</label>
+        <link refid="cfe__es__shell_8c"/>
+      </node>
+      <node id="7500">
+        <label>evs/cfe_evs_log.c</label>
+        <link refid="cfe__evs__log_8c"/>
+      </node>
+      <node id="7496">
+        <label>es/cfe_esmempool.c</label>
+        <link refid="cfe__esmempool_8c"/>
+      </node>
+      <node id="7511">
+        <label>tbl/cfe_tbl_api.c</label>
+        <link refid="cfe__tbl__api_8c"/>
+      </node>
+      <node id="7514">
+        <label>tbl/cfe_tbl_internal.c</label>
+        <link refid="cfe__tbl__internal_8c"/>
+      </node>
+      <node id="7513">
+        <label>tbl/cfe_tbl_internal.h</label>
+        <link refid="cfe__tbl__internal_8h"/>
+        <childnode refid="7511" relation="include">
+        </childnode>
+        <childnode refid="7514" relation="include">
+        </childnode>
+        <childnode refid="7515" relation="include">
+        </childnode>
+        <childnode refid="7516" relation="include">
+        </childnode>
+      </node>
+      <node id="7484">
+        <label>es/cfe_es_log.h</label>
+        <link refid="cfe__es__log_8h"/>
+        <childnode refid="7482" relation="include">
+        </childnode>
+        <childnode refid="7485" relation="include">
+        </childnode>
+        <childnode refid="7486" relation="include">
+        </childnode>
+        <childnode refid="7487" relation="include">
+        </childnode>
+        <childnode refid="7488" relation="include">
+        </childnode>
+      </node>
+      <node id="7504">
+        <label>fs/cfe_fs_priv.c</label>
+        <link refid="cfe__fs__priv_8c"/>
+      </node>
+      <node id="7502">
+        <label>evs/cfe_evs_utils.c</label>
+        <link refid="cfe__evs__utils_8c"/>
+      </node>
+      <node id="7499">
+        <label>evs/cfe_evs_utils.h</label>
+        <link refid="cfe__evs__utils_8h"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7500" relation="include">
+        </childnode>
+        <childnode refid="7501" relation="include">
+        </childnode>
+        <childnode refid="7502" relation="include">
+        </childnode>
+      </node>
+      <node id="7505">
+        <label>sb/cfe_sb_api.c</label>
+        <link refid="cfe__sb__api_8c"/>
+      </node>
+      <node id="7488">
+        <label>es/cfe_es_task.c</label>
+        <link refid="cfe__es__task_8c"/>
+      </node>
+      <node id="7491">
+        <label>es/cfe_es_cds_mempool.c</label>
+        <link refid="cfe__es__cds__mempool_8c"/>
+      </node>
+      <node id="7494">
+        <label>es/cfe_es_cds_mempool.h</label>
+        <link refid="cfe__es__cds__mempool_8h"/>
+        <childnode refid="7495" relation="include">
+        </childnode>
+        <childnode refid="7482" relation="include">
+        </childnode>
+        <childnode refid="7490" relation="include">
+        </childnode>
+        <childnode refid="7491" relation="include">
+        </childnode>
+      </node>
+      <node id="7498">
+        <label>evs/cfe_evs.c</label>
+        <link refid="cfe__evs_8c"/>
+      </node>
+      <node id="7509">
+        <label>sb/cfe_sb_priv.c</label>
+        <link refid="cfe__sb__priv_8c"/>
+      </node>
+      <node id="7506">
+        <label>sb/cfe_sb_priv.h</label>
+        <link refid="cfe__sb__priv_8h"/>
+        <childnode refid="7505" relation="include">
+        </childnode>
+        <childnode refid="7507" relation="include">
+        </childnode>
+        <childnode refid="7508" relation="include">
+        </childnode>
+        <childnode refid="7509" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+      </node>
+      <node id="7489">
+        <label>es/cfe_es_apps.c</label>
+        <link refid="cfe__es__apps_8c"/>
+      </node>
+      <node id="7486">
+        <label>es/cfe_es_perf.c</label>
+        <link refid="cfe__es__perf_8c"/>
+      </node>
+      <node id="7516">
+        <label>tbl/cfe_tbl_task_cmds.c</label>
+        <link refid="cfe__tbl__task__cmds_8c"/>
+      </node>
+      <node id="7508">
+        <label>sb/cfe_sb_init.c</label>
+        <link refid="cfe__sb__init_8c"/>
+      </node>
+      <node id="7483">
+        <label>es/cfe_es_global.h</label>
+        <link refid="cfe__es__global_8h"/>
+        <childnode refid="7482" relation="include">
+        </childnode>
+        <childnode refid="7484" relation="include">
+        </childnode>
+        <childnode refid="7489" relation="include">
+        </childnode>
+        <childnode refid="7490" relation="include">
+        </childnode>
+        <childnode refid="7491" relation="include">
+        </childnode>
+        <childnode refid="7485" relation="include">
+        </childnode>
+        <childnode refid="7492" relation="include">
+        </childnode>
+        <childnode refid="7486" relation="include">
+        </childnode>
+        <childnode refid="7493" relation="include">
+        </childnode>
+        <childnode refid="7487" relation="include">
+        </childnode>
+        <childnode refid="7488" relation="include">
+        </childnode>
+      </node>
+      <node id="7515">
+        <label>tbl/cfe_tbl_task.c</label>
+        <link refid="cfe__tbl__task_8c"/>
+      </node>
+      <node id="7512">
+        <label>tbl/cfe_tbl_task.h</label>
+        <link refid="cfe__tbl__task_8h"/>
+        <childnode refid="7513" relation="include">
+        </childnode>
+      </node>
+      <node id="7501">
+        <label>evs/cfe_evs_task.c</label>
+        <link refid="cfe__evs__task_8c"/>
+      </node>
+      <node id="7497">
+        <label>evs/cfe_evs_task.h</label>
+        <link refid="cfe__evs__task_8h"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7499" relation="include">
+        </childnode>
+        <childnode refid="7500" relation="include">
+        </childnode>
+        <childnode refid="7501" relation="include">
+        </childnode>
+        <childnode refid="7502" relation="include">
+        </childnode>
+      </node>
+      <node id="7503">
+        <label>fs/cfe_fs_api.c</label>
+        <link refid="cfe__fs__api_8c"/>
+      </node>
+      <node id="7490">
+        <label>es/cfe_es_cds.c</label>
+        <link refid="cfe__es__cds_8c"/>
+      </node>
+      <node id="7495">
+        <label>es/cfe_es_cds.h</label>
+        <link refid="cfe__es__cds_8h"/>
+        <childnode refid="7483" relation="include">
+        </childnode>
+        <childnode refid="7482" relation="include">
+        </childnode>
+        <childnode refid="7490" relation="include">
+        </childnode>
+        <childnode refid="7488" relation="include">
+        </childnode>
+      </node>
+      <node id="7487">
+        <label>es/cfe_es_start.c</label>
+        <link refid="cfe__es__start_8c"/>
+      </node>
+      <node id="7481">
+        <label>inc/private/cfe_private.h</label>
+        <link refid="cfe_private.h"/>
+        <childnode refid="7482" relation="include">
+        </childnode>
+        <childnode refid="7483" relation="include">
+        </childnode>
+        <childnode refid="7494" relation="include">
+        </childnode>
+        <childnode refid="7489" relation="include">
+        </childnode>
+        <childnode refid="7490" relation="include">
+        </childnode>
+        <childnode refid="7491" relation="include">
+        </childnode>
+        <childnode refid="7485" relation="include">
+        </childnode>
+        <childnode refid="7492" relation="include">
+        </childnode>
+        <childnode refid="7486" relation="include">
+        </childnode>
+        <childnode refid="7493" relation="include">
+        </childnode>
+        <childnode refid="7487" relation="include">
+        </childnode>
+        <childnode refid="7488" relation="include">
+        </childnode>
+        <childnode refid="7496" relation="include">
+        </childnode>
+        <childnode refid="7497" relation="include">
+        </childnode>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7504" relation="include">
+        </childnode>
+        <childnode refid="7505" relation="include">
+        </childnode>
+        <childnode refid="7506" relation="include">
+        </childnode>
+        <childnode refid="7509" relation="include">
+        </childnode>
+        <childnode refid="7511" relation="include">
+        </childnode>
+        <childnode refid="7512" relation="include">
+        </childnode>
+        <childnode refid="7515" relation="include">
+        </childnode>
+      </node>
+      <node id="7507">
+        <label>sb/cfe_sb_buf.c</label>
+        <link refid="cfe__sb__buf_8c"/>
+      </node>
+      <node id="7510">
+        <label>sb/cfe_sb_task.c</label>
+        <link refid="cfe__sb__task_8c"/>
+      </node>
+      <node id="7482">
+        <label>es/cfe_es_api.c</label>
+        <link refid="cfe__es__api_8c"/>
+      </node>
+      <node id="7485">
+        <label>es/cfe_es_erlog.c</label>
+        <link refid="cfe__es__erlog_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cfe__private_8h_1a64f2d9ffc4f3e6f8f718a15ee03c5d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_TIME_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_TIME_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para>cFE Core task entry point prototypes <simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE TIME Core Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="37" column="1" bodyfile="time/cfe_time_task.c" bodystart="174" bodyend="227"/>
+        <references refid="cfe__es_8h_1ad5d888f9bca5038624a04d04efce8325" compoundref="cfe__es__api_8c" startline="434" endline="531">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a2ae693e0bf2c4c430f3a852223cce6d6" compoundref="cfe__es__api_8c" startline="1142" endline="1151">CFE_ES_IncrementTaskCounter</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625" compoundref="cfe__es_8h" startline="1401">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4" compoundref="cfe__es_8h" startline="1420">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es_8h_1adb8322a6c9a7de63c4433010edaee3bf" compoundref="cfe__es_8h" startline="196">CFE_ES_RUNSTATUS_CORE_APP_INIT_ERROR</references>
+        <references refid="cfe__es_8h_1aebd2391043422a09a208b17b54a92bfe" compoundref="cfe__es_8h" startline="197">CFE_ES_RUNSTATUS_CORE_APP_RUNTIME_ERROR</references>
+        <references refid="cfe__es_8h_1a7dc343ea775a0e5773ecdf700581d548" compoundref="cfe__es__api_8c" startline="651" endline="694">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" compoundref="cfe__sb_8h" startline="88">CFE_SB_PEND_FOREVER</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d" compoundref="cfe__sb__api_8c" startline="1449" endline="1566">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="cfe__es__perfids_8h_1a37cba024aabfc936736a3e87dd5ccf7e" compoundref="cfe__es__perfids_8h" startline="78">CFE_TIME_MAIN_PERF_ID</references>
+        <references refid="cfe__time__task_8c_1ac75193e9814f7dd8dfd42f15106e08f0" compoundref="cfe__time__task_8c" startline="236" endline="464">CFE_TIME_TaskInit</references>
+        <references refid="cfe__time__task_8c_1ac6eed8708803c1714a81b184aaafce10" compoundref="cfe__time__task_8c" startline="473" endline="629">CFE_TIME_TaskPipe</references>
+        <references refid="struct_c_f_e___t_i_m_e___task_data__t_1a0a41524061383e017f1362ce7f7bd455" compoundref="cfe__time__utils_8h" startline="177">CFE_TIME_TaskData_t::CmdPipe</references>
+        <references refid="struct_c_f_e___t_i_m_e___task_data__t_1a96aa1c6d50e5e9f52ee0a7d96fe872a2" compoundref="cfe__time__utils_8h" startline="176">CFE_TIME_TaskData_t::MsgPtr</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1adb337fe95061313a383cb9db0d95e695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_SB_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE SB Core Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="51" column="1" bodyfile="sb/cfe_sb_task.c" bodystart="121" bodyend="173"/>
+        <references refid="cfe__es_8h_1ad5d888f9bca5038624a04d04efce8325" compoundref="cfe__es__api_8c" startline="434" endline="531">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a2ae693e0bf2c4c430f3a852223cce6d6" compoundref="cfe__es__api_8c" startline="1142" endline="1151">CFE_ES_IncrementTaskCounter</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625" compoundref="cfe__es_8h" startline="1401">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4" compoundref="cfe__es_8h" startline="1420">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es_8h_1adb8322a6c9a7de63c4433010edaee3bf" compoundref="cfe__es_8h" startline="196">CFE_ES_RUNSTATUS_CORE_APP_INIT_ERROR</references>
+        <references refid="cfe__es_8h_1aebd2391043422a09a208b17b54a92bfe" compoundref="cfe__es_8h" startline="197">CFE_ES_RUNSTATUS_CORE_APP_RUNTIME_ERROR</references>
+        <references refid="cfe__es_8h_1a7dc343ea775a0e5773ecdf700581d548" compoundref="cfe__es__api_8c" startline="651" endline="694">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__sb__task_8c_1a4802e15e16324c6129743be7aa076917" compoundref="cfe__sb__task_8c" startline="192" endline="352">CFE_SB_AppInit</references>
+        <references refid="cfe__es__perfids_8h_1afa1b62a5b52fe6b130424872aa4b6a1e" compoundref="cfe__es__perfids_8h" startline="73">CFE_SB_MAIN_PERF_ID</references>
+        <references refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" compoundref="cfe__sb_8h" startline="88">CFE_SB_PEND_FOREVER</references>
+        <references refid="cfe__sb__task_8c_1aecda617bd0532b78b00a5c26c1977b2d" compoundref="cfe__sb__task_8c" startline="369" endline="449">CFE_SB_ProcessCmdPipePkt</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d" compoundref="cfe__sb__api_8c" startline="1449" endline="1566">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="structcfe__sb__t_1abbe6f1b8ca818dc1c5bdcca1523bdedd" compoundref="cfe__sb__priv_8h" startline="297">cfe_sb_t::CmdPipe</references>
+        <references refid="structcfe__sb__t_1a8d42f03b7934958d6c5af01d8e067d89" compoundref="cfe__sb__priv_8h" startline="298">cfe_sb_t::CmdPipePktPtr</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a25fbdc94e2c09c02264442c4b8ed906e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_EVS_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_EVS_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE EVS Core Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="65" column="1" bodyfile="evs/cfe_evs_task.c" bodystart="297" bodyend="350"/>
+        <references refid="cfe__es_8h_1ad5d888f9bca5038624a04d04efce8325" compoundref="cfe__es__api_8c" startline="434" endline="531">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a2ae693e0bf2c4c430f3a852223cce6d6" compoundref="cfe__es__api_8c" startline="1142" endline="1151">CFE_ES_IncrementTaskCounter</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625" compoundref="cfe__es_8h" startline="1401">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4" compoundref="cfe__es_8h" startline="1420">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es_8h_1adb8322a6c9a7de63c4433010edaee3bf" compoundref="cfe__es_8h" startline="196">CFE_ES_RUNSTATUS_CORE_APP_INIT_ERROR</references>
+        <references refid="cfe__es_8h_1aebd2391043422a09a208b17b54a92bfe" compoundref="cfe__es_8h" startline="197">CFE_ES_RUNSTATUS_CORE_APP_RUNTIME_ERROR</references>
+        <references refid="cfe__es_8h_1a7dc343ea775a0e5773ecdf700581d548" compoundref="cfe__es__api_8c" startline="651" endline="694">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__es__perfids_8h_1affb0578b13dbf5c41efd21df92040479" compoundref="cfe__es__perfids_8h" startline="71">CFE_EVS_MAIN_PERF_ID</references>
+        <references refid="cfe__evs__task_8c_1af1866521c482ad314d1420d8fc130c2d" compoundref="cfe__evs__task_8c" startline="440" endline="466">CFE_EVS_ProcessCommandPacket</references>
+        <references refid="cfe__evs__task_8c_1ae9540d92a3221348f68f7e2947ae2bc8" compoundref="cfe__evs__task_8c" startline="364" endline="426">CFE_EVS_TaskInit</references>
+        <references refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" compoundref="cfe__sb_8h" startline="88">CFE_SB_PEND_FOREVER</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d" compoundref="cfe__sb__api_8c" startline="1449" endline="1566">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a7c32831f57358b282eee3f656d133944" compoundref="cfe__evs__task_8h" startline="167">CFE_EVS_GlobalData_t::EVS_CommandPipe</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a6afbfeb972d2e5d767a63573580f92bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_ES_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_ES_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE ES Core Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="79" column="1" bodyfile="es/cfe_es_task.c" bodystart="175" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a61d8c896a1a62d04a24d77eb06e02a54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_TBL_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_TBL_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Table Services Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE Table Services Core Application. This Application provides the ground interface to the cFE Table Services.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="95" column="1" bodyfile="tbl/cfe_tbl_task.c" bodystart="94" bodyend="146"/>
+        <references refid="cfe__es_8h_1ad5d888f9bca5038624a04d04efce8325" compoundref="cfe__es__api_8c" startline="434" endline="531">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a2ae693e0bf2c4c430f3a852223cce6d6" compoundref="cfe__es__api_8c" startline="1142" endline="1151">CFE_ES_IncrementTaskCounter</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625" compoundref="cfe__es_8h" startline="1401">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4" compoundref="cfe__es_8h" startline="1420">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es_8h_1adb8322a6c9a7de63c4433010edaee3bf" compoundref="cfe__es_8h" startline="196">CFE_ES_RUNSTATUS_CORE_APP_INIT_ERROR</references>
+        <references refid="cfe__es_8h_1aebd2391043422a09a208b17b54a92bfe" compoundref="cfe__es_8h" startline="197">CFE_ES_RUNSTATUS_CORE_APP_RUNTIME_ERROR</references>
+        <references refid="cfe__es_8h_1a7dc343ea775a0e5773ecdf700581d548" compoundref="cfe__es__api_8c" startline="651" endline="694">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" compoundref="cfe__sb_8h" startline="88">CFE_SB_PEND_FOREVER</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d" compoundref="cfe__sb__api_8c" startline="1449" endline="1566">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="cfe__es__perfids_8h_1a5083efe7a3d682c7e20d3613a24cd400" compoundref="cfe__es__perfids_8h" startline="72">CFE_TBL_MAIN_PERF_ID</references>
+        <references refid="cfe__tbl__task_8c_1a7bc9d7bcdac0f966cc9c6b2dc155992f" compoundref="cfe__tbl__task_8c" startline="151" endline="230">CFE_TBL_TaskInit</references>
+        <references refid="cfe__tbl__task_8c_1a8c1d45eac3060cbdd8c5a10804ffaddd" compoundref="cfe__tbl__task_8c" startline="266" endline="335">CFE_TBL_TaskPipe</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a5e067379a9019e2a1bc61485da397c83" compoundref="cfe__tbl__task_8h" startline="332">CFE_TBL_TaskData_t::CmdPipe</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a1924bd5cb92da27c55cb55f22be8ca79" compoundref="cfe__tbl__task_8h" startline="331">CFE_TBL_TaskData_t::MsgPtr</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a03453a917d882866305b6c05b99eb0b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_EVS_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_EVS_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para>cFE Core task early init prototypes <simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="119" column="1" bodyfile="evs/cfe_evs_task.c" bodystart="159" bodyend="257"/>
+        <references refid="cfe__es_8h_1a764cf2b13c101358117baf81119990b6" compoundref="cfe__es__api_8c" startline="181" endline="190">CFE_ES_GetResetType</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs__msg_8h_1a09fe7de17c2b7be9e3e19f43561391ec" compoundref="cfe__evs__msg_8h" startline="1186">CFE_EVS_HK_TLM_LNGTH</references>
+        <references refid="cfe__evs__msg_8h_1aa8fa209fc98c25a0804fd3aa26092ed6" compoundref="cfe__evs__msg_8h" startline="953">CFE_EVS_LOG_DISCARD</references>
+        <references refid="cfe__evs__msg_8h_1a2b9064e806d5387a5124d8e96667c02e" compoundref="cfe__evs__msg_8h" startline="952">CFE_EVS_LOG_OVERWRITE</references>
+        <references refid="cfe__error_8h_1a0503f2ffd47059a79145c787ca59deae" compoundref="cfe__error_8h" startline="199">CFE_EVS_RESET_AREA_POINTER</references>
+        <references refid="cfe__evs__task_8h_1ae8ec45dc1634e5f7e5122a50d1aee665" compoundref="cfe__evs__task_8h" startline="109">CFE_EVS_UNDEF_APPID</references>
+        <references refid="cfe__psp__memory_8c_1aad414f696dc591052b7f2a1cd272c58f" compoundref="cfe__psp__memory_8c" startline="423" endline="439">CFE_PSP_GetResetArea</references>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0" compoundref="cfe__sb__util_8c" startline="81" endline="91">CFE_SB_InitMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a9d2b8c296f039a86a7924ce6004573f8" compoundref="cfe__evs__task_8h" startline="169">CFE_EVS_GlobalData_t::EVS_AppID</references>
+        <references refid="cfe__evs__log_8c_1afb6c5a995d35fcdd25bec6faa6623985" compoundref="cfe__evs__log_8c" startline="166" endline="185">EVS_ClearLog</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1aa191f2b0fbd6acb1bcbfc18df4904d78" compoundref="cfe__evs__task_8h" startline="160">CFE_EVS_GlobalData_t::EVS_LogPtr</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a69683f1d0446e455e66079392333bf3a" compoundref="cfe__evs__task_8h" startline="168">CFE_EVS_GlobalData_t::EVS_SharedDataMutexID</references>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a8523c77fdd337b7803c4100b451a1183" compoundref="cfe__evs__task_8h" startline="166">CFE_EVS_GlobalData_t::EVS_TlmPkt</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="common__types_8h" startline="318">FALSE</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1ae04ed93491b125ba80e45c77782bdf31" compoundref="cfe__evs__log__typedef_8h" startline="33">CFE_EVS_Log_t::LogCount</references>
+        <references refid="struct_c_f_e___e_v_s___tlm_pkt___payload__t_1a7452805f323826a8f0e2bd2c858f1411" compoundref="cfe__evs__msg_8h" startline="1131">CFE_EVS_TlmPkt_Payload_t::LogEnabled</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a5963fa70f7aaa43597c50b1eee2beb51" compoundref="cfe__evs__log__typedef_8h" startline="34">CFE_EVS_Log_t::LogFullFlag</references>
+        <references refid="struct_c_f_e___e_v_s___tlm_pkt___payload__t_1a162c977d322d5bb50229ce3e555775d1" compoundref="cfe__evs__msg_8h" startline="1121">CFE_EVS_TlmPkt_Payload_t::LogFullFlag</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1a36fa3babca40d0d3ddaea22c0122c745" compoundref="cfe__evs__log__typedef_8h" startline="35">CFE_EVS_Log_t::LogMode</references>
+        <references refid="struct_c_f_e___e_v_s___tlm_pkt___payload__t_1a4a88bb50f3616617afd7f204426050da" compoundref="cfe__evs__msg_8h" startline="1123">CFE_EVS_TlmPkt_Payload_t::LogMode</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1ad122db2a6495cda57466b7adcd818e56" compoundref="cfe__evs__log__typedef_8h" startline="36">CFE_EVS_Log_t::LogOverflowCounter</references>
+        <references refid="struct_c_f_e___e_v_s___tlm_pkt___payload__t_1ae723d387152c3a603a7570f6a8a2c876" compoundref="cfe__evs__msg_8h" startline="1112">CFE_EVS_TlmPkt_Payload_t::MessageFormatMode</references>
+        <references refid="struct_c_f_e___e_v_s___log__t_1abe51032510bb2cec5d8f8aeefe609c3f" compoundref="cfe__evs__log__typedef_8h" startline="32">CFE_EVS_Log_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="osapi-os-core_8h_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</references>
+        <references refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" compoundref="osapi_8h" startline="87">OS_SUCCESS</references>
+        <references refid="struct_c_f_e___e_v_s___tlm_pkt___payload__t_1a91e964acd15a2b22d2b84c1bfe98a8b5" compoundref="cfe__evs__msg_8h" startline="1119">CFE_EVS_TlmPkt_Payload_t::OutputPort</references>
+        <references refid="struct_c_f_e___e_v_s___tlm_pkt__t_1a0de6c7a50b2117e44fa21e44f137fc97" compoundref="cfe__evs__msg_8h" startline="1147">CFE_EVS_TlmPkt_t::Payload</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a10df878846322b41e32312d413be8da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_SB_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="132" column="1" bodyfile="sb/cfe_sb_init.c" bodystart="118" bodyend="163"/>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" compoundref="cfe__sb__task_8c" startline="105">CFE_SB</references>
+        <references refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5" compoundref="cfe__sb__task_8c" startline="106">CFE_SB_Default_Qos</references>
+        <references refid="cfe__sb__priv_8h_1a0de0e798b082f24c02d2b64ce9916719" compoundref="cfe__sb__priv_8h" startline="130">CFE_SB_DISABLE</references>
+        <references refid="cfe__sb__init_8c_1acaab249a878acdab893837f3ff7a584c" compoundref="cfe__sb__init_8c" startline="181" endline="200">CFE_SB_InitBuffers</references>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0" compoundref="cfe__sb__util_8c" startline="81" endline="91">CFE_SB_InitMsg</references>
+        <references refid="cfe__sb__init_8c_1a3e9e77eeaa314087e45a7cfe8ad41993" compoundref="cfe__sb__init_8c" startline="247" endline="259">CFE_SB_InitMsgMap</references>
+        <references refid="cfe__sb__init_8c_1a0200f69ca4c5dd0c7c6f112d1410aa70" compoundref="cfe__sb__init_8c" startline="217" endline="229">CFE_SB_InitPipeTbl</references>
+        <references refid="cfe__sb__init_8c_1ac951ce5cc4c336383502c7bc3eab7123" compoundref="cfe__sb__init_8c" startline="277" endline="291">CFE_SB_InitRoutingTbl</references>
+        <references refid="cfe__sb__priv_8h_1ad1e9efff5ad6ecb0f257d5ec741e0f1c" compoundref="cfe__sb__priv_8h" startline="144">CFE_SB_QOS_LOW_PRIORITY</references>
+        <references refid="cfe__sb__priv_8h_1aa4aa514ce5a28141e0d1d35d9b7f61d9" compoundref="cfe__sb__priv_8h" startline="145">CFE_SB_QOS_LOW_RELIABILITY</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___s_b___stat_msg__t_1a1781da171a11ed544e1cea5f727a0b22" compoundref="cfe__sb__msg_8h" startline="676">CFE_SB_StatMsg_t::Hdr</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="osapi-os-core_8h_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</references>
+        <references refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" compoundref="osapi_8h" startline="87">OS_SUCCESS</references>
+        <references refid="struct_c_f_e___s_b___tlm_hdr__t_1af137ae8bf218c2ddc22583847535b583" compoundref="cfe__sb_8h" startline="135">CFE_SB_TlmHdr_t::Pri</references>
+        <references refid="struct_c_f_e___s_b___qos__t_1ad3d2be85fd6ae49344ed70aa0a57df0c" compoundref="cfe__sb_8h" startline="182">CFE_SB_Qos_t::Priority</references>
+        <references refid="struct_c_f_e___s_b___qos__t_1adff0dd4ccb04e862db28afe8b4722cfb" compoundref="cfe__sb_8h" startline="183">CFE_SB_Qos_t::Reliability</references>
+        <references refid="structcfe__sb__t_1a7901579fe0b442c4bd14dfc5d7da858f" compoundref="cfe__sb__priv_8h" startline="290">cfe_sb_t::SenderReporting</references>
+        <references refid="structcfe__sb__t_1ab0dd2e1418852a08cc0bf96078a95bc6" compoundref="cfe__sb__priv_8h" startline="288">cfe_sb_t::SharedDataMutexId</references>
+        <references refid="structcfe__sb__t_1a11a51501a72bd467720097a56741bf10" compoundref="cfe__sb__priv_8h" startline="296">cfe_sb_t::StatTlmMsg</references>
+        <references refid="structcfe__sb__t_1a28d2211968e0b9eac2abed73ba3edfd5" compoundref="cfe__sb__priv_8h" startline="289">cfe_sb_t::SubscriptionReporting</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <references refid="structcfe__sb__t_1a91a66b1d1c6f6d92afeca8a871d78eac" compoundref="cfe__sb__priv_8h" startline="293">cfe_sb_t::ZeroCopyTail</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a492b1a5fbf41261616af972af7b0540b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_TIME_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_TIME_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="145" column="1" bodyfile="time/cfe_time_task.c" bodystart="156" bodyend="165"/>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="cfe__time__utils_8c_1ac0be6ec076cb1da4baf7cc025d7ae9ce" compoundref="cfe__time__utils_8c" startline="249" endline="435">CFE_TIME_InitData</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a6b6bd14ad2156d4d1ca50748a5d49c8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_TBL_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_TBL_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the Table Services API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the Table Services API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any TBL API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="158" column="1" bodyfile="tbl/cfe_tbl_internal.c" bodystart="102" bodyend="293"/>
+        <references refid="struct_c_f_e___t_b_l___validation_result__t_1af00e179f472eea9cc2db36ddd8214ae7" compoundref="cfe__tbl__task_8h" startline="142">CFE_TBL_ValidationResult_t::ActiveBuffer</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1a2de41f6dbd90e716a1bc25a1b4351c1b" compoundref="cfe__tbl__task_8h" startline="188">CFE_TBL_AccessDescriptor_t::AppId</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a4d98e83c6116de6dde40819b8e65f0a1" compoundref="cfe__tbl__task_8h" startline="358">CFE_TBL_TaskData_t::Buf</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1a2c0ff4564af496c259c92a3dd570c9e1" compoundref="cfe__tbl__task_8h" startline="195">CFE_TBL_AccessDescriptor_t::BufferIndex</references>
+        <references refid="struct_c_f_e___t_b_l___load_buff__t_1a2e4c028f942f7c56830a6f8372fd4377" compoundref="cfe__tbl__task_8h" startline="168">CFE_TBL_LoadBuff_t::BufferPtr</references>
+        <references refid="struct_c_f_e___t_b_l___crit_reg_rec__t_1af4275ea199c4cd7f2a2a97e0d4c71680" compoundref="cfe__tbl__task_8h" startline="243">CFE_TBL_CritRegRec_t::CDSHandle</references>
+        <references refid="cfe__error_8h_1a19394558c178c3399c355488ac59dff8" compoundref="cfe__error_8h" startline="299">CFE_ES_CDS_ALREADY_EXISTS</references>
+        <references refid="cfe__es_8h_1a011aea20e34a217b183e158743ba1e8a" compoundref="cfe__es_8h" startline="181">CFE_ES_CDS_BAD_HANDLE</references>
+        <references refid="cfe__es_8h_1a4e188008567eae18b36d80408f34e8f9" compoundref="cfe__es__api_8c" startline="1606" endline="1613">CFE_ES_CopyToCDS</references>
+        <references refid="cfe__error_8h_1a20d9f25d56c85be712a7e10c1d9efb85" compoundref="cfe__error_8h" startline="227">CFE_ES_ERR_APPID</references>
+        <references refid="cfe__es_8h_1ad1d355290c15c7c22ee78c1117ec5016" compoundref="cfe__esmempool_8c" startline="305" endline="404">CFE_ES_GetPoolBuf</references>
+        <references refid="cfe__es_8h_1af0248c9918a7c6907d8d1f4fa3b99160" compoundref="cfe__esmempool_8c" startline="138" endline="144">CFE_ES_PoolCreate</references>
+        <references refid="cfe__private_8h_1aa2d0b1b06a987447ecc16efc4b46698b" compoundref="cfe__es__cds_8c" startline="269" endline="358">CFE_ES_RegisterCDSEx</references>
+        <references refid="cfe__es_8h_1ae84ae4564568be8f1cf30f4c8bf78077" compoundref="cfe__es__api_8c" startline="1621" endline="1628">CFE_ES_RestoreFromCDS</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0" compoundref="cfe__sb__util_8c" startline="81" endline="91">CFE_SB_InitMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="cfe__tbl__task_8h_1a9127f10c426613b5b05770b3d573a639a9576d60665d12eac280cda67bc6c883f" compoundref="cfe__tbl__task_8h" startline="125">CFE_TBL_DUMP_FREE</references>
+        <references refid="cfe__tbl__internal_8h_1a2c9017a22f19d5babfb03a8a77913b33" compoundref="cfe__tbl__internal_8h" startline="78">CFE_TBL_END_OF_LIST</references>
+        <references refid="cfe__tbl__internal_8c_1acdc72877e78c33e810de1222e65f632b" compoundref="cfe__tbl__internal_8c" startline="304" endline="342">CFE_TBL_InitRegistryRecord</references>
+        <references refid="cfe__tbl__task_8h_1af98447a9f1b24400c3e7736401aad0dd" compoundref="cfe__tbl__task_8h" startline="74">CFE_TBL_MUT_REG_NAME</references>
+        <references refid="cfe__tbl__task_8h_1a690c0f1de7cd8e820a6b8229f36f2107" compoundref="cfe__tbl__task_8h" startline="75">CFE_TBL_MUT_REG_VALUE</references>
+        <references refid="cfe__tbl__task_8h_1ac297061a019923cdb22531466caf0335" compoundref="cfe__tbl__task_8h" startline="76">CFE_TBL_MUT_WORK_NAME</references>
+        <references refid="cfe__tbl__task_8h_1a1d02ab1206d2a797761091f403d5cb42" compoundref="cfe__tbl__task_8h" startline="77">CFE_TBL_MUT_WORK_VALUE</references>
+        <references refid="cfe__tbl__internal_8h_1a4e25b7d05c6be6055418b88be6ce93d1" compoundref="cfe__tbl__internal_8h" startline="77">CFE_TBL_NOT_FOUND</references>
+        <references refid="cfe__tbl__internal_8h_1a2ccef6cb07dcf4623dbda81dff767e5c" compoundref="cfe__tbl__task_8c" startline="70">CFE_TBL_TaskData</references>
+        <references refid="cfe__tbl__task_8h_1a613a22c971337096a28c6aaaef35f9fba862877ed2f89aba2287d64473b338883" compoundref="cfe__tbl__task_8h" startline="114">CFE_TBL_VALIDATION_FREE</references>
+        <references refid="struct_c_f_e___t_b_l___validation_result__t_1a46c094640bd20363e39e649b9b38c851" compoundref="cfe__tbl__task_8h" startline="141">CFE_TBL_ValidationResult_t::CrcOfTable</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1accea801a5a9c0acf826f0d3d367b7565" compoundref="cfe__tbl__task_8h" startline="357">CFE_TBL_TaskData_t::CritReg</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a0e61f6dede7ee7fa26b36cfe5e96fee7" compoundref="cfe__tbl__task_8h" startline="349">CFE_TBL_TaskData_t::CritRegHandle</references>
+        <references refid="struct_c_f_e___t_b_l___load_buff__t_1a7f8ac713078c30930fd3098185e15222" compoundref="cfe__tbl__task_8h" startline="174">CFE_TBL_LoadBuff_t::DataSource</references>
+        <references refid="struct_c_f_e___t_b_l___dump_control__t_1a4a8b513a1a0d10d8978c0003bd601dbd" compoundref="cfe__tbl__task_8h" startline="262">CFE_TBL_DumpControl_t::DumpBufferPtr</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1aee1a66a083c1dea635fe0a2175168a6b" compoundref="cfe__tbl__task_8h" startline="360">CFE_TBL_TaskData_t::DumpControlBlocks</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="common__types_8h" startline="318">FALSE</references>
+        <references refid="struct_c_f_e___t_b_l___load_buff__t_1a8f30bd7592f2cc030cdd8c9db77a0b00" compoundref="cfe__tbl__task_8h" startline="169">CFE_TBL_LoadBuff_t::FileCreateTimeSecs</references>
+        <references refid="struct_c_f_e___t_b_l___crit_reg_rec__t_1a2d7d64609d8ab2a8862aa3eb8d1da888" compoundref="cfe__tbl__task_8h" startline="244">CFE_TBL_CritRegRec_t::FileCreateTimeSecs</references>
+        <references refid="struct_c_f_e___t_b_l___load_buff__t_1af409d4914a095f7950fb47c1ebafe51f" compoundref="cfe__tbl__task_8h" startline="170">CFE_TBL_LoadBuff_t::FileCreateTimeSubSecs</references>
+        <references refid="struct_c_f_e___t_b_l___crit_reg_rec__t_1a029163523178cc4d6754d5d9643219c2" compoundref="cfe__tbl__task_8h" startline="245">CFE_TBL_CritRegRec_t::FileCreateTimeSubSecs</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a573378c26f5c01bf94bd53e571498a11" compoundref="cfe__tbl__task_8h" startline="355">CFE_TBL_TaskData_t::Handles</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1aba766d7acf022eb1f239da036e665e57" compoundref="cfe__tbl__task_8h" startline="324">CFE_TBL_TaskData_t::HkPacket</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a3f0d73b2e9997571e7e76cedc76df811" compoundref="cfe__tbl__task_8h" startline="341">CFE_TBL_TaskData_t::HkTlmTblRegIndex</references>
+        <references refid="struct_c_f_e___t_b_l___crit_reg_rec__t_1a7bb548b3c329f36b9b4cce5a22beec6c" compoundref="cfe__tbl__task_8h" startline="247">CFE_TBL_CritRegRec_t::LastFileLoaded</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1ac8e76e7816a9b9d4b4b9ff49b63e9955" compoundref="cfe__tbl__task_8h" startline="319">CFE_TBL_TaskData_t::LastTblUpdated</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1aea027b435d33c7b8abd1902bf36068f8" compoundref="cfe__tbl__task_8h" startline="350">CFE_TBL_TaskData_t::LoadBuffs</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1a8adb3acb4bcea7c14d54d3368bd7e6af" compoundref="cfe__tbl__task_8h" startline="193">CFE_TBL_AccessDescriptor_t::LockFlag</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1a1cd2b9152bac45f5e88fc06a0b24bfed" compoundref="cfe__tbl__task_8h" startline="191">CFE_TBL_AccessDescriptor_t::NextLink</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="osapi-os-core_8h_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</references>
+        <references refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" compoundref="osapi_8h" startline="87">OS_SUCCESS</references>
+        <references refid="struct_c_f_e___t_b_l___buf_params__t_1a1aa18eaa69cc36bbff9f1b8c7bc5f922" compoundref="cfe__tbl__task_8h" startline="155">CFE_TBL_BufParams_t::Partition</references>
+        <references refid="struct_c_f_e___t_b_l___buf_params__t_1ab8eb6f9ffdf53ac4692cf8d1f2c852a0" compoundref="cfe__tbl__task_8h" startline="154">CFE_TBL_BufParams_t::PoolHdl</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1a787e4a2f56dcb1d86d1eca46cb703f7c" compoundref="cfe__tbl__task_8h" startline="190">CFE_TBL_AccessDescriptor_t::PrevLink</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1adf2852cda929c51a530b4a43869586b6" compoundref="cfe__tbl__task_8h" startline="189">CFE_TBL_AccessDescriptor_t::RegIndex</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a2e777e5d452faf98c0fecc0b014ae28c" compoundref="cfe__tbl__task_8h" startline="356">CFE_TBL_TaskData_t::Registry</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a0c66302f81283fe19410a9142e834fe9" compoundref="cfe__tbl__task_8h" startline="347">CFE_TBL_TaskData_t::RegistryMutex</references>
+        <references refid="struct_c_f_e___t_b_l___validation_result__t_1a2d65d436bd019c48f691db2639b8235c" compoundref="cfe__tbl__task_8h" startline="140">CFE_TBL_ValidationResult_t::Result</references>
+        <references refid="struct_c_f_e___t_i_m_e___sys_time__t_1ac10c014228075ee87ea7938348a98c1c" compoundref="cfe__time_8h" startline="83">CFE_TIME_SysTime_t::Seconds</references>
+        <references refid="struct_c_f_e___t_b_l___dump_control__t_1aa8ec98c0db0d0d50ca4e7d98c5bdecdb" compoundref="cfe__tbl__task_8h" startline="261">CFE_TBL_DumpControl_t::Size</references>
+        <references refid="struct_c_f_e___t_b_l___validation_result__t_1a62aa1544f940e8ed4402ea32b575a52c" compoundref="cfe__tbl__task_8h" startline="139">CFE_TBL_ValidationResult_t::State</references>
+        <references refid="struct_c_f_e___t_b_l___dump_control__t_1a77d405c9a8c1b6902dfe141e7b8b29b5" compoundref="cfe__tbl__task_8h" startline="260">CFE_TBL_DumpControl_t::State</references>
+        <references refid="struct_c_f_e___t_i_m_e___sys_time__t_1a2af2ad470fa81d8eb5c23f68b54ab81a" compoundref="cfe__time_8h" startline="84">CFE_TIME_SysTime_t::Subseconds</references>
+        <references refid="struct_c_f_e___t_b_l___crit_reg_rec__t_1aedfd1683eabb2e27353bdfe812df7772" compoundref="cfe__tbl__task_8h" startline="249">CFE_TBL_CritRegRec_t::TableLoadedOnce</references>
+        <references refid="struct_c_f_e___t_b_l___validation_result__t_1a0b4a60259967fb0da46a229313fb1cd5" compoundref="cfe__tbl__task_8h" startline="143">CFE_TBL_ValidationResult_t::TableName</references>
+        <references refid="struct_c_f_e___t_b_l___dump_control__t_1a60ec811feb8ec5925f3453fd82919d93" compoundref="cfe__tbl__task_8h" startline="264">CFE_TBL_DumpControl_t::TableName</references>
+        <references refid="struct_c_f_e___t_b_l___load_buff__t_1ad78e1abf2ab3febb5d9fd7ac27a48ad9" compoundref="cfe__tbl__task_8h" startline="172">CFE_TBL_LoadBuff_t::Taken</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1ae62889627be338583feb580e71eb593a" compoundref="cfe__tbl__task_8h" startline="325">CFE_TBL_TaskData_t::TblRegPacket</references>
+        <references refid="struct_c_f_e___t_b_l___crit_reg_rec__t_1ac94eff7f8412b54ffc3fa16816971168" compoundref="cfe__tbl__task_8h" startline="246">CFE_TBL_CritRegRec_t::TimeOfLastUpdate</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1a32a8bfb86ae1e85c093053aa5651c73b" compoundref="cfe__tbl__task_8h" startline="194">CFE_TBL_AccessDescriptor_t::Updated</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1a314b7376ef5fd0333cacc490c518f2e9" compoundref="cfe__tbl__task_8h" startline="192">CFE_TBL_AccessDescriptor_t::UsedFlag</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a0f65d1c638e2c0d7036089dc9a5250f1" compoundref="cfe__tbl__task_8h" startline="342">CFE_TBL_TaskData_t::ValidationCtr</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a6619634617a196f99673d823e57043df" compoundref="cfe__tbl__task_8h" startline="359">CFE_TBL_TaskData_t::ValidationResults</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1ab6e42cd1cb0f05b5d0884ff70ca8269f" compoundref="cfe__tbl__task_8h" startline="348">CFE_TBL_TaskData_t::WorkBufMutex</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1affdb331f1b40f270906ac22ef1b8d87b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_ES_CDS_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_ES_CDS_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called.</para></listitem></orderedlist>
+</para></simplesect>
+Initializes the cFE core module API Library.</para><para><simplesect kind="par"><title>Description</title><para>Locates and validates any pre-existing CDS memory or initializes the memory as a fresh CDS.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="par"><title>SysLog Messages</title><para></para></simplesect>
+<simplesect kind="return"><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="171" column="1" bodyfile="es/cfe_es_cds.c" bodystart="188" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1aea2b5498886c7203bfe2d48862594f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_FS_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_FS_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="184" column="1" bodyfile="fs/cfe_fs_priv.c" bodystart="72" bodyend="85"/>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="osapi-os-core_8h_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</references>
+        <references refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" compoundref="osapi_8h" startline="87">OS_SUCCESS</references>
+        <references refid="struct_c_f_e___f_s__t_1a01c2b395a5fd9f5de4bcf285cb08bbf6" compoundref="cfe__fs__priv_8h" startline="63">CFE_FS_t::SharedDataMutexId</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1afaeb44923a3f529841f7e0f5a16cc712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_TBL_CleanUpApp</definition>
+        <argsstring>(uint32 AppId)</argsstring>
+        <name>CFE_TBL_CleanUpApp</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>AppId</declname>
+        </param>
+        <briefdescription>
+<para>Removes TBL resources associated with specified Application. </para>        </briefdescription>
+        <detaileddescription>
+<para>cFE Core task clean up prototypes <simplesect kind="par"><title>Description</title><para>This function is called by cFE Executive Services to cleanup after an Application has been terminated. It frees TBL services resources that have been allocated to the specified Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function DOES NOT remove any critical tables associated with the specified application from the Critical Data Store. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="209" column="1" bodyfile="tbl/cfe_tbl_internal.c" bodystart="1401" bodyend="1455"/>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1a2de41f6dbd90e716a1bc25a1b4351c1b" compoundref="cfe__tbl__task_8h" startline="188">CFE_TBL_AccessDescriptor_t::AppId</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="cfe__tbl__task_8h_1a9127f10c426613b5b05770b3d573a639a9576d60665d12eac280cda67bc6c883f" compoundref="cfe__tbl__task_8h" startline="125">CFE_TBL_DUMP_FREE</references>
+        <references refid="cfe__tbl__internal_8h_1a98fee84495333cf704cd68ea216aec78" compoundref="cfe__tbl__internal_8h" startline="76">CFE_TBL_NOT_OWNED</references>
+        <references refid="cfe__tbl__internal_8c_1ae7ef66bdc979baab7e4e2549e104ac9f" compoundref="cfe__tbl__internal_8c" startline="480" endline="562">CFE_TBL_RemoveAccessLink</references>
+        <references refid="cfe__tbl__internal_8h_1a2ccef6cb07dcf4623dbda81dff767e5c" compoundref="cfe__tbl__task_8c" startline="70">CFE_TBL_TaskData</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1aee1a66a083c1dea635fe0a2175168a6b" compoundref="cfe__tbl__task_8h" startline="360">CFE_TBL_TaskData_t::DumpControlBlocks</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a573378c26f5c01bf94bd53e571498a11" compoundref="cfe__tbl__task_8h" startline="355">CFE_TBL_TaskData_t::Handles</references>
+        <references refid="struct_c_f_e___t_b_l___registry_rec__t_1a61efdb5bde177b12a40983be1de37974" compoundref="cfe__tbl__task_8h" startline="230">CFE_TBL_RegistryRec_t::Name</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="struct_c_f_e___t_b_l___registry_rec__t_1ab52ab42e3a7f6ed35743537f3e70eb5b" compoundref="cfe__tbl__task_8h" startline="207">CFE_TBL_RegistryRec_t::OwnerAppId</references>
+        <references refid="struct_c_f_e___t_b_l___access_descriptor__t_1adf2852cda929c51a530b4a43869586b6" compoundref="cfe__tbl__task_8h" startline="189">CFE_TBL_AccessDescriptor_t::RegIndex</references>
+        <references refid="struct_c_f_e___t_b_l___task_data__t_1a2e777e5d452faf98c0fecc0b014ae28c" compoundref="cfe__tbl__task_8h" startline="356">CFE_TBL_TaskData_t::Registry</references>
+        <references refid="struct_c_f_e___t_b_l___dump_control__t_1af11c0a6c54197895ebb2d4e1ec561ba0" compoundref="cfe__tbl__task_8h" startline="263">CFE_TBL_DumpControl_t::RegRecPtr</references>
+        <references refid="struct_c_f_e___t_b_l___dump_control__t_1a77d405c9a8c1b6902dfe141e7b8b29b5" compoundref="cfe__tbl__task_8h" startline="260">CFE_TBL_DumpControl_t::State</references>
+        <referencedby refid="cfe__es__apps_8h_1abbbbd9de96d9c0d60415d558ef241e49" compoundref="cfe__es__apps_8c" startline="1235" endline="1346">CFE_ES_CleanUpApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a3c4c1a5416dfb9987a3cb7924f07d852" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_SB_CleanUpApp</definition>
+        <argsstring>(uint32 AppId)</argsstring>
+        <name>CFE_SB_CleanUpApp</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>AppId</declname>
+        </param>
+        <briefdescription>
+<para>Removes SB resources associated with specified Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called by cFE Executive Services to cleanup after an Application has been terminated. It frees resources that have been allocated to the specified Application. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="221" column="1" bodyfile="sb/cfe_sb_priv.c" bodystart="108" bodyend="126"/>
+        <references refid="struct_c_f_e___s_b___pipe_d__t_1ae07dcbf4a7262a58da630d10b855ccfd" compoundref="cfe__sb__priv_8h" startline="256">CFE_SB_PipeD_t::AppId</references>
+        <references refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" compoundref="cfe__sb__task_8c" startline="105">CFE_SB</references>
+        <references refid="cfe__sb__api_8c_1a400c44b1cebfd28c4f4c1c30f27c42eb" compoundref="cfe__sb__api_8c" startline="318" endline="326">CFE_SB_DeletePipeWithAppId</references>
+        <references refid="cfe__sb__priv_8h_1a37a22bd6a07bb55768d2f1af2720fc10" compoundref="cfe__sb__priv_8h" startline="128">CFE_SB_IN_USE</references>
+        <references refid="cfe__sb__priv_8c_1a154770ba6beddf96045b816d90c88d45" compoundref="cfe__sb__priv_8c" startline="848" endline="863">CFE_SB_ZeroCopyReleaseAppId</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___s_b___pipe_d__t_1aee4ecc553a79e3a94f94dfa13535d023" compoundref="cfe__sb__priv_8h" startline="251">CFE_SB_PipeD_t::InUse</references>
+        <references refid="struct_c_f_e___s_b___pipe_d__t_1a08c581ea5b94cb3481df5806dd8139e4" compoundref="cfe__sb__priv_8h" startline="252">CFE_SB_PipeD_t::PipeId</references>
+        <references refid="structcfe__sb__t_1a25f46c05b72f8c60a39cce179308b614" compoundref="cfe__sb__priv_8h" startline="294">cfe_sb_t::PipeTbl</references>
+        <referencedby refid="cfe__es__apps_8h_1abbbbd9de96d9c0d60415d558ef241e49" compoundref="cfe__es__apps_8c" startline="1235" endline="1346">CFE_ES_CleanUpApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1aa67fd7909b80919d6a9d98444f4480ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_EVS_CleanUpApp</definition>
+        <argsstring>(uint32 AppId)</argsstring>
+        <name>CFE_EVS_CleanUpApp</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>AppId</declname>
+        </param>
+        <briefdescription>
+<para>Removes EVS resources associated with specified Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called by cFE Executive Services to cleanup after an Application has been terminated. It frees resources that have been allocated to the specified Application. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="233" column="1" bodyfile="evs/cfe_evs_task.c" bodystart="269" bodyend="284"/>
+        <references refid="struct_c_f_e___e_v_s___global_data__t_1a96c093e65c5ba50fb76f90c4756f2e6f" compoundref="cfe__evs__task_8h" startline="158">CFE_EVS_GlobalData_t::AppData</references>
+        <references refid="cfe__error_8h_1a970cc8b925ac36bb4200f746efc77a18" compoundref="cfe__error_8h" startline="185">CFE_EVS_APP_ILLEGAL_APP_ID</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="struct_e_v_s___app_data__t_1ac585c877374bab3cfab4b81c23689f9f" compoundref="cfe__evs__task_8h" startline="140">EVS_AppData_t::RegisterFlag</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <referencedby refid="cfe__es__apps_8h_1abbbbd9de96d9c0d60415d558ef241e49" compoundref="cfe__es__apps_8c" startline="1235" endline="1346">CFE_ES_CleanUpApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a951c89bf4278618bb3716cb25f69c677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_TIME_CleanUpApp</definition>
+        <argsstring>(uint32 AppId)</argsstring>
+        <name>CFE_TIME_CleanUpApp</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>AppId</declname>
+        </param>
+        <briefdescription>
+<para>Removes TIME resources associated with specified Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called by cFE Executive Services to cleanup after an Application has been terminated. It frees resources that have been allocated to the specified Application. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="245" column="1" bodyfile="time/cfe_time_utils.c" bodystart="1262" bodyend="1278"/>
+        <references refid="struct_c_f_e___t_i_m_e___synch_callback_reg_entry__t_1aa052ab37faecc3265c3c2759a2435e95" compoundref="cfe__time__utils_8h" startline="150">CFE_TIME_SynchCallbackRegEntry_t::App</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="cfe__time__task_8c_1aaaa7eb733e4d64b7932c26231801d2d8" compoundref="cfe__time__task_8c" startline="87">CFE_TIME_TaskData</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="struct_c_f_e___t_i_m_e___synch_callback_reg_entry__t_1af91a660402f23481c9f993817d1f4960" compoundref="cfe__time__utils_8h" startline="151">CFE_TIME_SynchCallbackRegEntry_t::Ptr</references>
+        <references refid="struct_c_f_e___t_i_m_e___task_data__t_1afd5a6563a2d8244df99b8f346657a533" compoundref="cfe__time__utils_8h" startline="323">CFE_TIME_TaskData_t::SynchCallback</references>
+        <referencedby refid="cfe__es__apps_8h_1abbbbd9de96d9c0d60415d558ef241e49" compoundref="cfe__es__apps_8c" startline="1235" endline="1346">CFE_ES_CleanUpApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1aa2d0b1b06a987447ecc16efc4b46698b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_ES_RegisterCDSEx</definition>
+        <argsstring>(CFE_ES_CDSHandle_t *HandlePtr, int32 BlockSize, const char *Name, boolean CriticalTbl)</argsstring>
+        <name>CFE_ES_RegisterCDSEx</name>
+        <param>
+          <type><ref refid="cfe__es_8h_1aa976e86ad134f5b5ca774f2a89497168" kindref="member">CFE_ES_CDSHandle_t</ref> *</type>
+          <declname>HandlePtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+          <declname>BlockSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member">boolean</ref></type>
+          <declname>CriticalTbl</declname>
+        </param>
+        <briefdescription>
+<para>Reserve space (or re-obtain previously reserved space) in the Critical Data Store (CDS) </para>        </briefdescription>
+        <detaileddescription>
+<para>cFE Core task other function call prototypes <simplesect kind="par"><title>Description</title><para>This routine is identical to <ref refid="cfe__es__api_8c_1a9749b20ef5b73dc49701f29e89219d3d" kindref="member">CFE_ES_RegisterCDS</ref> except it identifies the contents of the CDS as a critical table. This is crucial because a critical table CDS must only be deleted by cFE Table Services, not via an ES delete CDS command. Otherwise, Table Services may be out of sync with the contents of the CDS.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function assumes input parameters are error free and have met size/value restrictions.</para></listitem><listitem><para>The calling function is responsible for issuing any event messages associated with errors.</para></listitem></orderedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">HandlePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer Application&apos;s variable that will contain the CDS Memory Block Handle.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">BlockSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes needed in the CDS.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to character string containing the Application&apos;s local name for the CDS.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">CriticalTbl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates whether the CDS is to be used as a Critical Table or not</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*HandlePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handle of the CDS block that can be used in <ref refid="cfe__es__api_8c_1a4e188008567eae18b36d80408f34e8f9" kindref="member">CFE_ES_CopyToCDS</ref> and <ref refid="cfe__es__api_8c_1ae84ae4564568be8f1cf30f4c8bf78077" kindref="member">CFE_ES_RestoreFromCDS</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>See return codes for <ref refid="cfe__es__api_8c_1a9749b20ef5b73dc49701f29e89219d3d" kindref="member">CFE_ES_RegisterCDS</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="287" column="1" bodyfile="es/cfe_es_cds.c" bodystart="269" bodyend="358"/>
+        <references refid="struct_c_f_e___e_s___global__t_1a270b792902814471ac802b9606ad540f" compoundref="cfe__es__global_8h" startline="166">CFE_ES_Global_t::CDSVars</references>
+        <references refid="cfe__error_8h_1a19394558c178c3399c355488ac59dff8" compoundref="cfe__error_8h" startline="299">CFE_ES_CDS_ALREADY_EXISTS</references>
+        <references refid="cfe__es_8h_1ab78c1059e02707f7c416a7044d89c962" compoundref="cfe__es_8h" startline="179">CFE_ES_CDS_MAX_FULL_NAME_LEN</references>
+        <references refid="cfe__es__cds_8h_1a39fddbe584067de8448b8b9c064b5f84" compoundref="cfe__es__cds_8h" startline="66">CFE_ES_CDS_NOT_FOUND</references>
+        <references refid="cfe__error_8h_1a16a4d76e4bba7c4d4bc2ab7a74b44d94" compoundref="cfe__error_8h" startline="331">CFE_ES_CDS_REGISTRY_FULL</references>
+        <references refid="cfe__es__cds_8c_1a252ae7d956a2127fda45b374d167ad72" compoundref="cfe__es__cds_8c" startline="675" endline="698">CFE_ES_FindCDSInRegistry</references>
+        <references refid="cfe__es__cds_8c_1aabbcdc9b09452e984671a8c681af6262" compoundref="cfe__es__cds_8c" startline="708" endline="726">CFE_ES_FindFreeCDSRegistryEntry</references>
+        <references refid="cfe__es__cds__mempool_8c_1a257c495c842dfea488228dfa9c21693d" compoundref="cfe__es__cds__mempool_8c" startline="290" endline="385">CFE_ES_GetCDSBlock</references>
+        <references refid="cfe__es__global_8h_1a9d4db28d1ae03cfdc1ebc9efa7407d35" compoundref="cfe__es__start_8c" startline="146">CFE_ES_Global</references>
+        <references refid="cfe__es__cds_8c_1afb3e1b83c010ecbde25603316bb11779" compoundref="cfe__es__cds_8c" startline="629" endline="642">CFE_ES_LockCDSRegistry</references>
+        <references refid="cfe__es__cds__mempool_8c_1aeb7ce6df79dddc269e57744724b8d033" compoundref="cfe__es__cds__mempool_8c" startline="390" endline="454">CFE_ES_PutCDSBlock</references>
+        <references refid="cfe__es__cds_8c_1a2be11180893590edd75d95bf2fe371be" compoundref="cfe__es__cds_8c" startline="652" endline="665">CFE_ES_UnlockCDSRegistry</references>
+        <references refid="cfe__es__cds_8c_1a9d69dc7cbbb1155bb4e300ba6aefd6c7" compoundref="cfe__es__cds_8c" startline="552" endline="567">CFE_ES_UpdateCDSRegistry</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1a1c2223c016e8e4b8d2357210ff6e20fc" compoundref="cfe__es__cds_8h" startline="74">CFE_ES_CDS_RegRec_t::MemHandle</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1aa7e6a486a92780b3a22d8360aa07b2ca" compoundref="cfe__es__cds_8h" startline="73">CFE_ES_CDS_RegRec_t::Name</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="struct_c_f_e___e_s___c_d_s_variables__t_1a235d979cfed366fcc5baf6e8bfe3bfb3" compoundref="cfe__es__cds_8h" startline="86">CFE_ES_CDSVariables_t::Registry</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1aa54841092984192b2c868cfc2da5fa96" compoundref="cfe__es__cds_8h" startline="75">CFE_ES_CDS_RegRec_t::Size</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1abc165540b9ebf26d71b3b911eca8348c" compoundref="cfe__es__cds_8h" startline="77">CFE_ES_CDS_RegRec_t::Table</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1a104d136fa1a1ee1504ae9133c0c43b98" compoundref="cfe__es__cds_8h" startline="76">CFE_ES_CDS_RegRec_t::Taken</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <referencedby refid="cfe__es__api_8c_1a9749b20ef5b73dc49701f29e89219d3d" compoundref="cfe__es__api_8c" startline="1526" endline="1598">CFE_ES_RegisterCDS</referencedby>
+        <referencedby refid="cfe__tbl__internal_8c_1a6b6bd14ad2156d4d1ca50748a5d49c8f" compoundref="cfe__tbl__internal_8c" startline="102" endline="293">CFE_TBL_EarlyInit</referencedby>
+        <referencedby refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" compoundref="cfe__tbl__api_8c" startline="90" endline="539">CFE_TBL_Register</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1aaa8e9232510d63e6aa72ff105eb23d37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_ES_DeleteCDS</definition>
+        <argsstring>(const char *CDSName, boolean CalledByTblServices)</argsstring>
+        <name>CFE_ES_DeleteCDS</name>
+        <param>
+          <type>const char *</type>
+          <declname>CDSName</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member">boolean</ref></type>
+          <declname>CalledByTblServices</declname>
+        </param>
+        <briefdescription>
+<para>Deletes the specified CDS from the CDS Registry and frees CDS Memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Removes the record of the specified CDS from the CDS Registry and frees the associated CDS memory for future use.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">CDSName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to character string containing complete CDS Name (of the format &quot;AppName.CDSName&quot;).</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">CalledByTblServices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flag that identifies whether the CDS is supposed to be a Critical Table Image or not.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member">CFE_SUCCESS</ref> Operation was performed successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="cfe__error_8h_1a569d444dfdfbcc450879a8fc1471be09" kindref="member">CFE_ES_CDS_WRONG_TYPE_ERR</ref> Occurs when Table Services is trying to delete a Critical Data Store that is not a Critical Table Image or when Executive Services is trying to delete a Critical Table Image. </para></simplesect>
+<simplesect kind="return"><para><ref refid="cfe__error_8h_1ad6be372a21f906888f1d55201135878e" kindref="member">CFE_ES_CDS_OWNER_ACTIVE_ERR</ref> Occurs when an attempt was made to delete a CDS when an application with the same name associated with the CDS is still present. CDSs can ONLY be deleted when Applications that created them are not present in the system. </para></simplesect>
+<simplesect kind="return"><para><ref refid="cfe__error_8h_1a1a25151aeeca680bc059873d5e3c0a61" kindref="member">CFE_ES_CDS_NOT_FOUND_ERR</ref> Occurs when a search of the Critical Data Store Registry does not find a critical data store with the specified name. </para></simplesect>
+<simplesect kind="return"><para>Any of the return values from <ref refid="cfe__es__cds_8h_1a9d69dc7cbbb1155bb4e300ba6aefd6c7" kindref="member">CFE_ES_UpdateCDSRegistry</ref> </para></simplesect>
+<simplesect kind="return"><para>Any of the return values from <ref refid="cfe__es__cds__mempool_8h_1aeb7ce6df79dddc269e57744724b8d033" kindref="member">CFE_ES_PutCDSBlock</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="314" column="1" bodyfile="es/cfe_es_cds.c" bodystart="791" bodyend="876"/>
+        <references refid="struct_c_f_e___e_s___global__t_1a270b792902814471ac802b9606ad540f" compoundref="cfe__es__global_8h" startline="166">CFE_ES_Global_t::CDSVars</references>
+        <references refid="cfe__es__cds_8h_1a39fddbe584067de8448b8b9c064b5f84" compoundref="cfe__es__cds_8h" startline="66">CFE_ES_CDS_NOT_FOUND</references>
+        <references refid="cfe__error_8h_1a1a25151aeeca680bc059873d5e3c0a61" compoundref="cfe__error_8h" startline="443">CFE_ES_CDS_NOT_FOUND_ERR</references>
+        <references refid="cfe__error_8h_1ad6be372a21f906888f1d55201135878e" compoundref="cfe__error_8h" startline="452">CFE_ES_CDS_OWNER_ACTIVE_ERR</references>
+        <references refid="cfe__error_8h_1a569d444dfdfbcc450879a8fc1471be09" compoundref="cfe__error_8h" startline="436">CFE_ES_CDS_WRONG_TYPE_ERR</references>
+        <references refid="cfe__error_8h_1a8134921ee07f48bab5c9e1733f0a34cf" compoundref="cfe__error_8h" startline="233">CFE_ES_ERR_APPNAME</references>
+        <references refid="cfe__es__cds_8c_1a252ae7d956a2127fda45b374d167ad72" compoundref="cfe__es__cds_8c" startline="675" endline="698">CFE_ES_FindCDSInRegistry</references>
+        <references refid="cfe__es_8h_1a8422894d9e2e2c2618d0f4d6006fe53c" compoundref="cfe__es__api_8c" startline="748" endline="775">CFE_ES_GetAppIDByName</references>
+        <references refid="cfe__es__global_8h_1a9d4db28d1ae03cfdc1ebc9efa7407d35" compoundref="cfe__es__start_8c" startline="146">CFE_ES_Global</references>
+        <references refid="cfe__es__cds_8c_1afb3e1b83c010ecbde25603316bb11779" compoundref="cfe__es__cds_8c" startline="629" endline="642">CFE_ES_LockCDSRegistry</references>
+        <references refid="cfe__es__cds__mempool_8c_1aeb7ce6df79dddc269e57744724b8d033" compoundref="cfe__es__cds__mempool_8c" startline="390" endline="454">CFE_ES_PutCDSBlock</references>
+        <references refid="cfe__es__cds_8c_1a2be11180893590edd75d95bf2fe371be" compoundref="cfe__es__cds_8c" startline="652" endline="665">CFE_ES_UnlockCDSRegistry</references>
+        <references refid="cfe__es__cds_8c_1a9d69dc7cbbb1155bb4e300ba6aefd6c7" compoundref="cfe__es__cds_8c" startline="552" endline="567">CFE_ES_UpdateCDSRegistry</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="common__types_8h" startline="318">FALSE</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1a1c2223c016e8e4b8d2357210ff6e20fc" compoundref="cfe__es__cds_8h" startline="74">CFE_ES_CDS_RegRec_t::MemHandle</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1aa7e6a486a92780b3a22d8360aa07b2ca" compoundref="cfe__es__cds_8h" startline="73">CFE_ES_CDS_RegRec_t::Name</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1" compoundref="stubs_8c" startline="36">OS_MAX_API_NAME</references>
+        <references refid="struct_c_f_e___e_s___c_d_s_variables__t_1a235d979cfed366fcc5baf6e8bfe3bfb3" compoundref="cfe__es__cds_8h" startline="86">CFE_ES_CDSVariables_t::Registry</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1abc165540b9ebf26d71b3b911eca8348c" compoundref="cfe__es__cds_8h" startline="77">CFE_ES_CDS_RegRec_t::Table</references>
+        <references refid="struct_c_f_e___e_s___c_d_s___reg_rec__t_1a104d136fa1a1ee1504ae9133c0c43b98" compoundref="cfe__es__cds_8h" startline="76">CFE_ES_CDS_RegRec_t::Taken</references>
+        <referencedby refid="cfe__es__task_8h_1a4cd32c821166b48286fe0c0c22935ffd" compoundref="cfe__es__task_8c" startline="1971" endline="2027">CFE_ES_DeleteCDSCmd</referencedby>
+        <referencedby refid="cfe__tbl__task__cmds_8h_1aed9f95402d3b85222ed70583d85e9928" compoundref="cfe__tbl__task__cmds_8c" startline="1381" endline="1469">CFE_TBL_DeleteCDSCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>cfe_private.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Dec<sp/>3,<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>jphickey</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CFE_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFE_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe_8h" kindref="compound">cfe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_platform_cfg.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>Define<sp/>platform<sp/>configuration<sp/>parameters<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>All<sp/>cFE<sp/>core<sp/>apps<sp/>should<sp/>define<sp/>an<sp/>entry<sp/>point<sp/>and<sp/>the<sp/>prototype<sp/>should<sp/>be<sp/>here</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>These<sp/>may<sp/>also<sp/>be<sp/>called<sp/>from<sp/>the<sp/>unit<sp/>test</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="37"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1a64f2d9ffc4f3e6f8f718a15ee03c5d79" kindref="member">CFE_TIME_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="51"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1adb337fe95061313a383cb9db0d95e695" kindref="member">CFE_SB_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1a25fbdc94e2c09c02264442c4b8ed906e" kindref="member">CFE_EVS_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="79"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1a6afbfeb972d2e5d767a63573580f92bd" kindref="member">CFE_ES_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="95"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1a61d8c896a1a62d04a24d77eb06e02a54" kindref="member">CFE_TBL_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/>*<sp/>cFE<sp/>core<sp/>apps<sp/>may<sp/>define<sp/>an<sp/>early<sp/>init<sp/>function<sp/>and<sp/>the<sp/>prototype<sp/>should<sp/>be<sp/>here</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/>*<sp/>These<sp/>may<sp/>also<sp/>be<sp/>called<sp/>from<sp/>the<sp/>unit<sp/>test</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="119"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a03453a917d882866305b6c05b99eb0b1" kindref="member">CFE_EVS_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="132"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a10df878846322b41e32312d413be8da2" kindref="member">CFE_SB_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="145"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a492b1a5fbf41261616af972af7b0540b" kindref="member">CFE_TIME_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="158"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a6b6bd14ad2156d4d1ca50748a5d49c8f" kindref="member">CFE_TBL_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="171"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1affdb331f1b40f270906ac22ef1b8d87b" kindref="member">CFE_ES_CDS_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="184"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1aea2b5498886c7203bfe2d48862594f4d" kindref="member">CFE_FS_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="190"><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/>*<sp/>cFE<sp/>core<sp/>apps<sp/>may<sp/>define<sp/>a<sp/>clean<sp/>up<sp/>function<sp/>and<sp/>the<sp/>prototype<sp/>should<sp/>be<sp/>here</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/>*<sp/>These<sp/>may<sp/>also<sp/>be<sp/>called<sp/>from<sp/>the<sp/>unit<sp/>test</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="209"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1afaeb44923a3f529841f7e0f5a16cc712" kindref="member">CFE_TBL_CleanUpApp</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>AppId);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="221"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a3c4c1a5416dfb9987a3cb7924f07d852" kindref="member">CFE_SB_CleanUpApp</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>AppId);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="233"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1aa67fd7909b80919d6a9d98444f4480ff" kindref="member">CFE_EVS_CleanUpApp</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>AppId);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="245"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a951c89bf4278618bb3716cb25f69c677" kindref="member">CFE_TIME_CleanUpApp</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>AppId);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="250"><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/>*<sp/>Functions<sp/>that<sp/>are<sp/>used<sp/>in<sp/>a<sp/>cFE<sp/>core<sp/>module<sp/>other<sp/>than<sp/>the<sp/>module<sp/>that</highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/>*<sp/>actually<sp/>defines<sp/>the<sp/>function<sp/>should<sp/>be<sp/>prototyped<sp/>here.</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/>*<sp/>Including<sp/>the<sp/>prototype<sp/>here<sp/>allows<sp/>the<sp/>function<sp/>to<sp/>be<sp/>called<sp/>properly</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/>*<sp/>without<sp/>redefining<sp/>it<sp/>at<sp/>the<sp/>point<sp/>of<sp/>use.</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1aa2d0b1b06a987447ecc16efc4b46698b" kindref="member">CFE_ES_RegisterCDSEx</ref>(<ref refid="cfe__es_8h_1aa976e86ad134f5b5ca774f2a89497168" kindref="member">CFE_ES_CDSHandle_t</ref><sp/>*HandlePtr,<sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/>BlockSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Name,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>CriticalTbl);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><sp/><ref refid="cfe__private_8h_1aaa8e9232510d63e6aa72ff105eb23d37" kindref="member">CFE_ES_DeleteCDS</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*CDSName,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>CalledByTblServices);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CFE_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="inc/private/cfe_private.h"/>
+  </compounddef>
+</doxygen>

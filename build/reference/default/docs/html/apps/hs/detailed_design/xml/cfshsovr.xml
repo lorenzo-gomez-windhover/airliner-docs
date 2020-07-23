@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfshsovr" kind="page">
+    <compoundname>cfshsovr</compoundname>
+    <title>Health and Safety Overview</title>
+    <detaileddescription>
+<para>The CFS Health and Safety (HS) application provides functionality for Application Monitoring, Event Monitoring, Hardware Watchdog Servicing, Execution Counter Reporting (optional), and CPU Aliveness Indication (via UART).<linebreak/>
+</para><para>Application Monitoring, Event Monitoring, and Execution Counter Reporting are configurable by table while the application is running. Application Monitoring, Event Monitoring and CPU Aliveness Indication can be disabled or enabled by ground command, and can be configured to be disabled or enabled (if a table is provided) on startup.<linebreak/>
+</para><sect1 id="cfshsovr_1HS">
+<title>Design Overview</title>
+<para><verbatim>The Health and Safety application nominally runs once per second. First, it makes updates based
+on any table loads during the previous second. Next, it performs Application Monitoring, if
+enabled, in the order listed in the table, taking actions if necessary. Next, the Aliveness
+Indicator (to the UART) is output if enabled and it is time to do so. After that, all events
+received during the previous cycle are checked, in order, if enabled, against the Event Monitor
+Table (in the order listed in the table) and actions are taken if necessary. Next, all commands
+and housekeeping requests received during the previous cycle are processed. Finally, the hardware
+watchdog is serviced after which the HS application waits until the next cycle to begin the 
+process again.
+</verbatim></para><para>Prev: <ref refid="cfshsintro" kindref="compound">Health and Safety Introduction</ref> <linebreak/>
+ Next: <ref refid="cfshsopr" kindref="compound">Health and Safety Operation</ref> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

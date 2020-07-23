@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_2_4_1" kind="page">
+    <compoundname>cfedeploy_2_4_1</compoundname>
+    <title>Configure the Application Directories in each CPU Directory</title>
+    <detaileddescription>
+<para>For each CPU in the build directory (examples: build/coldfire, build/cpu1, build/rad750) determine the set of applications to build. For each application, create (or copy) a sub-directory and a makefile. If the application does not have a corresponding application in the cfe-apps directory, the source will also have to go here.</para><para><center> <heading level="4">Sample cFE Application Directories for a CPU Directory Named &quot;comm&quot; </heading>
+</center></para><para><center> </center></para><para><table rows="7" cols="2"><row>
+<entry thead="no"><para><bold> File </bold> </para></entry><entry thead="no"><para><bold> Description </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>build/comm/ci </para></entry><entry thead="no"><para>Directory for the CI app. </para></entry></row>
+<row>
+<entry thead="no"><para>build/comm/ci/Makefile </para></entry><entry thead="no"><para>Makefile for the CI app. Because the CI app source is in the cfe-apps directory, there is no need to include it here. The makefile will find it using the CFE_APP_SRC environment variable. The CI source could be copied here in order to customize it for this CPU. </para></entry></row>
+<row>
+<entry thead="no"><para>build/comm/commapp1 </para></entry><entry thead="no"><para>Directory for a fictional &quot;Comm App 1&quot; cFE application. </para></entry></row>
+<row>
+<entry thead="no"><para>build/comm/commapp1/Makefile </para></entry><entry thead="no"><para>Makefile for Comm App 1 </para></entry></row>
+<row>
+<entry thead="no"><para>build/comm/commapp1/commapp1.c </para></entry><entry thead="no"><para>Source file for Comm App 1 </para></entry></row>
+<row>
+<entry thead="no"><para>build/comm./commapp1/commapp1.h </para></entry><entry thead="no"><para>Header file for Comm App 1 </para></entry></row>
+</table>
+</para><para>The Application makefiles have a specific format, so it is best to copy one of the application makefiles from the cfe-apps directory, such as cfe-apps/ci/Makefile.</para><para>Next: <ref refid="cfedeploy_2_4_2" kindref="compound">Configure the makefile in each CPU Directory</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_2_4" kindref="compound">Configure a Set of cFE Applications for Each CPU</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

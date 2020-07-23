@@ -1,0 +1,1240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cf__utils_8h" kind="file" language="C++">
+    <compoundname>cf_utils.h</compoundname>
+    <includedby refid="cf__app_8c" local="yes">apps/cf/fsw/src/cf_app.c</includedby>
+    <includedby refid="cf__callbacks_8c" local="yes">apps/cf/fsw/src/cf_callbacks.c</includedby>
+    <includedby refid="cf__cmds_8c" local="yes">apps/cf/fsw/src/cf_cmds.c</includedby>
+    <includedby refid="cf__playback_8c" local="yes">apps/cf/fsw/src/cf_playback.c</includedby>
+    <includedby refid="cf__utils_8c" local="yes">apps/cf/fsw/src/cf_utils.c</includedby>
+    <invincdepgraph>
+      <node id="3132">
+        <label>apps/cf/fsw/src/cf_cmds.c</label>
+        <link refid="cf__cmds_8c"/>
+      </node>
+      <node id="3133">
+        <label>apps/cf/fsw/src/cf_playback.c</label>
+        <link refid="cf__playback_8c"/>
+      </node>
+      <node id="3130">
+        <label>apps/cf/fsw/src/cf_app.c</label>
+        <link refid="cf__app_8c"/>
+      </node>
+      <node id="3131">
+        <label>apps/cf/fsw/src/cf_callbacks.c</label>
+        <link refid="cf__callbacks_8c"/>
+      </node>
+      <node id="3134">
+        <label>apps/cf/fsw/src/cf_utils.c</label>
+        <link refid="cf__utils_8c"/>
+      </node>
+      <node id="3129">
+        <label>apps/cf/fsw/src/cf_utils.h</label>
+        <link refid="cf_utils.h"/>
+        <childnode refid="3130" relation="include">
+        </childnode>
+        <childnode refid="3131" relation="include">
+        </childnode>
+        <childnode refid="3132" relation="include">
+        </childnode>
+        <childnode refid="3133" relation="include">
+        </childnode>
+        <childnode refid="3134" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cf__utils_8h_1a903743fa7b2d9fde39bdb42cf7349b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_BuildPutRequest</definition>
+        <argsstring>(CF_QueueEntry_t *QueueEntryPtr)</argsstring>
+        <name>CF_BuildPutRequest</name>
+        <param>
+          <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+          <declname>QueueEntryPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="65" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="474" bodyend="531"/>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__events_8h_1a5c177e3d95f51dee4a2e54ed308631d3" compoundref="cf__events_8h" startline="113">CF_PUT_REQ_ERR2_EID</references>
+        <references refid="cf__utils_8c_1a697d79e1258322447ed6da0512e4c976" compoundref="cf__utils_8c" startline="534" endline="540">CF_SendEventPutStrTooLong</references>
+        <references refid="cf__defs_8h_1ad5dbac93b1fd306c9809fdff86e7daef" compoundref="cf__defs_8h" startline="143">CF_STAT_PUT_REQ_ISSUED</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="cfdp__lib_8c_1a64609f29462b5668622192fb659a5619" compoundref="cfdp__lib_8c" startline="394" endline="557">cfdp_give_request</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="struct_c_f___queue_entry__t_1ab6634722b302488aa96aec0c54c3f7b5" compoundref="cf__app_8h" startline="95">CF_QueueEntry_t::ChanNum</references>
+        <references refid="struct_c_f___queue_entry__t_1a628bb04036873644bbb161dc8a61d650" compoundref="cf__app_8h" startline="94">CF_QueueEntry_t::Class</references>
+        <references refid="struct_c_f___queue_entry__t_1ab3823d05dde1c80abea8e9b702c1c149" compoundref="cf__app_8h" startline="106">CF_QueueEntry_t::DstFile</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="cfdp__provides_8h_1a1d0cf1774f4b2996f4e9002246180b7b" compoundref="cfdp__provides_8h" startline="136">MAX_REQUEST_STRING_LENGTH</references>
+        <references refid="struct_c_f___queue_entry__t_1a82666b0ace15d0b95ec17f45cc995875" compoundref="cf__app_8h" startline="104">CF_QueueEntry_t::PeerEntityId</references>
+        <references refid="struct_c_f___queue_entry__t_1a8afcb3bdd31a8b2aa257c6b73561e380" compoundref="cf__app_8h" startline="105">CF_QueueEntry_t::SrcFile</references>
+        <references refid="struct_c_f___queue_entry__t_1ad92a727e801ec6bf98efe2f769f38579" compoundref="cf__app_8h" startline="99">CF_QueueEntry_t::Status</references>
+        <referencedby refid="cf__playback_8h_1aa396f778ad6a6c35cbefe1a7d34e19b3" compoundref="cf__playback_8c" startline="1281" endline="1324">CF_StartNextFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a697d79e1258322447ed6da0512e4c976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_SendEventPutStrTooLong</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_SendEventPutStrTooLong</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="66" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="534" bodyend="540"/>
+        <references refid="cf__events_8h_1a33dec16cff78d61aecce1ee82cf3fe62" compoundref="cf__events_8h" startline="112">CF_PUT_REQ_ERR1_EID</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfdp__provides_8h_1a1d0cf1774f4b2996f4e9002246180b7b" compoundref="cfdp__provides_8h" startline="136">MAX_REQUEST_STRING_LENGTH</references>
+        <referencedby refid="cf__utils_8h_1a903743fa7b2d9fde39bdb42cf7349b5a" compoundref="cf__utils_8c" startline="474" endline="531">CF_BuildPutRequest</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a90135bb41e4d2c139661e865aa424c46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_BuildCmdedRequest</definition>
+        <argsstring>(char *Req, char *Trans)</argsstring>
+        <name>CF_BuildCmdedRequest</name>
+        <param>
+          <type>char *</type>
+          <declname>Req</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>Trans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="67" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="547" bodyend="573"/>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="cfdp__lib_8c_1a64609f29462b5668622192fb659a5619" compoundref="cfdp__lib_8c" startline="394" endline="557">cfdp_give_request</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="cfdp__provides_8h_1a1d0cf1774f4b2996f4e9002246180b7b" compoundref="cfdp__provides_8h" startline="136">MAX_REQUEST_STRING_LENGTH</references>
+        <references refid="osapi-os-core_8h_1af37ffcbb0b0d6e04c5b9ecad16b77503">OS_printf</references>
+        <referencedby refid="cf__cmds_8h_1acea6bd23044cdb81a3e4d5aa32d4e878" compoundref="cf__cmds_8c" startline="428" endline="506">CF_CARSCmd</referencedby>
+        <referencedby refid="cf__app_8h_1a9166bc4095222e41ae8b5529ab321115" compoundref="cf__app_8c" startline="1081" endline="1162">CF_WakeupProcessing</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1aba6bf5700647a787cd9eac6313961763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_FindActiveTransIdByName</definition>
+        <argsstring>(char *TransIdBuf, char *Filename)</argsstring>
+        <name>CF_FindActiveTransIdByName</name>
+        <param>
+          <type>char *</type>
+          <declname>TransIdBuf</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>Filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="68" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="420" bodyend="468"/>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__utils_8c_1afa1c6f9cf86e22f5f384d2b33ce12cfe" compoundref="cf__utils_8c" startline="179" endline="203">CF_FindPbActiveNodeByName</references>
+        <references refid="cf__utils_8c_1ac28c1de9b1017d73f1c2a2f5dd198876" compoundref="cf__utils_8c" startline="112" endline="129">CF_FindUpActiveNodeByName</references>
+        <references refid="cf__defs_8h_1ac8a2d35bd798d68b87b1b4084c441633" compoundref="cf__defs_8h" startline="147">CF_MAX_TRANSID_CHARS</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_c_f___queue_entry__t_1ad8dafa465e430d82efe48ae70db31f32" compoundref="cf__app_8h" startline="103">CF_QueueEntry_t::SrcEntityId</references>
+        <references refid="struct_c_f___queue_entry__t_1a37996b5bf7b6413246bc3d28c2fd912d" compoundref="cf__app_8h" startline="101">CF_QueueEntry_t::TransNum</references>
+        <referencedby refid="cf__cmds_8h_1acea6bd23044cdb81a3e4d5aa32d4e878" compoundref="cf__cmds_8c" startline="428" endline="506">CF_CARSCmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a428ccac6ff2559d12693a805dba90b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindNodeAtFrontOfQueue</definition>
+        <argsstring>(TRANS_STATUS TransInfo)</argsstring>
+        <name>CF_FindNodeAtFrontOfQueue</name>
+        <param>
+          <type><ref refid="struct_t_r_a_n_s___s_t_a_t_u_s" kindref="compound">TRANS_STATUS</ref></type>
+          <declname>TransInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="69" column="1" bodyfile="apps/cf/fsw/src/cf_playback.c" bodystart="1153" bodyend="1189"/>
+        <references refid="cf__defs_8h_1aaa1b76a0cec00c983af939da63f8e7c5" compoundref="cf__defs_8h" startline="108">CF_ENTRY_IN_USE</references>
+        <references refid="cf__platform__cfg_8h_1aa76089f68b44f9df9446ddfac47d9597" compoundref="cf__platform__cfg_8h" startline="227">CF_MAX_PLAYBACK_CHANNELS</references>
+        <references refid="cf__defs_8h_1ab85896e7293071cb01dc693735927460" compoundref="cf__defs_8h" startline="99">CF_PB_PENDINGQ</references>
+        <references refid="cf__defs_8h_1ad5dbac93b1fd306c9809fdff86e7daef" compoundref="cf__defs_8h" startline="143">CF_STAT_PUT_REQ_ISSUED</references>
+        <references refid="struct_c_f___app_data__t_1a4762e7b83af0a22cee59322ae0aa8016" compoundref="cf__app_8h" startline="165">CF_AppData_t::Chan</references>
+        <references refid="structcf__out__channel__entry__t_1aac18ce180362a503f44e4c2750ba4f55" compoundref="cf__tbldefs_8h" startline="92">cf_out_channel_entry_t::EntryInUse</references>
+        <references refid="struct_t_r_a_n_s___s_t_a_t_u_s_1a827d89e86e8e197147720246e9a22708" compoundref="cfdp__data__structures_8h" startline="377">TRANS_STATUS::md</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="osapi-os-core_8h_1af37ffcbb0b0d6e04c5b9ecad16b77503">OS_printf</references>
+        <references refid="structcf__config__table__t_1a6ec7818389a20fc1494bed715cf90827" compoundref="cf__tbldefs_8h" startline="126">cf_config_table_t::OuCh</references>
+        <references refid="struct_c_f___channel_data__t_1a6d6c5bbb894d898f50f89c2158b00eb6" compoundref="cf__app_8h" startline="121">CF_ChannelData_t::PbQ</references>
+        <references refid="struct_m_d_1aeb82449d4978e44cd985a0f9be799396" compoundref="cfdp__data__structures_8h" startline="212">MD::source_file_name</references>
+        <references refid="struct_c_f___queue_entry__t_1a8afcb3bdd31a8b2aa257c6b73561e380" compoundref="cf__app_8h" startline="105">CF_QueueEntry_t::SrcFile</references>
+        <references refid="struct_c_f___queue_entry__t_1ad92a727e801ec6bf98efe2f769f38579" compoundref="cf__app_8h" startline="99">CF_QueueEntry_t::Status</references>
+        <references refid="struct_c_f___queue__t_1a862690c14077bef0f79ad00ba6d43546" compoundref="cf__app_8h" startline="113">CF_Queue_t::TailPtr</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a4ae1c96fdfd0c66193b369dd0b88cded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindUpNodeByTransID</definition>
+        <argsstring>(uint32 Queue, char *SrcEntityId, uint32 Trans)</argsstring>
+        <name>CF_FindUpNodeByTransID</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>SrcEntityId</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Trans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="70" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="281" bodyend="299"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__defs_8h_1a3a5d22e18592bea1b267f3e0237c1920" compoundref="cf__defs_8h" startline="148">CF_MAX_CFG_VALUE_CHARS</references>
+        <references refid="struct_c_f___queue__t_1a381204dc87e9280393bbaf2cbd688866" compoundref="cf__app_8h" startline="112">CF_Queue_t::HeadPtr</references>
+        <references refid="struct_c_f___queue_entry__t_1a3919e9481827992af57b1d7f5d7f953f" compoundref="cf__app_8h" startline="92">CF_QueueEntry_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_c_f___queue_entry__t_1ad8dafa465e430d82efe48ae70db31f32" compoundref="cf__app_8h" startline="103">CF_QueueEntry_t::SrcEntityId</references>
+        <references refid="struct_c_f___queue_entry__t_1a37996b5bf7b6413246bc3d28c2fd912d" compoundref="cf__app_8h" startline="101">CF_QueueEntry_t::TransNum</references>
+        <references refid="struct_c_f___app_data__t_1a803904ed27d2e7fef25c7d01b7d3b9bd" compoundref="cf__app_8h" startline="164">CF_AppData_t::UpQ</references>
+        <referencedby refid="cf__utils_8h_1a2cefa3f66de424bf4b66d6791dc06707" compoundref="cf__utils_8c" startline="321" endline="414">CF_FindNodeByTransId</referencedby>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+        <referencedby refid="cf__utils_8h_1a2da14e00032312490b6a9e2375c358b2" compoundref="cf__utils_8c" startline="752" endline="781">CF_MoveUpNodeActiveToHistory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a74ddb47a77b3fee81693c8807a9daf75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindPbNodeByTransNum</definition>
+        <argsstring>(uint32 Chan, uint32 Queue, uint32 Trans)</argsstring>
+        <name>CF_FindPbNodeByTransNum</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Chan</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Trans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="71" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="302" bodyend="318"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="struct_c_f___app_data__t_1a4762e7b83af0a22cee59322ae0aa8016" compoundref="cf__app_8h" startline="165">CF_AppData_t::Chan</references>
+        <references refid="struct_c_f___queue__t_1a381204dc87e9280393bbaf2cbd688866" compoundref="cf__app_8h" startline="112">CF_Queue_t::HeadPtr</references>
+        <references refid="struct_c_f___queue_entry__t_1a3919e9481827992af57b1d7f5d7f953f" compoundref="cf__app_8h" startline="92">CF_QueueEntry_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_c_f___channel_data__t_1a6d6c5bbb894d898f50f89c2158b00eb6" compoundref="cf__app_8h" startline="121">CF_ChannelData_t::PbQ</references>
+        <references refid="struct_c_f___queue_entry__t_1a37996b5bf7b6413246bc3d28c2fd912d" compoundref="cf__app_8h" startline="101">CF_QueueEntry_t::TransNum</references>
+        <referencedby refid="cf__utils_8h_1a2cefa3f66de424bf4b66d6791dc06707" compoundref="cf__utils_8c" startline="321" endline="414">CF_FindNodeByTransId</referencedby>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+        <referencedby refid="cf__utils_8h_1ae03e60a18123bb96261724adb3fcba8e" compoundref="cf__utils_8c" startline="785" endline="834">CF_MoveDwnNodeActiveToHistory</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a2cefa3f66de424bf4b66d6791dc06707" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindNodeByTransId</definition>
+        <argsstring>(char *TransIdStr)</argsstring>
+        <name>CF_FindNodeByTransId</name>
+        <param>
+          <type>char *</type>
+          <declname>TransIdStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="72" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="321" bodyend="414"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__defs_8h_1aaa1b76a0cec00c983af939da63f8e7c5" compoundref="cf__defs_8h" startline="108">CF_ENTRY_IN_USE</references>
+        <references refid="cf__utils_8c_1a74ddb47a77b3fee81693c8807a9daf75" compoundref="cf__utils_8c" startline="302" endline="318">CF_FindPbNodeByTransNum</references>
+        <references refid="cf__utils_8c_1a4ae1c96fdfd0c66193b369dd0b88cded" compoundref="cf__utils_8c" startline="281" endline="299">CF_FindUpNodeByTransID</references>
+        <references refid="cf__defs_8h_1a3a5d22e18592bea1b267f3e0237c1920" compoundref="cf__defs_8h" startline="148">CF_MAX_CFG_VALUE_CHARS</references>
+        <references refid="cf__platform__cfg_8h_1aa76089f68b44f9df9446ddfac47d9597" compoundref="cf__platform__cfg_8h" startline="227">CF_MAX_PLAYBACK_CHANNELS</references>
+        <references refid="cf__defs_8h_1a29744447fd89350e065618b4a30f2c9a" compoundref="cf__defs_8h" startline="134">CF_QUEUES_PER_CHAN</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="cf__defs_8h_1a22dd0c8e1dd9fd4e9c640d248661bf1e" compoundref="cf__defs_8h" startline="96">CF_UP_ACTIVEQ</references>
+        <references refid="cf__defs_8h_1aaa5346b4a7a0eb06f95838f91900d729" compoundref="cf__defs_8h" startline="97">CF_UP_HISTORYQ</references>
+        <references refid="cf__utils_8c_1a59fdc07aefdf7275440f5ccecfc93b0d" compoundref="cf__utils_8c" startline="633" endline="706">CF_ValidateEntityId</references>
+        <references refid="structcf__out__channel__entry__t_1aac18ce180362a503f44e4c2750ba4f55" compoundref="cf__tbldefs_8h" startline="92">cf_out_channel_entry_t::EntryInUse</references>
+        <references refid="structcf__config__table__t_1a394c8e96e2a93b6da49b93a8ad4d8f6f" compoundref="cf__tbldefs_8h" startline="123">cf_config_table_t::FlightEntityId</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="structcf__config__table__t_1a6ec7818389a20fc1494bed715cf90827" compoundref="cf__tbldefs_8h" startline="126">cf_config_table_t::OuCh</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <referencedby refid="cf__cmds_8h_1ae54242868a96f61aaccc245c5fb50d47" compoundref="cf__cmds_8c" startline="1394" endline="1544">CF_DequeueNodeCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1abc8070e6832479b54cdbf8b3ef4f87ea" compoundref="cf__cmds_8c" startline="1927" endline="2028">CF_QuickStatusCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1ad32cb59aab954f4f7d132530f8f46eb1" compoundref="cf__cmds_8c" startline="1063" endline="1188">CF_SendTransDataCmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a3ea3558f7aace478c8e29989d9514992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindUpHistoryNodeByName</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_FindUpHistoryNodeByName</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="73" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="92" bodyend="108"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__defs_8h_1aaa5346b4a7a0eb06f95838f91900d729" compoundref="cf__defs_8h" startline="97">CF_UP_HISTORYQ</references>
+        <references refid="struct_c_f___queue__t_1a381204dc87e9280393bbaf2cbd688866" compoundref="cf__app_8h" startline="112">CF_Queue_t::HeadPtr</references>
+        <references refid="struct_c_f___queue_entry__t_1a3919e9481827992af57b1d7f5d7f953f" compoundref="cf__app_8h" startline="92">CF_QueueEntry_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_c_f___queue_entry__t_1a8afcb3bdd31a8b2aa257c6b73561e380" compoundref="cf__app_8h" startline="105">CF_QueueEntry_t::SrcFile</references>
+        <references refid="struct_c_f___app_data__t_1a803904ed27d2e7fef25c7d01b7d3b9bd" compoundref="cf__app_8h" startline="164">CF_AppData_t::UpQ</references>
+        <referencedby refid="cf__utils_8h_1a398ae9956d9e1c73f0a006cfbd919933" compoundref="cf__utils_8c" startline="133" endline="148">CF_FindUpNodeByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1ac28c1de9b1017d73f1c2a2f5dd198876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindUpActiveNodeByName</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_FindUpActiveNodeByName</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="74" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="112" bodyend="129"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__defs_8h_1a22dd0c8e1dd9fd4e9c640d248661bf1e" compoundref="cf__defs_8h" startline="96">CF_UP_ACTIVEQ</references>
+        <references refid="struct_c_f___queue__t_1a381204dc87e9280393bbaf2cbd688866" compoundref="cf__app_8h" startline="112">CF_Queue_t::HeadPtr</references>
+        <references refid="struct_c_f___queue_entry__t_1a3919e9481827992af57b1d7f5d7f953f" compoundref="cf__app_8h" startline="92">CF_QueueEntry_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_c_f___queue_entry__t_1a8afcb3bdd31a8b2aa257c6b73561e380" compoundref="cf__app_8h" startline="105">CF_QueueEntry_t::SrcFile</references>
+        <references refid="struct_c_f___app_data__t_1a803904ed27d2e7fef25c7d01b7d3b9bd" compoundref="cf__app_8h" startline="164">CF_AppData_t::UpQ</references>
+        <referencedby refid="cf__utils_8h_1ac27fbf43a4ff7d0082c0ee4582061197" compoundref="cf__utils_8c" startline="734" endline="749">CF_CheckIfFileIsActive</referencedby>
+        <referencedby refid="cf__utils_8h_1aba6bf5700647a787cd9eac6313961763" compoundref="cf__utils_8c" startline="420" endline="468">CF_FindActiveTransIdByName</referencedby>
+        <referencedby refid="cf__utils_8h_1a398ae9956d9e1c73f0a006cfbd919933" compoundref="cf__utils_8c" startline="133" endline="148">CF_FindUpNodeByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a398ae9956d9e1c73f0a006cfbd919933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindUpNodeByName</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_FindUpNodeByName</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="75" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="133" bodyend="148"/>
+        <references refid="cf__utils_8c_1ac28c1de9b1017d73f1c2a2f5dd198876" compoundref="cf__utils_8c" startline="112" endline="129">CF_FindUpActiveNodeByName</references>
+        <references refid="cf__utils_8c_1a3ea3558f7aace478c8e29989d9514992" compoundref="cf__utils_8c" startline="92" endline="108">CF_FindUpHistoryNodeByName</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__utils_8h_1afbefd242996d3095fd0b8d88cded0e0f" compoundref="cf__utils_8c" startline="258" endline="275">CF_FindNodeByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1aaf60a9b1212ee14be94d3a51bce6678c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindPbHistoryNodeByName</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_FindPbHistoryNodeByName</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="76" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="152" bodyend="177"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__defs_8h_1aaa1b76a0cec00c983af939da63f8e7c5" compoundref="cf__defs_8h" startline="108">CF_ENTRY_IN_USE</references>
+        <references refid="cf__platform__cfg_8h_1aa76089f68b44f9df9446ddfac47d9597" compoundref="cf__platform__cfg_8h" startline="227">CF_MAX_PLAYBACK_CHANNELS</references>
+        <references refid="cf__defs_8h_1acd709d15263e22d326857c953ecc4cfd" compoundref="cf__defs_8h" startline="101">CF_PB_HISTORYQ</references>
+        <references refid="struct_c_f___app_data__t_1a4762e7b83af0a22cee59322ae0aa8016" compoundref="cf__app_8h" startline="165">CF_AppData_t::Chan</references>
+        <references refid="structcf__out__channel__entry__t_1aac18ce180362a503f44e4c2750ba4f55" compoundref="cf__tbldefs_8h" startline="92">cf_out_channel_entry_t::EntryInUse</references>
+        <references refid="struct_c_f___queue__t_1a381204dc87e9280393bbaf2cbd688866" compoundref="cf__app_8h" startline="112">CF_Queue_t::HeadPtr</references>
+        <references refid="struct_c_f___queue_entry__t_1a3919e9481827992af57b1d7f5d7f953f" compoundref="cf__app_8h" startline="92">CF_QueueEntry_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="structcf__config__table__t_1a6ec7818389a20fc1494bed715cf90827" compoundref="cf__tbldefs_8h" startline="126">cf_config_table_t::OuCh</references>
+        <references refid="struct_c_f___channel_data__t_1a6d6c5bbb894d898f50f89c2158b00eb6" compoundref="cf__app_8h" startline="121">CF_ChannelData_t::PbQ</references>
+        <references refid="struct_c_f___queue_entry__t_1a8afcb3bdd31a8b2aa257c6b73561e380" compoundref="cf__app_8h" startline="105">CF_QueueEntry_t::SrcFile</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <referencedby refid="cf__utils_8h_1ae3c4d00e2ab099e62ff449ceef6019d3" compoundref="cf__utils_8c" startline="235" endline="254">CF_FindPbNodeByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1afa1c6f9cf86e22f5f384d2b33ce12cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindPbActiveNodeByName</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_FindPbActiveNodeByName</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="77" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="179" bodyend="203"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__defs_8h_1aaa1b76a0cec00c983af939da63f8e7c5" compoundref="cf__defs_8h" startline="108">CF_ENTRY_IN_USE</references>
+        <references refid="cf__platform__cfg_8h_1aa76089f68b44f9df9446ddfac47d9597" compoundref="cf__platform__cfg_8h" startline="227">CF_MAX_PLAYBACK_CHANNELS</references>
+        <references refid="cf__defs_8h_1a3640f06d276f91ad71e6779fa59ba3fc" compoundref="cf__defs_8h" startline="100">CF_PB_ACTIVEQ</references>
+        <references refid="struct_c_f___app_data__t_1a4762e7b83af0a22cee59322ae0aa8016" compoundref="cf__app_8h" startline="165">CF_AppData_t::Chan</references>
+        <references refid="structcf__out__channel__entry__t_1aac18ce180362a503f44e4c2750ba4f55" compoundref="cf__tbldefs_8h" startline="92">cf_out_channel_entry_t::EntryInUse</references>
+        <references refid="struct_c_f___queue__t_1a381204dc87e9280393bbaf2cbd688866" compoundref="cf__app_8h" startline="112">CF_Queue_t::HeadPtr</references>
+        <references refid="struct_c_f___queue_entry__t_1a3919e9481827992af57b1d7f5d7f953f" compoundref="cf__app_8h" startline="92">CF_QueueEntry_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="structcf__config__table__t_1a6ec7818389a20fc1494bed715cf90827" compoundref="cf__tbldefs_8h" startline="126">cf_config_table_t::OuCh</references>
+        <references refid="struct_c_f___channel_data__t_1a6d6c5bbb894d898f50f89c2158b00eb6" compoundref="cf__app_8h" startline="121">CF_ChannelData_t::PbQ</references>
+        <references refid="struct_c_f___queue_entry__t_1a8afcb3bdd31a8b2aa257c6b73561e380" compoundref="cf__app_8h" startline="105">CF_QueueEntry_t::SrcFile</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <referencedby refid="cf__utils_8h_1ac27fbf43a4ff7d0082c0ee4582061197" compoundref="cf__utils_8c" startline="734" endline="749">CF_CheckIfFileIsActive</referencedby>
+        <referencedby refid="cf__utils_8h_1aba6bf5700647a787cd9eac6313961763" compoundref="cf__utils_8c" startline="420" endline="468">CF_FindActiveTransIdByName</referencedby>
+        <referencedby refid="cf__utils_8h_1ae3c4d00e2ab099e62ff449ceef6019d3" compoundref="cf__utils_8c" startline="235" endline="254">CF_FindPbNodeByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1acc64970a6b9d7b569ae02da95ae14fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindPbPendingNodeByName</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_FindPbPendingNodeByName</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="78" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="207" bodyend="232"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__defs_8h_1aaa1b76a0cec00c983af939da63f8e7c5" compoundref="cf__defs_8h" startline="108">CF_ENTRY_IN_USE</references>
+        <references refid="cf__platform__cfg_8h_1aa76089f68b44f9df9446ddfac47d9597" compoundref="cf__platform__cfg_8h" startline="227">CF_MAX_PLAYBACK_CHANNELS</references>
+        <references refid="cf__defs_8h_1ab85896e7293071cb01dc693735927460" compoundref="cf__defs_8h" startline="99">CF_PB_PENDINGQ</references>
+        <references refid="struct_c_f___app_data__t_1a4762e7b83af0a22cee59322ae0aa8016" compoundref="cf__app_8h" startline="165">CF_AppData_t::Chan</references>
+        <references refid="structcf__out__channel__entry__t_1aac18ce180362a503f44e4c2750ba4f55" compoundref="cf__tbldefs_8h" startline="92">cf_out_channel_entry_t::EntryInUse</references>
+        <references refid="struct_c_f___queue__t_1a381204dc87e9280393bbaf2cbd688866" compoundref="cf__app_8h" startline="112">CF_Queue_t::HeadPtr</references>
+        <references refid="struct_c_f___queue_entry__t_1a3919e9481827992af57b1d7f5d7f953f" compoundref="cf__app_8h" startline="92">CF_QueueEntry_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="structcf__config__table__t_1a6ec7818389a20fc1494bed715cf90827" compoundref="cf__tbldefs_8h" startline="126">cf_config_table_t::OuCh</references>
+        <references refid="struct_c_f___channel_data__t_1a6d6c5bbb894d898f50f89c2158b00eb6" compoundref="cf__app_8h" startline="121">CF_ChannelData_t::PbQ</references>
+        <references refid="struct_c_f___queue_entry__t_1a8afcb3bdd31a8b2aa257c6b73561e380" compoundref="cf__app_8h" startline="105">CF_QueueEntry_t::SrcFile</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <referencedby refid="cf__utils_8h_1ae3c4d00e2ab099e62ff449ceef6019d3" compoundref="cf__utils_8c" startline="235" endline="254">CF_FindPbNodeByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1ae3c4d00e2ab099e62ff449ceef6019d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindPbNodeByName</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_FindPbNodeByName</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="79" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="235" bodyend="254"/>
+        <references refid="cf__utils_8c_1afa1c6f9cf86e22f5f384d2b33ce12cfe" compoundref="cf__utils_8c" startline="179" endline="203">CF_FindPbActiveNodeByName</references>
+        <references refid="cf__utils_8c_1aaf60a9b1212ee14be94d3a51bce6678c" compoundref="cf__utils_8c" startline="152" endline="177">CF_FindPbHistoryNodeByName</references>
+        <references refid="cf__utils_8c_1acc64970a6b9d7b569ae02da95ae14fdf" compoundref="cf__utils_8c" startline="207" endline="232">CF_FindPbPendingNodeByName</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__utils_8h_1afbefd242996d3095fd0b8d88cded0e0f" compoundref="cf__utils_8c" startline="258" endline="275">CF_FindNodeByName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1afbefd242996d3095fd0b8d88cded0e0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref> *</type>
+        <definition>CF_QueueEntry_t* CF_FindNodeByName</definition>
+        <argsstring>(char *SrcFile)</argsstring>
+        <name>CF_FindNodeByName</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="80" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="258" bodyend="275"/>
+        <references refid="cf__utils_8c_1ae3c4d00e2ab099e62ff449ceef6019d3" compoundref="cf__utils_8c" startline="235" endline="254">CF_FindPbNodeByName</references>
+        <references refid="cf__utils_8c_1a398ae9956d9e1c73f0a006cfbd919933" compoundref="cf__utils_8c" startline="133" endline="148">CF_FindUpNodeByName</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__cmds_8h_1ae54242868a96f61aaccc245c5fb50d47" compoundref="cf__cmds_8c" startline="1394" endline="1544">CF_DequeueNodeCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1abc8070e6832479b54cdbf8b3ef4f87ea" compoundref="cf__cmds_8c" startline="1927" endline="2028">CF_QuickStatusCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1ad32cb59aab954f4f7d132530f8f46eb1" compoundref="cf__cmds_8c" startline="1063" endline="1188">CF_SendTransDataCmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1ada5f5ac641ee1e1cada041eea172e0f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_IncrFaultCtr</definition>
+        <argsstring>(TRANS_STATUS *TransInfoPtr)</argsstring>
+        <name>CF_IncrFaultCtr</name>
+        <param>
+          <type><ref refid="struct_t_r_a_n_s___s_t_a_t_u_s" kindref="compound">TRANS_STATUS</ref> *</type>
+          <declname>TransInfoPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="81" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="577" bodyend="626"/>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a789fb09fd10fec3c97f4ece0efb3a954" compoundref="cfdp__data__structures_8h" startline="165">CANCEL_REQUEST_RECEIVED</references>
+        <references refid="struct_fault___telemetry__t_1a41b978ab98292867ea3bfef9f30f1b5b" compoundref="cf__msg_8h" startline="387">Fault_Telemetry_t::CancelNum</references>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__events_8h_1a8fe15f1ea16ad76f58abeb83d0871420" compoundref="cf__events_8h" startline="148">CF_IND_FAU_UNEX_EID</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="struct_c_f___hk_packet__t_1a1fe9f4e74e27512746618ddbd3b5417d" compoundref="cf__msg_8h" startline="429">CF_HkPacket_t::Cond</references>
+        <references refid="struct_t_r_a_n_s___s_t_a_t_u_s_1ab2997675b95baf36df9c3082b4a37b3a" compoundref="cfdp__data__structures_8h" startline="365">TRANS_STATUS::condition_code</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a4be324038c0b4e8708cd39a3be94d6fb" compoundref="cfdp__data__structures_8h" startline="155">FILE_CHECKSUM_FAILURE</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a45bf9893a3f7e4c9a53a17150299adde" compoundref="cfdp__data__structures_8h" startline="156">FILE_SIZE_ERROR</references>
+        <references refid="struct_fault___telemetry__t_1af645c63d83893212ddfb869a90a1d2f2" compoundref="cf__msg_8h" startline="382">Fault_Telemetry_t::FileChecksumNum</references>
+        <references refid="struct_fault___telemetry__t_1ad4a350b6fba92e13b8479a7e40f95f3d" compoundref="cf__msg_8h" startline="383">Fault_Telemetry_t::FileSizeNum</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a40c1eee79ffdd4468c0f16a45b4f628e" compoundref="cfdp__data__structures_8h" startline="154">FILESTORE_REJECTION</references>
+        <references refid="struct_fault___telemetry__t_1a9b217a1ba5a84e20bc5d616eac314bb7" compoundref="cf__msg_8h" startline="381">Fault_Telemetry_t::FileStoreRejNum</references>
+        <references refid="struct_c_f___app_data__t_1afca31a863bd6ee147db67f2a6c91d282" compoundref="cf__app_8h" startline="149">CF_AppData_t::Hk</references>
+        <references refid="struct_fault___telemetry__t_1abd52ad63fa4f5af783cac3c739912ad9" compoundref="cf__msg_8h" startline="385">Fault_Telemetry_t::InactiveNum</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a0cc14b4fae24aa966cb1baee31b008e7" compoundref="cfdp__data__structures_8h" startline="158">INACTIVITY_DETECTED</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328aaedf1e34cd17ff2d9a8ecf3b4d7c537a" compoundref="cfdp__data__structures_8h" startline="157">NAK_LIMIT_REACHED</references>
+        <references refid="struct_fault___telemetry__t_1a283e619c0b62a342e838af6fa7eb8061" compoundref="cf__msg_8h" startline="384">Fault_Telemetry_t::NakLimitNum</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328abf350750d0d4fabd8954c0f1e9bbae94" compoundref="cfdp__data__structures_8h" startline="150">NO_ERROR</references>
+        <references refid="struct_fault___telemetry__t_1a7064bed5a0e29d4d272e15118667475d" compoundref="cf__msg_8h" startline="380">Fault_Telemetry_t::PosAckNum</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a3db56cb05ff53dda4e25860e4fe66925" compoundref="cfdp__data__structures_8h" startline="151">POSITIVE_ACK_LIMIT_REACHED</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a2a6c20ba0ae2b1a56b654e499c489043" compoundref="cfdp__data__structures_8h" startline="164">SUSPEND_REQUEST_RECEIVED</references>
+        <references refid="struct_fault___telemetry__t_1ac443de6d34057fd770e2014ca737ee04" compoundref="cf__msg_8h" startline="386">Fault_Telemetry_t::SuspendNum</references>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a59fdc07aefdf7275440f5ccecfc93b0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_ValidateEntityId</definition>
+        <argsstring>(char *EntityIdStrPtr)</argsstring>
+        <name>CF_ValidateEntityId</name>
+        <param>
+          <type>char *</type>
+          <declname>EntityIdStrPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="82" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="633" bodyend="706"/>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__defs_8h_1a78ba291e4efb3829be7c6c181ee601f2" compoundref="cf__defs_8h" startline="84">CF_FALSE</references>
+        <references refid="cf__defs_8h_1ac8a2d35bd798d68b87b1b4084c441633" compoundref="cf__defs_8h" startline="147">CF_MAX_TRANSID_CHARS</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="cf__defs_8h_1a7c5f672fce3526643b6d648fb96807f5" compoundref="cf__defs_8h" startline="85">CF_TRUE</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__utils_8h_1a2cefa3f66de424bf4b66d6791dc06707" compoundref="cf__utils_8c" startline="321" endline="414">CF_FindNodeByTransId</referencedby>
+        <referencedby refid="cf__playback_8h_1a6b08cd8754dda4a7d4bd081c54d483fc" compoundref="cf__playback_8c" startline="269" endline="382">CF_PlaybackDirectoryCmd</referencedby>
+        <referencedby refid="cf__playback_8h_1ad09737beb668908e0b6051a1871991dd" compoundref="cf__playback_8c" startline="108" endline="265">CF_PlaybackFileCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a6db90a0be3e8c0d390329aed6e91df8c" compoundref="cf__cmds_8c" startline="523" endline="650">CF_SetMibCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a8270b76d55052e1811a9f0b5dff24d5a" compoundref="cf__cmds_8c" startline="1285" endline="1390">CF_SetPollParam</referencedby>
+        <referencedby refid="cf__app_8h_1af0f47885550354b7d4f002ae659387bc" compoundref="cf__app_8c" startline="586" endline="784">CF_ValidateCFConfigTable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a3f94cc48d53aa972543369f15e7aebd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 CF_FileOpenCheck</definition>
+        <argsstring>(char *Filename)</argsstring>
+        <name>CF_FileOpenCheck</name>
+        <param>
+          <type>char *</type>
+          <declname>Filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="83" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="711" bodyend="731"/>
+        <references refid="cf__defs_8h_1a9a9543900921bb2de3662151c03f2e7d" compoundref="cf__defs_8h" startline="87">CF_CLOSED</references>
+        <references refid="cf__defs_8h_1aff72b78b14c066c76fe758a84f4698b7" compoundref="cf__defs_8h" startline="88">CF_OPEN</references>
+        <references refid="osapi-os-filesys_8h_1ad6da0819b45a9779f6f0b50e5d0872a8">OS_FDGetInfo</references>
+        <references refid="osapi-os-filesys_8h_1a6d6a3c85304b1a30ebb6de74f229b990">OS_FS_ERR_INVALID_FD</references>
+        <references refid="struct_o_s___f_d_table_entry_1a32c4052b3b110d878d2d9ada36fe78f0">OS_FDTableEntry::Path</references>
+        <referencedby refid="cf__playback_8h_1ad09737beb668908e0b6051a1871991dd" compoundref="cf__playback_8c" startline="108" endline="265">CF_PlaybackFileCmd</referencedby>
+        <referencedby refid="cf__playback_8h_1ad7e847432f38a1a77c972703fced7532" compoundref="cf__playback_8c" startline="399" endline="591">CF_QueueDirectoryFiles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1ac27fbf43a4ff7d0082c0ee4582061197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_CheckIfFileIsActive</definition>
+        <argsstring>(char *Filename)</argsstring>
+        <name>CF_CheckIfFileIsActive</name>
+        <param>
+          <type>char *</type>
+          <declname>Filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="84" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="734" bodyend="749"/>
+        <references refid="cf__defs_8h_1aad1cb8699c2924c75bd0c3af8ca131cd" compoundref="cf__defs_8h" startline="91">CF_FILE_IS_ACTIVE</references>
+        <references refid="cf__defs_8h_1a39595bf6c98a77e32ac06c92171d0a85" compoundref="cf__defs_8h" startline="90">CF_FILE_NOT_ACTIVE</references>
+        <references refid="cf__utils_8c_1afa1c6f9cf86e22f5f384d2b33ce12cfe" compoundref="cf__utils_8c" startline="179" endline="203">CF_FindPbActiveNodeByName</references>
+        <references refid="cf__utils_8c_1ac28c1de9b1017d73f1c2a2f5dd198876" compoundref="cf__utils_8c" startline="112" endline="129">CF_FindUpActiveNodeByName</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__playback_8h_1aa396f778ad6a6c35cbefe1a7d34e19b3" compoundref="cf__playback_8c" startline="1281" endline="1324">CF_StartNextFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a2da14e00032312490b6a9e2375c358b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_MoveUpNodeActiveToHistory</definition>
+        <argsstring>(char *SrcEntity, uint32 TransNum)</argsstring>
+        <name>CF_MoveUpNodeActiveToHistory</name>
+        <param>
+          <type>char *</type>
+          <declname>SrcEntity</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>TransNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="85" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="752" bodyend="781"/>
+        <references refid="cf__playback_8c_1a3e21003935d846f84a60d17030fae8d5" compoundref="cf__playback_8c" startline="944" endline="997">CF_AddFileToUpQueue</references>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__playback_8c_1a1d3add9c621d23ba88f5adf9a4abaa44" compoundref="cf__playback_8c" startline="652" endline="681">CF_DeallocQueueEntry</references>
+        <references refid="cf__playback_8c_1a0417c0847d74c24d0605b9f1adaac3e8" compoundref="cf__playback_8c" startline="1096" endline="1109">CF_DequeueUpNode</references>
+        <references refid="cf__utils_8c_1a4ae1c96fdfd0c66193b369dd0b88cded" compoundref="cf__utils_8c" startline="281" endline="299">CF_FindUpNodeByTransID</references>
+        <references refid="cf__events_8h_1ac4f17e80561a29f2ca507a6c3ecc4263" compoundref="cf__events_8h" startline="97">CF_MV_UP_NODE_EID</references>
+        <references refid="cf__playback_8c_1a41d5c5cb664b7afe7d62619b5daaab9f" compoundref="cf__playback_8c" startline="1016" endline="1082">CF_RemoveFileFromUpQueue</references>
+        <references refid="cf__defs_8h_1a22dd0c8e1dd9fd4e9c640d248661bf1e" compoundref="cf__defs_8h" startline="96">CF_UP_ACTIVEQ</references>
+        <references refid="cf__defs_8h_1aaa5346b4a7a0eb06f95838f91900d729" compoundref="cf__defs_8h" startline="97">CF_UP_HISTORYQ</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="struct_c_f___queue__t_1a885ab35bc27b6d091fb9564939b73afc" compoundref="cf__app_8h" startline="114">CF_Queue_t::EntryCnt</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <references refid="structcf__config__table__t_1aea9a7a7568dd10676f1d956e832533e5" compoundref="cf__tbldefs_8h" startline="112">cf_config_table_t::UplinkHistoryQDepth</references>
+        <references refid="struct_c_f___app_data__t_1a803904ed27d2e7fef25c7d01b7d3b9bd" compoundref="cf__app_8h" startline="164">CF_AppData_t::UpQ</references>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1ae03e60a18123bb96261724adb3fcba8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_MoveDwnNodeActiveToHistory</definition>
+        <argsstring>(uint32 TransNum)</argsstring>
+        <name>CF_MoveDwnNodeActiveToHistory</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>TransNum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="86" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="785" bodyend="834"/>
+        <references refid="cf__playback_8c_1a76b8793dcc98d4cead2a07274b48d299" compoundref="cf__playback_8c" startline="698" endline="749">CF_AddFileToPbQueue</references>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__playback_8c_1a1d3add9c621d23ba88f5adf9a4abaa44" compoundref="cf__playback_8c" startline="652" endline="681">CF_DeallocQueueEntry</references>
+        <references refid="cf__playback_8c_1abf0d258f2e1348569b7f9ffb0a83ee5e" compoundref="cf__playback_8c" startline="1123" endline="1136">CF_DequeuePbNode</references>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__utils_8c_1a74ddb47a77b3fee81693c8807a9daf75" compoundref="cf__utils_8c" startline="302" endline="318">CF_FindPbNodeByTransNum</references>
+        <references refid="cf__playback_8c_1ad5b19a2ad377d7a289de7326ba4e1d8a" compoundref="cf__playback_8c" startline="1207" endline="1233">CF_GetChanNumFromTransId</references>
+        <references refid="cf__platform__cfg_8h_1aa76089f68b44f9df9446ddfac47d9597" compoundref="cf__platform__cfg_8h" startline="227">CF_MAX_PLAYBACK_CHANNELS</references>
+        <references refid="cf__defs_8h_1a3640f06d276f91ad71e6779fa59ba3fc" compoundref="cf__defs_8h" startline="100">CF_PB_ACTIVEQ</references>
+        <references refid="cf__defs_8h_1acd709d15263e22d326857c953ecc4cfd" compoundref="cf__defs_8h" startline="101">CF_PB_HISTORYQ</references>
+        <references refid="cf__playback_8c_1a43f679b0ad82caa447ad6912cea64dc7" compoundref="cf__playback_8c" startline="769" endline="829">CF_RemoveFileFromPbQueue</references>
+        <references refid="struct_c_f___app_data__t_1a4762e7b83af0a22cee59322ae0aa8016" compoundref="cf__app_8h" startline="165">CF_AppData_t::Chan</references>
+        <references refid="struct_c_f___hk_packet__t_1ae0a0426f2b572ae07842f77b767caa6f" compoundref="cf__msg_8h" startline="432">CF_HkPacket_t::Chan</references>
+        <references refid="struct_c_f___queue_entry__t_1ab6634722b302488aa96aec0c54c3f7b5" compoundref="cf__app_8h" startline="95">CF_QueueEntry_t::ChanNum</references>
+        <references refid="struct_c_f___queue__t_1a885ab35bc27b6d091fb9564939b73afc" compoundref="cf__app_8h" startline="114">CF_Queue_t::EntryCnt</references>
+        <references refid="struct_downlink___telemetry__t_1ad932a37efbcbb910f26778e51f5f74fc" compoundref="cf__msg_8h" startline="339">Downlink_Telemetry_t::FilesSent</references>
+        <references refid="structcf__out__channel__entry__t_1a848f965f3fc5738402e8663da9888634" compoundref="cf__tbldefs_8h" startline="96">cf_out_channel_entry_t::HistoryQDepth</references>
+        <references refid="struct_c_f___app_data__t_1afca31a863bd6ee147db67f2a6c91d282" compoundref="cf__app_8h" startline="149">CF_AppData_t::Hk</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="osapi-os-core_8h_1af37ffcbb0b0d6e04c5b9ecad16b77503">OS_printf</references>
+        <references refid="structcf__config__table__t_1a6ec7818389a20fc1494bed715cf90827" compoundref="cf__tbldefs_8h" startline="126">cf_config_table_t::OuCh</references>
+        <references refid="struct_c_f___channel_data__t_1a6d6c5bbb894d898f50f89c2158b00eb6" compoundref="cf__app_8h" startline="121">CF_ChannelData_t::PbQ</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a009bd5ed181028eb4f36f6414adb4362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_GetStatString</definition>
+        <argsstring>(char *CallersBuf, uint32 Stat, uint32 BufSize)</argsstring>
+        <name>CF_GetStatString</name>
+        <param>
+          <type>char *</type>
+          <declname>CallersBuf</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Stat</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>BufSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="87" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="1002" bodyend="1055"/>
+        <references refid="cf__defs_8h_1a84b5b243005aa106e44f20027b8f02cb" compoundref="cf__defs_8h" startline="139">CF_STAT_ABANDON</references>
+        <references refid="cf__defs_8h_1adc41c788722ee119fa483999dd73fe64" compoundref="cf__defs_8h" startline="145">CF_STAT_ACTIVE</references>
+        <references refid="cf__defs_8h_1a5eb0bda837f12fef09863fe0f5a6fda7" compoundref="cf__defs_8h" startline="142">CF_STAT_ALRDY_ACTIVE</references>
+        <references refid="cf__defs_8h_1ac4c059caf39307591108de0a7890d433" compoundref="cf__defs_8h" startline="138">CF_STAT_CANCELLED</references>
+        <references refid="cf__defs_8h_1af602acfed6b7f494c6dcbd026efba43c" compoundref="cf__defs_8h" startline="140">CF_STAT_NO_META</references>
+        <references refid="cf__defs_8h_1ac728bab0bdb84960409d5d7abaaf9470" compoundref="cf__defs_8h" startline="141">CF_STAT_PENDING</references>
+        <references refid="cf__defs_8h_1ae3c46579a0d3e2de2dae6507e3259411" compoundref="cf__defs_8h" startline="144">CF_STAT_PUT_REQ_FAIL</references>
+        <references refid="cf__defs_8h_1ad5dbac93b1fd306c9809fdff86e7daef" compoundref="cf__defs_8h" startline="143">CF_STAT_PUT_REQ_ISSUED</references>
+        <references refid="cf__defs_8h_1a2ab1e08049ffdda5f559ddd2f28842c9" compoundref="cf__defs_8h" startline="137">CF_STAT_SUCCESS</references>
+        <references refid="cf__defs_8h_1a5f338501f613c501ddf5f771e08986bf" compoundref="cf__defs_8h" startline="136">CF_STAT_UNKNOWN</references>
+        <referencedby refid="cf__cmds_8h_1abc8070e6832479b54cdbf8b3ef4f87ea" compoundref="cf__cmds_8c" startline="1927" endline="2028">CF_QuickStatusCmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a81900d8561c15a1f87de352bf4e709a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_GetFinalStatString</definition>
+        <argsstring>(char *CallersBuf, uint32 FinalStat, uint32 BufSize)</argsstring>
+        <name>CF_GetFinalStatString</name>
+        <param>
+          <type>char *</type>
+          <declname>CallersBuf</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>FinalStat</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>BufSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="88" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="1062" bodyend="1095"/>
+        <references refid="cfdp__data__structures_8h_1a0d800d24768c7fa0d1d391336caeb103a3ab275c6067eceb63e73c55cdc80f9da" compoundref="cfdp__data__structures_8h" startline="316">FINAL_STATUS_ABANDONED</references>
+        <references refid="cfdp__data__structures_8h_1a0d800d24768c7fa0d1d391336caeb103a6ca9c4514cda26375183b30094bb1f65" compoundref="cfdp__data__structures_8h" startline="315">FINAL_STATUS_CANCELLED</references>
+        <references refid="cfdp__data__structures_8h_1a0d800d24768c7fa0d1d391336caeb103ae7846fdfb14ed85b27d0e9c373b241c2" compoundref="cfdp__data__structures_8h" startline="317">FINAL_STATUS_NO_METADATA</references>
+        <references refid="cfdp__data__structures_8h_1a0d800d24768c7fa0d1d391336caeb103a1ea6c2675a038aaa71e42f2e0fd52be3" compoundref="cfdp__data__structures_8h" startline="314">FINAL_STATUS_SUCCESSFUL</references>
+        <references refid="cfdp__data__structures_8h_1a0d800d24768c7fa0d1d391336caeb103a478828c81260a5fcdb79ebf9c20afa7d" compoundref="cfdp__data__structures_8h" startline="313">FINAL_STATUS_UNKNOWN</references>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a1c7a6f43d9b0a2a88b5a16610d9b0f0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_GetCondCodeString</definition>
+        <argsstring>(char *CallersBuf, uint32 CondCode, uint32 BufSize)</argsstring>
+        <name>CF_GetCondCodeString</name>
+        <param>
+          <type>char *</type>
+          <declname>CallersBuf</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>CondCode</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>BufSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="89" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="1100" bodyend="1148"/>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a789fb09fd10fec3c97f4ece0efb3a954" compoundref="cfdp__data__structures_8h" startline="165">CANCEL_REQUEST_RECEIVED</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a4be324038c0b4e8708cd39a3be94d6fb" compoundref="cfdp__data__structures_8h" startline="155">FILE_CHECKSUM_FAILURE</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a45bf9893a3f7e4c9a53a17150299adde" compoundref="cfdp__data__structures_8h" startline="156">FILE_SIZE_ERROR</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a40c1eee79ffdd4468c0f16a45b4f628e" compoundref="cfdp__data__structures_8h" startline="154">FILESTORE_REJECTION</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a0cc14b4fae24aa966cb1baee31b008e7" compoundref="cfdp__data__structures_8h" startline="158">INACTIVITY_DETECTED</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328aaedf1e34cd17ff2d9a8ecf3b4d7c537a" compoundref="cfdp__data__structures_8h" startline="157">NAK_LIMIT_REACHED</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328abf350750d0d4fabd8954c0f1e9bbae94" compoundref="cfdp__data__structures_8h" startline="150">NO_ERROR</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a3db56cb05ff53dda4e25860e4fe66925" compoundref="cfdp__data__structures_8h" startline="151">POSITIVE_ACK_LIMIT_REACHED</references>
+        <references refid="cfdp__data__structures_8h_1a3b52de9e08aebbb321c6bc382ea26328a2a6c20ba0ae2b1a56b654e499c489043" compoundref="cfdp__data__structures_8h" startline="164">SUSPEND_REQUEST_RECEIVED</references>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+        <referencedby refid="cf__cmds_8h_1abc8070e6832479b54cdbf8b3ef4f87ea" compoundref="cf__cmds_8c" startline="1927" endline="2028">CF_QuickStatusCmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1aa757db5ce754e4c50f8b7e4be1245e4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 CF_GetPktType</definition>
+        <argsstring>(CFE_SB_MsgId_t MsgId)</argsstring>
+        <name>CF_GetPktType</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgId_t</ref></type>
+          <declname>MsgId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="90" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="1153" bodyend="1157"/>
+        <references refid="cfe__sb_8h_1ae2177f2ecbc89b694e07123c666d5c91">CFE_TST</references>
+        <referencedby refid="cf__callbacks_8h_1a30545e6efd95aa458cfe49c6e625bfe1" compoundref="cf__callbacks_8c" startline="743" endline="910">CF_PduOutputSend</referencedby>
+        <referencedby refid="cf__app_8h_1a059097e70a89c03b92b3c19052ef0df7" compoundref="cf__app_8c" startline="957" endline="1044">CF_SendPDUToEngine</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a47a24e9f59131023135017895ef83d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_ValidatePathFile</definition>
+        <argsstring>(char *PathFilename)</argsstring>
+        <name>CF_ValidatePathFile</name>
+        <param>
+          <type>char *</type>
+          <declname>PathFilename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="91" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="856" bodyend="887"/>
+        <references refid="cf__utils_8c_1a66c25196b8c4e94cb89730b6414f6f16" compoundref="cf__utils_8c" startline="966" endline="990">CF_ChkTermination</references>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__utils_8h_1a09b701a8ba0c533de1c66f328edf322b" compoundref="cf__utils_8c" startline="838" endline="851">CF_ValidateFilenameReportErr</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a713c64f63e39c8a7e0f5da0c35e0f8cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_ValidateSrcPath</definition>
+        <argsstring>(char *Pathname)</argsstring>
+        <name>CF_ValidateSrcPath</name>
+        <param>
+          <type>char *</type>
+          <declname>Pathname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="92" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="893" bodyend="929"/>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__playback_8h_1a6b08cd8754dda4a7d4bd081c54d483fc" compoundref="cf__playback_8c" startline="269" endline="382">CF_PlaybackDirectoryCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a8270b76d55052e1811a9f0b5dff24d5a" compoundref="cf__cmds_8c" startline="1285" endline="1390">CF_SetPollParam</referencedby>
+        <referencedby refid="cf__app_8h_1af0f47885550354b7d4f002ae659387bc" compoundref="cf__app_8c" startline="586" endline="784">CF_ValidateCFConfigTable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a4bfa3408e702fe8e1f527819e09fcc2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_ValidateDstPath</definition>
+        <argsstring>(char *Pathname)</argsstring>
+        <name>CF_ValidateDstPath</name>
+        <param>
+          <type>char *</type>
+          <declname>Pathname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="93" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="934" bodyend="963"/>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__playback_8h_1a6b08cd8754dda4a7d4bd081c54d483fc" compoundref="cf__playback_8c" startline="269" endline="382">CF_PlaybackDirectoryCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a8270b76d55052e1811a9f0b5dff24d5a" compoundref="cf__cmds_8c" startline="1285" endline="1390">CF_SetPollParam</referencedby>
+        <referencedby refid="cf__app_8h_1af0f47885550354b7d4f002ae659387bc" compoundref="cf__app_8c" startline="586" endline="784">CF_ValidateCFConfigTable</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a66c25196b8c4e94cb89730b6414f6f16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_ChkTermination</definition>
+        <argsstring>(char *String, uint32 MaxLength)</argsstring>
+        <name>CF_ChkTermination</name>
+        <param>
+          <type>char *</type>
+          <declname>String</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>MaxLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="94" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="966" bodyend="990"/>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <referencedby refid="cf__cmds_8h_1acea6bd23044cdb81a3e4d5aa32d4e878" compoundref="cf__cmds_8c" startline="428" endline="506">CF_CARSCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1ae54242868a96f61aaccc245c5fb50d47" compoundref="cf__cmds_8c" startline="1394" endline="1544">CF_DequeueNodeCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a41b90763e3662510d7e02fd8aa51ff15" compoundref="cf__cmds_8c" startline="665" endline="702">CF_GetMibCmd</referencedby>
+        <referencedby refid="cf__playback_8h_1ad7e847432f38a1a77c972703fced7532" compoundref="cf__playback_8c" startline="399" endline="591">CF_QueueDirectoryFiles</referencedby>
+        <referencedby refid="cf__cmds_8h_1abc8070e6832479b54cdbf8b3ef4f87ea" compoundref="cf__cmds_8c" startline="1927" endline="2028">CF_QuickStatusCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1ad32cb59aab954f4f7d132530f8f46eb1" compoundref="cf__cmds_8c" startline="1063" endline="1188">CF_SendTransDataCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a6db90a0be3e8c0d390329aed6e91df8c" compoundref="cf__cmds_8c" startline="523" endline="650">CF_SetMibCmd</referencedby>
+        <referencedby refid="cf__utils_8h_1a47a24e9f59131023135017895ef83d22" compoundref="cf__utils_8c" startline="856" endline="887">CF_ValidatePathFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a09b701a8ba0c533de1c66f328edf322b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 CF_ValidateFilenameReportErr</definition>
+        <argsstring>(char *Filename, char *Source)</argsstring>
+        <name>CF_ValidateFilenameReportErr</name>
+        <param>
+          <type>char *</type>
+          <declname>Filename</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>Source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="95" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="838" bodyend="851"/>
+        <references refid="cf__defs_8h_1a7c1760ac41775101243e018c6237e406" compoundref="cf__defs_8h" startline="68">CF_ERROR</references>
+        <references refid="cf__events_8h_1ae7833910b5a0491f5f643eec41491e0b" compoundref="cf__events_8h" startline="230">CF_INV_FILENAME_EID</references>
+        <references refid="cf__defs_8h_1acb16ea79cf97cdd4ef49a3e7b90b2c30" compoundref="cf__defs_8h" startline="67">CF_SUCCESS</references>
+        <references refid="cf__utils_8c_1a47a24e9f59131023135017895ef83d22" compoundref="cf__utils_8c" startline="856" endline="887">CF_ValidatePathFile</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <referencedby refid="cf__cmds_8h_1acea6bd23044cdb81a3e4d5aa32d4e878" compoundref="cf__cmds_8c" startline="428" endline="506">CF_CARSCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1ae54242868a96f61aaccc245c5fb50d47" compoundref="cf__cmds_8c" startline="1394" endline="1544">CF_DequeueNodeCmd</referencedby>
+        <referencedby refid="cf__playback_8h_1ad09737beb668908e0b6051a1871991dd" compoundref="cf__playback_8c" startline="108" endline="265">CF_PlaybackFileCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1abc8070e6832479b54cdbf8b3ef4f87ea" compoundref="cf__cmds_8c" startline="1927" endline="2028">CF_QuickStatusCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1ad32cb59aab954f4f7d132530f8f46eb1" compoundref="cf__cmds_8c" startline="1063" endline="1188">CF_SendTransDataCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a930b7e9157b597365fcc30419280e3fb" compoundref="cf__cmds_8c" startline="952" endline="1023">CF_WriteActiveTransInfo</referencedby>
+        <referencedby refid="cf__cmds_8h_1a50468eb1527567ac139204a8270167ed" compoundref="cf__cmds_8c" startline="826" endline="893">CF_WriteQueueInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1aeeef1d56aa8b45bf48eeb22752fa83d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_SendEventNoTerm</definition>
+        <argsstring>(char *Source)</argsstring>
+        <name>CF_SendEventNoTerm</name>
+        <param>
+          <type>char *</type>
+          <declname>Source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="96" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="993" bodyend="999"/>
+        <references refid="cf__events_8h_1a0bacceb42d510881240496b80b7ad5e7" compoundref="cf__events_8h" startline="193">CF_NO_TERM_ERR_EID</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <referencedby refid="cf__cmds_8h_1acea6bd23044cdb81a3e4d5aa32d4e878" compoundref="cf__cmds_8c" startline="428" endline="506">CF_CARSCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1ae54242868a96f61aaccc245c5fb50d47" compoundref="cf__cmds_8c" startline="1394" endline="1544">CF_DequeueNodeCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a41b90763e3662510d7e02fd8aa51ff15" compoundref="cf__cmds_8c" startline="665" endline="702">CF_GetMibCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1abc8070e6832479b54cdbf8b3ef4f87ea" compoundref="cf__cmds_8c" startline="1927" endline="2028">CF_QuickStatusCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1ad32cb59aab954f4f7d132530f8f46eb1" compoundref="cf__cmds_8c" startline="1063" endline="1188">CF_SendTransDataCmd</referencedby>
+        <referencedby refid="cf__cmds_8h_1a6db90a0be3e8c0d390329aed6e91df8c" compoundref="cf__cmds_8c" startline="523" endline="650">CF_SetMibCmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1abe5373e485eb3806815606ed2704d5ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 CF_GetResponseChanFromMsgId</definition>
+        <argsstring>(CFE_SB_MsgPtr_t MessagePtr)</argsstring>
+        <name>CF_GetResponseChanFromMsgId</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+          <declname>MessagePtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="97" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="1161" bodyend="1178"/>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__platform__cfg_8h_1a615490b988e9c60681943a8f302bd9c9" compoundref="cf__platform__cfg_8h" startline="207">CF_NUM_INPUT_CHANNELS</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="structcf__config__table__t_1ab0daffe3dc4c45fb5d15c7398439a395" compoundref="cf__tbldefs_8h" startline="125">cf_config_table_t::InCh</references>
+        <references refid="structcf__in__channel__entry__t_1a02a0e18182d5b2ec89a80dd476e87a29" compoundref="cf__tbldefs_8h" startline="80">cf_in_channel_entry_t::IncomingPDUMsgId</references>
+        <references refid="structcf__in__channel__entry__t_1a807685879078909381383a12d70b29ab" compoundref="cf__tbldefs_8h" startline="81">cf_in_channel_entry_t::OutChanForClass2Response</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <referencedby refid="cf__callbacks_8h_1a25c87ddb3a768914602512b92447cb00" compoundref="cf__callbacks_8c" startline="149" endline="603">CF_Indication</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cf__utils_8h_1a25dcc4a4cbfae74d2ddb58491b05be56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 CF_GetResponseChanFromTransId</definition>
+        <argsstring>(uint32 Queue, char *SrcEntityId, uint32 Trans)</argsstring>
+        <name>CF_GetResponseChanFromTransId</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Queue</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>SrcEntityId</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Trans</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cf/fsw/src/cf_utils.h" line="98" column="1" bodyfile="apps/cf/fsw/src/cf_utils.c" bodystart="1181" bodyend="1199"/>
+        <references refid="structcf__config__table__t_1a96255ba1c3400e3ca97d54fb7f874c59" compoundref="cf__tbldefs_8h" startline="117">cf_config_table_t::AckLimit</references>
+        <references refid="structcf__config__table__t_1ad692381718626857b6ffc561c845a1ea" compoundref="cf__tbldefs_8h" startline="116">cf_config_table_t::AckTimeout</references>
+        <references refid="cf__app_8c_1aac544a42de5760bc2a6d664013f6d9a0" compoundref="cf__app_8c" startline="128">CF_AppData</references>
+        <references refid="cf__platform__cfg_8h_1a2775b1f247004d3246d222a6321828a2" compoundref="cf__platform__cfg_8h" startline="188">CF_CONFIG_TABLE_FILENAME</references>
+        <references refid="cf__platform__cfg_8h_1a17217f58bf8bf748aee20769364cf41c" compoundref="cf__platform__cfg_8h" startline="175">CF_CONFIG_TABLE_NAME</references>
+        <references refid="cf__platform__cfg_8h_1ab83b498506dc0268d9bfe4429d02c57e" compoundref="cf__platform__cfg_8h" startline="288">CF_DEFAULT_QUEUE_INFO_FILENAME</references>
+        <references refid="cf__platform__cfg_8h_1aa0401f8a810ebeb9bf833f4bb10642cc" compoundref="cf__platform__cfg_8h" startline="163">CF_ENGINE_TEMP_FILE_PREFIX</references>
+        <references refid="cf__defs_8h_1aaa1b76a0cec00c983af939da63f8e7c5" compoundref="cf__defs_8h" startline="108">CF_ENTRY_IN_USE</references>
+        <references refid="cf__platform__cfg_8h_1ae0afbeb49030f2a2cec5af864b01f003" compoundref="cf__platform__cfg_8h" startline="121">CF_INCOMING_PDU_BUF_SIZE</references>
+        <references refid="cf__defs_8h_1a3a5d22e18592bea1b267f3e0237c1920" compoundref="cf__defs_8h" startline="148">CF_MAX_CFG_VALUE_CHARS</references>
+        <references refid="cf__platform__cfg_8h_1aa76089f68b44f9df9446ddfac47d9597" compoundref="cf__platform__cfg_8h" startline="227">CF_MAX_PLAYBACK_CHANNELS</references>
+        <references refid="cf__platform__cfg_8h_1acc7d2782cd5ca78ed107ca4414220b98" compoundref="cf__platform__cfg_8h" startline="250">CF_MAX_POLLING_DIRS_PER_CHAN</references>
+        <references refid="cf__platform__cfg_8h_1af4b78ade8f44fab7dace29c07fa01b9a" compoundref="cf__platform__cfg_8h" startline="99">CF_MAX_SIMULTANEOUS_TRANSACTIONS</references>
+        <references refid="cf__platform__cfg_8h_1a0fbee56df168bcd95859f8cd09288d61" compoundref="cf__platform__cfg_8h" startline="273">CF_MEMORY_POOL_BYTES</references>
+        <references refid="cf__platform__cfg_8h_1a615490b988e9c60681943a8f302bd9c9" compoundref="cf__platform__cfg_8h" startline="207">CF_NUM_INPUT_CHANNELS</references>
+        <references refid="cf__platform__cfg_8h_1ae8fe2b375531d9c4c7f8cd2e9f11cd31" compoundref="cf__platform__cfg_8h" startline="145">CF_OUTGOING_PDU_BUF_SIZE</references>
+        <references refid="cf__defs_8h_1a3640f06d276f91ad71e6779fa59ba3fc" compoundref="cf__defs_8h" startline="100">CF_PB_ACTIVEQ</references>
+        <references refid="cf__defs_8h_1acd709d15263e22d326857c953ecc4cfd" compoundref="cf__defs_8h" startline="101">CF_PB_HISTORYQ</references>
+        <references refid="cf__defs_8h_1ab85896e7293071cb01dc693735927460" compoundref="cf__defs_8h" startline="99">CF_PB_PENDINGQ</references>
+        <references refid="cf__platform__cfg_8h_1af6d30f21407e1be867609ab6091ca120" compoundref="cf__platform__cfg_8h" startline="74">CF_PIPE_DEPTH</references>
+        <references refid="cf__platform__cfg_8h_1a03a39f322e78f0adc0b4895a5392dd86" compoundref="cf__platform__cfg_8h" startline="86">CF_PIPE_NAME</references>
+        <references refid="cf__defs_8h_1a22dd0c8e1dd9fd4e9c640d248661bf1e" compoundref="cf__defs_8h" startline="96">CF_UP_ACTIVEQ</references>
+        <references refid="cf__defs_8h_1aaa5346b4a7a0eb06f95838f91900d729" compoundref="cf__defs_8h" startline="97">CF_UP_HISTORYQ</references>
+        <references refid="utils_8c_1aceafe975d31f879820a4b4f5d203c3ac" compoundref="utils_8c" startline="458" endline="476">cfdp_get_mib_parameter</references>
+        <references refid="struct_c_f___app_data__t_1a4762e7b83af0a22cee59322ae0aa8016" compoundref="cf__app_8h" startline="165">CF_AppData_t::Chan</references>
+        <references refid="structcf__out__channel__entry__t_1aaa116bc2de3585c58216ed5f3fb80d25" compoundref="cf__tbldefs_8h" startline="97">cf_out_channel_entry_t::ChanName</references>
+        <references refid="struct_c_f___queue_entry__t_1ab6634722b302488aa96aec0c54c3f7b5" compoundref="cf__app_8h" startline="95">CF_QueueEntry_t::ChanNum</references>
+        <references refid="structcf__polling__dir__entry__t_1ae813cc28a731a6e0855a155120bb5b8a" compoundref="cf__tbldefs_8h" startline="62">cf_polling_dir_entry_t::Class</references>
+        <references refid="structcf__out__channel__entry__t_1acf1175ccb511b83971d61894ad19652d" compoundref="cf__tbldefs_8h" startline="93">cf_out_channel_entry_t::DequeueEnable</references>
+        <references refid="structcf__polling__dir__entry__t_1a697ce892216dfed001a2717e87874a1a" compoundref="cf__tbldefs_8h" startline="70">cf_polling_dir_entry_t::DstPath</references>
+        <references refid="structcf__polling__dir__entry__t_1a8cb18c062e14cafca2a5193e6c7fe27d" compoundref="cf__tbldefs_8h" startline="61">cf_polling_dir_entry_t::EnableState</references>
+        <references refid="struct_c_f___queue__t_1a885ab35bc27b6d091fb9564939b73afc" compoundref="cf__app_8h" startline="114">CF_Queue_t::EntryCnt</references>
+        <references refid="structcf__polling__dir__entry__t_1a0ffbf835e5f0f03b7f1f9b5a1f6ec664" compoundref="cf__tbldefs_8h" startline="60">cf_polling_dir_entry_t::EntryInUse</references>
+        <references refid="structcf__out__channel__entry__t_1aac18ce180362a503f44e4c2750ba4f55" compoundref="cf__tbldefs_8h" startline="92">cf_out_channel_entry_t::EntryInUse</references>
+        <references refid="structcf__config__table__t_1a394c8e96e2a93b6da49b93a8ad4d8f6f" compoundref="cf__tbldefs_8h" startline="123">cf_config_table_t::FlightEntityId</references>
+        <references refid="struct_c_f___queue__t_1a381204dc87e9280393bbaf2cbd688866" compoundref="cf__app_8h" startline="112">CF_Queue_t::HeadPtr</references>
+        <references refid="structcf__out__channel__entry__t_1a848f965f3fc5738402e8663da9888634" compoundref="cf__tbldefs_8h" startline="96">cf_out_channel_entry_t::HistoryQDepth</references>
+        <references refid="structcf__config__table__t_1a447fe80d683fb5f02f4b484757c04a76" compoundref="cf__tbldefs_8h" startline="120">cf_config_table_t::InactivityTimeout</references>
+        <references refid="structcf__config__table__t_1ab0daffe3dc4c45fb5d15c7398439a395" compoundref="cf__tbldefs_8h" startline="125">cf_config_table_t::InCh</references>
+        <references refid="structcf__in__channel__entry__t_1a02a0e18182d5b2ec89a80dd476e87a29" compoundref="cf__tbldefs_8h" startline="80">cf_in_channel_entry_t::IncomingPDUMsgId</references>
+        <references refid="structcf__config__table__t_1a66069c75349a56b2c447c70f76e8b466" compoundref="cf__tbldefs_8h" startline="119">cf_config_table_t::NakLimit</references>
+        <references refid="structcf__config__table__t_1abe6c3cc4571d4bef329ab050ff9989bf" compoundref="cf__tbldefs_8h" startline="118">cf_config_table_t::NakTimeout</references>
+        <references refid="struct_c_f___queue_entry__t_1a3919e9481827992af57b1d7f5d7f953f" compoundref="cf__app_8h" startline="92">CF_QueueEntry_t::Next</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="structcf__config__table__t_1ac40eebcdc1ba37a9360d61a12c265db0" compoundref="cf__tbldefs_8h" startline="109">cf_config_table_t::NumEngCyclesPerWakeup</references>
+        <references refid="structcf__config__table__t_1ae365ff25687f048cc7724e947eadb6c5" compoundref="cf__tbldefs_8h" startline="111">cf_config_table_t::NumWakeupsPerPollDirChk</references>
+        <references refid="structcf__config__table__t_1aba9330e2135d884d25065e860c475069" compoundref="cf__tbldefs_8h" startline="110">cf_config_table_t::NumWakeupsPerQueueChk</references>
+        <references refid="osapi-os-core_8h_1af37ffcbb0b0d6e04c5b9ecad16b77503">OS_printf</references>
+        <references refid="structcf__config__table__t_1a6ec7818389a20fc1494bed715cf90827" compoundref="cf__tbldefs_8h" startline="126">cf_config_table_t::OuCh</references>
+        <references refid="structcf__in__channel__entry__t_1a807685879078909381383a12d70b29ab" compoundref="cf__tbldefs_8h" startline="81">cf_in_channel_entry_t::OutChanForClass2Response</references>
+        <references refid="structcf__config__table__t_1a9b2ba28ec85578ccf10ca5ca7cb1d5c5" compoundref="cf__tbldefs_8h" startline="121">cf_config_table_t::OutgoingFileChunkSize</references>
+        <references refid="structcf__out__channel__entry__t_1ae27777048a5538699bd7ec6b1687c690" compoundref="cf__tbldefs_8h" startline="94">cf_out_channel_entry_t::OutgoingPduMsgId</references>
+        <references refid="struct_c_f___channel_data__t_1a6d6c5bbb894d898f50f89c2158b00eb6" compoundref="cf__app_8h" startline="121">CF_ChannelData_t::PbQ</references>
+        <references refid="structcf__polling__dir__entry__t_1aab4f1bf521d1ba089f9428f8f7025403" compoundref="cf__tbldefs_8h" startline="68">cf_polling_dir_entry_t::PeerEntityId</references>
+        <references refid="structcf__out__channel__entry__t_1ae76d22093835537b19aa4d94873f79ee" compoundref="cf__tbldefs_8h" startline="95">cf_out_channel_entry_t::PendingQDepth</references>
+        <references refid="structcf__out__channel__entry__t_1ace132d073307b326b449d7b8bcaadf3c" compoundref="cf__tbldefs_8h" startline="100">cf_out_channel_entry_t::PollDir</references>
+        <references refid="structcf__polling__dir__entry__t_1aa4d4d099576622c1855d607574d4f8fb" compoundref="cf__tbldefs_8h" startline="64">cf_polling_dir_entry_t::Preserve</references>
+        <references refid="structcf__polling__dir__entry__t_1aae38ef0dfe0e6a701d4aaeb8949f4366" compoundref="cf__tbldefs_8h" startline="63">cf_polling_dir_entry_t::Priority</references>
+        <references refid="struct_c_f___queue_entry__t_1a11c6c5d830a98dd4390604b2081d8a47" compoundref="cf__app_8h" startline="93">CF_QueueEntry_t::Priority</references>
+        <references refid="structcf__config__table__t_1a5e6564aaed400e5d489b83e6674822b0" compoundref="cf__tbldefs_8h" startline="122">cf_config_table_t::SaveIncompleteFiles</references>
+        <references refid="structcf__out__channel__entry__t_1ab8314c8e17047e2f0ce929b4b3240cd0" compoundref="cf__tbldefs_8h" startline="98">cf_out_channel_entry_t::SemName</references>
+        <references refid="struct_c_f___queue_entry__t_1ad8dafa465e430d82efe48ae70db31f32" compoundref="cf__app_8h" startline="103">CF_QueueEntry_t::SrcEntityId</references>
+        <references refid="struct_c_f___queue_entry__t_1a8afcb3bdd31a8b2aa257c6b73561e380" compoundref="cf__app_8h" startline="105">CF_QueueEntry_t::SrcFile</references>
+        <references refid="structcf__polling__dir__entry__t_1a8b2f19743b98efb99c48fda1b4969dcc" compoundref="cf__tbldefs_8h" startline="69">cf_polling_dir_entry_t::SrcPath</references>
+        <references refid="structcf__config__table__t_1a0ac0e62b64a9ea52ce7517a292a2e9dd" compoundref="cf__tbldefs_8h" startline="107">cf_config_table_t::TableIdString</references>
+        <references refid="structcf__config__table__t_1a160a39154ff8823bb8ad5a28b39ae6ee" compoundref="cf__tbldefs_8h" startline="108">cf_config_table_t::TableVersion</references>
+        <references refid="struct_c_f___app_data__t_1ae6ca404b29b5ecf26d646e8ed4ac1989" compoundref="cf__app_8h" startline="162">CF_AppData_t::Tbl</references>
+        <references refid="struct_c_f___queue_entry__t_1a37996b5bf7b6413246bc3d28c2fd912d" compoundref="cf__app_8h" startline="101">CF_QueueEntry_t::TransNum</references>
+        <references refid="structcf__config__table__t_1aea9a7a7568dd10676f1d956e832533e5" compoundref="cf__tbldefs_8h" startline="112">cf_config_table_t::UplinkHistoryQDepth</references>
+        <references refid="struct_c_f___app_data__t_1a803904ed27d2e7fef25c7d01b7d3b9bd" compoundref="cf__app_8h" startline="164">CF_AppData_t::UpQ</references>
+        <referencedby refid="cf__callbacks_8h_1a5301c003dd632d3b217a78352c11ab29" compoundref="cf__callbacks_8c" startline="640" endline="727">CF_PduOutputReady</referencedby>
+        <referencedby refid="cf__callbacks_8h_1a30545e6efd95aa458cfe49c6e625bfe1" compoundref="cf__callbacks_8c" startline="743" endline="910">CF_PduOutputSend</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>cf_utils.h<sp/>1.16.1.1<sp/>2015/03/06<sp/>15:30:35EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>$Log:<sp/>cf_utils.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/>Revision<sp/>1.16.1.1<sp/>2015/03/06<sp/>15:30:35EST<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>Added<sp/>copyright<sp/>information</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>Revision<sp/>1.16<sp/>2011/05/09<sp/>11:52:11EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>DCR13317:1<sp/>Allow<sp/>Destintaion<sp/>path<sp/>to<sp/>be<sp/>blank</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Revision<sp/>1.15<sp/>2010/11/04<sp/>11:37:47EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Dcr13051:1<sp/>Wrap<sp/>OS_printfs<sp/>in<sp/>platform<sp/>cfg<sp/>CF_DEBUG</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Revision<sp/>1.14<sp/>2010/10/25<sp/>11:21:48EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>DCR12573:1<sp/>Changes<sp/>to<sp/>allow<sp/>more<sp/>than<sp/>one<sp/>incoming<sp/>PDU<sp/>MsgId</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Revision<sp/>1.13<sp/>2010/10/21<sp/>13:48:11EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>DCR13060:2<sp/>Changed<sp/>FindUpNodebyTransnum<sp/>to<sp/>FindUpNodeByTransID</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Revision<sp/>1.12<sp/>2010/10/20<sp/>14:55:54EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>DCR12825:1<sp/>Change<sp/>quick<sp/>stat<sp/>cmd<sp/>to<sp/>show<sp/>active<sp/>and<sp/>suspended<sp/>status</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Revision<sp/>1.11<sp/>2010/07/08<sp/>13:50:31EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>DCR11510:1<sp/>Added<sp/>proto<sp/>for<sp/>SendEventNoTerm</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Revision<sp/>1.10<sp/>2010/07/08<sp/>13:47:31EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>DCR11510:1<sp/>Added<sp/>termination<sp/>checking<sp/>on<sp/>all<sp/>cmds<sp/>that<sp/>take<sp/>a<sp/>string</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2010/07/07<sp/>17:41:52EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>DCR11510:1<sp/>New<sp/>prototypes<sp/>for<sp/>checking<sp/>termination,<sp/>validate<sp/>paths<sp/>etc</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2010/06/11<sp/>16:13:16EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>DCR11510:1<sp/>ZeroCopy,<sp/>Un-hardcoded<sp/>cmd/tlm<sp/>input/output<sp/>pdus</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2010/06/01<sp/>11:02:41EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>DCR11510:1<sp/>Removed<sp/>CheckForGapsInTrans</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2010/04/23<sp/>15:46:45EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>DCR11510:1<sp/>Added<sp/>CF_CheckIfFileIsActive</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2010/04/23<sp/>08:39:14EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>Dcr11510:1<sp/>Code<sp/>Review<sp/>Prep</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2010/03/26<sp/>15:30:22EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>DCR11510<sp/>Various<sp/>developmental<sp/>changes</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2010/03/12<sp/>12:14:37EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>DCR11510:1<sp/>Initial<sp/>check-in<sp/>towards<sp/>CF<sp/>Version<sp/>1000</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2009/12/08<sp/>09:18:23EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>DCR10350:3<sp/>Added<sp/>CF_ShowCfg<sp/>function</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2009/11/24<sp/>12:48:57EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>CFS<sp/>CF<sp/>project</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cf_utils_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cf_utils_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">**<sp/>Includes</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1a903743fa7b2d9fde39bdb42cf7349b5a" kindref="member">CF_BuildPutRequest</ref>(<ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*QueueEntryPtr);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cf__utils_8h_1a697d79e1258322447ed6da0512e4c976" kindref="member">CF_SendEventPutStrTooLong</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1a90135bb41e4d2c139661e865aa424c46" kindref="member">CF_BuildCmdedRequest</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Req,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Trans);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1aba6bf5700647a787cd9eac6313961763" kindref="member">CF_FindActiveTransIdByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TransIdBuf,</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Filename);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1a428ccac6ff2559d12693a805dba90b24" kindref="member">CF_FindNodeAtFrontOfQueue</ref>(<ref refid="struct_t_r_a_n_s___s_t_a_t_u_s" kindref="compound">TRANS_STATUS</ref><sp/>TransInfo);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1a4ae1c96fdfd0c66193b369dd0b88cded" kindref="member">CF_FindUpNodeByTransID</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Queue,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcEntityId,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Trans);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1a74ddb47a77b3fee81693c8807a9daf75" kindref="member">CF_FindPbNodeByTransNum</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Chan,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Queue,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Trans);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1a2cefa3f66de424bf4b66d6791dc06707" kindref="member">CF_FindNodeByTransId</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*TransIdStr);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1a3ea3558f7aace478c8e29989d9514992" kindref="member">CF_FindUpHistoryNodeByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1ac28c1de9b1017d73f1c2a2f5dd198876" kindref="member">CF_FindUpActiveNodeByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1a398ae9956d9e1c73f0a006cfbd919933" kindref="member">CF_FindUpNodeByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1aaf60a9b1212ee14be94d3a51bce6678c" kindref="member">CF_FindPbHistoryNodeByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1afa1c6f9cf86e22f5f384d2b33ce12cfe" kindref="member">CF_FindPbActiveNodeByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1acc64970a6b9d7b569ae02da95ae14fdf" kindref="member">CF_FindPbPendingNodeByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1ae3c4d00e2ab099e62ff449ceef6019d3" kindref="member">CF_FindPbNodeByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><ref refid="struct_c_f___queue_entry__t" kindref="compound">CF_QueueEntry_t</ref><sp/>*<ref refid="cf__utils_8h_1afbefd242996d3095fd0b8d88cded0e0f" kindref="member">CF_FindNodeByName</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcFile);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cf__utils_8h_1ada5f5ac641ee1e1cada041eea172e0f4" kindref="member">CF_IncrFaultCtr</ref>(<ref refid="struct_t_r_a_n_s___s_t_a_t_u_s" kindref="compound">TRANS_STATUS</ref><sp/>*TransInfoPtr);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1a59fdc07aefdf7275440f5ccecfc93b0d" kindref="member">CF_ValidateEntityId</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*EntityIdStrPtr);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><ref refid="cf__utils_8h_1a3f94cc48d53aa972543369f15e7aebd7" kindref="member">CF_FileOpenCheck</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Filename);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1ac27fbf43a4ff7d0082c0ee4582061197" kindref="member">CF_CheckIfFileIsActive</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Filename);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cf__utils_8h_1a2da14e00032312490b6a9e2375c358b2" kindref="member">CF_MoveUpNodeActiveToHistory</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcEntity,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>TransNum);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cf__utils_8h_1ae03e60a18123bb96261724adb3fcba8e" kindref="member">CF_MoveDwnNodeActiveToHistory</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>TransNum);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cf__utils_8h_1a009bd5ed181028eb4f36f6414adb4362" kindref="member">CF_GetStatString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*CallersBuf,<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Stat,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>BufSize);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cf__utils_8h_1a81900d8561c15a1f87de352bf4e709a2" kindref="member">CF_GetFinalStatString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*CallersBuf,<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>FinalStat,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>BufSize);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cf__utils_8h_1a1c7a6f43d9b0a2a88b5a16610d9b0f0c" kindref="member">CF_GetCondCodeString</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*CallersBuf,<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>CondCode,<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>BufSize);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><sp/><ref refid="cf__utils_8h_1aa757db5ce754e4c50f8b7e4be1245e4a" kindref="member">CF_GetPktType</ref>(<ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgId_t</ref><sp/>MsgId);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1a47a24e9f59131023135017895ef83d22" kindref="member">CF_ValidatePathFile</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*PathFilename);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1a713c64f63e39c8a7e0f5da0c35e0f8cd" kindref="member">CF_ValidateSrcPath</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Pathname);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1a4bfa3408e702fe8e1f527819e09fcc2e" kindref="member">CF_ValidateDstPath</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Pathname);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1a66c25196b8c4e94cb89730b6414f6f16" kindref="member">CF_ChkTermination</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*String,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>MaxLength);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="cf__utils_8h_1a09b701a8ba0c533de1c66f328edf322b" kindref="member">CF_ValidateFilenameReportErr</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Filename,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Source);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cf__utils_8h_1aeeef1d56aa8b45bf48eeb22752fa83d9" kindref="member">CF_SendEventNoTerm</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Source);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/><ref refid="cf__utils_8h_1abe5373e485eb3806815606ed2704d5ff" kindref="member">CF_GetResponseChanFromMsgId</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref><sp/>MessagePtr);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/><ref refid="cf__utils_8h_1a25dcc4a4cbfae74d2ddb58491b05be56" kindref="member">CF_GetResponseChanFromTransId</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Queue,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*SrcEntityId,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Trans);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>CF_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CF_ShowTbl(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CF_ShowCfg(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CF_PrintPDUType<sp/>(<ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/>FileDirCode,<sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/>DirCode2);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CF_PrintAckType<sp/>(<ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/>DirCode2);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CF_ShowQs(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_cf_utils_h_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/cf/fsw/src/cf_utils.h"/>
+  </compounddef>
+</doxygen>

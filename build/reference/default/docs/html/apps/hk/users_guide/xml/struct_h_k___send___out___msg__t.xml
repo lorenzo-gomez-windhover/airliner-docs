@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_h_k___send___out___msg__t" kind="struct" language="C++" prot="public">
+    <compoundname>HK_Send_Out_Msg_t</compoundname>
+    <includes refid="hk__msg_8h" local="no">hk_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_k___send___out___msg__t_1ae6df44dd903eb7b368d0d5f442b9762b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CmdHdr_t</ref></type>
+        <definition>CFE_SB_CmdHdr_t HK_Send_Out_Msg_t::Hdr</definition>
+        <argsstring></argsstring>
+        <name>Hdr</name>
+        <briefdescription>
+<para>cFE Software Bus Command Message Header <ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CmdHdr_t</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="66" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_k___send___out___msg__t_1ad07f02f5a4a81ba4d7d5a9610c5467cb" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgId_t</ref></type>
+        <definition>CFE_SB_MsgId_t HK_Send_Out_Msg_t::OutMsgToSend</definition>
+        <argsstring></argsstring>
+        <name>OutMsgToSend</name>
+        <briefdescription>
+<para>MsgId <ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgId_t</ref> of combined tlm pkt to send. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_msg.h" line="67" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Send Combined Output Message Command. </para>    </briefdescription>
+    <detaileddescription>
+<para>This structure contains the format of the command used to inform HK to send the specified combined output message </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>CCSDS_PriHdr_t</label>
+        <link refid="struct_c_c_s_d_s___pri_hdr__t" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="9">
+        <label>HK_Send_Out_Msg_t</label>
+        <link refid="struct_h_k___send___out___msg__t"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>Hdr</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>CCSDS_CmdSecHdr_t</label>
+        <link refid="struct_c_c_s_d_s___cmd_sec_hdr__t" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="10">
+        <label>CFE_SB_CmdHdr_t</label>
+        <link refid="struct_c_f_e___s_b___cmd_hdr__t" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>Pri</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>Sec</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/hk/fsw/src/hk_msg.h" line="65" column="1" bodyfile="apps/hk/fsw/src/hk_msg.h" bodystart="64" bodyend="69"/>
+    <listofallmembers>
+      <member refid="struct_h_k___send___out___msg__t_1ae6df44dd903eb7b368d0d5f442b9762b" prot="public" virt="non-virtual"><scope>HK_Send_Out_Msg_t</scope><name>Hdr</name></member>
+      <member refid="struct_h_k___send___out___msg__t_1ad07f02f5a4a81ba4d7d5a9610c5467cb" prot="public" virt="non-virtual"><scope>HK_Send_Out_Msg_t</scope><name>OutMsgToSend</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

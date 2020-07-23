@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="vc__dev__io_8h" kind="file" language="C++">
+    <compoundname>vc_dev_io.h</compoundname>
+    <includedby refid="vc__app_8h" local="yes">apps/vc/fsw/src/vc_app.h</includedby>
+    <invincdepgraph>
+      <node id="365">
+        <label>apps/vc/fsw/src/vc_app.c</label>
+        <link refid="vc__app_8c"/>
+      </node>
+      <node id="364">
+        <label>apps/vc/fsw/src/vc_app.h</label>
+        <link refid="vc__app_8h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+      </node>
+      <node id="366">
+        <label>apps/vc/fsw/src/vc_cmds.c</label>
+        <link refid="vc__cmds_8c"/>
+      </node>
+      <node id="363">
+        <label>apps/vc/fsw/src/vc_dev_io.h</label>
+        <link refid="vc_dev_io.h"/>
+        <childnode refid="364" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="vc__dev__io_8h_1a8d67ead737b6ee4ff5a9cf5440b703ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 VC_Devices_InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Devices_InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to initialize custom device data structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called on app startup, reload, restart etc to initialize non-zero data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_dev_io.h" line="79" column="1"/>
+        <referencedby refid="vc__app_8h_1af16152c39e475235943fd7110a4380f6" compoundref="vc__app_8c" startline="192" endline="221">VC_InitData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__dev__io_8h_1a86cea3a38af2347e76ffa98dbad2198b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean VC_Devices_Start</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Devices_Start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to start an initialized custom device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called after initialization to start a configured device action. It must also be called before re-initialization i.e. configuration changes.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_dev_io.h" line="98" column="1"/>
+        <referencedby refid="vc__app_8h_1a51c0b9587abab9a9c01d3873824018b1" compoundref="vc__app_8c" startline="264" endline="366">VC_InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__dev__io_8h_1a314d6bc57670bb6b3e95efd6d37d3dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean VC_Devices_Stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Devices_Stop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to stop an initialized custom device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called to stop a configured device action. It may also be called after reconfiguration.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_dev_io.h" line="117" column="1"/>
+        <referencedby refid="vc__app_8h_1a7fd717bb105ffebe4363ca29364a7064" compoundref="vc__app_8c" startline="240" endline="257">VC_CleanupExit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__dev__io_8h_1aa20599a7004f3671cb058f1caafba590" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean VC_Devices_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Devices_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to initialize all custom device input channels. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called at initialization and allows the custom layer to provide specific functionality to initialize internal objects.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_dev_io.h" line="138" column="1"/>
+        <referencedby refid="vc__app_8h_1a51c0b9587abab9a9c01d3873824018b1" compoundref="vc__app_8c" startline="264" endline="366">VC_InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__dev__io_8h_1a412635e1d32b18f097bdd2a2c251c774" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean VC_Devices_Uninit</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Devices_Uninit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to uninitialize all custom device input channels. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called in preparation for loading a new configuration, allowing the custom layer to do whatever it needs with the current configuration before reconfiguration, if anything. Also, called before application exit.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_dev_io.h" line="160" column="1"/>
+        <referencedby refid="vc__app_8h_1a7fd717bb105ffebe4363ca29364a7064" compoundref="vc__app_8c" startline="240" endline="257">VC_CleanupExit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="vc__dev__io_8h_1a0d7c45392d11f18b45a503247fd71712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VC_Devices_Critical_Cleanup</definition>
+        <argsstring>(void)</argsstring>
+        <name>VC_Devices_Critical_Cleanup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to perform any critical cleanup after a failure. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called in cleanup to close and uninitialize device resources.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_dev_io.h" line="176" column="1"/>
+        <referencedby refid="vc__app_8h_1a2f7a601031162e679e3dfadb4e0544cc" compoundref="vc__app_8c" startline="228" endline="233">VC_CleanupCallback</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VC_DEV_IO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VC_DEV_IO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Pragmas</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Includes</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Defines</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>Structure<sp/>Definitions</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/>External<sp/>Global<sp/>Variables</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">**<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="vc__dev__io_8h_1a8d67ead737b6ee4ff5a9cf5440b703ec" kindref="member">VC_Devices_InitData</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="98"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__dev__io_8h_1a86cea3a38af2347e76ffa98dbad2198b" kindref="member">VC_Devices_Start</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="117"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__dev__io_8h_1a314d6bc57670bb6b3e95efd6d37d3dcc" kindref="member">VC_Devices_Stop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="138"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__dev__io_8h_1aa20599a7004f3671cb058f1caafba590" kindref="member">VC_Devices_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="160"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="vc__dev__io_8h_1a412635e1d32b18f097bdd2a2c251c774" kindref="member">VC_Devices_Uninit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="176"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="vc__dev__io_8h_1a0d7c45392d11f18b45a503247fd71712" kindref="member">VC_Devices_Critical_Cleanup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/vc/fsw/src/vc_dev_io.h"/>
+  </compounddef>
+</doxygen>

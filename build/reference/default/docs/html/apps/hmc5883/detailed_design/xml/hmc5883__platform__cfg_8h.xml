@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="hmc5883__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>hmc5883_platform_cfg.h</compoundname>
+    <includedby refid="hmc5883__app_8h" local="yes">apps/hmc5883/fsw/src/hmc5883_app.h</includedby>
+    <includedby refid="hmc5883__tbldefs_8h" local="yes">apps/hmc5883/fsw/src/hmc5883_tbldefs.h</includedby>
+    <invincdepgraph>
+      <node id="254">
+        <label>apps/hmc5883/fsw/src/hmc5883_config_utils.cpp</label>
+        <link refid="hmc5883__config__utils_8cpp"/>
+      </node>
+      <node id="253">
+        <label>apps/hmc5883/fsw/src/hmc5883_app.cpp</label>
+        <link refid="hmc5883__app_8cpp"/>
+      </node>
+      <node id="255">
+        <label>apps/hmc5883/fsw/src/hmc5883_tbldefs.h</label>
+        <link refid="hmc5883__tbldefs_8h"/>
+        <childnode refid="252" relation="include">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h</label>
+        <link refid="hmc5883_platform_cfg.h"/>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>apps/hmc5883/fsw/src/hmc5883_app.h</label>
+        <link refid="hmc5883__app_8h"/>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1abd86b37531598e3ad30f437568c8f040" prot="public" static="no">
+        <name>HMC5883_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;amc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="25" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1abe0ffdb0a9b372f95eade53f43f007b9" compoundref="hmc5883__app_8cpp" startline="243" endline="365">HMC5883::InitApp</referencedby>
+        <referencedby refid="class_h_m_c5883_1a6f1a607e652f254f0966adb78cc8e1d4" compoundref="hmc5883__app_8cpp" startline="495" endline="553">HMC5883::ProcessAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1ac058dabacca5368f6028e07b7e60cb9d" prot="public" static="no">
+        <name>HMC5883_SCH_PIPE_DEPTH</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="32" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1af277c5130af183468b2efd28ff60b6f7" compoundref="hmc5883__app_8cpp" startline="136" endline="199">HMC5883::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a4ebc930efb648b631acb7cd52a12b99d" prot="public" static="no">
+        <name>HMC5883_SCH_PIPE_NAME</name>
+        <initializer>(&quot;HMC5883_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="39" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1af277c5130af183468b2efd28ff60b6f7" compoundref="hmc5883__app_8cpp" startline="136" endline="199">HMC5883::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a97b6e1cf5ee6831762ffad92e9645763" prot="public" static="no">
+        <name>HMC5883_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="49" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1a86f137fdd955b434664aef2bf33c2da5" compoundref="hmc5883__app_8cpp" startline="640" endline="690">HMC5883::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a5a6a93dc8b1ffec7ee24e1354e20b26b" prot="public" static="no">
+        <name>HMC5883_WAKEUP_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the HMC5883_WAKEUP_MID_MAX_MSG_COUNT and HMC5883_SEND_HK_MID_MAX_MSG_COUNT must be less than HMC5883_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="58" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1af277c5130af183468b2efd28ff60b6f7" compoundref="hmc5883__app_8cpp" startline="136" endline="199">HMC5883::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a5c6f26376d146a95101140e1e36c74f8" prot="public" static="no">
+        <name>HMC5883_SEND_HK_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the HMC5883_WAKEUP_MID_MAX_MSG_COUNT and HMC5883_SEND_HK_MID_MAX_MSG_COUNT must be less than HMC5883_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="67" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1af277c5130af183468b2efd28ff60b6f7" compoundref="hmc5883__app_8cpp" startline="136" endline="199">HMC5883::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a692e0c09c3efbfc4ff59a76a4d20d3e2" prot="public" static="no">
+        <name>HMC5883_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="74" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1af277c5130af183468b2efd28ff60b6f7" compoundref="hmc5883__app_8cpp" startline="136" endline="199">HMC5883::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a3113e826a3dea4bd52391e9df6ca2a63" prot="public" static="no">
+        <name>HMC5883_CMD_PIPE_NAME</name>
+        <initializer>(&quot;HMC5883_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="81" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1af277c5130af183468b2efd28ff60b6f7" compoundref="hmc5883__app_8cpp" startline="136" endline="199">HMC5883::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1aa2378656f494260490bf07093a55ce69" prot="public" static="no">
+        <name>HMC5883_DATA_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the data pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="88" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1ad6ae1dbfd1e15d84da316762e016bd96" prot="public" static="no">
+        <name>HMC5883_DATA_PIPE_NAME</name>
+        <initializer>(&quot;HMC5883_DATA_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="95" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1abed6b85db37c302da210ee2cb0993e97" prot="public" static="no">
+        <name>HMC5883_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/hmc5883_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="103" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1abb7c5ad0e317fb708bede38ee198e735" compoundref="hmc5883__config__utils_8cpp" startline="58" endline="96">HMC5883::InitConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a46a9d78538171482809833191bf2092a" prot="public" static="no">
+        <name>HMC5883_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="110" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1a86f137fdd955b434664aef2bf33c2da5" compoundref="hmc5883__app_8cpp" startline="640" endline="690">HMC5883::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a270cf24fd160ae87bf2b1cadcb275ed8" prot="public" static="no">
+        <name>HMC5883_MAG_DIVIDER</name>
+        <initializer>(1090.0f)</initializer>
+        <briefdescription>
+<para>Mag divider for calculated scaling. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="113" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" compoundref="hmc5883__app_8cpp" startline="207" endline="235">HMC5883::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1ae84f0b539e6eee8bbff259cbd404d813" prot="public" static="no">
+        <name>HMC5883_MAG_UNIT</name>
+        <initializer>(1.0f)</initializer>
+        <briefdescription>
+<para>Mag divider for calculated scaling. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="116" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" compoundref="hmc5883__app_8cpp" startline="207" endline="235">HMC5883::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__platform__cfg_8h_1a734530a535f452cac2e78576479b2b17" prot="public" static="no">
+        <name>HMC5883_CALC_MAG_RANGE</name>
+        <initializer>(1.3f)</initializer>
+        <briefdescription>
+<para>Precalculated mag range. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" line="119" column="9" bodyfile="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" compoundref="hmc5883__app_8cpp" startline="207" endline="235">HMC5883::InitData</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HMC5883_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HMC5883_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/>HMC5883<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="hmc5883__platform__cfg_8h_1abd86b37531598e3ad30f437568c8f040" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="hmc5883__platform__cfg_8h_1ac058dabacca5368f6028e07b7e60cb9d" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="hmc5883__platform__cfg_8h_1a4ebc930efb648b631acb7cd52a12b99d" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;HMC5883_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="hmc5883__platform__cfg_8h_1a97b6e1cf5ee6831762ffad92e9645763" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="hmc5883__platform__cfg_8h_1a5a6a93dc8b1ffec7ee24e1354e20b26b" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_WAKEUP_MID_MAX_MSG_COUNT<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="hmc5883__platform__cfg_8h_1a5c6f26376d146a95101140e1e36c74f8" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_SEND_HK_MID_MAX_MSG_COUNT<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="hmc5883__platform__cfg_8h_1a692e0c09c3efbfc4ff59a76a4d20d3e2" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="hmc5883__platform__cfg_8h_1a3113e826a3dea4bd52391e9df6ca2a63" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;HMC5883_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="hmc5883__platform__cfg_8h_1aa2378656f494260490bf07093a55ce69" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_DATA_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="hmc5883__platform__cfg_8h_1ad6ae1dbfd1e15d84da316762e016bd96" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_DATA_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;HMC5883_DATA_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="hmc5883__platform__cfg_8h_1abed6b85db37c302da210ee2cb0993e97" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/hmc5883_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="hmc5883__platform__cfg_8h_1a46a9d78538171482809833191bf2092a" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="hmc5883__platform__cfg_8h_1a270cf24fd160ae87bf2b1cadcb275ed8" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_MAG_DIVIDER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1090.0f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="hmc5883__platform__cfg_8h_1ae84f0b539e6eee8bbff259cbd404d813" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_MAG_UNIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1.0f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="hmc5883__platform__cfg_8h_1a734530a535f452cac2e78576479b2b17" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_CALC_MAG_RANGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1.3f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HMC5883_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/hmc5883/fsw/platform_inc/hmc5883_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

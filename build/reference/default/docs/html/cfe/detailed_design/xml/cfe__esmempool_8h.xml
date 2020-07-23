@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__esmempool_8h" kind="file" language="C++">
+    <compoundname>cfe_esmempool.h</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includedby refid="cfe__esmempool_8c" local="yes">es/cfe_esmempool.c</includedby>
+    <incdepgraph>
+      <node id="5797">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="5796">
+        <label>es/cfe_esmempool.h</label>
+        <link refid="cfe_esmempool.h"/>
+        <childnode refid="5797" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5799">
+        <label>es/cfe_esmempool.c</label>
+        <link refid="cfe__esmempool_8c"/>
+      </node>
+      <node id="5798">
+        <label>es/cfe_esmempool.h</label>
+        <link refid="cfe_esmempool.h"/>
+        <childnode refid="5799" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_o_s___p_a_c_k" prot="public">OS_PACK</innerclass>
+    <innerclass refid="struct_block_size_desc__t" prot="public">BlockSizeDesc_t</innerclass>
+    <innerclass refid="struct_o_s___p_a_c_k" prot="public">OS_PACK</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Created on: Jan 21, 2015 Author: <ulink url="mailto:joseph.p.hickey@nasa.gov">joseph.p.hickey@nasa.gov</ulink></para><para>Contains data structure definitions used by the ES mempool implementation. These had previously been defined in <ref refid="cfe__esmempool_8c" kindref="compound">cfe_esmempool.c</ref>. The definitions are moved into this header file so they can be shared with the unit test. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2004-2015,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA<sp/>Glenn</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Research<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>according<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor">#ifndef<sp/>_CFE_ES_MEMPOOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CFE_ES_MEMPOOL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Include<sp/>Files</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="struct_o_s___p_a_c_k" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36" refid="struct_o_s___p_a_c_k_1af2d8a1d22012b622e0b6a12117ac84a8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><ref refid="struct_o_s___p_a_c_k_1af2d8a1d22012b622e0b6a12117ac84a8" kindref="member">CheckBits</ref>;</highlight></codeline>
+<codeline lineno="37" refid="struct_o_s___p_a_c_k_1a4f5b7534e8c6aa3d1df8e69f22b8065f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><ref refid="struct_o_s___p_a_c_k_1a4f5b7534e8c6aa3d1df8e69f22b8065f" kindref="member">Allocated</ref>;</highlight></codeline>
+<codeline lineno="38" refid="struct_o_s___p_a_c_k_1a71a356390dce758ba0def4c61d9da75a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><ref refid="struct_o_s___p_a_c_k_1a71a356390dce758ba0def4c61d9da75a" kindref="member">Size</ref>;</highlight></codeline>
+<codeline lineno="39" refid="struct_o_s___p_a_c_k_1a00320f0ed5b3650d5e941e8e12bf0815" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/>*<ref refid="struct_o_s___p_a_c_k_1a00320f0ed5b3650d5e941e8e12bf0815" kindref="member">Next</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/><ref refid="struct_o_s___p_a_c_k" kindref="compound">OS_PACK</ref><sp/>BD_t;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="struct_block_size_desc__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44" refid="struct_block_size_desc__t_1adcee150d5ba8188555ee85e786b1770d" refkind="member"><highlight class="normal"><sp/><sp/>BD_t<sp/><sp/><sp/><sp/>*<ref refid="struct_block_size_desc__t_1adcee150d5ba8188555ee85e786b1770d" kindref="member">Top</ref>;</highlight></codeline>
+<codeline lineno="45" refid="struct_block_size_desc__t_1a1220429a6157cfc4ec34d47b6a7146de" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><ref refid="struct_block_size_desc__t_1a1220429a6157cfc4ec34d47b6a7146de" kindref="member">NumCreated</ref>;</highlight></codeline>
+<codeline lineno="46" refid="struct_block_size_desc__t_1a98aa3e31c2cbee517497f1ee1045e920" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><ref refid="struct_block_size_desc__t_1a98aa3e31c2cbee517497f1ee1045e920" kindref="member">NumFree</ref>;</highlight></codeline>
+<codeline lineno="47" refid="struct_block_size_desc__t_1aa6049453639270d13c99e4bc0f299b86" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><ref refid="struct_block_size_desc__t_1aa6049453639270d13c99e4bc0f299b86" kindref="member">MaxSize</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><ref refid="struct_block_size_desc__t" kindref="compound">BlockSizeDesc_t</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>Memory<sp/>Pool<sp/>Type</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53" refid="struct_o_s___p_a_c_k_1a1e522fbca409619247719fbfebacd984" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1abddffd9b6badf27493baed70e95972b4" kindref="member">cpuaddr</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="struct_o_s___p_a_c_k_1a1e522fbca409619247719fbfebacd984" kindref="member">Start</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Size;</highlight></codeline>
+<codeline lineno="55" refid="struct_o_s___p_a_c_k_1aa7dbe925824a35168f329e20ae738247" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1abddffd9b6badf27493baed70e95972b4" kindref="member">cpuaddr</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_o_s___p_a_c_k_1aa7dbe925824a35168f329e20ae738247" kindref="member">End</ref>;</highlight></codeline>
+<codeline lineno="56" refid="struct_o_s___p_a_c_k_1ac47b968231fac936c6bfc6509811cc09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="struct_o_s___p_a_c_k_1ac47b968231fac936c6bfc6509811cc09" kindref="member">Current</ref>;</highlight></codeline>
+<codeline lineno="57" refid="struct_o_s___p_a_c_k_1a98ff53b21094068407f1854a85849c43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_block_size_desc__t" kindref="compound">BlockSizeDesc_t</ref><sp/>*<ref refid="struct_o_s___p_a_c_k_1a98ff53b21094068407f1854a85849c43" kindref="member">SizeDescPtr</ref>;</highlight></codeline>
+<codeline lineno="58" refid="struct_o_s___p_a_c_k_1a52752927aac2ef910cbcf748b03a8efa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_o_s___p_a_c_k_1a52752927aac2ef910cbcf748b03a8efa" kindref="member">CheckErrCntr</ref>;</highlight></codeline>
+<codeline lineno="59" refid="struct_o_s___p_a_c_k_1acefd470e3161b0baff4de9d6b85d93c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_o_s___p_a_c_k_1acefd470e3161b0baff4de9d6b85d93c0" kindref="member">RequestCntr</ref>;</highlight></codeline>
+<codeline lineno="60" refid="struct_o_s___p_a_c_k_1a0419e7c18fd851275ecc2aa302843672" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_o_s___p_a_c_k_1a0419e7c18fd851275ecc2aa302843672" kindref="member">MutexId</ref>;</highlight></codeline>
+<codeline lineno="61" refid="struct_o_s___p_a_c_k_1a994f5d407555dda6d85acac55aafa699" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_o_s___p_a_c_k_1a994f5d407555dda6d85acac55aafa699" kindref="member">UseMutex</ref>;</highlight></codeline>
+<codeline lineno="62" refid="struct_o_s___p_a_c_k_1a0d1560653596be41e55fbcd125c99b25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_block_size_desc__t" kindref="compound">BlockSizeDesc_t</ref><sp/><sp/>SizeDesc[<ref refid="cfe__es_8h_1aa97d866642d474c34790e4d46717ac6b" kindref="member">CFE_ES_MAX_MEMPOOL_BLOCK_SIZES</ref>];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/><ref refid="struct_o_s___p_a_c_k" kindref="compound">OS_PACK</ref><sp/>Pool_t;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>_cfe_esmempool_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="es/cfe_esmempool.h"/>
+  </compounddef>
+</doxygen>

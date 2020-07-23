@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfssctbl" kind="page">
+    <compoundname>cfssctbl</compoundname>
+    <title>CFS Stored Command Table Definitions</title>
+    <detaileddescription>
+<para><table rows="1" cols="3"><row>
+<entry thead="no"><para><bold><ref refid="cfssccmds" kindref="compound">CFS Stored Command Commands</ref></bold> </para></entry><entry thead="no"><para><bold><ref refid="cfssctlm" kindref="compound">CFS Stored Command Telemetry</ref></bold>  </para></entry><entry thead="no"><para><bold><ref refid="cfssccfg" kindref="compound">CFS Stored Command Configuration Parameters</ref></bold> </para></entry></row>
+</table>
+</para><para>The CFS Stored Command application utilizes several tables of varying types.</para><para><heading level="2">Load/Dump Tables</heading>
+</para><para>There are two types of load/dump tables: an ATS table and an RTS table. While there are multiple tables of each type, each table itself is unique. There are two ATS tables (for ATS A and B) and there are multiple (<ref refid="sc__platform__cfg_8h_1ad698f831ae59d3e135dfeefcbe977b10" kindref="member">SC_NUMBER_OF_RTS</ref>) RTS tables. There is also a single ATS Append table that has the same structure as the ATS tables. The ATS and RTS table structures are different than most other kinds of table structures. Instead of an array of &apos;C&apos; structures, the ATS and RTS tables are defined by a series of words (<ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref>), with the unused portion at the end (if any) zero filled.</para><para><bold>ATS Tables</bold></para><para>The ATS tables are double-buffer tables. The size of these tables are defined by the configuration parameters <ref refid="sc__platform__cfg_8h_1a5a6823770db1b0799a5835f459799ad5" kindref="member">SC_ATS_BUFF_SIZE</ref> times <ref refid="sc__app_8h_1ab1242d15c712c4d5cf7749d5ba2b1d53" kindref="member">SC_BYTES_IN_WORD</ref>. Each table contains a series of ATS commands defined by <ref refid="struct_s_c___ats_entry_header__t" kindref="compound">SC_AtsEntryHeader_t</ref>. The structure of a single command is: <orderedlist>
+<listitem>
+<para><bold>Command number:</bold> This number must be unique for each command in the ATS, and this number must start at 1 (one), and go up to <ref refid="sc__platform__cfg_8h_1af08662efd00a262389f7b19ce4e9af12" kindref="member">SC_MAX_ATS_CMDS</ref>. The command numbers must not be zero, must not repeat, and must not go above <ref refid="sc__platform__cfg_8h_1af08662efd00a262389f7b19ce4e9af12" kindref="member">SC_MAX_ATS_CMDS</ref> -1. </para></listitem>
+<listitem>
+<para><bold>Time Tag:</bold> A 32-bit <ref refid="sc__tbldefs_8h_1a28d20ba745b8e9e01873312162938000" kindref="member">SC_AbsTimeTag_t</ref> type that specifies the absolute time at which this ATS command should execute and is specified as a number of seconds, as received from the <ref refid="cfe__time__api_8c_1abf540f01ef8e0b2c7f2ec755148b6ac6" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TIME_GetTime</ref> functions. This time can either be UTC, TAI, or the default cFE Time, as defined by the <ref refid="sc__platform__cfg_8h_1a2837e8a58fa404358d6b0d6b433d36c2" kindref="member">SC_TIME_TO_USE</ref> platform configuration parameter. </para></listitem>
+<listitem>
+<para><bold>Command:</bold> The variable-length command to send out on the Software Bus. This command must have a valid checksum in the checksum field or it will not be sent out.<linebreak/>
+ <bold>NOTE:</bold> If the command length (in bytes) is odd, the user must add a pad byte to the ATS command structure so that the next command starts on a word (<ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref>) boundary. </para></listitem>
+</orderedlist>
+</para><para>Despite the many error checks built in to the ATP to assure that it does not cause any ill effects on the spacecraft, there is a crucial safety measure that is required of all ATS tables. The ATP relies on a sentinel word of zeroes at the end of an ATS table to signal the end of the ATS table (end of data marker). cFE Table Services, when loading a new table, unconditionally fills the table working buffer with the contents of the current table prior to placing the new table file contents into the buffer. If a newly loaded ATS table does not contain the sentinel word of zeroes at the end of the table and is smaller than the table that was previously loaded, the newly loaded table has potential to execute the &quot;old&quot; invalid commands that were part of the prior table load. It is therefore essential for operators to place the sentinel word of zeroes at the end of each ATS table including ATS append tables.</para><para><bold>RTS Tables</bold></para><para>The RTS tables are single-buffer tables. The size of these tables are defined by the configuration parameters <ref refid="sc__platform__cfg_8h_1af34c920689afd5bacf09815aae605339" kindref="member">SC_RTS_BUFF_SIZE</ref> times <ref refid="sc__app_8h_1ab1242d15c712c4d5cf7749d5ba2b1d53" kindref="member">SC_BYTES_IN_WORD</ref>. Each table contains a series of RTS commands defined by <ref refid="struct_s_c___rts_entry_header__t" kindref="compound">SC_RtsEntryHeader_t</ref>. The structure of a single command is: <orderedlist>
+<listitem>
+<para><bold>Time Tag:</bold> A 32-bit <ref refid="sc__tbldefs_8h_1a07ebc63653b9d76d3d37ad1faef78297" kindref="member">SC_RelTimeTag_t</ref> type that specifies the relative time at which this RTS command should execute from which the last RTS command in this RTS was executed and is specified as the number of seconds from the current time. If the Time Tag is zero, then there will be no delay in sending out this command. If it is non zero, the delay will be the number of seconds from the time the last RTS command in this RTS was sent out. The first RTS command can have a delay value. It will be interpreted as a delay from the time the RTS was started. </para></listitem>
+<listitem>
+<para><bold>Command:</bold> The variable-length command to send out on the Software Bus. This command must have a valid checksum in the checksum field or it will not be sent out.<linebreak/>
+ <bold>NOTE:</bold> If the command length (in bytes) is odd, the user must add a pad byte to the RTS command structure so that the next command starts on a word (<ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref>) boundary. </para></listitem>
+</orderedlist>
+</para><para><bold>ATS Append Table</bold></para><para>The ATS Append table is a double-buffer table. The size of this table is defined by the configuration parameters <ref refid="sc__platform__cfg_8h_1ad13d7fe4d1d7befb877253962c1a792e" kindref="member">SC_APPEND_BUFF_SIZE</ref> times <ref refid="sc__app_8h_1ab1242d15c712c4d5cf7749d5ba2b1d53" kindref="member">SC_BYTES_IN_WORD</ref>. The table contains a series of ATS commands defined by <ref refid="struct_s_c___ats_entry_header__t" kindref="compound">SC_AtsEntryHeader_t</ref>. The structure of a single command is the same as the ATS table command structure defined above.</para><para><heading level="2">Dump-Only Tables</heading>
+</para><para>SC uses the following dump-only tables for status information which can be useful in debugging situations. These tables are defined as single buffer tables with the structures defined below.</para><para><bold>Absolute Time Processor (ATP) Control Block Table</bold></para><para>The ATP Control Block table is defined by <ref refid="struct_s_c___atp_control_block__t" kindref="compound">SC_AtpControlBlock_t</ref>. This table contains data items to keep track of the execution of an ATS on the ATP. The fields include: <orderedlist>
+<listitem>
+<para><bold>AtpState:</bold> This field has the current state of the Absolute Time Processor. It can be IDLE or EXECUTING. </para></listitem>
+<listitem>
+<para><bold>AtsNumber:</bold> This field has the number of the current or last executed ATS. The possible values are: 0 for none (after power on or cold restart), 1 for ATS A, and 2 for ATS B. </para></listitem>
+<listitem>
+<para><bold>CmdNumber:</bold> This field has the current or last executed ATS command number. </para></listitem>
+<listitem>
+<para><bold>TimeIndexPtr:</bold> This field has the table offset into the ATS Time Index Table of the next ATS command to execute. </para></listitem>
+<listitem>
+<para><bold>SwitchPendFlag:</bold> This flag indicates that an ATS switch is pending. This flag is used for internal logic. </para></listitem>
+</orderedlist>
+</para><para><bold>ATS Information Table</bold></para><para>The ATS Information table is defined by <ref refid="struct_s_c___ats_info_table__t" kindref="compound">SC_AtsInfoTable_t</ref>. The SC application defines one of these tables for each ATS table created. This table contains data items that provide information about the ATS. The fields include: <orderedlist>
+<listitem>
+<para><bold>Usage Counter:</bold> A counter that increments each time the ATS is used </para></listitem>
+<listitem>
+<para><bold>Command Count:</bold> The number of commands contained in the ATS </para></listitem>
+<listitem>
+<para><bold>Size:</bold> The size of the ATS. </para></listitem>
+</orderedlist>
+</para><para><bold>ATS Append Information Table</bold></para><para>The ATS Append Info table is defined by <ref refid="struct_s_c___ats_info_table__t" kindref="compound">SC_AtsInfoTable_t</ref> just like the ATS Info tables described above. There is only one ATS Append Info Table defined and it provides information about the ATS Append table described earlier.</para><para><bold>RTS Information Table</bold></para><para>The RTS Information Table is used to keep the current status of each RTS table. This table contains one record for each RTS table as defined by <ref refid="struct_s_c___rts_info_entry__t" kindref="compound">SC_RtsInfoEntry_t</ref>. The fields of each entry include: <orderedlist>
+<listitem>
+<para><bold>Status flag:</bold> The status of the associated RTS. This can be EMPTY, LOADED, or EXECUTING. </para></listitem>
+<listitem>
+<para><bold>Disabled flag:</bold> Indicates whether the associated RTS is Enabled or Disabled. If Disabled, the RTS cannot be started. </para></listitem>
+<listitem>
+<para><bold>Command Counter:</bold> The number of commands executed in this execution of the RTS. </para></listitem>
+<listitem>
+<para><bold>Command Error Counter:</bold> The number of errors that have occurred during this RTS execution. Currently, an RTS will stop when it encounters an error, so the counter should never increment past 1. </para></listitem>
+<listitem>
+<para><bold>Next Command Time:</bold> The computed absolute time the next command will execute. </para></listitem>
+<listitem>
+<para><bold>Next Command Pointer:</bold> An offset (in 16-bit words) into the RTS Table of the next command. </para></listitem>
+<listitem>
+<para><bold>Usage Counter:</bold> The number of times that the associated RTS has been started since the last time it was loaded. </para></listitem>
+</orderedlist>
+</para><para><bold>RTP Control Block Table</bold></para><para>The RTP Control Block table is defined by <ref refid="struct_s_c___rtp_control_block__t" kindref="compound">SC_RtpControlBlock_t</ref>. This table contains data items to keep track of the RTS&apos;s executing on the RTP. The fields include: <orderedlist>
+<listitem>
+<para><bold>Active RTS&apos;s:</bold> The number of RTS&apos;s currently active (started). </para></listitem>
+<listitem>
+<para><bold>RtsNumber:</bold> The current RTS number that is executing on the RTP. Note that this field is only cleared out when another RTS is started, allowing the ground to note the last RTS that ran on the RTP. </para></listitem>
+</orderedlist>
+</para><para>Next: <ref refid="cfssccfg" kindref="compound">CFS Stored Command Configuration Parameters</ref> <linebreak/>
+ Prev: <ref refid="cfssctlm" kindref="compound">CFS Stored Command Telemetry</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

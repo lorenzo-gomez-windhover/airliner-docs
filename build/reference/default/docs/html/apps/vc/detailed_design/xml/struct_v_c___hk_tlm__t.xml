@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_v_c___hk_tlm__t" kind="struct" language="C++" prot="public">
+    <compoundname>VC_HkTlm_t</compoundname>
+    <includes refid="vc__msg_8h" local="no">vc_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_v_c___hk_tlm__t_1ab7c5789f32d29ee594110e01e04763aa" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 VC_HkTlm_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE SB Tlm Msg Hdr </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_msg.h" line="145" column="1" bodyfile="apps/vc/fsw/src/vc_msg.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_v_c___hk_tlm__t_1af5325c12e0b1155b247e12d82399f02d" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 VC_HkTlm_t::usCmdCnt</definition>
+        <argsstring></argsstring>
+        <name>usCmdCnt</name>
+        <briefdescription>
+<para>Count of accepted commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsvctlmmnems_1_cfsvctlmmnems000001"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_VC_CMDACTPCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_msg.h" line="149" column="1" bodyfile="apps/vc/fsw/src/vc_msg.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="vc__cmds_8h_1a303e8adc0ce867bbe74d1092c85329f9" compoundref="vc__cmds_8c" startline="46" endline="65">VC_NoopCmd</referencedby>
+        <referencedby refid="vc__cmds_8h_1ae0597cd7a9ba29a4219921b03def151b" compoundref="vc__cmds_8c" startline="73" endline="89">VC_ResetCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_v_c___hk_tlm__t_1a448c0eb9ee500af1bfdf03931fa23f40" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 VC_HkTlm_t::usCmdErrCnt</definition>
+        <argsstring></argsstring>
+        <name>usCmdErrCnt</name>
+        <briefdescription>
+<para>Count of failed commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsvctlmmnems_1_cfsvctlmmnems000002"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_VC_CMDRJCTCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_msg.h" line="152" column="1" bodyfile="apps/vc/fsw/src/vc_msg.h" bodystart="152" bodyend="-1"/>
+        <referencedby refid="vc__app_8h_1a57715381c7e5ef14396b138165bef47d" compoundref="vc__app_8c" startline="441" endline="486">VC_ProcessNewCmds</referencedby>
+        <referencedby refid="vc__cmds_8h_1ae0597cd7a9ba29a4219921b03def151b" compoundref="vc__cmds_8c" startline="73" endline="89">VC_ResetCmd</referencedby>
+        <referencedby refid="vc__cmds_8h_1a76d9115f96a18b27b4d523c8179c541f" compoundref="vc__cmds_8c" startline="121" endline="146">VC_VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_v_c___hk_tlm__t_1a9011d82458a9041e60cd0aead82c1687" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 VC_HkTlm_t::State</definition>
+        <argsstring></argsstring>
+        <name>State</name>
+        <briefdescription>
+<para>VC App State. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/src/vc_msg.h" line="154" column="1" bodyfile="apps/vc/fsw/src/vc_msg.h" bodystart="154" bodyend="-1"/>
+        <referencedby refid="vc__cmds_8h_1a8ee627bdd33afa1834a227ec5b5faa06" compoundref="vc__cmds_8c" startline="97" endline="113">VC_ReportHousekeeping</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>VC application housekeeping data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="apps/vc/fsw/src/vc_msg.h" line="143" column="1" bodyfile="apps/vc/fsw/src/vc_msg.h" bodystart="142" bodyend="155"/>
+    <listofallmembers>
+      <member refid="struct_v_c___hk_tlm__t_1a9011d82458a9041e60cd0aead82c1687" prot="public" virt="non-virtual"><scope>VC_HkTlm_t</scope><name>State</name></member>
+      <member refid="struct_v_c___hk_tlm__t_1ab7c5789f32d29ee594110e01e04763aa" prot="public" virt="non-virtual"><scope>VC_HkTlm_t</scope><name>TlmHeader</name></member>
+      <member refid="struct_v_c___hk_tlm__t_1af5325c12e0b1155b247e12d82399f02d" prot="public" virt="non-virtual"><scope>VC_HkTlm_t</scope><name>usCmdCnt</name></member>
+      <member refid="struct_v_c___hk_tlm__t_1a448c0eb9ee500af1bfdf03931fa23f40" prot="public" virt="non-virtual"><scope>VC_HkTlm_t</scope><name>usCmdErrCnt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

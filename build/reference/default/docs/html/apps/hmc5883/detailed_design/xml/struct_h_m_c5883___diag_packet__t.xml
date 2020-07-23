@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_h_m_c5883___diag_packet__t" kind="struct" language="C++" prot="public">
+    <compoundname>HMC5883_DiagPacket_t</compoundname>
+    <includes refid="hmc5883__msg_8h" local="no">hmc5883_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_m_c5883___diag_packet__t_1a97e26d4aba4c1c2e3c25e50e678094ac" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 HMC5883_DiagPacket_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_msg.h" line="271" column="1" bodyfile="apps/hmc5883/fsw/src/hmc5883_msg.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_m_c5883___diag_packet__t_1a62ec55017e05ea470ff337be886f9520" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_h_m_c5883___calibration_msg__t" kindref="compound">HMC5883_CalibrationMsg_t</ref></type>
+        <definition>HMC5883_CalibrationMsg_t HMC5883_DiagPacket_t::Calibration</definition>
+        <argsstring></argsstring>
+        <name>Calibration</name>
+        <briefdescription>
+<para>Calibration data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_msg.h" line="273" column="1" bodyfile="apps/hmc5883/fsw/src/hmc5883_msg.h" bodystart="273" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1abe0ffdb0a9b372f95eade53f43f007b9" compoundref="hmc5883__app_8cpp" startline="243" endline="365">HMC5883::InitApp</referencedby>
+        <referencedby refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" compoundref="hmc5883__app_8cpp" startline="207" endline="235">HMC5883::InitData</referencedby>
+        <referencedby refid="class_h_m_c5883_1a132fa15b431b8afcbf44bd1cef12613f" compoundref="hmc5883__app_8cpp" startline="698" endline="773">HMC5883::ReadDevice</referencedby>
+        <referencedby refid="class_h_m_c5883_1a0798aae0d03936e4e332ef48a2e564d3" compoundref="hmc5883__app_8cpp" startline="964" endline="984">HMC5883::UpdateParamsFromTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_m_c5883___diag_packet__t_1a8295f588011d25d3ef50628ecf34ad81" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_h_m_c5883___conversion_msg__t" kindref="compound">HMC5883_ConversionMsg_t</ref></type>
+        <definition>HMC5883_ConversionMsg_t HMC5883_DiagPacket_t::Conversion</definition>
+        <argsstring></argsstring>
+        <name>Conversion</name>
+        <briefdescription>
+<para>Conversion data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_msg.h" line="275" column="1" bodyfile="apps/hmc5883/fsw/src/hmc5883_msg.h" bodystart="275" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1abe0ffdb0a9b372f95eade53f43f007b9" compoundref="hmc5883__app_8cpp" startline="243" endline="365">HMC5883::InitApp</referencedby>
+        <referencedby refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" compoundref="hmc5883__app_8cpp" startline="207" endline="235">HMC5883::InitData</referencedby>
+        <referencedby refid="class_h_m_c5883_1a132fa15b431b8afcbf44bd1cef12613f" compoundref="hmc5883__app_8cpp" startline="698" endline="773">HMC5883::ReadDevice</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> diagnostic data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="16">
+        <label>HMC5883_ConversionMsg_t</label>
+        <link refid="struct_h_m_c5883___conversion_msg__t"/>
+      </node>
+      <node id="17">
+        <label>HMC5883_CalibrationMsg_t</label>
+        <link refid="struct_h_m_c5883___calibration_msg__t"/>
+      </node>
+      <node id="15">
+        <label>HMC5883_DiagPacket_t</label>
+        <link refid="struct_h_m_c5883___diag_packet__t"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>Conversion</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>Calibration</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/hmc5883/fsw/src/hmc5883_msg.h" line="270" column="1" bodyfile="apps/hmc5883/fsw/src/hmc5883_msg.h" bodystart="269" bodyend="276"/>
+    <listofallmembers>
+      <member refid="struct_h_m_c5883___diag_packet__t_1a62ec55017e05ea470ff337be886f9520" prot="public" virt="non-virtual"><scope>HMC5883_DiagPacket_t</scope><name>Calibration</name></member>
+      <member refid="struct_h_m_c5883___diag_packet__t_1a8295f588011d25d3ef50628ecf34ad81" prot="public" virt="non-virtual"><scope>HMC5883_DiagPacket_t</scope><name>Conversion</name></member>
+      <member refid="struct_h_m_c5883___diag_packet__t_1a97e26d4aba4c1c2e3c25e50e678094ac" prot="public" virt="non-virtual"><scope>HMC5883_DiagPacket_t</scope><name>TlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

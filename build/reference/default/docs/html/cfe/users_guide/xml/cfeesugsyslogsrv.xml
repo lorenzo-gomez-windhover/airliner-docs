@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeesugsyslogsrv" kind="page">
+    <compoundname>cfeesugsyslogsrv</compoundname>
+    <title>System Log Service</title>
+    <detaileddescription>
+<para>The System Log is an array of bytes that contains back-to-back printf type messages from applications. The cFE internal applications use this log when errors are encountered during initialization before the Event Manager is fully initialized. To view the information the <ref refid="cfe__es__msg_8h_1ab7c0800ece3c36763e7dd6e87fc46797" kindref="member">CFE_ES_WRITE_SYSLOG_CC</ref> command must be sent. This command will write the log to a binary file. The path and filename may be specified in the command. If the filename command field contains an empty string, the configuration parameter #CFE_ES_DEFAULT_SYSLOG_FILE is used to specify the path and filename. Use the ground system to get the file and display the contents. The <ref refid="cfe__es__msg_8h_1afdd73277ac170bbd037534891db38cca" kindref="member">CFE_ES_CLEAR_SYSLOG_CC</ref> is used to clear the System log.</para><para>The size of the System log is defined by the platform configuration parameter #CFE_ES_SYSTEM_LOG_SIZE. This log is preserved after a processor reset and held in the ES reset area.</para><para>A count of the number of entries in the log is present in the ES housekeeping telemetry.</para><para>Next: <ref refid="cfeesugshellsrv" kindref="compound">OS Shell Service</ref> <linebreak/>
+ Prev: <ref refid="cfeesugmempoolsrv" kindref="compound">Memory Pool Service</ref> <linebreak/>
+ Up To: <ref refid="cfeesovr" kindref="compound">cFE Executive Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

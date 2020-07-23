@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_e_a___hk_tlm__t" kind="struct" language="C++" prot="public">
+    <compoundname>EA_HkTlm_t</compoundname>
+    <includes refid="ea__msg_8h" local="no">ea_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_e_a___hk_tlm__t_1aaf9612a587629fb42ce19d6783f7f6a7" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 EA_HkTlm_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE SB Tlm Msg Hdr </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_msg.h" line="258" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_a___hk_tlm__t_1acdcc037c56a3d151139d7280a6db6b1f" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 EA_HkTlm_t::usCmdCnt</definition>
+        <argsstring></argsstring>
+        <name>usCmdCnt</name>
+        <briefdescription>
+<para>Count of accepted commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfseatlmmnems_1_cfseatlmmnems000001"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_EA_CMDACTPCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_msg.h" line="262" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="262" bodyend="-1"/>
+        <referencedby refid="ea__app_8h_1ac34a3186e8337f3ba17866c8e713a796" compoundref="ea__app_8c" startline="430" endline="490">EA_ProcessNewAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_a___hk_tlm__t_1a423505dbbff03376cd7ab11ff15860e6" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 EA_HkTlm_t::usCmdErrCnt</definition>
+        <argsstring></argsstring>
+        <name>usCmdErrCnt</name>
+        <briefdescription>
+<para>Count of failed commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfseatlmmnems_1_cfseatlmmnems000002"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_EA_CMDRJCTCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_msg.h" line="266" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="266" bodyend="-1"/>
+        <referencedby refid="ea__app_8h_1ac34a3186e8337f3ba17866c8e713a796" compoundref="ea__app_8c" startline="430" endline="490">EA_ProcessNewAppCmds</referencedby>
+        <referencedby refid="ea__app_8h_1a927eacd4a87a59bed5ebb3379b49c3ce" compoundref="ea__app_8c" startline="381" endline="422">EA_ProcessNewCmds</referencedby>
+        <referencedby refid="ea__app_8h_1ad1b0d1de905f87281ee12ff9b4cd244d" compoundref="ea__app_8c" startline="497" endline="574">EA_StartApp</referencedby>
+        <referencedby refid="ea__app_8h_1a035bb98198fd7699f436d3f50806bb35" compoundref="ea__app_8c" startline="636" endline="661">EA_VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_a___hk_tlm__t_1a2b5ffe38cb6f2d00d7eab78ad506da18" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char EA_HkTlm_t::ActiveApp[EA_MAX_PATH_LEN]</definition>
+        <argsstring>[EA_MAX_PATH_LEN]</argsstring>
+        <name>ActiveApp</name>
+        <briefdescription>
+<para>Name of current running application. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfseatlmmnems_1_cfseatlmmnems000003"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput></computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_msg.h" line="270" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="270" bodyend="-1"/>
+        <referencedby refid="ea__app_8h_1ac34a3186e8337f3ba17866c8e713a796" compoundref="ea__app_8c" startline="430" endline="490">EA_ProcessNewAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_a___hk_tlm__t_1a7b87abbc4e28d664553a948cf3b1535f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float EA_HkTlm_t::ActiveAppUtil</definition>
+        <argsstring></argsstring>
+        <name>ActiveAppUtil</name>
+        <briefdescription>
+<para>CPU utilization of current running application. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfseatlmmnems_1_cfseatlmmnems000004"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput></computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_msg.h" line="274" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="274" bodyend="-1"/>
+        <referencedby refid="ea__app_8h_1af9c5642dbf1d582bd8e1b8ad0ba198b8" compoundref="ea__app_8c" startline="601" endline="617">EA_Perfmon</referencedby>
+        <referencedby refid="ea__app_8h_1ac34a3186e8337f3ba17866c8e713a796" compoundref="ea__app_8c" startline="430" endline="490">EA_ProcessNewAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_a___hk_tlm__t_1aff20ff752f29b02595ac854798c0bab6" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 EA_HkTlm_t::ActiveAppPID</definition>
+        <argsstring></argsstring>
+        <name>ActiveAppPID</name>
+        <briefdescription>
+<para>PID of current running application. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfseatlmmnems_1_cfseatlmmnems000005"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput></computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_msg.h" line="278" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="278" bodyend="-1"/>
+        <referencedby refid="ea__app_8h_1af9c5642dbf1d582bd8e1b8ad0ba198b8" compoundref="ea__app_8c" startline="601" endline="617">EA_Perfmon</referencedby>
+        <referencedby refid="ea__app_8h_1ac34a3186e8337f3ba17866c8e713a796" compoundref="ea__app_8c" startline="430" endline="490">EA_ProcessNewAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_a___hk_tlm__t_1af3f46444027b1cb75b2add6b6fc2725b" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char EA_HkTlm_t::LastAppRun[EA_MAX_PATH_LEN]</definition>
+        <argsstring>[EA_MAX_PATH_LEN]</argsstring>
+        <name>LastAppRun</name>
+        <briefdescription>
+<para>Name of last run application. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfseatlmmnems_1_cfseatlmmnems000006"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput></computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_msg.h" line="282" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="282" bodyend="-1"/>
+        <referencedby refid="ea__app_8h_1ac34a3186e8337f3ba17866c8e713a796" compoundref="ea__app_8c" startline="430" endline="490">EA_ProcessNewAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_a___hk_tlm__t_1a3363b2f7b06031d720cea30aa2bf4b0c" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 EA_HkTlm_t::LastAppStatus</definition>
+        <argsstring></argsstring>
+        <name>LastAppStatus</name>
+        <briefdescription>
+<para>Last run application return code. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfseatlmmnems_1_cfseatlmmnems000007"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput></computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/src/ea_msg.h" line="286" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="286" bodyend="-1"/>
+        <referencedby refid="ea__app_8h_1ac34a3186e8337f3ba17866c8e713a796" compoundref="ea__app_8c" startline="430" endline="490">EA_ProcessNewAppCmds</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>EA application housekeeping data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="apps/ea/fsw/src/ea_msg.h" line="256" column="1" bodyfile="apps/ea/fsw/src/ea_msg.h" bodystart="255" bodyend="288"/>
+    <listofallmembers>
+      <member refid="struct_e_a___hk_tlm__t_1a2b5ffe38cb6f2d00d7eab78ad506da18" prot="public" virt="non-virtual"><scope>EA_HkTlm_t</scope><name>ActiveApp</name></member>
+      <member refid="struct_e_a___hk_tlm__t_1aff20ff752f29b02595ac854798c0bab6" prot="public" virt="non-virtual"><scope>EA_HkTlm_t</scope><name>ActiveAppPID</name></member>
+      <member refid="struct_e_a___hk_tlm__t_1a7b87abbc4e28d664553a948cf3b1535f" prot="public" virt="non-virtual"><scope>EA_HkTlm_t</scope><name>ActiveAppUtil</name></member>
+      <member refid="struct_e_a___hk_tlm__t_1af3f46444027b1cb75b2add6b6fc2725b" prot="public" virt="non-virtual"><scope>EA_HkTlm_t</scope><name>LastAppRun</name></member>
+      <member refid="struct_e_a___hk_tlm__t_1a3363b2f7b06031d720cea30aa2bf4b0c" prot="public" virt="non-virtual"><scope>EA_HkTlm_t</scope><name>LastAppStatus</name></member>
+      <member refid="struct_e_a___hk_tlm__t_1aaf9612a587629fb42ce19d6783f7f6a7" prot="public" virt="non-virtual"><scope>EA_HkTlm_t</scope><name>TlmHeader</name></member>
+      <member refid="struct_e_a___hk_tlm__t_1acdcc037c56a3d151139d7280a6db6b1f" prot="public" virt="non-virtual"><scope>EA_HkTlm_t</scope><name>usCmdCnt</name></member>
+      <member refid="struct_e_a___hk_tlm__t_1a423505dbbff03376cd7ab11ff15860e6" prot="public" virt="non-virtual"><scope>EA_HkTlm_t</scope><name>usCmdErrCnt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

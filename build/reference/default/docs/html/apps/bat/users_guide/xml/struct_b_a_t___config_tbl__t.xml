@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_b_a_t___config_tbl__t" kind="struct" language="C++" prot="public">
+    <compoundname>BAT_ConfigTbl_t</compoundname>
+    <includes refid="bat__tbldefs_8h" local="no">bat_tbldefs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1a85d468859be1d7901465726347dc1b3c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::VEmpty</definition>
+        <argsstring></argsstring>
+        <name>VEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empty cell voltage (5C load)</para><para>Defines the voltage where a single cell of the battery is considered empty. The voltage should be chosen before the steep dropoff to 2.8V. A typical lithium battery can only be discharged down to 10% before it drops off to a voltage level damaging the cells.</para><para>Battery Calibration  V  2  0.01  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="97" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1a99193dba8be8e649e7f49a5f4db3f23f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::VFull</definition>
+        <argsstring></argsstring>
+        <name>VFull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Full cell voltage (5C load)</para><para>Defines the voltage where a single cell of the battery is considered full under a mild load. This will never be the nominal voltage of 4.2V</para><para>Battery Calibration  V  2  0.01  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="111" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1a710edd0d564509545da8fd20b606ef75" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 BAT_ConfigTbl_t::NumCells</definition>
+        <argsstring></argsstring>
+        <name>NumCells</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of cells.</para><para>Defines the number of cells the attached battery consists of.</para><para>Battery Calibration  S  0 Unconfigured  2 2S Battery  3 3S Battery  4 4S Battery  5 5S Battery  6 6S Battery  7 7S Battery  8 8S Battery  9 9S Battery  10 10S Battery  11 11S Battery  12 12S Battery  13 13S Battery  14 14S Battery  15 15S Battery  16 16S Battery  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="138" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1ab2e535b61835810bccdf0ac88c74cc53" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::Capacity</definition>
+        <argsstring></argsstring>
+        <name>Capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Battery capacity.</para><para>Defines the capacity of the attached battery.</para><para>Battery Calibration  mAh  0  -1.0  100000  50  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="153" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1ae1296cc6e0a31200eb15d7a8bedc4a5b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::VLoadDrop</definition>
+        <argsstring></argsstring>
+        <name>VLoadDrop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Voltage drop per cell on full throttle</para><para>This implicitely defines the internal resistance to maximum current ratio and assumes linearity. A good value to use is the difference between the 5C and 20-25C load. Not used if BAT_R_INTERNAL is set.</para><para>Battery Calibration  V  0.07  0.5  2  0.01  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="172" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1a4bd17e7ab5f295d4c91ba14266afa355" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::RInternal</definition>
+        <argsstring></argsstring>
+        <name>RInternal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Explicitly defines the per cell internal resistance</para><para>If non-negative, then this will be used in place of BAT_V_LOAD_DROP for all calculations.</para><para>Battery Calibration  Ohms  -1.0  0.2  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="186" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1ad89f282ae06f6973990f724183ccde48" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::LowThreshold</definition>
+        <argsstring></argsstring>
+        <name>LowThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Low threshold</para><para>Sets the threshold when the battery will be reported as low. This has to be higher than the critical threshold.</para><para>Battery Calibration  norm  0.12  0.4  2  0.01  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="202" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1acef6c0f4ca4ab3b39a4aaf7d5b4c9fae" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::CriticalThreshold</definition>
+        <argsstring></argsstring>
+        <name>CriticalThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Critical threshold</para><para>Sets the threshold when the battery will be reported as critically low. This has to be lower than the low threshold. This threshold commonly will trigger RTL.</para><para>Battery Calibration  norm  0.05  0.1  2  0.01  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="219" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1acde37aacb5c061cfd4443ac1d47abe4d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::EmergencyThreshold</definition>
+        <argsstring></argsstring>
+        <name>EmergencyThreshold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Emergency threshold</para><para>Sets the threshold when the battery will be reported as dangerously low. This has to be lower than the critical threshold. This threshold commonly will trigger landing.</para><para>Battery Calibration  norm  0.03  0.07  2  0.01  true </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="236" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1aa6750fcb176039f29b96b5cb1e063467" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::VoltageScale</definition>
+        <argsstring></argsstring>
+        <name>VoltageScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="239" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_b_a_t___config_tbl__t_1a89ecb422f0d477362e88a2d2becfe247" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT_ConfigTbl_t::CurrentScale</definition>
+        <argsstring></argsstring>
+        <name>CurrentScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_tbldefs.h" line="242" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definition for a single config table entry. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="apps/bat/fsw/src/bat_tbldefs.h" line="82" column="1" bodyfile="apps/bat/fsw/src/bat_tbldefs.h" bodystart="81" bodyend="244"/>
+    <listofallmembers>
+      <member refid="struct_b_a_t___config_tbl__t_1ab2e535b61835810bccdf0ac88c74cc53" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>Capacity</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1acef6c0f4ca4ab3b39a4aaf7d5b4c9fae" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>CriticalThreshold</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1a89ecb422f0d477362e88a2d2becfe247" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>CurrentScale</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1acde37aacb5c061cfd4443ac1d47abe4d" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>EmergencyThreshold</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1ad89f282ae06f6973990f724183ccde48" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>LowThreshold</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1a710edd0d564509545da8fd20b606ef75" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>NumCells</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1a4bd17e7ab5f295d4c91ba14266afa355" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>RInternal</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1a85d468859be1d7901465726347dc1b3c" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>VEmpty</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1a99193dba8be8e649e7f49a5f4db3f23f" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>VFull</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1ae1296cc6e0a31200eb15d7a8bedc4a5b" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>VLoadDrop</name></member>
+      <member refid="struct_b_a_t___config_tbl__t_1aa6750fcb176039f29b96b5cb1e063467" prot="public" virt="non-virtual"><scope>BAT_ConfigTbl_t</scope><name>VoltageScale</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

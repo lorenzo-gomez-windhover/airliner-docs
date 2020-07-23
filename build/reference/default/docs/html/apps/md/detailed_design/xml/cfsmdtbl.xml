@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsmdtbl" kind="page">
+    <compoundname>cfsmdtbl</compoundname>
+    <title>CFS Memory Dwell Table Definitions</title>
+    <detaileddescription>
+<para><table rows="1" cols="3"><row>
+<entry thead="no"><para><bold><ref refid="cfsmdcmds" kindref="compound">CFS Memory Dwell Commands</ref></bold> </para></entry><entry thead="no"><para><bold><ref refid="cfsmdtlm" kindref="compound">CFS Memory Dwell Telemetry</ref></bold>  </para></entry><entry thead="no"><para><bold><ref refid="cfsmdcfg" kindref="compound">CFS Memory Dwell Configuration Parameters</ref></bold> </para></entry></row>
+</table>
+</para><para>The Memory Dwell Application uses one type of table, a Memory Dwell Load Table. One table is used for each dwell stream that MD is configured to manage. The <ref refid="md__platform__cfg_8h_1a6624d8844a1a24a4e1df54487214d70d" kindref="member">MD_NUM_DWELL_TABLES</ref> configuration parameter specifies the number of dwell streams MD will manage. The structure format of a single table entry is as follows:</para><para><verbatim>  typedef struct
+  { 
+      uint16          Length;       /* Length of dwell  field in bytes.  0 indicates null entry. */ 
+      uint16          Delay;        /* Delay before following dwell sample in terms of number of task wakeup calls */    
+      CFS_SymAddr_t   DwellAddress; /* Dwell Address in #CFS_SymAddr_t format */
+  } MD_TableLoadEntry_t;</verbatim></para><para>The overall structure format of a Memory Dwell Load Table is as follows:</para><para><verbatim>  typedef struct
+  {
+      uint32 Enabled;                                 /* Is table is enabled for dwell?
+                                                         Valid values are MD_DWELL_STREAM_DISABLED, MD_DWELL_STREAM_ENABLED */    
+     MD_TableLoadEntry_t Entry[MD_DWELL_TABLE_SIZE];  /* Array of individual memory dwell specifications */
+  } MD_DwellTableLoad_t;</verbatim> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

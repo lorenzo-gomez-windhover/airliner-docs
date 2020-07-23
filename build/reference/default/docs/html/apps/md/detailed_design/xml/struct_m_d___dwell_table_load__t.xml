@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_m_d___dwell_table_load__t" kind="struct" language="C++" prot="public">
+    <compoundname>MD_DwellTableLoad_t</compoundname>
+    <includes refid="md__tbldefs_8h" local="no">md_tbldefs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_d___dwell_table_load__t_1a49b1b8d7c27cea4977af1de5079bf6d3" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 MD_DwellTableLoad_t::Enabled</definition>
+        <argsstring></argsstring>
+        <name>Enabled</name>
+        <briefdescription>
+<para>Is table is enabled for dwell? Valid values are MD_DWELL_STREAM_DISABLED, MD_DWELL_STREAM_ENABLED. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_tbldefs.h" line="87" column="1" bodyfile="apps/md/fsw/src/md_tbldefs.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1a483d38b4971ce1c7075a445cf3f238be" compoundref="md__dwell__tbl_8c" startline="295" endline="344">MD_CopyUpdatedTbl</referencedby>
+        <referencedby refid="md__app_8h_1ac7469b3a156f3511e9fe5b30ec6d1582" compoundref="md__app_8c" startline="382" endline="540">MD_InitTableServices</referencedby>
+        <referencedby refid="md__app_8h_1ac7734635b4ee37d82fb83191cd43eeac" compoundref="md__app_8c" startline="545" endline="620">MD_ManageDwellTable</referencedby>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+        <referencedby refid="md__dwell__tbl_8h_1afb27cfb3c5d335d81be4f9ec19986e8d" compoundref="md__dwell__tbl_8c" startline="347" endline="369">MD_UpdateTableEnabledField</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_d___dwell_table_load__t_1a7f1236df9d3031916e73365ad7b9bf63" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_d___table_load_entry__t" kindref="compound">MD_TableLoadEntry_t</ref></type>
+        <definition>MD_TableLoadEntry_t MD_DwellTableLoad_t::Entry[MD_DWELL_TABLE_SIZE]</definition>
+        <argsstring>[MD_DWELL_TABLE_SIZE]</argsstring>
+        <name>Entry</name>
+        <briefdescription>
+<para>Array of individual memory dwell specifications. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_tbldefs.h" line="91" column="1" bodyfile="apps/md/fsw/src/md_tbldefs.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1ae870f3da22b60e4f265927ad1f8533ab" compoundref="md__dwell__tbl_8c" startline="173" endline="234">MD_CheckTableEntries</referencedby>
+        <referencedby refid="md__dwell__tbl_8h_1a483d38b4971ce1c7075a445cf3f238be" compoundref="md__dwell__tbl_8c" startline="295" endline="344">MD_CopyUpdatedTbl</referencedby>
+        <referencedby refid="md__dwell__tbl_8h_1a07b14429b5c5a851559610f2fa3ffec0" compoundref="md__dwell__tbl_8c" startline="148" endline="171">MD_ReadDwellTable</referencedby>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+        <referencedby refid="md__dwell__tbl_8h_1a317276454316cb0ba9fd0ea99741d318" compoundref="md__dwell__tbl_8c" startline="373" endline="408">MD_UpdateTableDwellEntry</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Memory Dwell Table Load structure. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>To be valid, each of the Entry structures must be valid. See <ref refid="struct_m_d___table_load_entry__t" kindref="compound">MD_TableLoadEntry_t</ref> for details. Tables will be processed beginning with the first entry if it is non-null and continuing until the first null entry is reached. Note that non-null entries may follow a terminator entry; however they will not be processed.</para></simplesect>
+In order to be processed, all of the following must be true: <heading level="1">There are one or more non-null entries beginning with the first entry of the table.</heading>
+</para><para><heading level="1">The sum of individual entry delays, beginning with the first entry and up until the</heading>
+</para><para>terminator entry or the end of the table, must be non-zero. <heading level="1">The table&apos;s Enabled field must be set to TRUE. This is initially set in the load, and</heading>
+</para><para>is controlled with the <ref refid="md__msgdefs_8h_1ae382924f45863f65aa682cd95033f5d1" kindref="member">MD_START_DWELL_CC</ref> and <ref refid="md__msgdefs_8h_1aaca90e8f2b095f18fe63fb039e310857" kindref="member">MD_STOP_DWELL_CC</ref> commands. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="22">
+        <label>MD_DwellTableLoad_t</label>
+        <link refid="struct_m_d___dwell_table_load__t"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>Entry</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>MD_TableLoadEntry_t</label>
+        <link refid="struct_m_d___table_load_entry__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/md/fsw/src/md_tbldefs.h" line="86" column="1" bodyfile="apps/md/fsw/src/md_tbldefs.h" bodystart="85" bodyend="92"/>
+    <listofallmembers>
+      <member refid="struct_m_d___dwell_table_load__t_1a49b1b8d7c27cea4977af1de5079bf6d3" prot="public" virt="non-virtual"><scope>MD_DwellTableLoad_t</scope><name>Enabled</name></member>
+      <member refid="struct_m_d___dwell_table_load__t_1a7f1236df9d3031916e73365ad7b9bf63" prot="public" virt="non-virtual"><scope>MD_DwellTableLoad_t</scope><name>Entry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfslcovr" kind="page">
+    <compoundname>cfslcovr</compoundname>
+    <title>CFS Limit Checker Overview</title>
+    <detaileddescription>
+<para>The CFS Limit Checker (LC) application monitors telemetry data points in the flight system and compares the values against predefined threshold limits. When a threshold condition is encountered, an event message is issued and a Relative Time Sequence (RTS) command script may be initiated to respond to the threshold violation.</para><para>LC is a table driven application. Monitoring and response configuration data is stored in definition tables that can be updated by the ground operators, while statistics on threshold violations are stored in dump-only results tables and summarized in housekeeping data.</para><para>When processing beyond the standard comparison operators is needed, LC supports the use of custom evaluation functions that can be modified by a software patch or application update.</para><sect1 id="cfslcovr_1LC">
+<title>Design Overview</title>
+<para><verbatim>The LC design is built around two fundamental constructs. The Watchpoint and the 
+Actionpoint.
+
+A Watchpoint defines a comparison between a piece of telemetry data and a pre-defined 
+constant. Watchpoints are defined in the Watchpoint Definition Table (WDT). Statistics 
+on watchpoint evaluations are stored in the Watchpoint Results Table (WRT)
+(see \ref cfslctbl). Watchpoints are evaluated whenever a message containing the 
+</verbatim> telemetry point is received over the software bus by LC. <verbatim>An Actionpoint defines the response LC will take based upon the current state of one 
+or more watchpoints. Actionpoints are defined in the Actionpoint Definition Table (ADT). 
+Statistics on actionpoint evaluations are stored in the Actionpoint Results Table (ART)
+</verbatim> (see <ref refid="cfslctbl" kindref="compound">CFS Limit Checker Table Definitions</ref>). Actionpoints are evaluated whenever LC receives a message with the <ref refid="lc__msgids_8h_1a156d2d4b7fa00933aa4f34253f8dfe74" kindref="member">LC_SAMPLE_AP_MID</ref> message ID. This is not a ground command but an internal message that will normally come from the CFS scheduler (SCH) application.</para><para><image type="html" name="LC_Context.png">LC Context Diagram</image>
+ <linebreak/>
+ <verbatim>Next: \ref cfslcopr</verbatim> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

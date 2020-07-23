@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfscsfaqs" kind="page">
+    <compoundname>cfscsfaqs</compoundname>
+    <title>CFS Checksum Frequently Asked Questions</title>
+    <detaileddescription>
+<para><bold> (Q) Can I set the max number of table entries to zero to not use checksumming of apps (or tables or EEPROM or user defined memory) ? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> No. The maximum number of entries must be at least one. This is to prevent null pointers from ever becoming an issue in CS. If you don&apos;t want to checksum a certain area ever, than the max can be set to 1 and no default table loaded, so CS will just use its default blank table and disable checksumming for that area. </emphasis></para><para><bold> (Q) What is the procedure for updating a table that is being checksummed? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The recommended procedure for updating a table that is being checksummed is to first disable the checksumming of that table, then load the new table via CFE TBL, then issue the CS Recompute Checksum command on that table, and finally re-enable the checksumming of that table. What this procedure does is ensures that no checksum miscompute errors get generated. </emphasis></para><para><bold> (Q) What do I do if I want to see the checksums of my applications/tables/etc? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The only way to see what the actual checksum value (Comparison Value) of an object is is to dump the results table that contains that object. For CS, knowing what the Comparison Value is isn&apos;t important for routine activities, only knowing when the Comparison Value has changed is important. That being said, having the Comparison Values on hand may be necessary, hence they are available by dumping the table. </emphasis></para><para>Prev: <ref refid="cfscscons" kindref="compound">CFS Checksum Constraints</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

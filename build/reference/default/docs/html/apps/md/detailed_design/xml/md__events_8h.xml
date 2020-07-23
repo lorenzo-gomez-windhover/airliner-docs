@@ -1,0 +1,726 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="md__events_8h" kind="file" language="C++">
+    <compoundname>md_events.h</compoundname>
+    <includedby refid="md__app_8c" local="yes">apps/md/fsw/src/md_app.c</includedby>
+    <includedby refid="md__cmds_8c" local="yes">apps/md/fsw/src/md_cmds.c</includedby>
+    <includedby refid="md__dwell__tbl_8c" local="yes">apps/md/fsw/src/md_dwell_tbl.c</includedby>
+    <invincdepgraph>
+      <node id="682">
+        <label>apps/md/fsw/src/md_app.c</label>
+        <link refid="md__app_8c"/>
+      </node>
+      <node id="683">
+        <label>apps/md/fsw/src/md_cmds.c</label>
+        <link refid="md__cmds_8c"/>
+      </node>
+      <node id="681">
+        <label>apps/md/fsw/src/md_events.h</label>
+        <link refid="md_events.h"/>
+        <childnode refid="682" relation="include">
+        </childnode>
+        <childnode refid="683" relation="include">
+        </childnode>
+        <childnode refid="684" relation="include">
+        </childnode>
+      </node>
+      <node id="684">
+        <label>apps/md/fsw/src/md_dwell_tbl.c</label>
+        <link refid="md__dwell__tbl_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="md__events_8h_1acf8c8def166ef56ec58015b2b875abf2" prot="public" static="no">
+        <name>MD_INIT_INF_EID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;MD Initialized. Version d.d.d.d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;MD Initialized. Version d.d.d.d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued upon successful completion of task initialization. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="37" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1a8d13837526f429fb947ab062488123ec" compoundref="md__app_8c" startline="190" endline="243">MD_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a2c451ef0340352c5ae872f1c229db96f" prot="public" static="no">
+        <name>MD_PIPE_ERR_EID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;SB Pipe Read Error, App will exit. Pipe Return Status = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;SB Pipe Read Error, App will exit. Pipe Return Status = 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued following error return from <ref refid="cfe__sb__api_8c_1a54840fe06aeb08b1e2c8df420474780d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_RcvMsg</ref> call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="48" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1a5d22a04828b72821c0678c68dd6b4b9d" compoundref="md__app_8c" startline="48" endline="185">MD_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a8c910965f1f8c779a552159d56bcc538" prot="public" static="no">
+        <name>MD_RECOVERED_TBL_VALID_INF_EID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Recovered Dwell Table #d is valid and has been copied to the MD App&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recovered Dwell Table #d is valid and has been copied to the MD App&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued upon successful recovery of a Dwell Table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="60" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ac7469b3a156f3511e9fe5b30ec6d1582" compoundref="md__app_8c" startline="382" endline="540">MD_InitTableServices</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a4273181754b812b147c367076dd7c968" prot="public" static="no">
+        <name>MD_RECOVERED_TBL_NOT_VALID_ERR_EID</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;MD App will reinitialize Dwell Table #d because recovered table is not valid&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;MD App will reinitialize Dwell Table #d because recovered table is not valid&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued when a Dwell Table is recovered and found to be invalid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="71" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ac7469b3a156f3511e9fe5b30ec6d1582" compoundref="md__app_8c" startline="382" endline="540">MD_InitTableServices</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a25369a86c399456e174d2078048f316d" prot="public" static="no">
+        <name>MD_DWELL_TBL_TOO_LARGE_CRIT_EID</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table(s) are too large to register: d &gt; d bytes, d &gt; d entries&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table(s) are too large to register: d &gt; d bytes, d &gt; d entries&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CRITICAL</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued when a <ref refid="cfe__error_8h_1a01dc66898b51cc9ac86b8a469d7cb3e4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_ERR_INVALID_SIZE</ref> error message is received from <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> call. Load structure can be reduced by reducing <ref refid="md__platform__cfg_8h_1a2b1a6acbd1ce79e5c6979d700c88262b" kindref="member">MD_DWELL_TABLE_SIZE</ref>, number of entries per Dwell Table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="83" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ac7469b3a156f3511e9fe5b30ec6d1582" compoundref="md__app_8c" startline="382" endline="540">MD_InitTableServices</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aff958c47ca913f6cc8ca399d9760b375" prot="public" static="no">
+        <name>MD_TBL_REGISTER_CRIT_EID</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CFE_TBL_Register error 0x%08X received for tbl#d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CFE_TBL_Register error 0x%08X received for tbl#d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CRITICAL</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued when an error message, other than <ref refid="cfe__error_8h_1a01dc66898b51cc9ac86b8a469d7cb3e4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_ERR_INVALID_SIZE</ref>, is received from <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="94" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ac7469b3a156f3511e9fe5b30ec6d1582" compoundref="md__app_8c" startline="382" endline="540">MD_InitTableServices</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1abc4e72a5f5a043813e792dac02bdf8b4" prot="public" static="no">
+        <name>MD_TBL_INIT_INF_EID</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Tables Recovered: d, Dwell Tables Initialized: d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Tables Recovered: d, Dwell Tables Initialized: d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued at the end of Table Initialization, specifying how many tables were recovered and how many initialized. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="106" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ac7469b3a156f3511e9fe5b30ec6d1582" compoundref="md__app_8c" startline="382" endline="540">MD_InitTableServices</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aa2fb319cf8ff0cc23299b0b4262f18bf" prot="public" static="no">
+        <name>MD_NOOP_INF_EID</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;No-op command, Version d.d.d.d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;No-op command, Version d.d.d.d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued upon receipt of a Memory Dwell no-op command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="117" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ad8dd931c83829fa36f3cb9f6a1cbfd85" compoundref="md__app_8c" startline="625" endline="724">MD_ExecRequest</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aa65288ac1a4146ece66296ce99175860" prot="public" static="no">
+        <name>MD_RESET_CNTRS_DBG_EID</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Counters Cmd Received&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset Counters Cmd Received&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued upon receipt of a Memory Dwell Reset Counters command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="128" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ad8dd931c83829fa36f3cb9f6a1cbfd85" compoundref="md__app_8c" startline="625" endline="724">MD_ExecRequest</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1affed2c3d47f6fe1f08e2638e2d58c465" prot="public" static="no">
+        <name>MD_START_DWELL_INF_EID</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Start Dwell Table command processed successfully for table mask 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Start Dwell Table command processed successfully for table mask 0x%04X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued upon receipt of a Memory Dwell Start command. Upon receipt of this command, the specified tables are started for processing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="141" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="141" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1a3e0e075574f7d6020a835d42215f8508" compoundref="md__cmds_8c" startline="39" endline="108">MD_ProcessStartCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a8b99212632cf92ec827af25fc0393e7c" prot="public" static="no">
+        <name>MD_STOP_DWELL_INF_EID</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Stop Dwell Table command processed successfully for table mask 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Stop Dwell Table command processed successfully for table mask 0x%04X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Issued upon receipt of a Memory Dwell Start command. Upon receipt of this command, the specified tables are stopped. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="153" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1af652ca7482ec5740105a1e93c5cb2d9a" compoundref="md__cmds_8c" startline="112" endline="157">MD_ProcessStopCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a54967ed261e770c4bd75c94de3cfd996" prot="public" static="no">
+        <name>MD_EMPTY_TBLMASK_ERR_EID</name>
+        <initializer>14</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;s command rejected because no tables were specified in table mask (0x%04X)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;s command rejected because no tables were specified in table mask (0x%04X)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+None of the valid Table Ids (1..<ref refid="md__platform__cfg_8h_1a6624d8844a1a24a4e1df54487214d70d" kindref="member">MD_NUM_DWELL_TABLES</ref>) are contained in the table mask argument for the Start Dwell or Stop Dwell command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="165" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="165" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1a3e0e075574f7d6020a835d42215f8508" compoundref="md__cmds_8c" startline="39" endline="108">MD_ProcessStartCmd</referencedby>
+        <referencedby refid="md__cmds_8h_1af652ca7482ec5740105a1e93c5cb2d9a" compoundref="md__cmds_8c" startline="112" endline="157">MD_ProcessStopCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aeb4f7b2f846509fc89b10034f7fce879" prot="public" static="no">
+        <name>MD_MID_ERR_EID</name>
+        <initializer>15</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Msg with Invalid message ID Rcvd <ndash/> ID = 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Msg with Invalid message ID Rcvd <ndash/> ID = 0x%04X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued if the Memory Dwell task receives a message with an unrecognized Message ID. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="178" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="178" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1a5d22a04828b72821c0678c68dd6b4b9d" compoundref="md__app_8c" startline="48" endline="185">MD_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a27b25ee6a63c7819ebe7e5d5c0896fee" prot="public" static="no">
+        <name>MD_CC_NOT_IN_TBL_ERR_EID</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Command Code d not found in MD_CmdHandlerTbl structure&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Command Code d not found in MD_CmdHandlerTbl structure&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued when a command for the Memory Dwell task is received with a function code which is not listed in the internal MD_CmdHandlerTbl structure, which is used to associate an expected length for the command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="192" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="192" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ad8dd931c83829fa36f3cb9f6a1cbfd85" compoundref="md__app_8c" startline="625" endline="724">MD_ExecRequest</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a0fb25805b6027f32dae7e0f471517c5b" prot="public" static="no">
+        <name>MD_CC_NOT_IN_LOOP_ERR_EID</name>
+        <initializer>17</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Command Code d not found in command processing loop&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Command Code d not found in command processing loop&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued when a command for the Memory Dwell task is received with a function code which is not included in the task&apos;s command code processing loop. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="205" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="205" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ad8dd931c83829fa36f3cb9f6a1cbfd85" compoundref="md__app_8c" startline="625" endline="724">MD_ExecRequest</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aa48f900a238f59156731bd0ca283538c" prot="public" static="no">
+        <name>MD_TBL_STATUS_ERR_EID</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Received unexpected error 0x%08X from CFE_TBL_GetStatus for tbl #d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Received unexpected error 0x%08X from CFE_TBL_GetStatus for tbl #d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued on receipt of an unexpected error message from CFE_TBL_GetStatus. Normal processing continues; no special action is taken. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="217" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="217" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ac7734635b4ee37d82fb83191cd43eeac" compoundref="md__app_8c" startline="545" endline="620">MD_ManageDwellTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a75dbd8359794715d1947588f047a74ea" prot="public" static="no">
+        <name>MD_CMD_LEN_ERR_EID</name>
+        <initializer>21</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cmd Msg with Bad length Rcvd: ID = 0x%04X, CC = d, Exp Len = d, Len = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cmd Msg with Bad length Rcvd: ID = 0x%04X, CC = d, Exp Len = d, Len = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued when the Memory Dwell task receives a command which has a length that is inconsistent with the expected length for its command code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="230" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="230" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ad8dd931c83829fa36f3cb9f6a1cbfd85" compoundref="md__app_8c" startline="625" endline="724">MD_ExecRequest</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a5d00702255bff020be04fd9266825147" prot="public" static="no">
+        <name>MD_MSG_LEN_ERR_EID</name>
+        <initializer>22</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Msg with Bad length Rcvd: ID = 0x%04X, Exp Len = d, Len = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Msg with Bad length Rcvd: ID = 0x%04X, Exp Len = d, Len = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued when the Memory Dwell task receives a message which has a length that is inconsistent with the expected length for its message id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="243" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="243" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1a5d22a04828b72821c0678c68dd6b4b9d" compoundref="md__app_8c" startline="48" endline="185">MD_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a3f010c83a4cc93442333a23ce60c5712" prot="public" static="no">
+        <name>MD_JAM_DWELL_INF_EID</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Successful Jam to Dwell Tbl#d Entry #d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Successful Jam to Dwell Tbl#d Entry #d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued for a successful jam operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="254" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="254" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a4728df6da5cef624b7605f52bef2eafc" prot="public" static="no">
+        <name>MD_JAM_NULL_DWELL_INF_EID</name>
+        <initializer>31</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Successful Jam of a Null Dwell Entry to Dwell Tbl#d Entry #d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Successful Jam of a Null Dwell Entry to Dwell Tbl#d Entry #d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued for a jam operation in which a null dwell entry is specified. A null entry is specified when the input dwell length is zero. All dwell fields (address, length, and delay) will be set to zero in this case. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="267" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="267" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1ad8ae656725752c64523366d48fa9068b" prot="public" static="no">
+        <name>MD_INVALID_JAM_TABLE_ERR_EID</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Jam Cmd rejected due to invalid Tbl Id arg = d (Expect 1.. d)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Jam Cmd rejected due to invalid Tbl Id arg = d (Expect 1.. d)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event is issued when a Jam Dwell Command is received with an invalid value for the table id argument. Values in the range 1..<ref refid="md__platform__cfg_8h_1a6624d8844a1a24a4e1df54487214d70d" kindref="member">MD_NUM_DWELL_TABLES</ref> are expected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="280" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="280" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a6a49fa56cffb1eb8ac821be1ffc7c140" prot="public" static="no">
+        <name>MD_INVALID_ENTRY_ARG_ERR_EID</name>
+        <initializer>33</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Jam Cmd rejected due to invalid Entry Id arg = d (Expect 1.. d)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000022"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Jam Cmd rejected due to invalid Entry Id arg = d (Expect 1.. d)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event is issued when a Jam Dwell Command is received with an invalid value for the entry id argument. Values in the range 1..<ref refid="md__platform__cfg_8h_1a2b1a6acbd1ce79e5c6979d700c88262b" kindref="member">MD_DWELL_TABLE_SIZE</ref> are expected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="294" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="294" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a76eccd78dceae12452de9ad8199cfd0e" prot="public" static="no">
+        <name>MD_INVALID_LEN_ARG_ERR_EID</name>
+        <initializer>34</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Jam Cmd rejected due to invalid Field Length arg = d (Expect 0,1,2,or 4)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000023"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Jam Cmd rejected due to invalid Field Length arg = d (Expect 0,1,2,or 4)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event is issued when a Jam Dwell Command is received with an invalid value for the field length argument. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="306" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="306" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a19dd5eccce59582b45826c5cb2dbfa28" prot="public" static="no">
+        <name>MD_CANT_RESOLVE_JAM_ADDR_ERR_EID</name>
+        <initializer>35</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Jam Cmd rejected because symbolic address &apos;s&apos; couldn&apos;t be resolved&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000024"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Jam Cmd rejected because symbolic address &apos;s&apos; couldn&apos;t be resolved&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event is issued when symbolic address passed in Jam command couldn&apos;t be resolved by use of the on-board Symbol Table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="318" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="318" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aad6efea4e321394aa683aac0265de708" prot="public" static="no">
+        <name>MD_INVALID_JAM_ADDR_ERR_EID</name>
+        <initializer>36</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Jam Cmd rejected because address 0x%08X is not in a valid range&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000025"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Jam Cmd rejected because address 0x%08X is not in a valid range&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The resolved address (numerical value for symbol + offset) and field length specified by the Jam command were found to specify a dwell be outside valid ranges. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="331" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="331" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1ab4bb2951a69b695d1566b013bb910abf" prot="public" static="no">
+        <name>MD_JAM_ADDR_NOT_32BIT_ERR_EID</name>
+        <initializer>37</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Jam Cmd rejected because address 0x%08X is not 32-bit aligned&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000026"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Jam Cmd rejected because address 0x%08X is not 32-bit aligned&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The Jam command specified a 4-byte read, and the resolved address (numerical value for symbol + offset) is not on a 4-byte boundary. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="344" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="344" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a338eb8bb91358049fb9d683080c828c1" prot="public" static="no">
+        <name>MD_JAM_ADDR_NOT_16BIT_ERR_EID</name>
+        <initializer>38</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Jam Cmd rejected because address 0x%08X is not 16-bit aligned&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000027"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Jam Cmd rejected because address 0x%08X is not 16-bit aligned&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The Jam command specified a 2-byte read, and the resolved address (numerical value for symbol + offset) is not on a 2-byte boundary. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="356" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="356" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a588a621556435cc412234abeab8030d6" prot="public" static="no">
+        <name>MD_NO_TBL_COPY_ERR_EID</name>
+        <initializer>39</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Didn&apos;t update MD tbl #d due to unexpected CFE_TBL_GetAddress return: 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000028"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Didn&apos;t update MD tbl #d due to unexpected CFE_TBL_GetAddress return: 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued after the following sequence occurs: 1) <ref refid="cfe__tbl__api_8c_1a610383068765ec892a97c972ec8a9849" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetStatus</ref> returned <ref refid="cfe__error_8h_1aa1f1b3d285fd0767eed9b1ebae358f0c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_INFO_UPDATE_PENDING</ref> 2) <ref refid="cfe__tbl__api_8c_1a31078e6930a4d5fd5f5d7a90a582ca2a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Update</ref> returned <ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref>, a call is made to 3) <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> returned something other than <ref refid="cfe__error_8h_1a16d909d1b698830edc62f26fdb8c85c5" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_INFO_UPDATED</ref>.</para><para>When this happens, the newly loaded table contents are <emphasis>not</emphasis> copied to MD task structures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="375" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="375" bodyend="-1"/>
+        <referencedby refid="md__app_8h_1ac7469b3a156f3511e9fe5b30ec6d1582" compoundref="md__app_8c" startline="382" endline="540">MD_InitTableServices</referencedby>
+        <referencedby refid="md__app_8h_1ac7734635b4ee37d82fb83191cd43eeac" compoundref="md__app_8c" startline="545" endline="620">MD_ManageDwellTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a55446debaca3a5be6a950b0e6092710a" prot="public" static="no">
+        <name>MD_ZERO_RATE_TBL_INF_EID</name>
+        <initializer>40</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table is enabled but no processing will occur for table being loaded (rate is zero)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000029"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table is enabled but no processing will occur for table being loaded (rate is zero)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATIONAL</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+1) The calculated rate, the total of delays for all active entries, equals zero, and 2) The table is enabled</para><para>If this load was initiated via ground command, the Table Id will be known from the command. If this load was recovered after a reset, a subsequent event message will identify the Table Id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="393" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="393" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a3b0fd8f0a26af5b9f6c8f6cb658b9b3b" prot="public" static="no">
+        <name>MD_RESOLVE_ERR_EID</name>
+        <initializer>41</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table rejected because address (sym=&apos;s&apos;/offset=0x%08X) in entry #d couldn&apos;t be resolved&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000030"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table rejected because address (sym=&apos;s&apos;/offset=0x%08X) in entry #d couldn&apos;t be resolved&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The specified symbol wasn&apos;t found in the system symbol table. This could be either because there is no symbol table, or because the symbol isn&apos;t present in an existing symbol table.</para><para>If this load was initiated via ground command, the Table Id will be known from the command. If this load was recovered after a reset, a subsequent event message will identify the Table Id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="410" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="410" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aa3908af299648362b2b3d7e39dce00ef" prot="public" static="no">
+        <name>MD_RANGE_ERR_EID</name>
+        <initializer>42</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table rejected because address (sym=&apos;s&apos;/offset=0x%08X) in entry #d was out of range&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000031"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table rejected because address (sym=&apos;s&apos;/offset=0x%08X) in entry #d was out of range&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The specified address was not in allowable memory ranges.</para><para>If this load was initiated via ground command, the Table Id will be known from the command. If this load was recovered after a reset, a subsequent event message will identify the Table Id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="425" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="425" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1ad349848e287827c4c16d8fe538ae5365" prot="public" static="no">
+        <name>MD_TBL_HAS_LEN_ERR_EID</name>
+        <initializer>43</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table rejected because length (d) in entry #d was invalid&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000032"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table rejected because length (d) in entry #d was invalid&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The dwell table contains an invalid value for a dwell length.</para><para>If this load was initiated via ground command, the Table Id will be known from the command. If this load was recovered after a reset, a subsequent event message will identify the Table Id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="440" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="440" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a8aba8bdc9806296613f851a5ff64132b" prot="public" static="no">
+        <name>MD_TBL_ENA_FLAG_EID</name>
+        <initializer>44</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table rejected because value of enable flag (d) is invalid&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000033"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table rejected because value of enable flag (d) is invalid&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The dwell table&apos;s enable value was neither zero nor one.</para><para>If this load was initiated via ground command, the Table Id will be known from the command. If this load was recovered after a reset, a subsequent event message will identify the Table Id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="455" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="455" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a6e62738cadadb90434615455e3027931" prot="public" static="no">
+        <name>MD_TBL_ALIGN_ERR_EID</name>
+        <initializer>45</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table rejected because address (sym=&apos;s&apos;/offset=0x08X) in entry #d is not properly aligned for a d-byte dwell&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000034"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table rejected because address (sym=&apos;s&apos;/offset=0x08X) in entry #d is not properly aligned for a d-byte dwell&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+Either a 4-byte dwell was specified and address is not 4-byte aligned, or a 2-byte dwell was specified and address is not 2-byte aligned.</para><para>If this load was initiated via ground command, the Table Id will be known from the command. If this load was recovered after a reset, a subsequent event message will identify the Table Id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="471" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="471" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a5f6880a39fd0724e7a28517e0c645286" prot="public" static="no">
+        <name>MD_SET_SIGNATURE_INF_EID</name>
+        <initializer>46</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Successfully set signature for Dwell Tbl#d to &apos;s&apos;&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000035"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Successfully set signature for Dwell Tbl#d to &apos;s&apos;&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+A &apos;Set Signature&apos; command was received and processed nominally to associate a signature with the specified dwell table. All dwell packets derived from that dwell table will include the specified signature string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="485" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="485" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a0101d50623a4a196766c9839817fb442" prot="public" static="no">
+        <name>MD_INVALID_SIGNATURE_TABLE_ERR_EID</name>
+        <initializer>47</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Signature cmd rejected due to invalid Tbl Id arg = d (Expect 1.. d)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000036"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Signature cmd rejected due to invalid Tbl Id arg = d (Expect 1.. d)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event is issued when a Set Signature Command is received with an invalid value for the table id argument. Values in the range 1..<ref refid="md__platform__cfg_8h_1a6624d8844a1a24a4e1df54487214d70d" kindref="member">MD_NUM_DWELL_TABLES</ref> are expected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="499" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="499" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aa352b5ee2b17d4a899424e0e97d18f4b" prot="public" static="no">
+        <name>MD_INVALID_SIGNATURE_LENGTH_ERR_EID</name>
+        <initializer>49</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Signature cmd rejected due to invalid Signature length&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000037"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Signature cmd rejected due to invalid Signature length&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error event is issued when a Set Signature Command is received with a string not containing null termination within the allowable length. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="512" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="512" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1a6288f8702435343b11f9ab8c25f1809d" prot="public" static="no">
+        <name>MD_TBL_SIG_LEN_ERR_EID</name>
+        <initializer>50</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table rejected because Signature length was invalid&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000038"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table rejected because Signature length was invalid&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The dwell table contains an invalid Signature (not null terminated).</para><para>If this load was initiated via ground command, the Table Id will be known from the command. If this load was recovered after a reset, a subsequent event message will identify the Table Id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="528" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="528" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1aa2e09112c0af97f10c3a1cab6bb4f911" compoundref="md__dwell__tbl_8c" startline="36" endline="145">MD_TableValidationFunc</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1aa682ca68b4ef351b005f8509cd248fba" prot="public" static="no">
+        <name>MD_ZERO_RATE_CMD_INF_EID</name>
+        <initializer>51</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Dwell Table d is enabled with a delay of zero so no processing will occur&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000039"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Dwell Table d is enabled with a delay of zero so no processing will occur&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATIONAL</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+1) The calculated rate, the total of delays for all active entries, current equals zero 2) The table is currently enabled</para><para>If the command either changes the delay values in the table (such that the total delay is 0) while the table is enabled, or if the table is enabled while the total delay value is 0, this event will be sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="546" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="546" bodyend="-1"/>
+        <referencedby refid="md__cmds_8h_1ad514a609b6ab07ad844147c9a9d26822" compoundref="md__cmds_8c" startline="161" endline="346">MD_ProcessJamCmd</referencedby>
+        <referencedby refid="md__cmds_8h_1a3e0e075574f7d6020a835d42215f8508" compoundref="md__cmds_8c" startline="39" endline="108">MD_ProcessStartCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="md__events_8h_1afcf12c18e6333d758dde914eba0ad337" prot="public" static="no">
+        <name>MD_DWELL_TBL_INF_EID</name>
+        <initializer>52</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;MD Dwell Tbl verify results: good = %d, bad = %d, unused = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000040"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;MD Dwell Tbl verify results: good = %d, bad = %d, unused = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a table validation has been completed for memory dwell table load</para><para>The <computeroutput>good</computeroutput> field is number of entries that passed, the <computeroutput>bad</computeroutput> field is number of entries that failed, the <computeroutput>unused</computeroutput> field is the number of entries that weren&apos;t checked because they were marked unused. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_events.h" line="564" column="9" bodyfile="apps/md/fsw/src/md_events.h" bodystart="564" bodyend="-1"/>
+        <referencedby refid="md__dwell__tbl_8h_1ae870f3da22b60e4f265927ad1f8533ab" compoundref="md__dwell__tbl_8c" startline="173" endline="234">MD_CheckTableEntries</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>md_events.h<sp/>1.5<sp/>2017/05/22<sp/>14:56:31EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/>The<sp/>CFS<sp/>Memory<sp/>Dwell<sp/>(MD)<sp/>Application<sp/>event<sp/>id<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_md_events_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_md_events_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>MD<sp/>event<sp/>message<sp/>ID&apos;s...</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="37" refid="md__events_8h_1acf8c8def166ef56ec58015b2b875abf2" refkind="member"><highlight class="preprocessor">#define<sp/>MD_INIT_INF_EID<sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="md__events_8h_1a2c451ef0340352c5ae872f1c229db96f" refkind="member"><highlight class="preprocessor">#define<sp/>MD_PIPE_ERR_EID<sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="md__events_8h_1a8c910965f1f8c779a552159d56bcc538" refkind="member"><highlight class="preprocessor">#define<sp/>MD_RECOVERED_TBL_VALID_INF_EID<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="md__events_8h_1a4273181754b812b147c367076dd7c968" refkind="member"><highlight class="preprocessor">#define<sp/>MD_RECOVERED_TBL_NOT_VALID_ERR_EID<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="md__events_8h_1a25369a86c399456e174d2078048f316d" refkind="member"><highlight class="preprocessor">#define<sp/>MD_DWELL_TBL_TOO_LARGE_CRIT_EID<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="md__events_8h_1aff958c47ca913f6cc8ca399d9760b375" refkind="member"><highlight class="preprocessor">#define<sp/>MD_TBL_REGISTER_CRIT_EID<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="md__events_8h_1abc4e72a5f5a043813e792dac02bdf8b4" refkind="member"><highlight class="preprocessor">#define<sp/>MD_TBL_INIT_INF_EID<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="md__events_8h_1aa2fb319cf8ff0cc23299b0b4262f18bf" refkind="member"><highlight class="preprocessor">#define<sp/>MD_NOOP_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="md__events_8h_1aa65288ac1a4146ece66296ce99175860" refkind="member"><highlight class="preprocessor">#define<sp/>MD_RESET_CNTRS_DBG_EID<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="md__events_8h_1affed2c3d47f6fe1f08e2638e2d58c465" refkind="member"><highlight class="preprocessor">#define<sp/>MD_START_DWELL_INF_EID<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="md__events_8h_1a8b99212632cf92ec827af25fc0393e7c" refkind="member"><highlight class="preprocessor">#define<sp/>MD_STOP_DWELL_INF_EID<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="md__events_8h_1a54967ed261e770c4bd75c94de3cfd996" refkind="member"><highlight class="preprocessor">#define<sp/>MD_EMPTY_TBLMASK_ERR_EID<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="md__events_8h_1aeb4f7b2f846509fc89b10034f7fce879" refkind="member"><highlight class="preprocessor">#define<sp/>MD_MID_ERR_EID<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="md__events_8h_1a27b25ee6a63c7819ebe7e5d5c0896fee" refkind="member"><highlight class="preprocessor">#define<sp/>MD_CC_NOT_IN_TBL_ERR_EID<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="md__events_8h_1a0fb25805b6027f32dae7e0f471517c5b" refkind="member"><highlight class="preprocessor">#define<sp/>MD_CC_NOT_IN_LOOP_ERR_EID<sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="md__events_8h_1aa48f900a238f59156731bd0ca283538c" refkind="member"><highlight class="preprocessor">#define<sp/>MD_TBL_STATUS_ERR_EID<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="md__events_8h_1a75dbd8359794715d1947588f047a74ea" refkind="member"><highlight class="preprocessor">#define<sp/>MD_CMD_LEN_ERR_EID<sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="md__events_8h_1a5d00702255bff020be04fd9266825147" refkind="member"><highlight class="preprocessor">#define<sp/>MD_MSG_LEN_ERR_EID<sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="md__events_8h_1a3f010c83a4cc93442333a23ce60c5712" refkind="member"><highlight class="preprocessor">#define<sp/>MD_JAM_DWELL_INF_EID<sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="md__events_8h_1a4728df6da5cef624b7605f52bef2eafc" refkind="member"><highlight class="preprocessor">#define<sp/>MD_JAM_NULL_DWELL_INF_EID<sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="md__events_8h_1ad8ae656725752c64523366d48fa9068b" refkind="member"><highlight class="preprocessor">#define<sp/>MD_INVALID_JAM_TABLE_ERR_EID<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="md__events_8h_1a6a49fa56cffb1eb8ac821be1ffc7c140" refkind="member"><highlight class="preprocessor">#define<sp/>MD_INVALID_ENTRY_ARG_ERR_EID<sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="md__events_8h_1a76eccd78dceae12452de9ad8199cfd0e" refkind="member"><highlight class="preprocessor">#define<sp/>MD_INVALID_LEN_ARG_ERR_EID<sp/>34</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318" refid="md__events_8h_1a19dd5eccce59582b45826c5cb2dbfa28" refkind="member"><highlight class="preprocessor">#define<sp/>MD_CANT_RESOLVE_JAM_ADDR_ERR_EID<sp/>35</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331" refid="md__events_8h_1aad6efea4e321394aa683aac0265de708" refkind="member"><highlight class="preprocessor">#define<sp/>MD_INVALID_JAM_ADDR_ERR_EID<sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="md__events_8h_1ab4bb2951a69b695d1566b013bb910abf" refkind="member"><highlight class="preprocessor">#define<sp/>MD_JAM_ADDR_NOT_32BIT_ERR_EID<sp/>37</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356" refid="md__events_8h_1a338eb8bb91358049fb9d683080c828c1" refkind="member"><highlight class="preprocessor">#define<sp/>MD_JAM_ADDR_NOT_16BIT_ERR_EID<sp/>38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375" refid="md__events_8h_1a588a621556435cc412234abeab8030d6" refkind="member"><highlight class="preprocessor">#define<sp/>MD_NO_TBL_COPY_ERR_EID<sp/>39</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393" refid="md__events_8h_1a55446debaca3a5be6a950b0e6092710a" refkind="member"><highlight class="preprocessor">#define<sp/>MD_ZERO_RATE_TBL_INF_EID<sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410" refid="md__events_8h_1a3b0fd8f0a26af5b9f6c8f6cb658b9b3b" refkind="member"><highlight class="preprocessor">#define<sp/>MD_RESOLVE_ERR_EID<sp/>41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425" refid="md__events_8h_1aa3908af299648362b2b3d7e39dce00ef" refkind="member"><highlight class="preprocessor">#define<sp/>MD_RANGE_ERR_EID<sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440" refid="md__events_8h_1ad349848e287827c4c16d8fe538ae5365" refkind="member"><highlight class="preprocessor">#define<sp/>MD_TBL_HAS_LEN_ERR_EID<sp/>43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455" refid="md__events_8h_1a8aba8bdc9806296613f851a5ff64132b" refkind="member"><highlight class="preprocessor">#define<sp/>MD_TBL_ENA_FLAG_EID<sp/>44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight></codeline>
+<codeline lineno="471" refid="md__events_8h_1a6e62738cadadb90434615455e3027931" refkind="member"><highlight class="preprocessor">#define<sp/>MD_TBL_ALIGN_ERR_EID<sp/>45</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="485" refid="md__events_8h_1a5f6880a39fd0724e7a28517e0c645286" refkind="member"><highlight class="preprocessor">#define<sp/>MD_SET_SIGNATURE_INF_EID<sp/><sp/>46</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499" refid="md__events_8h_1a0101d50623a4a196766c9839817fb442" refkind="member"><highlight class="preprocessor">#define<sp/>MD_INVALID_SIGNATURE_TABLE_ERR_EID<sp/>47</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="512" refid="md__events_8h_1aa352b5ee2b17d4a899424e0e97d18f4b" refkind="member"><highlight class="preprocessor">#define<sp/>MD_INVALID_SIGNATURE_LENGTH_ERR_EID<sp/>49</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528" refid="md__events_8h_1a6288f8702435343b11f9ab8c25f1809d" refkind="member"><highlight class="preprocessor">#define<sp/>MD_TBL_SIG_LEN_ERR_EID<sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="546" refid="md__events_8h_1aa682ca68b4ef351b005f8509cd248fba" refkind="member"><highlight class="preprocessor">#define<sp/>MD_ZERO_RATE_CMD_INF_EID<sp/>51</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight></codeline>
+<codeline lineno="564" refid="md__events_8h_1afcf12c18e6333d758dde914eba0ad337" refkind="member"><highlight class="preprocessor">#define<sp/>MD_DWELL_TBL_INF_EID<sp/>52</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="565"><highlight class="normal"></highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="567"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="568"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/md/fsw/src/md_events.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,526 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_s_c___oper_data__t" kind="struct" language="C++" prot="public">
+    <compoundname>SC_OperData_t</compoundname>
+    <includes refid="sc__app_8h" local="no">sc_app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1af0cb10b271305283e452aa727dc89ee9" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+        <definition>CFE_SB_MsgPtr_t SC_OperData_t::MsgPtr</definition>
+        <argsstring></argsstring>
+        <name>MsgPtr</name>
+        <briefdescription>
+<para>Pointer to command message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="301" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="301" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a802630cf1d9475d7cf61da91fd216441" compoundref="sc__app_8c" startline="104" endline="170">SC_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1aa461d15f4308c72fcc64cd973022d6a8" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t SC_OperData_t::CmdPipe</definition>
+        <argsstring></argsstring>
+        <name>CmdPipe</name>
+        <briefdescription>
+<para>Command pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="302" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="302" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+        <referencedby refid="sc__app_8h_1a802630cf1d9475d7cf61da91fd216441" compoundref="sc__app_8c" startline="104" endline="170">SC_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a0b6f106d6221aa91df8af6cad7569fc4" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::AtsTblHandle[SC_NUMBER_OF_ATS]</definition>
+        <argsstring>[SC_NUMBER_OF_ATS]</argsstring>
+        <name>AtsTblHandle</name>
+        <briefdescription>
+<para>Table handles for all ATS tables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="304" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="304" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1acb1d8388822e74ecfd9c622d9d680e44" compoundref="sc__app_8c" startline="558" endline="607">SC_GetLoadTablePointers</referencedby>
+        <referencedby refid="sc__cmds_8h_1a1f498280192adef29cd4726f4327a050" compoundref="sc__cmds_8c" startline="934" endline="962">SC_ManageAtsTable</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1ae9f8e4eb45cfe1bf36660cf691e95058" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref> *</type>
+        <definition>uint16* SC_OperData_t::AtsTblAddr[SC_NUMBER_OF_ATS]</definition>
+        <argsstring>[SC_NUMBER_OF_ATS]</argsstring>
+        <name>AtsTblAddr</name>
+        <briefdescription>
+<para>Table Addresses for all ATS tables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="305" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="305" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a8a81e9c2eb64da05ba257bc7a399ada8" compoundref="sc__atsrq_8c" startline="234" endline="324">SC_BeginAts</referencedby>
+        <referencedby refid="sc__app_8h_1acb1d8388822e74ecfd9c622d9d680e44" compoundref="sc__app_8c" startline="558" endline="607">SC_GetLoadTablePointers</referencedby>
+        <referencedby refid="sc__state_8h_1aed7327ff45afa377eb11a11b522110fa" compoundref="sc__state_8c" startline="341" endline="397">SC_GetNextAtsCommand</referencedby>
+        <referencedby refid="sc__loads_8h_1ae16960a3e96f84bdae9cc07750a9602e" compoundref="sc__loads_8c" startline="274" endline="335">SC_Insert</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a816bc81fa048a45b1f65be72695a11bc" compoundref="sc__loads_8c" startline="99" endline="233">SC_LoadAts</referencedby>
+        <referencedby refid="sc__cmds_8h_1a1f498280192adef29cd4726f4327a050" compoundref="sc__cmds_8c" startline="934" endline="962">SC_ManageAtsTable</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1adc3b49e6b418f1ba6884b6720b2d330d" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::AppendTblHandle</definition>
+        <argsstring></argsstring>
+        <name>AppendTblHandle</name>
+        <briefdescription>
+<para>Table handle for Append ATS table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="307" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="307" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1acb1d8388822e74ecfd9c622d9d680e44" compoundref="sc__app_8c" startline="558" endline="607">SC_GetLoadTablePointers</referencedby>
+        <referencedby refid="sc__cmds_8h_1adce07429e0b7da76941d632438951cb1" compoundref="sc__cmds_8c" startline="972" endline="999">SC_ManageAppendTable</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1adf51ebd479f202b86c8ac6eb26b2510f" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref> *</type>
+        <definition>uint16* SC_OperData_t::AppendTblAddr</definition>
+        <argsstring></argsstring>
+        <name>AppendTblAddr</name>
+        <briefdescription>
+<para>Table Address for Append ATS table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="308" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="308" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1acb1d8388822e74ecfd9c622d9d680e44" compoundref="sc__app_8c" startline="558" endline="607">SC_GetLoadTablePointers</referencedby>
+        <referencedby refid="sc__cmds_8h_1adce07429e0b7da76941d632438951cb1" compoundref="sc__cmds_8c" startline="972" endline="999">SC_ManageAppendTable</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__loads_8h_1a2d0f5e99af744f8018f7b2e1f084e434" compoundref="sc__loads_8c" startline="568" endline="632">SC_UpdateAppend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a164a1d84ef1aed88bc927da487a8b382" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::RtsTblHandle[SC_NUMBER_OF_RTS]</definition>
+        <argsstring>[SC_NUMBER_OF_RTS]</argsstring>
+        <name>RtsTblHandle</name>
+        <briefdescription>
+<para>Table handles for all RTS tables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="310" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="310" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1acb1d8388822e74ecfd9c622d9d680e44" compoundref="sc__app_8c" startline="558" endline="607">SC_GetLoadTablePointers</referencedby>
+        <referencedby refid="sc__app_8h_1af79d790d3ceade4d1e3cc1a2a63b418c" compoundref="sc__app_8c" startline="616" endline="652">SC_LoadDefaultTables</referencedby>
+        <referencedby refid="sc__cmds_8h_1ad54254e431ddb37bec4d1681cc2e3401" compoundref="sc__cmds_8c" startline="896" endline="924">SC_ManageRtsTable</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1af1422b5c4d24c81a8517531a434b4b19" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref> *</type>
+        <definition>uint16* SC_OperData_t::RtsTblAddr[SC_NUMBER_OF_RTS]</definition>
+        <argsstring>[SC_NUMBER_OF_RTS]</argsstring>
+        <name>RtsTblAddr</name>
+        <briefdescription>
+<para>Table addresses for all RTS tables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="311" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="311" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1acb1d8388822e74ecfd9c622d9d680e44" compoundref="sc__app_8c" startline="558" endline="607">SC_GetLoadTablePointers</referencedby>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1ad54254e431ddb37bec4d1681cc2e3401" compoundref="sc__cmds_8c" startline="896" endline="924">SC_ManageRtsTable</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af3256232b4e0cdd7688bf3d9772094d5" compoundref="sc__rtsrq_8c" startline="219" endline="283">SC_StartRtsGrpCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a10f16fda012961ffdee8af5ead4855c1" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::AtsInfoHandle</definition>
+        <argsstring></argsstring>
+        <name>AtsInfoHandle</name>
+        <briefdescription>
+<para>Table handle the for ATS Info Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="313" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="313" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+        <referencedby refid="sc__cmds_8h_1a2fb1b61c3b849971ac458d890e644109" compoundref="sc__cmds_8c" startline="824" endline="887">SC_TableManageCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a174d7310fa7980d799924f5583a36041" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c___ats_info_table__t" kindref="compound">SC_AtsInfoTable_t</ref> *</type>
+        <definition>SC_AtsInfoTable_t* SC_OperData_t::AtsInfoTblAddr</definition>
+        <argsstring></argsstring>
+        <name>AtsInfoTblAddr</name>
+        <briefdescription>
+<para>Table address for the ATS Info Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="314" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="314" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a3f66fd506dce0cf0c0c9764222e2f387" compoundref="sc__atsrq_8c" startline="749" endline="809">SC_AppendAtsCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a8a81e9c2eb64da05ba257bc7a399ada8" compoundref="sc__atsrq_8c" startline="234" endline="324">SC_BeginAts</referencedby>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__state_8h_1aed7327ff45afa377eb11a11b522110fa" compoundref="sc__state_8c" startline="341" endline="397">SC_GetNextAtsCommand</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a641a2ed2774a4951cd79f0ed15c31aa0" compoundref="sc__atsrq_8c" startline="356" endline="415">SC_GroundSwitchCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a0cc5434df420502c5d7269b9be5e7ff6" compoundref="sc__loads_8c" startline="343" endline="359">SC_InitAtsTables</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a68058fd082d5675fcadf1042e5a6bbd4" compoundref="sc__atsrq_8c" startline="498" endline="568">SC_InlineSwitch</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1aa4e5e88e49506b47ec4e2759d1a8088a" compoundref="sc__atsrq_8c" startline="332" endline="349">SC_KillAts</referencedby>
+        <referencedby refid="sc__loads_8h_1a816bc81fa048a45b1f65be72695a11bc" compoundref="sc__loads_8c" startline="99" endline="233">SC_LoadAts</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ae69e64aed02ef744b205cb07fdd0e861" compoundref="sc__atsrq_8c" startline="423" endline="490">SC_ServiceSwitchPend</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a687aae01f1d28bd5dba0d23d9ffa832a" compoundref="sc__atsrq_8c" startline="91" endline="170">SC_StartAtsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a086a130d1b61c669baee65e341f7152d" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::AppendInfoHandle</definition>
+        <argsstring></argsstring>
+        <name>AppendInfoHandle</name>
+        <briefdescription>
+<para>Table handle for Append Info Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="316" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="316" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+        <referencedby refid="sc__cmds_8h_1a2fb1b61c3b849971ac458d890e644109" compoundref="sc__cmds_8c" startline="824" endline="887">SC_TableManageCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a08e84aff13a4a3349d3b7a29e4088e2f" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c___ats_info_table__t" kindref="compound">SC_AtsInfoTable_t</ref> *</type>
+        <definition>SC_AtsInfoTable_t* SC_OperData_t::AppendInfoTblAddr</definition>
+        <argsstring></argsstring>
+        <name>AppendInfoTblAddr</name>
+        <briefdescription>
+<para>Table address for Append Info Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="317" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="317" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a5be9078240671b8593a9bd838b494470" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::RtsInfoHandle</definition>
+        <argsstring></argsstring>
+        <name>RtsInfoHandle</name>
+        <briefdescription>
+<para>Table handle for RTS Info Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="319" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="319" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+        <referencedby refid="sc__cmds_8h_1a2fb1b61c3b849971ac458d890e644109" compoundref="sc__cmds_8c" startline="824" endline="887">SC_TableManageCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a542e117fd51a8d0a5b4cac151296ad01" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c___rts_info_entry__t" kindref="compound">SC_RtsInfoEntry_t</ref> *</type>
+        <definition>SC_RtsInfoEntry_t* SC_OperData_t::RtsInfoTblAddr</definition>
+        <argsstring></argsstring>
+        <name>RtsInfoTblAddr</name>
+        <briefdescription>
+<para>Table address for RTS INfo Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="320" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="320" bodyend="-1"/>
+        <referencedby refid="sc__rtsrq_8h_1af2b821691ddac2445954ff04e9f14f44" compoundref="sc__rtsrq_8c" startline="390" endline="425">SC_DisableRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a81978a02722b4746afd15230104b30aa" compoundref="sc__rtsrq_8c" startline="434" endline="481">SC_DisableRtsGrpCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af9e2c25188ff805eaf63980273a53e9b" compoundref="sc__rtsrq_8c" startline="489" endline="528">SC_EnableRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ad50bc01bb2645d329678fcaf5c64a332" compoundref="sc__rtsrq_8c" startline="537" endline="584">SC_EnableRtsGrpCmd</referencedby>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__state_8h_1a95e18f6fab756db5f6bdec408fdec63d" compoundref="sc__state_8c" startline="68" endline="106">SC_GetNextRtsTime</referencedby>
+        <referencedby refid="sc__app_8h_1ae9708b454e3538a95c056827ea94a895" compoundref="sc__app_8c" startline="278" endline="340">SC_InitTables</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a4be45b61e906fe058ab1c32e1b5ce271" compoundref="sc__rtsrq_8c" startline="592" endline="614">SC_KillRts</referencedby>
+        <referencedby refid="sc__loads_8h_1adc8cee5df0a557a349277c2f37a30bb6" compoundref="sc__loads_8c" startline="367" endline="380">SC_LoadRts</referencedby>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af3256232b4e0cdd7688bf3d9772094d5" compoundref="sc__rtsrq_8c" startline="219" endline="283">SC_StartRtsGrpCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a0c33d7aeb1626bfa209777235f6c3637" compoundref="sc__rtsrq_8c" startline="335" endline="382">SC_StopRtsGrpCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1af1f96526fe09020145ae4f7e1a38e49c" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::RtsCtrlBlckHandle</definition>
+        <argsstring></argsstring>
+        <name>RtsCtrlBlckHandle</name>
+        <briefdescription>
+<para>Table handle for the RTP ctrl block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="322" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="322" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a9a952911b5e98bdd6f3c2bef2abc27df" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c___rtp_control_block__t" kindref="compound">SC_RtpControlBlock_t</ref> *</type>
+        <definition>SC_RtpControlBlock_t* SC_OperData_t::RtsCtrlBlckAddr</definition>
+        <argsstring></argsstring>
+        <name>RtsCtrlBlckAddr</name>
+        <briefdescription>
+<para>Table address for the RTP ctrl block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="323" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="323" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__state_8h_1a95e18f6fab756db5f6bdec408fdec63d" compoundref="sc__state_8c" startline="68" endline="106">SC_GetNextRtsTime</referencedby>
+        <referencedby refid="sc__app_8h_1ae9708b454e3538a95c056827ea94a895" compoundref="sc__app_8c" startline="278" endline="340">SC_InitTables</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a4be45b61e906fe058ab1c32e1b5ce271" compoundref="sc__rtsrq_8c" startline="592" endline="614">SC_KillRts</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af3256232b4e0cdd7688bf3d9772094d5" compoundref="sc__rtsrq_8c" startline="219" endline="283">SC_StartRtsGrpCmd</referencedby>
+        <referencedby refid="sc__state_8h_1a6758b9fc9107b2b46e0e04c4ae5e6664" compoundref="sc__state_8c" startline="113" endline="151">SC_UpdateNextTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a4d484e819dab175173fa403a7ea3a274" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::AtsCtrlBlckHandle</definition>
+        <argsstring></argsstring>
+        <name>AtsCtrlBlckHandle</name>
+        <briefdescription>
+<para>Table handle for the ATP ctrl block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="325" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="325" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+        <referencedby refid="sc__cmds_8h_1a2fb1b61c3b849971ac458d890e644109" compoundref="sc__cmds_8c" startline="824" endline="887">SC_TableManageCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a39c07cdf7206869ac9e99a3183459e3b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c___atp_control_block__t" kindref="compound">SC_AtpControlBlock_t</ref> *</type>
+        <definition>SC_AtpControlBlock_t* SC_OperData_t::AtsCtrlBlckAddr</definition>
+        <argsstring></argsstring>
+        <name>AtsCtrlBlckAddr</name>
+        <briefdescription>
+<para>Table address for the ATP ctrl block. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="326" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="326" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a8a81e9c2eb64da05ba257bc7a399ada8" compoundref="sc__atsrq_8c" startline="234" endline="324">SC_BeginAts</referencedby>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__state_8h_1aed7327ff45afa377eb11a11b522110fa" compoundref="sc__state_8c" startline="341" endline="397">SC_GetNextAtsCommand</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a641a2ed2774a4951cd79f0ed15c31aa0" compoundref="sc__atsrq_8c" startline="356" endline="415">SC_GroundSwitchCmd</referencedby>
+        <referencedby refid="sc__app_8h_1ae9708b454e3538a95c056827ea94a895" compoundref="sc__app_8c" startline="278" endline="340">SC_InitTables</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a68058fd082d5675fcadf1042e5a6bbd4" compoundref="sc__atsrq_8c" startline="498" endline="568">SC_InlineSwitch</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1aa4e5e88e49506b47ec4e2759d1a8088a" compoundref="sc__atsrq_8c" startline="332" endline="349">SC_KillAts</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ae69e64aed02ef744b205cb07fdd0e861" compoundref="sc__atsrq_8c" startline="423" endline="490">SC_ServiceSwitchPend</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a687aae01f1d28bd5dba0d23d9ffa832a" compoundref="sc__atsrq_8c" startline="91" endline="170">SC_StartAtsCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a2f9fa2d89a5aec67ebe386074235e88d" compoundref="sc__atsrq_8c" startline="177" endline="227">SC_StopAtsCmd</referencedby>
+        <referencedby refid="sc__state_8h_1a6758b9fc9107b2b46e0e04c4ae5e6664" compoundref="sc__state_8c" startline="113" endline="151">SC_UpdateNextTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a0b0a506ec83a04190973a3406527003c" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t SC_OperData_t::AtsCmdStatusHandle[SC_NUMBER_OF_ATS]</definition>
+        <argsstring>[SC_NUMBER_OF_ATS]</argsstring>
+        <name>AtsCmdStatusHandle</name>
+        <briefdescription>
+<para>ATS Cmd Status table handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="328" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="328" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+        <referencedby refid="sc__cmds_8h_1a2fb1b61c3b849971ac458d890e644109" compoundref="sc__cmds_8c" startline="824" endline="887">SC_TableManageCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a5f56987c9540ca83dd856f4c908c2d39" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref> *</type>
+        <definition>uint8* SC_OperData_t::AtsCmdStatusTblAddr[SC_NUMBER_OF_ATS]</definition>
+        <argsstring>[SC_NUMBER_OF_ATS]</argsstring>
+        <name>AtsCmdStatusTblAddr</name>
+        <briefdescription>
+<para>ATS Cmd Status table address. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="329" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="329" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a8a81e9c2eb64da05ba257bc7a399ada8" compoundref="sc__atsrq_8c" startline="234" endline="324">SC_BeginAts</referencedby>
+        <referencedby refid="sc__app_8h_1ac322db6da46a9bfeda1afd9651f18f28" compoundref="sc__app_8c" startline="485" endline="549">SC_GetDumpTablePointers</referencedby>
+        <referencedby refid="sc__loads_8h_1a0cc5434df420502c5d7269b9be5e7ff6" compoundref="sc__loads_8c" startline="343" endline="359">SC_InitAtsTables</referencedby>
+        <referencedby refid="sc__app_8h_1ae9708b454e3538a95c056827ea94a895" compoundref="sc__app_8c" startline="278" endline="340">SC_InitTables</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a816bc81fa048a45b1f65be72695a11bc" compoundref="sc__loads_8c" startline="99" endline="233">SC_LoadAts</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1a0a535ab18c934542cff89a0aeab0da69" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 SC_OperData_t::AtsDupTestArray[SC_MAX_ATS_CMDS]</definition>
+        <argsstring>[SC_MAX_ATS_CMDS]</argsstring>
+        <name>AtsDupTestArray</name>
+        <briefdescription>
+<para>ATS test for duplicate cmd numbers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="331" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="331" bodyend="-1"/>
+        <referencedby refid="sc__loads_8h_1a3f19d8f64fe2a9ea12cfb1e6280234b5" compoundref="sc__loads_8c" startline="785" endline="890">SC_VerifyAtsEntry</referencedby>
+        <referencedby refid="sc__loads_8h_1ad052ce81eb4c3902c22a6209c2a2323f" compoundref="sc__loads_8c" startline="718" endline="777">SC_VerifyAtsTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1aa024bfa20224643a21eaeda8ff92e77a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_OperData_t::NumCmdsSec</definition>
+        <argsstring></argsstring>
+        <name>NumCmdsSec</name>
+        <briefdescription>
+<para>the num of cmds that have gone out in a one second period </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="333" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="333" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___oper_data__t_1aba3a8f7d92761f926035b558c5dcac2b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_c___hk_tlm__t" kindref="compound">SC_HkTlm_t</ref></type>
+        <definition>SC_HkTlm_t SC_OperData_t::HkPacket</definition>
+        <argsstring></argsstring>
+        <name>HkPacket</name>
+        <briefdescription>
+<para>SC Housekeeping structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="335" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="335" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SC Operational Data Structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="19">
+        <label>CFE_SB_Msg_t</label>
+        <link refid="union_c_f_e___s_b___msg__t" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>Hdr</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>CCSDS_PriHdr_t</label>
+        <link refid="struct_c_c_s_d_s___pri_hdr__t" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="18">
+        <label>SC_HkTlm_t</label>
+        <link refid="struct_s_c___hk_tlm__t"/>
+      </node>
+      <node id="21">
+        <label>SC_AtsInfoTable_t</label>
+        <link refid="struct_s_c___ats_info_table__t"/>
+      </node>
+      <node id="24">
+        <label>SC_RtpControlBlock_t</label>
+        <link refid="struct_s_c___rtp_control_block__t"/>
+      </node>
+      <node id="22">
+        <label>SC_RtsInfoEntry_t</label>
+        <link refid="struct_s_c___rts_info_entry__t"/>
+      </node>
+      <node id="23">
+        <label>SC_AtpControlBlock_t</label>
+        <link refid="struct_s_c___atp_control_block__t"/>
+      </node>
+      <node id="17">
+        <label>SC_OperData_t</label>
+        <link refid="struct_s_c___oper_data__t"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>HkPacket</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>MsgPtr</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>AtsInfoTblAddr</edgelabel>
+          <edgelabel>AppendInfoTblAddr</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>RtsInfoTblAddr</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>AtsCtrlBlckAddr</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>RtsCtrlBlckAddr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/sc/fsw/src/sc_app.h" line="300" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="299" bodyend="338"/>
+    <listofallmembers>
+      <member refid="struct_s_c___oper_data__t_1a086a130d1b61c669baee65e341f7152d" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AppendInfoHandle</name></member>
+      <member refid="struct_s_c___oper_data__t_1a08e84aff13a4a3349d3b7a29e4088e2f" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AppendInfoTblAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1adf51ebd479f202b86c8ac6eb26b2510f" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AppendTblAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1adc3b49e6b418f1ba6884b6720b2d330d" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AppendTblHandle</name></member>
+      <member refid="struct_s_c___oper_data__t_1a0b0a506ec83a04190973a3406527003c" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsCmdStatusHandle</name></member>
+      <member refid="struct_s_c___oper_data__t_1a5f56987c9540ca83dd856f4c908c2d39" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsCmdStatusTblAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1a39c07cdf7206869ac9e99a3183459e3b" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsCtrlBlckAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1a4d484e819dab175173fa403a7ea3a274" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsCtrlBlckHandle</name></member>
+      <member refid="struct_s_c___oper_data__t_1a0a535ab18c934542cff89a0aeab0da69" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsDupTestArray</name></member>
+      <member refid="struct_s_c___oper_data__t_1a10f16fda012961ffdee8af5ead4855c1" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsInfoHandle</name></member>
+      <member refid="struct_s_c___oper_data__t_1a174d7310fa7980d799924f5583a36041" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsInfoTblAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1ae9f8e4eb45cfe1bf36660cf691e95058" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsTblAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1a0b6f106d6221aa91df8af6cad7569fc4" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>AtsTblHandle</name></member>
+      <member refid="struct_s_c___oper_data__t_1aa461d15f4308c72fcc64cd973022d6a8" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>CmdPipe</name></member>
+      <member refid="struct_s_c___oper_data__t_1aba3a8f7d92761f926035b558c5dcac2b" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>HkPacket</name></member>
+      <member refid="struct_s_c___oper_data__t_1af0cb10b271305283e452aa727dc89ee9" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>MsgPtr</name></member>
+      <member refid="struct_s_c___oper_data__t_1aa024bfa20224643a21eaeda8ff92e77a" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>NumCmdsSec</name></member>
+      <member refid="struct_s_c___oper_data__t_1a9a952911b5e98bdd6f3c2bef2abc27df" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>RtsCtrlBlckAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1af1f96526fe09020145ae4f7e1a38e49c" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>RtsCtrlBlckHandle</name></member>
+      <member refid="struct_s_c___oper_data__t_1a5be9078240671b8593a9bd838b494470" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>RtsInfoHandle</name></member>
+      <member refid="struct_s_c___oper_data__t_1a542e117fd51a8d0a5b4cac151296ad01" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>RtsInfoTblAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1af1422b5c4d24c81a8517531a434b4b19" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>RtsTblAddr</name></member>
+      <member refid="struct_s_c___oper_data__t_1a164a1d84ef1aed88bc927da487a8b382" prot="public" virt="non-virtual"><scope>SC_OperData_t</scope><name>RtsTblHandle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

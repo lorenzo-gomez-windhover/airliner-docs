@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeesugmempoolsrv" kind="page">
+    <compoundname>cfeesugmempoolsrv</compoundname>
+    <title>Memory Pool Service</title>
+    <detaileddescription>
+<para>Refer to the cFE Application Developers Guide for additional information.</para><para>Applications that are designed for generic missions, frequently have to wait until run-time before allocating memory for buffers, data records, etc.</para><para>The cFE provides a memory allocation algorithm that may be used by an application to manage its block of memory. The user provides a pointer to its memory block and a list of block sizes and the cFE provides &apos;get&apos; and &apos;put&apos; API&apos;s to the user for managing its memory pool.</para><para>Run-time memory allocation in an embedded system can be risky because of the potential problem of memory fragmentation. Memory fragmentation is also referred to as External Fragmentation and is defined in the wikipedia as:</para><para><verbatim>External fragmentation is the phenomenon in which free storage becomes divided
+into many small pieces over time. It is a weakness of certain storage
+allocation algorithms, occurring when an application allocates and deallocates
+(&quot;frees&quot;) regions of storage of varying sizes, and the allocation algorithm
+responds by leaving the allocated and deallocated regions interspersed. The
+result is that, although free storage is available, it is effectively unusable
+because it is divided into pieces that are too small to satisfy the demands of
+the application. The term &quot;external&quot; refers to the fact that the unusable
+storage is outside the allocated regions.</verbatim></para><para>To help prevent this from happening, the cFE has integrated a memory allocation algorithm that is designed to create blocks at run-time, based on the size of the blocks requested. After a reset, there are no blocks created, the memory pool is said to be unconfigured. As requests for memory blocks are made, the memory pool first tries to use blocks that have been created but are no longer in use. If it cannot find an available block, it will create a new one. The created blocks remain until a reset occurs.</para><para>This algorithm is recommended when the size of the requests and the peak rate of requests can be pre-determined. It is highly recommended that adequate margin is designed into the pool size. The memory pool should never get close to being fully configured (i.e. not enough memory to create a new block). If the memory does become fully configured, requests for new size blocks will fail, regardless of whether the created blocks are in-use or not. The margin on the memory pool can be monitored by viewing the &apos;free bytes&apos; member of the memory pool statistics. The memory pool statistics are dumped only when commanded by way of the ES command <ref refid="cfe__es__msg_8h_1a2b1c39432940423ef68c4c183abce3d8" kindref="member">CFE_ES_TLM_POOL_STATS_CC</ref>.</para><para>A user of the ES memory pool begins by tailoring the memory pool for the particular use, by defining a list of block sizes and allocating a block of memory. These block size definitions simply give the memory pool a set of sizes to choose from. They do not configure the memory pool in any way and they do not affect the size of the pool. The cFE defines a default set of block sizes in the cfe_platform_cfg.h file.</para><para>If the default block sizes are used, the application will create the pool using the simpler <ref refid="cfe__esmempool_8c_1af0248c9918a7c6907d8d1f4fa3b99160" kindref="member">CFE_ES_PoolCreate</ref> API. This API takes a pointer to the first byte of the memory pool (allocated by the application) and a size parameter. The API returns a handle to be used for the get and put requests.</para><para>If the defaults are not sufficient, the user must define the block sizes and use the <ref refid="cfe__esmempool_8c_1ae096a654808a468170036a1207f813f3" kindref="member">CFE_ES_PoolCreateEx</ref> API.</para><para>After receiving a positive response from the PoolCreate API, the memory pool is ready to accept requests, but at this point it is completely unconfigured (meaning there are no blocks created). The first valid request (via <ref refid="cfe__esmempool_8c_1ad6c6982e9aff882aea477114894a4094" kindref="member">CFE_ES_GetPoolBuf</ref> API) after creating the pool will always cause the memory pool to create a block and return a pointer to the new block. The size of the block depends on the size definitions mentioned earlier. If there is not an exact match between the requested and defined sizes, then the memory pool will create and return the smallest block that meets the following criteria: is a defined size and large enough to hold the request.</para><para>If another request for that size comes in before the first block was released through the <ref refid="cfe__esmempool_8c_1ac078549803a17cab3a2acc4c3d1bc139" kindref="member">CFE_ES_PutPoolBuf</ref> API, then the memory pool will create a second block of that size and return a pointer to the second block. If both blocks were then released through the <ref refid="cfe__esmempool_8c_1ac078549803a17cab3a2acc4c3d1bc139" kindref="member">CFE_ES_PutPoolBuf</ref> API and the memory pool statistics were dumped via the <ref refid="cfe__es__msg_8h_1a2b1c39432940423ef68c4c183abce3d8" kindref="member">CFE_ES_TLM_POOL_STATS_CC</ref> command, the number of blocks created would be two. The number of &apos;free bytes&apos; in the pool would be the size of the pool minus the sum of the following items:<itemizedlist>
+<listitem><para>the size of the two blocks created (even though they are not &apos;in-use&apos;).</para></listitem><listitem><para>a buffer descriptor for each of the two blocks created (2 * 12 bytes)</para></listitem><listitem><para>a 168 byte pool descriptor Refer to the cFE Applications Developers Guide for more details.</para></listitem></itemizedlist>
+</para><para>This allocation algorithm does have its limits. There are certain conditions that can place the memory pool in an undesired state. For instance, if a burst of get requests were received for the same block size, the memory pool may create a large number of blocks of that size. If this is a one-time burst, the memory pool would be configured with this large number of blocks that may no longer be needed. This scenario would use up the &apos;free bytes&apos; margin in an undesired way. It should be noted that once the blocks are created, they cannot be deleted by any means other than a processor or power-on reset. It is highly recommended that the memory pool statistics be carefully monitored to ensure that the &apos;free-bytes&apos; margin is sufficient (which is typically dictated by mission requirements).</para><para>An operator can obtain information about an Application&apos;s Memory Pool by using the <ref refid="cfe__es__msg_8h_1a2b1c39432940423ef68c4c183abce3d8" kindref="member">Telemeter Memory Pool Statistics Command. </ref></para><para>This command will cause Executive Services to extract pertinent statistics from the data used to manage the Memory Pool and telemeter them to the ground in the <ref refid="struct_c_f_e___e_s___pool_stats_tlm__t" kindref="compound">Memory Pool Statistics Telemetry Packet. </ref></para><para>In order to obtain the statistics associated with a memory pool, the operator <bold>MUST</bold> have the correct Memory Handle as reported by the Application who owns the Memory Pool. <bold>It should be noted that an inappropriate Memory Pool Handle can <emphasis>(and likely will)</emphasis> cause the system software to crash!</bold> Within the cFE itself, there are three cFE Core Applications that make use of the Executive Services Memory Pool API. These are Software Bus (SB), Event Services (EVS) and Table Services (TBL). Each of these cFE Core Applications report their memory pool handles in telemetry.</para><para>The <ref refid="struct_c_f_e___e_s___pool_stats_tlm__t" kindref="compound">Memory Pool Statistics Telemetry Packet </ref> contains the following information:</para><para><itemizedlist>
+<listitem>
+<para><bold>Memory Pool Handle</bold> - the handle, as provided by the operator in the <ref refid="cfe__es__msg_8h_1a2b1c39432940423ef68c4c183abce3d8" kindref="member">Telemeter Memory Pool Statistics Command. </ref> This repeating of the handle in telemetry insures the operator knows which Memory Pool Statistics are being viewed <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Pool Size</bold> - The total size of the memory pool (in bytes)<linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Number Blocks Requested</bold> - The total number of memory blocks requested for allocation<linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Number of Errors</bold> - The total number of errors encountered when a block was released<linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Number of Free Bytes</bold> - The total number of bytes in the Memory Pool that have never been allocated to a Memory Block<linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Block Statistics</bold> - For each specified size of memory block (of which there are <ref refid="cfe__es_8h_1aa97d866642d474c34790e4d46717ac6b" kindref="member">CFE_ES_MAX_MEMPOOL_BLOCK_SIZES</ref>), the following statistics are kept<linebreak/>
+ <itemizedlist>
+<listitem>
+<para><bold>Block Size</bold> - The size, in bytes, of all blocks of this type<linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Number of Blocks Allocated</bold> - The number of this sized block which are currently allocated and in use<linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Number of Blocks Free</bold> - The number of this size block which have been in use previously but are no longer being used<linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+</para><para>Next: <ref refid="cfeesugsyslogsrv" kindref="compound">System Log Service</ref> <linebreak/>
+ Prev: <ref refid="cfeesugcdssrv" kindref="compound">Critical Data Store Service</ref> <linebreak/>
+ Up To: <ref refid="cfeesovr" kindref="compound">cFE Executive Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

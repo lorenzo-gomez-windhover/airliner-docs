@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="mpc__events_8h" kind="file" language="C++">
+    <compoundname>mpc_events.h</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9" prot="public" static="no">
+        <name>MPC_EventIds_t</name>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a05acbde507d9b7e36d5df350a63c27c0" prot="public">
+          <name>MPC_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a8dab6be34682e582f7cca28a66ca3000" prot="public">
+          <name>MPC_INIT_INF_EID</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the MPC task has completed initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the application major version defined in #MPC_MAJOR_VERSION. The second <computeroutput>d</computeroutput> field contains the application minor version defined in #MPC_MINOR_VERSION. The third <computeroutput>d</computeroutput> field contains the application revision number defined in #MPC_REVISION. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="mpc__platform__cfg_8h_1a582414283b32891945dae283a99ec71f" kindref="member">MPC_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a3a93669dc68a35f1b4dfe3e2e76ed27a" prot="public">
+          <name>MPC_CMD_NOOP_EID</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPC Task receives a NoOp command.</para><para>The first <computeroutput>u</computeroutput> field contains the application major version defined in #MPC_MAJOR_VERSION. The first <computeroutput>d</computeroutput> field contains the application major version defined in #MPC_MAJOR_VERSION. The second <computeroutput>d</computeroutput> field contains the application minor version defined in #MPC_MINOR_VERSION. The third <computeroutput>d</computeroutput> field contains the application revision number defined in #MPC_REVISION. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="mpc__platform__cfg_8h_1a582414283b32891945dae283a99ec71f" kindref="member">MPC_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ab0bcf83aedb7fa8a8ce6fa7efa534c60" prot="public">
+          <name>MPC_SUBSCRIBE_ERR_EID</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPC Task fails to subscribe to a message at initialization.</para><para>The first <computeroutput>s</computeroutput> field contains the name of the pipe. The second <computeroutput>s</computeroutput> field contains the macro name of the message. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9af2e487e10f4506be5fbd92f3f083a85f" prot="public">
+          <name>MPC_PIPE_INIT_ERR_EID</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to create %s pipe (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to create %s pipe (0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPC Task fails to create a CFE Software Bus pipe at initialization.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ae89b9338365932030273a90d1294a044" prot="public">
+          <name>MPC_CFGTBL_MANAGE_ERR_EID</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a55f9e6ac951e3e2b1ff42787e5f8c57c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Manage</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9af497a0bd3253917d77f48cdf6b289eb2" prot="public">
+          <name>MPC_CFGTBL_GETADDR_ERR_EID</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a12fd5b041c06c4477a2443f91375526d" prot="public">
+          <name>MPC_RCVMSG_ERR_EID</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPC Task has had an error reading from a pipe.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a0983c2d8ead65f33a9adb96923fa9ed9" prot="public">
+          <name>MPC_MSGID_ERR_EID</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPC Task has received an invalid message ID.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 16 bit hexadecimal number is the actual message ID received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a7b4df59bfcf6ce0cc5774efff9c6d8aa" prot="public">
+          <name>MPC_CC_ERR_EID</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPC Task has received an invalid message ID.</para><para>The u field contains the actual command code received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a234cbf0783ad801854bd49be67c53fc0" prot="public">
+          <name>MPC_MSGLEN_ERR_EID</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPCTask has received a message with an invalid length.</para><para>The first <computeroutput>d</computeroutput> field contains the message ID. The second <computeroutput>d</computeroutput> field contains the command code. The third <computeroutput>d</computeroutput> field contains the actual length. The fourth <computeroutput>d</computeroutput> field contains the expected length. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a60e7bb54d4e93593d325c01dfbbf5737" prot="public">
+          <name>MPC_CFGTBL_REG_ERR_EID</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPC Task fails to register the MPC configuration table.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a2bb02737efc29d2dab604f09a00875e3" prot="public">
+          <name>MPC_CFGTBL_LOAD_ERR_EID</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS MPC Task fails to load the MPC configuration table.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a81a4659a46b282bdbffdca7f97458f6a" prot="public">
+          <name>MPC_UNK_VEL_FRM_ERR_EID</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Unknown velocity offboard coordinate frame. (u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unknown velocity offboard coordinate frame. (u)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the software receives a current position setpoint with an unknown velocity frame. The actual enumeration received is presented in parenthesis. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a6c5b59f1ecd76daa3f3ea614ac6731bc" prot="public">
+          <name>MPC_PID_UPDATE_EID</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para><computeroutput> &quot;Updated &lt;XY,Z&gt; PID values. Gain: %f, P: %f, I: %f, D: %f&quot; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &quot;Updated XY PID values. Gain: %f, P: %f, I: %f, D: %f&quot; </computeroutput> </para><para><computeroutput> &quot;Updated Z PID values. Gain: %f, P: %f, I: %f, D: %f&quot; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CFE_EVS_INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the software receives a command to update the XY or Z PID values.</para><para><simplesect kind="see"><para><ref refid="mpc__msg_8h_1a8d67e632afd77a63706e14db880bd232" kindref="member">MPC_SET_XY_PID_CC</ref>, <ref refid="mpc__msg_8h_1ab19353eb3c6d712e1195f80106dd4cf6" kindref="member">MPC_SET_Z_PID_CC</ref>.</para></simplesect>
+This event message is issued when </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a040b739c8330c11a3df9158c0ae9d4c2" prot="public">
+          <name>MPC_SEND_DIAG_EID</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para><computeroutput> &quot;Sending Diag packet.&quot; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &quot;Sending Diag packet.&quot; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CFE_EVS_INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the software receives a command to send a diagnostic message.</para><para><simplesect kind="see"><para><ref refid="mpc__msg_8h_1a55e15ef6cc6d65519b0d3f12659b173d" kindref="member">MPC_SEND_DIAG_CC</ref>, #ReportDiagnostic </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ac4f1399c46cf1f7f817e24c7a7935381" prot="public">
+          <name>MPC_SET_DZ_EID</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para><computeroutput> &quot;Updated HOLD_DZ value: %f&quot; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &quot;Updated HOLD_DZ value: %f&quot; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CFE_EVS_INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the software receives a command to update the #HOLD_DZ configuration parameter.</para><para><simplesect kind="see"><para><ref refid="mpc__msg_8h_1a44a1a16db9c377e98f247f14680693dc" kindref="member">MPC_SET_HOLD_DZ_CC</ref>, #UpdateHoldDz </para></simplesect>
+</para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a9eb7df4465dc88d65e03082df729199c" prot="public">
+          <name>MPC_SET_EXPO_EID</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para><computeroutput> &quot;Updated stick expo values: XY: %f Z: %f&quot; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &quot;Updated stick expo values: XY: %f Z: %f&quot; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CFE_EVS_INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the software receives a command to update the #XY_MAN_EXPO and #Z_MAN_EXPO configuration parameters.</para><para>/sa <ref refid="mpc__msg_8h_1a535ce3d5c905feace3c3e21140031504" kindref="member">MPC_SET_STICK_EXPO_CC</ref>, #UpdateStickExpo </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a8da1c68d15fe77d50756583a71786eb3" prot="public">
+          <name>MPC_SET_TKO_RAMP_EID</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para><computeroutput> &quot;Updated takeoff ramp time: %f&quot; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &quot;Updated takeoff ramp time: %f&quot; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CFE_EVS_INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the software receives a command to update the #TKO_RAMP_T configuration parameter.</para><para>/sa <ref refid="mpc__msg_8h_1a60f7da031ce504c37c9d605e130a9d46" kindref="member">MPC_SET_TKO_RAMP_CC</ref>, #UpdateTakeoffRampTime </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a013a3f84e5d6cce3d4e88f26e9c83562" prot="public">
+          <name>MPC_UNKNOWN_USER_INTENTION_ERR_EID</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para><computeroutput> &quot;User intention not recognized. %u&quot; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &quot;User intention not recognized. %u&quot; </computeroutput></para></xrefdescription></xrefsect><verbatim>\par Type: CFE_EVS_ERROR
+
+\par Cause:
+
+This event message is issued when the software encounters
+an unrecognized user intention..
+
+/sa #m_UserIntentionXY</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ae318af9af27c0e63cfad5f459c0d4980" prot="public">
+          <name>MPC_POS_SP_NOT_FINITE_ERR_EID</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para><computeroutput> &quot;Auto: Position setpoint not finite.&quot; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &quot;Auto: Position setpoint not finite.&quot; </computeroutput></para></xrefdescription></xrefsect><verbatim>\par Type: CFE_EVS_ERROR
+
+\par Cause:
+
+This event message is issued when the software encounters
+a Position Setpoint that is not finite while in an auto
+mode.
+
+/sa #m_PositionSetpoint</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a43353160b9cc44a9171f965c3a220a85" prot="public">
+          <name>MPC_INVLD_PARAM_ERR_EID</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para><computeroutput> &quot;Parameter %s is invalid.&quot; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsmpcevents_1_cfsmpcevents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &quot;Parameter %s is invalid.&quot; </computeroutput></para></xrefdescription></xrefsect><verbatim>\par Type: CFE_EVS_ERROR
+
+\par Cause:
+
+This event message is issued when a parameter validation function
+fails to validate a parameter.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9aa6aa92f7ef5e0659084e94e9c08ff20e" prot="public">
+          <name>MPC_EVT_CNT</name>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_events.h" line="52" column="1" bodyfile="apps/mpc/fsw/src/mpc_events.h" bodystart="51" bodyend="391"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MPC_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPC_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a05acbde507d9b7e36d5df350a63c27c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a05acbde507d9b7e36d5df350a63c27c0" kindref="member">MPC_RESERVED_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a8dab6be34682e582f7cca28a66ca3000" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a8dab6be34682e582f7cca28a66ca3000" kindref="member">MPC_INIT_INF_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a3a93669dc68a35f1b4dfe3e2e76ed27a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a3a93669dc68a35f1b4dfe3e2e76ed27a" kindref="member">MPC_CMD_NOOP_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ab0bcf83aedb7fa8a8ce6fa7efa534c60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ab0bcf83aedb7fa8a8ce6fa7efa534c60" kindref="member">MPC_SUBSCRIBE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9af2e487e10f4506be5fbd92f3f083a85f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9af2e487e10f4506be5fbd92f3f083a85f" kindref="member">MPC_PIPE_INIT_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ae89b9338365932030273a90d1294a044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ae89b9338365932030273a90d1294a044" kindref="member">MPC_CFGTBL_MANAGE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9af497a0bd3253917d77f48cdf6b289eb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9af497a0bd3253917d77f48cdf6b289eb2" kindref="member">MPC_CFGTBL_GETADDR_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a12fd5b041c06c4477a2443f91375526d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a12fd5b041c06c4477a2443f91375526d" kindref="member">MPC_RCVMSG_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a0983c2d8ead65f33a9adb96923fa9ed9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a0983c2d8ead65f33a9adb96923fa9ed9" kindref="member">MPC_MSGID_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a7b4df59bfcf6ce0cc5774efff9c6d8aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a7b4df59bfcf6ce0cc5774efff9c6d8aa" kindref="member">MPC_CC_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a234cbf0783ad801854bd49be67c53fc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a234cbf0783ad801854bd49be67c53fc0" kindref="member">MPC_MSGLEN_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a60e7bb54d4e93593d325c01dfbbf5737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a60e7bb54d4e93593d325c01dfbbf5737" kindref="member">MPC_CFGTBL_REG_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a2bb02737efc29d2dab604f09a00875e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a2bb02737efc29d2dab604f09a00875e3" kindref="member">MPC_CFGTBL_LOAD_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a81a4659a46b282bdbffdca7f97458f6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a81a4659a46b282bdbffdca7f97458f6a" kindref="member">MPC_UNK_VEL_FRM_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a6c5b59f1ecd76daa3f3ea614ac6731bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a6c5b59f1ecd76daa3f3ea614ac6731bc" kindref="member">MPC_PID_UPDATE_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a040b739c8330c11a3df9158c0ae9d4c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a040b739c8330c11a3df9158c0ae9d4c2" kindref="member">MPC_SEND_DIAG_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>15,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="312" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ac4f1399c46cf1f7f817e24c7a7935381" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ac4f1399c46cf1f7f817e24c7a7935381" kindref="member">MPC_SET_DZ_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a9eb7df4465dc88d65e03082df729199c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a9eb7df4465dc88d65e03082df729199c" kindref="member">MPC_SET_EXPO_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>17,</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a8da1c68d15fe77d50756583a71786eb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a8da1c68d15fe77d50756583a71786eb3" kindref="member">MPC_SET_TKO_RAMP_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>18,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a013a3f84e5d6cce3d4e88f26e9c83562" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a013a3f84e5d6cce3d4e88f26e9c83562" kindref="member">MPC_UNKNOWN_USER_INTENTION_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>19,</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ae318af9af27c0e63cfad5f459c0d4980" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9ae318af9af27c0e63cfad5f459c0d4980" kindref="member">MPC_POS_SP_NOT_FINITE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>20,</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a43353160b9cc44a9171f965c3a220a85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9a43353160b9cc44a9171f965c3a220a85" kindref="member">MPC_INVLD_PARAM_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>21,</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390" refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9aa6aa92f7ef5e0659084e94e9c08ff20e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9aa6aa92f7ef5e0659084e94e9c08ff20e" kindref="member">MPC_EVT_CNT</ref></highlight></codeline>
+<codeline lineno="391"><highlight class="normal">}<sp/><ref refid="mpc__events_8h_1ad2368f05d297c79cc0e89bf2322380d9" kindref="member">MPC_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MPC_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/mpc/fsw/src/mpc_events.h"/>
+  </compounddef>
+</doxygen>

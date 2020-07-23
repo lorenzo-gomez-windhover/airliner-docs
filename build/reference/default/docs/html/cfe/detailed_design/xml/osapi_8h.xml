@@ -1,0 +1,1635 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="osapi_8h" kind="file" language="C++">
+    <compoundname>osapi.h</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includes refid="osapi-version_8h" local="yes">osapi-version.h</includes>
+    <includes local="yes">osconfig.h</includes>
+    <includes refid="osapi-os-core_8h" local="yes">osapi-os-core.h</includes>
+    <includes refid="osapi-os-filesys_8h" local="yes">osapi-os-filesys.h</includes>
+    <includes refid="osapi-os-net_8h" local="yes">osapi-os-net.h</includes>
+    <includes refid="osapi-os-loader_8h" local="yes">osapi-os-loader.h</includes>
+    <includes refid="osapi-os-timer_8h" local="yes">osapi-os-timer.h</includes>
+    <includes refid="osapi-os-rtm_8h" local="yes">osapi-os-rtm.h</includes>
+    <includedby refid="cfe_8h" local="yes">inc/cfe.h</includedby>
+    <includedby refid="cfe__error_8h" local="yes">inc/cfe_error.h</includedby>
+    <includedby refid="cfe__evs__msg_8h" local="yes">inc/cfe_evs_msg.h</includedby>
+    <includedby refid="cfe__evs_8h" local="yes">inc/cfe_evs.h</includedby>
+    <includedby refid="cfe__es__apps_8h" local="yes">es/cfe_es_apps.h</includedby>
+    <includedby refid="cfe__es__global_8h" local="yes">es/cfe_es_global.h</includedby>
+    <includedby refid="cfe__es__cds_8h" local="yes">es/cfe_es_cds.h</includedby>
+    <includedby refid="cfe__es__perf_8h" local="yes">es/cfe_es_perf.h</includedby>
+    <includedby refid="cfe__es__perf_8c" local="yes">es/cfe_es_perf.c</includedby>
+    <includedby refid="cfe__evs__task_8h" local="yes">evs/cfe_evs_task.h</includedby>
+    <includedby refid="cfe__evs__task_8c" local="yes">evs/cfe_evs_task.c</includedby>
+    <includedby refid="cfe__evs__utils_8c" local="yes">evs/cfe_evs_utils.c</includedby>
+    <includedby refid="cfe__fs__api_8c" local="yes">fs/cfe_fs_api.c</includedby>
+    <includedby refid="cfe__fs__priv_8c" local="yes">fs/cfe_fs_priv.c</includedby>
+    <includedby refid="ccsds_8c" local="yes">sb/ccsds.c</includedby>
+    <includedby refid="cfe__sb__api_8c" local="yes">sb/cfe_sb_api.c</includedby>
+    <includedby refid="cfe__sb__buf_8c" local="yes">sb/cfe_sb_buf.c</includedby>
+    <includedby refid="cfe__sb__init_8c" local="yes">sb/cfe_sb_init.c</includedby>
+    <includedby refid="cfe__sb__priv_8c" local="yes">sb/cfe_sb_priv.c</includedby>
+    <includedby refid="cfe__sb__task_8c" local="yes">sb/cfe_sb_task.c</includedby>
+    <includedby refid="cfe__sb__util_8c" local="yes">sb/cfe_sb_util.c</includedby>
+    <includedby refid="cfe__psp__exception_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_exception.c</includedby>
+    <includedby refid="cfe__psp__memory_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_memory.c</includedby>
+    <includedby refid="cfe__psp__memtab_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_memtab.c</includedby>
+    <includedby refid="cfe__psp__ssr_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_ssr.c</includedby>
+    <includedby refid="cfe__psp__start_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_start.c</includedby>
+    <includedby refid="cfe__psp__support_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_support.c</includedby>
+    <includedby refid="cfe__psp__timer_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c</includedby>
+    <includedby refid="cfe__psp__voltab_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_voltab.c</includedby>
+    <includedby refid="cfe__psp__watchdog_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_watchdog.c</includedby>
+    <includedby refid="bsp__start_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/bsp_start.c</includedby>
+    <includedby refid="bsp__voltab_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/bsp_voltab.c</includedby>
+    <includedby refid="psp__testcase_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testcase.c</includedby>
+    <includedby refid="osapi_8c" local="yes">/home/vagrant/airliner/core/osal/src/os/posix-fast/osapi.c</includedby>
+    <includedby refid="osfileapi_8c" local="yes">/home/vagrant/airliner/core/osal/src/os/posix-fast/osfileapi.c</includedby>
+    <includedby refid="osfilesys_8c" local="yes">/home/vagrant/airliner/core/osal/src/os/posix-fast/osfilesys.c</includedby>
+    <includedby refid="osloader_8c" local="yes">/home/vagrant/airliner/core/osal/src/os/posix-fast/osloader.c</includedby>
+    <includedby refid="osnetwork_8c" local="yes">/home/vagrant/airliner/core/osal/src/os/posix-fast/osnetwork.c</includedby>
+    <includedby refid="ostimer_8c" local="yes">/home/vagrant/airliner/core/osal/src/os/posix-fast/ostimer.c</includedby>
+    <incdepgraph>
+      <node id="9153">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="9147">
+        <label>stdarg.h</label>
+      </node>
+      <node id="9143">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="9151">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9148">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="9149">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="9150" relation="include">
+        </childnode>
+        <childnode refid="9151" relation="include">
+        </childnode>
+        <childnode refid="9152" relation="include">
+        </childnode>
+        <childnode refid="9153" relation="include">
+        </childnode>
+      </node>
+      <node id="9144">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="9142">
+        <label>/home/vagrant/airliner/core/osal/inc/osapi.h</label>
+        <link refid="osapi.h"/>
+        <childnode refid="9143" relation="include">
+        </childnode>
+        <childnode refid="9144" relation="include">
+        </childnode>
+        <childnode refid="9145" relation="include">
+        </childnode>
+        <childnode refid="9146" relation="include">
+        </childnode>
+        <childnode refid="9149" relation="include">
+        </childnode>
+        <childnode refid="9154" relation="include">
+        </childnode>
+        <childnode refid="9155" relation="include">
+        </childnode>
+        <childnode refid="9156" relation="include">
+        </childnode>
+        <childnode refid="9148" relation="include">
+        </childnode>
+      </node>
+      <node id="9156">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="9145">
+        <label>osconfig.h</label>
+      </node>
+      <node id="9154">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="9155">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="9150">
+        <label>stdio.h</label>
+      </node>
+      <node id="9146">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="9147" relation="include">
+        </childnode>
+        <childnode refid="9148" relation="include">
+        </childnode>
+      </node>
+      <node id="9152">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9229">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_support.c</label>
+        <link refid="cfe__psp__support_8c"/>
+      </node>
+      <node id="9171">
+        <label>es/cfe_es_objtab.c</label>
+        <link refid="cfe__es__objtab_8c"/>
+      </node>
+      <node id="9177">
+        <label>inc/cfe_tbl_filedef.h</label>
+        <link refid="cfe__tbl__filedef_8h"/>
+        <childnode refid="9178" relation="include">
+        </childnode>
+      </node>
+      <node id="9185">
+        <label>tbl/cfe_tbl_symbols.c</label>
+        <link refid="cfe__tbl__symbols_8c"/>
+      </node>
+      <node id="9241">
+        <label>/home/vagrant/airliner/core/osal/src/os/posix-fast/ostimer.c</label>
+        <link refid="ostimer_8c"/>
+      </node>
+      <node id="9228">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_start.c</label>
+        <link refid="cfe__psp__start_8c"/>
+      </node>
+      <node id="9190">
+        <label>time/cfe_time_tone.c</label>
+        <link refid="cfe__time__tone_8c"/>
+      </node>
+      <node id="9172">
+        <label>es/cfe_es_shell.c</label>
+        <link refid="cfe__es__shell_8c"/>
+      </node>
+      <node id="9210">
+        <label>es/cfe_es_shell.h</label>
+        <link refid="cfe__es__shell_8h"/>
+        <childnode refid="9172" relation="include">
+        </childnode>
+        <childnode refid="9167" relation="include">
+        </childnode>
+      </node>
+      <node id="9199">
+        <label>evs/cfe_evs_log.c</label>
+        <link refid="cfe__evs__log_8c"/>
+      </node>
+      <node id="9174">
+        <label>es/cfe_esmempool.c</label>
+        <link refid="cfe__esmempool_8c"/>
+      </node>
+      <node id="9220">
+        <label>evs/cfe_evs_log.h</label>
+        <link refid="cfe__evs__log_8h"/>
+        <childnode refid="9199" relation="include">
+        </childnode>
+        <childnode refid="9200" relation="include">
+        </childnode>
+        <childnode refid="9201" relation="include">
+        </childnode>
+      </node>
+      <node id="9189">
+        <label>time/cfe_time_task.c</label>
+        <link refid="cfe__time__task_8c"/>
+      </node>
+      <node id="9227">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_ssr.c</label>
+        <link refid="cfe__psp__ssr_8c"/>
+      </node>
+      <node id="9230">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c</label>
+        <link refid="cfe__psp__timer_8c"/>
+      </node>
+      <node id="9179">
+        <label>tbl/cfe_tbl_api.c</label>
+        <link refid="cfe__tbl__api_8c"/>
+      </node>
+      <node id="9232">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_watchdog.c</label>
+        <link refid="cfe__psp__watchdog_8c"/>
+      </node>
+      <node id="9183">
+        <label>inc/cfe_tbl_msg.h</label>
+        <link refid="cfe__tbl__msg_8h"/>
+        <childnode refid="9184" relation="include">
+        </childnode>
+        <childnode refid="9185" relation="include">
+        </childnode>
+        <childnode refid="9181" relation="include">
+        </childnode>
+        <childnode refid="9182" relation="include">
+        </childnode>
+      </node>
+      <node id="9180">
+        <label>tbl/cfe_tbl_internal.c</label>
+        <link refid="cfe__tbl__internal_8c"/>
+      </node>
+      <node id="9178">
+        <label>tbl/cfe_tbl_internal.h</label>
+        <link refid="cfe__tbl__internal_8h"/>
+        <childnode refid="9179" relation="include">
+        </childnode>
+        <childnode refid="9180" relation="include">
+        </childnode>
+        <childnode refid="9181" relation="include">
+        </childnode>
+        <childnode refid="9182" relation="include">
+        </childnode>
+      </node>
+      <node id="9235">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testcase.c</label>
+        <link refid="psp__testcase_8c"/>
+      </node>
+      <node id="9163">
+        <label>es/cfe_es_log.h</label>
+        <link refid="cfe__es__log_8h"/>
+        <childnode refid="9162" relation="include">
+        </childnode>
+        <childnode refid="9164" relation="include">
+        </childnode>
+        <childnode refid="9165" relation="include">
+        </childnode>
+        <childnode refid="9166" relation="include">
+        </childnode>
+        <childnode refid="9167" relation="include">
+        </childnode>
+      </node>
+      <node id="9175">
+        <label>es/cfe_es_symbols.c</label>
+        <link refid="cfe__es__symbols_8c"/>
+      </node>
+      <node id="9203">
+        <label>fs/cfe_fs_priv.c</label>
+        <link refid="cfe__fs__priv_8c"/>
+      </node>
+      <node id="9201">
+        <label>evs/cfe_evs_utils.c</label>
+        <link refid="cfe__evs__utils_8c"/>
+      </node>
+      <node id="9198">
+        <label>evs/cfe_evs_utils.h</label>
+        <link refid="cfe__evs__utils_8h"/>
+        <childnode refid="9197" relation="include">
+        </childnode>
+        <childnode refid="9199" relation="include">
+        </childnode>
+        <childnode refid="9200" relation="include">
+        </childnode>
+        <childnode refid="9201" relation="include">
+        </childnode>
+      </node>
+      <node id="9204">
+        <label>sb/cfe_sb_api.c</label>
+        <link refid="cfe__sb__api_8c"/>
+      </node>
+      <node id="9225">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_memory.c</label>
+        <link refid="cfe__psp__memory_8c"/>
+      </node>
+      <node id="9167">
+        <label>es/cfe_es_task.c</label>
+        <link refid="cfe__es__task_8c"/>
+      </node>
+      <node id="9219">
+        <label>inc/private/cfe_es_resetdata_typedef.h</label>
+        <link refid="cfe__es__resetdata__typedef_8h"/>
+        <childnode refid="9161" relation="include">
+        </childnode>
+        <childnode refid="9200" relation="include">
+        </childnode>
+        <childnode refid="9191" relation="include">
+        </childnode>
+      </node>
+      <node id="9173">
+        <label>es/cfe_es_task.h</label>
+        <link refid="cfe__es__task_8h"/>
+        <childnode refid="9165" relation="include">
+        </childnode>
+        <childnode refid="9172" relation="include">
+        </childnode>
+        <childnode refid="9167" relation="include">
+        </childnode>
+        <childnode refid="9174" relation="include">
+        </childnode>
+      </node>
+      <node id="9170">
+        <label>es/cfe_es_cds_mempool.c</label>
+        <link refid="cfe__es__cds__mempool_8c"/>
+      </node>
+      <node id="9194">
+        <label>es/cfe_es_cds_mempool.h</label>
+        <link refid="cfe__es__cds__mempool_8h"/>
+        <childnode refid="9195" relation="include">
+        </childnode>
+        <childnode refid="9162" relation="include">
+        </childnode>
+        <childnode refid="9169" relation="include">
+        </childnode>
+        <childnode refid="9170" relation="include">
+        </childnode>
+      </node>
+      <node id="9212">
+        <label>fs/cfe_fs_decompress.c</label>
+        <link refid="cfe__fs__decompress_8c"/>
+      </node>
+      <node id="9211">
+        <label>fs/cfe_fs_decompress.h</label>
+        <link refid="cfe__fs__decompress_8h"/>
+        <childnode refid="9212" relation="include">
+        </childnode>
+      </node>
+      <node id="9216">
+        <label>inc/cfe_evs_msg.h</label>
+        <link refid="cfe__evs__msg_8h"/>
+        <childnode refid="9217" relation="include">
+        </childnode>
+        <childnode refid="9218" relation="include">
+        </childnode>
+        <childnode refid="9196" relation="include">
+        </childnode>
+        <childnode refid="9220" relation="include">
+        </childnode>
+        <childnode refid="9221" relation="include">
+        </childnode>
+      </node>
+      <node id="9157">
+        <label>/home/vagrant/airliner/core/osal/inc/osapi.h</label>
+        <link refid="osapi.h"/>
+        <childnode refid="9158" relation="include">
+        </childnode>
+        <childnode refid="9214" relation="include">
+        </childnode>
+        <childnode refid="9216" relation="include">
+        </childnode>
+        <childnode refid="9217" relation="include">
+        </childnode>
+        <childnode refid="9222" relation="include">
+        </childnode>
+        <childnode refid="9161" relation="include">
+        </childnode>
+        <childnode refid="9195" relation="include">
+        </childnode>
+        <childnode refid="9160" relation="include">
+        </childnode>
+        <childnode refid="9165" relation="include">
+        </childnode>
+        <childnode refid="9196" relation="include">
+        </childnode>
+        <childnode refid="9200" relation="include">
+        </childnode>
+        <childnode refid="9201" relation="include">
+        </childnode>
+        <childnode refid="9202" relation="include">
+        </childnode>
+        <childnode refid="9203" relation="include">
+        </childnode>
+        <childnode refid="9223" relation="include">
+        </childnode>
+        <childnode refid="9204" relation="include">
+        </childnode>
+        <childnode refid="9206" relation="include">
+        </childnode>
+        <childnode refid="9207" relation="include">
+        </childnode>
+        <childnode refid="9208" relation="include">
+        </childnode>
+        <childnode refid="9176" relation="include">
+        </childnode>
+        <childnode refid="9215" relation="include">
+        </childnode>
+        <childnode refid="9224" relation="include">
+        </childnode>
+        <childnode refid="9225" relation="include">
+        </childnode>
+        <childnode refid="9226" relation="include">
+        </childnode>
+        <childnode refid="9227" relation="include">
+        </childnode>
+        <childnode refid="9228" relation="include">
+        </childnode>
+        <childnode refid="9229" relation="include">
+        </childnode>
+        <childnode refid="9230" relation="include">
+        </childnode>
+        <childnode refid="9231" relation="include">
+        </childnode>
+        <childnode refid="9232" relation="include">
+        </childnode>
+        <childnode refid="9233" relation="include">
+        </childnode>
+        <childnode refid="9234" relation="include">
+        </childnode>
+        <childnode refid="9235" relation="include">
+        </childnode>
+        <childnode refid="9236" relation="include">
+        </childnode>
+        <childnode refid="9237" relation="include">
+        </childnode>
+        <childnode refid="9238" relation="include">
+        </childnode>
+        <childnode refid="9239" relation="include">
+        </childnode>
+        <childnode refid="9240" relation="include">
+        </childnode>
+        <childnode refid="9241" relation="include">
+        </childnode>
+      </node>
+      <node id="9236">
+        <label>/home/vagrant/airliner/core/osal/src/os/posix-fast/osapi.c</label>
+        <link refid="osapi_8c"/>
+      </node>
+      <node id="9197">
+        <label>evs/cfe_evs.c</label>
+        <link refid="cfe__evs_8c"/>
+      </node>
+      <node id="9238">
+        <label>/home/vagrant/airliner/core/osal/src/os/posix-fast/osfilesys.c</label>
+        <link refid="osfilesys_8c"/>
+      </node>
+      <node id="9231">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_voltab.c</label>
+        <link refid="cfe__psp__voltab_8c"/>
+      </node>
+      <node id="9208">
+        <label>sb/cfe_sb_priv.c</label>
+        <link refid="cfe__sb__priv_8c"/>
+      </node>
+      <node id="9205">
+        <label>sb/cfe_sb_priv.h</label>
+        <link refid="cfe__sb__priv_8h"/>
+        <childnode refid="9204" relation="include">
+        </childnode>
+        <childnode refid="9206" relation="include">
+        </childnode>
+        <childnode refid="9207" relation="include">
+        </childnode>
+        <childnode refid="9208" relation="include">
+        </childnode>
+        <childnode refid="9176" relation="include">
+        </childnode>
+      </node>
+      <node id="9168">
+        <label>es/cfe_es_apps.c</label>
+        <link refid="cfe__es__apps_8c"/>
+      </node>
+      <node id="9222">
+        <label>es/cfe_es_apps.h</label>
+        <link refid="cfe__es__apps_8h"/>
+        <childnode refid="9162" relation="include">
+        </childnode>
+        <childnode refid="9161" relation="include">
+        </childnode>
+        <childnode refid="9195" relation="include">
+        </childnode>
+        <childnode refid="9168" relation="include">
+        </childnode>
+        <childnode refid="9169" relation="include">
+        </childnode>
+        <childnode refid="9164" relation="include">
+        </childnode>
+        <childnode refid="9173" relation="include">
+        </childnode>
+        <childnode refid="9172" relation="include">
+        </childnode>
+        <childnode refid="9166" relation="include">
+        </childnode>
+        <childnode refid="9167" relation="include">
+        </childnode>
+      </node>
+      <node id="9191">
+        <label>time/cfe_time_utils.c</label>
+        <link refid="cfe__time__utils_8c"/>
+      </node>
+      <node id="9187">
+        <label>time/cfe_time_utils.h</label>
+        <link refid="cfe__time__utils_8h"/>
+        <childnode refid="9188" relation="include">
+        </childnode>
+        <childnode refid="9189" relation="include">
+        </childnode>
+        <childnode refid="9190" relation="include">
+        </childnode>
+        <childnode refid="9191" relation="include">
+        </childnode>
+      </node>
+      <node id="9165">
+        <label>es/cfe_es_perf.c</label>
+        <link refid="cfe__es__perf_8c"/>
+      </node>
+      <node id="9160">
+        <label>es/cfe_es_perf.h</label>
+        <link refid="cfe__es__perf_8h"/>
+        <childnode refid="9161" relation="include">
+        </childnode>
+        <childnode refid="9165" relation="include">
+        </childnode>
+      </node>
+      <node id="9182">
+        <label>tbl/cfe_tbl_task_cmds.c</label>
+        <link refid="cfe__tbl__task__cmds_8c"/>
+      </node>
+      <node id="9213">
+        <label>tbl/cfe_tbl_task_cmds.h</label>
+        <link refid="cfe__tbl__task__cmds_8h"/>
+        <childnode refid="9181" relation="include">
+        </childnode>
+        <childnode refid="9182" relation="include">
+        </childnode>
+      </node>
+      <node id="9240">
+        <label>/home/vagrant/airliner/core/osal/src/os/posix-fast/osnetwork.c</label>
+        <link refid="osnetwork_8c"/>
+      </node>
+      <node id="9223">
+        <label>sb/ccsds.c</label>
+        <link refid="ccsds_8c"/>
+      </node>
+      <node id="9207">
+        <label>sb/cfe_sb_init.c</label>
+        <link refid="cfe__sb__init_8c"/>
+      </node>
+      <node id="9218">
+        <label>inc/private/cfe_evs_log_typedef.h</label>
+        <link refid="cfe__evs__log__typedef_8h"/>
+        <childnode refid="9219" relation="include">
+        </childnode>
+        <childnode refid="9196" relation="include">
+        </childnode>
+      </node>
+      <node id="9226">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_memtab.c</label>
+        <link refid="cfe__psp__memtab_8c"/>
+      </node>
+      <node id="9161">
+        <label>es/cfe_es_global.h</label>
+        <link refid="cfe__es__global_8h"/>
+        <childnode refid="9162" relation="include">
+        </childnode>
+        <childnode refid="9163" relation="include">
+        </childnode>
+        <childnode refid="9168" relation="include">
+        </childnode>
+        <childnode refid="9169" relation="include">
+        </childnode>
+        <childnode refid="9170" relation="include">
+        </childnode>
+        <childnode refid="9164" relation="include">
+        </childnode>
+        <childnode refid="9171" relation="include">
+        </childnode>
+        <childnode refid="9165" relation="include">
+        </childnode>
+        <childnode refid="9172" relation="include">
+        </childnode>
+        <childnode refid="9166" relation="include">
+        </childnode>
+        <childnode refid="9167" relation="include">
+        </childnode>
+      </node>
+      <node id="9181">
+        <label>tbl/cfe_tbl_task.c</label>
+        <link refid="cfe__tbl__task_8c"/>
+      </node>
+      <node id="9184">
+        <label>tbl/cfe_tbl_task.h</label>
+        <link refid="cfe__tbl__task_8h"/>
+        <childnode refid="9178" relation="include">
+        </childnode>
+      </node>
+      <node id="9221">
+        <label>evs/cfe_evs_symbols.c</label>
+        <link refid="cfe__evs__symbols_8c"/>
+      </node>
+      <node id="9200">
+        <label>evs/cfe_evs_task.c</label>
+        <link refid="cfe__evs__task_8c"/>
+      </node>
+      <node id="9196">
+        <label>evs/cfe_evs_task.h</label>
+        <link refid="cfe__evs__task_8h"/>
+        <childnode refid="9197" relation="include">
+        </childnode>
+        <childnode refid="9198" relation="include">
+        </childnode>
+        <childnode refid="9199" relation="include">
+        </childnode>
+        <childnode refid="9200" relation="include">
+        </childnode>
+        <childnode refid="9201" relation="include">
+        </childnode>
+      </node>
+      <node id="9202">
+        <label>fs/cfe_fs_api.c</label>
+        <link refid="cfe__fs__api_8c"/>
+      </node>
+      <node id="9188">
+        <label>time/cfe_time_api.c</label>
+        <link refid="cfe__time__api_8c"/>
+      </node>
+      <node id="9237">
+        <label>/home/vagrant/airliner/core/osal/src/os/posix-fast/osfileapi.c</label>
+        <link refid="osfileapi_8c"/>
+      </node>
+      <node id="9169">
+        <label>es/cfe_es_cds.c</label>
+        <link refid="cfe__es__cds_8c"/>
+      </node>
+      <node id="9195">
+        <label>es/cfe_es_cds.h</label>
+        <link refid="cfe__es__cds_8h"/>
+        <childnode refid="9161" relation="include">
+        </childnode>
+        <childnode refid="9162" relation="include">
+        </childnode>
+        <childnode refid="9169" relation="include">
+        </childnode>
+        <childnode refid="9167" relation="include">
+        </childnode>
+      </node>
+      <node id="9158">
+        <label>inc/cfe.h</label>
+        <link refid="cfe_8h"/>
+        <childnode refid="9159" relation="include">
+        </childnode>
+        <childnode refid="9177" relation="include">
+        </childnode>
+        <childnode refid="9183" relation="include">
+        </childnode>
+        <childnode refid="9186" relation="include">
+        </childnode>
+        <childnode refid="9193" relation="include">
+        </childnode>
+        <childnode refid="9163" relation="include">
+        </childnode>
+        <childnode refid="9209" relation="include">
+        </childnode>
+        <childnode refid="9173" relation="include">
+        </childnode>
+        <childnode refid="9210" relation="include">
+        </childnode>
+        <childnode refid="9211" relation="include">
+        </childnode>
+        <childnode refid="9213" relation="include">
+        </childnode>
+        <childnode refid="9187" relation="include">
+        </childnode>
+      </node>
+      <node id="9217">
+        <label>inc/cfe_evs.h</label>
+        <link refid="cfe__evs_8h"/>
+        <childnode refid="9158" relation="include">
+        </childnode>
+        <childnode refid="9160" relation="include">
+        </childnode>
+        <childnode refid="9161" relation="include">
+        </childnode>
+        <childnode refid="9197" relation="include">
+        </childnode>
+        <childnode refid="9196" relation="include">
+        </childnode>
+        <childnode refid="9199" relation="include">
+        </childnode>
+        <childnode refid="9200" relation="include">
+        </childnode>
+        <childnode refid="9201" relation="include">
+        </childnode>
+        <childnode refid="9176" relation="include">
+        </childnode>
+        <childnode refid="9180" relation="include">
+        </childnode>
+        <childnode refid="9182" relation="include">
+        </childnode>
+      </node>
+      <node id="9215">
+        <label>sb/cfe_sb_util.c</label>
+        <link refid="cfe__sb__util_8c"/>
+      </node>
+      <node id="9166">
+        <label>es/cfe_es_start.c</label>
+        <link refid="cfe__es__start_8c"/>
+      </node>
+      <node id="9209">
+        <label>es/cfe_es_start.h</label>
+        <link refid="cfe__es__start_8h"/>
+        <childnode refid="9171" relation="include">
+        </childnode>
+        <childnode refid="9165" relation="include">
+        </childnode>
+        <childnode refid="9166" relation="include">
+        </childnode>
+      </node>
+      <node id="9224">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_exception.c</label>
+        <link refid="cfe__psp__exception_8c"/>
+      </node>
+      <node id="9193">
+        <label>inc/private/cfe_private.h</label>
+        <link refid="cfe__private_8h"/>
+        <childnode refid="9162" relation="include">
+        </childnode>
+        <childnode refid="9161" relation="include">
+        </childnode>
+        <childnode refid="9194" relation="include">
+        </childnode>
+        <childnode refid="9168" relation="include">
+        </childnode>
+        <childnode refid="9169" relation="include">
+        </childnode>
+        <childnode refid="9170" relation="include">
+        </childnode>
+        <childnode refid="9164" relation="include">
+        </childnode>
+        <childnode refid="9171" relation="include">
+        </childnode>
+        <childnode refid="9165" relation="include">
+        </childnode>
+        <childnode refid="9172" relation="include">
+        </childnode>
+        <childnode refid="9166" relation="include">
+        </childnode>
+        <childnode refid="9167" relation="include">
+        </childnode>
+        <childnode refid="9174" relation="include">
+        </childnode>
+        <childnode refid="9196" relation="include">
+        </childnode>
+        <childnode refid="9202" relation="include">
+        </childnode>
+        <childnode refid="9203" relation="include">
+        </childnode>
+        <childnode refid="9204" relation="include">
+        </childnode>
+        <childnode refid="9205" relation="include">
+        </childnode>
+        <childnode refid="9208" relation="include">
+        </childnode>
+        <childnode refid="9179" relation="include">
+        </childnode>
+        <childnode refid="9184" relation="include">
+        </childnode>
+        <childnode refid="9181" relation="include">
+        </childnode>
+      </node>
+      <node id="9239">
+        <label>/home/vagrant/airliner/core/osal/src/os/posix-fast/osloader.c</label>
+        <link refid="osloader_8c"/>
+      </node>
+      <node id="9186">
+        <label>inc/cfe_time_msg.h</label>
+        <link refid="cfe__time__msg_8h"/>
+        <childnode refid="9187" relation="include">
+        </childnode>
+        <childnode refid="9192" relation="include">
+        </childnode>
+      </node>
+      <node id="9206">
+        <label>sb/cfe_sb_buf.c</label>
+        <link refid="cfe__sb__buf_8c"/>
+      </node>
+      <node id="9233">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/bsp_start.c</label>
+        <link refid="bsp__start_8c"/>
+      </node>
+      <node id="9214">
+        <label>inc/cfe_error.h</label>
+        <link refid="cfe__error_8h"/>
+        <childnode refid="9158" relation="include">
+        </childnode>
+        <childnode refid="9197" relation="include">
+        </childnode>
+        <childnode refid="9199" relation="include">
+        </childnode>
+        <childnode refid="9200" relation="include">
+        </childnode>
+        <childnode refid="9201" relation="include">
+        </childnode>
+        <childnode refid="9204" relation="include">
+        </childnode>
+        <childnode refid="9206" relation="include">
+        </childnode>
+        <childnode refid="9207" relation="include">
+        </childnode>
+        <childnode refid="9208" relation="include">
+        </childnode>
+        <childnode refid="9176" relation="include">
+        </childnode>
+        <childnode refid="9215" relation="include">
+        </childnode>
+        <childnode refid="9179" relation="include">
+        </childnode>
+        <childnode refid="9180" relation="include">
+        </childnode>
+      </node>
+      <node id="9176">
+        <label>sb/cfe_sb_task.c</label>
+        <link refid="cfe__sb__task_8c"/>
+      </node>
+      <node id="9162">
+        <label>es/cfe_es_api.c</label>
+        <link refid="cfe__es__api_8c"/>
+      </node>
+      <node id="9159">
+        <label>inc/cfe_es_msg.h</label>
+        <link refid="cfe__es__msg_8h"/>
+        <childnode refid="9160" relation="include">
+        </childnode>
+        <childnode refid="9173" relation="include">
+        </childnode>
+        <childnode refid="9175" relation="include">
+        </childnode>
+        <childnode refid="9176" relation="include">
+        </childnode>
+      </node>
+      <node id="9192">
+        <label>time/cfe_time_symbols.c</label>
+        <link refid="cfe__time__symbols_8c"/>
+      </node>
+      <node id="9164">
+        <label>es/cfe_es_erlog.c</label>
+        <link refid="cfe__es__erlog_8c"/>
+      </node>
+      <node id="9234">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/bsp_voltab.c</label>
+        <link refid="bsp__voltab_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="osapi_8h_1a35b2b8984c2833372a467771063b05be" prot="public" static="no">
+        <name>OS_SUCCESS</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="87" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="cfe__es__apps_8h_1abc4f1d3a1eca4b43fea3e872b422c260" compoundref="cfe__es__apps_8c" startline="453" endline="760">CFE_ES_AppCreate</referencedby>
+        <referencedby refid="cfe__es__apps_8h_1abbbbd9de96d9c0d60415d558ef241e49" compoundref="cfe__es__apps_8c" startline="1235" endline="1346">CFE_ES_CleanUpApp</referencedby>
+        <referencedby refid="cfe__es__apps_8h_1a42e5bf37aeb32808a604d91e56697cef" compoundref="cfe__es__apps_8c" startline="1601" endline="1803">CFE_ES_CleanupTaskResources</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a64768543df91e7856b4356fdc70ebe8c" compoundref="cfe__es__api_8c" startline="969" endline="1090">CFE_ES_CreateChildTask</referencedby>
+        <referencedby refid="cfe__es__start_8h_1a6afd1d3681c497dfd883bcf17c87bf2a" compoundref="cfe__es__start_8c" startline="782" endline="997">CFE_ES_CreateObjects</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a88414a37a5817b514c16fe5e890bc702" compoundref="cfe__es__api_8c" startline="1161" endline="1262">CFE_ES_DeleteChildTask</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a263795095b7eda1070864d75add8d91a" compoundref="cfe__es__api_8c" startline="1270" endline="1327">CFE_ES_ExitChildTask</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a76ee880d8ee4f632420507997779c1aa" compoundref="cfe__es__api_8c" startline="784" endline="810">CFE_ES_GetAppID</referencedby>
+        <referencedby refid="cfe__es__global_8h_1aa830ec3e1a00f307e702443ecd5ef251" compoundref="cfe__es__api_8c" startline="1788" endline="1818">CFE_ES_GetAppIDInternal</referencedby>
+        <referencedby refid="cfe__es__apps_8h_1a6fbfda401db6dc7a60251aaebc79953b" compoundref="cfe__es__apps_8c" startline="1901" endline="1970">CFE_ES_GetAppInfoInternal</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a02fce2cb5f102454b012b3f6f0fae207" compoundref="cfe__es__api_8c" startline="896" endline="960">CFE_ES_GetTaskInfo</referencedby>
+        <referencedby refid="cfe__es__task_8h_1ae75d1caf2ecdbc8c5e6b9923086eabdc" compoundref="cfe__es__task_8c" startline="638" endline="738">CFE_ES_HousekeepingCmd</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a2ae693e0bf2c4c430f3a852223cce6d6" compoundref="cfe__es__api_8c" startline="1142" endline="1151">CFE_ES_IncrementTaskCounter</referencedby>
+        <referencedby refid="cfe__es__cds_8h_1ad5a77531ab384ce7b2c059d205404480" compoundref="cfe__es__cds_8c" startline="420" endline="503">CFE_ES_InitializeCDS</referencedby>
+        <referencedby refid="cfe__es__start_8h_1af6e87c39ad6ec5d336254c3d8e03edb0" compoundref="cfe__es__start_8c" startline="525" endline="770">CFE_ES_InitializeFileSystems</referencedby>
+        <referencedby refid="cfe__es__shell_8h_1ad0c197c0612882783c893da9f515e984" compoundref="cfe__es__shell_8c" startline="397" endline="536">CFE_ES_ListResources</referencedby>
+        <referencedby refid="cfe__es__apps_8h_1a0c82ea90010f7b9ff5637136b04f32df" compoundref="cfe__es__apps_8c" startline="1813" endline="1890">CFE_ES_ListResourcesDebug</referencedby>
+        <referencedby refid="cfe__es__apps_8h_1abcf027da92953e7ef1a0badeb50919de" compoundref="cfe__es__apps_8c" startline="769" endline="990">CFE_ES_LoadLibrary</referencedby>
+        <referencedby refid="cfe__es__cds_8h_1afb3e1b83c010ecbde25603316bb11779" compoundref="cfe__es__cds_8c" startline="629" endline="642">CFE_ES_LockCDSRegistry</referencedby>
+        <referencedby refid="cfe__es__global_8h_1a9b672c8b6f7921e93bf81ba7f9d1db3d" compoundref="cfe__es__api_8c" startline="1835" endline="1853">CFE_ES_LockSharedData</referencedby>
+        <referencedby refid="cfe__es__start_8c_1a80b9e43e0efa587a70bd4707fee4f5f8" compoundref="cfe__es__start_8c" startline="164" endline="292">CFE_ES_Main</referencedby>
+        <referencedby refid="cfe__psp__exception_8c_1ad400a9522f228aa83489fabf58bbc8c0" compoundref="cfe__es__api_8c" startline="1904" endline="2024">CFE_ES_ProcessCoreException</referencedby>
+        <referencedby refid="cfe__es__cds__mempool_8h_1acaeb4ae711cef5e8703bc59b52416a34" compoundref="cfe__es__cds__mempool_8c" startline="173" endline="280">CFE_ES_RebuildCDSPool</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a426ef8e1796ccebba16c63c8e86fb842" compoundref="cfe__es__api_8c" startline="705" endline="739">CFE_ES_RegisterApp</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a1e008c905bb89083293355b71ce4bc2d" compoundref="cfe__es__api_8c" startline="1100" endline="1134">CFE_ES_RegisterChildTask</referencedby>
+        <referencedby refid="cfe__es__shell_8h_1a1658383f251f6a3ab51105e11e7cd6a1" compoundref="cfe__es__shell_8c" startline="79" endline="276">CFE_ES_ShellOutputCommand</referencedby>
+        <referencedby refid="cfe__es__cds_8h_1a2be11180893590edd75d95bf2fe371be" compoundref="cfe__es__cds_8c" startline="652" endline="665">CFE_ES_UnlockCDSRegistry</referencedby>
+        <referencedby refid="cfe__es__global_8h_1ad4b84fc516619637ab49f74cdbe81382" compoundref="cfe__es__api_8c" startline="1869" endline="1887">CFE_ES_UnlockSharedData</referencedby>
+        <referencedby refid="cfe__es__cds_8h_1a9d69dc7cbbb1155bb4e300ba6aefd6c7" compoundref="cfe__es__cds_8c" startline="552" endline="567">CFE_ES_UpdateCDSRegistry</referencedby>
+        <referencedby refid="cfe__evs__task_8c_1a03453a917d882866305b6c05b99eb0b1" compoundref="cfe__evs__task_8c" startline="159" endline="257">CFE_EVS_EarlyInit</referencedby>
+        <referencedby refid="cfe__fs__priv_8c_1aea2b5498886c7203bfe2d48862594f4d" compoundref="cfe__fs__priv_8c" startline="72" endline="85">CFE_FS_EarlyInit</referencedby>
+        <referencedby refid="cfe__fs__priv_8h_1a5ec454174290160f79a769d8a5f284a8" compoundref="cfe__fs__priv_8c" startline="100" endline="117">CFE_FS_LockSharedData</referencedby>
+        <referencedby refid="cfe__fs__api_8c_1a8c78a5e48135048f1d0710aef2d02349" compoundref="cfe__fs__api_8c" startline="73" endline="101">CFE_FS_ReadHeader</referencedby>
+        <referencedby refid="cfe__fs__priv_8h_1ae560a3e5ded0b18389004af27e78b238" compoundref="cfe__fs__priv_8c" startline="132" endline="147">CFE_FS_UnlockSharedData</referencedby>
+        <referencedby refid="cfe__fs__api_8c_1a7f0315f283029e5ec7ade9fdfd38875d" compoundref="cfe__fs__api_8c" startline="121" endline="185">CFE_FS_WriteHeader</referencedby>
+        <referencedby refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" compoundref="cfe__sb__api_8c" startline="170" endline="274">CFE_SB_CreatePipe</referencedby>
+        <referencedby refid="cfe__sb__init_8c_1a10df878846322b41e32312d413be8da2" compoundref="cfe__sb__init_8c" startline="118" endline="163">CFE_SB_EarlyInit</referencedby>
+        <referencedby refid="cfe__sb__priv_8h_1ae613b03944ed6bd4597baa55f9232809" compoundref="cfe__sb__priv_8c" startline="240" endline="257">CFE_SB_LockSharedData</referencedby>
+        <referencedby refid="cfe__sb__priv_8h_1afa4e55746501266c32887860c2d19e0b" compoundref="cfe__sb__api_8c" startline="1979" endline="2042">CFE_SB_ReadQueue</referencedby>
+        <referencedby refid="cfe__sb__priv_8h_1a265af9ed654b1d0fcfaedead0c1b5257" compoundref="cfe__sb__api_8c" startline="1122" endline="1421">CFE_SB_SendMsgFull</referencedby>
+        <referencedby refid="cfe__sb__priv_8h_1add45edd8c68c1cd7f334ae2a8d610ae8" compoundref="cfe__sb__priv_8c" startline="275" endline="292">CFE_SB_UnlockSharedData</referencedby>
+        <referencedby refid="cfe__tbl__internal_8c_1a6b6bd14ad2156d4d1ca50748a5d49c8f" compoundref="cfe__tbl__internal_8c" startline="102" endline="293">CFE_TBL_EarlyInit</referencedby>
+        <referencedby refid="cfe__tbl__internal_8h_1a860696e137c0c69d98d5ce302dd7dcbf" compoundref="cfe__tbl__internal_8c" startline="836" endline="964">CFE_TBL_GetWorkingBuffer</referencedby>
+        <referencedby refid="cfe__tbl__internal_8h_1a76e625a5dc8500166ba1153bff992a30" compoundref="cfe__tbl__internal_8c" startline="788" endline="802">CFE_TBL_LockRegistry</referencedby>
+        <referencedby refid="cfe__tbl__internal_8h_1a9742e37c1b65f73d4ebedb6bd0ea9420" compoundref="cfe__tbl__internal_8c" startline="812" endline="826">CFE_TBL_UnlockRegistry</referencedby>
+        <referencedby refid="cfe__time__utils_8h_1ac75193e9814f7dd8dfd42f15106e08f0" compoundref="cfe__time__task_8c" startline="236" endline="464">CFE_TIME_TaskInit</referencedby>
+        <referencedby refid="osapi_8c_1a0cdb4715f77e22dffb9c1a98d380aade" compoundref="osapi_8c" startline="209" endline="400">OS_API_InitEx</referencedby>
+        <referencedby refid="osapi_8c_1ae6a7077fcffe9e80ac43cd096e8aaaec" compoundref="osapi_8c" startline="416" endline="426">OS_ApplicationExit</referencedby>
+        <referencedby refid="osapi_8c_1a03750816f6dff3a2adfcebde8b07175d" compoundref="osapi_8c" startline="1777" endline="1925">OS_BinSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a4445a375ddc73d0200f10675496a5c4a" compoundref="osapi_8c" startline="1940" endline="1973">OS_BinSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a1cecc6e34056dc4a119da98e021e1a80" compoundref="osapi_8c" startline="2042" endline="2084">OS_BinSemFlush</referencedby>
+        <referencedby refid="osapi_8c_1ae1f491ab305fd4d1386f20a4177cd2f3" compoundref="osapi_8c" startline="2262" endline="2301">OS_BinSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a2365a5fa367b3e3779fcd39a7e86f6ab" compoundref="osapi_8c" startline="2314" endline="2345">OS_BinSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a6b163c7bbcfb7d7001be8b7fb5de7317" compoundref="osapi_8c" startline="1992" endline="2027">OS_BinSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a5b325c1513b05c9fdb7b35849f1c1e95" compoundref="osapi_8c" startline="2100" endline="2163">OS_BinSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a780bf1ed9629b32f78560ad45a7853a0" compoundref="osapi_8c" startline="2180" endline="2249">OS_BinSemTimedWait</referencedby>
+        <referencedby refid="cfe__es_8h_1aaf3332369bf6b991d26a1a6b87ad9a90" compoundref="cfe__es_8h" startline="453" endline="457">OS_ConvertToArrayIndex</referencedby>
+        <referencedby refid="osapi_8c_1a078ac65c4cf2acda58fa915fbdb188f6" compoundref="osapi_8c" startline="2365" endline="2513">OS_CountSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a33fe7baba857372fb0bb54b39403deee" compoundref="osapi_8c" startline="2528" endline="2561">OS_CountSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a63acea7d9ce7e35a48486cd46398f718" compoundref="osapi_8c" startline="2798" endline="2836">OS_CountSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a787782fbaa735c7631f6b11c3c42081e" compoundref="osapi_8c" startline="2849" endline="2890">OS_CountSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1aa86572454ea836feb25ff46ed5962698" compoundref="osapi_8c" startline="2579" endline="2621">OS_CountSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a5823afb4723b533c182c8493e93078ea" compoundref="osapi_8c" startline="2637" endline="2699">OS_CountSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a8b09f50a4c9f9f45e70dceb6e90b6b51" compoundref="osapi_8c" startline="2716" endline="2784">OS_CountSemTimedWait</referencedby>
+        <referencedby refid="osapi_8c_1a10da399290cb465c95adb084ae8911b8" compoundref="osapi_8c" startline="3928" endline="3934">OS_FPUExcGetMask</referencedby>
+        <referencedby refid="osapi_8c_1a676d53165f7739e5e08315e812fd7c95" compoundref="osapi_8c" startline="3911" endline="3917">OS_FPUExcSetMask</referencedby>
+        <referencedby refid="osfilesys_8c_1a56e9426e47fafbc4dfac64fbdb87cf7c" compoundref="osfilesys_8c" startline="465" endline="509">OS_FS_GetPhysDriveName</referencedby>
+        <referencedby refid="osfileapi_8c_1a022d0ea3ab78cc8dc824547ab0e27ed0" compoundref="osfileapi_8c" startline="81" endline="106">OS_FS_Init</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a810b1f61b670190cbdbd8f89e4d5fb95" compoundref="osapi_8c" startline="3509" endline="3536">OS_GetLocalTime</referencedby>
+        <referencedby refid="osapi_8c_1a6bcff47d124b33e78e054029afe0d1b9" compoundref="osapi_8c" startline="3625" endline="3628">OS_GetMask</referencedby>
+        <referencedby refid="osapi_8c_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a4be56a807779019aad0c84e439906d11" compoundref="osapi_8c" startline="3062" endline="3097">OS_MutSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a3132d8fcb5c3dfc4f152c567d9c39756" compoundref="osapi_8c" startline="3211" endline="3249">OS_MutSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a8a82fc59d1bfc3dda2be4cddeb8f5ae4" compoundref="osapi_8c" startline="3263" endline="3296">OS_MutSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</referencedby>
+        <referencedby refid="osnetwork_8c_1a837c7100ce7dd4a5755291fa45778f07" compoundref="osnetwork_8c" startline="91" endline="119">OS_NetworkGetHostName</referencedby>
+        <referencedby refid="osapi_8c_1ae3e72f5403b7e3cac2c20ac65a5bb511" compoundref="osapi_8c" startline="1268" endline="1354">OS_QueueCreate</referencedby>
+        <referencedby refid="osapi_8c_1a15f67f089080b67931eb4d91564b367e" compoundref="osapi_8c" startline="1370" endline="1412">OS_QueueDelete</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+        <referencedby refid="osapi_8c_1ab5b6f35ad093859012d4d4d482cdfb9d" compoundref="osapi_8c" startline="1674" endline="1710">OS_QueueGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a90d4bcec6a9e2fa11374cfb6000d89db" compoundref="osapi_8c" startline="1722" endline="1754">OS_QueueGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a514794c514fed167939e3bc870d50d44" compoundref="osapi_8c" startline="1580" endline="1658">OS_QueuePut</referencedby>
+        <referencedby refid="osapi_8c_1a5baf58abd88bf84fe15016d9649cca39" compoundref="osapi_8c" startline="3544" endline="3581">OS_SetLocalTime</referencedby>
+        <referencedby refid="osapi_8c_1a5ad1eefc0aec8ec6eccd623d5bff735e" compoundref="osapi_8c" startline="3601" endline="3604">OS_SetMask</referencedby>
+        <referencedby refid="osapi_8c_1a3f7e467030a2a4b8147c53ec44e3ae30" compoundref="osapi_8c" startline="548" endline="816">OS_TaskCreate</referencedby>
+        <referencedby refid="osapi_8c_1a8f78bce95227e4e99fe6f0378835260e" compoundref="osapi_8c" startline="928" endline="960">OS_TaskDelay</referencedby>
+        <referencedby refid="osapi_8c_1a28ceef9ec6d344cb0569e1f5c105e59e" compoundref="osapi_8c" startline="828" endline="887">OS_TaskDelete</referencedby>
+        <referencedby refid="osapi_8c_1a05df84f4e2a6f26b0985fd29941b5a2d" compoundref="osapi_8c" startline="1114" endline="1150">OS_TaskGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a972b1ce7ff072290ff722439e6a8f538" compoundref="osapi_8c" startline="1164" endline="1201">OS_TaskGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" compoundref="osapi_8c" startline="1211" endline="1249">OS_TaskInstallDeleteHandler</referencedby>
+        <referencedby refid="osapi_8c_1a2712303c67dda79b3f382101f2d5e547" compoundref="osapi_8c" startline="1030" endline="1077">OS_TaskRegister</referencedby>
+        <referencedby refid="osapi_8c_1a4e29bcbe0ad198566d5fc5e264173c23" compoundref="osapi_8c" startline="973" endline="1017">OS_TaskSetPriority</referencedby>
+        <referencedby refid="ostimer_8c_1acb5be5641be9984781462257c689c1d2" compoundref="ostimer_8c" startline="117" endline="161">OS_TimerAPIInit</referencedby>
+        <referencedby refid="ostimer_8c_1a64946f4907ed8ecad18243630110461b" compoundref="ostimer_8c" startline="251" endline="368">OS_TimerCreate</referencedby>
+        <referencedby refid="ostimer_8c_1ab901e145ec75ad3b6c4e1dc15bb71972" compoundref="ostimer_8c" startline="446" endline="469">OS_TimerDelete</referencedby>
+        <referencedby refid="ostimer_8c_1a25b49a7bc1136a15901290ad7b418728" compoundref="ostimer_8c" startline="484" endline="518">OS_TimerGetIdByName</referencedby>
+        <referencedby refid="ostimer_8c_1a9499f30b634da628293397b1cb0f68b8" compoundref="ostimer_8c" startline="530" endline="563">OS_TimerGetInfo</referencedby>
+        <referencedby refid="ostimer_8c_1a415e9a85f738c4363588bbd3f24e2839" compoundref="ostimer_8c" startline="381" endline="432">OS_TimerSet</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1af41e7a381cb414280c4d7f64be56228e" prot="public" static="no">
+        <name>OS_ERROR</name>
+        <initializer>(-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="88" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="cfe__es__apps_8h_1abbbbd9de96d9c0d60415d558ef241e49" compoundref="cfe__es__apps_8c" startline="1235" endline="1346">CFE_ES_CleanUpApp</referencedby>
+        <referencedby refid="cfe__es__apps_8h_1a42e5bf37aeb32808a604d91e56697cef" compoundref="cfe__es__apps_8c" startline="1601" endline="1803">CFE_ES_CleanupTaskResources</referencedby>
+        <referencedby refid="osapi_8c_1a0cdb4715f77e22dffb9c1a98d380aade" compoundref="osapi_8c" startline="209" endline="400">OS_API_InitEx</referencedby>
+        <referencedby refid="osapi_8c_1a03750816f6dff3a2adfcebde8b07175d" compoundref="osapi_8c" startline="1777" endline="1925">OS_BinSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a4445a375ddc73d0200f10675496a5c4a" compoundref="osapi_8c" startline="1940" endline="1973">OS_BinSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a1cecc6e34056dc4a119da98e021e1a80" compoundref="osapi_8c" startline="2042" endline="2084">OS_BinSemFlush</referencedby>
+        <referencedby refid="osapi_8c_1ae1f491ab305fd4d1386f20a4177cd2f3" compoundref="osapi_8c" startline="2262" endline="2301">OS_BinSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a2365a5fa367b3e3779fcd39a7e86f6ab" compoundref="osapi_8c" startline="2314" endline="2345">OS_BinSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a6b163c7bbcfb7d7001be8b7fb5de7317" compoundref="osapi_8c" startline="1992" endline="2027">OS_BinSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a5b325c1513b05c9fdb7b35849f1c1e95" compoundref="osapi_8c" startline="2100" endline="2163">OS_BinSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a780bf1ed9629b32f78560ad45a7853a0" compoundref="osapi_8c" startline="2180" endline="2249">OS_BinSemTimedWait</referencedby>
+        <referencedby refid="osapi_8c_1a078ac65c4cf2acda58fa915fbdb188f6" compoundref="osapi_8c" startline="2365" endline="2513">OS_CountSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a33fe7baba857372fb0bb54b39403deee" compoundref="osapi_8c" startline="2528" endline="2561">OS_CountSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a63acea7d9ce7e35a48486cd46398f718" compoundref="osapi_8c" startline="2798" endline="2836">OS_CountSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a787782fbaa735c7631f6b11c3c42081e" compoundref="osapi_8c" startline="2849" endline="2890">OS_CountSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1aa86572454ea836feb25ff46ed5962698" compoundref="osapi_8c" startline="2579" endline="2621">OS_CountSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a5823afb4723b533c182c8493e93078ea" compoundref="osapi_8c" startline="2637" endline="2699">OS_CountSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a8b09f50a4c9f9f45e70dceb6e90b6b51" compoundref="osapi_8c" startline="2716" endline="2784">OS_CountSemTimedWait</referencedby>
+        <referencedby refid="osfileapi_8c_1a022d0ea3ab78cc8dc824547ab0e27ed0" compoundref="osfileapi_8c" startline="81" endline="106">OS_FS_Init</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a810b1f61b670190cbdbd8f89e4d5fb95" compoundref="osapi_8c" startline="3509" endline="3536">OS_GetLocalTime</referencedby>
+        <referencedby refid="osapi_8c_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a4be56a807779019aad0c84e439906d11" compoundref="osapi_8c" startline="3062" endline="3097">OS_MutSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a3132d8fcb5c3dfc4f152c567d9c39756" compoundref="osapi_8c" startline="3211" endline="3249">OS_MutSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a8a82fc59d1bfc3dda2be4cddeb8f5ae4" compoundref="osapi_8c" startline="3263" endline="3296">OS_MutSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</referencedby>
+        <referencedby refid="osnetwork_8c_1a837c7100ce7dd4a5755291fa45778f07" compoundref="osnetwork_8c" startline="91" endline="119">OS_NetworkGetHostName</referencedby>
+        <referencedby refid="osapi_8c_1ae3e72f5403b7e3cac2c20ac65a5bb511" compoundref="osapi_8c" startline="1268" endline="1354">OS_QueueCreate</referencedby>
+        <referencedby refid="osapi_8c_1a15f67f089080b67931eb4d91564b367e" compoundref="osapi_8c" startline="1370" endline="1412">OS_QueueDelete</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+        <referencedby refid="osapi_8c_1ab5b6f35ad093859012d4d4d482cdfb9d" compoundref="osapi_8c" startline="1674" endline="1710">OS_QueueGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a90d4bcec6a9e2fa11374cfb6000d89db" compoundref="osapi_8c" startline="1722" endline="1754">OS_QueueGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a514794c514fed167939e3bc870d50d44" compoundref="osapi_8c" startline="1580" endline="1658">OS_QueuePut</referencedby>
+        <referencedby refid="osapi_8c_1a5baf58abd88bf84fe15016d9649cca39" compoundref="osapi_8c" startline="3544" endline="3581">OS_SetLocalTime</referencedby>
+        <referencedby refid="osapi_8c_1a3f7e467030a2a4b8147c53ec44e3ae30" compoundref="osapi_8c" startline="548" endline="816">OS_TaskCreate</referencedby>
+        <referencedby refid="osapi_8c_1a8f78bce95227e4e99fe6f0378835260e" compoundref="osapi_8c" startline="928" endline="960">OS_TaskDelay</referencedby>
+        <referencedby refid="osapi_8c_1a28ceef9ec6d344cb0569e1f5c105e59e" compoundref="osapi_8c" startline="828" endline="887">OS_TaskDelete</referencedby>
+        <referencedby refid="osapi_8c_1a05df84f4e2a6f26b0985fd29941b5a2d" compoundref="osapi_8c" startline="1114" endline="1150">OS_TaskGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a972b1ce7ff072290ff722439e6a8f538" compoundref="osapi_8c" startline="1164" endline="1201">OS_TaskGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" compoundref="osapi_8c" startline="1211" endline="1249">OS_TaskInstallDeleteHandler</referencedby>
+        <referencedby refid="osapi_8c_1a2712303c67dda79b3f382101f2d5e547" compoundref="osapi_8c" startline="1030" endline="1077">OS_TaskRegister</referencedby>
+        <referencedby refid="osapi_8c_1a4e29bcbe0ad198566d5fc5e264173c23" compoundref="osapi_8c" startline="973" endline="1017">OS_TaskSetPriority</referencedby>
+        <referencedby refid="ostimer_8c_1acb5be5641be9984781462257c689c1d2" compoundref="ostimer_8c" startline="117" endline="161">OS_TimerAPIInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a209ba379f822b4879ed566808ed07f17" prot="public" static="no">
+        <name>OS_INVALID_POINTER</name>
+        <initializer>(-2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="89" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a03750816f6dff3a2adfcebde8b07175d" compoundref="osapi_8c" startline="1777" endline="1925">OS_BinSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1ae1f491ab305fd4d1386f20a4177cd2f3" compoundref="osapi_8c" startline="2262" endline="2301">OS_BinSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a2365a5fa367b3e3779fcd39a7e86f6ab" compoundref="osapi_8c" startline="2314" endline="2345">OS_BinSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a078ac65c4cf2acda58fa915fbdb188f6" compoundref="osapi_8c" startline="2365" endline="2513">OS_CountSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a63acea7d9ce7e35a48486cd46398f718" compoundref="osapi_8c" startline="2798" endline="2836">OS_CountSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a787782fbaa735c7631f6b11c3c42081e" compoundref="osapi_8c" startline="2849" endline="2890">OS_CountSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a810b1f61b670190cbdbd8f89e4d5fb95" compoundref="osapi_8c" startline="3509" endline="3536">OS_GetLocalTime</referencedby>
+        <referencedby refid="osapi_8c_1a4f8322d29e9f7bc6e877abdf50f6ab68" compoundref="osapi_8c" startline="3435" endline="3445">OS_HeapGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a239f4cd57ad58e7bfea2c3cda68033cd" compoundref="osapi_8c" startline="3328" endline="3335">OS_IntAttachHandler</referencedby>
+        <referencedby refid="osapi_8c_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a3132d8fcb5c3dfc4f152c567d9c39756" compoundref="osapi_8c" startline="3211" endline="3249">OS_MutSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a8a82fc59d1bfc3dda2be4cddeb8f5ae4" compoundref="osapi_8c" startline="3263" endline="3296">OS_MutSemGetInfo</referencedby>
+        <referencedby refid="osnetwork_8c_1a837c7100ce7dd4a5755291fa45778f07" compoundref="osnetwork_8c" startline="91" endline="119">OS_NetworkGetHostName</referencedby>
+        <referencedby refid="osapi_8c_1ae3e72f5403b7e3cac2c20ac65a5bb511" compoundref="osapi_8c" startline="1268" endline="1354">OS_QueueCreate</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+        <referencedby refid="osapi_8c_1ab5b6f35ad093859012d4d4d482cdfb9d" compoundref="osapi_8c" startline="1674" endline="1710">OS_QueueGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a90d4bcec6a9e2fa11374cfb6000d89db" compoundref="osapi_8c" startline="1722" endline="1754">OS_QueueGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a514794c514fed167939e3bc870d50d44" compoundref="osapi_8c" startline="1580" endline="1658">OS_QueuePut</referencedby>
+        <referencedby refid="osapi_8c_1a5baf58abd88bf84fe15016d9649cca39" compoundref="osapi_8c" startline="3544" endline="3581">OS_SetLocalTime</referencedby>
+        <referencedby refid="osapi_8c_1a3f7e467030a2a4b8147c53ec44e3ae30" compoundref="osapi_8c" startline="548" endline="816">OS_TaskCreate</referencedby>
+        <referencedby refid="osapi_8c_1a05df84f4e2a6f26b0985fd29941b5a2d" compoundref="osapi_8c" startline="1114" endline="1150">OS_TaskGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a972b1ce7ff072290ff722439e6a8f538" compoundref="osapi_8c" startline="1164" endline="1201">OS_TaskGetInfo</referencedby>
+        <referencedby refid="ostimer_8c_1a64946f4907ed8ecad18243630110461b" compoundref="ostimer_8c" startline="251" endline="368">OS_TimerCreate</referencedby>
+        <referencedby refid="ostimer_8c_1a25b49a7bc1136a15901290ad7b418728" compoundref="ostimer_8c" startline="484" endline="518">OS_TimerGetIdByName</referencedby>
+        <referencedby refid="ostimer_8c_1a9499f30b634da628293397b1cb0f68b8" compoundref="ostimer_8c" startline="530" endline="563">OS_TimerGetInfo</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a982377be8c79b305b9658ecbfd77cf3b" prot="public" static="no">
+        <name>OS_ERROR_ADDRESS_MISALIGNED</name>
+        <initializer>(-3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="90" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1ac760cd5e5e0f4cfeb7b5cc1c1522d8ef" prot="public" static="no">
+        <name>OS_ERROR_TIMEOUT</name>
+        <initializer>(-4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="91" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a710e9e56b589e8dedbd2b308ea464d30" prot="public" static="no">
+        <name>OS_INVALID_INT_NUM</name>
+        <initializer>(-5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="92" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a6d87a94eb3eefb1bb65524f6ab1b0caf" prot="public" static="no">
+        <name>OS_SEM_FAILURE</name>
+        <initializer>(-6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="93" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a03750816f6dff3a2adfcebde8b07175d" compoundref="osapi_8c" startline="1777" endline="1925">OS_BinSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a1cecc6e34056dc4a119da98e021e1a80" compoundref="osapi_8c" startline="2042" endline="2084">OS_BinSemFlush</referencedby>
+        <referencedby refid="osapi_8c_1a6b163c7bbcfb7d7001be8b7fb5de7317" compoundref="osapi_8c" startline="1992" endline="2027">OS_BinSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a5b325c1513b05c9fdb7b35849f1c1e95" compoundref="osapi_8c" startline="2100" endline="2163">OS_BinSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a780bf1ed9629b32f78560ad45a7853a0" compoundref="osapi_8c" startline="2180" endline="2249">OS_BinSemTimedWait</referencedby>
+        <referencedby refid="osapi_8c_1a078ac65c4cf2acda58fa915fbdb188f6" compoundref="osapi_8c" startline="2365" endline="2513">OS_CountSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1aa86572454ea836feb25ff46ed5962698" compoundref="osapi_8c" startline="2579" endline="2621">OS_CountSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a5823afb4723b533c182c8493e93078ea" compoundref="osapi_8c" startline="2637" endline="2699">OS_CountSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a8b09f50a4c9f9f45e70dceb6e90b6b51" compoundref="osapi_8c" startline="2716" endline="2784">OS_CountSemTimedWait</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a4be56a807779019aad0c84e439906d11" compoundref="osapi_8c" startline="3062" endline="3097">OS_MutSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a35554fb81bd9d5f3522affba282f4f42" prot="public" static="no">
+        <name>OS_SEM_TIMEOUT</name>
+        <initializer>(-7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="94" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a780bf1ed9629b32f78560ad45a7853a0" compoundref="osapi_8c" startline="2180" endline="2249">OS_BinSemTimedWait</referencedby>
+        <referencedby refid="osapi_8c_1a8b09f50a4c9f9f45e70dceb6e90b6b51" compoundref="osapi_8c" startline="2716" endline="2784">OS_CountSemTimedWait</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a649aefc48b25fa31f54b59fe16fc501f" prot="public" static="no">
+        <name>OS_QUEUE_EMPTY</name>
+        <initializer>(-8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="95" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="cfe__sb__priv_8h_1afa4e55746501266c32887860c2d19e0b" compoundref="cfe__sb__api_8c" startline="1979" endline="2042">CFE_SB_ReadQueue</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a1bb3ced7e39cd5e1ca6d4c45f153cbc2" prot="public" static="no">
+        <name>OS_QUEUE_FULL</name>
+        <initializer>(-9)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="96" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="cfe__sb__priv_8h_1a265af9ed654b1d0fcfaedead0c1b5257" compoundref="cfe__sb__api_8c" startline="1122" endline="1421">CFE_SB_SendMsgFull</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a514794c514fed167939e3bc870d50d44" compoundref="osapi_8c" startline="1580" endline="1658">OS_QueuePut</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a11a8fcc6118adb5c801e6b84739af6a0" prot="public" static="no">
+        <name>OS_QUEUE_TIMEOUT</name>
+        <initializer>(-10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="97" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="cfe__sb__priv_8h_1afa4e55746501266c32887860c2d19e0b" compoundref="cfe__sb__api_8c" startline="1979" endline="2042">CFE_SB_ReadQueue</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1ab6e87a032d04168d8bab19d8a7584064" prot="public" static="no">
+        <name>OS_QUEUE_INVALID_SIZE</name>
+        <initializer>(-11)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="98" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1ae3e72f5403b7e3cac2c20ac65a5bb511" compoundref="osapi_8c" startline="1268" endline="1354">OS_QueueCreate</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+        <referencedby refid="osapi_8c_1a514794c514fed167939e3bc870d50d44" compoundref="osapi_8c" startline="1580" endline="1658">OS_QueuePut</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1aa2d9e0ae1d71d3b57e0c4d8663344c50" prot="public" static="no">
+        <name>OS_QUEUE_ID_ERROR</name>
+        <initializer>(-12)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="99" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1ab3fa672527cd54a2dad5c1cc0a2a8011" prot="public" static="no">
+        <name>OS_ERR_NAME_TOO_LONG</name>
+        <initializer>(-13)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="100" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a03750816f6dff3a2adfcebde8b07175d" compoundref="osapi_8c" startline="1777" endline="1925">OS_BinSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1ae1f491ab305fd4d1386f20a4177cd2f3" compoundref="osapi_8c" startline="2262" endline="2301">OS_BinSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a078ac65c4cf2acda58fa915fbdb188f6" compoundref="osapi_8c" startline="2365" endline="2513">OS_CountSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a63acea7d9ce7e35a48486cd46398f718" compoundref="osapi_8c" startline="2798" endline="2836">OS_CountSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a3132d8fcb5c3dfc4f152c567d9c39756" compoundref="osapi_8c" startline="3211" endline="3249">OS_MutSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1ae3e72f5403b7e3cac2c20ac65a5bb511" compoundref="osapi_8c" startline="1268" endline="1354">OS_QueueCreate</referencedby>
+        <referencedby refid="osapi_8c_1ab5b6f35ad093859012d4d4d482cdfb9d" compoundref="osapi_8c" startline="1674" endline="1710">OS_QueueGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a3f7e467030a2a4b8147c53ec44e3ae30" compoundref="osapi_8c" startline="548" endline="816">OS_TaskCreate</referencedby>
+        <referencedby refid="osapi_8c_1a05df84f4e2a6f26b0985fd29941b5a2d" compoundref="osapi_8c" startline="1114" endline="1150">OS_TaskGetIdByName</referencedby>
+        <referencedby refid="ostimer_8c_1a64946f4907ed8ecad18243630110461b" compoundref="ostimer_8c" startline="251" endline="368">OS_TimerCreate</referencedby>
+        <referencedby refid="ostimer_8c_1a25b49a7bc1136a15901290ad7b418728" compoundref="ostimer_8c" startline="484" endline="518">OS_TimerGetIdByName</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a4acf115a82cd8d9180779106832972e9" prot="public" static="no">
+        <name>OS_ERR_NO_FREE_IDS</name>
+        <initializer>(-14)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="101" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a03750816f6dff3a2adfcebde8b07175d" compoundref="osapi_8c" startline="1777" endline="1925">OS_BinSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a078ac65c4cf2acda58fa915fbdb188f6" compoundref="osapi_8c" startline="2365" endline="2513">OS_CountSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1ae3e72f5403b7e3cac2c20ac65a5bb511" compoundref="osapi_8c" startline="1268" endline="1354">OS_QueueCreate</referencedby>
+        <referencedby refid="osapi_8c_1a3f7e467030a2a4b8147c53ec44e3ae30" compoundref="osapi_8c" startline="548" endline="816">OS_TaskCreate</referencedby>
+        <referencedby refid="ostimer_8c_1a64946f4907ed8ecad18243630110461b" compoundref="ostimer_8c" startline="251" endline="368">OS_TimerCreate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1ab8ee9d9583a0911e5d758a0fc542b637" prot="public" static="no">
+        <name>OS_ERR_NAME_TAKEN</name>
+        <initializer>(-15)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="102" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="102" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a03750816f6dff3a2adfcebde8b07175d" compoundref="osapi_8c" startline="1777" endline="1925">OS_BinSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1a078ac65c4cf2acda58fa915fbdb188f6" compoundref="osapi_8c" startline="2365" endline="2513">OS_CountSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</referencedby>
+        <referencedby refid="osapi_8c_1ae3e72f5403b7e3cac2c20ac65a5bb511" compoundref="osapi_8c" startline="1268" endline="1354">OS_QueueCreate</referencedby>
+        <referencedby refid="osapi_8c_1a3f7e467030a2a4b8147c53ec44e3ae30" compoundref="osapi_8c" startline="548" endline="816">OS_TaskCreate</referencedby>
+        <referencedby refid="ostimer_8c_1a64946f4907ed8ecad18243630110461b" compoundref="ostimer_8c" startline="251" endline="368">OS_TimerCreate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a3e18cb03df913bcc1522b61a29df3929" prot="public" static="no">
+        <name>OS_ERR_INVALID_ID</name>
+        <initializer>(-16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="103" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a4445a375ddc73d0200f10675496a5c4a" compoundref="osapi_8c" startline="1940" endline="1973">OS_BinSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a1cecc6e34056dc4a119da98e021e1a80" compoundref="osapi_8c" startline="2042" endline="2084">OS_BinSemFlush</referencedby>
+        <referencedby refid="osapi_8c_1a2365a5fa367b3e3779fcd39a7e86f6ab" compoundref="osapi_8c" startline="2314" endline="2345">OS_BinSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a6b163c7bbcfb7d7001be8b7fb5de7317" compoundref="osapi_8c" startline="1992" endline="2027">OS_BinSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a5b325c1513b05c9fdb7b35849f1c1e95" compoundref="osapi_8c" startline="2100" endline="2163">OS_BinSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a780bf1ed9629b32f78560ad45a7853a0" compoundref="osapi_8c" startline="2180" endline="2249">OS_BinSemTimedWait</referencedby>
+        <referencedby refid="osapi_8c_1a33fe7baba857372fb0bb54b39403deee" compoundref="osapi_8c" startline="2528" endline="2561">OS_CountSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a787782fbaa735c7631f6b11c3c42081e" compoundref="osapi_8c" startline="2849" endline="2890">OS_CountSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1aa86572454ea836feb25ff46ed5962698" compoundref="osapi_8c" startline="2579" endline="2621">OS_CountSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a5823afb4723b533c182c8493e93078ea" compoundref="osapi_8c" startline="2637" endline="2699">OS_CountSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a8b09f50a4c9f9f45e70dceb6e90b6b51" compoundref="osapi_8c" startline="2716" endline="2784">OS_CountSemTimedWait</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a4be56a807779019aad0c84e439906d11" compoundref="osapi_8c" startline="3062" endline="3097">OS_MutSemDelete</referencedby>
+        <referencedby refid="osapi_8c_1a8a82fc59d1bfc3dda2be4cddeb8f5ae4" compoundref="osapi_8c" startline="3263" endline="3296">OS_MutSemGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</referencedby>
+        <referencedby refid="osapi_8c_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</referencedby>
+        <referencedby refid="osapi_8c_1a15f67f089080b67931eb4d91564b367e" compoundref="osapi_8c" startline="1370" endline="1412">OS_QueueDelete</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+        <referencedby refid="osapi_8c_1a90d4bcec6a9e2fa11374cfb6000d89db" compoundref="osapi_8c" startline="1722" endline="1754">OS_QueueGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a514794c514fed167939e3bc870d50d44" compoundref="osapi_8c" startline="1580" endline="1658">OS_QueuePut</referencedby>
+        <referencedby refid="osapi_8c_1a28ceef9ec6d344cb0569e1f5c105e59e" compoundref="osapi_8c" startline="828" endline="887">OS_TaskDelete</referencedby>
+        <referencedby refid="osapi_8c_1a972b1ce7ff072290ff722439e6a8f538" compoundref="osapi_8c" startline="1164" endline="1201">OS_TaskGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" compoundref="osapi_8c" startline="1211" endline="1249">OS_TaskInstallDeleteHandler</referencedby>
+        <referencedby refid="osapi_8c_1a2712303c67dda79b3f382101f2d5e547" compoundref="osapi_8c" startline="1030" endline="1077">OS_TaskRegister</referencedby>
+        <referencedby refid="osapi_8c_1a4e29bcbe0ad198566d5fc5e264173c23" compoundref="osapi_8c" startline="973" endline="1017">OS_TaskSetPriority</referencedby>
+        <referencedby refid="ostimer_8c_1ab901e145ec75ad3b6c4e1dc15bb71972" compoundref="ostimer_8c" startline="446" endline="469">OS_TimerDelete</referencedby>
+        <referencedby refid="ostimer_8c_1a9499f30b634da628293397b1cb0f68b8" compoundref="ostimer_8c" startline="530" endline="563">OS_TimerGetInfo</referencedby>
+        <referencedby refid="ostimer_8c_1a415e9a85f738c4363588bbd3f24e2839" compoundref="ostimer_8c" startline="381" endline="432">OS_TimerSet</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a76c3d4d8ae21e0067520d538db8dab18" prot="public" static="no">
+        <name>OS_ERR_NAME_NOT_FOUND</name>
+        <initializer>(-17)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="104" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1ae1f491ab305fd4d1386f20a4177cd2f3" compoundref="osapi_8c" startline="2262" endline="2301">OS_BinSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a63acea7d9ce7e35a48486cd46398f718" compoundref="osapi_8c" startline="2798" endline="2836">OS_CountSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a3132d8fcb5c3dfc4f152c567d9c39756" compoundref="osapi_8c" startline="3211" endline="3249">OS_MutSemGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1ab5b6f35ad093859012d4d4d482cdfb9d" compoundref="osapi_8c" startline="1674" endline="1710">OS_QueueGetIdByName</referencedby>
+        <referencedby refid="osapi_8c_1a05df84f4e2a6f26b0985fd29941b5a2d" compoundref="osapi_8c" startline="1114" endline="1150">OS_TaskGetIdByName</referencedby>
+        <referencedby refid="ostimer_8c_1a25b49a7bc1136a15901290ad7b418728" compoundref="ostimer_8c" startline="484" endline="518">OS_TimerGetIdByName</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a148a6801434043813c3a0e4695e20e5e" prot="public" static="no">
+        <name>OS_ERR_SEM_NOT_FULL</name>
+        <initializer>(-18)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="105" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a42b6fa16d090d4fd0366a48b008515da" prot="public" static="no">
+        <name>OS_ERR_INVALID_PRIORITY</name>
+        <initializer>(-19)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="106" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1aa07b6d0e1839d2a933c3aa2c15e1642c" compoundref="osapi_8c" startline="3737" endline="3797">OS_GetErrorName</referencedby>
+        <referencedby refid="osapi_8c_1a3f7e467030a2a4b8147c53ec44e3ae30" compoundref="osapi_8c" startline="548" endline="816">OS_TaskCreate</referencedby>
+        <referencedby refid="osapi_8c_1a4e29bcbe0ad198566d5fc5e264173c23" compoundref="osapi_8c" startline="973" endline="1017">OS_TaskSetPriority</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1aaca29cda15d375e04dd23c099e652577" prot="public" static="no">
+        <name>OS_INVALID_SEM_VALUE</name>
+        <initializer>(-20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="107" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a078ac65c4cf2acda58fa915fbdb188f6" compoundref="osapi_8c" startline="2365" endline="2513">OS_CountSemCreate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a2d134a014bbbf765fe1e91b901061e12" prot="public" static="no">
+        <name>OS_ERR_FILE</name>
+        <initializer>(-27)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="108" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1aa30edee25a7a55c6a02c085c8526a1cf" prot="public" static="no">
+        <name>OS_ERR_NOT_IMPLEMENTED</name>
+        <initializer>(-28)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="109" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="osapi_8c_1a4f8322d29e9f7bc6e877abdf50f6ab68" compoundref="osapi_8c" startline="3435" endline="3445">OS_HeapGetInfo</referencedby>
+        <referencedby refid="osapi_8c_1a239f4cd57ad58e7bfea2c3cda68033cd" compoundref="osapi_8c" startline="3328" endline="3335">OS_IntAttachHandler</referencedby>
+        <referencedby refid="osapi_8c_1ab785c4015754249084b3c0d98bf4ef77" compoundref="osapi_8c" startline="3422" endline="3425">OS_IntDisable</referencedby>
+        <referencedby refid="osapi_8c_1a5fcc5cc5d5904230d78912370cda144e" compoundref="osapi_8c" startline="3398" endline="3401">OS_IntEnable</referencedby>
+        <referencedby refid="osapi_8c_1a1471ac0918a1861965e4e2d3a0027895" compoundref="osapi_8c" startline="3376" endline="3379">OS_IntLock</referencedby>
+        <referencedby refid="osapi_8c_1acb62c03bed251941a2fdda1e38810ff9" compoundref="osapi_8c" startline="3354" endline="3357">OS_IntUnlock</referencedby>
+        <referencedby refid="osapi_8c_1a5baf58abd88bf84fe15016d9649cca39" compoundref="osapi_8c" startline="3544" endline="3581">OS_SetLocalTime</referencedby>
+        <referencedby refid="ostimer_8c_1aa04a5e54683f48eaff5bdca80cebb517" compoundref="ostimer_8c" startline="575" endline="578">OS_TimeBaseCreate</referencedby>
+        <referencedby refid="ostimer_8c_1a7a461f115c5a81f28f3a2cad5edbdb0b" compoundref="ostimer_8c" startline="585" endline="588">OS_TimeBaseDelete</referencedby>
+        <referencedby refid="ostimer_8c_1a0e21ea80ca3e41739e2c9a3274b6de13" compoundref="ostimer_8c" startline="590" endline="593">OS_TimeBaseGetIdByName</referencedby>
+        <referencedby refid="ostimer_8c_1a89f9393eafa9d7b8e088f8db80468445" compoundref="ostimer_8c" startline="580" endline="583">OS_TimeBaseSet</referencedby>
+        <referencedby refid="ostimer_8c_1a53551e9073e2a6ca21d3a0760c18bf4a" compoundref="ostimer_8c" startline="595" endline="598">OS_TimerAdd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a9c26d5e02831df07684b8e61a99f47db" prot="public" static="no">
+        <name>OS_TIMER_ERR_INVALID_ARGS</name>
+        <initializer>(-29)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="110" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="ostimer_8c_1a64946f4907ed8ecad18243630110461b" compoundref="ostimer_8c" startline="251" endline="368">OS_TimerCreate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1ac0dbe004811aae1c765e0f0047ba3b0b" prot="public" static="no">
+        <name>OS_TIMER_ERR_TIMER_ID</name>
+        <initializer>(-30)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="111" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1ae2caad39d161e0dbb17c23613e5a898d" prot="public" static="no">
+        <name>OS_TIMER_ERR_UNAVAILABLE</name>
+        <initializer>(-31)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="112" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="ostimer_8c_1a64946f4907ed8ecad18243630110461b" compoundref="ostimer_8c" startline="251" endline="368">OS_TimerCreate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a09f12f807a12754258b9ff3eb6187e6d" prot="public" static="no">
+        <name>OS_TIMER_ERR_INTERNAL</name>
+        <initializer>(-32)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="113" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="ostimer_8c_1ab901e145ec75ad3b6c4e1dc15bb71972" compoundref="ostimer_8c" startline="446" endline="469">OS_TimerDelete</referencedby>
+        <referencedby refid="ostimer_8c_1a415e9a85f738c4363588bbd3f24e2839" compoundref="ostimer_8c" startline="381" endline="432">OS_TimerSet</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1ab2b5288ed3f6994990eff6125202d4dd" prot="public" static="no">
+        <name>OS_PEND</name>
+        <initializer>(-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="118" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="cfe__sb__priv_8h_1afa4e55746501266c32887860c2d19e0b" compoundref="cfe__sb__api_8c" startline="1979" endline="2042">CFE_SB_ReadQueue</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="osapi_8h_1a4a2422824f9b38df781a24d5905fe0ce" prot="public" static="no">
+        <name>OS_CHECK</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/osal/inc/osapi.h" line="119" column="9" bodyfile="/home/vagrant/airliner/core/osal/inc/osapi.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="cfe__sb__priv_8h_1afa4e55746501266c32887860c2d19e0b" compoundref="cfe__sb__api_8c" startline="1979" endline="2042">CFE_SB_ReadQueue</referencedby>
+        <referencedby refid="osapi_8c_1a6e563810965cdff38da7e4ec3347fce8" compoundref="osapi_8c" startline="1428" endline="1562">OS_QueueGet</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:<sp/>osapi.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2006,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.<sp/><sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASAs<sp/>Goddard<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/>Author:<sp/><sp/>Alan<sp/>Cudmore<sp/>-<sp/>Code<sp/>582</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/>Contains<sp/>functions<sp/>prototype<sp/>definitions<sp/>and<sp/>variables<sp/>declarations</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>the<sp/>OS<sp/>Abstraction<sp/>Layer,<sp/>Core<sp/>OS<sp/>module</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>$Revision:<sp/>1.10<sp/>$</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/>$Date:<sp/>2013/07/25<sp/>10:01:32GMT-05:00<sp/>$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>$Log:<sp/>osapi.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Revision<sp/>1.10<sp/>2013/07/25<sp/>10:01:32GMT-05:00<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Added<sp/>C++<sp/>support</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2010/11/12<sp/>12:00:17GMT-05:00<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>replaced<sp/>copyright<sp/>character<sp/>with<sp/>(c)<sp/>and<sp/>added<sp/>open<sp/>source<sp/>notice<sp/>where<sp/>needed.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2010/03/08<sp/>15:57:20EST<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>include<sp/>new<sp/>OSAL<sp/>version<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2009/08/10<sp/>14:01:10EDT<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Reset<sp/>OSAL<sp/>version<sp/>for<sp/>trunk</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2009/08/10<sp/>13:55:49EDT<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Updated<sp/>OSAL<sp/>version<sp/>defines<sp/>to<sp/>3.0</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2009/06/10<sp/>14:15:55EDT<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Removed<sp/>HAL<sp/>include<sp/>files.<sp/>HAL<sp/>code<sp/>was<sp/>removed<sp/>from<sp/>OSAL.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2008/08/20<sp/>16:12:51EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>Updated<sp/>timer<sp/>error<sp/>codes</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2008/08/20<sp/>15:46:27EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Add<sp/>support<sp/>for<sp/>timer<sp/>API</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2008/06/20<sp/>15:13:43EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Checked<sp/>in<sp/>new<sp/>Module<sp/>loader/symbol<sp/>table<sp/>functionality</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/20<sp/>22:36:02EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/MKS-OSAL-REPOSITORY/src/os/inc/project.pj</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2008/02/14<sp/>11:29:10EST<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>Updated<sp/>version<sp/>define<sp/>(<sp/>2.11<sp/>)</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2008/02/07<sp/>11:31:58EST<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>Fixed<sp/>merge<sp/>problem</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2008/02/07<sp/>11:07:29EST<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>Added<sp/>dynamic<sp/>loader<sp/>/<sp/>Symbol<sp/>lookup<sp/>API<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/><sp/><sp/>--<sp/>API<sp/>only,<sp/>next<sp/>release<sp/>will<sp/>have<sp/>functionality</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2008/01/29<sp/>14:30:49EST<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>I<sp/>added<sp/>code<sp/>to<sp/>all<sp/>the<sp/>ports<sp/>that<sp/>allow<sp/>the<sp/>values<sp/>of<sp/>both<sp/>binary<sp/>and<sp/>counting<sp/>semaphores<sp/>to<sp/>be</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>gotten<sp/>through<sp/>the<sp/>OS_*SemGetInfo<sp/>API.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2007/10/16<sp/>16:14:52EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>d:/mksdata/MKS-OSAL-REPOSITORY/src/os/inc/project.pj</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2007/09/28<sp/>15:46:49EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/>Updated<sp/>version<sp/>numbers<sp/>to<sp/>5.0</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2007/08/24<sp/>13:43:25EDT<sp/>apcudmore</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>d:/mksdata/MKS-CFE-PROJECT/fsw/cfe-core/os/inc/project.pj</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">**<sp/>Revision<sp/>1.9.1.1<sp/>2007/05/21<sp/>08:58:51EDT<sp/>njyanchik</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">**<sp/>The<sp/>trunk<sp/>version<sp/>number<sp/>has<sp/>been<sp/>updated<sp/>to<sp/>version<sp/>0.0</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2006/06/12<sp/>10:20:07EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">**<sp/>Updated<sp/>OS_MINOR_VERSION<sp/>from<sp/>3<sp/>to<sp/>4</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2006/02/03<sp/>09:30:45EST<sp/>njyanchik</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">**<sp/>Changed<sp/>version<sp/>number<sp/>to<sp/>2.3</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2006/01/20<sp/>11:56:16EST<sp/>njyanchik</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">**<sp/>Fixed<sp/>header<sp/>file<sp/>information<sp/>to<sp/>match<sp/>api<sp/>document</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">**<sp/>Revision<sp/>1.15<sp/><sp/>2005/11/09<sp/>13:35:49<sp/><sp/>nyanchik</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">**<sp/>Revisions<sp/>for<sp/>2.2<sp/>include:</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">**<sp/>a<sp/>new<sp/>scheduler<sp/>mapper<sp/>for<sp/>Linux<sp/>and<sp/>OS<sp/>X</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">**<sp/>addition<sp/>of<sp/>OS_printf<sp/>function</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">**<sp/>fixed<sp/>issues<sp/>that<sp/>would<sp/>cause<sp/>warnings<sp/>at<sp/>compile<sp/>time</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_osapi_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_osapi_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_SUCCESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="osapi_8h_1af41e7a381cb414280c4d7f64be56228e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="osapi_8h_1a209ba379f822b4879ed566808ed07f17" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_INVALID_POINTER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="osapi_8h_1a982377be8c79b305b9658ecbfd77cf3b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERROR_ADDRESS_MISALIGNED<sp/><sp/><sp/><sp/>(-3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="osapi_8h_1ac760cd5e5e0f4cfeb7b5cc1c1522d8ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERROR_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="osapi_8h_1a710e9e56b589e8dedbd2b308ea464d30" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_INVALID_INT_NUM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="osapi_8h_1a6d87a94eb3eefb1bb65524f6ab1b0caf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_SEM_FAILURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="osapi_8h_1a35554fb81bd9d5f3522affba282f4f42" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_SEM_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="osapi_8h_1a649aefc48b25fa31f54b59fe16fc501f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_QUEUE_EMPTY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="osapi_8h_1a1bb3ced7e39cd5e1ca6d4c45f153cbc2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_QUEUE_FULL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-9)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="osapi_8h_1a11a8fcc6118adb5c801e6b84739af6a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_QUEUE_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="osapi_8h_1ab6e87a032d04168d8bab19d8a7584064" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_QUEUE_INVALID_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-11)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="osapi_8h_1aa2d9e0ae1d71d3b57e0c4d8663344c50" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_QUEUE_ID_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-12)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="osapi_8h_1ab3fa672527cd54a2dad5c1cc0a2a8011" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_NAME_TOO_LONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-13)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="osapi_8h_1a4acf115a82cd8d9180779106832972e9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_NO_FREE_IDS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-14)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="osapi_8h_1ab8ee9d9583a0911e5d758a0fc542b637" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_NAME_TAKEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="osapi_8h_1a3e18cb03df913bcc1522b61a29df3929" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_INVALID_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="osapi_8h_1a76c3d4d8ae21e0067520d538db8dab18" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_NAME_NOT_FOUND<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-17)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="osapi_8h_1a148a6801434043813c3a0e4695e20e5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_SEM_NOT_FULL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-18)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="osapi_8h_1a42b6fa16d090d4fd0366a48b008515da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_INVALID_PRIORITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-19)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="osapi_8h_1aaca29cda15d375e04dd23c099e652577" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_INVALID_SEM_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-20)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="osapi_8h_1a2d134a014bbbf765fe1e91b901061e12" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_FILE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-27)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="osapi_8h_1aa30edee25a7a55c6a02c085c8526a1cf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_ERR_NOT_IMPLEMENTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-28)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="osapi_8h_1a9c26d5e02831df07684b8e61a99f47db" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_TIMER_ERR_INVALID_ARGS<sp/><sp/><sp/><sp/><sp/><sp/>(-29)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="osapi_8h_1ac0dbe004811aae1c765e0f0047ba3b0b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_TIMER_ERR_TIMER_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-30)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="osapi_8h_1ae2caad39d161e0dbb17c23613e5a898d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_TIMER_ERR_UNAVAILABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-31)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="osapi_8h_1a09f12f807a12754258b9ff3eb6187e6d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_TIMER_ERR_INTERNAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="116"><highlight class="comment">**<sp/>Defines<sp/>for<sp/>Queue<sp/>Timeout<sp/>parameters</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="osapi_8h_1ab2b5288ed3f6994990eff6125202d4dd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_PEND<sp/><sp/><sp/>(-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="osapi_8h_1a4a2422824f9b38df781a24d5905fe0ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OS_CHECK<sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi-version_8h" kindref="compound">osapi-version.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="124"><highlight class="comment">**<sp/>Include<sp/>the<sp/>configuration<sp/>file</highlight></codeline>
+<codeline lineno="125"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;osconfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">**<sp/>Include<sp/>the<sp/>OS<sp/>API<sp/>modules</highlight></codeline>
+<codeline lineno="130"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi-os-core_8h" kindref="compound">osapi-os-core.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi-os-filesys_8h" kindref="compound">osapi-os-filesys.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi-os-net_8h" kindref="compound">osapi-os-net.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi-os-loader_8h" kindref="compound">osapi-os-loader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi-os-timer_8h" kindref="compound">osapi-os-timer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi-os-rtm_8h" kindref="compound">osapi-os-rtm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/>******************************************************************************</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/>*<sp/>Items<sp/>below<sp/>here<sp/>are<sp/>internal<sp/>OSAL-use<sp/>definitions<sp/>and<sp/>are<sp/>not<sp/>part<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/>*<sp/>OSAL<sp/>API</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/>*****************************************************************************</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/vagrant/airliner/core/osal/inc/osapi.h"/>
+  </compounddef>
+</doxygen>

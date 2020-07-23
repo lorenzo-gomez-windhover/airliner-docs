@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="hmc5883__events_8h" kind="file" language="C++">
+    <compoundname>hmc5883_events.h</compoundname>
+    <includedby refid="hmc5883__app_8h" local="yes">apps/hmc5883/fsw/src/hmc5883_app.h</includedby>
+    <invincdepgraph>
+      <node id="388">
+        <label>apps/hmc5883/fsw/src/hmc5883_events.h</label>
+        <link refid="hmc5883_events.h"/>
+        <childnode refid="389" relation="include">
+        </childnode>
+      </node>
+      <node id="391">
+        <label>apps/hmc5883/fsw/src/hmc5883_config_utils.cpp</label>
+        <link refid="hmc5883__config__utils_8cpp"/>
+      </node>
+      <node id="390">
+        <label>apps/hmc5883/fsw/src/hmc5883_app.cpp</label>
+        <link refid="hmc5883__app_8cpp"/>
+      </node>
+      <node id="389">
+        <label>apps/hmc5883/fsw/src/hmc5883_app.h</label>
+        <link refid="hmc5883__app_8h"/>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8a" prot="public" static="no">
+        <name>HMC5883_EventIds_t</name>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa19a6453a07ef9b074c39d6a6a7d81bf5" prot="public">
+          <name>HMC5883_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaa80061a40050a8a670a28283f89e243f" prot="public">
+          <name>HMC5883_INIT_INF_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> task has completed initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the application major version defined in <ref refid="hmc5883__version_8h_1aaf767abd358175d6379e37933ea4e700" kindref="member">HMC5883_MAJOR_VERSION</ref>. The second <computeroutput>d</computeroutput> field contains the application minor version defined in <ref refid="hmc5883__version_8h_1a63bcac51674fdff52887d233d1dfff88" kindref="member">HMC5883_MINOR_VERSION</ref>. The third <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="hmc5883__version_8h_1a55bf1f6b6f173a731cf3fec655d42d2b" kindref="member">HMC5883_REVISION</ref>. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="hmc5883__platform__cfg_8h_1abd86b37531598e3ad30f437568c8f040" kindref="member">HMC5883_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa0ea0b46a56b165ca737211087fba5a1b" prot="public">
+          <name>HMC5883_CMD_NOOP_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> Task receives a NoOp command.</para><para>The first <computeroutput>u</computeroutput> field contains the application major version defined in <ref refid="hmc5883__version_8h_1aaf767abd358175d6379e37933ea4e700" kindref="member">HMC5883_MAJOR_VERSION</ref>. The first <computeroutput>d</computeroutput> field contains the application major version defined in <ref refid="hmc5883__version_8h_1aaf767abd358175d6379e37933ea4e700" kindref="member">HMC5883_MAJOR_VERSION</ref>. The second <computeroutput>d</computeroutput> field contains the application minor version defined in <ref refid="hmc5883__version_8h_1a63bcac51674fdff52887d233d1dfff88" kindref="member">HMC5883_MINOR_VERSION</ref>. The third <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="hmc5883__version_8h_1a55bf1f6b6f173a731cf3fec655d42d2b" kindref="member">HMC5883_REVISION</ref>. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="hmc5883__platform__cfg_8h_1abd86b37531598e3ad30f437568c8f040" kindref="member">HMC5883_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aafa4a4c085813e90c3525e2328c316173" prot="public">
+          <name>HMC5883_SUBSCRIBE_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> Task fails to subscribe to a message at initialization.</para><para>The first <computeroutput>s</computeroutput> field contains the name of the pipe. The second <computeroutput>s</computeroutput> field contains the macro name of the message. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa89f5d0ffd464375dab432b009ceea8b5" prot="public">
+          <name>HMC5883_PIPE_INIT_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to create %s pipe (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to create %s pipe (0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> Task fails to create a CFE Software Bus pipe at initialization.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa57ef3b8a6f85fed247eee09ea64275d0" prot="public">
+          <name>HMC5883_CFGTBL_MANAGE_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a55f9e6ac951e3e2b1ff42787e5f8c57c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Manage</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa64f4fa0c3555fe9a5e55a372bc1fcbf4" prot="public">
+          <name>HMC5883_CFGTBL_GETADDR_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa11d6cee54ab0677c223f1e3f36465b02" prot="public">
+          <name>HMC5883_RCVMSG_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> Task has had an error reading from a pipe.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa5a0d7cfd5a494b0325ffe0b8e71c5010" prot="public">
+          <name>HMC5883_MSGID_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> Task has received an invalid message ID.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 16 bit hexadecimal number is the actual message ID received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aae5b2a6a3cfb99044aebb9d6031225715" prot="public">
+          <name>HMC5883_CC_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> Task has received an invalid message ID.</para><para>The u field contains the actual command code received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aab0a088838c09f64e4bd54692b036f29a" prot="public">
+          <name>HMC5883_MSGLEN_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS HMC5883Task has received a message with an invalid length.</para><para>The first <computeroutput>d</computeroutput> field contains the message ID. The second <computeroutput>d</computeroutput> field contains the command code. The third <computeroutput>d</computeroutput> field contains the actual length. The fourth <computeroutput>d</computeroutput> field contains the expected length. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aae081a6aad43b765cafbb62efd6c24c38" prot="public">
+          <name>HMC5883_CFGTBL_REG_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> Task fails to register the <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> configuration table.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa1e676c4b258bc978f058933aac7b2431" prot="public">
+          <name>HMC5883_CFGTBL_LOAD_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> Task fails to load the <ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> configuration table.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aac096c45484b5592c404c6b117be9a478" prot="public">
+          <name>HMC5883_UNINIT_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;<ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;<ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when MPU9250 has had an error in uninitialization. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa7c384d26442d744038e775869eac4a00" prot="public">
+          <name>HMC5883_INIT_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;<ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;<ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref> - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the MPU9250 has had an error in initialization. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaca65d6fba5ac3beb6d78212f74750f22" prot="public">
+          <name>HMC5883_READ_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to read device&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to read device&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a device read error occurs. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa96d7fee75cdd1bac3ea49d7cc88772d3" prot="public">
+          <name>HMC5883_VALIDATE_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to validate device&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to validate device&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a device ID isn&apos;t as expected. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa87adaff743cee45ee017ffbe96170579" prot="public">
+          <name>HMC5883_SCALE_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to validate scale&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to validate scale&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the scale calibration fails validation. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaa6977abacb740857cc29fc354e4acf8f" prot="public">
+          <name>HMC5883_OFFSET_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to validate offset&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to validate offset&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the offset calibration fails validation. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaf40cde398ffc41be08b1f1820593ffe2" prot="public">
+          <name>HMC5883_CALIBRATE_INF_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Calibration values updated&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Calibration values updated&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the calibration values are successfully updated. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aace20c5874b09e33b769853a45dee5026" prot="public">
+          <name>HMC5883_CALIBRATE_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Calibration values failed to update&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Calibration values failed to update&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the calibration values failed to update. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa81a885f96f194744ec07194cd2e750b1" prot="public">
+          <name>HMC5883_EVT_CNT</name>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_events.h" line="50" column="1" bodyfile="apps/hmc5883/fsw/src/hmc5883_events.h" bodystart="50" bodyend="355"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HMC5883_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HMC5883_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa19a6453a07ef9b074c39d6a6a7d81bf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa19a6453a07ef9b074c39d6a6a7d81bf5" kindref="member">HMC5883_RESERVED_EID</ref><sp/>=<sp/>0,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaa80061a40050a8a670a28283f89e243f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaa80061a40050a8a670a28283f89e243f" kindref="member">HMC5883_INIT_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa0ea0b46a56b165ca737211087fba5a1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa0ea0b46a56b165ca737211087fba5a1b" kindref="member">HMC5883_CMD_NOOP_EID</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aafa4a4c085813e90c3525e2328c316173" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aafa4a4c085813e90c3525e2328c316173" kindref="member">HMC5883_SUBSCRIBE_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa89f5d0ffd464375dab432b009ceea8b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa89f5d0ffd464375dab432b009ceea8b5" kindref="member">HMC5883_PIPE_INIT_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa57ef3b8a6f85fed247eee09ea64275d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa57ef3b8a6f85fed247eee09ea64275d0" kindref="member">HMC5883_CFGTBL_MANAGE_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa64f4fa0c3555fe9a5e55a372bc1fcbf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa64f4fa0c3555fe9a5e55a372bc1fcbf4" kindref="member">HMC5883_CFGTBL_GETADDR_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa11d6cee54ab0677c223f1e3f36465b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa11d6cee54ab0677c223f1e3f36465b02" kindref="member">HMC5883_RCVMSG_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa5a0d7cfd5a494b0325ffe0b8e71c5010" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa5a0d7cfd5a494b0325ffe0b8e71c5010" kindref="member">HMC5883_MSGID_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aae5b2a6a3cfb99044aebb9d6031225715" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aae5b2a6a3cfb99044aebb9d6031225715" kindref="member">HMC5883_CC_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aab0a088838c09f64e4bd54692b036f29a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aab0a088838c09f64e4bd54692b036f29a" kindref="member">HMC5883_MSGLEN_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aae081a6aad43b765cafbb62efd6c24c38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aae081a6aad43b765cafbb62efd6c24c38" kindref="member">HMC5883_CFGTBL_REG_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa1e676c4b258bc978f058933aac7b2431" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa1e676c4b258bc978f058933aac7b2431" kindref="member">HMC5883_CFGTBL_LOAD_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="262" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aac096c45484b5592c404c6b117be9a478" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aac096c45484b5592c404c6b117be9a478" kindref="member">HMC5883_UNINIT_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="274" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa7c384d26442d744038e775869eac4a00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa7c384d26442d744038e775869eac4a00" kindref="member">HMC5883_INIT_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="286" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaca65d6fba5ac3beb6d78212f74750f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaca65d6fba5ac3beb6d78212f74750f22" kindref="member">HMC5883_READ_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="298" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa96d7fee75cdd1bac3ea49d7cc88772d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa96d7fee75cdd1bac3ea49d7cc88772d3" kindref="member">HMC5883_VALIDATE_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="311" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa87adaff743cee45ee017ffbe96170579" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa87adaff743cee45ee017ffbe96170579" kindref="member">HMC5883_SCALE_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="324" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaa6977abacb740857cc29fc354e4acf8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaa6977abacb740857cc29fc354e4acf8f" kindref="member">HMC5883_OFFSET_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="336" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaf40cde398ffc41be08b1f1820593ffe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aaf40cde398ffc41be08b1f1820593ffe2" kindref="member">HMC5883_CALIBRATE_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="348" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aace20c5874b09e33b769853a45dee5026" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aace20c5874b09e33b769853a45dee5026" kindref="member">HMC5883_CALIBRATE_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa81a885f96f194744ec07194cd2e750b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aa81a885f96f194744ec07194cd2e750b1" kindref="member">HMC5883_EVT_CNT</ref></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal">}<sp/><ref refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8a" kindref="member">HMC5883_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HMC5883_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/hmc5883/fsw/src/hmc5883_events.h"/>
+  </compounddef>
+</doxygen>

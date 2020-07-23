@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_3_4" kind="page">
+    <compoundname>cfedeploy_3_4</compoundname>
+    <title>Macintosh / OS X Platform</title>
+    <detaileddescription>
+<para><center> <heading level="4">cFE Core Configuration for the Macintosh / OS X Platform </heading>
+</center></para><para><center> </center> <center> <bold> cfe-config.mak Settings </bold> </center> <table rows="5" cols="3"><row>
+<entry thead="no"><para><bold>cfe-config.mak variable </bold> </para></entry><entry thead="no"><para><bold>Required selection </bold> </para></entry><entry thead="no"><para><bold>Notes</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>HWARCH </para></entry><entry thead="no"><para>PPC / x86 </para></entry><entry thead="no"><para>Both the PPC and x86 are supported </para></entry></row>
+<row>
+<entry thead="no"><para>PLATFORM </para></entry><entry thead="no"><para>mac </para></entry></row>
+<row>
+<entry thead="no"><para>OS </para></entry><entry thead="no"><para>osx </para></entry></row>
+<row>
+<entry thead="no"><para>BSP </para></entry><entry thead="no"><para>osx </para></entry></row>
+</table>
+</para><para><center> <heading level="4">How to run the cFE on the Macintosh / OS X Platform </heading>
+</center></para><para><center> </center></para><para><orderedlist>
+<listitem>
+<para>Create the directory to hold the non-volatile applications. <verbatim>        $ mkdir /tmp/eedev0/apps</verbatim> </para></listitem>
+<listitem>
+<para>Change the extension of the files files listed in the startup script to <computeroutput>.bundle</computeroutput> (from the default of <computeroutput>.o</computeroutput>) </para></listitem>
+<listitem>
+<para>Copy the files listed in the startup script (and the startup script) to the non-volatile directory. <verbatim>        ...fsw/build/cpu1]$cp exe/ci.bundle /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/to.bundle /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/sch.bundle /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/tst_lib.bundle /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/cfe_es_startup.scr /tmp/eedev0/apps</verbatim> </para></listitem>
+<listitem>
+<para>To run the cFE, type the following: <verbatim>        ...fsw/build/cpu1]$ ./exe/core-osx.bin PO 1</verbatim> <bold>Note:</bold> See section called <ref refid="cfedeploy_3_6" kindref="compound">PC / Cygwin-Windows Platform</ref>. </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">Exception Handling </heading>
+</center></para><para><center> </center></para><para>This port does not install exception handlers. Exceptions will be caught by the operating system or debugger. The UNIX signal handler facility could be used to catch exceptions in the cFE.</para><para><center> <heading level="4">BSP Panic </heading>
+</center></para><para><center> </center></para><para>If the cFE core startup fails, the generic cFE code will call the #OS_BSPPanic routine. This is a target specific routine. If the cFE Startup fails and calls #OS_BSPPanic, this port will exit to the shell.</para><para><center> <heading level="4">Compressed file support </heading>
+</center></para><para><center> </center></para><para>The cFE supports loading compressed cFE Application files. The files must be compressed with the <computeroutput>&quot;gzip&quot;</computeroutput> utility. An example: <computeroutput>&quot;$ gzip ci.o&quot;</computeroutput>. This will produce the file <computeroutput>&quot;ci.o.gz&quot;</computeroutput>. When the cFE code detects the <computeroutput>.gz</computeroutput> file extension, it will uncompress the cFE application when loading it.</para><para>Next: <ref refid="cfedeploy_3_5" kindref="compound">PC / Linux Platform</ref> <bold>OR</bold> <ref refid="cfedeploy_3_6" kindref="compound">PC / Cygwin-Windows Platform</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_3_3" kindref="compound">BAE RAD750 / vxWorks 6.4 Platform</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_3" kindref="compound">Target Specific Instructions</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

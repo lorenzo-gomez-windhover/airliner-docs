@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="lc__verify_8h" kind="file" language="C++">
+    <compoundname>lc_verify.h</compoundname>
+    <includedby refid="lc__app_8c" local="yes">apps/lc/fsw/src/lc_app.c</includedby>
+    <invincdepgraph>
+      <node id="729">
+        <label>apps/lc/fsw/src/lc_verify.h</label>
+        <link refid="lc_verify.h"/>
+        <childnode refid="730" relation="include">
+        </childnode>
+      </node>
+      <node id="730">
+        <label>apps/lc/fsw/src/lc_app.c</label>
+        <link refid="lc__app_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>lc_verify.h<sp/>1.4<sp/>2017/03/07<sp/>17:35:09EST<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>Contains<sp/>CFS<sp/>Limit<sp/>Checker<sp/>(LC)<sp/>macros<sp/>that<sp/>run<sp/>preprocessor<sp/>checks</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/>on<sp/>mission<sp/>and<sp/>platform<sp/>configurable<sp/>parameters</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_lc_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_lc_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Macro<sp/>Definitions<sp/>-<sp/>defined<sp/>in<sp/>lc_mission_cfg.h</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/>**<sp/>RTS<sp/>request<sp/>message<sp/>ID<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_RTS_REQ_MID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_RTS_REQ_MID<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_RTS_REQ_MID<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_RTS_REQ_MID<sp/>must<sp/>be<sp/>greater<sp/>than<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_RTS_REQ_MID<sp/>&gt;<sp/>CFE_SB_HIGHEST_VALID_MSGID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_RTS_REQ_MID<sp/>must<sp/>not<sp/>exceed<sp/>CFE_SB_HIGHEST_VALID_MSGID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/>**<sp/>RTS<sp/>request<sp/>command<sp/>code</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_RTS_REQ_CC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_RTS_REQ_CC<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_RTS_REQ_CC<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_RTS_REQ_CC<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_RTS_REQ_CC<sp/>&gt;<sp/>127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_RTS_REQ_CC<sp/>must<sp/>not<sp/>exceed<sp/>127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>Macro<sp/>Definitions<sp/>-<sp/>defined<sp/>in<sp/>lc_platform_cfg.h</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/>**<sp/>Application<sp/>name</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_APP_NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_APP_NAME<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/>**<sp/>Command<sp/>pipe<sp/>depth</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_PIPE_DEPTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_PIPE_DEPTH<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_PIPE_DEPTH<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_PIPE_DEPTH<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_PIPE_DEPTH<sp/>&gt;<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_PIPE_DEPTH<sp/>must<sp/>not<sp/>exceed<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/>**<sp/>Maximum<sp/>number<sp/>of<sp/>watchpoints</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_MAX_WATCHPOINTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_WATCHPOINTS<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_WATCHPOINTS<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_WATCHPOINTS<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_WATCHPOINTS<sp/>&gt;<sp/>65520</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_WATCHPOINTS<sp/>must<sp/>not<sp/>exceed<sp/>65520<sp/>(OxFFF0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_WATCHPOINTS<sp/>%<sp/>4<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_WATCHPOINTS<sp/>must<sp/>be<sp/>a<sp/>multiple<sp/>of<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/>**<sp/>Maximum<sp/>number<sp/>of<sp/>actionpoints</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_MAX_ACTIONPOINTS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_ACTIONPOINTS<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_ACTIONPOINTS<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_ACTIONPOINTS<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_ACTIONPOINTS<sp/>&gt;<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_ACTIONPOINTS<sp/>must<sp/>not<sp/>exceed<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_ACTIONPOINTS<sp/>%<sp/>2<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_ACTIONPOINTS<sp/>must<sp/>be<sp/>a<sp/>multiple<sp/>of<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/>**<sp/>LC<sp/>state<sp/>after<sp/>power-on<sp/>reset</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_STATE_POWER_ON_RESET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_STATE_POWER_ON_RESET<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>(LC_STATE_POWER_ON_RESET<sp/>!=<sp/>LC_STATE_ACTIVE)<sp/><sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(LC_STATE_POWER_ON_RESET<sp/>!=<sp/>LC_STATE_PASSIVE)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(LC_STATE_POWER_ON_RESET<sp/>!=<sp/>LC_STATE_DISABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_STATE_POWER_ON_RESET<sp/>must<sp/>be<sp/>defined<sp/>as<sp/>a<sp/>supported<sp/>enumerated<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/>**<sp/>LC<sp/>state<sp/>when<sp/>CDS<sp/>is<sp/>restored</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_STATE_WHEN_CDS_RESTORED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_STATE_WHEN_CDS_RESTORED<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>(LC_STATE_WHEN_CDS_RESTORED<sp/>!=<sp/>LC_STATE_ACTIVE)<sp/><sp/><sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(LC_STATE_WHEN_CDS_RESTORED<sp/>!=<sp/>LC_STATE_PASSIVE)<sp/><sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(LC_STATE_WHEN_CDS_RESTORED<sp/>!=<sp/>LC_STATE_DISABLED)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(LC_STATE_WHEN_CDS_RESTORED<sp/>!=<sp/>LC_STATE_FROM_CDS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_STATE_WHEN_CDS_RESTORED<sp/>must<sp/>be<sp/>defined<sp/>as<sp/>a<sp/>supported<sp/>enumerated<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/>**<sp/>Default<sp/>watchpoint<sp/>definition<sp/>table<sp/>filename</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_WDT_FILENAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_WDT_FILENAME<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/>**<sp/>Default<sp/>actionpoint<sp/>definition<sp/>table<sp/>filename</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_ADT_FILENAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_ADT_FILENAME<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/>**<sp/>RPN<sp/>equation<sp/>buffer<sp/>size<sp/>(in<sp/>16<sp/>bit<sp/>words)</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_MAX_RPN_EQU_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_RPN_EQU_SIZE<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_RPN_EQU_SIZE<sp/>&lt;<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_RPN_EQU_SIZE<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_RPN_EQU_SIZE<sp/>&gt;<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_RPN_EQU_SIZE<sp/>must<sp/>not<sp/>exceed<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/>**<sp/>Maximum<sp/>actionpoint<sp/>event<sp/>text<sp/>string<sp/>size</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_MAX_ACTION_TEXT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_ACTION_TEXT<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_ACTION_TEXT<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_ACTION_TEXT<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_ACTION_TEXT<sp/>&gt;<sp/>CFE_EVS_MAX_MESSAGE_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_ACTION_TEXT<sp/>must<sp/>not<sp/>exceed<sp/>CFE_EVS_MAX_MESSAGE_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Note:<sp/>LC_AP_EVENT_TAIL_LEN<sp/>is<sp/>defined<sp/>in<sp/>lc_action.h<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_AP_EVENT_TAIL_LEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_AP_EVENT_TAIL_LEN<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_AP_EVENT_TAIL_LEN<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_AP_EVENT_TAIL_LEN<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_AP_EVENT_TAIL_LEN<sp/>&gt;<sp/>CFE_EVS_MAX_MESSAGE_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_AP_EVENT_TAIL_LEN<sp/>must<sp/>not<sp/>exceed<sp/>CFE_EVS_MAX_MESSAGE_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>(LC_MAX_ACTION_TEXT<sp/>+<sp/>LC_AP_EVENT_TAIL_LEN)<sp/>&gt;<sp/>CFE_EVS_MAX_MESSAGE_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>The<sp/>sum<sp/>of<sp/>LC_MAX_ACTION_TEXT<sp/>+<sp/>LC_AP_EVENT_TAIL_LEN<sp/>must<sp/>not<sp/>exceed<sp/>CFE_EVS_MAX_MESSAGE_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/><sp/>**<sp/>Maximum<sp/>valid<sp/>actionpoint<sp/>definition<sp/>table<sp/>RTS<sp/>ID<sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_MAX_VALID_ADT_RTSID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_VALID_ADT_RTSID<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_VALID_ADT_RTSID<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_VALID_ADT_RTSID<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>LC_MAX_VALID_ADT_RTSID<sp/>&gt;<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_MAX_VALID_ADT_RTSID<sp/>must<sp/>not<sp/>exceed<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/><sp/>**<sp/>Application<sp/>name</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>LC_APP_NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>LC_APP_NAME<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_lc_verify_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/lc/fsw/src/lc_verify.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeesugresetlog" kind="page">
+    <compoundname>cfeesugresetlog</compoundname>
+    <title>Exception and Reset (ER) Log</title>
+    <detaileddescription>
+<para>The Exception and Reset Log contains detailed information about past resets and exceptions. To view the information the <ref refid="cfe__es__msg_8h_1a59dff1aa2ef7ea7646138d78609940bc" kindref="member">CFE_ES_WRITE_ERLOG_CC</ref> command must be sent. This command will write the log to a binary file. The path and filename may be specified in the command. If the filename command field contains an empty string, the configuration parameter #CFE_ES_DEFAULT_ER_LOG_FILE is used to specify the path and filename. Use the ground system to get the file and display the contents. There is also a command to clear the ER log, <ref refid="cfe__es__msg_8h_1adc6cdd982e1599fb504d5ec27b51361b" kindref="member">CFE_ES_CLEAR_ERLOG_CC</ref>.</para><para>The size of the ER log is defined by the platform configuration parameter #CFE_ES_ER_LOG_ENTRIES This log is preserved after a processor reset and held in the ES reset area.</para><para>A count of the number of entries in the log is present in the ES housekeeping telemetry. This count can be used with the configuration parameter # CFE_ES_ER_LOG_ENTRIES to calculate the fullness of the log.</para><para>The information contained in a single log entry is defined by the structure <ref refid="struct_c_f_e___e_s___e_r_log__t" kindref="compound">CFE_ES_ERLog_t</ref>.</para><para>Next: <ref refid="cfeesugappsrv" kindref="compound">Application and Child Task Service</ref> <linebreak/>
+ Prev: <ref refid="cfeesugresettype" kindref="compound">Reset Types and Subtypes</ref> <linebreak/>
+ Up To: <ref refid="cfeesovr" kindref="compound">cFE Executive Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

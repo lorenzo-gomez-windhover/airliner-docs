@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="mac__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>mac_platform_cfg.h</compoundname>
+    <includedby refid="mac__tbldefs_8h" local="yes">apps/mac/fsw/src/mac_tbldefs.h</includedby>
+    <invincdepgraph>
+      <node id="8">
+        <label>apps/mac/fsw/src/mac_tbldefs.h</label>
+        <link refid="mac__tbldefs_8h"/>
+      </node>
+      <node id="7">
+        <label>apps/mac/fsw/platform_inc/mac_platform_cfg.h</label>
+        <link refid="mac_platform_cfg.h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mac__platform__cfg_8h_1ab5fb598d4e1f61adc273a6047b3287be" prot="public" static="no">
+        <name>MAC_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for MAC application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;mac_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="25" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1afc0d5624478f32c0224d60ea4783f773" prot="public" static="no">
+        <name>MAC_SCH_PIPE_DEPTH</name>
+        <initializer>(15)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="32" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1a4daec0717aae165097c64d32485cd520" prot="public" static="no">
+        <name>MAC_SCH_PIPE_NAME</name>
+        <initializer>(&quot;MAC_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="39" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1a8f6b706a87ec2702485ed80df8a88b89" prot="public" static="no">
+        <name>MAC_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="49" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1ace0ef582fa173ec0b1e956756e5a7ff5" prot="public" static="no">
+        <name>MAC_SCH_PIPE_WAKEUP_RESERVED</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the MAC_SCH_PIPE_WAKEUP_RESERVED and MAC_SCH_PIPE_SEND_HK_RESERVED must be less than MAC_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="58" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1a6b7c3fd79d2a48efd2727ed0f8522867" prot="public" static="no">
+        <name>MAC_SCH_PIPE_SEND_HK_RESERVED</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the MAC_SCH_PIPE_WAKEUP_RESERVED and MAC_SCH_PIPE_SEND_HK_RESERVED must be less than MAC_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="67" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1ac094f8382fd6a3e68cf97703ebb0f4b2" prot="public" static="no">
+        <name>MAC_CMD_PIPE_DEPTH</name>
+        <initializer>(15)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="74" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1a920019b7c53c168fda1ffa2d6b79c5eb" prot="public" static="no">
+        <name>MAC_CMD_PIPE_NAME</name>
+        <initializer>(&quot;MAC_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="81" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1aa881b72d037fa5841ed70a9347fa9c34" prot="public" static="no">
+        <name>MAC_PARAM_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/mac_param.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="89" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1a3d64ca4ddcb2fb9c79d556f6b8f2880b" prot="public" static="no">
+        <name>MAC_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="96" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1a120590298432cfa5ec46b45711e941f8" prot="public" static="no">
+        <name>MAC_CUSTOM_DEV_PATH</name>
+        <initializer>&quot;/tmp/ttyS0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="99" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mac__platform__cfg_8h_1a2a662c0029344b4cbfcfa41cb611f857" prot="public" static="no">
+        <name>MAC_MAX_MOTOR_OUTPUTS</name>
+        <initializer>(16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h" line="101" column="9" bodyfile="apps/mac/fsw/platform_inc/mac_platform_cfg.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MAC_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAC_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/>mac<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="mac__platform__cfg_8h_1ab5fb598d4e1f61adc273a6047b3287be" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="mac__platform__cfg_8h_1afc0d5624478f32c0224d60ea4783f773" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="mac__platform__cfg_8h_1a4daec0717aae165097c64d32485cd520" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;MAC_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="mac__platform__cfg_8h_1a8f6b706a87ec2702485ed80df8a88b89" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="mac__platform__cfg_8h_1ace0ef582fa173ec0b1e956756e5a7ff5" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_SCH_PIPE_WAKEUP_RESERVED<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="mac__platform__cfg_8h_1a6b7c3fd79d2a48efd2727ed0f8522867" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_SCH_PIPE_SEND_HK_RESERVED<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="mac__platform__cfg_8h_1ac094f8382fd6a3e68cf97703ebb0f4b2" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="mac__platform__cfg_8h_1a920019b7c53c168fda1ffa2d6b79c5eb" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;MAC_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="mac__platform__cfg_8h_1aa881b72d037fa5841ed70a9347fa9c34" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_PARAM_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/mac_param.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="mac__platform__cfg_8h_1a3d64ca4ddcb2fb9c79d556f6b8f2880b" refkind="member"><highlight class="preprocessor">#define<sp/>MAC_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TODO:<sp/><sp/>Add<sp/>Doxygen<sp/>markup.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="mac__platform__cfg_8h_1a120590298432cfa5ec46b45711e941f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAC_CUSTOM_DEV_PATH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/tmp/ttyS0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="mac__platform__cfg_8h_1a2a662c0029344b4cbfcfa41cb611f857" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAC_MAX_MOTOR_OUTPUTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MAC_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/mac/fsw/platform_inc/mac_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

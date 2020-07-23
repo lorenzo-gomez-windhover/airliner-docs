@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ms5611__custom_8h" kind="file" language="C++">
+    <compoundname>ms5611_custom.h</compoundname>
+    <includedby refid="ms5611__app_8cpp" local="yes">apps/ms5611/fsw/src/ms5611_app.cpp</includedby>
+    <invincdepgraph>
+      <node id="311">
+        <label>apps/ms5611/fsw/src/ms5611_custom.h</label>
+        <link refid="ms5611_custom.h"/>
+        <childnode refid="312" relation="include">
+        </childnode>
+      </node>
+      <node id="312">
+        <label>apps/ms5611/fsw/src/ms5611_app.cpp</label>
+        <link refid="ms5611__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ms5611__custom_8h_1a0636ed88a9e1bf99b95bbe8e05228cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MS5611_Custom_InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>MS5611_Custom_InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to initialize custom device data structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called on app startup, reload, restart etc to initialize non-zero data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="73" column="1"/>
+        <referencedby refid="class_m_s5611_1a10f2f7ba4d4d459b4ccf5a37b52eca84" compoundref="ms5611__app_8cpp" startline="231" endline="247">MS5611::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ms5611__custom_8h_1a9acb4f9b7f8ac7e3d123a6362c3916fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool MS5611_Custom_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>MS5611_Custom_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to initialize custom device(s). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called at initialization and allows the custom layer to provide specific functionality to initialize internal objects.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="89" column="1"/>
+        <referencedby refid="class_m_s5611_1a4a404cddf83102014054a32005ed22ed" compoundref="ms5611__app_8cpp" startline="254" endline="351">MS5611::InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ms5611__custom_8h_1a22e3506b60310d672186622542af7ebe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool MS5611_Custom_Uninit</definition>
+        <argsstring>(void)</argsstring>
+        <name>MS5611_Custom_Uninit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to uninitialize custom device(s). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called in preparation for loading a new configuration, allowing the custom layer to do whatever it needs with the current configuration before reconfiguration, if anything. Also, called in cleanup to close and uninitialize device resources.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if successful, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="107" column="1"/>
+        <referencedby refid="class_m_s5611_1a4718d37fa6240bd369d6d8eff36af26d" compoundref="ms5611__app_8cpp" startline="956" endline="965">MS5611::CleanupExit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ms5611__custom_8h_1a5f74105aece476a1c28185b926ff6125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MS5611_Custom_Init_EventFilters</definition>
+        <argsstring>(int32 ind, CFE_EVS_BinFilter_t *EventTbl)</argsstring>
+        <name>MS5611_Custom_Init_EventFilters</name>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+          <declname>ind</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_f_e___e_v_s___bin_filter__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_BinFilter_t</ref> *</type>
+          <declname>EventTbl</declname>
+        </param>
+        <briefdescription>
+<para>Custom function to initialize custom events. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called in init event before CFE_EVS_Register to add custom events to the event filter table.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+number of events written to the filter table and -1 for failure i.e. CFE_EVS_MAX_EVENT_FILTERS reached. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="126" column="1"/>
+        <referencedby refid="class_m_s5611_1a1d92491e3f9b501ed1576135fbfa413d" compoundref="ms5611__app_8cpp" startline="79" endline="152">MS5611::InitEvent</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ms5611__custom_8h_1a41d1bca46d1a7469fc4290e604479b59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool MS5611_ReadPROM</definition>
+        <argsstring>(uint8 Addr, uint16 *returnVal)</argsstring>
+        <name>MS5611_ReadPROM</name>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>Addr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref> *</type>
+          <declname>returnVal</declname>
+        </param>
+        <briefdescription>
+<para>Read the <ref refid="class_m_s5611" kindref="compound">MS5611</ref> Read-Only Memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function reads the <ref refid="class_m_s5611" kindref="compound">MS5611</ref> factory calibration coefficient data from PROM.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be called after initialization and before reading sensor data to get the specific factory calibration.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which PROM register to read (0-7).</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>returnVal The PROM contents.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+for success, FALSE for failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="147" column="1"/>
+        <referencedby refid="class_m_s5611_1a4a404cddf83102014054a32005ed22ed" compoundref="ms5611__app_8cpp" startline="254" endline="351">MS5611::InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ms5611__custom_8h_1ac5ae7e83e69fa104d255cdb923b346ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool MS5611_D1Conversion</definition>
+        <argsstring>(void)</argsstring>
+        <name>MS5611_D1Conversion</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Start D1 Raw Pressure Conversion. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This starts the raw pressure conversion internal to the <ref refid="class_m_s5611" kindref="compound">MS5611</ref>.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be called after initialization.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+for success, FALSE for failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="162" column="1"/>
+        <referencedby refid="class_m_s5611_1ac2753aada15baf850e373fd143e956bb" compoundref="ms5611__app_8cpp" startline="657" endline="795">MS5611::GetMeasurement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ms5611__custom_8h_1ad8342e00eca62783cb428a6b3cec28f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool MS5611_D2Conversion</definition>
+        <argsstring>(void)</argsstring>
+        <name>MS5611_D2Conversion</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Start D1 Raw Temperature Conversion. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This starts the raw temperature conversion internal to the <ref refid="class_m_s5611" kindref="compound">MS5611</ref>.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be called after initialization.</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+for success, FALSE for failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="178" column="1"/>
+        <referencedby refid="class_m_s5611_1ac2753aada15baf850e373fd143e956bb" compoundref="ms5611__app_8cpp" startline="657" endline="795">MS5611::GetMeasurement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ms5611__custom_8h_1ad9d90c5f1813aa98374f67096be3260f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool MS5611_ReadADCResult</definition>
+        <argsstring>(uint32 *returnVal)</argsstring>
+        <name>MS5611_ReadADCResult</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> *</type>
+          <declname>returnVal</declname>
+        </param>
+        <briefdescription>
+<para>Reads the result of a D1, or D2 conversion. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This reads the result of a raw pressure or temperature conversion from the <ref refid="class_m_s5611" kindref="compound">MS5611</ref>.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be called after initialization.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>returnVal The ADC result.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+for success, FALSE for failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="196" column="1"/>
+        <referencedby refid="class_m_s5611_1ac2753aada15baf850e373fd143e956bb" compoundref="ms5611__app_8cpp" startline="657" endline="795">MS5611::GetMeasurement</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ms5611__custom_8h_1a97f5e22f003c923f7451e7d0ff55b130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MS5611_Critical_Cleanup</definition>
+        <argsstring>(void)</argsstring>
+        <name>MS5611_Critical_Cleanup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Custom function to perform any critical cleanup after a failure. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called in cleanup to close and uninitialize device resources.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function must be defined, but not all custom layers will do anything in this function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ms5611/fsw/src/ms5611_custom.h" line="212" column="1"/>
+        <referencedby refid="ms5611__app_8h_1ac208f3a018a5c0a7c2d7dddb1e6549c7" compoundref="ms5611__app_8cpp" startline="972" endline="976">MS5611_CleanupCallback</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MS5611_CUSTOM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MS5611_CUSTOM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Pragmas</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>Includes</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>Local<sp/>Structure<sp/>Definitions</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>External<sp/>Global<sp/>Variables</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">**<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ms5611__custom_8h_1a0636ed88a9e1bf99b95bbe8e05228cda" kindref="member">MS5611_Custom_InitData</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref><sp/><ref refid="ms5611__custom_8h_1a9acb4f9b7f8ac7e3d123a6362c3916fc" kindref="member">MS5611_Custom_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref><sp/><ref refid="ms5611__custom_8h_1a22e3506b60310d672186622542af7ebe" kindref="member">MS5611_Custom_Uninit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="ms5611__custom_8h_1a5f74105aece476a1c28185b926ff6125" kindref="member">MS5611_Custom_Init_EventFilters</ref>(<ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/>ind,<sp/><ref refid="struct_c_f_e___e_v_s___bin_filter__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_BinFilter_t</ref><sp/>*EventTbl);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref><sp/><ref refid="ms5611__custom_8h_1a41d1bca46d1a7469fc4290e604479b59" kindref="member">MS5611_ReadPROM</ref>(<ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/>Addr,<sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/>*returnVal);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref><sp/><ref refid="ms5611__custom_8h_1ac5ae7e83e69fa104d255cdb923b346ee" kindref="member">MS5611_D1Conversion</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref><sp/><ref refid="ms5611__custom_8h_1ad8342e00eca62783cb428a6b3cec28f3" kindref="member">MS5611_D2Conversion</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref><sp/><ref refid="ms5611__custom_8h_1ad9d90c5f1813aa98374f67096be3260f" kindref="member">MS5611_ReadADCResult</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>*returnVal);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="212"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ms5611__custom_8h_1a97f5e22f003c923f7451e7d0ff55b130" kindref="member">MS5611_Critical_Cleanup</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MS5611_CUSTOM_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="apps/ms5611/fsw/src/ms5611_custom.h"/>
+  </compounddef>
+</doxygen>

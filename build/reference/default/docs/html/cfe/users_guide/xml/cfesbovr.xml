@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfesbovr" kind="page">
+    <compoundname>cfesbovr</compoundname>
+    <title>cFE Software Bus Overview</title>
+    <innerpage refid="cfesbugterms">Software Bus Terminology</innerpage>
+    <innerpage refid="cfesbugmsgs">Messages</innerpage>
+    <innerpage refid="cfesbugpipes">Pipes</innerpage>
+    <innerpage refid="cfesbugsubs">Subscriptions</innerpage>
+    <innerpage refid="cfesbugmem">Memory</innerpage>
+    <innerpage refid="cfesbugauto">Autonomous Actions</innerpage>
+    <innerpage refid="cfesbugops">Operation of the SB Software</innerpage>
+    <innerpage refid="cfesbuginit">Initialization</innerpage>
+    <innerpage refid="cfesbugreset">All Resets</innerpage>
+    <innerpage refid="cfesbugrouting">Message Routing</innerpage>
+    <innerpage refid="cfesbugpktseqvals">Packet Sequence Values</innerpage>
+    <innerpage refid="cfesbugmsgpipeerr">Message Limit Error</innerpage>
+    <innerpage refid="cfesbugovererr">Pipe Overflow Error</innerpage>
+    <innerpage refid="cfesbugeventfilt">SB Event Filtering</innerpage>
+    <innerpage refid="cfesbugdiagdata">Diagnostic Data</innerpage>
+    <innerpage refid="cfesbugroutcntrl">Control of Packet Routing</innerpage>
+    <innerpage refid="cfesbugqos">Quality of Service</innerpage>
+    <innerpage refid="cfesbugknwnprob">Known Problem</innerpage>
+    <innerpage refid="cfesbugfaq">Frequently Asked Questions about Software Bus</innerpage>
+    <innerpage refid="cfesbrevhist">cFE Software Bus Documentation Revision History</innerpage>
+    <detaileddescription>
+<para>The Software Bus (SB) handles communication between software tasks on a processor. All tasks communicate with each other, with hardware devices, and with the ground by sending command and telemetry messages. The software bus provides an application programming interface (API) to other tasks for sending and receiving messages. This API is independent of the underlying operating system so that tasks can use the same interface regardless of which processor they reside on. Refer to the <ref refid="cfeapi" kindref="compound">cFE Application Programmer&apos;s Interface (API) Reference</ref> for detailed information about the API functions.</para><para>The software bus is used internally by the flight software, and normally does not require attention from the ground. However, because of the scalability and the dynamic nature of the software bus, it is strongly recommended that each project carefully review the SB statistics and SB memory pool to be sure adequate margin is met on the configurable items.</para><para>The cFE software bus differs from earlier versions of the software bus in that it uses a dynamic protocol and builds its routing table at run-time through the SB subscribe API&apos;s. Also the cFE software bus pipes are created at run-time through the <ref refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> API. Because the routing is established, and pipes are created at run-time, it is necessary to have a clear view of the routing details on command. The cFE software bus allows the user to dump the routing table, the pipe table, the message map and the statistics packet. Each of these items are described in detail in the corresponding section of this document.</para><para><itemizedlist>
+<listitem>
+<para><ref refid="cfesbugterms" kindref="compound">Software Bus Terminology</ref> <linebreak/>
+ <itemizedlist>
+<listitem>
+<para><ref refid="cfesbugmsgs" kindref="compound">Messages</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugpipes" kindref="compound">Pipes</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugsubs" kindref="compound">Subscriptions</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugmem" kindref="compound">Memory</ref> <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para><ref refid="cfesbugauto" kindref="compound">Autonomous Actions</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugops" kindref="compound">Operation of the SB Software</ref> <linebreak/>
+ <itemizedlist>
+<listitem>
+<para><ref refid="cfesbuginit" kindref="compound">Initialization</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugreset" kindref="compound">All Resets</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugrouting" kindref="compound">Message Routing</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugpktseqvals" kindref="compound">Packet Sequence Values</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugmsgpipeerr" kindref="compound">Message Limit Error</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugovererr" kindref="compound">Pipe Overflow Error</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugeventfilt" kindref="compound">SB Event Filtering</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugdiagdata" kindref="compound">Diagnostic Data</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugroutcntrl" kindref="compound">Control of Packet Routing</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugqos" kindref="compound">Quality of Service</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para><ref refid="cfesbugknwnprob" kindref="compound">Known Problem</ref> <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para><ref refid="cfesbugfaq" kindref="compound">Frequently Asked Questions about Software Bus</ref> <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para><para><ref refid="cfesbrevhist" kindref="compound">cFE Software Bus Documentation Revision History</ref> <linebreak/>
+ </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

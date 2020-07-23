@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_t_o___hk_tlm__t" kind="struct" language="C++" prot="public">
+    <compoundname>TO_HkTlm_t</compoundname>
+    <includes refid="to__msg_8h" local="no">to_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a3fb3c9584453e96f086774e498c1eddf" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 TO_HkTlm_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE SB Tlm Msg Hdr </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="486" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1aafaece8fa7c9a8f01408a498ddf7a12b" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_HkTlm_t::uiSentMsgCountChannel[TO_MAX_CHANNELS]</definition>
+        <argsstring>[TO_MAX_CHANNELS]</argsstring>
+        <name>uiSentMsgCountChannel</name>
+        <briefdescription>
+<para>Count of telemetry messages sent out the channel interface. Counter begins at zero with app initialization and rolls over. Index of array is equivalent to the relevant TO channel index. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000006"><xreftitle>Name</xreftitle><xrefdescription><para>Sent Channel Telemetry </para></xrefdescription></xrefsect><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000005"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_RDOSENT</computeroutput> </bold> </para><para><bold><computeroutput>TO_SNKLSENT</computeroutput> </bold> </para><para><bold><computeroutput>TO_STORSENT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="495" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="495" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a22fa8088483f4cdc32cd93fe89309883" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_HkTlm_t::uiQueuedMsgCountChannel[TO_MAX_CHANNELS]</definition>
+        <argsstring>[TO_MAX_CHANNELS]</argsstring>
+        <name>uiQueuedMsgCountChannel</name>
+        <briefdescription>
+<para>Count of telemetry messages queued on the TO channel&apos;s Priority Queues. Counter begins at zero with app initialization and rolls over. Index of array is equivalent to the relevant TO channel index. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000007"><xreftitle>Name</xreftitle><xrefdescription><para>Queued Channel Telemetry </para></xrefdescription></xrefsect><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000006"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_RDOQUEUED</computeroutput> </bold> </para><para><bold><computeroutput>TO_SNKLQUEUED</computeroutput> </bold> </para><para><bold><computeroutput>TO_STORQUEUED</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="504" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="504" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1aef280887ca13c11f286ce3fdff2a7bac" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_HkTlm_t::uiDropMsgCountChannel[TO_MAX_CHANNELS]</definition>
+        <argsstring>[TO_MAX_CHANNELS]</argsstring>
+        <name>uiDropMsgCountChannel</name>
+        <briefdescription>
+<para>Count of telemetry messages rejected, and not passed into the channel&apos;s Priority Queues. Counter begins at zero with app initialization and rolls over. Index of array is equivalent to the relevant TO channel index. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000008"><xreftitle>Name</xreftitle><xrefdescription><para>Dropped Channel Telemetry </para></xrefdescription></xrefsect><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000007"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_RDODROP</computeroutput> </bold> </para><para><bold><computeroutput>TO_SNKLDROP</computeroutput> </bold> </para><para><bold><computeroutput>TO_STORDROP</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="513" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="513" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a49357250cf5765c1f962246b0bb0632c" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_HkTlm_t::uiFailedMsgCountChannel[TO_MAX_CHANNELS]</definition>
+        <argsstring>[TO_MAX_CHANNELS]</argsstring>
+        <name>uiFailedMsgCountChannel</name>
+        <briefdescription>
+<para>Count of telemetry messages failed on interface write after being pulled from the output queue, and lost. Counter begins at zero with app initialization and rolls over. Index of array is equivalent to the relevant TO channel index. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000009"><xreftitle>Name</xreftitle><xrefdescription><para>Failed Channel Telemetry </para></xrefdescription></xrefsect><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000008"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_RDOFAILED</computeroutput> </bold> </para><para><bold><computeroutput>TO_SNKLFAILED</computeroutput> </bold> </para><para><bold><computeroutput>TO_STORFAILED</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="523" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="523" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1aa369c2829ef16c79be16ec38b9f9997f" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_HkTlm_t::uiBytesSentChannel[TO_MAX_CHANNELS]</definition>
+        <argsstring>[TO_MAX_CHANNELS]</argsstring>
+        <name>uiBytesSentChannel</name>
+        <briefdescription>
+<para>The number of bytes sent out the channel&apos;s interface Counter begins at zero with app initialization and rolls over. Index of array is equivalent to the relevant TO channel index. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000010"><xreftitle>Name</xreftitle><xrefdescription><para>Channel Bytes Sent </para></xrefdescription></xrefsect><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000009"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_RDOB</computeroutput> </bold> </para><para><bold><computeroutput>TO_SNKLB</computeroutput> </bold> </para><para><bold><computeroutput>TO_STORB</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="532" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="532" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a1864b6fe13642c2540ab260b32e96d2c" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 TO_HkTlm_t::usCmdCnt</definition>
+        <argsstring></argsstring>
+        <name>usCmdCnt</name>
+        <briefdescription>
+<para>Count of accepted commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000010"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_CMDACPTCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="536" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="536" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1a13e84c9846ea002a1697a461809cf80d" compoundref="to__app_8c" startline="542" endline="769">TO_ProcessNewAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a4dbb975c4c71d1cc9e7fd5df3b833ec6" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 TO_HkTlm_t::usCmdErrCnt</definition>
+        <argsstring></argsstring>
+        <name>usCmdErrCnt</name>
+        <briefdescription>
+<para>Count of failed commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000011"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_CMDRJCTCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="540" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="540" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1a13e84c9846ea002a1697a461809cf80d" compoundref="to__app_8c" startline="542" endline="769">TO_ProcessNewAppCmds</referencedby>
+        <referencedby refid="to__app_8h_1a8f89b0b3cb99e6ca9c234a7ec3d4df74" compoundref="to__app_8c" startline="491" endline="534">TO_ProcessNewCmds</referencedby>
+        <referencedby refid="to__app_8h_1aa367a3044fcc47fdbe6273dd69263db0" compoundref="to__app_8c" startline="1024" endline="1058">TO_VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a643113768d36f31ebc22b6f121663650" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 TO_HkTlm_t::usTotalMsgDropped</definition>
+        <argsstring></argsstring>
+        <name>usTotalMsgDropped</name>
+        <briefdescription>
+<para>Count of all messages dropped. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000012"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_TTLMSGDROP</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="544" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="544" bodyend="-1"/>
+        <referencedby refid="to__classifier_8h_1a11240d67cbafbbc5941a36194a6dbc6b" compoundref="to__classifier_8c" startline="46" endline="161">TO_Classifier_Run</referencedby>
+        <referencedby refid="to__app_8h_1a13e84c9846ea002a1697a461809cf80d" compoundref="to__app_8c" startline="542" endline="769">TO_ProcessNewAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a8f1afdfeb80d219e1f4f943d315fdab8" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_HkTlm_t::SentBytes</definition>
+        <argsstring></argsstring>
+        <name>SentBytes</name>
+        <briefdescription>
+<para>Count of all bytes sent on all output channels. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000013"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_SENTBYTES</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="548" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="548" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1a13e84c9846ea002a1697a461809cf80d" compoundref="to__app_8c" startline="542" endline="769">TO_ProcessNewAppCmds</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a21189671d4a9b79c94b37445cc6cf8ab" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 TO_HkTlm_t::QueuedInOutputChannel[TO_MAX_CHANNELS]</definition>
+        <argsstring>[TO_MAX_CHANNELS]</argsstring>
+        <name>QueuedInOutputChannel</name>
+        <briefdescription>
+<para>Currently queued count for each Channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000014"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_QDINOUTCHN</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="552" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="552" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1a3461cfd28c8619281812e91655a73723" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_HkTlm_t::ChannelMaxMem</definition>
+        <argsstring></argsstring>
+        <name>ChannelMaxMem</name>
+        <briefdescription>
+<para>Maximum memory available for each channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000015"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_CHMAXMEM</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="556" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="556" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1a75f5bf11c30eb5794a426d350f5afe30" compoundref="to__app_8c" startline="290" endline="312">TO_InitData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___hk_tlm__t_1ab03e0ece9af140690542b0aca532d7ca" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_o___channel_memory_info__t" kindref="compound">TO_ChannelMemoryInfo_t</ref></type>
+        <definition>TO_ChannelMemoryInfo_t TO_HkTlm_t::ChannelMemInfo[TO_MAX_CHANNELS]</definition>
+        <argsstring>[TO_MAX_CHANNELS]</argsstring>
+        <name>ChannelMemInfo</name>
+        <briefdescription>
+<para>Memory information per channel. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000016"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_CHMEMINFO</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_msg.h" line="560" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="560" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>TO application housekeeping data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="41">
+        <label>TO_ChannelMemoryInfo_t</label>
+        <link refid="struct_t_o___channel_memory_info__t"/>
+      </node>
+      <node id="40">
+        <label>TO_HkTlm_t</label>
+        <link refid="struct_t_o___hk_tlm__t"/>
+        <childnode refid="41" relation="usage">
+          <edgelabel>ChannelMemInfo</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/to/fsw/src/to_msg.h" line="484" column="1" bodyfile="apps/to/fsw/src/to_msg.h" bodystart="483" bodyend="562"/>
+    <listofallmembers>
+      <member refid="struct_t_o___hk_tlm__t_1a3461cfd28c8619281812e91655a73723" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>ChannelMaxMem</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1ab03e0ece9af140690542b0aca532d7ca" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>ChannelMemInfo</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1a21189671d4a9b79c94b37445cc6cf8ab" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>QueuedInOutputChannel</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1a8f1afdfeb80d219e1f4f943d315fdab8" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>SentBytes</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1a3fb3c9584453e96f086774e498c1eddf" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>TlmHeader</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1aa369c2829ef16c79be16ec38b9f9997f" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>uiBytesSentChannel</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1aef280887ca13c11f286ce3fdff2a7bac" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>uiDropMsgCountChannel</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1a49357250cf5765c1f962246b0bb0632c" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>uiFailedMsgCountChannel</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1a22fa8088483f4cdc32cd93fe89309883" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>uiQueuedMsgCountChannel</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1aafaece8fa7c9a8f01408a498ddf7a12b" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>uiSentMsgCountChannel</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1a1864b6fe13642c2540ab260b32e96d2c" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>usCmdCnt</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1a4dbb975c4c71d1cc9e7fd5df3b833ec6" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>usCmdErrCnt</name></member>
+      <member refid="struct_t_o___hk_tlm__t_1a643113768d36f31ebc22b6f121663650" prot="public" virt="non-virtual"><scope>TO_HkTlm_t</scope><name>usTotalMsgDropped</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

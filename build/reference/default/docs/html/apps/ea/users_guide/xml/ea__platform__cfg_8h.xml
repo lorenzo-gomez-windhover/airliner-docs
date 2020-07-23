@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ea__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>ea_platform_cfg.h</compoundname>
+    <includedby refid="ea__msg_8h" local="yes">apps/ea/fsw/src/ea_msg.h</includedby>
+    <invincdepgraph>
+      <node id="10">
+        <label>apps/ea/fsw/platform_inc/ea_platform_cfg.h</label>
+        <link refid="ea_platform_cfg.h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>apps/ea/fsw/src/ea_msg.h</label>
+        <link refid="ea__msg_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ea__platform__cfg_8h_1add31f61e5ff298f087c8798d6123aa90" prot="public" static="no">
+        <name>EA_CHILD_TASK_FLAGS</name>
+        <initializer><ref refid="osapi-os-core_8h_1a1059ea6f1266dde89975fcc5fe04fe33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_ENABLE_CORE_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="8" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a01bcebdbc9f9e3dee27dba2a9675c51e" prot="public" static="no">
+        <name>EA_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for EA application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;ea_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="28" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a6dee71c07b40e8c7555b80f526a1e0f2" prot="public" static="no">
+        <name>EA_SCH_PIPE_DEPTH</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="35" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1affa8868ef6940ca6661bf0294d75a2f4" prot="public" static="no">
+        <name>EA_SCH_PIPE_NAME</name>
+        <initializer>(&quot;EA_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="42" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a337e674b6b952b974c7448d9ade4a50b" prot="public" static="no">
+        <name>EA_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="52" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a8b8a90e40ab4b868a1a25bb360d078bd" prot="public" static="no">
+        <name>EA_SCH_PIPE_WAKEUP_RESERVED</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the EA_SCH_PIPE_WAKEUP_RESERVED and EA_SCH_PIPE_SEND_HK_RESERVED must be less than EA_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="61" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1af8401d8ecaf44a834805de59e788c1d8" prot="public" static="no">
+        <name>EA_SCH_PIPE_SEND_HK_RESERVED</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the EA_SCH_PIPE_WAKEUP_RESERVED and EA_SCH_PIPE_SEND_HK_RESERVED must be less than EA_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="70" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a22d236a07df083e9ebe6d50e3593a86f" prot="public" static="no">
+        <name>EA_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="77" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a60a9fa5609cea47d29b29f1d56cde014" prot="public" static="no">
+        <name>EA_CMD_PIPE_NAME</name>
+        <initializer>(&quot;EA_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="84" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a9a620f9782d0863a822a92a2393c99df" prot="public" static="no">
+        <name>EA_DATA_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the data pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="91" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a9144037c1bc274de274b18c8634f1619" prot="public" static="no">
+        <name>EA_DATA_PIPE_NAME</name>
+        <initializer>(&quot;EA_DATA_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="98" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a3b7b29519d7da5003d7acad50180ded5" prot="public" static="no">
+        <name>EA_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/ea_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="106" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a2bf970cda4ae5be67010441ba03a9eae" prot="public" static="no">
+        <name>EA_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="112" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a6e6985f4cfee5c2b2a3c2b9cd020378d" prot="public" static="no">
+        <name>EA_CUSTOM_DEV_PATH</name>
+        <initializer>&quot;/tmp/ttyS0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="115" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a78607c4094677bad3d9a9d2cda59a02a" prot="public" static="no">
+        <name>EA_CHILD_TASK_PRIORITY</name>
+        <initializer>(187)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>EA Child Task Priority</para><para><simplesect kind="par"><title>Description:</title><para>Priority of child tasks created by EA. Lower numbers are higher priority, with 1 being the highest priority in the case of a child task.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Valid range for a child task is 1 to 255, but the priority cannot be higher (lower number) than the EA App priority. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="128" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a5b2888f4903a22e9a7aaf57a740d89aa" prot="public" static="no">
+        <name>EA_APP_UTIL_THRESHOLD</name>
+        <initializer>(70)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="129" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1a17d2b74297b8fa3e56f9713f5d537f9f" prot="public" static="no">
+        <name>EA_APP_NUM_THREADS</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="130" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ea__platform__cfg_8h_1ac473ed22e36caa88a043755f0200f720" prot="public" static="no">
+        <name>EA_MAX_PATH_LEN</name>
+        <initializer>(96)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h" line="132" column="9" bodyfile="apps/ea/fsw/platform_inc/ea_platform_cfg.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>EA_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EA_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="ea__platform__cfg_8h_1add31f61e5ff298f087c8798d6123aa90" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EA_CHILD_TASK_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OS_ENABLE_CORE_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/>ea<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="ea__platform__cfg_8h_1a01bcebdbc9f9e3dee27dba2a9675c51e" refkind="member"><highlight class="preprocessor">#define<sp/>EA_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="ea__platform__cfg_8h_1a6dee71c07b40e8c7555b80f526a1e0f2" refkind="member"><highlight class="preprocessor">#define<sp/>EA_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="ea__platform__cfg_8h_1affa8868ef6940ca6661bf0294d75a2f4" refkind="member"><highlight class="preprocessor">#define<sp/>EA_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;EA_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="ea__platform__cfg_8h_1a337e674b6b952b974c7448d9ade4a50b" refkind="member"><highlight class="preprocessor">#define<sp/>EA_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="ea__platform__cfg_8h_1a8b8a90e40ab4b868a1a25bb360d078bd" refkind="member"><highlight class="preprocessor">#define<sp/>EA_SCH_PIPE_WAKEUP_RESERVED<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="ea__platform__cfg_8h_1af8401d8ecaf44a834805de59e788c1d8" refkind="member"><highlight class="preprocessor">#define<sp/>EA_SCH_PIPE_SEND_HK_RESERVED<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="ea__platform__cfg_8h_1a22d236a07df083e9ebe6d50e3593a86f" refkind="member"><highlight class="preprocessor">#define<sp/>EA_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="ea__platform__cfg_8h_1a60a9fa5609cea47d29b29f1d56cde014" refkind="member"><highlight class="preprocessor">#define<sp/>EA_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;EA_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="ea__platform__cfg_8h_1a9a620f9782d0863a822a92a2393c99df" refkind="member"><highlight class="preprocessor">#define<sp/>EA_DATA_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="ea__platform__cfg_8h_1a9144037c1bc274de274b18c8634f1619" refkind="member"><highlight class="preprocessor">#define<sp/>EA_DATA_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;EA_DATA_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="ea__platform__cfg_8h_1a3b7b29519d7da5003d7acad50180ded5" refkind="member"><highlight class="preprocessor">#define<sp/>EA_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/ea_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="ea__platform__cfg_8h_1a2bf970cda4ae5be67010441ba03a9eae" refkind="member"><highlight class="preprocessor">#define<sp/>EA_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TODO:<sp/><sp/>Add<sp/>Doxygen<sp/>markup.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="ea__platform__cfg_8h_1a6e6985f4cfee5c2b2a3c2b9cd020378d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EA_CUSTOM_DEV_PATH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/tmp/ttyS0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="ea__platform__cfg_8h_1a78607c4094677bad3d9a9d2cda59a02a" refkind="member"><highlight class="preprocessor">#define<sp/>EA_CHILD_TASK_PRIORITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(187)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="ea__platform__cfg_8h_1a5b2888f4903a22e9a7aaf57a740d89aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EA_APP_UTIL_THRESHOLD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(70)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="ea__platform__cfg_8h_1a17d2b74297b8fa3e56f9713f5d537f9f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EA_APP_NUM_THREADS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="ea__platform__cfg_8h_1ac473ed22e36caa88a043755f0200f720" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EA_MAX_PATH_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(96)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>EA_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/ea/fsw/platform_inc/ea_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

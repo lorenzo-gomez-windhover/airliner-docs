@@ -1,0 +1,845 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__evs__events_8h" kind="file" language="C++">
+    <compoundname>cfe_evs_events.h</compoundname>
+    <includedby refid="cfe__evs__task_8h" local="yes">evs/cfe_evs_task.h</includedby>
+    <invincdepgraph>
+      <node id="6797">
+        <label>inc/cfe_evs_events.h</label>
+        <link refid="cfe_evs_events.h"/>
+        <childnode refid="6798" relation="include">
+        </childnode>
+      </node>
+      <node id="6801">
+        <label>evs/cfe_evs_log.c</label>
+        <link refid="cfe__evs__log_8c"/>
+      </node>
+      <node id="6803">
+        <label>evs/cfe_evs_utils.c</label>
+        <link refid="cfe__evs__utils_8c"/>
+      </node>
+      <node id="6800">
+        <label>evs/cfe_evs_utils.h</label>
+        <link refid="cfe__evs__utils_8h"/>
+        <childnode refid="6799" relation="include">
+        </childnode>
+        <childnode refid="6801" relation="include">
+        </childnode>
+        <childnode refid="6802" relation="include">
+        </childnode>
+        <childnode refid="6803" relation="include">
+        </childnode>
+      </node>
+      <node id="6799">
+        <label>evs/cfe_evs.c</label>
+        <link refid="cfe__evs_8c"/>
+      </node>
+      <node id="6802">
+        <label>evs/cfe_evs_task.c</label>
+        <link refid="cfe__evs__task_8c"/>
+      </node>
+      <node id="6798">
+        <label>evs/cfe_evs_task.h</label>
+        <link refid="cfe__evs__task_8h"/>
+        <childnode refid="6799" relation="include">
+        </childnode>
+        <childnode refid="6800" relation="include">
+        </childnode>
+        <childnode refid="6801" relation="include">
+        </childnode>
+        <childnode refid="6802" relation="include">
+        </childnode>
+        <childnode refid="6803" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cfe__evs__events_8h_1a4445afe1b05d0b1a23fa496fd3f83a07" prot="public" static="no">
+        <name>CFE_EVS_NOOP_EID</name>
+        <initializer>0    /* Noop event identifier */</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;No-op command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000091"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;No-op command&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued in response to a cFE Event Services <ref refid="cfe__evs__msg_8h_1ab2f75d93062a91d75bbe08facca57231" kindref="member">NO-OP command </ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="76" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8c_1a0cbd223682024ab83cd228752b97b9d6" compoundref="cfe__evs__task_8c" startline="480" endline="704">CFE_EVS_ProcessGroundCommand</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a058462448fdb0d842e637a4c8d4e7aa0" prot="public" static="no">
+        <name>CFE_EVS_STARTUP_EID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;cFE EVS Initialized&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000092"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;cFE EVS Initialized&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued when the Event Services Task completes its Initialization. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="88" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1ae9540d92a3221348f68f7e2947ae2bc8" compoundref="cfe__evs__task_8c" startline="364" endline="426">CFE_EVS_TaskInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1ad410f65d94a5ea70f5449dae5445b8de" prot="public" static="no">
+        <name>CFE_EVS_ERR_WRLOGFILE_EID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Write Log File Command Error: OS_write = 0x%08X, filename = %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000093"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Write Log File Command Error: OS_write = 0x%08X, filename = %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a filesystem error occurred while writing the contents of the event message log to a file.</para><para>The message text identifies the event log filename and specifies the return value, in hex, from the system function call. The expected return value is the number of bytes written, which in this case should be equal to the size of a <ref refid="struct_c_f_e___e_v_s___packet__t" kindref="compound">CFE_EVS_Packet_t</ref> structure. Error codes are negative. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="105" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="cfe__evs__log_8h_1a0cf8e266b4796fe4bbd597df65c6ada1" compoundref="cfe__evs__log_8c" startline="198" endline="290">CFE_EVS_WriteLogFileCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a39b65d2ef4d0726ecb0287b898f71931" prot="public" static="no">
+        <name>CFE_EVS_ERR_CRLOGFILE_EID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Write Log File Command Error: OS_creat = 0x%08X, filename = %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000094"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Write Log File Command Error: OS_creat = 0x%08X, filename = %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a filesystem error occurred when attempting to create the file that is to hold the event message log.</para><para>The message text identifies the event log filename and specifies the return value, in hex, from the system function call. The expected return value is a file handle, which in this case should be a relatively small positive number. Error codes are negative. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="121" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="cfe__evs__log_8h_1a0cf8e266b4796fe4bbd597df65c6ada1" compoundref="cfe__evs__log_8c" startline="198" endline="290">CFE_EVS_WriteLogFileCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a1d8a2090e7a0ca45830e8bdbdc68fba0" prot="public" static="no">
+        <name>CFE_EVS_ERR_MSGID_EID</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid command packet, Message ID = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000095"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid command packet, Message ID = 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a message has arrived on the cFE Event Services Application&apos;s Message Pipe that has a Message ID that is neither #CFE_EVS_CMD_MID or #CFE_EVS_SEND_HK_MID. Most likely, the cFE Software Bus routing table has become corrupt and is sending messages targeted for other Applications to the cFE Event Services Application.</para><para>The <computeroutput>ID</computeroutput> field in the event message identifies the message ID (in hex) that was found in the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="140" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1af1866521c482ad314d1420d8fc130c2d" compoundref="cfe__evs__task_8c" startline="440" endline="466">CFE_EVS_ProcessCommandPacket</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a0086ac7b8756d11c81d0711447afaf6c" prot="public" static="no">
+        <name>CFE_EVS_ERR_EVTIDNOREGS_EID</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;%s Event ID %d not registered for filtering: CC = %lu&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000096"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Event ID %d not registered for filtering: CC = %lu&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the specified command identifies an Application and Event ID combination that is not found in the Events Registry.</para><para>The <computeroutput>%s</computeroutput> string contains the command specified Application Name the <computeroutput>Event</computeroutput> <computeroutput>ID</computeroutput> field identifies the command specified EventID (in decimal) that was not found in the Events Registry. The <computeroutput>CC</computeroutput> field specifies the Command Code whose processing generated the event message. It can be equal to either <ref refid="cfe__evs__msg_8h_1ad2ace89952f7a556da6dd8389eed2fe6" kindref="member">CFE_EVS_SET_FILTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a4d891ebfad4a0f472b5e0f41c1a77a4d" kindref="member">CFE_EVS_RESET_FILTER_CC</ref>, or <ref refid="cfe__evs__msg_8h_1a9035f262e62a9e6fa42ae1e1e706e3e2" kindref="member">CFE_EVS_DELETE_EVENT_FILTER_CC</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="157" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1aede8c87d17c9a40d5ae5ca4e30ec5edc" compoundref="cfe__evs__task_8c" startline="1754" endline="1823">CFE_EVS_DeleteEventFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1accba3d2d489374fd39f3cca7af455282" compoundref="cfe__evs__task_8c" startline="1509" endline="1574">CFE_EVS_ResetFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a920256c475420a7bee2f6610773a5b92" compoundref="cfe__evs__task_8c" startline="828" endline="896">CFE_EVS_SetFilterMaskCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a8fc7db656c7191caf82b7bdea7220421" prot="public" static="no">
+        <name>CFE_EVS_ERR_APPNOREGS_EID</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;%s not registered with EVS: CC = %lu&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000097"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s not registered with EVS: CC = %lu&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the specified command identifies an Application that has not been registered with the cFE Event Services.</para><para>The <computeroutput>CC</computeroutput> field contains the Command Code whose processing resulted in the generation of the event message. Possible values are <ref refid="cfe__evs__msg_8h_1ad2ace89952f7a556da6dd8389eed2fe6" kindref="member">CFE_EVS_SET_FILTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a29b41d0faceb163a3a8c2e912814ff43" kindref="member">CFE_EVS_ENABLE_APP_EVENT_TYPE_CC</ref>, <ref refid="cfe__evs__msg_8h_1ae45b34a8813bbc0b632d19c6ba71bc17" kindref="member">CFE_EVS_DISABLE_APP_EVENT_TYPE_CC</ref>, <ref refid="cfe__evs__msg_8h_1a4b2b4fbf2b60e72d1b5b474309b076c7" kindref="member">CFE_EVS_ENABLE_APP_EVENTS_CC</ref>, <ref refid="cfe__evs__msg_8h_1a8bb6c4eea9175f53d25750ad47c21ef4" kindref="member">CFE_EVS_DISABLE_APP_EVENTS_CC</ref>, <ref refid="cfe__evs__msg_8h_1a9c4e3aaefec1040bd44640a3b685e467" kindref="member">CFE_EVS_RESET_APP_COUNTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a4d891ebfad4a0f472b5e0f41c1a77a4d" kindref="member">CFE_EVS_RESET_FILTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a533cec3d3a14836f373f96dd684d257f" kindref="member">CFE_EVS_RESET_ALL_FILTERS_CC</ref>, <ref refid="cfe__evs__msg_8h_1aa73089f56b77fa4373f01702025ab215" kindref="member">CFE_EVS_ADD_EVENT_FILTER_CC</ref>, or <ref refid="cfe__evs__msg_8h_1a9035f262e62a9e6fa42ae1e1e706e3e2" kindref="member">CFE_EVS_DELETE_EVENT_FILTER_CC</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="174" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a093bf733cd26ff5f20f290be4e35e2d8" compoundref="cfe__evs__task_8c" startline="1655" endline="1741">CFE_EVS_AddEventFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1aede8c87d17c9a40d5ae5ca4e30ec5edc" compoundref="cfe__evs__task_8c" startline="1754" endline="1823">CFE_EVS_DeleteEventFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a5268e45d7a44ff29a6b58d190fde1896" compoundref="cfe__evs__task_8c" startline="1381" endline="1431">CFE_EVS_DisableAppEventsCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1ae782cd69dfb7a10c9de3f7181c92489e" compoundref="cfe__evs__task_8c" startline="1241" endline="1305">CFE_EVS_DisableAppEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a92819739e8d724191db27c3229a1e5a9" compoundref="cfe__evs__task_8c" startline="1318" endline="1368">CFE_EVS_EnableAppEventsCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a1ea0238099ef8f8411ff95f29041e261" compoundref="cfe__evs__task_8c" startline="1163" endline="1227">CFE_EVS_EnableAppEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a9a8eaca747a643ecaf6ee6da6da5136e" compoundref="cfe__evs__task_8c" startline="1588" endline="1642">CFE_EVS_ResetAllFiltersCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a8ab99048a31b8bffa91682e015f66e1e" compoundref="cfe__evs__task_8c" startline="1445" endline="1495">CFE_EVS_ResetAppEventCounterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1accba3d2d489374fd39f3cca7af455282" compoundref="cfe__evs__task_8c" startline="1509" endline="1574">CFE_EVS_ResetFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a920256c475420a7bee2f6610773a5b92" compoundref="cfe__evs__task_8c" startline="828" endline="896">CFE_EVS_SetFilterMaskCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1aff42ff2971b864979ff009c9a9640c25" prot="public" static="no">
+        <name>CFE_EVS_ERR_ILLAPPIDRANGE_EID</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Illegal application ID %d retrieved for %s: CC = %lu&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000098"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Illegal application ID %d retrieved for %s: CC = %lu&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the specified command identifies an Application whose name is found in the Events Registry but does not appear to be properly registered with the cFE Executive Services.</para><para>The <computeroutput>CC</computeroutput> field contains the Command Code whose processing resulted in the generation of the event message. Possible values are <ref refid="cfe__evs__msg_8h_1ad2ace89952f7a556da6dd8389eed2fe6" kindref="member">CFE_EVS_SET_FILTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a29b41d0faceb163a3a8c2e912814ff43" kindref="member">CFE_EVS_ENABLE_APP_EVENT_TYPE_CC</ref>, <ref refid="cfe__evs__msg_8h_1ae45b34a8813bbc0b632d19c6ba71bc17" kindref="member">CFE_EVS_DISABLE_APP_EVENT_TYPE_CC</ref>, <ref refid="cfe__evs__msg_8h_1a4b2b4fbf2b60e72d1b5b474309b076c7" kindref="member">CFE_EVS_ENABLE_APP_EVENTS_CC</ref>, <ref refid="cfe__evs__msg_8h_1a8bb6c4eea9175f53d25750ad47c21ef4" kindref="member">CFE_EVS_DISABLE_APP_EVENTS_CC</ref>, <ref refid="cfe__evs__msg_8h_1a9c4e3aaefec1040bd44640a3b685e467" kindref="member">CFE_EVS_RESET_APP_COUNTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a4d891ebfad4a0f472b5e0f41c1a77a4d" kindref="member">CFE_EVS_RESET_FILTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a533cec3d3a14836f373f96dd684d257f" kindref="member">CFE_EVS_RESET_ALL_FILTERS_CC</ref>, <ref refid="cfe__evs__msg_8h_1aa73089f56b77fa4373f01702025ab215" kindref="member">CFE_EVS_ADD_EVENT_FILTER_CC</ref>, or <ref refid="cfe__evs__msg_8h_1a9035f262e62a9e6fa42ae1e1e706e3e2" kindref="member">CFE_EVS_DELETE_EVENT_FILTER_CC</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="191" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="191" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a093bf733cd26ff5f20f290be4e35e2d8" compoundref="cfe__evs__task_8c" startline="1655" endline="1741">CFE_EVS_AddEventFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1aede8c87d17c9a40d5ae5ca4e30ec5edc" compoundref="cfe__evs__task_8c" startline="1754" endline="1823">CFE_EVS_DeleteEventFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a5268e45d7a44ff29a6b58d190fde1896" compoundref="cfe__evs__task_8c" startline="1381" endline="1431">CFE_EVS_DisableAppEventsCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1ae782cd69dfb7a10c9de3f7181c92489e" compoundref="cfe__evs__task_8c" startline="1241" endline="1305">CFE_EVS_DisableAppEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a92819739e8d724191db27c3229a1e5a9" compoundref="cfe__evs__task_8c" startline="1318" endline="1368">CFE_EVS_EnableAppEventsCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a1ea0238099ef8f8411ff95f29041e261" compoundref="cfe__evs__task_8c" startline="1163" endline="1227">CFE_EVS_EnableAppEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a9a8eaca747a643ecaf6ee6da6da5136e" compoundref="cfe__evs__task_8c" startline="1588" endline="1642">CFE_EVS_ResetAllFiltersCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a8ab99048a31b8bffa91682e015f66e1e" compoundref="cfe__evs__task_8c" startline="1445" endline="1495">CFE_EVS_ResetAppEventCounterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1accba3d2d489374fd39f3cca7af455282" compoundref="cfe__evs__task_8c" startline="1509" endline="1574">CFE_EVS_ResetFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a920256c475420a7bee2f6610773a5b92" compoundref="cfe__evs__task_8c" startline="828" endline="896">CFE_EVS_SetFilterMaskCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a12c667053e9f36279879f08c84a81bc9" prot="public" static="no">
+        <name>CFE_EVS_ERR_NOAPPIDFOUND_EID</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Unable to retrieve application ID for %s: CC = %lu&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000099"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unable to retrieve application ID for %s: CC = %lu&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the specified command contains an Application name that is apparently found in the Events Registry but does not appear to be registered with the cFE Executive Services.</para><para>The <computeroutput>CC</computeroutput> field contains the Command Code whose processing resulted in the generation of the event message. Possible values are <ref refid="cfe__evs__msg_8h_1ad2ace89952f7a556da6dd8389eed2fe6" kindref="member">CFE_EVS_SET_FILTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a29b41d0faceb163a3a8c2e912814ff43" kindref="member">CFE_EVS_ENABLE_APP_EVENT_TYPE_CC</ref>, <ref refid="cfe__evs__msg_8h_1ae45b34a8813bbc0b632d19c6ba71bc17" kindref="member">CFE_EVS_DISABLE_APP_EVENT_TYPE_CC</ref>, <ref refid="cfe__evs__msg_8h_1a4b2b4fbf2b60e72d1b5b474309b076c7" kindref="member">CFE_EVS_ENABLE_APP_EVENTS_CC</ref>, <ref refid="cfe__evs__msg_8h_1a8bb6c4eea9175f53d25750ad47c21ef4" kindref="member">CFE_EVS_DISABLE_APP_EVENTS_CC</ref>, <ref refid="cfe__evs__msg_8h_1a9c4e3aaefec1040bd44640a3b685e467" kindref="member">CFE_EVS_RESET_APP_COUNTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a4d891ebfad4a0f472b5e0f41c1a77a4d" kindref="member">CFE_EVS_RESET_FILTER_CC</ref>, <ref refid="cfe__evs__msg_8h_1a533cec3d3a14836f373f96dd684d257f" kindref="member">CFE_EVS_RESET_ALL_FILTERS_CC</ref>, <ref refid="cfe__evs__msg_8h_1aa73089f56b77fa4373f01702025ab215" kindref="member">CFE_EVS_ADD_EVENT_FILTER_CC</ref>, or <ref refid="cfe__evs__msg_8h_1a9035f262e62a9e6fa42ae1e1e706e3e2" kindref="member">CFE_EVS_DELETE_EVENT_FILTER_CC</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="208" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="208" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a093bf733cd26ff5f20f290be4e35e2d8" compoundref="cfe__evs__task_8c" startline="1655" endline="1741">CFE_EVS_AddEventFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1aede8c87d17c9a40d5ae5ca4e30ec5edc" compoundref="cfe__evs__task_8c" startline="1754" endline="1823">CFE_EVS_DeleteEventFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a5268e45d7a44ff29a6b58d190fde1896" compoundref="cfe__evs__task_8c" startline="1381" endline="1431">CFE_EVS_DisableAppEventsCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1ae782cd69dfb7a10c9de3f7181c92489e" compoundref="cfe__evs__task_8c" startline="1241" endline="1305">CFE_EVS_DisableAppEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a92819739e8d724191db27c3229a1e5a9" compoundref="cfe__evs__task_8c" startline="1318" endline="1368">CFE_EVS_EnableAppEventsCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a1ea0238099ef8f8411ff95f29041e261" compoundref="cfe__evs__task_8c" startline="1163" endline="1227">CFE_EVS_EnableAppEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a9a8eaca747a643ecaf6ee6da6da5136e" compoundref="cfe__evs__task_8c" startline="1588" endline="1642">CFE_EVS_ResetAllFiltersCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a8ab99048a31b8bffa91682e015f66e1e" compoundref="cfe__evs__task_8c" startline="1445" endline="1495">CFE_EVS_ResetAppEventCounterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1accba3d2d489374fd39f3cca7af455282" compoundref="cfe__evs__task_8c" startline="1509" endline="1574">CFE_EVS_ResetFilterCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a920256c475420a7bee2f6610773a5b92" compoundref="cfe__evs__task_8c" startline="828" endline="896">CFE_EVS_SetFilterMaskCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1aa03ee0ea80931bb86cb947aaf95c04e0" prot="public" static="no">
+        <name>CFE_EVS_ERR_ILLEGALFMTMOD_EID</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Event Format Mode Command: Invalid Event Format Mode = 0x%02x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000100"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Event Format Mode Command: Invalid Event Format Mode = 0x%02x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a &quot;Set Event Format Mode&quot; command message has arrived and the #CFE_EVS_ModeCmd_t::Mode field is equal to neither <ref refid="cfe__evs__msg_8h_1a17c5659212b9558eb3e554f1e860ae1d" kindref="member">CFE_EVS_SHORT_FORMAT</ref> or <ref refid="cfe__evs__msg_8h_1ae3406f05a27298712ad93c272affd929" kindref="member">CFE_EVS_LONG_FORMAT</ref>. These are the only allowed values for the mode field.</para><para>The <computeroutput>Mode</computeroutput> field in the event message identifies the Mode value (in hex) that was found in the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="225" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="225" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1ad4137fe6a60354c43d64332790c1b35c" compoundref="cfe__evs__task_8c" startline="1127" endline="1149">CFE_EVS_SetEventFormatModeCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1ab9b07ed05033995a8fd1111805c7e390" prot="public" static="no">
+        <name>CFE_EVS_ERR_MAXREGSFILTER_EID</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Add Filter Command: number of registered filters has reached max = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000101"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Add Filter Command: number of registered filters has reached max = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an &quot;Add Filter&quot; command and the specified Application has already reached the maximum number of filters allowed (#CFE_EVS_MAX_EVENT_FILTERS).</para><para>The <computeroutput>max</computeroutput> field in the event message identifies the maximum number of event filters allowed per Application. This value should be equal to the configuration parameter #CFE_EVS_MAX_EVENT_FILTERS. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="242" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="242" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a093bf733cd26ff5f20f290be4e35e2d8" compoundref="cfe__evs__task_8c" startline="1655" endline="1741">CFE_EVS_AddEventFilterCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a52da903aff1a2be25408a53cae581071" prot="public" static="no">
+        <name>CFE_EVS_ERR_WRDATFILE_EID</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Write App Data Command Error: OS_write = 0x%08X, filename = %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000102"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Write App Data Command Error: OS_write = 0x%08X, filename = %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a filesystem error occurred while writing the contents of the event registry to a file.</para><para>The message text identifies the registry filename and specifies the return value, in hex, from the system function call. The expected return value is the number of bytes written, which in this case should be equal to the size of a <ref refid="struct_c_f_e___e_v_s___app_data_file__t" kindref="compound">CFE_EVS_AppDataFile_t</ref> structure. Error codes are negative. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="259" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="259" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a7020d6560a6f6c1d8c73c4ed7500c1ab" compoundref="cfe__evs__task_8c" startline="1838" endline="1926">CFE_EVS_WriteAppDataCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a846081d9fbdbfc24378c6eae9b388f53" prot="public" static="no">
+        <name>CFE_EVS_ERR_CRDATFILE_EID</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Write App Data Command Error: OS_creat = 0x%08X, filename = %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000103"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Write App Data Command Error: OS_creat = 0x%08X, filename = %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a filesystem error occurred when attempting to create the file that is to hold the event registry data.</para><para>The message text identifies the registry filename and specifies the return value, in hex, from the system function call. The expected return value is a file handle, which in this case should be a relatively small positive number. Error codes are negative. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="275" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="275" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a7020d6560a6f6c1d8c73c4ed7500c1ab" compoundref="cfe__evs__task_8c" startline="1838" endline="1926">CFE_EVS_WriteAppDataCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a5d8e89c67e40f9e24efd1a7abfb1351a" prot="public" static="no">
+        <name>CFE_EVS_ERR_CC_EID</name>
+        <initializer>15</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid command code <ndash/> ID = 0x%08x, CC = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000104"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid command code <ndash/> ID = 0x%08x, CC = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a message with the #CFE_EVS_CMD_MID message ID has arrived but whose Command Code is not one of the specified accepted command codes specified. This problem is most likely to occur when:<orderedlist>
+<listitem><para>A Message ID meant for another Application became corrupted and was set equal to #CFE_EVS_CMD_MID.</para></listitem><listitem><para>The Command Code field in the Message became corrupted.</para></listitem><listitem><para>The command database at the ground station has been corrupted.</para></listitem></orderedlist>
+</para><para>The <computeroutput>ID</computeroutput> field in the event message specifies the Message ID (in hex) and the <computeroutput>CC</computeroutput> field specifies the Command Code (in decimal) found in the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="295" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="295" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8c_1a0cbd223682024ab83cd228752b97b9d6" compoundref="cfe__evs__task_8c" startline="480" endline="704">CFE_EVS_ProcessGroundCommand</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1ac1addef8ad0d1fab22990335aea8de83" prot="public" static="no">
+        <name>CFE_EVS_RSTCNT_EID</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Counters Command Received&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000105"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset Counters Command Received&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued in response to a cFE Event Services Reset Counters command </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="307" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="307" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8c_1a986bed3da0cad23810d0cc7799d96333" compoundref="cfe__evs__task_8c" startline="801" endline="814">CFE_EVS_ResetCountersCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a61b17197150b3375448a039ba0569d85" prot="public" static="no">
+        <name>CFE_EVS_SETFILTERMSK_EID</name>
+        <initializer>17</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filter Mask Command Received with AppName=%s, EventID=0x%08x, Mask=0x%04x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000106"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Filter Mask Command Received with AppName=%s, EventID=0x%08x, Mask=0x%04x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful processing of a Set Filter Mask command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose Filter Mask has been changed. The <computeroutput>EventID</computeroutput> field identifies the Event whose Filter Mask has been changed. The <computeroutput>Mask</computeroutput> field identifies the new Mask value associated with the specified event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="322" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="322" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a920256c475420a7bee2f6610773a5b92" compoundref="cfe__evs__task_8c" startline="828" endline="896">CFE_EVS_SetFilterMaskCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1ad887cd7edb278d1aff7d6548292e8b92" prot="public" static="no">
+        <name>CFE_EVS_ENAPORT_EID</name>
+        <initializer>18</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Enable Ports Command Received with Port Bit Mask = 0x%02x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000107"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Enable Ports Command Received with Port Bit Mask = 0x%02x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful processing of the &quot;Enable Ports&quot; command.</para><para>The <computeroutput>Mask</computeroutput> field identifies the ports that are enabled. Mask bits are defined by <ref refid="cfe__evs__msg_8h_1ac5b04c457b2fc354a52752f465fab0ca" kindref="member">CFE_EVS_PORT1_BIT</ref>, <ref refid="cfe__evs__msg_8h_1afe0afc45407c6983df0d2b8cee20b116" kindref="member">CFE_EVS_PORT2_BIT</ref>, <ref refid="cfe__evs__msg_8h_1aa5a44f87d0e2658ee52b002af35c73f5" kindref="member">CFE_EVS_PORT3_BIT</ref> and <ref refid="cfe__evs__msg_8h_1af88a26ebdde000402bc294c0b8fceb54" kindref="member">CFE_EVS_PORT4_BIT</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="336" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="336" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a73bbf3189016fb7d66a34b1774192d6f" compoundref="cfe__evs__task_8c" startline="911" endline="953">CFE_EVS_EnablePortsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1ae63a4665f26e25bafe5d2f6200704e63" prot="public" static="no">
+        <name>CFE_EVS_DISPORT_EID</name>
+        <initializer>19</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Disable Ports Command Received with Port Bit Mask = 0x%02x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000108"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Disable Ports Command Received with Port Bit Mask = 0x%02x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful processing of the &quot;Disable Ports&quot; command.</para><para>The <computeroutput>Mask</computeroutput> field identifies (in hex) the ports are to be disabled. Mask bits are defined by <ref refid="cfe__evs__msg_8h_1ac5b04c457b2fc354a52752f465fab0ca" kindref="member">CFE_EVS_PORT1_BIT</ref>, <ref refid="cfe__evs__msg_8h_1afe0afc45407c6983df0d2b8cee20b116" kindref="member">CFE_EVS_PORT2_BIT</ref>, <ref refid="cfe__evs__msg_8h_1aa5a44f87d0e2658ee52b002af35c73f5" kindref="member">CFE_EVS_PORT3_BIT</ref> and <ref refid="cfe__evs__msg_8h_1af88a26ebdde000402bc294c0b8fceb54" kindref="member">CFE_EVS_PORT4_BIT</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="350" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="350" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1ae6bc4ab261b7a5ae7bb1b437b8fe1dc1" compoundref="cfe__evs__task_8c" startline="967" endline="1011">CFE_EVS_DisablePortsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1adbad92d3534585bec507b3500c3eb4c6" prot="public" static="no">
+        <name>CFE_EVS_ENAEVTTYPE_EID</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Enable Event Type Command Received with Event Type Bit Mask = 0x%02x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000109"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Enable Event Type Command Received with Event Type Bit Mask = 0x%02x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful processing of the &quot;Enable Event Type&quot; command.</para><para>The <computeroutput>Mask</computeroutput> field identifies the Event Types that are enabled. Mask bits are defined by <ref refid="cfe__evs__msg_8h_1a986958454b30f5b4fe8b701f99e42459" kindref="member">CFE_EVS_DEBUG_BIT</ref>, <ref refid="cfe__evs__msg_8h_1a32505bf705ad85c9dad7b48929966a8a" kindref="member">CFE_EVS_INFORMATION_BIT</ref>, <ref refid="cfe__evs__msg_8h_1a3c5c9b77b4e2debb8ef3bee218e25219" kindref="member">CFE_EVS_ERROR_BIT</ref> and <ref refid="cfe__evs__msg_8h_1a7abf07dd28591ee87c41dabb4beee8f8" kindref="member">CFE_EVS_CRITICAL_BIT</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="365" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="365" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a807041166bff3e40f8110cacf459362d" compoundref="cfe__evs__task_8c" startline="1026" endline="1063">CFE_EVS_EnableEventTypesCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a13ca175d32ba55780e578601ef03d885" prot="public" static="no">
+        <name>CFE_EVS_DISEVTTYPE_EID</name>
+        <initializer>21</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Disable Event Type Command Received with Event Type Bit Mask = 0x%02x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000110"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Disable Event Type Command Received with Event Type Bit Mask = 0x%02x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful processing of the &quot;Disable Event Type&quot; command.</para><para>The <computeroutput>Mask</computeroutput> field identifies the Event Types that are disabled. Mask bits are defined by <ref refid="cfe__evs__msg_8h_1a986958454b30f5b4fe8b701f99e42459" kindref="member">CFE_EVS_DEBUG_BIT</ref>, <ref refid="cfe__evs__msg_8h_1a32505bf705ad85c9dad7b48929966a8a" kindref="member">CFE_EVS_INFORMATION_BIT</ref>, <ref refid="cfe__evs__msg_8h_1a3c5c9b77b4e2debb8ef3bee218e25219" kindref="member">CFE_EVS_ERROR_BIT</ref> and <ref refid="cfe__evs__msg_8h_1a7abf07dd28591ee87c41dabb4beee8f8" kindref="member">CFE_EVS_CRITICAL_BIT</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="380" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="380" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a446e8726cafcd3e3b6e9da7cb00d7a58" compoundref="cfe__evs__task_8c" startline="1077" endline="1113">CFE_EVS_DisableEventTypesCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1afb18c7c069575299ff3e06636a4ec4a3" prot="public" static="no">
+        <name>CFE_EVS_SETEVTFMTMOD_EID</name>
+        <initializer>22</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Event Format Mode Command Received with Mode = 0x%02x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000111"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Event Format Mode Command Received with Mode = 0x%02x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Set Event Format Mode&quot; command.</para><para>The <computeroutput>Mode</computeroutput> field contains the newly chosen Event Format Mode (specified in hex). Acceptable values for this parameter are: <ref refid="cfe__evs__msg_8h_1a17c5659212b9558eb3e554f1e860ae1d" kindref="member">CFE_EVS_SHORT_FORMAT</ref> or <ref refid="cfe__evs__msg_8h_1ae3406f05a27298712ad93c272affd929" kindref="member">CFE_EVS_LONG_FORMAT</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="394" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="394" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1ad4137fe6a60354c43d64332790c1b35c" compoundref="cfe__evs__task_8c" startline="1127" endline="1149">CFE_EVS_SetEventFormatModeCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a8ddd2ccf9c4aede88c6f5cc882022e49" prot="public" static="no">
+        <name>CFE_EVS_ENAAPPEVTTYPE_EID</name>
+        <initializer>23</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Enable App Event Type Command Received with AppName = %s, EventType Bit Mask = 0x%02x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000112"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Enable App Event Type Command Received with AppName = %s, EventType Bit Mask = 0x%02x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Enable Application Event Types&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose Event Type Enable status has changed and the <computeroutput>Mask</computeroutput> field specifies (in hex) the Event Types that have been enabled. Mask bits are defined by <ref refid="cfe__evs__msg_8h_1a986958454b30f5b4fe8b701f99e42459" kindref="member">CFE_EVS_DEBUG_BIT</ref>, <ref refid="cfe__evs__msg_8h_1a32505bf705ad85c9dad7b48929966a8a" kindref="member">CFE_EVS_INFORMATION_BIT</ref>, <ref refid="cfe__evs__msg_8h_1a3c5c9b77b4e2debb8ef3bee218e25219" kindref="member">CFE_EVS_ERROR_BIT</ref> and <ref refid="cfe__evs__msg_8h_1a7abf07dd28591ee87c41dabb4beee8f8" kindref="member">CFE_EVS_CRITICAL_BIT</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="410" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="410" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a1ea0238099ef8f8411ff95f29041e261" compoundref="cfe__evs__task_8c" startline="1163" endline="1227">CFE_EVS_EnableAppEventTypesCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a2f71c3ed09e60a344192254abd6f1165" prot="public" static="no">
+        <name>CFE_EVS_DISAPPENTTYPE_EID</name>
+        <initializer>24</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Disable App Event Type Command Received with AppName = %s, EventType Bit Mask = 0x%02x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000113"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Disable App Event Type Command Received with AppName = %s, EventType Bit Mask = 0x%02x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Disable Application Event Types&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose Event Type Disable status has changed and the <computeroutput>Mask</computeroutput> field specifies (in hex) the Event Types that have been disabled. Mask bits are defined by <ref refid="cfe__evs__msg_8h_1a986958454b30f5b4fe8b701f99e42459" kindref="member">CFE_EVS_DEBUG_BIT</ref>, <ref refid="cfe__evs__msg_8h_1a32505bf705ad85c9dad7b48929966a8a" kindref="member">CFE_EVS_INFORMATION_BIT</ref>, <ref refid="cfe__evs__msg_8h_1a3c5c9b77b4e2debb8ef3bee218e25219" kindref="member">CFE_EVS_ERROR_BIT</ref> and <ref refid="cfe__evs__msg_8h_1a7abf07dd28591ee87c41dabb4beee8f8" kindref="member">CFE_EVS_CRITICAL_BIT</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="426" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="426" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1ae782cd69dfb7a10c9de3f7181c92489e" compoundref="cfe__evs__task_8c" startline="1241" endline="1305">CFE_EVS_DisableAppEventTypesCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a26598ad84143a3bf11b34c2fab3f4240" prot="public" static="no">
+        <name>CFE_EVS_ENAAPPEVT_EID</name>
+        <initializer>25</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Enable App Events Command Received with AppName = %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000114"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Enable App Events Command Received with AppName = %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Enable Application Events&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose Events have been Enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="439" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="439" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a92819739e8d724191db27c3229a1e5a9" compoundref="cfe__evs__task_8c" startline="1318" endline="1368">CFE_EVS_EnableAppEventsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1addd0e280ff1a27f26a55cbf67a75f385" prot="public" static="no">
+        <name>CFE_EVS_DISAPPEVT_EID</name>
+        <initializer>26</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Disable App Events Command Received with AppName = %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000115"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Disable App Events Command Received with AppName = %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Disable Application Events&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose Events have been Disabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="452" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="452" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a5268e45d7a44ff29a6b58d190fde1896" compoundref="cfe__evs__task_8c" startline="1381" endline="1431">CFE_EVS_DisableAppEventsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a0ebc05c4768034642f3ad42412c44522" prot="public" static="no">
+        <name>CFE_EVS_RSTEVTCNT_EID</name>
+        <initializer>27</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Event Counter Command Received with AppName = %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000116"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset Event Counter Command Received with AppName = %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Reset Application Event Counter&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose Event Counter has been reset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="465" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="465" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a8ab99048a31b8bffa91682e015f66e1e" compoundref="cfe__evs__task_8c" startline="1445" endline="1495">CFE_EVS_ResetAppEventCounterCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a7f5205263227635b421151cf872c9b26" prot="public" static="no">
+        <name>CFE_EVS_RSTFILTER_EID</name>
+        <initializer>28</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Filter Command Received with AppName = %s, EventID = 0x%08x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000117"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset Filter Command Received with AppName = %s, EventID = 0x%08x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Reset Application Event Message Filter&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose Event Message Filter has been reset and the <computeroutput>EventID</computeroutput> field identifies the specific event message whose filter has been reset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="479" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="479" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1accba3d2d489374fd39f3cca7af455282" compoundref="cfe__evs__task_8c" startline="1509" endline="1574">CFE_EVS_ResetFilterCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a3834b10c747de2ac4889e7ba0affc93b" prot="public" static="no">
+        <name>CFE_EVS_RSTALLFILTER_EID</name>
+        <initializer>29</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset All Filters Command Received with AppName = %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000118"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset All Filters Command Received with AppName = %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Reset Application Event Message Filters&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose entire set of Event Filters has been reset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="492" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="492" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a9a8eaca747a643ecaf6ee6da6da5136e" compoundref="cfe__evs__task_8c" startline="1588" endline="1642">CFE_EVS_ResetAllFiltersCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a2c7cf0add54ffe73b07b58a347480b52" prot="public" static="no">
+        <name>CFE_EVS_ADDFILTER_EID</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Add Filter Command Received with AppName = %s, EventID = 0x%08x, Mask = 0x%04x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000119"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Add Filter Command Received with AppName = %s, EventID = 0x%08x, Mask = 0x%04x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Add Filter&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application who is getting the new filter, the <computeroutput>EventID</computeroutput> field identifies the Event Identifier, in hex, that is getting the filter, and the <computeroutput>Mask</computeroutput> field specifies, in hex, what the binary filter mask has been set to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="507" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="507" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a093bf733cd26ff5f20f290be4e35e2d8" compoundref="cfe__evs__task_8c" startline="1655" endline="1741">CFE_EVS_AddEventFilterCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a3c8a8b181b2322062105e4e86ed19801" prot="public" static="no">
+        <name>CFE_EVS_DELFILTER_EID</name>
+        <initializer>31</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Delete Filter Command Received with AppName = %s, EventID = 0x%08x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000120"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Delete Filter Command Received with AppName = %s, EventID = 0x%08x&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the &quot;Delete Filter&quot; command.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application who is getting the filter removed, the <computeroutput>EventID</computeroutput> field identifies the Event Identifier, in hex, whose filter is being deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="521" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="521" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1aede8c87d17c9a40d5ae5ca4e30ec5edc" compoundref="cfe__evs__task_8c" startline="1754" endline="1823">CFE_EVS_DeleteEventFilterCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a12e376e81eb7102b1459545e271aff03" prot="public" static="no">
+        <name>CFE_EVS_WRDAT_EID</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Write App Data Command: %d application data entries written to %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000121"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Write App Data Command: %d application data entries written to %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the <ref refid="cfe__evs__msg_8h_1ae95651a0f643f6558e29f04567359bf1" kindref="member">&quot;Write Event Services Application Information to File&quot; </ref> command.</para><para>The message text identifies the event log filename and specifies the number, in decimal, of events written to the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="536" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="536" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a7020d6560a6f6c1d8c73c4ed7500c1ab" compoundref="cfe__evs__task_8c" startline="1838" endline="1926">CFE_EVS_WriteAppDataCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a8b0bab8493f78c6b559faa94acb9331e" prot="public" static="no">
+        <name>CFE_EVS_WRLOG_EID</name>
+        <initializer>33</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Write Log File Command: %d event log entries written to %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000122"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Write Log File Command: %d event log entries written to %s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the <ref refid="cfe__evs__msg_8h_1a10454685895215bb4511b0e17ed732af" kindref="member">&quot;Write Event Log to File&quot; </ref> command.</para><para>The message text identifies the event log filename and specifies the number, in decimal, of events written to the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="551" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="551" bodyend="-1"/>
+        <referencedby refid="cfe__evs__log_8h_1a0cf8e266b4796fe4bbd597df65c6ada1" compoundref="cfe__evs__log_8c" startline="198" endline="290">CFE_EVS_WriteLogFileCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a08ea6ebad7cffa92fc666064858f7d03" prot="public" static="no">
+        <name>CFE_EVS_NO_LOGSET_EID</name>
+        <initializer>34</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Log Mode Command: Event Log is Disabled&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000123"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Log Mode Command: Event Log is Disabled&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of a &quot;Set Log Mode&quot; command when the use of the Event Log has been disabled. To enable the Event Log, the cFE code must be compiled for the target with the <bold>CFE_EVS_LOG_ON</bold> macro defined. The EVS task must also succeed during task initialization in acquiring a pointer to the cFE reset area and in the creation of a serializing semaphore to control access to the Event Log. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="568" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="568" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8c_1a0cbd223682024ab83cd228752b97b9d6" compoundref="cfe__evs__task_8c" startline="480" endline="704">CFE_EVS_ProcessGroundCommand</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a88f861bb4ace7e4fcb58d0b7c987f8cb" prot="public" static="no">
+        <name>CFE_EVS_NO_LOGCLR_EID</name>
+        <initializer>35</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Clear Log Command: Event Log is Disabled&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000124"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Clear Log Command: Event Log is Disabled&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of a &quot;Clear Log&quot; command when the use of the Event Log has been disabled. To enable the Event Log, the cFE code must be compiled for the target with the <bold>CFE_EVS_LOG_ON</bold> macro defined. The EVS task must also succeed during task initialization in acquiring a pointer to the cFE reset area and in the creation of a serializing semaphore to control access to the Event Log. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="585" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="585" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8c_1a0cbd223682024ab83cd228752b97b9d6" compoundref="cfe__evs__task_8c" startline="480" endline="704">CFE_EVS_ProcessGroundCommand</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a37a9ff9cebd524b1e64e4ddedaf73527" prot="public" static="no">
+        <name>CFE_EVS_NO_LOGWR_EID</name>
+        <initializer>36</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Write Log Command: Event Log is Disabled&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000125"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Write Log Command: Event Log is Disabled&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of a &quot;Write Log&quot; command when the use of the Event Log has been disabled. To enable the Event Log, the cFE code must be compiled for the target with the <bold>CFE_EVS_LOG_ON</bold> macro defined. The EVS task must also succeed during task initialization in acquiring a pointer to the cFE reset area and in the creation of a serializing semaphore to control access to the Event Log. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="602" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="602" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8c_1a0cbd223682024ab83cd228752b97b9d6" compoundref="cfe__evs__task_8c" startline="480" endline="704">CFE_EVS_ProcessGroundCommand</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1ad92bcd70c18d91ba3181a642bca9a8b9" prot="public" static="no">
+        <name>CFE_EVS_EVT_FILTERED_EID</name>
+        <initializer>37</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Add Filter Command:AppName = %s, EventID = 0x%08x is already registered for filtering&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000126"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Add Filter Command:AppName = %s, EventID = 0x%08x is already registered for filtering&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an &quot;Add Filter&quot; command was received specifying an Event ID that has already had a filter added.</para><para>The <computeroutput>AppName</computeroutput> field identifies the Application whose filter was to be added and the <computeroutput>EventID</computeroutput> field identifies, in hex, the Event ID that the command was trying to add a filter for. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="617" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="617" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1a093bf733cd26ff5f20f290be4e35e2d8" compoundref="cfe__evs__task_8c" startline="1655" endline="1741">CFE_EVS_AddEventFilterCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1ae488805521add4fc0b992c1120b5e822" prot="public" static="no">
+        <name>CFE_EVS_LOGMODE_EID</name>
+        <initializer>38</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Log Mode Command Error: Log Mode = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000127"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Log Mode Command Error: Log Mode = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a &quot;Set Log Mode&quot; command is completed successfully.</para><para>The event text identifies the Log Mode command argument. Valid Log Mode command arguments are: <ref refid="cfe__evs__msg_8h_1a2b9064e806d5387a5124d8e96667c02e" kindref="member">CFE_EVS_LOG_OVERWRITE</ref> or <ref refid="cfe__evs__msg_8h_1aa8fa209fc98c25a0804fd3aa26092ed6" kindref="member">CFE_EVS_LOG_DISCARD</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="631" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="631" bodyend="-1"/>
+        <referencedby refid="cfe__evs__log_8h_1a09106598875f3f8cd5c9e05ae26c7a2b" compoundref="cfe__evs__log_8c" startline="303" endline="327">CFE_EVS_SetLoggingModeCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1aeadb4447dc18e7406833bfdd64f47f73" prot="public" static="no">
+        <name>CFE_EVS_ERR_LOGMODE_EID</name>
+        <initializer>39</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Log Mode Command Error: Log Mode = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000128"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Log Mode Command Error: Log Mode = %d </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a &quot;Set Log Mode&quot; command is received that specifies an invalid Log Mode command argument.</para><para>The event text identifies the invalid Log Mode command argument. Valid Log Mode command arguments are: <ref refid="cfe__evs__msg_8h_1a2b9064e806d5387a5124d8e96667c02e" kindref="member">CFE_EVS_LOG_OVERWRITE</ref> or <ref refid="cfe__evs__msg_8h_1aa8fa209fc98c25a0804fd3aa26092ed6" kindref="member">CFE_EVS_LOG_DISCARD</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="646" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="646" bodyend="-1"/>
+        <referencedby refid="cfe__evs__log_8h_1a09106598875f3f8cd5c9e05ae26c7a2b" compoundref="cfe__evs__log_8c" startline="303" endline="327">CFE_EVS_SetLoggingModeCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a34e86aff46089bfd0dab31388f8cae6a" prot="public" static="no">
+        <name>CFE_EVS_ERR_INVALID_BITMASK_EID</name>
+        <initializer>40</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Bit Mask = 0x%X out of range: CC = %lu&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000129"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Bit Mask = 0x%X out of range: CC = %lu&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the bit mask passed in is equal to zero or greater than 0x0F, because a bit mask of zero does nothing, and a bitmask of greater than 0x0F is invalid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="658" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="658" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8h_1ae782cd69dfb7a10c9de3f7181c92489e" compoundref="cfe__evs__task_8c" startline="1241" endline="1305">CFE_EVS_DisableAppEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a446e8726cafcd3e3b6e9da7cb00d7a58" compoundref="cfe__evs__task_8c" startline="1077" endline="1113">CFE_EVS_DisableEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1ae6bc4ab261b7a5ae7bb1b437b8fe1dc1" compoundref="cfe__evs__task_8c" startline="967" endline="1011">CFE_EVS_DisablePortsCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a1ea0238099ef8f8411ff95f29041e261" compoundref="cfe__evs__task_8c" startline="1163" endline="1227">CFE_EVS_EnableAppEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a807041166bff3e40f8110cacf459362d" compoundref="cfe__evs__task_8c" startline="1026" endline="1063">CFE_EVS_EnableEventTypesCmd</referencedby>
+        <referencedby refid="cfe__evs__task_8h_1a73bbf3189016fb7d66a34b1774192d6f" compoundref="cfe__evs__task_8c" startline="911" endline="953">CFE_EVS_EnablePortsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a0fde4bd78249942336ae7e2739a7c7f1" prot="public" static="no">
+        <name>CFE_EVS_ERR_UNREGISTERED_EVS_APP</name>
+        <initializer>41</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;App %s not registered with Event Services. Unable to send event&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000130"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;App %s not registered with Event Services. Unable to send event&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an event message has been requested to be sent by an Application that has not registered itself with cFE Event Services. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="670" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="670" bodyend="-1"/>
+        <referencedby refid="cfe__evs__utils_8h_1affe0bc241dc245ca57d963a5d8fc46a7" compoundref="cfe__evs__utils_8c" startline="189" endline="215">EVS_NotRegistered</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1ae72d0959f6dc2088a449395b11cd2b89" prot="public" static="no">
+        <name>CFE_EVS_FILTER_MAX_EID</name>
+        <initializer>42</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Max filter count reached, AppName = %s, EventID = 0x%08x: Filter locked until reset&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000131"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Max filter count reached, AppName = %s, EventID = 0x%08x: Filter locked until reset&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATIONAL</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the filtering count for a specific App and Event ID reaches <ref refid="cfe__evs__task_8h_1a9e3a56f296db523bd0b65e7529649417" kindref="member">CFE_EVS_MAX_FILTER_COUNT</ref> The filtered event will no longer be received until the reset counter is reset via a <ref refid="cfe__evs__msg_8h_1a4d891ebfad4a0f472b5e0f41c1a77a4d" kindref="member">&quot;Reset an Event Filter for an Application&quot; </ref> or a <ref refid="cfe__evs__msg_8h_1a533cec3d3a14836f373f96dd684d257f" kindref="member">&quot;Reset All Event Filters for an Application&quot; </ref></para><para>The <computeroutput>AppName</computeroutput> field identifies the Application and the <computeroutput>EventID</computeroutput> field identifies, in hex, the Event ID for the filter whose maxium was reached. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="687" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="687" bodyend="-1"/>
+        <referencedby refid="cfe__evs__utils_8h_1a7e63cce3dea9ac919aee6b282835d3d6" compoundref="cfe__evs__utils_8c" startline="230" endline="325">EVS_IsFiltered</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__evs__events_8h_1a7cd859499e3aba62639c05e0d8a1125f" prot="public" static="no">
+        <name>CFE_EVS_LEN_ERR_EID</name>
+        <initializer>43</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid cmd length: ID = 0x%X, CC = %d, Exp Len = %d, Len = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000132"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid cmd length: ID = 0x%X, CC = %d, Exp Len = %d, Len = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a message with the #CFE_EVS_CMD_MID message ID has arrived but whose packet length does not match the expected length for the specified command code.</para><para>The <computeroutput>ID</computeroutput> field in the event message specifies the Message ID (in hex), the <computeroutput>CC</computeroutput> field specifies the Command Code (in decimal), the <computeroutput>Exp</computeroutput> Len field specified the Expected Length (in decimal ), and <computeroutput>Len</computeroutput> specifies the message Length (in decimal) found in the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_evs_events.h" line="705" column="9" bodyfile="inc/cfe_evs_events.h" bodystart="705" bodyend="-1"/>
+        <referencedby refid="cfe__evs__task_8c_1a289e79e0ed41878eeddc062fe2d5ac1a" compoundref="cfe__evs__task_8c" startline="717" endline="738">CFE_EVS_VerifyCmdLength</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/>Filename:<sp/>cfe_evs_events.h</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2006,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASAs<sp/>Goddard<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/><sp/>$Id:<sp/>cfe_evs_events.h<sp/>1.7<sp/>2011/06/02<sp/>17:06:44GMT-05:00<sp/>lwalling<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cFE<sp/>Event<sp/>Services<sp/>(EVS)<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/>Design<sp/>Notes:</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/>References:</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.0a</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/><sp/>$Date:<sp/>2011/06/02<sp/>17:06:44GMT-05:00<sp/>$</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/><sp/>$Revision:<sp/>1.7<sp/>$</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/><sp/>$Log:<sp/>cfe_evs_events.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.7<sp/>2011/06/02<sp/>17:06:44GMT-05:00<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/><sp/>Updated<sp/>text<sp/>and<sp/>descriptions<sp/>for<sp/>Write<sp/>Application<sp/>Data<sp/>to<sp/>File<sp/>command<sp/>events</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.6<sp/>2011/06/01<sp/>17:38:43EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/><sp/>Update<sp/>Write<sp/>Log<sp/>File<sp/>and<sp/>Set<sp/>Log<sp/>Mode<sp/>command<sp/>events</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.5<sp/>2011/05/23<sp/>15:40:20EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/><sp/>Update<sp/>descriptions<sp/>for<sp/>event<sp/>log<sp/>command<sp/>events<sp/>when<sp/>event<sp/>log<sp/>is<sp/>disabled</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.4<sp/>2010/10/04<sp/>15:25:17EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/><sp/>Cleaned<sp/>up<sp/>copyright<sp/>symbol.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.3<sp/>2009/07/31<sp/>19:54:05EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/><sp/>added<sp/>length<sp/>check<sp/>error<sp/>message<sp/>and<sp/>changed<sp/>reported<sp/>bitmask<sp/>lengths</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.2<sp/>2009/07/28<sp/>17:16:33EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/><sp/>Added<sp/>event<sp/>message<sp/>when<sp/>filtering<sp/>limit<sp/>is<sp/>reached.</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:21EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/><sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/><sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/MKS-CFE-PROJECT/fsw/cfe-core/src/inc/project.pj</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.13<sp/>2007/07/18<sp/>15:48:00EDT<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/><sp/>Jonathan<sp/>added<sp/>text<sp/>into<sp/>each<sp/>error<sp/>event<sp/>in<sp/>the<sp/>two<sp/>functions<sp/>that<sp/>write<sp/>files<sp/>(WriteLog<sp/>and<sp/>WriteAppData),<sp/>as<sp/>well<sp/>as<sp/>updated<sp/>the<sp/>doxygen<sp/>comments<sp/>in<sp/>the<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.11<sp/>2007/06/02<sp/>10:10:12EDT<sp/>dlkobe<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/><sp/>Added<sp/>doxygen<sp/>comments<sp/>for<sp/>User&apos;s<sp/>Guides</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.10<sp/>2007/05/23<sp/>11:21:59EDT<sp/>dlkobe<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/><sp/>Added<sp/>doxygen<sp/>formatting</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.9<sp/>2007/05/07<sp/>10:42:03EDT<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/><sp/>I<sp/>added<sp/>a<sp/>sending<sp/>of<sp/>an<sp/>Event<sp/>message<sp/>from<sp/>EVS<sp/>on<sp/>the<sp/>first<sp/>time<sp/>an<sp/>EVS-unregistered</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/><sp/>application<sp/>tries<sp/>to<sp/>send<sp/>an<sp/>event<sp/>message.<sp/>A<sp/>system<sp/>log<sp/>message<sp/>is<sp/>also<sp/>written</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/><sp/>Revision<sp/>1.8<sp/>2007/03/05<sp/>14:08:43EST<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/><sp/>This<sp/>CP<sp/>fixes<sp/>the<sp/>fact<sp/>that<sp/>there<sp/>were<sp/>multiple<sp/>event<sp/>messages<sp/>using<sp/>the<sp/>same<sp/>event<sp/>ID,<sp/>but<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/><sp/>using<sp/>different<sp/>(but<sp/>similar)<sp/>event<sp/>text.<sp/>The<sp/>issue<sp/>was<sp/>fixed<sp/>by<sp/>making<sp/>all<sp/>the<sp/>text<sp/>generic,<sp/>and<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/><sp/>providing<sp/>a<sp/>command<sp/>code<sp/>parameter<sp/>that<sp/>specified<sp/>what<sp/>command<sp/>the<sp/>message<sp/>was<sp/>comming</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/><sp/>from.</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cfe_evs_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cfe_evs_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>Service<sp/>event<sp/>ID&apos;s<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="cfe__evs__events_8h_1a4445afe1b05d0b1a23fa496fd3f83a07" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_NOOP_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Noop<sp/>event<sp/>identifier<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="cfe__evs__events_8h_1a058462448fdb0d842e637a4c8d4e7aa0" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_STARTUP_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="cfe__evs__events_8h_1ad410f65d94a5ea70f5449dae5445b8de" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_WRLOGFILE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="cfe__evs__events_8h_1a39b65d2ef4d0726ecb0287b898f71931" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_CRLOGFILE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="cfe__evs__events_8h_1a1d8a2090e7a0ca45830e8bdbdc68fba0" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_MSGID_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="cfe__evs__events_8h_1a0086ac7b8756d11c81d0711447afaf6c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_EVTIDNOREGS_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="cfe__evs__events_8h_1a8fc7db656c7191caf82b7bdea7220421" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_APPNOREGS_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="cfe__evs__events_8h_1aff42ff2971b864979ff009c9a9640c25" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_ILLAPPIDRANGE_EID<sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208" refid="cfe__evs__events_8h_1a12c667053e9f36279879f08c84a81bc9" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_NOAPPIDFOUND_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="cfe__evs__events_8h_1aa03ee0ea80931bb86cb947aaf95c04e0" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_ILLEGALFMTMOD_EID<sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="cfe__evs__events_8h_1ab9b07ed05033995a8fd1111805c7e390" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_MAXREGSFILTER_EID<sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="cfe__evs__events_8h_1a52da903aff1a2be25408a53cae581071" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_WRDATFILE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="cfe__evs__events_8h_1a846081d9fbdbfc24378c6eae9b388f53" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_CRDATFILE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295" refid="cfe__evs__events_8h_1a5d8e89c67e40f9e24efd1a7abfb1351a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_CC_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307" refid="cfe__evs__events_8h_1ac1addef8ad0d1fab22990335aea8de83" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_RSTCNT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="cfe__evs__events_8h_1a61b17197150b3375448a039ba0569d85" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_SETFILTERMSK_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="cfe__evs__events_8h_1ad887cd7edb278d1aff7d6548292e8b92" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ENAPORT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350" refid="cfe__evs__events_8h_1ae63a4665f26e25bafe5d2f6200704e63" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_DISPORT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="cfe__evs__events_8h_1adbad92d3534585bec507b3500c3eb4c6" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ENAEVTTYPE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380" refid="cfe__evs__events_8h_1a13ca175d32ba55780e578601ef03d885" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_DISEVTTYPE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394" refid="cfe__evs__events_8h_1afb18c7c069575299ff3e06636a4ec4a3" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_SETEVTFMTMOD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410" refid="cfe__evs__events_8h_1a8ddd2ccf9c4aede88c6f5cc882022e49" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ENAAPPEVTTYPE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426" refid="cfe__evs__events_8h_1a2f71c3ed09e60a344192254abd6f1165" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_DISAPPENTTYPE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="439" refid="cfe__evs__events_8h_1a26598ad84143a3bf11b34c2fab3f4240" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ENAAPPEVT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="452" refid="cfe__evs__events_8h_1addd0e280ff1a27f26a55cbf67a75f385" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_DISAPPEVT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="465" refid="cfe__evs__events_8h_1a0ebc05c4768034642f3ad42412c44522" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_RSTEVTCNT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>27</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="479" refid="cfe__evs__events_8h_1a7f5205263227635b421151cf872c9b26" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_RSTFILTER_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492" refid="cfe__evs__events_8h_1a3834b10c747de2ac4889e7ba0affc93b" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_RSTALLFILTER_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>29</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="493"><highlight class="normal"></highlight></codeline>
+<codeline lineno="507" refid="cfe__evs__events_8h_1a2c7cf0add54ffe73b07b58a347480b52" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ADDFILTER_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="521" refid="cfe__evs__events_8h_1a3c8a8b181b2322062105e4e86ed19801" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_DELFILTER_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536" refid="cfe__evs__events_8h_1a12e376e81eb7102b1459545e271aff03" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_WRDAT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551" refid="cfe__evs__events_8h_1a8b0bab8493f78c6b559faa94acb9331e" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_WRLOG_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="568" refid="cfe__evs__events_8h_1a08ea6ebad7cffa92fc666064858f7d03" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_NO_LOGSET_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>34</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight></codeline>
+<codeline lineno="585" refid="cfe__evs__events_8h_1a88f861bb4ace7e4fcb58d0b7c987f8cb" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_NO_LOGCLR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>35</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="586"><highlight class="normal"></highlight></codeline>
+<codeline lineno="602" refid="cfe__evs__events_8h_1a37a9ff9cebd524b1e64e4ddedaf73527" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_NO_LOGWR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617" refid="cfe__evs__events_8h_1ad92bcd70c18d91ba3181a642bca9a8b9" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_EVT_FILTERED_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>37</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="618"><highlight class="normal"></highlight></codeline>
+<codeline lineno="631" refid="cfe__evs__events_8h_1ae488805521add4fc0b992c1120b5e822" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_LOGMODE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight></codeline>
+<codeline lineno="646" refid="cfe__evs__events_8h_1aeadb4447dc18e7406833bfdd64f47f73" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_LOGMODE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>39</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="647"><highlight class="normal"></highlight></codeline>
+<codeline lineno="658" refid="cfe__evs__events_8h_1a34e86aff46089bfd0dab31388f8cae6a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_INVALID_BITMASK_EID<sp/><sp/><sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight></codeline>
+<codeline lineno="670" refid="cfe__evs__events_8h_1a0fde4bd78249942336ae7e2739a7c7f1" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_ERR_UNREGISTERED_EVS_APP<sp/><sp/>41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="671"><highlight class="normal"></highlight></codeline>
+<codeline lineno="687" refid="cfe__evs__events_8h_1ae72d0959f6dc2088a449395b11cd2b89" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_FILTER_MAX_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"></highlight></codeline>
+<codeline lineno="705" refid="cfe__evs__events_8h_1a7cd859499e3aba62639c05e0d8a1125f" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_EVS_LEN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="708"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="709"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>_cfe_evs_events_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="712"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/cfe_evs_events.h"/>
+  </compounddef>
+</doxygen>

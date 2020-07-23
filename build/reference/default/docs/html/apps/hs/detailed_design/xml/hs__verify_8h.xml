@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="hs__verify_8h" kind="file" language="C++">
+    <compoundname>hs_verify.h</compoundname>
+    <includedby refid="hs__app_8c" local="yes">apps/hs/fsw/src/hs_app.c</includedby>
+    <invincdepgraph>
+      <node id="622">
+        <label>apps/hs/fsw/src/hs_verify.h</label>
+        <link refid="hs_verify.h"/>
+        <childnode refid="623" relation="include">
+        </childnode>
+      </node>
+      <node id="623">
+        <label>apps/hs/fsw/src/hs_app.c</label>
+        <link refid="hs__app_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>hs_verify.h<sp/>1.3<sp/>2016/08/05<sp/>17:40:38EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>Contains<sp/>CFS<sp/>Health<sp/>and<sp/>Safety<sp/>(HS)<sp/>macros<sp/>that<sp/>run<sp/>preprocessor<sp/>checks</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/>on<sp/>mission<sp/>and<sp/>platform<sp/>configurable<sp/>parameters</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/>$Log:<sp/>hs_verify.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2016/08/05<sp/>17:40:38EDT<sp/>mdeschu<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/><sp/>Ticket<sp/>#26<sp/>-<sp/>Verification<sp/>of<sp/>watchdog<sp/>values<sp/>not<sp/>possible<sp/>at<sp/>compile<sp/>time</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.2<sp/>2015/11/12<sp/>14:25:15EST<sp/>wmoleski<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/><sp/><sp/>Checking<sp/>in<sp/>changes<sp/>found<sp/>with<sp/>2010<sp/>vs<sp/>2009<sp/>MKS<sp/>files<sp/>for<sp/>the<sp/>cFS<sp/>HS<sp/>Application</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.11<sp/>2015/05/04<sp/>11:00:02EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/><sp/><sp/>Change<sp/>definitions<sp/>for<sp/>MAX_CRITICAL<sp/>to<sp/>MAX_MONITORED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.10<sp/>2015/05/01<sp/>16:48:50EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/><sp/><sp/>Remove<sp/>critical<sp/>from<sp/>application<sp/>monitor<sp/>descriptions</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.9<sp/>2015/03/03<sp/>12:15:59EST<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>copyright<sp/>information</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.8<sp/>2010/11/19<sp/>17:58:29EST<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>command<sp/>to<sp/>enable<sp/>and<sp/>disable<sp/>CPU<sp/>Hogging<sp/>Monitoring</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.7<sp/>2010/11/16<sp/>16:36:21EST<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/><sp/><sp/>Move<sp/>HS_MISSION_REV<sp/>from<sp/>local<sp/>header<sp/>to<sp/>platform<sp/>config<sp/>file</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.6<sp/>2010/10/14<sp/>17:43:40EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/><sp/><sp/>Change<sp/>assumptions<sp/>concerning<sp/>utilization<sp/>time<sp/>period</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.5<sp/>2010/09/29<sp/>18:30:33EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>Utilization<sp/>Monitoring</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.4<sp/>2009/08/20<sp/>16:01:02EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/><sp/><sp/>Updated<sp/>Watchdog<sp/>to<sp/>use<sp/>CFE_PSP<sp/>defines<sp/>as<sp/>limits</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2009/05/21<sp/>15:44:15EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/><sp/><sp/>Updated<sp/>min<sp/>length<sp/>check<sp/>for<sp/>msgacts<sp/>based<sp/>on<sp/>the<sp/>usage<sp/>of<sp/>CCSDS</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.2<sp/>2009/05/04<sp/>17:44:14EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/><sp/><sp/>Updated<sp/>based<sp/>on<sp/>actions<sp/>from<sp/>Code<sp/>Walkthrough</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.1<sp/>2009/05/01<sp/>13:57:46EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/><sp/><sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/><sp/><sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/CFS-REPOSITORY/hs/fsw/src/project.pj</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_hs_verify_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_hs_verify_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>Macro<sp/>Definitions</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>Idle<sp/>Task<sp/>Priority</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_IDLE_TASK_PRIORITY<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_IDLE_TASK_PRIORITY<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_IDLE_TASK_PRIORITY<sp/>&gt;<sp/>255</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_IDLE_TASK_PRIORITY<sp/>can<sp/>not<sp/>exceed<sp/>255</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">**<sp/>Maximum<sp/>number<sp/>execution<sp/>counters</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_MAX_EXEC_CNT_SLOTS<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MSG_ACT_TYPES<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_MAX_EXEC_CNT_SLOTS<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MSG_ACT_TYPES<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">**<sp/>Maximum<sp/>number<sp/>of<sp/>message<sp/>actions</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_MAX_MSG_ACT_TYPES<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MSG_ACT_TYPES<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_MAX_MSG_ACT_TYPES<sp/>&gt;<sp/>65531</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MSG_ACT_TYPES<sp/>can<sp/>not<sp/>exceed<sp/>65531</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="85"><highlight class="comment">**<sp/>Maximum<sp/>length<sp/>of<sp/>message<sp/>actions</highlight></codeline>
+<codeline lineno="86"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MESSAGE_FORMAT_IS_CCSDS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_MAX_MSG_ACT_SIZE<sp/>&lt;<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MSG_ACT_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_MAX_MSG_ACT_SIZE<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MSG_ACT_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_MAX_MSG_ACT_SIZE<sp/>&gt;<sp/>CFE_SB_MAX_SB_MSG_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MSG_ACT_SIZE<sp/>can<sp/>not<sp/>exceed<sp/>CFE_SB_MAX_SB_MSG_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">**<sp/>Maximum<sp/>number<sp/>of<sp/>monitored<sp/>applications</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_MAX_MONITORED_APPS<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MONITORED_APPS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_MAX_MONITORED_APPS<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MONITORED_APPS<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="111"><highlight class="comment">**<sp/>Maximum<sp/>number<sp/>of<sp/>critical<sp/>events</highlight></codeline>
+<codeline lineno="112"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_MAX_MONITORED_EVENTS<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MONITORED_EVENTS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_MAX_MONITORED_EVENTS<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_MONITORED_EVENTS<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/>*<sp/>JPH<sp/>2015-06-29<sp/>-<sp/>Removed<sp/>check<sp/>of<sp/>Watchdog<sp/>timer<sp/>values</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>check<sp/>anymore,<sp/>as<sp/>the<sp/>HS<sp/>app<sp/>does<sp/>not<sp/>have<sp/>knowledge</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*<sp/>of<sp/>PSP<sp/>Watchdog<sp/>definitions</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">**<sp/>Post<sp/>Processing<sp/>Delay</highlight></codeline>
+<codeline lineno="128"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_POST_PROCESSING_DELAY<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_POST_PROCESSING_DELAY<sp/>can<sp/>not<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_POST_PROCESSING_DELAY<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_POST_PROCESSING_DELAY<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="136"><highlight class="comment">**<sp/>Wakeup<sp/>Timeout</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(HS_WAKEUP_TIMEOUT<sp/>&lt;<sp/>-1)<sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(HS_WAKEUP_TIMEOUT<sp/>&gt;<sp/>2147483647)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>HS_WAKEUP_TIMEOUT<sp/>not<sp/>defined<sp/>as<sp/>a<sp/>proper<sp/>SB<sp/>Timeout<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="144"><highlight class="comment">**<sp/>CPU<sp/>Aliveness<sp/>Period</highlight></codeline>
+<codeline lineno="145"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_CPU_ALIVE_PERIOD<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_CPU_ALIVE_PERIOD<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_CPU_ALIVE_PERIOD<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_CPU_ALIVE_PERIOD<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">**<sp/>Maximum<sp/>processor<sp/>restart<sp/>actions</highlight></codeline>
+<codeline lineno="154"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_MAX_RESTART_ACTIONS<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_RESTART_ACTIONS<sp/>can<sp/>not<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_MAX_RESTART_ACTIONS<sp/>&gt;<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MAX_RESTART_ACTIONS<sp/>can<sp/>not<sp/>exceed<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="162"><highlight class="comment">**<sp/>Pipe<sp/>depths</highlight></codeline>
+<codeline lineno="163"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_CMD_PIPE_DEPTH<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_CMD_PIPE_DEPTH<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/>*<sp/>JPH<sp/>2015-06-29<sp/>-<sp/>Removed<sp/>check<sp/>of:</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/>*<sp/><sp/>HS_CMD_PIPE_DEPTH<sp/>&gt;<sp/>CFE_SB_MAX_PIPE_DEPTH</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>check<sp/>anymore,<sp/>as<sp/>the<sp/>HS<sp/>app<sp/>does<sp/>not<sp/>have<sp/>knowledge</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/>*<sp/>of<sp/>CFE_SB_MAX_PIPE_DEPTH.<sp/><sp/>But<sp/>if<sp/>the<sp/>configuration<sp/>violates<sp/>this<sp/>rule<sp/>it<sp/>will</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*<sp/>show<sp/>up<sp/>as<sp/>an<sp/>obvious<sp/>run-time<sp/>error<sp/>so<sp/>the<sp/>compile-time<sp/>check<sp/>is<sp/>redundant.</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_EVENT_PIPE_DEPTH<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_EVENT_PIPE_DEPTH<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/>*<sp/>JPH<sp/>2015-06-29<sp/>-<sp/>Removed<sp/>check<sp/>of:</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/>*<sp/><sp/>HS_EVENT_PIPE_DEPTH<sp/>&gt;<sp/>CFE_SB_MAX_PIPE_DEPTH</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="183"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>check<sp/>anymore,<sp/>as<sp/>the<sp/>HS<sp/>app<sp/>does<sp/>not<sp/>have<sp/>knowledge</highlight></codeline>
+<codeline lineno="184"><highlight class="comment"><sp/>*<sp/>of<sp/>CFE_SB_MAX_PIPE_DEPTH.<sp/><sp/>But<sp/>if<sp/>the<sp/>configuration<sp/>violates<sp/>this<sp/>rule<sp/>it<sp/>will</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/>*<sp/>show<sp/>up<sp/>as<sp/>an<sp/>obvious<sp/>run-time<sp/>error<sp/>so<sp/>the<sp/>compile-time<sp/>check<sp/>is<sp/>redundant.</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_WAKEUP_PIPE_DEPTH<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_WAKEUP_PIPE_DEPTH<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/>*<sp/>JPH<sp/>2015-06-29<sp/>-<sp/>Removed<sp/>check<sp/>of:</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/>*<sp/><sp/>HS_WAKEUP_PIPE_DEPTH<sp/>&gt;<sp/>CFE_SB_MAX_PIPE_DEPTH</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="195"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>check<sp/>anymore,<sp/>as<sp/>the<sp/>HS<sp/>app<sp/>does<sp/>not<sp/>have<sp/>knowledge</highlight></codeline>
+<codeline lineno="196"><highlight class="comment"><sp/>*<sp/>of<sp/>CFE_SB_MAX_PIPE_DEPTH.<sp/><sp/>But<sp/>if<sp/>the<sp/>configuration<sp/>violates<sp/>this<sp/>rule<sp/>it<sp/>will</highlight></codeline>
+<codeline lineno="197"><highlight class="comment"><sp/>*<sp/>show<sp/>up<sp/>as<sp/>an<sp/>obvious<sp/>run-time<sp/>error<sp/>so<sp/>the<sp/>compile-time<sp/>check<sp/>is<sp/>redundant.</highlight></codeline>
+<codeline lineno="198"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="201"><highlight class="comment">**<sp/>Reset<sp/>Task<sp/>Delay</highlight></codeline>
+<codeline lineno="202"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_RESET_TASK_DELAY<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_RESET_TASK_DELAY<sp/>can<sp/>not<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_RESET_TASK_DELAY<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_RESET_TASK_DELAY<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="210"><highlight class="comment">**<sp/>Startup<sp/>Sync<sp/>Timeout</highlight></codeline>
+<codeline lineno="211"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_STARTUP_SYNC_TIMEOUT<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_STARTUP_SYNC_TIMEOUT<sp/>can<sp/>not<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_STARTUP_SYNC_TIMEOUT<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_STARTUP_SYNC_TIMEOUT<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="219"><highlight class="comment">**<sp/>Default<sp/>Application<sp/>Monitor<sp/>State</highlight></codeline>
+<codeline lineno="220"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(HS_APPMON_DEFAULT_STATE<sp/>!=<sp/>HS_STATE_DISABLED)<sp/><sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="222"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(HS_APPMON_DEFAULT_STATE<sp/>!=<sp/>HS_STATE_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>HS_APPMON_DEFAULT_STATE<sp/>not<sp/>defined<sp/>as<sp/>a<sp/>supported<sp/>enumerated<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="227"><highlight class="comment">**<sp/>Default<sp/>Event<sp/>Monitor<sp/>State</highlight></codeline>
+<codeline lineno="228"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(HS_EVENTMON_DEFAULT_STATE<sp/>!=<sp/>HS_STATE_DISABLED)<sp/><sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="230"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(HS_EVENTMON_DEFAULT_STATE<sp/>!=<sp/>HS_STATE_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>HS_EVENTMON_DEFAULT_STATE<sp/>not<sp/>defined<sp/>as<sp/>a<sp/>supported<sp/>enumerated<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="235"><highlight class="comment">**<sp/>Default<sp/>Aliveness<sp/>Indicator<sp/>State</highlight></codeline>
+<codeline lineno="236"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(HS_ALIVENESS_DEFAULT_STATE<sp/>!=<sp/>HS_STATE_DISABLED)<sp/><sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(HS_ALIVENESS_DEFAULT_STATE<sp/>!=<sp/>HS_STATE_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>HS_ALIVENESS_DEFAULT_STATE<sp/>not<sp/>defined<sp/>as<sp/>a<sp/>supported<sp/>enumerated<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="243"><highlight class="comment">**<sp/>Default<sp/>CPU<sp/>Hogging<sp/>Indicator<sp/>State</highlight></codeline>
+<codeline lineno="244"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(HS_CPUHOG_DEFAULT_STATE<sp/>!=<sp/>HS_STATE_DISABLED)<sp/><sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="246"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(HS_CPUHOG_DEFAULT_STATE<sp/>!=<sp/>HS_STATE_ENABLED)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>HS_CPUHOG_DEFAULT_STATE<sp/>not<sp/>defined<sp/>as<sp/>a<sp/>supported<sp/>enumerated<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="251"><highlight class="comment">**<sp/>Utilization<sp/>Calls<sp/>Per<sp/>Mark</highlight></codeline>
+<codeline lineno="252"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_UTIL_CALLS_PER_MARK<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_CALLS_PER_MARK<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="258"><highlight class="comment">**<sp/>Utilization<sp/>Cycles<sp/>per<sp/>Interval</highlight></codeline>
+<codeline lineno="259"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_UTIL_CALLS_PER_MARK<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_CYCLES_PER_INTERVAL<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="265"><highlight class="comment">**<sp/>Total<sp/>number<sp/>of<sp/>Utils<sp/>per<sp/>Interval</highlight></codeline>
+<codeline lineno="266"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_UTIL_PER_INTERVAL_TOTAL<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_PER_INTERVAL_TOTAL<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_UTIL_PER_INTERVAL_TOTAL<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_PER_INTERVAL_TOTAL<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="274"><highlight class="comment">**<sp/>Hogging<sp/>number<sp/>of<sp/>Utils<sp/>per<sp/>Interval</highlight></codeline>
+<codeline lineno="275"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_UTIL_PER_INTERVAL_HOGGING<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_PER_INTERVAL_HOGGING<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_UTIL_PER_INTERVAL_HOGGING<sp/>&gt;<sp/>HS_UTIL_PER_INTERVAL_TOTAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_PER_INTERVAL_HOGGING<sp/>can<sp/>not<sp/>exceed<sp/>HS_UTIL_PER_INTERVAL_TOTAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="283"><highlight class="comment">**<sp/>Hogging<sp/>Timeout<sp/>in<sp/>Intervals</highlight></codeline>
+<codeline lineno="284"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_UTIL_HOGGING_TIMEOUT<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_HOGGING_TIMEOUT<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_UTIL_HOGGING_TIMEOUT<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_HOGGING_TIMEOUT<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="292"><highlight class="comment">**<sp/>Utilization<sp/>Peak<sp/>Number<sp/>of<sp/>Intervals</highlight></codeline>
+<codeline lineno="293"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_UTIL_PEAK_NUM_INTERVAL<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_PEAK_NUM_INTERVAL<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_UTIL_PEAK_NUM_INTERVAL<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_PEAK_NUM_INTERVAL<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="301"><highlight class="comment">**<sp/>Utilization<sp/>Average<sp/>Number<sp/>of<sp/>Intervals</highlight></codeline>
+<codeline lineno="302"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_UTIL_AVERAGE_NUM_INTERVAL<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_AVERAGE_NUM_INTERVAL<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_UTIL_AVERAGE_NUM_INTERVAL<sp/>&gt;<sp/>HS_UTIL_PEAK_NUM_INTERVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_AVERAGE_NUM_INTERVAL<sp/>can<sp/>not<sp/>exceed<sp/>HS_UTIL_PEAK_NUM_INTERVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="310"><highlight class="comment">**<sp/>Utilization<sp/>Average<sp/>Number<sp/>of<sp/>Intervals</highlight></codeline>
+<codeline lineno="311"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>HS_UTIL_TIME_DIAG_ARRAY_POWER<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_TIME_DIAG_ARRAY_POWER<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>HS_UTIL_TIME_DIAG_ARRAY_POWER<sp/>&gt;<sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_UTIL_TIME_DIAG_ARRAY_POWER<sp/>can<sp/>not<sp/>exceed<sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HS_MISSION_REV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MISSION_REV<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(HS_MISSION_REV<sp/>&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>HS_MISSION_REV<sp/>must<sp/>be<sp/>greater<sp/>than<sp/>or<sp/>equal<sp/>to<sp/>zero!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_hs_verify_h_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/hs/fsw/src/hs_verify.h"/>
+  </compounddef>
+</doxygen>

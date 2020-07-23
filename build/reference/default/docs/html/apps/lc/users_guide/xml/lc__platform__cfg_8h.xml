@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="lc__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>lc_platform_cfg.h</compoundname>
+    <includedby refid="lc__msgdefs_8h" local="yes">apps/lc/fsw/src/lc_msgdefs.h</includedby>
+    <includedby refid="lc__tbl_8h" local="yes">apps/lc/fsw/src/lc_tbl.h</includedby>
+    <invincdepgraph>
+      <node id="12">
+        <label>apps/lc/fsw/src/lc_tbl.h</label>
+        <link refid="lc__tbl_8h"/>
+      </node>
+      <node id="11">
+        <label>apps/lc/fsw/src/lc_msg.h</label>
+        <link refid="lc__msg_8h"/>
+      </node>
+      <node id="10">
+        <label>apps/lc/fsw/src/lc_msgdefs.h</label>
+        <link refid="lc__msgdefs_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>apps/lc/fsw/platform_inc/lc_platform_cfg.h</label>
+        <link refid="lc_platform_cfg.h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lc__platform__cfg_8h_1a95ef4d2bfff14dcf5e77f36f8dfc53b1" prot="public" static="no">
+        <name>LC_APP_NAME</name>
+        <initializer>&quot;LC&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000003"><xreftitle>Purpose</xreftitle><xrefdescription><para>Application Name</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition must match the name used at startup by the cFE Executive Services when creating the LC application. Note that application names are also an argument to certain cFE commands. For example, the application name is needed to access tables via cFE Table Services commands.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>LC requires that this name be defined, but otherwise places no limits on the definition. Refer to CFE Executive Services for specific information on limits related to application names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="38" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1a78d806575f0a93f56b1a6e79cde1fb48" prot="public" static="no">
+        <name>LC_PIPE_DEPTH</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000004"><xreftitle>Purpose</xreftitle><xrefdescription><para>Command Pipe Depth</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of messages that will be allowed in the LC command pipe at one time. Used during initialization in the call to <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="52" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1a3b43c5fab123709355610bb6382804d3" prot="public" static="no">
+        <name>LC_MAX_WATCHPOINTS</name>
+        <initializer>176</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000005"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of watchpoints</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of watchpoints that can be defined in the Watchpoint Definition Table (WDT)</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than 65520 (0xFFF0) because higher values are reserved for use as Reverse Polish operators. It must be a multiple of 4 to avoid indexing past the end of the array as LC indexes ahead to build the packed status bytes.</para></simplesect>
+This parameter will dictate the size of the Watchpoint Definition Table:</para><para>WDT Size = LC_MAX_WATCHPOINTS * sizeof(<ref refid="struct_l_c___w_d_t_entry__t" kindref="compound">LC_WDTEntry_t</ref>)</para><para>The total size of this table should not exceed the cFE size limit for a single buffered table set by the #CFE_TBL_MAX_SNGL_TABLE_SIZE parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="76" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1ab49788ed10c3f7f4aaaa876a48b49ba3" prot="public" static="no">
+        <name>LC_MAX_ACTIONPOINTS</name>
+        <initializer>176</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000006"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of actionpoints</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of actionpoints that can be defined in the Actionpoint Definition Table (ADT)</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535). It must be a multiple of 2 to avoid indexing past the end of the array as LC indexes ahead to build the packed status bytes.</para></simplesect>
+This parameter will dictate the size of the Actionpoint Definition Table:</para><para>ADT Size = LC_MAX_ACTIONPOINTS * sizeof(<ref refid="struct_l_c___a_d_t_entry__t" kindref="compound">LC_ADTEntry_t</ref>)</para><para>The total size of this table should not exceed the cFE size limit for a single buffered table set by the #CFE_TBL_MAX_SNGL_TABLE_SIZE parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="99" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1a1055f4dc85cc8548c12ef315efa660dc" prot="public" static="no">
+        <name>LC_STATE_POWER_ON_RESET</name>
+        <initializer><ref refid="lc__msgdefs_8h_1a3fd2c719b6359d46e31e4726cb3c72d1" kindref="member">LC_STATE_DISABLED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000007"><xreftitle>Purpose</xreftitle><xrefdescription><para>LC state after power-on reset</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>What operating state LC should initialize to after a power-on reset.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter must be one of the following: <ref refid="lc__msgdefs_8h_1aa8d551cfdbc3883c84cf55b4f1036975" kindref="member">LC_STATE_ACTIVE</ref> <ref refid="lc__msgdefs_8h_1aee2ca039f888b9e78e1aab09abc358a4" kindref="member">LC_STATE_PASSIVE</ref> <ref refid="lc__msgdefs_8h_1a3fd2c719b6359d46e31e4726cb3c72d1" kindref="member">LC_STATE_DISABLED</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="113" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1acb1790178e3a23f042c9634fae285a5d" prot="public" static="no">
+        <name>LC_STATE_WHEN_CDS_RESTORED</name>
+        <initializer><ref refid="lc__msgdefs_8h_1a376a78a2e226ee3b138ba00d28293ea8" kindref="member">LC_STATE_FROM_CDS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000008"><xreftitle>Purpose</xreftitle><xrefdescription><para>Save data to CDS compiler switch</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Compile switch that tells LC that we should save data over a processor or application reset by using the Critical Data Store (CDS). Comment out or #undef to force LC to do a default (power-on) initialization sequence on all restarts (this is the default case).</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>n/a</para></simplesect>
+<xrefsect id="cfslccfg_1_cfslccfg000009"><xreftitle>Purpose</xreftitle><xrefdescription><para>LC state when CDS is restored</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>What operating state LC should initialize to after successfully restoring information from the CDS after a processor or application reset. This is only used when #LC_SAVE_TO_CDS is set to TRUE, and provides a way to override any state LC may have been operating in prior to the reset occurring.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter must be one of the following: <ref refid="lc__msgdefs_8h_1aa8d551cfdbc3883c84cf55b4f1036975" kindref="member">LC_STATE_ACTIVE</ref> <ref refid="lc__msgdefs_8h_1aee2ca039f888b9e78e1aab09abc358a4" kindref="member">LC_STATE_PASSIVE</ref> <ref refid="lc__msgdefs_8h_1a3fd2c719b6359d46e31e4726cb3c72d1" kindref="member">LC_STATE_DISABLED</ref> <ref refid="lc__msgdefs_8h_1a376a78a2e226ee3b138ba00d28293ea8" kindref="member">LC_STATE_FROM_CDS</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="146" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1afd0c204981f98d8aae45e76f736bc821" prot="public" static="no">
+        <name>LC_WDT_FILENAME</name>
+        <initializer>&quot;/cf/apps/lc_def_wdt.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000010"><xreftitle>Purpose</xreftitle><xrefdescription><para>Watchpoint Definition Table (WDT) filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Default file to load the watchpoint definition table from during a power-on reset sequence</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This string shouldn&apos;t be longer than #OS_MAX_PATH_LEN for the target platform in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="158" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1a3062af572967bd4fde7cfda87f0d8d16" prot="public" static="no">
+        <name>LC_ADT_FILENAME</name>
+        <initializer>&quot;/cf/apps/lc_def_adt.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000011"><xreftitle>Purpose</xreftitle><xrefdescription><para>Actionpoint Definition Table (ADT) filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Default file to load the actionpoint definition table from during a power-on reset sequence</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This string shouldn&apos;t be longer than #OS_MAX_PATH_LEN for the target platform in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="170" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1a07c8b8ac7460b8cad7133355c728ded0" prot="public" static="no">
+        <name>LC_MAX_RPN_EQU_SIZE</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000012"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum reverse polish (RPN) equation size</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum combined number of operators and operands that may exist in an actionpoint definition&apos;s reverse polish equation</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The LC app does not place a limit on this parameter. However, raising this value will increase the size of the Actionpoint Definition Table (ADT) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="183" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1a9f9c133d264af28e15893ae485569c8f" prot="public" static="no">
+        <name>LC_MAX_ACTION_TEXT</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000013"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum actionpoint event text string size</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum length of the event message string that can specified in an actionpoint definition (including NUL terminator)</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>LC appends the trailer text #LC_AP_EVENT_TAIL_STR to this string when reporting actionpoint failures. The size of this string is #LC_AP_EVENT_TAIL_LEN</para></simplesect>
+The total value of LC_MAX_ACTION_TEXT + #LC_AP_EVENT_TAIL_LEN should be less than <ref refid="cfe__mission__cfg_8h_1a9e7b1b484f61772561a8a0fb2aaf8877" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_MAX_MESSAGE_LENGTH</ref> to avoid event message truncation</para><para>Raising this value will also increase the size of the Actionpoint Definition Table (ADT) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="203" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1abbe0e35dc86ab3b503c27ce9b654452e" prot="public" static="no">
+        <name>LC_MAX_VALID_ADT_RTSID</name>
+        <initializer>0xFFF0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000014"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum valid ADT RTS ID</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The maximum RTS ID that LC will allow during table validation in a Actionpoint Definition Table (ADT) entry</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="215" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1ac4fb6e7c765b96cf193536d24cc7967d" prot="public" static="no">
+        <name>LC_FLOAT_TOLERANCE</name>
+        <initializer>(1.0e-25)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000015"><xreftitle>Purpose</xreftitle><xrefdescription><para>Floating Point Compare Tolerance</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Difference between 2 floats that will still compare as equal. The default value of (1.0e-25) was taken from the GNC file mathconstants.h</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The LC app does not place a limit on this parameter. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="227" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__platform__cfg_8h_1a1641dd5d4ad713d53a0b1d5c99d2ffea" prot="public" static="no">
+        <name>LC_MISSION_REV</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mission specific version number for LC application</para><para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;lc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h" line="242" column="9" bodyfile="apps/lc/fsw/platform_inc/lc_platform_cfg.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>lc_platform_cfg.h<sp/>1.4<sp/>2017/03/07<sp/>17:35:09EST<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>Limit<sp/>Checker<sp/>(LC)<sp/>Application<sp/>Platform<sp/>Configuration<sp/>Header<sp/>File</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_lc_platform_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_lc_platform_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="lc__platform__cfg_8h_1a95ef4d2bfff14dcf5e77f36f8dfc53b1" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APP_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;LC&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="lc__platform__cfg_8h_1a78d806575f0a93f56b1a6e79cde1fb48" refkind="member"><highlight class="preprocessor">#define<sp/>LC_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="lc__platform__cfg_8h_1a3b43c5fab123709355610bb6382804d3" refkind="member"><highlight class="preprocessor">#define<sp/>LC_MAX_WATCHPOINTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>176</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="lc__platform__cfg_8h_1ab49788ed10c3f7f4aaaa876a48b49ba3" refkind="member"><highlight class="preprocessor">#define<sp/>LC_MAX_ACTIONPOINTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>176</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="lc__platform__cfg_8h_1a1055f4dc85cc8548c12ef315efa660dc" refkind="member"><highlight class="preprocessor">#define<sp/>LC_STATE_POWER_ON_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LC_STATE_DISABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="comment">/*<sp/>#define<sp/>LC_SAVE_TO_CDS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="lc__platform__cfg_8h_1acb1790178e3a23f042c9634fae285a5d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_STATE_WHEN_CDS_RESTORED<sp/><sp/><sp/><sp/><sp/>LC_STATE_FROM_CDS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="lc__platform__cfg_8h_1afd0c204981f98d8aae45e76f736bc821" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WDT_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/lc_def_wdt.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="lc__platform__cfg_8h_1a3062af572967bd4fde7cfda87f0d8d16" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ADT_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/lc_def_adt.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="lc__platform__cfg_8h_1a07c8b8ac7460b8cad7133355c728ded0" refkind="member"><highlight class="preprocessor">#define<sp/>LC_MAX_RPN_EQU_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="lc__platform__cfg_8h_1a9f9c133d264af28e15893ae485569c8f" refkind="member"><highlight class="preprocessor">#define<sp/>LC_MAX_ACTION_TEXT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="lc__platform__cfg_8h_1abbe0e35dc86ab3b503c27ce9b654452e" refkind="member"><highlight class="preprocessor">#define<sp/>LC_MAX_VALID_ADT_RTSID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xFFF0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="lc__platform__cfg_8h_1ac4fb6e7c765b96cf193536d24cc7967d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_FLOAT_TOLERANCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1.0e-25)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="lc__platform__cfg_8h_1a1641dd5d4ad713d53a0b1d5c99d2ffea" refkind="member"><highlight class="preprocessor">#define<sp/>LC_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_lc_platform_cfg_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/lc/fsw/platform_inc/lc_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

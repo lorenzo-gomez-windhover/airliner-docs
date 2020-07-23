@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_4_1" kind="page">
+    <compoundname>cfedeploy_4_1</compoundname>
+    <title>cFE Table Compiler</title>
+    <detaileddescription>
+<para>The following text is from the <computeroutput>README.txt</computeroutput> file in the <computeroutput>.../tools/elf2cfetbl</computeroutput> directory:</para><para><heading level="4">SUMMARY: </heading>
+</para><para>The elf2cfetbl utility provides a method of converting an object file containing the desired contents of a cFE Application&apos;s Table Image into a binary file that is compatible with the cFE Table Services for loading the image.</para><para><heading level="4">UTILITY SOURCE FILES: </heading>
+</para><para>In the elf2cfetbl utility directory, one should find the following files:</para><para><computeroutput><ref refid="cfe__tbl__filedef_8h" kindref="compound">cfe_tbl_filedef.h</ref></computeroutput> - a header file that should be placed into the fsw/cfe-core/inc directory. This file should only need to be include&apos;d by those source files that define the initial contents of a table.</para><para><computeroutput>SampleTblImg.c</computeroutput> - a sample .c file that defines the default contents of a table image.</para><para><computeroutput>ELF_Structures.h, elf2cfetbl.c</computeroutput> - source files for the elf2cfetbl utility.</para><para><heading level="4">CREATING THE UTILITY: </heading>
+</para><para>To build the utility on your particular platform, one should only need to put the two source files into an appropriate directory and use the gnu CC compiler:</para><para><verbatim>    $ gcc -o elf2cfetbl elf2cfetbl.c</verbatim></para><para><heading level="4">PREPARING A SOURCE FILE FOR USE WITH THE UTILITY: </heading>
+</para><para>Preparing a .c file for use with the utility requires the use of a special macro. At the bottom of the .c file, after defining the default contents of a table, the developer should insert the following macro:</para><para><verbatim> CFE_TBL_FILEDEF(ObjName, TblName, Desc, Filename)</verbatim></para><para>where:</para><para><computeroutput>ObjName</computeroutput> is the name of the variable previously identified in the file for the instance of the table. Example: MyTblStruct</para><para><computeroutput>TblName</computeroutput> is the FULL name of the table including the owning application. Example: MyApp.TableName</para><para><computeroutput>Desc</computeroutput> is a 32 character or less description of the table image. (NOTE: Description cannot include commas) Example: Default Table Image</para><para><computeroutput>Filename</computeroutput> is the default filename that the application is expecting to load upon initialization. Example: MyTblDefault.bin</para><para>An example of the usage of this macro is in the SampleTblImg.c file.</para><para><heading level="4">UTILITY COMMAND LINE OPTIONS: </heading>
+</para><para>The command line format for the utility is as follows:</para><para><verbatim>    elf2cfetbl [-tTblName] [-d&quot;Description&quot;] [-h] [-v] [-V] [-s#] [-p#] 
+               [-eYYYY:MM:DD:hh:mm:ss] SrcFilename [DestDirectory]</verbatim></para><para>where:<linebreak/>
+ <table rows="12" cols="2"><row>
+<entry thead="no"><para><computeroutput>-tTblName</computeroutput> </para></entry><entry thead="no"><para>replaces the table name specified in the object file with <computeroutput>TblName</computeroutput> </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-d&quot;Description&quot;</computeroutput> </para></entry><entry thead="no"><para>replaces the description specified in the object file with <computeroutput>Description</computeroutput> </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-h</computeroutput> </para></entry><entry thead="no"><para>produces this output </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-v</computeroutput> </para></entry><entry thead="no"><para>produces verbose output showing the breakdown of the object file in detail </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-V</computeroutput> </para></entry><entry thead="no"><para>shows the version of this utility </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-s#</computeroutput> </para></entry><entry thead="no"><para>specifies a Spacecraft ID to be put into file header. # can be specified as decimal, octal (starting with a zero), or hex (starting with &apos;0x&apos;) </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-p#</computeroutput> </para></entry><entry thead="no"><para>specifies a Processor ID to be put into file header. # can be specified as decimal, octal (starting with a zero), or hex (starting with &apos;0x&apos;) </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-a#</computeroutput> </para></entry><entry thead="no"><para>specifies an Application ID to be put into file header. # can be specified as decimal, octal (starting with a zero), or hex (starting with &apos;0x&apos;) </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-eYYYY:MM:DD:hh:mm:ss</computeroutput> </para></entry><entry thead="no"><para>specifies the spacecraft epoch time. The <computeroutput>SrcFilename</computeroutput>&apos;s file creation time will be converted to seconds since the specified epoch time and stored in the standard cFE File Header.<linebreak/>
+ where: YYYY=year, MM=month (01-12), DD=day (01-31), <linebreak/>
+ hh=hour (00-23), mm=minute (00-59), ss=seconds (00-59) <linebreak/>
+ If no epoch is specified, the default epoch is either 1970:01:01:00:00:00 or the epoch specified by the user using the &apos;-f&apos; option described below </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>-fYYYY:MM:DD:hh:mm:ss</computeroutput> </para></entry><entry thead="no"><para>specifies the file system epoch time. The <computeroutput>SrcFilename</computeroutput>&apos;s file creation time is obtained from the file system as seconds since an epoch. On most systems the file system epoch is defined as 1970:01:01:00:00:00. If the user is running this application on a machine with a different epoch, then the file system epoch should be defined with this option. <linebreak/>
+ where: YYYY=year, MM=month (01-12), DD=day (01-31), <linebreak/>
+ hh=hour (00-23), mm=minute (00-59), ss=seconds (00-59) <linebreak/>
+ If no epoch is specified, the default epoch is 1970:01:01:00:00:00 </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>SrcFilename</computeroutput> </para></entry><entry thead="no"><para>specifies the object file to be converted </para></entry></row>
+<row>
+<entry thead="no"><para><computeroutput>DestDirectory</computeroutput> </para></entry><entry thead="no"><para>specifies the directory in which the cFE Table Image file is to be created. If a directory is not specified &apos;./&apos; is assumed. </para></entry></row>
+</table>
+</para><para><heading level="4">EXAMPLES: </heading>
+</para><para><verbatim>    elf2cfetbl MyObjectFile ../../TblDefaultImgDir/
+    elf2cfetbl -s12 -p0x0D -a016 -e2000:01:01:00:00:00 MyObjectFile ../../TblDefaultImgDir/</verbatim></para><para>NOTE: The name of the target file is specified within the source file as part of the CFE_TBL_FILEDEF macro. If the macro has not been included in the source file, the utility will fail to convert the object file.</para><para><heading level="4">SPECIAL NOTES: </heading>
+</para><para>If one wishes to use a table image file under cygwin, the cygwin object file needs to be converted from the COFF format to the ELF format before this utility can process it. Cygwin provides a utility to make this conversion, it is called objcopy. To perform the conversion, the user should issue a command similar to the following:</para><para><verbatim> $ objcopy -O elf32-little MyObjFilenameInCoffFormat.o MyObjFilenameInElfFormat.o</verbatim></para><para>where the first specified filename is the original object file and the second is the elf format of the same file. The resulting elf format file should then be compatible with the elf2cfetbl utility.</para><para>Next: <ref refid="cfedeploy_4_2" kindref="compound">Sending Commands to the cFE Core and Applications</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_4" kindref="compound">cFE Tools</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

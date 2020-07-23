@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsmdfaqs" kind="page">
+    <compoundname>cfsmdfaqs</compoundname>
+    <title>CFS Memory Dwell Frequently Asked Questions</title>
+    <detaileddescription>
+<para><heading level="1">Questions about CFE Table Services Interface </heading>
+</para><para><bold> (Q) If a dwell stream is modified or defined using jam commands, will those changes and definition be copied to the buffer maintained by Table Services? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> Yes. </emphasis></para><para><bold> (Q) Are changes to dwell tables preserved across processor resets? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> Dwell table contents that are introduced via table loads are preserved across processor resets. Information modified via jam commands, start commands, and stop commands are also preserved across processor resets. </emphasis></para><para><heading level="1">Questions about Command and Telemetry </heading>
+</para><para><bold> (Q) Which MD telemetry can be used to confirm that dwell packet processing is proceeding? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The <bold><computeroutput>$sc_$cpu_MD_CountDown</computeroutput>[MD_NUM_DWELL_TABLES</bold>] telemetry point should change each time a Wakeup Message is received for all dwell streams that are being actively processed. </emphasis></para><para><bold> (Q) What needs to be in place for dwell packets to be issued? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> 1) The dwell table&apos;s entry slot must contain a valid entry definition, i.e. a valid memory address and field length.<linebreak/>
+ 2) The total delay, defined as the total of all individual entry delays from the first slot until the last slot before the terminal entry, must be 1 or more.<linebreak/>
+ 3) The dwell table must be enabled.<linebreak/>
+ </emphasis></para><para><bold> (Q) How long will it be before the first dwell packet is issued? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The first dwell always takes place when the first wakeup message is received following a <ref refid="md__msgdefs_8h_1ae382924f45863f65aa682cd95033f5d1" kindref="member">Start command </ref>. Dwelling proceeds until the first entry with a non-zero delay is reached. Thus, anytime a start command is sent for a dwell table that does not have non-zero delays for intermediate entries, a dwell packet will be issued immediately. So, for example, a dwell table that is set up to sample several addresses every 10 cycles, will actually issue dwell packets following the 1st, 11th, and 21st wakeup messages. </emphasis></para><para><bold> (Q) What happens if a dwell tream is <ref refid="md__msgdefs_8h_1ae382924f45863f65aa682cd95033f5d1" kindref="member">Started </ref>, <ref refid="md__msgdefs_8h_1aaca90e8f2b095f18fe63fb039e310857" kindref="member">Stopped </ref>, and then <ref refid="md__msgdefs_8h_1ae382924f45863f65aa682cd95033f5d1" kindref="member">Started </ref> again? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> Whenever a start command is received, whether or not there is an intervening stop command, the dwell packet processing starts over. The countdown timer is reinitialized, and the dwelling begins again with the first table entry. </emphasis></para><para><bold> (Q) What if an operating system does not support referencing memory addresses by symbolic names? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The symbol name portion of the memory address in a table load or <ref refid="md__msgdefs_8h_1aacc8f1b19184ec05a35297f6f4e2cd95" kindref="member">Jam command </ref> must be set to a null string. </emphasis></para><para><heading level="1">Questions about Specifying Memory Dwell Streams </heading>
+</para><para><bold> (Q) What confirmation is available for changes made using a <ref refid="md__msgdefs_8h_1aacc8f1b19184ec05a35297f6f4e2cd95" kindref="member">Jam command </ref>? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> 1) An information event, <ref refid="md__events_8h_1a3f010c83a4cc93442333a23ce60c5712" kindref="member">MD_JAM_DWELL_INF_EID</ref>, will be issued showing the table number and entry number affected. <linebreak/>
+ 2) The following housekeeping parameters for the corresponding dwell table may be affected:<linebreak/>
+ <bold><computeroutput>$sc_$cpu_MD_AddrCnt</computeroutput>[MD_NUM_DWELL_TABLES</bold>], <linebreak/>
+ <bold><computeroutput>$sc_$cpu_MD_DwlPkt1Rate</computeroutput>,</bold> <bold><computeroutput>$sc_$cpu_MD_DwlPkt2Rate</computeroutput>,</bold> <bold><computeroutput>$sc_$cpu_MD_DwlPkt3Rate</computeroutput>,</bold> <bold><computeroutput>$sc_$cpu_MD_DwlPkt4Rate</computeroutput>,</bold> <linebreak/>
+ <bold><computeroutput>$sc_$cpu_MD_DataSize</computeroutput>[MD_NUM_DWELL_TABLES</bold>].<linebreak/>
+<linebreak/>
+ </emphasis></para><para><bold> (Q) Does MD support supercommutation? What is it? How do you set up a dwell table to achieve supercommutation? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> Yes it does. Supercommutation is the insertion of multiple instances of the same dwell address in the same packet. To define a dwell table for supercommutation, associate a non-zero delay multiple for each instance of the dwell address in the table. </emphasis></para><para><bold> (Q) How large is a dwell table? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The size of a dwell table depends on: <linebreak/>
+<linebreak/>
+ 1) the <ref refid="md__platform__cfg_8h_1a0e9127fafaf3623855b21eb40ff8f214" kindref="member">size of a signature field, </ref> <linebreak/>
+ 2) the <ref refid="" kindref="compound">size of symbolic addresses </ref> if enabled, <linebreak/>
+ 3) the <ref refid="md__platform__cfg_8h_1a6624d8844a1a24a4e1df54487214d70d" kindref="member">number of dwell tables </ref> which have been configured, <linebreak/>
+ 4) the <ref refid="md__platform__cfg_8h_1a2b1a6acbd1ce79e5c6979d700c88262b" kindref="member">number of entries in a dwell table. </ref> <linebreak/>
+<linebreak/>
+</emphasis></para><para><emphasis> It is also possible that a compiler may insert padding between fields for alignment purposes, which will add to the size. If #MD_DEBUG is set to a non-zero value, the size of the dwell table will be issued via <ref refid="stubs_8c_1ae2f28612973b2d1a818b55015b2d8650" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_printf</ref> on initialization. </emphasis></para><para><bold> (Q) What is the fastest rate at which MD can sample memory addresses? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The fastest that MD can sample memory address is the rate at which <ref refid="md__msgids_8h_1a34383dbc7ac1e3c4848fb1bad62ccac3" kindref="member">Wakeup messages </ref> are received. To achieve this fastest rate, the dwell table must be defined to have a total delay multiple of 1. </emphasis></para><para><bold> (Q) How would a simple dwell table be defined to sample several memory addresses at the same time? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> For each memory address to be sampled, define a dwell entry beginning with the first entry, entry #1. Enter the dwell field length value of 1, 2, or 4. Note that if the desired memory region is larger than 4, it must be broken down into consecutive dwell entries. Enter the memory address using the numerical value, a symbolic value, or a symbolic value and numerical offset combination. In each of the entries that are not the last dwell, enter a zero value for the delay. For the last dwell entry, enter a value corresponding to the multiple of the wakeup call rate, which is the desired issue rate for the dwell packets. If the last dwell entry is not the last entry in the table, then the next entry must be a &quot;null entry&quot; with a zero value for the field length to signify that this is the end of the dwell packet. </emphasis></para><para><bold> (Q) Does MD accept tables with non-null entries past a terminator entry? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> Yes, a non-null entry is accepted past a terminator entry as long as that entry itself is valid. To be valid, the entry must have valid values for dwell address, and field length. </emphasis></para><para>Prev: <ref refid="cfsmdcons" kindref="compound">CFS Memory Dwell Constraints</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

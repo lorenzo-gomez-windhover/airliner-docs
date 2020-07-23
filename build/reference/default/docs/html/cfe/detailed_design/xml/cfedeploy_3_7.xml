@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_3_7" kind="page">
+    <compoundname>cfedeploy_3_7</compoundname>
+    <title>Notes on Parameters to starting the cFE in Linux, OS X, and Cygwin</title>
+    <detaileddescription>
+<para>In the previous three sections, the command to start the cFE was shown as: <verbatim>...fsw/build/cpu1]$ ./exe/core-xxx.xxx PO 1
+</verbatim></para><para>This section will explain the parameters to the cfe core (the <computeroutput>&quot;PO&quot;</computeroutput> and the <computeroutput>&quot;1&quot;</computeroutput>).</para><para>The first parameter is the type of reset that you want the cFE to think it started with. It can either be a Power On reset (<computeroutput>PO</computeroutput>), or a Processor Reset (<computeroutput>PR</computeroutput>).</para><para>The second parameter is the type of reset subtype you want the cFE to start with:</para><para>1 = Power on<linebreak/>
+ 2 = Push Button Reset<linebreak/>
+ 3 = Hardware Special Command Reset<linebreak/>
+ 4 = Watchdog Reset<linebreak/>
+ 5 = Reset Command<linebreak/>
+</para><para>These are useful for desktop development. With these parameters, one can tell the cFE to try and recover CDS and reserved memory area (PR), or clear it out (PO). Since getting the reset type and subtype is available to cFE applications through an API, functionality of the application can be tested on the desktop.</para><para>Next: <ref refid="cfedeploy_4" kindref="compound">cFE Tools</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_3_5" kindref="compound">PC / Linux Platform</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_3" kindref="compound">Target Specific Instructions</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

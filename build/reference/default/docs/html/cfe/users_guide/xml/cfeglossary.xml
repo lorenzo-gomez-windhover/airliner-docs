@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeglossary" kind="page">
+    <compoundname>cfeglossary</compoundname>
+    <title>Glossary of Terms</title>
+    <detaileddescription>
+<para><table rows="19" cols="4"><row>
+<entry thead="no"><para><bold> Term </bold> </para></entry><entry thead="no"><para><bold> Definition </bold> </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_application"/>Application (or App) </para></entry><entry thead="no"><para>A set of data and functions that is treated as a single entity by the cFE. cFE resources are allocated on a per-Application basis. Applications are made up of a Main Task and zero or more Child Tasks. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_applicationid"/>Application ID </para></entry><entry thead="no"><para>A processor unique reference to an Application. <linebreak/>
+ <bold> NOTE: This is different from a CCSDS Application ID which is referred to as an &quot;APID.&quot; </bold> </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_api"/>Application Programmer&apos;s Interface (API) </para></entry><entry thead="no"><para>A set of routines, protocols, and tools for building software applications </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_bsp"/>Board Support Package (BSP) </para></entry><entry thead="no"><para>A collection of user-provided facilities that interface an OS and the cFE with a specific hardware platform. The BSP is responsible for hardware initialization. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_childtask"/>Child Task </para></entry><entry thead="no"><para>A separate thread of execution that is spawned by an Application&apos;s Main Task. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_command"/>Command </para></entry><entry thead="no"><para>A Software Bus Message defined by the receiving Application. Commands can originate from other onboard Applications or from the ground. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_cfe"/>Core Flight Executive (cFE) </para></entry><entry thead="no"><para>A runtime environment and a set of services for hosting FSW Applications </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_cds"/>Critical Data Store (CDS) </para></entry><entry thead="no"><para>A collection of data that is not modified by the OS or cFE following a Processor Reset. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_crc"/>Cyclic Redundancy Check </para></entry><entry thead="no"><para>A polynomial based method for checking that a data set has remained unchanged from one time period to another. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_developer"/>Developer </para></entry><entry thead="no"><para>Anyone who is coding a cFE Application. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_eventdata"/>Event Data </para></entry><entry thead="no"><para>Data describing an Event that is supplied to the cFE Event Service. The cFE includes this data in an <ref refid="cfeglossary_1cfeadg_eventmessage" kindref="member">Event Message</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_eventfilter"/>Event Filter </para></entry><entry thead="no"><para>A numeric value (bit mask) used to determine how frequently to output an application Event Message defined by its <ref refid="cfeglossary_1cfeadg_eventid" kindref="member">Event ID</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_eventformatmode"/>Event Format Mode </para></entry><entry thead="no"><para>Defines the Event Message Format downlink option: short or long. The short format is used when there is limited telemetry bandwidth and is binary. The long format is in ASCII and is used for logging to a Local Event Log and to an Event Message Port. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_eventid"/>Event ID </para></entry><entry thead="no"><para>A numeric literal used to uniquely name an Application event. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_eventtype"/>Event Type </para></entry><entry thead="no"><para>A numeric literal used to identify the type of an Application event. </para></entry><entry thead="no"><para>An event type may be <ref refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" kindref="member">CFE_EVS_DEBUG</ref>, <ref refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4" kindref="member">CFE_EVS_INFORMATION</ref>, </para></entry><entry thead="no"><para><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member">CFE_EVS_ERROR</ref>, or <ref refid="cfe__evs_8h_1a1156ee6e07581bab1f36b88f208f0633" kindref="member">CFE_EVS_CRITICAL</ref>. </para></entry></row>
+<row>
+<entry thead="no"><para><anchor id="cfeglossary_1cfeadg_eventmessage"/>Event Message </para></entry><entry thead="no"><para>A data item used to notify the user and/or an external <ref refid="cfeglossary_1cfeadg_application" kindref="member">Application</ref> of a significant event. Event Messages include a time-stamp of when the message was generated, a processor unique identifier, an <ref refid="cfeglossary_1cfeadg_applicationid" kindref="member">Application ID</ref>, the <ref refid="cfeglossary_1cfeadg_eventtype" kindref="member">Event Type</ref> (DEBUG,INFO,ERROR or CRITICAL), and <ref refid="cfeglossary_1cfeadg_eventdata" kindref="member">Event Data</ref>. An Event Message can either be real-time or playback from a Local Event Log. </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

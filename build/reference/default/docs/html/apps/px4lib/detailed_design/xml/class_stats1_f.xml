@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_stats1_f" kind="class" language="C++" prot="public">
+    <compoundname>Stats1F</compoundname>
+    <includes refid="_stats1_f_8hpp" local="no">Stats1F.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_stats1_f_1a465bfa0271fbe2f402143de308429d42" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">math::Vector1F</ref></type>
+        <definition>math::Vector1F Stats1F::m_Sum</definition>
+        <argsstring></argsstring>
+        <name>m_Sum</name>
+        <briefdescription>
+<para>Sum of samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="138" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="138" bodyend="-1"/>
+        <referencedby refid="class_stats1_f_1abbb09118e81f4735812fb47cce192764" compoundref="_stats1_f_8hpp" startline="95" endline="95">getMean</referencedby>
+        <referencedby refid="class_stats1_f_1aff92f97bd73817dcaae2d0eb880b16bc" compoundref="_stats1_f_8hpp" startline="111" endline="114">getVar</referencedby>
+        <referencedby refid="class_stats1_f_1a5f44bed8ef81004f56fc87757dd24f81" compoundref="_stats1_f_8hpp" startline="58" endline="63">reset</referencedby>
+        <referencedby refid="class_stats1_f_1aaec077bfefae6211c617cf8811ba6907" compoundref="_stats1_f_8cpp" startline="15" endline="20">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_stats1_f_1a9b495682f8095c4f10835848fc9849b2" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">math::Vector1F</ref></type>
+        <definition>math::Vector1F Stats1F::m_SumSq</definition>
+        <argsstring></argsstring>
+        <name>m_SumSq</name>
+        <briefdescription>
+<para>Sum squared of samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="141" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="141" bodyend="-1"/>
+        <referencedby refid="class_stats1_f_1aff92f97bd73817dcaae2d0eb880b16bc" compoundref="_stats1_f_8hpp" startline="111" endline="114">getVar</referencedby>
+        <referencedby refid="class_stats1_f_1a5f44bed8ef81004f56fc87757dd24f81" compoundref="_stats1_f_8hpp" startline="58" endline="63">reset</referencedby>
+        <referencedby refid="class_stats1_f_1aaec077bfefae6211c617cf8811ba6907" compoundref="_stats1_f_8cpp" startline="15" endline="20">update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_stats1_f_1a490d922ed32d56bd7bb2b41eb99b6171" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Stats1F::m_Count</definition>
+        <argsstring></argsstring>
+        <name>m_Count</name>
+        <briefdescription>
+<para>Count of samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="144" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="144" bodyend="-1"/>
+        <referencedby refid="class_stats1_f_1a0c581c729c46afc49361ea338efb30d9" compoundref="_stats1_f_8hpp" startline="79" endline="79">getCount</referencedby>
+        <referencedby refid="class_stats1_f_1abbb09118e81f4735812fb47cce192764" compoundref="_stats1_f_8hpp" startline="95" endline="95">getMean</referencedby>
+        <referencedby refid="class_stats1_f_1aff92f97bd73817dcaae2d0eb880b16bc" compoundref="_stats1_f_8hpp" startline="111" endline="114">getVar</referencedby>
+        <referencedby refid="class_stats1_f_1a5f44bed8ef81004f56fc87757dd24f81" compoundref="_stats1_f_8hpp" startline="58" endline="63">reset</referencedby>
+        <referencedby refid="class_stats1_f_1aaec077bfefae6211c617cf8811ba6907" compoundref="_stats1_f_8cpp" startline="15" endline="20">update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stats1_f_1af1a253f55099b5d566c660303c3790dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Stats1F::Stats1F</definition>
+        <argsstring>()</argsstring>
+        <name>Stats1F</name>
+        <briefdescription>
+<para>Stats Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="20" column="1" bodyfile="apps/px4lib/fsw/src/math/Stats1F.cpp" bodystart="3" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stats1_f_1a6f4f217053a0e8b109368cd84941facb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Stats1F::~Stats1F</definition>
+        <argsstring>()</argsstring>
+        <name>~Stats1F</name>
+        <briefdescription>
+<para>Stats Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="32" column="1" bodyfile="apps/px4lib/fsw/src/math/Stats1F.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stats1_f_1aaec077bfefae6211c617cf8811ba6907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stats1F::update</definition>
+        <argsstring>(math::Vector1F u)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="classmath_1_1_vector1_f" kindref="compound">math::Vector1F</ref></type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+<para>Stats Update. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function updates the object with the passed value.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector1F input </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="46" column="1" bodyfile="apps/px4lib/fsw/src/math/Stats1F.cpp" bodystart="15" bodyend="20"/>
+        <references refid="classmath_1_1_vector1_f_1a5aa5f74197f7c2517db6bb05cbd01834" compoundref="_vector1_f_8cpp" startline="133" endline="140">math::Vector1F::EMult</references>
+        <references refid="class_stats1_f_1a490d922ed32d56bd7bb2b41eb99b6171" compoundref="_stats1_f_8hpp" startline="144">m_Count</references>
+        <references refid="class_stats1_f_1a465bfa0271fbe2f402143de308429d42" compoundref="_stats1_f_8hpp" startline="138">m_Sum</references>
+        <references refid="class_stats1_f_1a9b495682f8095c4f10835848fc9849b2" compoundref="_stats1_f_8hpp" startline="141">m_SumSq</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stats1_f_1a5f44bed8ef81004f56fc87757dd24f81" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stats1F::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+<para>Stats Reset. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function resets the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="58" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="58" bodyend="63"/>
+        <references refid="class_stats1_f_1a490d922ed32d56bd7bb2b41eb99b6171" compoundref="_stats1_f_8hpp" startline="144">m_Count</references>
+        <references refid="class_stats1_f_1a465bfa0271fbe2f402143de308429d42" compoundref="_stats1_f_8hpp" startline="138">m_Sum</references>
+        <references refid="class_stats1_f_1a9b495682f8095c4f10835848fc9849b2" compoundref="_stats1_f_8hpp" startline="141">m_SumSq</references>
+        <references refid="classmath_1_1_vector1_f_1a9b77cd2744ec203db85c3d03bd63c950" compoundref="_vector1_f_8cpp" startline="51" endline="54">math::Vector1F::Zero</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stats1_f_1a0c581c729c46afc49361ea338efb30d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Stats1F::getCount</definition>
+        <argsstring>()</argsstring>
+        <name>getCount</name>
+        <briefdescription>
+<para>Get Count. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the number of samples.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of samples </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="79" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="79" bodyend="79"/>
+        <references refid="class_stats1_f_1a490d922ed32d56bd7bb2b41eb99b6171" compoundref="_stats1_f_8hpp" startline="144">m_Count</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stats1_f_1abbb09118e81f4735812fb47cce192764" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">math::Vector1F</ref></type>
+        <definition>math::Vector1F Stats1F::getMean</definition>
+        <argsstring>()</argsstring>
+        <name>getMean</name>
+        <briefdescription>
+<para>Get Mean. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the mean of the samples.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of samples </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="95" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="95" bodyend="95"/>
+        <references refid="class_stats1_f_1a490d922ed32d56bd7bb2b41eb99b6171" compoundref="_stats1_f_8hpp" startline="144">m_Count</references>
+        <references refid="class_stats1_f_1a465bfa0271fbe2f402143de308429d42" compoundref="_stats1_f_8hpp" startline="138">m_Sum</references>
+      </memberdef>
+      <memberdef kind="function" id="class_stats1_f_1aff92f97bd73817dcaae2d0eb880b16bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">math::Vector1F</ref></type>
+        <definition>math::Vector1F Stats1F::getVar</definition>
+        <argsstring>()</argsstring>
+        <name>getVar</name>
+        <briefdescription>
+<para>Get Variance. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the variance of the samples.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of samples </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="111" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="111" bodyend="114"/>
+        <references refid="classmath_1_1_vector1_f_1a5aa5f74197f7c2517db6bb05cbd01834" compoundref="_vector1_f_8cpp" startline="133" endline="140">math::Vector1F::EMult</references>
+        <references refid="class_stats1_f_1a490d922ed32d56bd7bb2b41eb99b6171" compoundref="_stats1_f_8hpp" startline="144">m_Count</references>
+        <references refid="class_stats1_f_1a465bfa0271fbe2f402143de308429d42" compoundref="_stats1_f_8hpp" startline="138">m_Sum</references>
+        <references refid="class_stats1_f_1a9b495682f8095c4f10835848fc9849b2" compoundref="_stats1_f_8hpp" startline="141">m_SumSq</references>
+        <referencedby refid="class_stats1_f_1ae77c4b791f0986a80d3677ec1cb46861" compoundref="_stats1_f_8hpp" startline="130" endline="133">getStdDev</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_stats1_f_1ae77c4b791f0986a80d3677ec1cb46861" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">math::Vector1F</ref></type>
+        <definition>math::Vector1F Stats1F::getStdDev</definition>
+        <argsstring>()</argsstring>
+        <name>getStdDev</name>
+        <briefdescription>
+<para>Get Standard Deviation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the standard deviation of the samples.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of samples </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="130" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="130" bodyend="133"/>
+        <references refid="class_stats1_f_1aff92f97bd73817dcaae2d0eb880b16bc" compoundref="_stats1_f_8hpp" startline="111" endline="114">getVar</references>
+        <references refid="classmath_1_1_vector1_f_1a0a05a51f9e5da7785dbf47ac1fcaf2f6" compoundref="_vector1_f_8cpp" startline="123" endline="130">math::Vector1F::pow</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="101">
+        <label>Stats1F</label>
+        <link refid="class_stats1_f"/>
+        <childnode refid="102" relation="usage">
+          <edgelabel>m_SumSq</edgelabel>
+          <edgelabel>m_Sum</edgelabel>
+        </childnode>
+      </node>
+      <node id="102">
+        <label>math::Vector1F</label>
+        <link refid="classmath_1_1_vector1_f"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" line="8" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Stats1F.hpp" bodystart="7" bodyend="146"/>
+    <listofallmembers>
+      <member refid="class_stats1_f_1a0c581c729c46afc49361ea338efb30d9" prot="public" virt="non-virtual"><scope>Stats1F</scope><name>getCount</name></member>
+      <member refid="class_stats1_f_1abbb09118e81f4735812fb47cce192764" prot="public" virt="non-virtual"><scope>Stats1F</scope><name>getMean</name></member>
+      <member refid="class_stats1_f_1ae77c4b791f0986a80d3677ec1cb46861" prot="public" virt="non-virtual"><scope>Stats1F</scope><name>getStdDev</name></member>
+      <member refid="class_stats1_f_1aff92f97bd73817dcaae2d0eb880b16bc" prot="public" virt="non-virtual"><scope>Stats1F</scope><name>getVar</name></member>
+      <member refid="class_stats1_f_1a490d922ed32d56bd7bb2b41eb99b6171" prot="private" virt="non-virtual"><scope>Stats1F</scope><name>m_Count</name></member>
+      <member refid="class_stats1_f_1a465bfa0271fbe2f402143de308429d42" prot="private" virt="non-virtual"><scope>Stats1F</scope><name>m_Sum</name></member>
+      <member refid="class_stats1_f_1a9b495682f8095c4f10835848fc9849b2" prot="private" virt="non-virtual"><scope>Stats1F</scope><name>m_SumSq</name></member>
+      <member refid="class_stats1_f_1a5f44bed8ef81004f56fc87757dd24f81" prot="public" virt="non-virtual"><scope>Stats1F</scope><name>reset</name></member>
+      <member refid="class_stats1_f_1af1a253f55099b5d566c660303c3790dc" prot="public" virt="non-virtual"><scope>Stats1F</scope><name>Stats1F</name></member>
+      <member refid="class_stats1_f_1aaec077bfefae6211c617cf8811ba6907" prot="public" virt="non-virtual"><scope>Stats1F</scope><name>update</name></member>
+      <member refid="class_stats1_f_1a6f4f217053a0e8b109368cd84941facb" prot="public" virt="non-virtual"><scope>Stats1F</scope><name>~Stats1F</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

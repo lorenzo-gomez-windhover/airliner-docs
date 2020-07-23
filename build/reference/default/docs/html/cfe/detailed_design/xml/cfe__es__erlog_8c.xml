@@ -1,0 +1,703 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__es__erlog_8c" kind="file" language="C++">
+    <compoundname>cfe_es_erlog.c</compoundname>
+    <includes refid="cfe__private_8h" local="yes">private/cfe_private.h</includes>
+    <includes refid="cfe__es_8h" local="yes">cfe_es.h</includes>
+    <includes refid="cfe__es__apps_8h" local="yes">cfe_es_apps.h</includes>
+    <includes refid="cfe__es__global_8h" local="yes">cfe_es_global.h</includes>
+    <includes refid="cfe__es__log_8h" local="yes">cfe_es_log.h</includes>
+    <includes local="yes">cfe_psp.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <incdepgraph>
+      <node id="5196">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="5190">
+        <label>stdarg.h</label>
+      </node>
+      <node id="5184">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="5210">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="5194">
+        <label>stdlib.h</label>
+      </node>
+      <node id="5211">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+      </node>
+      <node id="5202">
+        <label>cfe_msgids.h</label>
+      </node>
+      <node id="5224">
+        <label>cfe_es_events.h</label>
+        <link refid="cfe__es__events_8h"/>
+      </node>
+      <node id="5191">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="5205">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h"/>
+      </node>
+      <node id="5225">
+        <label>cfe_es_log.h</label>
+        <link refid="cfe__es__log_8h"/>
+        <childnode refid="5185" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5215" relation="include">
+        </childnode>
+      </node>
+      <node id="5216">
+        <label>private/cfe_es_resetdata_typedef.h</label>
+        <link refid="cfe__es__resetdata__typedef_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5217" relation="include">
+        </childnode>
+        <childnode refid="5218" relation="include">
+        </childnode>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+      </node>
+      <node id="5221">
+        <label>cfe_es_cds_mempool.h</label>
+        <link refid="cfe__es__cds__mempool_8h"/>
+        <childnode refid="5183" relation="include">
+        </childnode>
+      </node>
+      <node id="5207">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+      </node>
+      <node id="5208">
+        <label>cfe_evs_msg.h</label>
+        <link refid="cfe__evs__msg_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5186" relation="include">
+        </childnode>
+        <childnode refid="5209" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+      </node>
+      <node id="5192">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="5193" relation="include">
+        </childnode>
+        <childnode refid="5194" relation="include">
+        </childnode>
+        <childnode refid="5195" relation="include">
+        </childnode>
+        <childnode refid="5196" relation="include">
+        </childnode>
+      </node>
+      <node id="5187">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="5186">
+        <label>osapi.h</label>
+        <link refid="osapi_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5188" relation="include">
+        </childnode>
+        <childnode refid="5189" relation="include">
+        </childnode>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5197" relation="include">
+        </childnode>
+        <childnode refid="5198" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5199">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="5226">
+        <label>string.h</label>
+      </node>
+      <node id="5214">
+        <label>cfe_es_apps.h</label>
+        <link refid="cfe__es__apps_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5186" relation="include">
+        </childnode>
+      </node>
+      <node id="5222">
+        <label>cfe_es_perf.h</label>
+        <link refid="cfe__es__perf_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5186" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5224" relation="include">
+        </childnode>
+        <childnode refid="5209" relation="include">
+        </childnode>
+        <childnode refid="5206" relation="include">
+        </childnode>
+        <childnode refid="5205" relation="include">
+        </childnode>
+        <childnode refid="5210" relation="include">
+        </childnode>
+      </node>
+      <node id="5219">
+        <label>cfe_evs_log_typedef.h</label>
+        <link refid="cfe__evs__log__typedef_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+      </node>
+      <node id="5215">
+        <label>cfe_es_global.h</label>
+        <link refid="cfe__es__global_8h"/>
+        <childnode refid="5186" relation="include">
+        </childnode>
+        <childnode refid="5183" relation="include">
+        </childnode>
+        <childnode refid="5216" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5206" relation="include">
+        </childnode>
+        <childnode refid="5210" relation="include">
+        </childnode>
+      </node>
+      <node id="5200">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="5201">
+        <label>cfe_platform_cfg.h</label>
+      </node>
+      <node id="5218">
+        <label>cfe_es_perfdata_typedef.h</label>
+        <link refid="cfe__es__perfdata__typedef_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+      </node>
+      <node id="5217">
+        <label>cfe_es_erlog_typedef.h</label>
+        <link refid="cfe__es__erlog__typedef_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+      </node>
+      <node id="5188">
+        <label>osconfig.h</label>
+      </node>
+      <node id="5197">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="5220">
+        <label>cfe_es_cds.h</label>
+        <link refid="cfe__es__cds_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5186" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+      </node>
+      <node id="5209">
+        <label>cfe_sb.h</label>
+        <link refid="cfe__sb_8h"/>
+        <childnode refid="5188" relation="include">
+        </childnode>
+        <childnode refid="5210" relation="include">
+        </childnode>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5211" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+      </node>
+      <node id="5204">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h"/>
+        <childnode refid="5200" relation="include">
+        </childnode>
+        <childnode refid="5205" relation="include">
+        </childnode>
+      </node>
+      <node id="5185">
+        <label>cfe.h</label>
+        <link refid="cfe_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5186" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5202" relation="include">
+        </childnode>
+        <childnode refid="5203" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5206" relation="include">
+        </childnode>
+        <childnode refid="5212" relation="include">
+        </childnode>
+        <childnode refid="5209" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5213" relation="include">
+        </childnode>
+        <childnode refid="5210" relation="include">
+        </childnode>
+      </node>
+      <node id="5206">
+        <label>cfe_evs.h</label>
+        <link refid="cfe__evs_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5186" relation="include">
+        </childnode>
+        <childnode refid="5209" relation="include">
+        </childnode>
+      </node>
+      <node id="5198">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="5212">
+        <label>cfe_fs.h</label>
+        <link refid="cfe__fs_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+      </node>
+      <node id="5183">
+        <label>private/cfe_private.h</label>
+        <link refid="cfe__private_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5185" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+      </node>
+      <node id="5213">
+        <label>cfe_tbl.h</label>
+        <link refid="cfe__tbl_8h"/>
+        <childnode refid="5184" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5188" relation="include">
+        </childnode>
+      </node>
+      <node id="5203">
+        <label>cfe_error.h</label>
+        <link refid="cfe__error_8h"/>
+        <childnode refid="5186" relation="include">
+        </childnode>
+      </node>
+      <node id="5193">
+        <label>stdio.h</label>
+      </node>
+      <node id="5223">
+        <label>cfe_es_msg.h</label>
+        <link refid="cfe__es__msg_8h"/>
+        <childnode refid="5185" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+      </node>
+      <node id="5189">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5191" relation="include">
+        </childnode>
+      </node>
+      <node id="5182">
+        <label>es/cfe_es_erlog.c</label>
+        <link refid="cfe_es_erlog.c"/>
+        <childnode refid="5183" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5215" relation="include">
+        </childnode>
+        <childnode refid="5225" relation="include">
+        </childnode>
+        <childnode refid="5210" relation="include">
+        </childnode>
+        <childnode refid="5226" relation="include">
+        </childnode>
+        <childnode refid="5193" relation="include">
+        </childnode>
+        <childnode refid="5190" relation="include">
+        </childnode>
+      </node>
+      <node id="5195">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cfe__es__erlog_8c_1ab7a7a3f043173c88722f2bb55d8b638e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CompileTimeAssert</definition>
+        <argsstring>(sizeof(CFE_ES_ResetDataPtr-&gt;ERLog[0].Context)==CFE_ES_ER_LOG_MAX_CONTEXT_SIZE, CfeEsErLogContextSizeError)</argsstring>
+        <name>CompileTimeAssert</name>
+        <param>
+          <type>sizeof(<ref refid="cfe__es__start_8c_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;ERLog[0].Context)</type>
+          <defval>=CFE_ES_ER_LOG_MAX_CONTEXT_SIZE</defval>
+        </param>
+        <param>
+          <type>CfeEsErLogContextSizeError</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="es/cfe_es_erlog.c" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__es__erlog_8c_1a030913a973f5d06b22c1c7e28826f093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_ES_WriteToERLog</definition>
+        <argsstring>(uint32 EntryType, uint32 ResetType, uint32 ResetSubtype, const char *Description, const uint32 *Context, uint32 ContextSize)</argsstring>
+        <name>CFE_ES_WriteToERLog</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>EntryType</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>ResetType</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>ResetSubtype</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>Description</declname>
+        </param>
+        <param>
+          <type>const <ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref> *</type>
+          <declname>Context</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>ContextSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="es/cfe_es_erlog.c" line="79" column="1" bodyfile="es/cfe_es_erlog.c" bodystart="79" bodyend="193"/>
+        <references refid="struct_c_f_e___e_s___reset_variables__t_1ae8a15d0a0520bbd0048ef577ca4bac7e" compoundref="cfe__es__resetdata__typedef_8h" startline="39">CFE_ES_ResetVariables_t::BootSource</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1af6c9139e18d83e028dd859f52b2400a7" compoundref="cfe__es__erlog__typedef_8h" startline="47">CFE_ES_ERLog_t::BootSource</references>
+        <references refid="cfe__es__global_8h_1a9d4db28d1ae03cfdc1ebc9efa7407d35" compoundref="cfe__es__start_8c" startline="146">CFE_ES_Global</references>
+        <references refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" compoundref="cfe__es__start_8c" startline="151">CFE_ES_ResetDataPtr</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="cfe__time_8h_1abf540f01ef8e0b2c7f2ec755148b6ac6" compoundref="cfe__time__api_8c" startline="77" endline="93">CFE_TIME_GetTime</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1ab827f9d4e3e68399598107dc69dbcc5c" compoundref="cfe__es__erlog__typedef_8h" startline="55">CFE_ES_ERLog_t::Context</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1a6e3b2f91012ca41f6b81575b11d8961c" compoundref="cfe__es__erlog__typedef_8h" startline="53">CFE_ES_ERLog_t::ContextSize</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1aed1a118632373806f9c86f9d9527eea0" compoundref="cfe__es__erlog__typedef_8h" startline="50">CFE_ES_ERLog_t::DebugVars</references>
+        <references refid="struct_c_f_e___e_s___global__t_1ad8535b1274349e85fbd380ddb0875240" compoundref="cfe__es__global_8h" startline="125">CFE_ES_Global_t::DebugVars</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1a1a4b20aa4fe40c6a55db2372e49ada61" compoundref="cfe__es__erlog__typedef_8h" startline="52">CFE_ES_ERLog_t::Description</references>
+        <references refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" compoundref="cfe__es__resetdata__typedef_8h" startline="56">CFE_ES_ResetData_t::ERLog</references>
+        <references refid="struct_c_f_e___e_s___reset_data__t_1a5461dce6f31a906d9240d0c509b7d40f" compoundref="cfe__es__resetdata__typedef_8h" startline="58">CFE_ES_ResetData_t::ERLogEntries</references>
+        <references refid="struct_c_f_e___e_s___reset_data__t_1a2c7fb3696e595befb750712a3d82df98" compoundref="cfe__es__resetdata__typedef_8h" startline="57">CFE_ES_ResetData_t::ERLogIndex</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1a4e2d31c7368989ab6880afeba128e11d" compoundref="cfe__es__erlog__typedef_8h" startline="44">CFE_ES_ERLog_t::LogEntryType</references>
+        <references refid="struct_c_f_e___e_s___reset_variables__t_1a487a455110190dd9a46e35e576af3ad8" compoundref="cfe__es__resetdata__typedef_8h" startline="42">CFE_ES_ResetVariables_t::MaxProcessorResetCount</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1a0ee8fe7240bae6795e1856c35e36969d" compoundref="cfe__es__erlog__typedef_8h" startline="49">CFE_ES_ERLog_t::MaxProcessorResetCount</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="struct_c_f_e___e_s___reset_variables__t_1ac7d9f21e1c3da15bf1689083869db9ca" compoundref="cfe__es__resetdata__typedef_8h" startline="41">CFE_ES_ResetVariables_t::ProcessorResetCount</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1a31952351d65bb59e0d403ee750da7b23" compoundref="cfe__es__erlog__typedef_8h" startline="48">CFE_ES_ERLog_t::ProcessorResetCount</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1a006645dfa89e7bd2a4d30f7f6b9b66c3" compoundref="cfe__es__erlog__typedef_8h" startline="46">CFE_ES_ERLog_t::ResetSubtype</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1a9adcb9ecd2d45aee22f69d0c3a504f69" compoundref="cfe__es__erlog__typedef_8h" startline="45">CFE_ES_ERLog_t::ResetType</references>
+        <references refid="struct_c_f_e___e_s___reset_data__t_1aae7d24302d4edbf3baa7dbd18caedd23" compoundref="cfe__es__resetdata__typedef_8h" startline="77">CFE_ES_ResetData_t::ResetVars</references>
+        <references refid="struct_c_f_e___e_s___e_r_log__t_1a5c899e2bfdeb30f572e7b068febc148a" compoundref="cfe__es__erlog__typedef_8h" startline="51">CFE_ES_ERLog_t::TimeCode</references>
+        <referencedby refid="cfe__psp__exception_8c_1ad400a9522f228aa83489fabf58bbc8c0" compoundref="cfe__es__api_8c" startline="1904" endline="2024">CFE_ES_ProcessCoreException</referencedby>
+        <referencedby refid="cfe__es__api_8c_1a0e54725c2c038a86bae1f6ba553a9305" compoundref="cfe__es__api_8c" startline="199" endline="290">CFE_ES_ResetCFE</referencedby>
+        <referencedby refid="cfe__es__start_8h_1a75949b562d3835426bc3a44192958c00" compoundref="cfe__es__start_8c" startline="302" endline="517">CFE_ES_SetupResetVariables</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/><sp/>File:<sp/><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/><sp/>cfe_es_erlog.c</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2012,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/><sp/>Purpose:<sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/><sp/><sp/><sp/>This<sp/>file<sp/>implements<sp/>the<sp/>cFE<sp/>Executive<sp/>Services<sp/>Exception<sp/>and<sp/>Reset<sp/>Log<sp/>functions.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/>References:</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.0a</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>cFE<sp/>Flight<sp/>Software<sp/>Application<sp/>Developers<sp/>Guide</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/>Notes:</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/>Modification<sp/>History:</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>$Log:<sp/>cfe_es_erlog.c<sp/><sp/>$</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2012/01/13<sp/>11:50:02GMT-05:00<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Changed<sp/>license<sp/>text<sp/>to<sp/>reflect<sp/>open<sp/>source</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2009/06/10<sp/>09:08:56EDT<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Converted<sp/>OS_Mem*<sp/>and<sp/>OS_BSP*<sp/>API<sp/>to<sp/>CFE_PSP_*<sp/>API</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:05EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/MKS-CFE-PROJECT/fsw/cfe-core/src/es/project.pj</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2007/05/30<sp/>10:26:06EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Added<sp/>Exception<sp/>handler<sp/>support:</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/><sp/>-<sp/>BSP<sp/>routine<sp/>to<sp/>attach<sp/>processor<sp/>exceptions</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/><sp/>-<sp/>context<sp/>datatype<sp/>and<sp/>size<sp/>define</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/><sp/>-<sp/>added<sp/>default<sp/>exception<sp/>init<sp/>for<sp/>each<sp/>app+task</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2007/03/22<sp/>10:26:22EST<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Implemented<sp/>all<sp/>code<sp/>walkthrough<sp/>items<sp/>related<sp/>to<sp/>ES<sp/>Application<sp/>logic,<sp/>commands,<sp/>and<sp/>telemetry.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2007/03/13<sp/>16:10:54EST<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Implemented<sp/>all<sp/>ERLog<sp/>and<sp/>ES<sp/>API<sp/>code<sp/>walkthrough<sp/>items.</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2006/11/13<sp/>16:56:48EST<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Added<sp/>call<sp/>to<sp/>get<sp/>time<sp/>in<sp/>ER<sp/>Log.</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2006/11/13<sp/>16:35:24EST<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>d:/mksdata/MKS-CFE-PROJECT/fsw/cfe-core/src/es/project.pj</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>Required<sp/>header<sp/>files.</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__private_8h" kindref="compound">private/cfe_private.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__es_8h" kindref="compound">cfe_es.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__es__apps_8h" kindref="compound">cfe_es_apps.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__es__global_8h" kindref="compound">cfe_es_global.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__es__log_8h" kindref="compound">cfe_es_log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_psp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>*<sp/>Confirm<sp/>the<sp/>size<sp/>of<sp/>the<sp/>error<sp/>log<sp/>context<sp/>buffer<sp/>is<sp/>at<sp/>least<sp/>what<sp/>the<sp/>user<sp/>asked<sp/>for.</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>to<sp/>catch<sp/>errors<sp/>such<sp/>as<sp/>if<sp/>the<sp/>CFE_ES_ER_LOG_MAX_CONTEXT_SIZE<sp/>was<sp/>set<sp/>to<sp/>a<sp/>value</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*<sp/>that<sp/>is<sp/>_not_<sp/>a<sp/>multiple<sp/>of<sp/>sizeof(uint32)<sp/>--<sp/>in<sp/>this<sp/>case<sp/>the<sp/>final<sp/>size<sp/>of<sp/>the<sp/>context</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>*<sp/>buffer<sp/>would<sp/>end<sp/>up<sp/>being<sp/>less<sp/>than<sp/>what<sp/>the<sp/>macro<sp/>was<sp/>set<sp/>to.</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="cfe__es__erlog_8c_1ab7a7a3f043173c88722f2bb55d8b638e" kindref="member">CompileTimeAssert</ref>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[0].<ref refid="struct_c_f_e___e_s___e_r_log__t_1ab827f9d4e3e68399598107dc69dbcc5c" kindref="member">Context</ref>)<sp/>==<sp/>CFE_ES_ER_LOG_MAX_CONTEXT_SIZE,<sp/><sp/>CfeEsErLogContextSizeError);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">**<sp/>Function:<sp/>CFE_ES_WriteToERLog</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">**<sp/>Purpose:<sp/><sp/>Create<sp/>an<sp/>entry<sp/>in<sp/>the<sp/>ES<sp/>Exception<sp/>and<sp/>Reset<sp/>Log.<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="78"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="cfe__es__log_8h_1a030913a973f5d06b22c1c7e28826f093" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__es__erlog_8c_1a030913a973f5d06b22c1c7e28826f093" kindref="member">CFE_ES_WriteToERLog</ref>(<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>EntryType,<sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/>ResetType,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>ResetSubtype,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*Description,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>*Context,<sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>ContextSize<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>LogIdx;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Code</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Try<sp/>to<sp/>clean<sp/>up<sp/>an<sp/>invalid<sp/>ER<sp/>log<sp/>index<sp/>variable.</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1a2c7fb3696e595befb750712a3d82df98" kindref="member">ERLogIndex</ref><sp/>&gt;=<sp/>CFE_ES_ER_LOG_ENTRIES<sp/>)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1a2c7fb3696e595befb750712a3d82df98" kindref="member">ERLogIndex</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/>LogIdx<sp/>=<sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1a2c7fb3696e595befb750712a3d82df98" kindref="member">ERLogIndex</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Now<sp/>that<sp/>the<sp/>Local<sp/>Index<sp/>variable<sp/>is<sp/>set,<sp/>increment<sp/>the<sp/>index<sp/>for<sp/>the<sp/>next<sp/>entry.</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1a2c7fb3696e595befb750712a3d82df98" kindref="member">ERLogIndex</ref>++;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1a2c7fb3696e595befb750712a3d82df98" kindref="member">ERLogIndex</ref><sp/>&gt;=<sp/>CFE_ES_ER_LOG_ENTRIES<sp/>)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1a2c7fb3696e595befb750712a3d82df98" kindref="member">ERLogIndex</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Clear<sp/>out<sp/>the<sp/>log<sp/>entry<sp/>we<sp/>are<sp/>about<sp/>to<sp/>use.</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/>CFE_PSP_MemSet(<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)&amp;(<ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx]),<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeof<sp/>(<ref refid="struct_c_f_e___e_s___e_r_log__t" kindref="compound">CFE_ES_ERLog_t</ref>));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Fill<sp/>out<sp/>the<sp/>log<sp/>fields</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a4e2d31c7368989ab6880afeba128e11d" kindref="member">LogEntryType</ref><sp/>=<sp/>EntryType;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a9adcb9ecd2d45aee22f69d0c3a504f69" kindref="member">ResetType</ref><sp/><sp/><sp/><sp/>=<sp/>ResetType;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a006645dfa89e7bd2a4d30f7f6b9b66c3" kindref="member">ResetSubtype</ref><sp/>=<sp/>ResetSubtype;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1af6c9139e18d83e028dd859f52b2400a7" kindref="member">BootSource</ref><sp/><sp/><sp/>=<sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1aae7d24302d4edbf3baa7dbd18caedd23" kindref="member">ResetVars</ref>.<ref refid="struct_c_f_e___e_s___reset_variables__t_1ae8a15d0a0520bbd0048ef577ca4bac7e" kindref="member">BootSource</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a31952351d65bb59e0d403ee750da7b23" kindref="member">ProcessorResetCount</ref><sp/>=<sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1aae7d24302d4edbf3baa7dbd18caedd23" kindref="member">ResetVars</ref>.<ref refid="struct_c_f_e___e_s___reset_variables__t_1ac7d9f21e1c3da15bf1689083869db9ca" kindref="member">ProcessorResetCount</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a0ee8fe7240bae6795e1856c35e36969d" kindref="member">MaxProcessorResetCount</ref><sp/>=<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1aae7d24302d4edbf3baa7dbd18caedd23" kindref="member">ResetVars</ref>.<ref refid="struct_c_f_e___e_s___reset_variables__t_1a487a455110190dd9a46e35e576af3ad8" kindref="member">MaxProcessorResetCount</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Copy<sp/>the<sp/>ES<sp/>Reset<sp/>variables<sp/>to<sp/>the<sp/>log<sp/>(before<sp/>they<sp/>are<sp/>modified<sp/>by<sp/>the<sp/>log<sp/>entry).</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/>CFE_PSP_MemCpy((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)&amp;(<ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1aed1a118632373806f9c86f9d9527eea0" kindref="member">DebugVars</ref>),<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)&amp;(<ref refid="cfe__es__global_8h_1a9d4db28d1ae03cfdc1ebc9efa7407d35" kindref="member">CFE_ES_Global</ref>.<ref refid="struct_c_f_e___e_s___global__t_1ad8535b1274349e85fbd380ddb0875240" kindref="member">DebugVars</ref>),<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_f_e___e_s___debug_variables__t" kindref="compound">CFE_ES_DebugVariables_t</ref><sp/>));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Time<sp/>Stamp<sp/>the<sp/>log<sp/>entry<sp/>with<sp/>the<sp/>system<sp/>time<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a5c899e2bfdeb30f572e7b068febc148a" kindref="member">TimeCode</ref><sp/>=<sp/><ref refid="cfe__time_8h_1abf540f01ef8e0b2c7f2ec755148b6ac6" kindref="member">CFE_TIME_GetTime</ref>();<sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Copy<sp/>the<sp/>Description<sp/>string<sp/>to<sp/>the<sp/>log.</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>Description<sp/><sp/>==<sp/><ref refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(<ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a1a4b20aa4fe40c6a55db2372e49ada61" kindref="member">Description</ref>,<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>Description<sp/>String<sp/>Given.&quot;</highlight><highlight class="normal">,<sp/>80);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(<ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a1a4b20aa4fe40c6a55db2372e49ada61" kindref="member">Description</ref>,<sp/>Description,<sp/>80);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/>**<sp/>In<sp/>the<sp/>case<sp/>of<sp/>an<sp/>exception,<sp/>copy<sp/>the<sp/>processor<sp/>context<sp/>data<sp/>to<sp/>the<sp/>log.</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Context<sp/>!=<sp/><ref refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>&amp;&amp;<sp/>ContextSize<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>**<sp/>Copy<sp/>the<sp/>processor<sp/>context<sp/>data<sp/>(i.e.<sp/>register<sp/>dump).<sp/><sp/>Make<sp/>sure<sp/>that</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>**<sp/>the<sp/>passed-in<sp/>context_size<sp/>is<sp/>not<sp/>greater<sp/>than<sp/>the<sp/>declared<sp/>size<sp/>in</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>**<sp/>the<sp/>ER<sp/>Log<sp/>log<sp/>entry.</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ContextSize<sp/>&lt;=<sp/>CFE_ES_ER_LOG_MAX_CONTEXT_SIZE<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_PSP_MemCpy<sp/>(<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)(<ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1ab827f9d4e3e68399598107dc69dbcc5c" kindref="member">Context</ref>),</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)Context,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ContextSize);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_PSP_MemCpy<sp/>(<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)(<ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1ab827f9d4e3e68399598107dc69dbcc5c" kindref="member">Context</ref>),</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)Context,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_ES_ER_LOG_MAX_CONTEXT_SIZE);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>**<sp/>Indicate<sp/>that<sp/>context<sp/>is<sp/>valid.</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>**<sp/>Using<sp/>the<sp/>original<sp/>context<sp/>size<sp/>(not<sp/>the<sp/>truncated<sp/>size)<sp/>so<sp/>it<sp/>will<sp/>be</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>**<sp/>evident<sp/>if<sp/>the<sp/>context<sp/>information<sp/>was<sp/>truncated.</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a6e3b2f91012ca41f6b81575b11d8961c" kindref="member">ContextSize</ref><sp/>=<sp/>ContextSize;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="181"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>**<sp/>Context<sp/>is<sp/>not<sp/>valid</highlight></codeline>
+<codeline lineno="182"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1ae47667756ef9d7c972d00d4cad5ff369" kindref="member">ERLog</ref>[LogIdx].<ref refid="struct_c_f_e___e_s___e_r_log__t_1a6e3b2f91012ca41f6b81575b11d8961c" kindref="member">ContextSize</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">/*<sp/>end<sp/>if<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="187"><highlight class="comment"><sp/><sp/><sp/>**<sp/>Increment<sp/>the<sp/>number<sp/>of<sp/>ER<sp/>log<sp/>entries<sp/>made</highlight></codeline>
+<codeline lineno="188"><highlight class="comment"><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__es__global_8h_1adfefe92c00acf910519409113038902f" kindref="member">CFE_ES_ResetDataPtr</ref>-&gt;<ref refid="struct_c_f_e___e_s___reset_data__t_1a5461dce6f31a906d9240d0c509b7d40f" kindref="member">ERLogEntries</ref>++;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(<ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member">CFE_SUCCESS</ref>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>CFE_ES_WriteToERLog()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>end<sp/>of<sp/>file<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="es/cfe_es_erlog.c"/>
+  </compounddef>
+</doxygen>

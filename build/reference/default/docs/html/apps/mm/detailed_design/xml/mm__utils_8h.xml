@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="mm__utils_8h" kind="file" language="C++">
+    <compoundname>mm_utils.h</compoundname>
+    <includes local="yes">mm_msg.h</includes>
+    <includedby refid="mm__app_8c" local="yes">apps/mm/fsw/src/mm_app.c</includedby>
+    <includedby refid="mm__dump_8c" local="yes">apps/mm/fsw/src/mm_dump.c</includedby>
+    <includedby refid="mm__load_8c" local="yes">apps/mm/fsw/src/mm_load.c</includedby>
+    <includedby refid="mm__mem16_8c" local="yes">apps/mm/fsw/src/mm_mem16.c</includedby>
+    <includedby refid="mm__mem32_8c" local="yes">apps/mm/fsw/src/mm_mem32.c</includedby>
+    <includedby refid="mm__mem8_8c" local="yes">apps/mm/fsw/src/mm_mem8.c</includedby>
+    <includedby refid="mm__utils_8c" local="yes">apps/mm/fsw/src/mm_utils.c</includedby>
+    <incdepgraph>
+      <node id="742">
+        <label>mm_msg.h</label>
+      </node>
+      <node id="741">
+        <label>apps/mm/fsw/src/mm_utils.h</label>
+        <link refid="mm_utils.h"/>
+        <childnode refid="742" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="749">
+        <label>apps/mm/fsw/src/mm_mem8.c</label>
+        <link refid="mm__mem8_8c"/>
+      </node>
+      <node id="746">
+        <label>apps/mm/fsw/src/mm_load.c</label>
+        <link refid="mm__load_8c"/>
+      </node>
+      <node id="748">
+        <label>apps/mm/fsw/src/mm_mem32.c</label>
+        <link refid="mm__mem32_8c"/>
+      </node>
+      <node id="747">
+        <label>apps/mm/fsw/src/mm_mem16.c</label>
+        <link refid="mm__mem16_8c"/>
+      </node>
+      <node id="744">
+        <label>apps/mm/fsw/src/mm_app.c</label>
+        <link refid="mm__app_8c"/>
+      </node>
+      <node id="745">
+        <label>apps/mm/fsw/src/mm_dump.c</label>
+        <link refid="mm__dump_8c"/>
+      </node>
+      <node id="750">
+        <label>apps/mm/fsw/src/mm_utils.c</label>
+        <link refid="mm__utils_8c"/>
+      </node>
+      <node id="743">
+        <label>apps/mm/fsw/src/mm_utils.h</label>
+        <link refid="mm_utils.h"/>
+        <childnode refid="744" relation="include">
+        </childnode>
+        <childnode refid="745" relation="include">
+        </childnode>
+        <childnode refid="746" relation="include">
+        </childnode>
+        <childnode refid="747" relation="include">
+        </childnode>
+        <childnode refid="748" relation="include">
+        </childnode>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mm__utils_8h_1a52db4362920797f656bca9985229154a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MM_ResetHk</definition>
+        <argsstring>(void)</argsstring>
+        <name>MM_ResetHk</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reset housekeeping variables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Sets the local memory manager housekeeping variables to default values. This routine gets called before each command is processed to verify that all the variables are properly cleared</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>This function does not zero the command execution counter or the command error counter </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/src/mm_utils.h" line="61" column="1" bodyfile="apps/mm/fsw/src/mm_utils.c" bodystart="67" bodyend="79"/>
+        <references refid="struct_m_m___app_data__t_1aecdea2bd01725505f527439bc8504338" compoundref="mm__app_8h" startline="90">MM_AppData_t::Address</references>
+        <references refid="struct_m_m___app_data__t_1a18a8af9b0eac62b9807adaa173b68959" compoundref="mm__app_8h" startline="94">MM_AppData_t::BytesProcessed</references>
+        <references refid="struct_m_m___app_data__t_1afcc4e9488af24cb8c557c6dee04a43af" compoundref="mm__app_8h" startline="92">MM_AppData_t::DataValue</references>
+        <references refid="struct_m_m___app_data__t_1a5d94136d3989bf0e705af8f436a8f7ce" compoundref="mm__app_8h" startline="96">MM_AppData_t::FileName</references>
+        <references refid="struct_m_m___app_data__t_1ab42b50872af4dd83bfc624b082cbcd82" compoundref="mm__app_8h" startline="88">MM_AppData_t::LastAction</references>
+        <references refid="struct_m_m___app_data__t_1a01d19f4cb8c1b38e2baf3228f5bd2a54" compoundref="mm__app_8h" startline="89">MM_AppData_t::MemType</references>
+        <referencedby refid="mm__app_8h_1acf50d24d2116eca9d96afb47e4e766b5" compoundref="mm__app_8c" startline="167" endline="270">MM_AppInit</referencedby>
+        <referencedby refid="mm__app_8h_1a4645bd639feb5a554559543a82eb6d30" compoundref="mm__app_8c" startline="277" endline="374">MM_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mm__utils_8h_1aaff20236922aae9fba90dfef2888eb28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MM_SegmentBreak</definition>
+        <argsstring>(void)</argsstring>
+        <name>MM_SegmentBreak</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Segment break. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This routine gets called during each segment break in a load, dump, or memory fill operation and handles any processing that needs to be done during those breaks</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/src/mm_utils.h" line="75" column="1" bodyfile="apps/mm/fsw/src/mm_utils.c" bodystart="86" bodyend="105"/>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="mm__platform__cfg_8h_1a1decb2f02ded02afc70b8592e198c4e7" compoundref="mm__platform__cfg_8h" startline="429">MM_PROCESSOR_CYCLE</references>
+        <references refid="mm__perfids_8h_1ac4edd624bf22f1fa32e6b9c025f0bafc" compoundref="mm__perfids_8h" startline="42">MM_SEGBREAK_PERF_ID</references>
+        <references refid="osapi-os-core_8h_1a8f78bce95227e4e99fe6f0378835260e">OS_TaskDelay</references>
+        <referencedby refid="mm__mem16_8h_1a9cc1576473d940d15becc61603815891" compoundref="mm__mem16_8c" startline="169" endline="252">MM_DumpMem16ToFile</referencedby>
+        <referencedby refid="mm__mem32_8h_1ad823246bfbc6f4d736db63644ac15433" compoundref="mm__mem32_8c" startline="171" endline="255">MM_DumpMem32ToFile</referencedby>
+        <referencedby refid="mm__mem8_8h_1a7aa9d3280ecf34958c94766f0bc7c2a3" compoundref="mm__mem8_8c" startline="168" endline="251">MM_DumpMem8ToFile</referencedby>
+        <referencedby refid="mm__dump_8h_1a32fd02582568173c0920fba168c33bbb" compoundref="mm__dump_8c" startline="434" endline="502">MM_DumpMemToFile</referencedby>
+        <referencedby refid="mm__mem16_8h_1ae23b9b5d2cb84f9a73aed76088744841" compoundref="mm__mem16_8c" startline="261" endline="327">MM_FillMem16</referencedby>
+        <referencedby refid="mm__mem32_8h_1acedf4945b0be76a87aa77ca629a8b304" compoundref="mm__mem32_8c" startline="264" endline="330">MM_FillMem32</referencedby>
+        <referencedby refid="mm__mem8_8h_1a8aa6d03493070ac9bdb0b772a284b0df" compoundref="mm__mem8_8c" startline="260" endline="326">MM_FillMem8</referencedby>
+        <referencedby refid="mm__mem16_8h_1a21ec3e39367bf188cf765f3072dd4f98" compoundref="mm__mem16_8c" startline="79" endline="160">MM_LoadMem16FromFile</referencedby>
+        <referencedby refid="mm__mem32_8h_1a89390be9c181bd97ce1f57d9252f1c5a" compoundref="mm__mem32_8c" startline="81" endline="162">MM_LoadMem32FromFile</referencedby>
+        <referencedby refid="mm__mem8_8h_1a92e4f2a27f8b7a90117a1acff03c5cc5" compoundref="mm__mem8_8c" startline="78" endline="159">MM_LoadMem8FromFile</referencedby>
+        <referencedby refid="mm__load_8h_1aa4abf49caed681a1f8b9fc08a5e703cd" compoundref="mm__load_8c" startline="689" endline="763">MM_LoadMemFromFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mm__utils_8h_1a2dc420ff0ab87c9375d0587e56cb6cc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean MM_VerifyCmdLength</definition>
+        <argsstring>(CFE_SB_MsgPtr_t msg, uint16 ExpectedLength)</argsstring>
+        <name>MM_VerifyCmdLength</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>ExpectedLength</declname>
+        </param>
+        <briefdescription>
+<para>Verify command message length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This routine will check if the actual length of a software bus command message matches the expected length and send an error event message if a mismatch occurs</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref> pointer that references the software bus message</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ExpectedLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected length of the message based upon the command code</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para>Returns TRUE if the length is as expected  </para></entry></row>
+<row>
+<entry thead="no"><para>Returns FALSE if the length is not as expected  </para></entry></row>
+</table>
+</para></simplesect>
+<simplesect kind="see"><para>#MM_LEN_ERR_EID </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/src/mm_utils.h" line="102" column="1" bodyfile="apps/mm/fsw/src/mm_utils.c" bodystart="112" bodyend="152"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__sb_8h_1ac32b86cf9e1d12a547792853c35f6aa1">CFE_SB_GetTotalMsgLength</references>
+        <references refid="struct_m_m___app_data__t_1a981543c2acf32824a81f60f1efa606ba" compoundref="mm__app_8h" startline="87">MM_AppData_t::ErrCounter</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="mm__msgids_8h_1a439cb9c4af6a8485142361cc3ee96ed8" compoundref="mm__msgids_8h" startline="40">MM_SEND_HK_MID</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="mm__dump_8h_1a3e97daabbb8c0d0ea8a2d38ad2e74b92" compoundref="mm__dump_8c" startline="708" endline="795">MM_DumpInEventCmd</referencedby>
+        <referencedby refid="mm__dump_8h_1addd0d66b6528f9da0461b407b39a4bf6" compoundref="mm__dump_8c" startline="240" endline="427">MM_DumpMemToFileCmd</referencedby>
+        <referencedby refid="mm__app_8h_1ab68110a244dfc38838dd60e29e270541" compoundref="mm__app_8c" startline="672" endline="712">MM_EepromWriteDisCmd</referencedby>
+        <referencedby refid="mm__app_8h_1aadc79eba97a33cb5abf0a58383311b58" compoundref="mm__app_8c" startline="625" endline="665">MM_EepromWriteEnaCmd</referencedby>
+        <referencedby refid="mm__load_8h_1a111f532d5ad5b496720825e99c3c68ed" compoundref="mm__load_8c" startline="1032" endline="1100">MM_FillMemCmd</referencedby>
+        <referencedby refid="mm__app_8h_1acc9c38265869c414d5e03c11d7e8f46c" compoundref="mm__app_8c" startline="381" endline="417">MM_HousekeepingCmd</referencedby>
+        <referencedby refid="mm__load_8h_1aed359c4f44e56b8d9c3eaa25bbf92c69" compoundref="mm__load_8c" startline="490" endline="682">MM_LoadMemFromFileCmd</referencedby>
+        <referencedby refid="mm__load_8h_1a3bef33eebe19b94223e9d0a2629b0024" compoundref="mm__load_8c" startline="362" endline="450">MM_LoadMemWIDCmd</referencedby>
+        <referencedby refid="mm__app_8h_1a209155a77697a588b2a2afdcf33ae3fd" compoundref="mm__app_8c" startline="479" endline="539">MM_LookupSymbolCmd</referencedby>
+        <referencedby refid="mm__app_8h_1a17e82b1c98ed0ba59b170429127f45a5" compoundref="mm__app_8c" startline="424" endline="446">MM_NoopCmd</referencedby>
+        <referencedby refid="mm__dump_8h_1a67faf6f9f8ba08500afda0b140356ce4" compoundref="mm__dump_8c" startline="84" endline="127">MM_PeekCmd</referencedby>
+        <referencedby refid="mm__load_8h_1a8f951fc6e8d09dd76eae23691c9bccd0" compoundref="mm__load_8c" startline="95" endline="147">MM_PokeCmd</referencedby>
+        <referencedby refid="mm__app_8h_1a505a56573361d095f20c95c5546f6b35" compoundref="mm__app_8c" startline="453" endline="472">MM_ResetCmd</referencedby>
+        <referencedby refid="mm__app_8h_1a4f7e1ecc83efb1c18e2ea0441ec674aa" compoundref="mm__app_8c" startline="546" endline="618">MM_SymTblToFileCmd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="mm__utils_8h_1a96935cd2d4562b97cb2e8194ecc01d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean MM_VerifyPeekPokeParams</definition>
+        <argsstring>(uint32 Address, uint8 MemType, uint8 SizeInBits)</argsstring>
+        <name>MM_VerifyPeekPokeParams</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>Address</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>MemType</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>SizeInBits</declname>
+        </param>
+        <briefdescription>
+<para>Verify memory peek and poke parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This routine will run various checks on the specified address, memory type, and data size (in bits) for a memory peek or memory poke command</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source or destination address for the requested peek or poke operation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">MemType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source or destination memory type for the requested peek or poke operation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">SizeInBits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bit width for the requested peek or poke operation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para>Returns TRUE if all the parameter checks passed  </para></entry></row>
+<row>
+<entry thead="no"><para>Returns FALSE any parameter check failed  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/src/mm_utils.h" line="131" column="1" bodyfile="apps/mm/fsw/src/mm_utils.c" bodystart="159" bodyend="326"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="struct_m_m___app_data__t_1a981543c2acf32824a81f60f1efa606ba" compoundref="mm__app_8h" startline="87">MM_AppData_t::ErrCounter</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="osapi_8h_1a35b2b8984c2833372a467771063b05be">OS_SUCCESS</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="mm__dump_8h_1a67faf6f9f8ba08500afda0b140356ce4" compoundref="mm__dump_8c" startline="84" endline="127">MM_PeekCmd</referencedby>
+        <referencedby refid="mm__load_8h_1a8f951fc6e8d09dd76eae23691c9bccd0" compoundref="mm__load_8c" startline="95" endline="147">MM_PokeCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>mm_utils.h<sp/>1.1<sp/>2015/07/28<sp/>12:22:06EDT<sp/>rperera<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>Specification<sp/>for<sp/>the<sp/>CFS<sp/>Memory<sp/>Manager<sp/>utility<sp/>functions.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>References:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.2</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>MM<sp/>Heritage<sp/>Analysis<sp/>Document</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>MM<sp/>CDR<sp/>Package</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/><sp/><sp/>$Log:<sp/>mm_utils.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.1<sp/>2015/07/28<sp/>12:22:06EDT<sp/>rperera<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/><sp/><sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/><sp/><sp/>Member<sp/>added<sp/>to<sp/>project<sp/>/CFS-APPs-PROJECT/mm/fsw/src/project.pj</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.5<sp/>2015/03/02<sp/>14:27:07EST<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>copyright<sp/>information</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.4<sp/>2008/09/05<sp/>14:23:56EDT<sp/>dahardison<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/><sp/><sp/>Updated<sp/>references<sp/>to<sp/>local<sp/>HK<sp/>variables</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2008/05/19<sp/>15:23:39EDT<sp/>dahardison<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/><sp/><sp/>Version<sp/>after<sp/>completion<sp/>of<sp/>unit<sp/>testing</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_mm_utils_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_mm_utils_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Includes</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mm_msg.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Exported<sp/>Functions</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mm__utils_8h_1a52db4362920797f656bca9985229154a" kindref="member">MM_ResetHk</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="75"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="mm__utils_8h_1aaff20236922aae9fba90dfef2888eb28" kindref="member">MM_SegmentBreak</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="102"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="mm__utils_8h_1a2dc420ff0ab87c9375d0587e56cb6cc1" kindref="member">MM_VerifyCmdLength</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref><sp/><sp/>msg,<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExpectedLength);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="131"><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="mm__utils_8h_1a96935cd2d4562b97cb2e8194ecc01d9e" kindref="member">MM_VerifyPeekPokeParams</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/>Address,<sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/><sp/>MemType,<sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/><sp/>SizeInBits);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_mm_utils_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/mm/fsw/src/mm_utils.h"/>
+  </compounddef>
+</doxygen>

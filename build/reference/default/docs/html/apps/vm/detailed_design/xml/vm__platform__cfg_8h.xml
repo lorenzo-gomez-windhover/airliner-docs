@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="vm__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>vm_platform_cfg.h</compoundname>
+    <includedby refid="vm__app_8h" local="yes">apps/vm/fsw/src/vm_app.h</includedby>
+    <includedby refid="vm__tbldefs_8h" local="yes">apps/vm/fsw/src/vm_tbldefs.h</includedby>
+    <invincdepgraph>
+      <node id="468">
+        <label>apps/vm/fsw/src/vm_Navigation.cpp</label>
+        <link refid="vm___navigation_8cpp"/>
+      </node>
+      <node id="466">
+        <label>apps/vm/fsw/src/vm_config_utils.cpp</label>
+        <link refid="vm__config__utils_8cpp"/>
+      </node>
+      <node id="463">
+        <label>apps/vm/fsw/platform_inc/vm_platform_cfg.h</label>
+        <link refid="vm_platform_cfg.h"/>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+      </node>
+      <node id="465">
+        <label>apps/vm/fsw/src/vm_app.cpp</label>
+        <link refid="vm__app_8cpp"/>
+      </node>
+      <node id="464">
+        <label>apps/vm/fsw/src/vm_app.h</label>
+        <link refid="vm__app_8h"/>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>apps/vm/fsw/src/vm_Arming.cpp</label>
+        <link refid="vm___arming_8cpp"/>
+      </node>
+      <node id="470">
+        <label>apps/vm/fsw/src/vm_msg.h</label>
+        <link refid="vm__msg_8h"/>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+      </node>
+      <node id="469">
+        <label>apps/vm/fsw/src/vm_tbldefs.h</label>
+        <link refid="vm__tbldefs_8h"/>
+        <childnode refid="470" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a2627cc7ab4413179e4fa23f88ac71155" prot="public" static="no">
+        <name>VM_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for <ref refid="class_v_m" kindref="compound">VM</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;amc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="58" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_v_m_1a25434a92b5ba0c939414e9bde5d11092" compoundref="vm__app_8cpp" startline="413" endline="474">VM::InitApp</referencedby>
+        <referencedby refid="class_v_m_1a373dc74e5bdce3c5cf3db88a9a924f68" compoundref="vm__app_8cpp" startline="809" endline="1100">VM::ProcessAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a133eacbddd3ca6742dfc2e50e42741b1" prot="public" static="no">
+        <name>VM_SCH_PIPE_DEPTH</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="65" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_v_m_1ab284e3d447d0b60116f0ab867c22941a" compoundref="vm__app_8cpp" startline="111" endline="378">VM::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1af0871ee35ff149975837feaa6d5cb548" prot="public" static="no">
+        <name>VM_SCH_PIPE_NAME</name>
+        <initializer>(&quot;VM_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="72" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_v_m_1ab284e3d447d0b60116f0ab867c22941a" compoundref="vm__app_8cpp" startline="111" endline="378">VM::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a1becee24b35d10d44f1be5f00325ad06" prot="public" static="no">
+        <name>VM_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="82" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="class_v_m_1a35c7b8c667b18138173d293b5cfc869b" compoundref="vm__app_8cpp" startline="1275" endline="1333">VM::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1ad4acba740dcde965d0076a623bef4bd2" prot="public" static="no">
+        <name>VM_WAKEUP_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the VM_WAKEUP_MID_MAX_MSG_COUNT and VM_SEND_HK_MID_MAX_MSG_COUNT must be less than VM_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="91" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="class_v_m_1ab284e3d447d0b60116f0ab867c22941a" compoundref="vm__app_8cpp" startline="111" endline="378">VM::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a4bbbe08fb59ce2ec86893a79bd64935e" prot="public" static="no">
+        <name>VM_SEND_HK_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the VM_WAKEUP_MID_MAX_MSG_COUNT and VM_SEND_HK_MID_MAX_MSG_COUNT must be less than VM_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="100" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_v_m_1ab284e3d447d0b60116f0ab867c22941a" compoundref="vm__app_8cpp" startline="111" endline="378">VM::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a13a0a1e3a5357b78bd379b02cab4e238" prot="public" static="no">
+        <name>VM_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="107" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="class_v_m_1ab284e3d447d0b60116f0ab867c22941a" compoundref="vm__app_8cpp" startline="111" endline="378">VM::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a1ae1e2ec3e00aac60bb9827371d0b0da" prot="public" static="no">
+        <name>VM_CMD_PIPE_NAME</name>
+        <initializer>(&quot;VM_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="114" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="class_v_m_1ab284e3d447d0b60116f0ab867c22941a" compoundref="vm__app_8cpp" startline="111" endline="378">VM::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a7c806a480d6bff96c4fcf76b1045788d" prot="public" static="no">
+        <name>VM_PARAM_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the parameters pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="122" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a075f18f95f6b9cc70eb3736ca303b152" prot="public" static="no">
+        <name>VM_PARAM_PIPE_NAME</name>
+        <initializer>(&quot;VM_PARAM_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the parameters pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="129" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a2d4915636fd91f0f9647c38eaeb1ac09" prot="public" static="no">
+        <name>VM_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/vm_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="138" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="class_v_m_1a21d2aa2b888b54a0098306928baa2c63" compoundref="vm__config__utils_8cpp" startline="48" endline="86">VM::InitConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a5cc1b73cd34ceb9814caefb93e9f46cf" prot="public" static="no">
+        <name>VM_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="145" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="class_v_m_1a35c7b8c667b18138173d293b5cfc869b" compoundref="vm__app_8cpp" startline="1275" endline="1333">VM::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1ae7f9087994d4a0944eb8c84706180b5d" prot="public" static="no">
+        <name>VM_BATTERY_VOLTAGE_CHECK_DELAY</name>
+        <initializer>(6000000)</initializer>
+        <briefdescription>
+<para>The timeout value, in microseconds, to wait until <ref refid="class_v_m" kindref="compound">VM</ref> starts checking battery voltage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="153" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="class_v_m_1a0491f4b72de26eb3e918abd3ada9b9d1" compoundref="vm__app_8cpp" startline="1502" endline="1881">VM::Execute</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="vm__platform__cfg_8h_1a404a616467d2266e47cdc7a21b923803" prot="public" static="no">
+        <name>VM_MINIMUM_VALID_BATTERY_VOLTAGE</name>
+        <initializer>(2.0f)</initializer>
+        <briefdescription>
+<para>The minimum battery voltage to be considered valid. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Must be greater than or equal to FLT_EPSILON. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h" line="160" column="9" bodyfile="apps/vm/fsw/platform_inc/vm_platform_cfg.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="class_v_m_1a0491f4b72de26eb3e918abd3ada9b9d1" compoundref="vm__app_8cpp" startline="1502" endline="1881">VM::Execute</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VM_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VM_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>VM<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="vm__platform__cfg_8h_1a2627cc7ab4413179e4fa23f88ac71155" refkind="member"><highlight class="preprocessor">#define<sp/>VM_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="vm__platform__cfg_8h_1a133eacbddd3ca6742dfc2e50e42741b1" refkind="member"><highlight class="preprocessor">#define<sp/>VM_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="vm__platform__cfg_8h_1af0871ee35ff149975837feaa6d5cb548" refkind="member"><highlight class="preprocessor">#define<sp/>VM_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;VM_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="vm__platform__cfg_8h_1a1becee24b35d10d44f1be5f00325ad06" refkind="member"><highlight class="preprocessor">#define<sp/>VM_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="vm__platform__cfg_8h_1ad4acba740dcde965d0076a623bef4bd2" refkind="member"><highlight class="preprocessor">#define<sp/>VM_WAKEUP_MID_MAX_MSG_COUNT<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="vm__platform__cfg_8h_1a4bbbe08fb59ce2ec86893a79bd64935e" refkind="member"><highlight class="preprocessor">#define<sp/>VM_SEND_HK_MID_MAX_MSG_COUNT<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="vm__platform__cfg_8h_1a13a0a1e3a5357b78bd379b02cab4e238" refkind="member"><highlight class="preprocessor">#define<sp/>VM_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="vm__platform__cfg_8h_1a1ae1e2ec3e00aac60bb9827371d0b0da" refkind="member"><highlight class="preprocessor">#define<sp/>VM_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;VM_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="vm__platform__cfg_8h_1a7c806a480d6bff96c4fcf76b1045788d" refkind="member"><highlight class="preprocessor">#define<sp/>VM_PARAM_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="vm__platform__cfg_8h_1a075f18f95f6b9cc70eb3736ca303b152" refkind="member"><highlight class="preprocessor">#define<sp/>VM_PARAM_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;VM_PARAM_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="vm__platform__cfg_8h_1a2d4915636fd91f0f9647c38eaeb1ac09" refkind="member"><highlight class="preprocessor">#define<sp/>VM_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/vm_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="vm__platform__cfg_8h_1a5cc1b73cd34ceb9814caefb93e9f46cf" refkind="member"><highlight class="preprocessor">#define<sp/>VM_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="vm__platform__cfg_8h_1ae7f9087994d4a0944eb8c84706180b5d" refkind="member"><highlight class="preprocessor">#define<sp/>VM_BATTERY_VOLTAGE_CHECK_DELAY<sp/>(6000000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="vm__platform__cfg_8h_1a404a616467d2266e47cdc7a21b923803" refkind="member"><highlight class="preprocessor">#define<sp/>VM_MINIMUM_VALID_BATTERY_VOLTAGE<sp/>(2.0f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>VM_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/vm/fsw/platform_inc/vm_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

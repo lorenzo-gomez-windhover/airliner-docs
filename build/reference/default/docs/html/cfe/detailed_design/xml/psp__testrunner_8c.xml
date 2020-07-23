@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="psp__testrunner_8c" kind="file" language="C++">
+    <compoundname>psp_testrunner.c</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="yes">uttest.h</includes>
+    <includes local="no">getopt.h</includes>
+    <includes local="yes">utlist.h</includes>
+    <incdepgraph>
+      <node id="9689">
+        <label>uttest.h</label>
+      </node>
+      <node id="9691">
+        <label>utlist.h</label>
+      </node>
+      <node id="9687">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9686">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c</label>
+        <link refid="psp_testrunner.c"/>
+        <childnode refid="9687" relation="include">
+        </childnode>
+        <childnode refid="9688" relation="include">
+        </childnode>
+        <childnode refid="9689" relation="include">
+        </childnode>
+        <childnode refid="9690" relation="include">
+        </childnode>
+        <childnode refid="9691" relation="include">
+        </childnode>
+      </node>
+      <node id="9690">
+        <label>getopt.h</label>
+      </node>
+      <node id="9688">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="psp__testrunner_8c_1aabfb9173fa28423ab136e2a6fd6376fa" prot="public" static="no" mutable="no">
+        <type>UtListHead_t</type>
+        <definition>UtListHead_t UtTestDataBase</definition>
+        <argsstring></argsstring>
+        <name>UtTestDataBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" line="50" column="1"/>
+        <referencedby refid="psp__testrunner_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="psp__testrunner_8c" startline="73" endline="136">main</referencedby>
+        <referencedby refid="psp__testrunner_8c_1ab980a78f1b8316337cf67cec44be4598" compoundref="psp__testrunner_8c" startline="139" endline="161">PSP_UT_DisplayUsage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="psp__testrunner_8c_1a1b7271ddd60c22960c39ae6caf4d5254" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* optString</definition>
+        <argsstring></argsstring>
+        <name>optString</name>
+        <initializer>= &quot;T:h:&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" line="55" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" bodystart="55" bodyend="-1"/>
+        <referencedby refid="psp__testrunner_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="psp__testrunner_8c" startline="73" endline="136">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="psp__testrunner_8c_1a091f2d9683d6ef802780b360f66bad67" prot="public" static="yes" mutable="no">
+        <type>const struct option</type>
+        <definition>const struct option longOpts[]</definition>
+        <argsstring>[]</argsstring>
+        <name>longOpts</name>
+        <initializer>= {
+   { &quot;test&quot;, required_argument, 0, &apos;T&apos; },
+   { &quot;count&quot;,no_argument,       0, &apos;C&apos; },
+   { &quot;help&quot;, no_argument,       0, &apos;h&apos; },
+   { 0,      no_argument,       0,  0 }
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" line="55" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" bodystart="60" bodyend="-1"/>
+        <referencedby refid="psp__testrunner_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="psp__testrunner_8c" startline="73" endline="136">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="psp__testrunner_8c_1a265c9b62afa6d9b2b928613a15c8da82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PSP_AddTestCase</definition>
+        <argsstring>(void)</argsstring>
+        <name>PSP_AddTestCase</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="psp__testrunner_8c_1ac82e05f0e632075f0298e610ac09dc2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PSP_AddTestCases</definition>
+        <argsstring>(void)</argsstring>
+        <name>PSP_AddTestCases</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" line="38" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testcase.c" bodystart="1278" bodyend="1335"/>
+        <references refid="psp__testcase_8c_1a0218981fe0a439d974298a9c1afe7065" compoundref="psp__testcase_8c" startline="1259" endline="1269">PSP_Setup</references>
+        <references refid="psp__testcase_8c_1a127208cce4cf99e73f4e14642b579ae3" compoundref="psp__testcase_8c" startline="1272" endline="1275">PSP_TearDown</references>
+        <references refid="psp__testcase_8c_1a5eafc40fd642e228afd9ff1b1e67893d" compoundref="psp__testcase_8c" startline="467" endline="470">Test_CFE_PSP_AttachExceptions</references>
+        <references refid="psp__testcase_8c_1aa92b46ddb18c7d5f65672e65cdf13a03" compoundref="psp__testcase_8c" startline="474" endline="499">Test_CFE_PSP_ExceptionHook</references>
+        <references refid="psp__testcase_8c_1a7160715793f4e4fa7c948a4c093f2445" compoundref="psp__testcase_8c" startline="634" endline="650">Test_CFE_PSP_FlushCaches</references>
+        <references refid="psp__testcase_8c_1a5ad79d8e0ab2ed8ba4d0b8e44b8b8434" compoundref="psp__testcase_8c" startline="770" endline="788">Test_CFE_PSP_Get_Dec</references>
+        <references refid="psp__testcase_8c_1a6b1ae1d6d9ef0208fd09a95490f7570c" compoundref="psp__testcase_8c" startline="747" endline="767">Test_CFE_PSP_Get_Timebase</references>
+        <references refid="psp__testcase_8c_1a28e397f75e5a43ef06afdf925fb8db36" compoundref="psp__testcase_8c" startline="675" endline="693">Test_CFE_PSP_Get_Timer_Tick</references>
+        <references refid="psp__testcase_8c_1a77ce69b25a823a1a93f0e67b8cba2c91" compoundref="psp__testcase_8c" startline="890" endline="910">Test_CFE_PSP_GetCDSSizeNominal</references>
+        <references refid="psp__testcase_8c_1a824c93f77ca4524d8f3d42a4e2392f4a" compoundref="psp__testcase_8c" startline="913" endline="931">Test_CFE_PSP_GetCDSSizeNullPointer</references>
+        <references refid="psp__testcase_8c_1a1abed77423aff7fb56add3bb1a6ce24f" compoundref="psp__testcase_8c" startline="1234" endline="1256">Test_CFE_PSP_GetCFETextSegmentInfo</references>
+        <references refid="psp__testcase_8c_1a36e0c9dc9b5249526662bd7ea4832a6f" compoundref="psp__testcase_8c" startline="1207" endline="1231">Test_CFE_PSP_GetKernelTextSegmentInfo</references>
+        <references refid="psp__testcase_8c_1a5a432401e0a5deab93381b197106b037" compoundref="psp__testcase_8c" startline="1126" endline="1151">Test_CFE_PSP_GetResetArea</references>
+        <references refid="psp__testcase_8c_1ac7ea46f3c6d1ae869639254de2e6f43e" compoundref="psp__testcase_8c" startline="653" endline="672">Test_CFE_PSP_GetTime</references>
+        <references refid="psp__testcase_8c_1a81efa4dbdcf1f81409522d2fee3ccd22" compoundref="psp__testcase_8c" startline="719" endline="737">Test_CFE_PSP_GetTimerLow32Rollover</references>
+        <references refid="psp__testcase_8c_1a08d802afa22ad7c3c0aba090d263974f" compoundref="psp__testcase_8c" startline="697" endline="715">Test_CFE_PSP_GetTimerTicksPerSecond</references>
+        <references refid="psp__testcase_8c_1a0a3ff73a570c7a3a03e932b6a97177ee" compoundref="psp__testcase_8c" startline="1154" endline="1179">Test_CFE_PSP_GetUserReservedArea</references>
+        <references refid="psp__testcase_8c_1a3aa6a3b60a329588c356472b9f8053b0" compoundref="psp__testcase_8c" startline="1182" endline="1204">Test_CFE_PSP_GetVolatileDiskMem</references>
+        <references refid="psp__testcase_8c_1a9344ac9f4c98e765eb3b68a43de05605" compoundref="psp__testcase_8c" startline="555" endline="565">Test_CFE_PSP_InitSSR</references>
+        <references refid="psp__testcase_8c_1af852d2835ae565dbb221d3f47237d105" compoundref="psp__testcase_8c" startline="456" endline="464">Test_CFE_PSP_Main_DisplayUsage</references>
+        <references refid="psp__testcase_8c_1a6bb53651bc61798190574a4b1add380c" compoundref="psp__testcase_8c" startline="131" endline="153">Test_CFE_PSP_Main_IncorrectPRType</references>
+        <references refid="psp__testcase_8c_1a4e58f7c99e93a770d5f4e398d30879b6" compoundref="psp__testcase_8c" startline="431" endline="453">Test_CFE_PSP_Main_InvalidCmdArg</references>
+        <references refid="psp__testcase_8c_1a2391bf23da22b44642c482f40c0c23b6" compoundref="psp__testcase_8c" startline="83" endline="105">Test_CFE_PSP_Main_NominalPO</references>
+        <references refid="psp__testcase_8c_1a70d754fad4e34108fe8181049f37bf5a" compoundref="psp__testcase_8c" startline="107" endline="129">Test_CFE_PSP_Main_NominalPR</references>
+        <references refid="psp__testcase_8c_1af8aca2359ee18b04c2356952ac3994b6" compoundref="psp__testcase_8c" startline="371" endline="399">Test_CFE_PSP_Main_POCpuId</references>
+        <references refid="psp__testcase_8c_1a136d57772a9f4d0986c4e66a66b791c2" compoundref="psp__testcase_8c" startline="347" endline="369">Test_CFE_PSP_Main_POCpuName</references>
+        <references refid="psp__testcase_8c_1a405b242b1e1dfe8bd19cd2f6f63c4833" compoundref="psp__testcase_8c" startline="179" endline="201">Test_CFE_PSP_Main_POInvalidRunmode</references>
+        <references refid="psp__testcase_8c_1a82ec22a4e936f8c9c6b3c2f3c48f9012" compoundref="psp__testcase_8c" startline="155" endline="177">Test_CFE_PSP_Main_PORunmodeTest</references>
+        <references refid="psp__testcase_8c_1acaff8bb95151448b557c91d44e32337b" compoundref="psp__testcase_8c" startline="401" endline="429">Test_CFE_PSP_Main_POSpacecraftId</references>
+        <references refid="psp__testcase_8c_1ae4e63b31cc45ff9993ee92cf62b5437e" compoundref="psp__testcase_8c" startline="323" endline="345">Test_CFE_PSP_Main_PRInvalidSubtype</references>
+        <references refid="psp__testcase_8c_1ac4f9e4eec7aeb34a7f825d5b65da2b7e" compoundref="psp__testcase_8c" startline="203" endline="225">Test_CFE_PSP_Main_PRSubtype1</references>
+        <references refid="psp__testcase_8c_1aaea77eda4d5f9a9debb0e7c9b0eeba5b" compoundref="psp__testcase_8c" startline="227" endline="249">Test_CFE_PSP_Main_PRSubtype2</references>
+        <references refid="psp__testcase_8c_1ad2f89a02336aedbda0e5bd2ee7da65b1" compoundref="psp__testcase_8c" startline="251" endline="273">Test_CFE_PSP_Main_PRSubtype3</references>
+        <references refid="psp__testcase_8c_1a309d25f9ca07abb14637c5b5766ff923" compoundref="psp__testcase_8c" startline="275" endline="297">Test_CFE_PSP_Main_PRSubtype4</references>
+        <references refid="psp__testcase_8c_1a3f64d77f4c53f220a6b74c29791cf544" compoundref="psp__testcase_8c" startline="299" endline="321">Test_CFE_PSP_Main_PRSubtype5</references>
+        <references refid="psp__testcase_8c_1a6bcd6e3eeb78045d2607d04d88d37ed1" compoundref="psp__testcase_8c" startline="1052" endline="1070">Test_CFE_PSP_ReadFromCDSNullPointer</references>
+        <references refid="psp__testcase_8c_1a0d6c5604f19e4ea03af9128ec003d3f7" compoundref="psp__testcase_8c" startline="1073" endline="1100">Test_CFE_PSP_ReadFromCDSOffsetOutOfBounds</references>
+        <references refid="psp__testcase_8c_1a9bb9313c275fdf6ce13ab8fa8b886b60" compoundref="psp__testcase_8c" startline="1103" endline="1123">Test_CFE_PSP_ReadFromCDSSizeOutOfBounds</references>
+        <references refid="psp__testcase_8c_1aa839e2bb742430ab6617ad262ee2b122" compoundref="psp__testcase_8c" startline="502" endline="505">Test_CFE_PSP_SetDefaultExceptionEnvironment</references>
+        <references refid="psp__testcase_8c_1a8e4e575824e673f75999aa7e72047fc6" compoundref="psp__testcase_8c" startline="532" endline="552">Test_CFE_PSP_SetupEEPROM</references>
+        <references refid="psp__testcase_8c_1a8e963f718e4823859ca7195a24359a28" compoundref="psp__testcase_8c" startline="508" endline="528">Test_CFE_PSP_TimerHandler</references>
+        <references refid="psp__testcase_8c_1a8b338b65b6263b60f904cb11d6a28885" compoundref="psp__testcase_8c" startline="829" endline="845">Test_CFE_PSP_WatchdogDisable</references>
+        <references refid="psp__testcase_8c_1a447f14c86a979ae8dfdc446c31275924" compoundref="psp__testcase_8c" startline="810" endline="826">Test_CFE_PSP_WatchdogEnable</references>
+        <references refid="psp__testcase_8c_1a0e72e91c7331de6e343c03e20c3c9dd7" compoundref="psp__testcase_8c" startline="791" endline="807">Test_CFE_PSP_WatchdogInit</references>
+        <references refid="psp__testcase_8c_1a6b2780cf7893b8a573c51c3110ed12a3" compoundref="psp__testcase_8c" startline="848" endline="864">Test_CFE_PSP_WatchdogService</references>
+        <references refid="psp__testcase_8c_1acee95b14e3051c46f956e24f201893f2" compoundref="psp__testcase_8c" startline="867" endline="887">Test_CFE_PSP_WatchdogSetGet</references>
+        <references refid="psp__testcase_8c_1aaab0da6584f30116b17f168f6068539c" compoundref="psp__testcase_8c" startline="936" endline="976">Test_CFE_PSP_WriteToCDSNominal</references>
+        <references refid="psp__testcase_8c_1ab1db7d64212da73ff8ddcf2ec6bbbea1" compoundref="psp__testcase_8c" startline="979" endline="997">Test_CFE_PSP_WriteToCDSNullPointer</references>
+        <references refid="psp__testcase_8c_1ac49f72c03f6b296db0596418c3ff6cf3" compoundref="psp__testcase_8c" startline="1000" endline="1026">Test_CFE_PSP_WriteToCDSOffsetOutOfBounds</references>
+        <references refid="psp__testcase_8c_1a8b81532ae34e656d68ba1275a1f0d509" compoundref="psp__testcase_8c" startline="1029" endline="1049">Test_CFE_PSP_WriteToCDSSizeOutOfBounds</references>
+        <referencedby refid="psp__testrunner_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="psp__testrunner_8c" startline="73" endline="136">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="psp__testrunner_8c_1ab980a78f1b8316337cf67cec44be4598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PSP_UT_DisplayUsage</definition>
+        <argsstring>(char *Name)</argsstring>
+        <name>PSP_UT_DisplayUsage</name>
+        <param>
+          <type>char *</type>
+          <declname>Name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" line="71" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" bodystart="139" bodyend="161"/>
+        <references refid="psp__testrunner_8c_1aabfb9173fa28423ab136e2a6fd6376fa">UtTestDataBase</references>
+        <referencedby refid="psp__testrunner_8c_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="psp__testrunner_8c" startline="73" endline="136">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="psp__testrunner_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" line="73" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c" bodystart="73" bodyend="136"/>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" compoundref="common__types_8h" startline="318">FALSE</references>
+        <references refid="psp__testrunner_8c_1a091f2d9683d6ef802780b360f66bad67" compoundref="psp__testrunner_8c" startline="60">longOpts</references>
+        <references refid="psp__testrunner_8c_1a1b7271ddd60c22960c39ae6caf4d5254" compoundref="psp__testrunner_8c" startline="55">optString</references>
+        <references refid="psp__testrunner_8c_1ac82e05f0e632075f0298e610ac09dc2d" compoundref="psp__testcase_8c" startline="1278" endline="1335">PSP_AddTestCases</references>
+        <references refid="psp__testrunner_8c_1ab980a78f1b8316337cf67cec44be4598" compoundref="psp__testrunner_8c" startline="139" endline="161">PSP_UT_DisplayUsage</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <references refid="psp__testrunner_8c_1aabfb9173fa28423ab136e2a6fd6376fa">UtTestDataBase</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="psp__testrunner_8c_1a265c9b62afa6d9b2b928613a15c8da82" kindref="member">PSP_AddTestCase</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="psp__testrunner_8c_1ac82e05f0e632075f0298e610ac09dc2d" kindref="member">PSP_AddTestCases</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>Includes</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;uttest.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;getopt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;utlist.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>UtListHead_t<sp/><ref refid="psp__testrunner_8c_1aabfb9173fa28423ab136e2a6fd6376fa" kindref="member">UtTestDataBase</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>getopts<sp/>parameter<sp/>passing<sp/>options<sp/>string</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="psp__testrunner_8c_1a1b7271ddd60c22960c39ae6caf4d5254" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="psp__testrunner_8c_1a1b7271ddd60c22960c39ae6caf4d5254" kindref="member">optString</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;T:h:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>getopts_long<sp/>long<sp/>form<sp/>argument<sp/>table</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="psp__testrunner_8c_1a091f2d9683d6ef802780b360f66bad67" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">option<sp/><ref refid="psp__testrunner_8c_1a091f2d9683d6ef802780b360f66bad67" kindref="member">longOpts</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;test&quot;</highlight><highlight class="normal">,<sp/>required_argument,<sp/>0,<sp/></highlight><highlight class="charliteral">&apos;T&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;count&quot;</highlight><highlight class="normal">,no_argument,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/>{<sp/></highlight><highlight class="stringliteral">&quot;help&quot;</highlight><highlight class="normal">,<sp/>no_argument,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/></highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal"><sp/>},</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/>{<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/>no_argument,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/><sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>*<sp/>Function<sp/>Definitions</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="psp__testrunner_8c_1ab980a78f1b8316337cf67cec44be4598" kindref="member">PSP_UT_DisplayUsage</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Name<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="psp__testrunner_8c_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="psp__testrunner_8c_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>testCaseNumber<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>opt<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>longIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rc<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>runTests<sp/>=<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Call<sp/>AddTestSuite<sp/>or<sp/>AddTestCase<sp/>functions<sp/>here<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="psp__testrunner_8c_1ac82e05f0e632075f0298e610ac09dc2d" kindref="member">PSP_AddTestCases</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>**<sp/>Process<sp/>the<sp/>arguments<sp/>with<sp/>getopt_long(),<sp/>then</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>**<sp/>start<sp/>the<sp/>cFE</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>opt<sp/>=<sp/>getopt_long(<sp/>argc,<sp/>argv,<sp/><ref refid="psp__testrunner_8c_1a1b7271ddd60c22960c39ae6caf4d5254" kindref="member">optString</ref>,<sp/><ref refid="psp__testrunner_8c_1a091f2d9683d6ef802780b360f66bad67" kindref="member">longOpts</ref>,<sp/>&amp;longIndex<sp/>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<sp/>opt<sp/>!=<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<sp/>opt<sp/>)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;T&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>testCaseNumber<sp/>=<sp/>strtol(optarg,<sp/>0,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/><ref refid="psp__testrunner_8c_1aabfb9173fa28423ab136e2a6fd6376fa" kindref="member">UtTestDataBase</ref>.NumberOfEntries;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runTests<sp/>=<sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\n&quot;</highlight><highlight class="normal">,<sp/>rc);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;h&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="psp__testrunner_8c_1ab980a78f1b8316337cf67cec44be4598" kindref="member">PSP_UT_DisplayUsage</ref>(argv[0]);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runTests<sp/>=<sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>opt<sp/>=<sp/>getopt_long(<sp/>argc,<sp/>argv,<sp/><ref refid="psp__testrunner_8c_1a1b7271ddd60c22960c39ae6caf4d5254" kindref="member">optString</ref>,<sp/><ref refid="psp__testrunner_8c_1a091f2d9683d6ef802780b360f66bad67" kindref="member">longOpts</ref>,<sp/>&amp;longIndex<sp/>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">/*<sp/>end<sp/>while<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(runTests<sp/>==<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(testCaseNumber<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/>UtTest_Run();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rc<sp/>=<sp/>UtTest_RunTest(testCaseNumber);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rc;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="psp__testrunner_8c_1ab980a78f1b8316337cf67cec44be4598" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="psp__testrunner_8c_1ab980a78f1b8316337cf67cec44be4598" kindref="member">PSP_UT_DisplayUsage</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Name<sp/>)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;usage<sp/>:<sp/>%s<sp/>[-T<sp/>&lt;value&gt;]<sp/>[-C]<sp/>[-h]<sp/>\n&quot;</highlight><highlight class="normal">,<sp/>Name);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>parameters<sp/>are<sp/>optional<sp/>and<sp/>can<sp/>be<sp/>used<sp/>in<sp/>any<sp/>order.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Total<sp/>number<sp/>of<sp/>test<sp/>cases:<sp/><sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="psp__testrunner_8c_1aabfb9173fa28423ab136e2a6fd6376fa" kindref="member">UtTestDataBase</ref>.NumberOfEntries);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Parameters<sp/>include:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-T<sp/>[<sp/>--test<sp/>]<sp/><sp/>Test<sp/>case<sp/>to<sp/>execute.:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>When<sp/>omitted,<sp/>all<sp/>test<sp/>cases<sp/>will<sp/>execute.<sp/><sp/>Range<sp/>is<sp/>1<sp/>to<sp/>%d.\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="psp__testrunner_8c_1aabfb9173fa28423ab136e2a6fd6376fa" kindref="member">UtTestDataBase</ref>.NumberOfEntries);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-C<sp/>[<sp/>--count<sp/>]<sp/>Return<sp/>the<sp/>total<sp/>test<sp/>case<sp/>count.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-h<sp/>[<sp/>--help<sp/>]<sp/><sp/><sp/><sp/>This<sp/>message.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Example<sp/>invocation:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Short<sp/>form:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>%s<sp/>-T<sp/>1<sp/>\n&quot;</highlight><highlight class="normal">,Name);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Long<sp/>form:\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>%s<sp/>--test<sp/>1\n&quot;</highlight><highlight class="normal">,Name);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testrunner.c"/>
+  </compounddef>
+</doxygen>

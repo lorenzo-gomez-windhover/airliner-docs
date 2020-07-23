@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfscscons" kind="page">
+    <compoundname>cfscscons</compoundname>
+    <title>CFS Checksum Constraints</title>
+    <detaileddescription>
+<para><heading level="2">Child Tasks</heading>
+</para><para>The Checksum application only allows one child task to be used at a time. One child task is used during each of the CS_*Recompute commands and during the CS OneShot command. A child task is started when the command returns successfully (with a debug event message), and then ends when the child task finishes the recompute (an info event message is generated). While it is not possible to cancel a Recompute command&apos;s child task, the function- ality is provided to cancel a One Shot command&apos;s child task, because any length can be specified in the command, and the checksum may take longer than expected.</para><para>What this means is that when a Recompute command (or One Shot command) is sent, the user has to wait until completion of the checksum to send another Recompute (or One Shot) command can be sent. If another Recompute (or One Shot) command is sent while the child task is in use, the command will get rejected.</para><para><heading level="2">Use On OS X and Linux</heading>
+</para><para>Because of the way these two OS&apos;s are set up, it is not possible to checksum applications or the OS text segment with these two operating systems. CS will perform the rest of its functions without incident, but will issue an informational event message on startup when it determines the OS cannot be checksummed, and issue a debug event message.</para><para><heading level="2">Checksum application&apos;s tables</heading>
+</para><para>It is worth a note to say that if the user wants CS&apos;s tables to be checksummed, they must be put in CS&apos;s table of tables to be checksummed.</para><para><heading level="2">Checksumming tables</heading>
+</para><para>When creating CS&apos;s Table of tables to be checksummed, the &apos;Name&apos; field must be the same name that cFE Table Services uses. That is it must be in the form of &apos;AppName.TableName&apos;, otherwise CS will not be able to find the table and it will not be checksummed.</para><para>Next: <ref refid="cfscsfaqs" kindref="compound">CFS Checksum Frequently Asked Questions</ref> <linebreak/>
+ Prev: <ref refid="cfscstbl" kindref="compound">CFS Checksum Table Definitions</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

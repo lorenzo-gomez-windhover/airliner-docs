@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeapi" kind="page">
+    <compoundname>cfeapi</compoundname>
+    <title>cFE Application Programmer&apos;s Interface (API) Reference</title>
+    <detaileddescription>
+<para><heading level="4">Executive Services API </heading>
+</para><para><itemizedlist>
+<listitem>
+<para>cFE Entry/Exit APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1a80b9e43e0efa587a70bd4707fee4f5f8" kindref="member">CFE_ES_Main</ref> - cFE Main Entry Point used by Board Support Package to start cFE </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a0e54725c2c038a86bae1f6ba553a9305" kindref="member">CFE_ES_ResetCFE</ref> - Reset the cFE Core and all cFE Applications </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Application Control APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1a369222a2bda44367bef416fc084b936a" kindref="member">CFE_ES_RestartApp</ref> - Restart a single cFE Application </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a543152ee91cdbcfcc1e735bc5f2c5533" kindref="member">CFE_ES_ReloadApp</ref> - Reload a single cFE Application </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a063959fa7950ab87caeb3927aa532a82" kindref="member">CFE_ES_DeleteApp</ref> - Delete a single cFE Application </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Required Application APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1a426ef8e1796ccebba16c63c8e86fb842" kindref="member">CFE_ES_RegisterApp</ref> - Registers a cFE Application with Executive Services </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1afc358372cb439bc528d80e3956c98d34" kindref="member">CFE_ES_RunLoop</ref> - Checks for Exit, Restart or Reload commands </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a7dc343ea775a0e5773ecdf700581d548" kindref="member">CFE_ES_WaitForStartupSync</ref> - Waits for all Apps in Startup Script to complete initialization </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a2ae693e0bf2c4c430f3a852223cce6d6" kindref="member">CFE_ES_IncrementTaskCounter</ref> - Increments telemetered task counter to indicate task activity </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1ad5d888f9bca5038624a04d04efce8325" kindref="member">CFE_ES_ExitApp</ref> - Exit for a cFE Application </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Information APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1a764cf2b13c101358117baf81119990b6" kindref="member">CFE_ES_GetResetType</ref> - Returns the most recent type of reset </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a76ee880d8ee4f632420507997779c1aa" kindref="member">CFE_ES_GetAppID</ref> - Returns the Application ID of calling Application </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a8422894d9e2e2c2618d0f4d6006fe53c" kindref="member">CFE_ES_GetAppIDByName</ref> - Returns the Application ID of an Application specified by name </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1afd92c81b56467c04b95aa0440e8e3751" kindref="member">CFE_ES_GetAppName</ref> - Returns the name of an Application specified by Application ID </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1aab1ff2026dff2b41b5392c761bce0a24" kindref="member">CFE_ES_GetAppInfo</ref> - Returns Application info about an Application specified by Application ID </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a072add66366e787a45464adbd7120c71" kindref="member">CFE_ES_GetTaskInfo</ref> - Returns the task information about a task specified by task ID </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Child Task APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1a1e008c905bb89083293355b71ce4bc2d" kindref="member">CFE_ES_RegisterChildTask</ref> - Registers a cFE Child Task with Executive Services </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a64768543df91e7856b4356fdc70ebe8c" kindref="member">CFE_ES_CreateChildTask</ref> - Creates a new task under an existing Application </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1af17fa3dd427191492771b1ca929f45a2" kindref="member">CFE_ES_DeleteChildTask</ref> - Deletes a task under an existing Application </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a263795095b7eda1070864d75add8d91a" kindref="member">CFE_ES_ExitChildTask</ref> - Exit for a cFE Child Task </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Driver APIs <itemizedlist>
+<listitem>
+<para>#CFE_ES_RegisterDriver - Registers a Device Driver for a specified device </para></listitem>
+<listitem>
+<para>#CFE_ES_UnloadDriver - Removes a Device Driver for a specified device </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Critical Data Store APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1a60638b671a23cda3eb9282b153a8dfb1" kindref="member">CFE_ES_RegisterCDS</ref> - Reserves space (or obtains previously reserved space)in the Critical Data Store </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a4e188008567eae18b36d80408f34e8f9" kindref="member">CFE_ES_CopyToCDS</ref> - Copies a block of memory into a Critical Data Store </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1ae84ae4564568be8f1cf30f4c8bf78077" kindref="member">CFE_ES_RestoreFromCDS</ref> - Recovers the contents of memory from a Critical Data Store </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Memory Manager APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1af0248c9918a7c6907d8d1f4fa3b99160" kindref="member">CFE_ES_PoolCreate</ref> - Initializes a Memory Pool created by an Application </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1ae096a654808a468170036a1207f813f3" kindref="member">CFE_ES_PoolCreateEx</ref> - Initializes a Memory Pool created by an Application with Application specified block sizes </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1ad1d355290c15c7c22ee78c1117ec5016" kindref="member">CFE_ES_GetPoolBuf</ref> - Gets a buffer from a Memory Pool </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a87bcb4ee33a996e6219607b629e595fd" kindref="member">CFE_ES_PutPoolBuf</ref> - Releases a buffer to a Memory Pool </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a7df8809f546ab01315423672c43a5e22" kindref="member">CFE_ES_GetMemPoolStats</ref> - Extracts statistics maintained by the memory pool software </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Performance Monitoring APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625" kindref="member">CFE_ES_PerfLogEntry</ref> - Marks the entry into a performance analyzer segment of code </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4" kindref="member">CFE_ES_PerfLogExit</ref> - Marks the exit from a performance analyzer segment of code </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1ae98119fd462f141607f20aa28e46c692" kindref="member">CFE_ES_PerfLogAdd</ref> - Adds a mark into the Performance Log </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Miscellaneous APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__es_8h_1a7c12147f9baec470a47a5a693ce9ff2a" kindref="member">CFE_ES_CalculateCRC</ref> - Calculates a CRC on a block of memory </para></listitem>
+<listitem>
+<para><ref refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d" kindref="member">CFE_ES_WriteToSysLog</ref> - Writes a debug message to the System Log </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+</para><para><heading level="4">Events Services API </heading>
+</para><para><itemizedlist>
+<listitem>
+<para>Registration APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member">CFE_EVS_Register</ref> - Register an Application for using Event Services </para></listitem>
+<listitem>
+<para><ref refid="cfe__evs_8h_1a5aa43241cc851e10eef46b2e8d1cd9a9" kindref="member">CFE_EVS_Unregister</ref> - Unregister an Application from using Event Services </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Send Event APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__evs_8h_1a811a2fa1e9ac02cee9f39cb4a6c08075" kindref="member">CFE_EVS_SendEvent</ref> - Generate a Software Event </para></listitem>
+<listitem>
+<para><ref refid="cfe__evs_8h_1a545dcec8d0ef490f7193f0390142c2ef" kindref="member">CFE_EVS_SendEventWithAppID</ref> - Generate a Software Event as though produced by the specified Application </para></listitem>
+<listitem>
+<para><ref refid="cfe__evs_8h_1acd4cf1c77f54307811d9bcdc7885450d" kindref="member">CFE_EVS_SendTimedEvent</ref> - Generate a Software Event with a specified time tag </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Reset Event Filter APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__evs_8h_1afab36a2185c72a47457a26cdceb3c202" kindref="member">CFE_EVS_ResetFilter</ref> - Resets the calling Application&apos;s Event Filter for a specified event </para></listitem>
+<listitem>
+<para><ref refid="cfe__evs_8h_1a4b5724a314f82fb9b58871815df68a46" kindref="member">CFE_EVS_ResetAllFilters</ref> - Resets all of the calling Application&apos;s Event Filters </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+</para><para><heading level="4">File Services API </heading>
+</para><para><itemizedlist>
+<listitem>
+<para>cFE File Header Management APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__fs_8h_1a8c78a5e48135048f1d0710aef2d02349" kindref="member">CFE_FS_ReadHeader</ref> - Read the contents of the Standard cFE File Header </para></listitem>
+<listitem>
+<para><ref refid="cfe__fs_8h_1a7f0315f283029e5ec7ade9fdfd38875d" kindref="member">CFE_FS_WriteHeader</ref> - Write the contents of the Standard cFE File Header </para></listitem>
+<listitem>
+<para><ref refid="cfe__fs_8h_1a42531e7041b38ddab54d779abbb3ba08" kindref="member">CFE_FS_SetTimestamp</ref> - Modify the Time Stamp field in the Standard cFE File Header </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Compressed File Management APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__fs_8h_1af8a1d03145354d5038f93f21423b2620" kindref="member">CFE_FS_IsGzFile</ref> - Determines if specified file is a gzip/compressed file </para></listitem>
+<listitem>
+<para><ref refid="cfe__fs_8h_1a79313e51cc55a88c51fea2d5039d8582" kindref="member">CFE_FS_Decompress</ref> - Decompresses the specified file to a destination file </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Filename Utility APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__fs_8h_1acc8cb682d0e2d38e86334882969f6aaa" kindref="member">CFE_FS_ExtractFilenameFromPath</ref> - Extracts the filename from a unix style path </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+</para><para><heading level="4">Software Bus API </heading>
+</para><para><itemizedlist>
+<listitem>
+<para>Pipe Creation/Deletion APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> - Creates a new software bus pipe </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a268a5a36f7628873472456e02565bfcf" kindref="member">CFE_SB_DeletePipe</ref> - Deletes a software bus pipe </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Message Subscription Control APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__sb_8h_1afc2c2db1a504f544b430f33f28be769b" kindref="member">CFE_SB_Subscribe</ref> - Subscribe to a message on the software bus with default parameters </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a5939c3681044a3d953d0fe72dd577889" kindref="member">CFE_SB_SubscribeEx</ref> - Subscribe to a message on the software bus </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a72139ef72948ee8dddc4fe17eb174c22" kindref="member">CFE_SB_SubscribeLocal</ref> - Subscribe to a message while keeping the request on the current CPU </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a70ea901e65f03221e3787d73733db060" kindref="member">CFE_SB_Unsubscribe</ref> - Remove a subscription to a message on the software bus </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a2d9017dba160c86fd79fd386201753be" kindref="member">CFE_SB_UnsubscribeLocal</ref> - Remove a subscription to a message on the software bus on the current CPU </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Send/Receive Message APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member">CFE_SB_SendMsg</ref> - Send a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d" kindref="member">CFE_SB_RcvMsg</ref> - Receive a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1afabab99c8bed70a6d74b662f8620866c" kindref="member">CFE_SB_ZeroCopySend</ref> - Send a software bus message in &quot;zero copy&quot; mode </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Zero Copy Message APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a40630a2f5465cf30206a45c970bb4cc4" kindref="member">CFE_SB_ZeroCopyGetPtr</ref> - Get a buffer pointer to use for &quot;zero copy&quot; mode </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a89ec51d1986bec33c5a3b6605f92b04a" kindref="member">CFE_SB_ZeroCopyReleasePtr</ref> - Release an unused &quot;zero copy&quot; mode buffer pointer </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1afabab99c8bed70a6d74b662f8620866c" kindref="member">CFE_SB_ZeroCopySend</ref> - Send a software bus message in &quot;zero copy&quot; mode </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Setting Message Characteristics APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0" kindref="member">CFE_SB_InitMsg</ref> - Initialize a buffer for a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1af0bb4507231046917c9774cf8365203c" kindref="member">CFE_SB_SetMsgId</ref> - Sets the message ID of a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a1804248c45fea3eb322a950626f67f99" kindref="member">CFE_SB_SetUserDataLength</ref> - Sets the length of the user data segment of a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1ae7bfd92ff974a7d5f43d49345ab4b806" kindref="member">CFE_SB_SetTotalMsgLength</ref> - Sets the length of a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a52278f45dbe569c9e003d7bdba58b694" kindref="member">CFE_SB_SetMsgTime</ref> - Sets the time field in a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1" kindref="member">CFE_SB_TimeStampMsg</ref> - Sets the time field in a software bus message with the current spacecraft time </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1aae28d938d29ce8ad689b238562c58d3f" kindref="member">CFE_SB_SetCmdCode</ref> - Sets the command code field in a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1ab938a22e368e400c16ce7dc97767f237" kindref="member">CFE_SB_GenerateChecksum</ref> - Computes and sets the checksum field in a software bus message </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Getting Message Characteristics APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a76fccd1a39d38ea58993191bdd7f4144" kindref="member">CFE_SB_MsgHdrSize</ref> - Gets the size of a software bus message header </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1ad7d178a88d5600712eb74afc13e2d666" kindref="member">CFE_SB_GetUserData</ref> - Gets a pointer to the first byte of the user data segment in a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d" kindref="member">CFE_SB_GetMsgId</ref> - Gets the current message ID in a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a9fcbd13f892931483c22a17c1be0c4ab" kindref="member">CFE_SB_GetUserDataLength</ref> - Gets the size of the user data segment of a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1ac32b86cf9e1d12a547792853c35f6aa1" kindref="member">CFE_SB_GetTotalMsgLength</ref> - Gets the total size of the software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1adf8ead29ddbb83f4af9491cb14994f3e" kindref="member">CFE_SB_GetMsgTime</ref> - Gets the time field from a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5" kindref="member">CFE_SB_GetCmdCode</ref> - Gets the command code field from a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a5ffc13b78bef6859d203453f76edc044" kindref="member">CFE_SB_GetChecksum</ref> - Gets the checksum field from a software bus message </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Checksum Control APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__sb_8h_1ab938a22e368e400c16ce7dc97767f237" kindref="member">CFE_SB_GenerateChecksum</ref> - Computes and sets the checksum field in a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a5ffc13b78bef6859d203453f76edc044" kindref="member">CFE_SB_GetChecksum</ref> - Gets the checksum field from a software bus message </para></listitem>
+<listitem>
+<para><ref refid="cfe__sb_8h_1a3245babbfb1f2f2c5a2358d41fd004ad" kindref="member">CFE_SB_ValidateChecksum</ref> - Validates the checksum of a software bus message </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+</para><para><heading level="4">Table Services API </heading>
+</para><para><itemizedlist>
+<listitem>
+<para>Registration APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a02649cb295b154981365de11e0bb6683" kindref="member">CFE_TBL_Register</ref> - Register a table with cFE to obtain Table Management Services </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a78668bf1e8256ef604508eb3e5a6c275" kindref="member">CFE_TBL_Share</ref> - Obtain access to a table registered by another Application </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1aaf440695f09ae0621c8d9419fefc4bf3" kindref="member">CFE_TBL_Unregister</ref> - Unregister a previously registered table and free resources </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Manage Table Content APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member">CFE_TBL_Load</ref> - Load a specified table with data </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a31078e6930a4d5fd5f5d7a90a582ca2a" kindref="member">CFE_TBL_Update</ref> - Update the contents of a table with any pending data </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a0a04217ee50dcc04be836234561e899d" kindref="member">CFE_TBL_Validate</ref> - Validate the contents of a table </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a55f9e6ac951e3e2b1ff42787e5f8c57c" kindref="member">CFE_TBL_Manage</ref> - Perform standard routine operations to maintain a table </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a9c4cde7965236d557f5199025ae544f5" kindref="member">CFE_TBL_DumpToBuffer</ref> - Copies contents of a Dump Only Table to a shared buffer </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1ace4437318fa89c22b50ce866adf36c26" kindref="member">CFE_TBL_Modified</ref> - Notifies Table Services that table contents have been modified by Application </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Access Table Content APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1ab76032b8a226594789df60e8449cface" kindref="member">CFE_TBL_GetAddress</ref> - Obtain the current address of the contents of a table </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1ae37e876692c9feb574b06551c3b26f87" kindref="member">CFE_TBL_GetAddresses</ref> - Obtain the current addresses of multiple tables </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a9707adcc7701671aaa4aa39f1608159a" kindref="member">CFE_TBL_ReleaseAddress</ref> - Release the pointer to the contents of a table </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a9609133208d46238477e0057b3e9f8fa" kindref="member">CFE_TBL_ReleaseAddresses</ref> - Release the pointers to the contents of multiple tables </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Get Table Information APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1a610383068765ec892a97c972ec8a9849" kindref="member">CFE_TBL_GetStatus</ref> - Obtain current status of pending actions for a table </para></listitem>
+<listitem>
+<para><ref refid="cfe__tbl_8h_1af763c9b01ba8c7318a3fd646b0336e4d" kindref="member">CFE_TBL_GetInfo</ref> - Obtain characteristics/information about a specific table </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+</para><para><heading level="4">Time Services API </heading>
+</para><para><itemizedlist>
+<listitem>
+<para>Get Current Time APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__time_8h_1abf540f01ef8e0b2c7f2ec755148b6ac6" kindref="member">CFE_TIME_GetTime</ref> - Get the current spacecraft time </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1aad660f7e6d8b9f8fe502178f210b90c1" kindref="member">CFE_TIME_GetTAI</ref> - Get the current TAI time </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a8b05d5ce1362fe3f5d7978b810eb2f76" kindref="member">CFE_TIME_GetUTC</ref> - Get the current UTC time </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1ad27faa0574e0d4dbec7269be1233da1e" kindref="member">CFE_TIME_GetMET</ref> - Get the current Mission Elapsed Time </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a30bd5373cc66b2b67e1ce5eb45333122" kindref="member">CFE_TIME_GetMETseconds</ref> - Get the current seconds count of the Mission Elapsed Time </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a00c542243c0845b0773d51fe4ba83393" kindref="member">CFE_TIME_GetMETsubsecs</ref> - Get the current subseconds count of the Mission Elapsed Time </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Get Time Information APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__time_8h_1adc71d23dcdef62c628f48a58d5c822d1" kindref="member">CFE_TIME_GetSTCF</ref> - Get the current value of the Spacecraft Time Correction Factor </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1afbac2684eb7401dbc9c600139804f58d" kindref="member">CFE_TIME_GetLeapSeconds</ref> - Get the current value of the leap seconds counter </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1af8131cc659f1e3c4e589f3f4b1935542" kindref="member">CFE_TIME_GetClockState</ref> - Get the state of the spacecraft clock </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a9610a9cb24718d159d44a87029957d87" kindref="member">CFE_TIME_GetClockInfo</ref> - Get information about the spacecraft clock </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Time Arithmetic APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__time_8h_1a37506ce0f1156266a217b2f406440673" kindref="member">CFE_TIME_Add</ref> - Adds two time values </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a50e8edf09dc85ff930021cfa69b445f6" kindref="member">CFE_TIME_Subtract</ref> - Subtracts two time values </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1abd11fb8c23847440915308528c2e4470" kindref="member">CFE_TIME_Compare</ref> - Compares two time values </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Time Conversion APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__time_8h_1a67937a937d85d8c0f839fd12badc3315" kindref="member">CFE_TIME_MET2SCTime</ref> - Converts the specified MET into a Spacecraft Time </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a6262446f4ca15369dec1ca68c8c15f54" kindref="member">CFE_TIME_Sub2MicroSecs</ref> - Converts a sub-seconds count to an equivalent number of microseconds </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1adf4e24a86a37b1ff7fdcbf38aff3a481" kindref="member">CFE_TIME_Micro2SubSecs</ref> - Converts a number of microseconds into an equivalent number of MET sub-seconds </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a8a93559be09b93af1821c22d6a02f7d6" kindref="member">CFE_TIME_CFE2FSSeconds</ref> - Converts cFE seconds into the File System&apos;s seconds </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a0f8b1968e967bd7596b0e5dd353dc35d" kindref="member">CFE_TIME_FS2CFESeconds</ref> - Converts File System&apos;s seconds into cFE Seconds </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>External Time Source APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__time_8h_1a8cc4d14a6ba7409c62051367ad6eeb2d" kindref="member">CFE_TIME_ExternalTone</ref> - Identifies the receipt of a 1 Hz signal from an external source </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a393a242255790e6983c6a34583540f8e" kindref="member">CFE_TIME_ExternalMET</ref> - Provide a Mission Elapsed Time (MET) to the cFE from an external source </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a50dde800616c087e70d782f24c031076" kindref="member">CFE_TIME_ExternalGPS</ref> - Provide a time to the cFE from an external source that has common GPS data </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1a4f25a38e9da41e473b30b2b07c9cb3da" kindref="member">CFE_TIME_ExternalTime</ref> - Provide a time to the cFE from an external source that measures time from a known epoch </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1ae13a973062a2174417e4a30465a12146" kindref="member">CFE_TIME_RegisterSynchCallback</ref> - Registers an Application&apos;s callback to be called when an external tone arrives </para></listitem>
+<listitem>
+<para><ref refid="cfe__time_8h_1ad858c0f4363c7e3e44692dd522483026" kindref="member">CFE_TIME_UnregisterSynchCallback</ref> - Unregisters an Application&apos;s callback that is called when an external tone arrives </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Miscellaneous Time APIs <itemizedlist>
+<listitem>
+<para><ref refid="cfe__time_8h_1a008e7b0c99cc1aac24a73b5cd032eee7" kindref="member">CFE_TIME_Print</ref> - Converts a time value to a character string </para></listitem>
+</itemizedlist>
+</para></listitem>
+</itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

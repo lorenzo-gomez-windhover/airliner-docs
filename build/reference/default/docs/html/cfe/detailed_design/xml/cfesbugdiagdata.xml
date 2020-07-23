@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfesbugdiagdata" kind="page">
+    <compoundname>cfesbugdiagdata</compoundname>
+    <title>Diagnostic Data</title>
+    <detaileddescription>
+<para>The cFE software bus provides a set of commands to dump SB diagnostic data to help troubleshoot problems or check configuration settings. These commands allow the user to view the routing table, the pipe table or the message map. The message map is a lookup table used during a send operation to give fast access to the routing table index that corresponds to the message being sent.</para><para>The software bus also provides a statistics packet that can be used to tune the configuration parameters. This information is sent to the ground in the form of an SB packet when the corresponding command is received. The cFE limits the number of system pipes, unique Message IDs, buffer memory, messages on a pipe and subscriptions per Message ID. These limits are configurable through cFE platform and mission configuration parameters. The statistics packet was designed to let the project verify that these user settings provide the necessary margin to meet requirements.</para><para>The SB statistics information shows &apos;Currently In Use&apos; figures, &apos;High Water Mark&apos; figures and &apos;Max Allowed&apos; figures for the following: buffer memory, messages on each pipe (pipe depth stats), System Pipes, Unique Message IDs and total subscriptions.</para><para>Depending on the task-scheduling implementation details of the operating system, it is possible to see the peak messages on a pipe occasionally exceed the depth of the pipe. The &quot;Peak Messages In Use&quot; parameter is included in the SB statistics packet under the pipe depth stats.</para><para>Next: <ref refid="cfesbugroutcntrl" kindref="compound">Control of Packet Routing</ref> <linebreak/>
+ Prev: <ref refid="cfesbugeventfilt" kindref="compound">SB Event Filtering</ref> <linebreak/>
+ Up To: <ref refid="cfesbugops" kindref="compound">Operation of the SB Software</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

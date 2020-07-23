@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeevsugmsgformat" kind="page">
+    <compoundname>cfeevsugmsgformat</compoundname>
+    <title>Event Message Format</title>
+    <detaileddescription>
+<para>Event messages are software bus messages that contain the following fields: <linebreak/>
+</para><para><itemizedlist>
+<listitem>
+<para>Application Name <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Event ID <linebreak/>
+ </para></listitem>
+<listitem>
+<para>EventType <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Spacecraft ID <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Processor ID <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Message <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para><para>The <emphasis>Application Name</emphasis> refers to the Application that issued the event message. The <emphasis>Event ID</emphasis> is an Application unique number that identifies the event. The Event Type can be one of four types: DEBUG, INFO, ERROR or CRITICAL. The <emphasis>Spacecraft ID</emphasis> and <emphasis>Processor ID</emphasis> identify the spacecraft and processor from which the event was generated. Note that the <emphasis>Spacecraft ID</emphasis> is defined in the <ref refid="cfe__mission__cfg_8h" kindref="compound">cfe_mission_cfg.h</ref> file; The <emphasis>Processor ID</emphasis> is defined in the appropriate cfe_platform_cfg.h file. The <emphasis>Message</emphasis> is an ASCII text string describing the event. Event messages may have parameters associated with the event message. EVS formats the parameters such that they are part of the ASCII text string that make up the event message.</para><para>In order to accommodate missions that have limited telemetry bandwidth, EVS can be configured such that the ASCII text string part of the event message is omitted, thus reducing the size of each event message. This is referred to as <emphasis>Short Format</emphasis>; Event messages including the ASCII text string are referred to as <emphasis>Long Format</emphasis>. The default setting is specified in the cfe_platform_cfg.h file. EVS also provides commands in order to set the mode (short or long).</para><para>Since the design of the cFE&apos;s Software Bus is based on run-time registration, no predetermined message routing is defined, hence it is not truly correct to say that events are generated as telemetry. Technically, EVS generates events in the form of software bus messages. Applications such as Telemetry Output and Data Storage can then subscribe to these messages making them telemetry. For the purposes of this document, any references to telemetry assumes that a telemetry application subscribes to the EVS event software bus message and routes it to the ground as telemetry.</para><para>The EVS can be configured via ground command to send event messages out one or more message ports. These message ports may include ports such as debug, console, and UART. Messages sent out of the message ports will be in ASCII text format. This is generally used for lab purposes.</para><para>Next: <ref refid="cfeevsuglog" kindref="compound">Local Event Log</ref> <linebreak/>
+ Up To: <ref refid="cfeevsovr" kindref="compound">cFE Event Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetimeugsettime" kind="page">
+    <compoundname>cfetimeugsettime</compoundname>
+    <title>Setting Time</title>
+    <detaileddescription>
+<para>The Time Server provides commands to set time. The new time value represents the desired offset from mission-defined time epoch and takes effect immediately upon execution of this command. Time Service will calculate a new STCF value based on the current MET and the desired new time using one of the following:</para><para>If Time Service is configured to compute current time as TAI:</para><para><verbatim>STCF = new time - current MET 
+current time =  current MET + STCF 
+</verbatim></para><para>If Time Service is configured to compute current time as UTC:</para><para><verbatim>STCF = ((new time) - (current MET)) + Leap Seconds
+current time = ((current MET) + STCF) - Leap Seconds
+</verbatim></para><para><simplesect kind="see"><para><ref refid="cfe__time__msg_8h_1a1f89c164688fedd85c4065c6f705ad19" kindref="member">CFE_TIME_SET_TIME_CC</ref></para></simplesect>
+Next: <ref refid="cfetimeugadjust" kindref="compound">Adjusting Time</ref> <linebreak/>
+ Up To: <ref refid="cfetimeugserverops" kindref="compound">Server</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

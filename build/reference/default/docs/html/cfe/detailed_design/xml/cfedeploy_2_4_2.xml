@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_2_4_2" kind="page">
+    <compoundname>cfedeploy_2_4_2</compoundname>
+    <title>Configure the makefile in each CPU Directory</title>
+    <detaileddescription>
+<para>The next step is to define the list of applications to compile when the high level &apos;make&apos; command is executed. This list is located in the top level Makefile, which resides in the build/cpu[x] directory. Be sure to update all of the sections for building, cleaning, installing and updating dependencies.</para><para><center> <heading level="4">Sample CPU top level makefile </heading>
+</center></para><para><center> </center></para><para><verbatim>##############################################################################
+## Build rules
+
+cfecore::
+        $(MAKE) -C cfe
+
+apps::
+        $(MAKE) -C tst_lib
+        $(MAKE) -C ci
+        $(MAKE) -C to
+        $(MAKE) -C sch
+        $(MAKE) -C template
+
+cleancore ::
+        $(MAKE) -C cfe clean
+
+cleanapps ::
+        $(MAKE) -C tst_lib clean
+        $(MAKE) -C ci clean
+        $(MAKE) -C to clean
+        $(MAKE) -C sch clean
+        $(MAKE) -C template clean
+</verbatim></para><para>Next: <ref refid="cfedeploy_2_4_3" kindref="compound">Configure the mission and CPU specific cFE Application Parameter files</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_2_4_1" kindref="compound">Configure the Application Directories in each CPU Directory</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_2_4" kindref="compound">Configure a Set of cFE Applications for Each CPU</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

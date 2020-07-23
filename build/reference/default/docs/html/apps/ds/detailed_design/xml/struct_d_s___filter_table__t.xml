@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_d_s___filter_table__t" kind="struct" language="C++" prot="public">
+    <compoundname>DS_FilterTable_t</compoundname>
+    <includes refid="ds__table_8h" local="no">ds_table.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_s___filter_table__t_1a20f3887ca4679109091dc276283e4f8a" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char DS_FilterTable_t::Descriptor[DS_DESCRIPTOR_BUFSIZE]</definition>
+        <argsstring>[DS_DESCRIPTOR_BUFSIZE]</argsstring>
+        <name>Descriptor</name>
+        <briefdescription>
+<para>Description such as &quot;Safehold Filter Table&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_table.h" line="75" column="1" bodyfile="apps/ds/fsw/src/ds_table.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="ds__table_8h_1adde4838262095424505535f16d844bab" compoundref="ds__table_8c" startline="592" endline="649">DS_TableVerifyFilter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s___filter_table__t_1a8f5d837f0efafe87b24248ef1dc433b3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_s___packet_entry__t" kindref="compound">DS_PacketEntry_t</ref></type>
+        <definition>DS_PacketEntry_t DS_FilterTable_t::Packet[DS_PACKETS_IN_FILTER_TABLE]</definition>
+        <argsstring>[DS_PACKETS_IN_FILTER_TABLE]</argsstring>
+        <name>Packet</name>
+        <briefdescription>
+<para>One entry for each filtered packet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_table.h" line="76" column="1" bodyfile="apps/ds/fsw/src/ds_table.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="ds__cmds_8h_1aabf69578be258f8568623654b1dd1f00" compoundref="ds__cmds_8c" startline="1424" endline="1528">DS_CmdAddMID</referencedby>
+        <referencedby refid="ds__cmds_8h_1afd80dbf49c7f4916acb45255943abe05" compoundref="ds__cmds_8c" startline="203" endline="311">DS_CmdSetFilterFile</referencedby>
+        <referencedby refid="ds__cmds_8h_1a47ab4e9712a1648bb33a4ce9c84d9701" compoundref="ds__cmds_8c" startline="437" endline="550">DS_CmdSetFilterParms</referencedby>
+        <referencedby refid="ds__cmds_8h_1afd6c0ade0e6357d826b67813fb69cafa" compoundref="ds__cmds_8c" startline="320" endline="428">DS_CmdSetFilterType</referencedby>
+        <referencedby refid="ds__file_8h_1a25adca81323ff4e3da7e21c9fcf2c114" compoundref="ds__file_8c" startline="41" endline="124">DS_FileStorePacket</referencedby>
+        <referencedby refid="ds__table_8h_1ab04771605fd695d748e26a22b02c1c5e" compoundref="ds__table_8c" startline="1168" endline="1185">DS_TableCreateHash</referencedby>
+        <referencedby refid="ds__table_8h_1ab3633356c289b498a7016ef777960b07" compoundref="ds__table_8c" startline="1239" endline="1275">DS_TableFindMsgID</referencedby>
+        <referencedby refid="ds__table_8h_1ad4b4fd9a4a35ba39a0a4859480776f03" compoundref="ds__table_8c" startline="922" endline="951">DS_TableSubscribe</referencedby>
+        <referencedby refid="ds__table_8h_1a8b81e7b6adb83bc3d9087e579917a85f" compoundref="ds__table_8c" startline="960" endline="988">DS_TableUnsubscribe</referencedby>
+        <referencedby refid="ds__table_8h_1adde4838262095424505535f16d844bab" compoundref="ds__table_8c" startline="592" endline="649">DS_TableVerifyFilter</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="56">
+        <label>DS_FilterParms_t</label>
+        <link refid="struct_d_s___filter_parms__t"/>
+      </node>
+      <node id="55">
+        <label>DS_PacketEntry_t</label>
+        <link refid="struct_d_s___packet_entry__t"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>Filter</edgelabel>
+        </childnode>
+      </node>
+      <node id="54">
+        <label>DS_FilterTable_t</label>
+        <link refid="struct_d_s___filter_table__t"/>
+        <childnode refid="55" relation="usage">
+          <edgelabel>Packet</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/ds/fsw/src/ds_table.h" line="74" column="1" bodyfile="apps/ds/fsw/src/ds_table.h" bodystart="73" bodyend="78"/>
+    <listofallmembers>
+      <member refid="struct_d_s___filter_table__t_1a20f3887ca4679109091dc276283e4f8a" prot="public" virt="non-virtual"><scope>DS_FilterTable_t</scope><name>Descriptor</name></member>
+      <member refid="struct_d_s___filter_table__t_1a8f5d837f0efafe87b24248ef1dc433b3" prot="public" virt="non-virtual"><scope>DS_FilterTable_t</scope><name>Packet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

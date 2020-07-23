@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ci-ut.dir/__/src/ci_app.c.o"
+  "CMakeFiles/ci-ut.dir/__/src/ci_config_utils.c.o"
+  "CMakeFiles/ci-ut.dir/__/unit_test/ci_app_test.c.o"
+  "CMakeFiles/ci-ut.dir/__/unit_test/ci_cds_tbl_test.c.o"
+  "CMakeFiles/ci-ut.dir/__/unit_test/ci_mock_custom.c.o"
+  "CMakeFiles/ci-ut.dir/__/unit_test/ci_cmds_test.c.o"
+  "CMakeFiles/ci-ut.dir/__/unit_test/ci_config_tbl_test.c.o"
+  "CMakeFiles/ci-ut.dir/__/unit_test/ci_test_utils.c.o"
+  "CMakeFiles/ci-ut.dir/__/unit_test/ci_testrunner.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/utassert.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_es_hooks.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_es_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_evs_hooks.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_evs_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_fs_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_eeprom_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_memrange_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_memutils_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_ram_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_timer_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_watchdog_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_sb_hooks.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_sb_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_tbl_hooks.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_tbl_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_time_hooks.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_time_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/utlist.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_osapi_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/ut_osfileapi_stubs.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/uttest.c.o"
+  "CMakeFiles/ci-ut.dir/__/__/__/__/tools/ut_assert/src/uttools.c.o"
+  "ci-ut.pdb"
+  "ci-ut"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/ci-ut.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

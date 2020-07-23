@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cs__verify_8h" kind="file" language="C++">
+    <compoundname>cs_verify.h</compoundname>
+    <includes refid="cs__platform__cfg_8h" local="yes">cs_platform_cfg.h</includes>
+    <includes refid="cs__mission__cfg_8h" local="yes">cs_mission_cfg.h</includes>
+    <includedby refid="cs__app_8h" local="yes">apps/cs/fsw/src/cs_app.h</includedby>
+    <incdepgraph>
+      <node id="1544">
+        <label>cs_platform_cfg.h</label>
+        <link refid="cs__platform__cfg_8h"/>
+      </node>
+      <node id="1543">
+        <label>apps/cs/fsw/src/cs_verify.h</label>
+        <link refid="cs_verify.h"/>
+        <childnode refid="1544" relation="include">
+        </childnode>
+        <childnode refid="1545" relation="include">
+        </childnode>
+      </node>
+      <node id="1546">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="1545">
+        <label>cs_mission_cfg.h</label>
+        <link refid="cs__mission__cfg_8h"/>
+        <childnode refid="1546" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1551">
+        <label>apps/cs/fsw/src/cs_cmds.c</label>
+        <link refid="cs__cmds_8c"/>
+      </node>
+      <node id="1555">
+        <label>apps/cs/fsw/src/cs_table_cmds.c</label>
+        <link refid="cs__table__cmds_8c"/>
+      </node>
+      <node id="1554">
+        <label>apps/cs/fsw/src/cs_memory_cmds.c</label>
+        <link refid="cs__memory__cmds_8c"/>
+      </node>
+      <node id="1547">
+        <label>apps/cs/fsw/src/cs_verify.h</label>
+        <link refid="cs_verify.h"/>
+        <childnode refid="1548" relation="include">
+        </childnode>
+      </node>
+      <node id="1550">
+        <label>apps/cs/fsw/src/cs_app.c</label>
+        <link refid="cs__app_8c"/>
+      </node>
+      <node id="1548">
+        <label>apps/cs/fsw/src/cs_app.h</label>
+        <link refid="cs__app_8h"/>
+        <childnode refid="1549" relation="include">
+        </childnode>
+        <childnode refid="1550" relation="include">
+        </childnode>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1552" relation="include">
+        </childnode>
+        <childnode refid="1553" relation="include">
+        </childnode>
+        <childnode refid="1554" relation="include">
+        </childnode>
+        <childnode refid="1555" relation="include">
+        </childnode>
+        <childnode refid="1556" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+      </node>
+      <node id="1556">
+        <label>apps/cs/fsw/src/cs_table_processing.c</label>
+        <link refid="cs__table__processing_8c"/>
+      </node>
+      <node id="1553">
+        <label>apps/cs/fsw/src/cs_eeprom_cmds.c</label>
+        <link refid="cs__eeprom__cmds_8c"/>
+      </node>
+      <node id="1552">
+        <label>apps/cs/fsw/src/cs_compute.c</label>
+        <link refid="cs__compute_8c"/>
+      </node>
+      <node id="1557">
+        <label>apps/cs/fsw/src/cs_utils.c</label>
+        <link refid="cs__utils_8c"/>
+      </node>
+      <node id="1549">
+        <label>apps/cs/fsw/src/cs_app_cmds.c</label>
+        <link refid="cs__app__cmds_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>cs_verify.h<sp/>1.4<sp/>2017/02/16<sp/>15:33:22EST<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>Contains<sp/>CFS<sp/>Checksum<sp/>macros<sp/>that<sp/>run<sp/>preprocessor<sp/>checks</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/>on<sp/>mission<sp/>configurable<sp/>parameters</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>References:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.2</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>Development<sp/>Standards<sp/>Document</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>CS<sp/>Heritage<sp/>Analysis<sp/>Document</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>CS<sp/>CDR<sp/>Package</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cs_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cs_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Includes</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cs__platform__cfg_8h" kindref="compound">cs_platform_cfg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cs__mission__cfg_8h" kindref="compound">cs_mission_cfg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Macro<sp/>Definitions</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CS_MAX_NUM_EEPROM_TABLE_ENTRIES<sp/><sp/>&gt;<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_MAX_NUM_EEPROM_TABLE_ENTRIES<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>65535!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CS_MAX_NUM_MEMORY_TABLE_ENTRIES<sp/><sp/>&gt;<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_MAX_NUM_MEMORY_TABLE_ENTRIES<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>65535!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>JPH<sp/>2015-06-29<sp/>-<sp/>Removed<sp/>checks<sp/>of:</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/><sp/>CS_MAX_NUM_APP_TABLE_ENTRIES<sp/>&gt;<sp/>CFE_ES_MAX_APPLICATIONS</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/><sp/>CS_MAX_NUM_TABLES_TABLE_ENTRIES<sp/>&gt;<sp/>CFE_TBL_MAX_NUM_TABLES</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>These<sp/>are<sp/>not<sp/>valid<sp/>checks<sp/>anymore,<sp/>as<sp/>the<sp/>CS<sp/>app<sp/>does<sp/>not<sp/>have<sp/>knowledge</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>of<sp/>either<sp/>CFE_ES_MAX_APPLICATIONS<sp/>nor<sp/>CFE_TBL_MAX_NUM_TABLES.<sp/><sp/>Also,<sp/>if</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>these<sp/>actually<sp/>violate<sp/>the<sp/>rule,<sp/>this<sp/>will<sp/>either<sp/>show<sp/>up<sp/>as<sp/>an<sp/>obvious</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*<sp/>run-time<sp/>error<sp/>OR<sp/>it<sp/>will<sp/>still<sp/>work<sp/>perfectly<sp/>fine.</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_MAX_NUM_EEPROM_TABLE_ENTRIES<sp/>&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_MAX_NUM_EEPROM_TABLE_ENTRIES<sp/>must<sp/>be<sp/>at<sp/>least<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_MAX_NUM_MEMORY_TABLE_ENTRIES<sp/>&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_MAX_NUM_MEMORY_TABLE_ENTRIES<sp/>must<sp/>be<sp/>at<sp/>least<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_MAX_NUM_TABLES_TABLE_ENTRIES<sp/>&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_MAX_NUM_TABLES_TABLE_ENTRIES<sp/>must<sp/>be<sp/>at<sp/>least<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_MAX_NUM_APP_TABLE_ENTRIES<sp/>&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_MAX_NUM_APP_TABLE_ENTRIES<sp/>must<sp/>be<sp/>at<sp/>least<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_DEFAULT_BYTES_PER_CYCLE<sp/>&gt;<sp/>0xFFFFFFFF)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_DEFAULT_BYTES_PER_CYCLE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>0xFFFFFFFF!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_DEFAULT_BYTES_PER_CYCLE<sp/>&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_DEFAULT_BYTES_PER_CYCLE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>0!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_CHILD_TASK_PRIORITY<sp/>&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_CHILD_TASK_PRIORITY<sp/>must<sp/>be<sp/>greater<sp/>than<sp/>0!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_CHILD_TASK_PRIORITY<sp/>&gt;<sp/>255)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CS_CHILD_TASK_PRIORITY<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>255!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*_cs_verify_*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/cs/fsw/src/cs_verify.h"/>
+  </compounddef>
+</doxygen>

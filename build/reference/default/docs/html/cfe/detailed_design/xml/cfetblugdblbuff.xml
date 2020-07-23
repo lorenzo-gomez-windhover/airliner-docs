@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetblugdblbuff" kind="page">
+    <compoundname>cfetblugdblbuff</compoundname>
+    <title>Double Buffered Tables</title>
+    <detaileddescription>
+<para>Under certain conditions, a cFE Application Developer may choose to use a double buffered table type within their application. Double buffered tables retain a dedicated inactive image of the table data. With a dedicated inactive table image available, double buffered tables are then capable of efficiently swapping table contents and/or delaying the activation of a table&apos;s contents for an indeterminate amount of time.</para><para>Some cFE Applications prefer to delay the Activation of a table until a specified time (e.g. - a Spacecraft Ephemeris). These tables are typically defined as double buffered tables so that the Inactive image can be left sitting untouched for an extended period of time without interfering with shared resources for other tables. Then the Application can perform the Update when the time is right.</para><para>Applications which have unusually large tables may decide to conserve memory resources by making them double buffered. This is because the shared buffers used by single buffered tables must be sized to match the largest table. If there is one table that is unusually large, there is little reason to allocate up to #CFE_TBL_MAX_SIMULTANEOUS_LOADS number of buffers that size. A double buffered table will only allocate ONE extra buffer of that size.</para><para>Performance minded Applications that are required to perform processing with tight timing deadlines may choose to use double buffered tables because the Update for a double buffered table is deterministic and quick.</para><para>Next: <ref refid="cfetblugvalfunc" kindref="compound">Tables with Validation Functions</ref> <linebreak/>
+ Prev: <ref refid="cfetblugsnglbuff" kindref="compound">Single Buffered Tables</ref> <linebreak/>
+ Up To: <ref refid="cfetblugtypes" kindref="compound">cFE Table Types and Table Options</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

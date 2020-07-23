@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_3_3" kind="page">
+    <compoundname>cfedeploy_3_3</compoundname>
+    <title>BAE RAD750 / vxWorks 6.4 Platform</title>
+    <detaileddescription>
+<para>On the RAD750/vxWorks 6.4 platform, the cFE Core is built as a dynamic loadable vxWorks module, rather than being linked to the vxWorks kernel/BSP. The cFE core is loaded into the EEPROM disk on the RAD750, so it can be started from a vxWorks shell or startup script after the kernel comes up. In order to successfully run the cFE core and cFE Applications on the RAD750, the kernel must have a few items configured to support the cFE.</para><para><center> <heading level="4">cFE Core Configuration for the RAD750 </heading>
+</center></para><para><center> </center> <center> <bold> cfe-config.mak Settings </bold> </center> <table rows="5" cols="3"><row>
+<entry thead="no"><para><bold>cfe-config.mak variable </bold> </para></entry><entry thead="no"><para><bold>Required selection </bold> </para></entry><entry thead="no"><para><bold>Notes</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>HWARCH </para></entry><entry thead="no"><para>PPC </para></entry></row>
+<row>
+<entry thead="no"><para>PLATFORM </para></entry><entry thead="no"><para>rad750 </para></entry></row>
+<row>
+<entry thead="no"><para>OS </para></entry><entry thead="no"><para>vxworks6 </para></entry></row>
+<row>
+<entry thead="no"><para>BSP </para></entry><entry thead="no"><para>vxworks6.4 </para></entry></row>
+</table>
+</para><para>Additional cFE Core configuration notes:<linebreak/>
+ <orderedlist>
+<listitem>
+<para>By default, the -g debug switch is on. It needs to be turned off to load <computeroutput>cfe-core.o</computeroutput> in the EEPROM disk. For loading it from the host drive, you don&apos;t have to change it. The switch is located in <computeroutput>arch/ppc/rad750/vxworks6.4/make/config.mak</computeroutput> </para></listitem>
+<listitem>
+<para>The cfe platform configuration file needs to have the #CFE_TIME_MAX_LOCAL_SECS variable changed from 27 to 20. </para></listitem>
+<listitem>
+<para>The <computeroutput>osconfig.h</computeroutput> configuration file needs to have the #define #OS_INCLUDE_NETWORK changed to #undef #OS_INCLUDE_NETWORK </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">File System Mappings on the RAD750 PPC Board </heading>
+</center></para><para><center> </center></para><para>The cFE uses the following file system mappings for the RAD750 PPC Board. The file system mappings are defined in the <ref refid="bsp__voltab_8c" kindref="compound">bsp_voltab.c</ref> file in the <computeroutput>arch/ppc/mcp750/vxworks6.2/bsp</computeroutput> directory:<linebreak/>
+ <center> <bold> OSAL File System Mappings </bold> </center> <table rows="7" cols="5"><row>
+<entry thead="no"><para><bold> cFE &quot;device&quot; </bold> </para></entry><entry thead="no"><para><bold> File System Type </bold> </para></entry><entry thead="no"><para><bold> cFE Path </bold> </para></entry><entry thead="no"><para><bold> Host Path </bold> </para></entry><entry thead="no"><para><bold> Notes </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>/ramdev0 </para></entry><entry thead="no"><para>Real RAM Disk ( vxWorks ) </para></entry><entry thead="no"><para>/ram </para></entry><entry thead="no"><para>RAM:0/ </para></entry><entry thead="no"><para>Created by the cFE Core. Used to store logs, data files. Preserved on a processor reset. </para></entry></row>
+<row>
+<entry thead="no"><para>/eedev0 </para></entry><entry thead="no"><para>File System Mapped ( FS_BASED) </para></entry><entry thead="no"><para>/cf </para></entry><entry thead="no"><para>eep:0/ </para></entry><entry thead="no"><para>The RAD750 EEPROM disk is used as the Non-Volatile disk for the cFE. It is created/initialized by the BSP and mapped to the cFE in the volume table. This &quot;CF&quot; entry is for backwards compatibility while transitioning to the two banks of EEPROM. It can be ignored once the two-bank solution below is being used. </para></entry></row>
+<row>
+<entry thead="no"><para>/eedev1 </para></entry><entry thead="no"><para>File System Mapped ( FS_BASED) </para></entry><entry thead="no"><para>/eep1 </para></entry><entry thead="no"><para>eep1:0/ </para></entry><entry thead="no"><para>This is the primary RAD750 EEPROM disk. It can be used as the Non-Volatile disk for the cFE. It is created and initialized by the BSP and mapped to the cFE in the volume table. </para></entry></row>
+<row>
+<entry thead="no"><para>/eedev2 </para></entry><entry thead="no"><para>File System Mapped ( FS_BASED) </para></entry><entry thead="no"><para>/eep2 </para></entry><entry thead="no"><para>eep2:0/ </para></entry><entry thead="no"><para>This is the secondary RAD750 EEPROM disk. It can be used as the Non-Volatile disk for the cFE. It is created and initialized by the BSP and mapped to the cFE in the volume table. </para></entry></row>
+<row>
+<entry thead="no"><para>/ramdev1 - /ramdev5 </para></entry><entry thead="no"><para>Real RAM Disk </para></entry><entry thead="no"><para>N/A </para></entry><entry thead="no"><para>N/A </para></entry><entry thead="no"><para>Unused table entries for applications to create new cFE based RAM disks </para></entry></row>
+<row>
+<entry thead="no"><para>/ssrdev0 - /ssrdev2 </para></entry><entry thead="no"><para>File System Mapped (FS_BASED) </para></entry><entry thead="no"><para>N/A </para></entry><entry thead="no"><para>/ssr:0/SSR1 - /ssr:0/SSR3 </para></entry><entry thead="no"><para>Unused table entries for applications to map Hard Disk device directories to &quot;pseudo&quot; SSR file systems. </para></entry></row>
+</table>
+</para><para><center> <heading level="4">How to configure the vxWorks 6.4 BSP to support the cFE </heading>
+</center></para><para><center> </center></para><para><orderedlist>
+<listitem>
+<para>In <computeroutput>config.h</computeroutput>, the USER_RESERVED_MEM macro must be set to be at least as much as the sum of:<linebreak/>
+ #CFE_ES_RESET_AREA_SIZE + (#CFE_ES_RAM_DISK_SECTOR_SIZE * #CFE_ES_RAM_DISK_NUM_SECTORS ) + #CFE_ES_USER_RESERVED_SIZE + 0x100 ( that is just for a few extra variables )</para><para>The #CFE_ES_USER_RESERVED_SIZE can be used to allocate a chunk of memory that gets preserved on a Processor Reset. The cFE Applications can get the address and size of this memory by calling:</para><para><computeroutput>int32 OS_BSPGetUserReservedArea(void *ptrToUserArea, uint32 *SizeOfUserArea);</computeroutput></para><para>The function prototype is in <computeroutput>&quot;os_bsp.h&quot;</computeroutput>.</para><para>( On the MCP750 COTS board, this sizing is automatic, because the BSP is still integrated with the cFE ):</para><para><verbatim>        #define USER_RESERVED_MEM  (CFE_ES_CDS_SIZE + \
+                                    CFE_ES_RESET_AREA_SIZE + \
+                                    (CFE_ES_RAM_DISK_SECTOR_SIZE * CFE_ES_RAM_DISK_NUM_SECTORS )+ \
+                                    CFE_ES_USER_RESERVED_SIZE + \
+                                    0x100 )</verbatim></para><para></para></listitem>
+<listitem>
+<para>Integrate the support module called <computeroutput>cfeSupport.c</computeroutput> : This module must be added to the vxWorks BSP. It contains a couple of functions to return the kernel text addresses and it also has the <computeroutput>&quot;startCfeCore&quot;</computeroutput> routine that will load and start the cFE core.</para><para></para></listitem>
+<listitem>
+<para>Create a non-volatile disk. To support the cFE, there must be a non-volatile disk that contains the cFE Core loadable module, startup script, and cFE apps. For LRO, there is an EEPROM disk in the on-board EEPROMs. The disk is created in the kernel as device: <computeroutput>&quot;/eep:0&quot;</computeroutput>. This non-volatile disk device must be mapped to the cFE <computeroutput>&apos;eedev0&apos;</computeroutput> device in the file <computeroutput>&quot;bsp_voltab.c&quot;</computeroutput> ( the entry should already be in the file ). In the event a physical EEPROM disk is not available, a vxWorks <computeroutput>ROMFS</computeroutput> file system, or a <computeroutput>hostfs</computeroutput> file system could be used. </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">How to run the cFE on the RAD750 </heading>
+</center></para><para><center> </center></para><para><orderedlist>
+<listitem>
+<para>Load the kernel. The custom vxWorks kernel can be loaded into a bank of EEPROM, or the kernel could be loaded via the serial port directly into RAM to boot. </para></listitem>
+<listitem>
+<para>Decide what directory will be used to store the cFE Applications and cFE Startup File. In this example, assume that the cFE Applications will be stored in the <computeroutput>/eep:0/apps</computeroutput> directory, which will be mapped to the <computeroutput>&quot;/cf/apps&quot;</computeroutput> cFE path. Create the <computeroutput>&quot;apps&quot;</computeroutput> directory on the non-volatile disk: <computeroutput>&quot;/eep:0/apps&quot;</computeroutput>. </para></listitem>
+<listitem>
+<para>Copy the <computeroutput>&quot;cfe-core.o&quot;</computeroutput> loadable module into the non-volatile disk. On LRO, this has to be done with a custom vxWorks host shell tcl script <computeroutput>&quot;lcp2&quot;</computeroutput> that can copy a file from the host file system to a target file system over the serial WDB connection. Note that the <computeroutput>cfe-core.o</computeroutput> must be built without the <computeroutput>&quot;-g&quot;</computeroutput> debug flag in order to make it small enough for the copy. </para></listitem>
+<listitem>
+<para>For this example, also assume that the cFE Startup File is named <computeroutput>&quot;cfe_es_startup.scr&quot;</computeroutput>. Copy the <computeroutput>&quot;cfe_es_startup.scr&quot;</computeroutput> script into the non-volatile disk <computeroutput>&quot;apps&quot;</computeroutput> directory. </para></listitem>
+<listitem>
+<para>Copy all of the cFE Application <computeroutput>&quot;.o&quot;</computeroutput> files into the non-volatile disk <computeroutput>&quot;apps&quot;</computeroutput> directory. Again, the apps must be built without the <computeroutput>&quot;-g&quot;</computeroutput> flag in order to make them small enough. </para></listitem>
+<listitem>
+<para>Start the cFE Core on the target: <linebreak/>
+ On the host shell ( or target shell ) type: <verbatim>        &gt; ioGlobalStdSet 1,3
+        &gt; ioGlobalStdSet 2,3
+        &gt; logFdSet 3
+        &gt; startCfeCore &quot;/eep:0/cfe-core.o&quot;, 1, &quot;/cf/apps/cfe_es_startup.scr&quot;</verbatim></para><para>Note the new parameters to the <computeroutput>&quot;startCfeCore&quot;</computeroutput> function. The second parameter is the image ID. It is an arbitrary integer to help identify which cFE image was booted. In a mission with two banks of EEPROM and two copies of the cFE it can be used to identify or verify the bank that is being used. No other runtime decisions are made based on this parameter. The third parameter is the full cFE path and filename of the cFE Startup File. In this example, the name is the same as the previous build ( 4.0.1 ). Once there are two banks of EEPROM in operation, this parameter can be used to select which EEPROM disk is used to startup the cFE Applications. </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">Exception Handling </heading>
+</center></para><para><center> </center></para><para>The <computeroutput>ppc/rad750/vxWorks 6.4</computeroutput> port will catch all exceptions, log them, and cause a processor reset. If the PID29 debug switch is ON, the cFE will NOT install the cFE exception handler. This will allow the users to debug a crash using the host vxWorks tools, rather than having the cFE perform a Processor Reset.</para><para><center> <heading level="4">BSP Panic </heading>
+</center></para><para><center> </center></para><para>If the cFE core startup fails, the generic cFE code will call the #OS_BSPPanic routine. This is a target specific routine. If the cFE Startup fails and calls #OS_BSPPanic, having the PID29 debug switch in the ON position will cause the cFE to abort to the vxWorks shell. Having the switch in the OFF position will cause the cFE to do a Processor Reset.</para><para><center> <heading level="4">Compressed file support </heading>
+</center></para><para><center> </center></para><para>The cFE supports loading compressed cFE Application files. The files must be compressed with the <computeroutput>&quot;gzip&quot;</computeroutput> utility. An example: <computeroutput>&quot;$ gzip ci.o&quot;</computeroutput>. This will produce the file <computeroutput>&quot;ci.o.gz&quot;</computeroutput>. When the cFE code detects the <computeroutput>.gz</computeroutput> file extension, it will uncompress the cFE application when loading it.</para><para>Next: <ref refid="cfedeploy_3_4" kindref="compound">Macintosh / OS X Platform</ref> <bold>OR</bold> <ref refid="cfedeploy_4" kindref="compound">cFE Tools</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_3_1" kindref="compound">MCP750 / vxWorks 6.4 Platform</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_3" kindref="compound">Target Specific Instructions</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

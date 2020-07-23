@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_s_c___app_data__t" kind="struct" language="C++" prot="public">
+    <compoundname>SC_AppData_t</compoundname>
+    <includes refid="sc__app_8h" local="no">sc_app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a88d18d9387612ef1a3180761231c427e" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 SC_AppData_t::ContinueAtsOnFailureFlag</definition>
+        <argsstring></argsstring>
+        <name>ContinueAtsOnFailureFlag</name>
+        <briefdescription>
+<para>If an Ats command fails checksum the ATS execution will continue if This flag is set to TRUE and will stop if this flag is set to FALSE. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="345" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="345" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+        <referencedby refid="sc__atsrq_8h_1adf1ad91a0ac4209fdc2bad863295fd30" compoundref="sc__atsrq_8c" startline="710" endline="741">SC_ContinueAtsOnFailureCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a3d36defd73403467bc7179b96fe9e8e5" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::AtsTimeIndexBuffer[SC_NUMBER_OF_ATS][SC_MAX_ATS_CMDS]</definition>
+        <argsstring>[SC_NUMBER_OF_ATS][SC_MAX_ATS_CMDS]</argsstring>
+        <name>AtsTimeIndexBuffer</name>
+        <briefdescription>
+<para>This table is used to keep a time ordered listing of ATS commands. The index used is the ATS command number. The first in this table holds the command number of the command that will execute first, the second entry has the number of the 2nd cmd, etc.. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="349" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="349" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a8a81e9c2eb64da05ba257bc7a399ada8" compoundref="sc__atsrq_8c" startline="234" endline="324">SC_BeginAts</referencedby>
+        <referencedby refid="sc__loads_8h_1a94efe79f312de6e2ddfc93602a80f3e2" compoundref="sc__loads_8c" startline="241" endline="266">SC_BuildTimeIndexTable</referencedby>
+        <referencedby refid="sc__state_8h_1aed7327ff45afa377eb11a11b522110fa" compoundref="sc__state_8c" startline="341" endline="397">SC_GetNextAtsCommand</referencedby>
+        <referencedby refid="sc__loads_8h_1a0cc5434df420502c5d7269b9be5e7ff6" compoundref="sc__loads_8c" startline="343" endline="359">SC_InitAtsTables</referencedby>
+        <referencedby refid="sc__loads_8h_1ae16960a3e96f84bdae9cc07750a9602e" compoundref="sc__loads_8c" startline="274" endline="335">SC_Insert</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a03bf96d70ccfb74d080dd584c0dc0296" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 SC_AppData_t::AtsCmdIndexBuffer[SC_NUMBER_OF_ATS][SC_MAX_ATS_CMDS]</definition>
+        <argsstring>[SC_NUMBER_OF_ATS][SC_MAX_ATS_CMDS]</argsstring>
+        <name>AtsCmdIndexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="355" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="355" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a8a81e9c2eb64da05ba257bc7a399ada8" compoundref="sc__atsrq_8c" startline="234" endline="324">SC_BeginAts</referencedby>
+        <referencedby refid="sc__loads_8h_1a94efe79f312de6e2ddfc93602a80f3e2" compoundref="sc__loads_8c" startline="241" endline="266">SC_BuildTimeIndexTable</referencedby>
+        <referencedby refid="sc__state_8h_1aed7327ff45afa377eb11a11b522110fa" compoundref="sc__state_8c" startline="341" endline="397">SC_GetNextAtsCommand</referencedby>
+        <referencedby refid="sc__loads_8h_1a0cc5434df420502c5d7269b9be5e7ff6" compoundref="sc__loads_8c" startline="343" endline="359">SC_InitAtsTables</referencedby>
+        <referencedby refid="sc__loads_8h_1ae16960a3e96f84bdae9cc07750a9602e" compoundref="sc__loads_8c" startline="274" endline="335">SC_Insert</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a816bc81fa048a45b1f65be72695a11bc" compoundref="sc__loads_8c" startline="99" endline="233">SC_LoadAts</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a2a10802de44ad94677442c42a304d573" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 SC_AppData_t::NextProcNumber</definition>
+        <argsstring></argsstring>
+        <name>NextProcNumber</name>
+        <briefdescription>
+<para>the next command processor number </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="357" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="357" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__state_8h_1a6758b9fc9107b2b46e0e04c4ae5e6664" compoundref="sc__state_8c" startline="113" endline="151">SC_UpdateNextTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1ae226884178b29aa50e5236580ee69917" prot="public" static="no" mutable="no">
+        <type><ref refid="sc__tbldefs_8h_1a28d20ba745b8e9e01873312162938000" kindref="member">SC_AbsTimeTag_t</ref></type>
+        <definition>SC_AbsTimeTag_t SC_AppData_t::NextCmdTime[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>NextCmdTime</name>
+        <briefdescription>
+<para>The overall next command time 0 - ATP, 1- RTP. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="358" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="358" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a8a81e9c2eb64da05ba257bc7a399ada8" compoundref="sc__atsrq_8c" startline="234" endline="324">SC_BeginAts</referencedby>
+        <referencedby refid="sc__state_8h_1aed7327ff45afa377eb11a11b522110fa" compoundref="sc__state_8c" startline="341" endline="397">SC_GetNextAtsCommand</referencedby>
+        <referencedby refid="sc__state_8h_1a95e18f6fab756db5f6bdec408fdec63d" compoundref="sc__state_8c" startline="68" endline="106">SC_GetNextRtsTime</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1aa4e5e88e49506b47ec4e2759d1a8088a" compoundref="sc__atsrq_8c" startline="332" endline="349">SC_KillAts</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ae69e64aed02ef744b205cb07fdd0e861" compoundref="sc__atsrq_8c" startline="423" endline="490">SC_ServiceSwitchPend</referencedby>
+        <referencedby refid="sc__state_8h_1a6758b9fc9107b2b46e0e04c4ae5e6664" compoundref="sc__state_8c" startline="113" endline="151">SC_UpdateNextTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1aa3b4c501ef64585b7f9c9bde2bc7f84b" prot="public" static="no" mutable="no">
+        <type><ref refid="sc__tbldefs_8h_1a28d20ba745b8e9e01873312162938000" kindref="member">SC_AbsTimeTag_t</ref></type>
+        <definition>SC_AbsTimeTag_t SC_AppData_t::CurrentTime</definition>
+        <argsstring></argsstring>
+        <name>CurrentTime</name>
+        <briefdescription>
+<para>this is the current time for SC </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="359" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="359" bodyend="-1"/>
+        <referencedby refid="sc__utils_8h_1ac6af36b0399701c0af2597061026a21f" compoundref="sc__utils_8c" startline="121" endline="142">SC_ComputeAbsTime</referencedby>
+        <referencedby refid="sc__utils_8h_1a726f52bb680b2b359eeb1d80ea8bd79b" compoundref="sc__utils_8c" startline="71" endline="88">SC_GetCurrentTime</referencedby>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ae69e64aed02ef744b205cb07fdd0e861" compoundref="sc__atsrq_8c" startline="423" endline="490">SC_ServiceSwitchPend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1acacf89d319aa3ff369032385bc605bc0" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::CmdErrCtr</definition>
+        <argsstring></argsstring>
+        <name>CmdErrCtr</name>
+        <briefdescription>
+<para>Counts Request Errors. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="360" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="360" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a3f66fd506dce0cf0c0c9764222e2f387" compoundref="sc__atsrq_8c" startline="749" endline="809">SC_AppendAtsCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1adf1ad91a0ac4209fdc2bad863295fd30" compoundref="sc__atsrq_8c" startline="710" endline="741">SC_ContinueAtsOnFailureCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af2b821691ddac2445954ff04e9f14f44" compoundref="sc__rtsrq_8c" startline="390" endline="425">SC_DisableRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a81978a02722b4746afd15230104b30aa" compoundref="sc__rtsrq_8c" startline="434" endline="481">SC_DisableRtsGrpCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af9e2c25188ff805eaf63980273a53e9b" compoundref="sc__rtsrq_8c" startline="489" endline="528">SC_EnableRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ad50bc01bb2645d329678fcaf5c64a332" compoundref="sc__rtsrq_8c" startline="537" endline="584">SC_EnableRtsGrpCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a641a2ed2774a4951cd79f0ed15c31aa0" compoundref="sc__atsrq_8c" startline="356" endline="415">SC_GroundSwitchCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a68058fd082d5675fcadf1042e5a6bbd4" compoundref="sc__atsrq_8c" startline="498" endline="568">SC_InlineSwitch</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1aa78c810357c7edea79d78be1c2013bfa" compoundref="sc__cmds_8c" startline="727" endline="815">SC_ProcessCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+        <referencedby refid="sc__cmds_8h_1a1bb51e0b6bc1f6b30d03a5cbde166fa3" compoundref="sc__cmds_8c" startline="568" endline="585">SC_ResetCountersCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a687aae01f1d28bd5dba0d23d9ffa832a" compoundref="sc__atsrq_8c" startline="91" endline="170">SC_StartAtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af3256232b4e0cdd7688bf3d9772094d5" compoundref="sc__rtsrq_8c" startline="219" endline="283">SC_StartRtsGrpCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ad580bebe10c9142749c255510786d732" compoundref="sc__rtsrq_8c" startline="291" endline="326">SC_StopRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a0c33d7aeb1626bfa209777235f6c3637" compoundref="sc__rtsrq_8c" startline="335" endline="382">SC_StopRtsGrpCmd</referencedby>
+        <referencedby refid="sc__utils_8h_1a631102696bfaadee4fc90587fd67e8cf" compoundref="sc__utils_8c" startline="183" endline="211">SC_VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1ae9226772ddc48bb6bc3b18f0bcc21e1a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::CmdCtr</definition>
+        <argsstring></argsstring>
+        <name>CmdCtr</name>
+        <briefdescription>
+<para>Counts Ground Requests. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="361" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="361" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a3f66fd506dce0cf0c0c9764222e2f387" compoundref="sc__atsrq_8c" startline="749" endline="809">SC_AppendAtsCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1adf1ad91a0ac4209fdc2bad863295fd30" compoundref="sc__atsrq_8c" startline="710" endline="741">SC_ContinueAtsOnFailureCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af2b821691ddac2445954ff04e9f14f44" compoundref="sc__rtsrq_8c" startline="390" endline="425">SC_DisableRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a81978a02722b4746afd15230104b30aa" compoundref="sc__rtsrq_8c" startline="434" endline="481">SC_DisableRtsGrpCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af9e2c25188ff805eaf63980273a53e9b" compoundref="sc__rtsrq_8c" startline="489" endline="528">SC_EnableRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ad50bc01bb2645d329678fcaf5c64a332" compoundref="sc__rtsrq_8c" startline="537" endline="584">SC_EnableRtsGrpCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a641a2ed2774a4951cd79f0ed15c31aa0" compoundref="sc__atsrq_8c" startline="356" endline="415">SC_GroundSwitchCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a68058fd082d5675fcadf1042e5a6bbd4" compoundref="sc__atsrq_8c" startline="498" endline="568">SC_InlineSwitch</referencedby>
+        <referencedby refid="sc__atsrq_8h_1ad501fbe3c43e112872b3bfa22dbc8477" compoundref="sc__atsrq_8c" startline="576" endline="703">SC_JumpAtsCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1af1473559ad6d652f81e7a0f1fef31145" compoundref="sc__cmds_8c" startline="592" endline="605">SC_NoOpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a1bb51e0b6bc1f6b30d03a5cbde166fa3" compoundref="sc__cmds_8c" startline="568" endline="585">SC_ResetCountersCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a687aae01f1d28bd5dba0d23d9ffa832a" compoundref="sc__atsrq_8c" startline="91" endline="170">SC_StartAtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af3256232b4e0cdd7688bf3d9772094d5" compoundref="sc__rtsrq_8c" startline="219" endline="283">SC_StartRtsGrpCmd</referencedby>
+        <referencedby refid="sc__atsrq_8h_1a2f9fa2d89a5aec67ebe386074235e88d" compoundref="sc__atsrq_8c" startline="177" endline="227">SC_StopAtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ad580bebe10c9142749c255510786d732" compoundref="sc__rtsrq_8c" startline="291" endline="326">SC_StopRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a0c33d7aeb1626bfa209777235f6c3637" compoundref="sc__rtsrq_8c" startline="335" endline="382">SC_StopRtsGrpCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a6e1e73607773fb2f0b5ee8ef9881acec" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::RtsActiveErrCtr</definition>
+        <argsstring></argsstring>
+        <name>RtsActiveErrCtr</name>
+        <briefdescription>
+<para>Increments when an attempt to start an RTS fails. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="362" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="362" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1a1bb51e0b6bc1f6b30d03a5cbde166fa3" compoundref="sc__cmds_8c" startline="568" endline="585">SC_ResetCountersCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a0dbfeb8359a4d32e7a092a9449438b66" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::RtsActiveCtr</definition>
+        <argsstring></argsstring>
+        <name>RtsActiveCtr</name>
+        <briefdescription>
+<para>Increments when an RTS is started without error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="363" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="363" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1a1bb51e0b6bc1f6b30d03a5cbde166fa3" compoundref="sc__cmds_8c" startline="568" endline="585">SC_ResetCountersCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af3256232b4e0cdd7688bf3d9772094d5" compoundref="sc__rtsrq_8c" startline="219" endline="283">SC_StartRtsGrpCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a4666b31374020697e995189c75e4b8df" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::AtsCmdCtr</definition>
+        <argsstring></argsstring>
+        <name>AtsCmdCtr</name>
+        <briefdescription>
+<para>Total ATS cmd counter counts commands sent by the ATS. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="364" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="364" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a1bb51e0b6bc1f6b30d03a5cbde166fa3" compoundref="sc__cmds_8c" startline="568" endline="585">SC_ResetCountersCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a07edd5e9d090c29e28246a61df8a3b8e" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::AtsCmdErrCtr</definition>
+        <argsstring></argsstring>
+        <name>AtsCmdErrCtr</name>
+        <briefdescription>
+<para>Total ATS cmd Error ctr command errors in the ATS. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="365" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="365" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a1bb51e0b6bc1f6b30d03a5cbde166fa3" compoundref="sc__cmds_8c" startline="568" endline="585">SC_ResetCountersCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1ab0158afd2de858824e497e2f7157411e" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::RtsCmdCtr</definition>
+        <argsstring></argsstring>
+        <name>RtsCmdCtr</name>
+        <briefdescription>
+<para>Counts TOTAL rts commands that were sent out from ALL active RTSs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="366" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="366" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a1bb51e0b6bc1f6b30d03a5cbde166fa3" compoundref="sc__cmds_8c" startline="568" endline="585">SC_ResetCountersCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a221162cd9b2662c86a840251357b8827" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::RtsCmdErrCtr</definition>
+        <argsstring></argsstring>
+        <name>RtsCmdErrCtr</name>
+        <briefdescription>
+<para>Counts TOTAL number of errs from ALL RTSs that are active. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="367" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="367" bodyend="-1"/>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a1bb51e0b6bc1f6b30d03a5cbde166fa3" compoundref="sc__cmds_8c" startline="568" endline="585">SC_ResetCountersCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1af4c7e7de219f764a5718d4153f7bb3bb" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::LastAtsErrSeq</definition>
+        <argsstring></argsstring>
+        <name>LastAtsErrSeq</name>
+        <briefdescription>
+<para>Last ATS Errant Sequence Num Values: 1 or 2. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="368" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="368" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a69d302e415f378c15e3c6cd4a3f3d799" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::LastAtsErrCmd</definition>
+        <argsstring></argsstring>
+        <name>LastAtsErrCmd</name>
+        <briefdescription>
+<para>Last ATS Errant Command Num. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="369" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="369" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1ab43b771e424d73f73b3af2427b9aaae0" compoundref="sc__cmds_8c" startline="115" endline="350">SC_ProcessAtpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1aed60fb59caaec8e1726f0a81abd2d684" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::LastRtsErrSeq</definition>
+        <argsstring></argsstring>
+        <name>LastRtsErrSeq</name>
+        <briefdescription>
+<para>Last RTS Errant Sequence Num. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="370" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="370" bodyend="-1"/>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a50e66063c117cc1adf708ad3d91fc323" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::LastRtsErrCmd</definition>
+        <argsstring></argsstring>
+        <name>LastRtsErrCmd</name>
+        <briefdescription>
+<para>The OFFSET in the RTS buffer of the command. It will be a WORD value i.e. 1st command had an error, this value would be 0, if the 2nd command started at int8 10 in the buffer, this value would be 5. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="371" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="371" bodyend="-1"/>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a132236286ca6d51e66424e2b480b5517" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::AppendCmdArg</definition>
+        <argsstring></argsstring>
+        <name>AppendCmdArg</name>
+        <briefdescription>
+<para>ATS selection argument from most recent Append ATS command. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="376" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="376" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a3f66fd506dce0cf0c0c9764222e2f387" compoundref="sc__atsrq_8c" startline="749" endline="809">SC_AppendAtsCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a9b464bf4c3cea1519ca9cd4f5bd735e6" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::AppendEntryCount</definition>
+        <argsstring></argsstring>
+        <name>AppendEntryCount</name>
+        <briefdescription>
+<para>Number of cmd entries in current Append ATS table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="377" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="377" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a3f66fd506dce0cf0c0c9764222e2f387" compoundref="sc__atsrq_8c" startline="749" endline="809">SC_AppendAtsCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__loads_8h_1a2d0f5e99af744f8018f7b2e1f084e434" compoundref="sc__loads_8c" startline="568" endline="632">SC_UpdateAppend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a08c5ed2267a4f6704820f75597c59001" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::AppendWordCount</definition>
+        <argsstring></argsstring>
+        <name>AppendWordCount</name>
+        <briefdescription>
+<para>Size of cmd entries in current Append ATS table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="378" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="378" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a3f66fd506dce0cf0c0c9764222e2f387" compoundref="sc__atsrq_8c" startline="749" endline="809">SC_AppendAtsCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a1b78fb5ea121dbd2bfbaa4b6cffcb1a4" compoundref="sc__loads_8c" startline="640" endline="710">SC_ProcessAppend</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__loads_8h_1a2d0f5e99af744f8018f7b2e1f084e434" compoundref="sc__loads_8c" startline="568" endline="632">SC_UpdateAppend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a3b6e42436e4a3bdcaa3092171139d87d" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::AppendLoadCount</definition>
+        <argsstring></argsstring>
+        <name>AppendLoadCount</name>
+        <briefdescription>
+<para>Total number of Append ATS table loads. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="379" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="379" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__loads_8h_1a2d0f5e99af744f8018f7b2e1f084e434" compoundref="sc__loads_8c" startline="568" endline="632">SC_UpdateAppend</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a5dd1f823cdee89bcb1590a24a6222201" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::Unused</definition>
+        <argsstring></argsstring>
+        <name>Unused</name>
+        <briefdescription>
+<para>Unused. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="381" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_c___app_data__t_1a1688c87bc37aa37455ed61136c6f9896" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 SC_AppData_t::AutoStartRTS</definition>
+        <argsstring></argsstring>
+        <name>AutoStartRTS</name>
+        <briefdescription>
+<para>Start selected auto-exec RTS after init. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/src/sc_app.h" line="382" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="382" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SC Application Data Structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="apps/sc/fsw/src/sc_app.h" line="344" column="1" bodyfile="apps/sc/fsw/src/sc_app.h" bodystart="343" bodyend="384"/>
+    <listofallmembers>
+      <member refid="struct_s_c___app_data__t_1a132236286ca6d51e66424e2b480b5517" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AppendCmdArg</name></member>
+      <member refid="struct_s_c___app_data__t_1a9b464bf4c3cea1519ca9cd4f5bd735e6" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AppendEntryCount</name></member>
+      <member refid="struct_s_c___app_data__t_1a3b6e42436e4a3bdcaa3092171139d87d" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AppendLoadCount</name></member>
+      <member refid="struct_s_c___app_data__t_1a08c5ed2267a4f6704820f75597c59001" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AppendWordCount</name></member>
+      <member refid="struct_s_c___app_data__t_1a4666b31374020697e995189c75e4b8df" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AtsCmdCtr</name></member>
+      <member refid="struct_s_c___app_data__t_1a07edd5e9d090c29e28246a61df8a3b8e" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AtsCmdErrCtr</name></member>
+      <member refid="struct_s_c___app_data__t_1a03bf96d70ccfb74d080dd584c0dc0296" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AtsCmdIndexBuffer</name></member>
+      <member refid="struct_s_c___app_data__t_1a3d36defd73403467bc7179b96fe9e8e5" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AtsTimeIndexBuffer</name></member>
+      <member refid="struct_s_c___app_data__t_1a1688c87bc37aa37455ed61136c6f9896" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>AutoStartRTS</name></member>
+      <member refid="struct_s_c___app_data__t_1ae9226772ddc48bb6bc3b18f0bcc21e1a" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>CmdCtr</name></member>
+      <member refid="struct_s_c___app_data__t_1acacf89d319aa3ff369032385bc605bc0" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>CmdErrCtr</name></member>
+      <member refid="struct_s_c___app_data__t_1a88d18d9387612ef1a3180761231c427e" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>ContinueAtsOnFailureFlag</name></member>
+      <member refid="struct_s_c___app_data__t_1aa3b4c501ef64585b7f9c9bde2bc7f84b" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>CurrentTime</name></member>
+      <member refid="struct_s_c___app_data__t_1a69d302e415f378c15e3c6cd4a3f3d799" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>LastAtsErrCmd</name></member>
+      <member refid="struct_s_c___app_data__t_1af4c7e7de219f764a5718d4153f7bb3bb" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>LastAtsErrSeq</name></member>
+      <member refid="struct_s_c___app_data__t_1a50e66063c117cc1adf708ad3d91fc323" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>LastRtsErrCmd</name></member>
+      <member refid="struct_s_c___app_data__t_1aed60fb59caaec8e1726f0a81abd2d684" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>LastRtsErrSeq</name></member>
+      <member refid="struct_s_c___app_data__t_1ae226884178b29aa50e5236580ee69917" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>NextCmdTime</name></member>
+      <member refid="struct_s_c___app_data__t_1a2a10802de44ad94677442c42a304d573" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>NextProcNumber</name></member>
+      <member refid="struct_s_c___app_data__t_1a0dbfeb8359a4d32e7a092a9449438b66" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>RtsActiveCtr</name></member>
+      <member refid="struct_s_c___app_data__t_1a6e1e73607773fb2f0b5ee8ef9881acec" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>RtsActiveErrCtr</name></member>
+      <member refid="struct_s_c___app_data__t_1ab0158afd2de858824e497e2f7157411e" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>RtsCmdCtr</name></member>
+      <member refid="struct_s_c___app_data__t_1a221162cd9b2662c86a840251357b8827" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>RtsCmdErrCtr</name></member>
+      <member refid="struct_s_c___app_data__t_1a5dd1f823cdee89bcb1590a24a6222201" prot="public" virt="non-virtual"><scope>SC_AppData_t</scope><name>Unused</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="sens__events_8h" kind="file" language="C++">
+    <compoundname>sens_events.h</compoundname>
+    <includedby refid="sens__app_8h" local="yes">apps/sens/fsw/src/sens_app.h</includedby>
+    <invincdepgraph>
+      <node id="317">
+        <label>apps/sens/fsw/src/sens_app.h</label>
+        <link refid="sens__app_8h"/>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+      </node>
+      <node id="319">
+        <label>apps/sens/fsw/src/sens_config_utils.cpp</label>
+        <link refid="sens__config__utils_8cpp"/>
+      </node>
+      <node id="316">
+        <label>apps/sens/fsw/src/sens_events.h</label>
+        <link refid="sens_events.h"/>
+        <childnode refid="317" relation="include">
+        </childnode>
+      </node>
+      <node id="318">
+        <label>apps/sens/fsw/src/sens_app.cpp</label>
+        <link refid="sens__app_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776" prot="public" static="no">
+        <name>SENS_EventIds_t</name>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a8f4c49dd73d06749b865cd0f181abe97" prot="public">
+          <name>SENS_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a08875d6aeb5eedcccf55a330bafe798d" prot="public">
+          <name>SENS_INIT_INF_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> task has completed initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the application major version defined in <ref refid="sens__version_8h_1a6752aee292c697865061370c57dc198e" kindref="member">SENS_MAJOR_VERSION</ref>. The second <computeroutput>d</computeroutput> field contains the application minor version defined in <ref refid="sens__version_8h_1a7446a5b34d23adeac2656887db13e5f7" kindref="member">SENS_MINOR_VERSION</ref>. The third <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="sens__version_8h_1a34fbdafcff056ccd2ca71bd1b8d81cc7" kindref="member">SENS_REVISION</ref>. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="sens__platform__cfg_8h_1a3645d311f085dd22a4ed0c3374e667ab" kindref="member">SENS_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a2947d2a9e1170533d938199f0513acf1" prot="public">
+          <name>SENS_CMD_NOOP_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> Task receives a NoOp command.</para><para>The first <computeroutput>u</computeroutput> field contains the application major version defined in <ref refid="sens__version_8h_1a6752aee292c697865061370c57dc198e" kindref="member">SENS_MAJOR_VERSION</ref>. The first <computeroutput>d</computeroutput> field contains the application major version defined in <ref refid="sens__version_8h_1a6752aee292c697865061370c57dc198e" kindref="member">SENS_MAJOR_VERSION</ref>. The second <computeroutput>d</computeroutput> field contains the application minor version defined in <ref refid="sens__version_8h_1a7446a5b34d23adeac2656887db13e5f7" kindref="member">SENS_MINOR_VERSION</ref>. The third <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="sens__version_8h_1a34fbdafcff056ccd2ca71bd1b8d81cc7" kindref="member">SENS_REVISION</ref>. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="sens__platform__cfg_8h_1a3645d311f085dd22a4ed0c3374e667ab" kindref="member">SENS_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776ac2b25aa156aa171c838796e910ce932b" prot="public">
+          <name>SENS_SUBSCRIBE_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> Task fails to subscribe to a message at initialization.</para><para>The first <computeroutput>s</computeroutput> field contains the name of the pipe. The second <computeroutput>s</computeroutput> field contains the macro name of the message. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a7d8e04b8678bb7d9aef1a6cb3b307f50" prot="public">
+          <name>SENS_PIPE_INIT_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to create %s pipe (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to create %s pipe (0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> Task fails to create a CFE Software Bus pipe at initialization.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a56e4af2ab959af00f99d8cca83d0fab5" prot="public">
+          <name>SENS_CFGTBL_MANAGE_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a55f9e6ac951e3e2b1ff42787e5f8c57c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Manage</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776ab169121af00aed40e3c3b20643f73859" prot="public">
+          <name>SENS_CFGTBL_GETADDR_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a5fcde5aa40cd9446c27a45728e9cac7f" prot="public">
+          <name>SENS_RCVMSG_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> Task has had an error reading from a pipe.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a9aca73d2639c19e64aeb5744b3b543ad" prot="public">
+          <name>SENS_MSGID_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> Task has received an invalid message ID.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 16 bit hexadecimal number is the actual message ID received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a27627e97288310196f4f826b35c756a0" prot="public">
+          <name>SENS_CC_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> Task has received an invalid message ID.</para><para>The u field contains the actual command code received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a1f92dfb29018355d9efeae8e2c37099a" prot="public">
+          <name>SENS_MSGLEN_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS SENSTask has received a message with an invalid length.</para><para>The first <computeroutput>d</computeroutput> field contains the message ID. The second <computeroutput>d</computeroutput> field contains the command code. The third <computeroutput>d</computeroutput> field contains the actual length. The fourth <computeroutput>d</computeroutput> field contains the expected length. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a80c9486839c29199219ace0425c98f17" prot="public">
+          <name>SENS_CFGTBL_REG_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> Task fails to register the <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> configuration table.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776aec9acb30f15eb4c875a541016d24ee71" prot="public">
+          <name>SENS_CFGTBL_LOAD_ERR_EID</name>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> Task fails to load the <ref refid="class_s_e_n_s" kindref="compound">SENS</ref> configuration table.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a4c95b1f2ff47b638ba68af48a1b32d84" prot="public">
+          <name>SENS_EVT_CNT</name>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sens/fsw/src/sens_events.h" line="51" column="1" bodyfile="apps/sens/fsw/src/sens_events.h" bodystart="51" bodyend="255"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SENS_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENS_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a8f4c49dd73d06749b865cd0f181abe97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a8f4c49dd73d06749b865cd0f181abe97" kindref="member">SENS_RESERVED_EID</ref><sp/>=<sp/>0,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a08875d6aeb5eedcccf55a330bafe798d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a08875d6aeb5eedcccf55a330bafe798d" kindref="member">SENS_INIT_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a2947d2a9e1170533d938199f0513acf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a2947d2a9e1170533d938199f0513acf1" kindref="member">SENS_CMD_NOOP_EID</ref>,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776ac2b25aa156aa171c838796e910ce932b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776ac2b25aa156aa171c838796e910ce932b" kindref="member">SENS_SUBSCRIBE_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a7d8e04b8678bb7d9aef1a6cb3b307f50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a7d8e04b8678bb7d9aef1a6cb3b307f50" kindref="member">SENS_PIPE_INIT_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a56e4af2ab959af00f99d8cca83d0fab5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a56e4af2ab959af00f99d8cca83d0fab5" kindref="member">SENS_CFGTBL_MANAGE_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776ab169121af00aed40e3c3b20643f73859" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776ab169121af00aed40e3c3b20643f73859" kindref="member">SENS_CFGTBL_GETADDR_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a5fcde5aa40cd9446c27a45728e9cac7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a5fcde5aa40cd9446c27a45728e9cac7f" kindref="member">SENS_RCVMSG_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a9aca73d2639c19e64aeb5744b3b543ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a9aca73d2639c19e64aeb5744b3b543ad" kindref="member">SENS_MSGID_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a27627e97288310196f4f826b35c756a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a27627e97288310196f4f826b35c756a0" kindref="member">SENS_CC_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a1f92dfb29018355d9efeae8e2c37099a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a1f92dfb29018355d9efeae8e2c37099a" kindref="member">SENS_MSGLEN_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a80c9486839c29199219ace0425c98f17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a80c9486839c29199219ace0425c98f17" kindref="member">SENS_CFGTBL_REG_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776aec9acb30f15eb4c875a541016d24ee71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776aec9acb30f15eb4c875a541016d24ee71" kindref="member">SENS_CFGTBL_LOAD_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a4c95b1f2ff47b638ba68af48a1b32d84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776a4c95b1f2ff47b638ba68af48a1b32d84" kindref="member">SENS_EVT_CNT</ref></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}<sp/><ref refid="sens__events_8h_1a1b5720e9d3e0978df8305a61e194b776" kindref="member">SENS_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SENS_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/sens/fsw/src/sens_events.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_2_3" kind="page">
+    <compoundname>cfedeploy_2_3</compoundname>
+    <title>Configure the cFE Core for Each CPU Directory</title>
+    <detaileddescription>
+<para>In order to build the cFE for each of the <computeroutput>build/cpu[x]</computeroutput> directories, the cFE core configuration files must be properly configured. <linebreak/>
+</para><para><center> <heading level="4">Define the CPU, Operating System, and Processor Board </heading>
+</center></para><para><center> </center></para><para>In each <computeroutput>build/cpu[x]/cfe</computeroutput> directory, edit the <bold> &apos;cfe-config.mak&apos; </bold> file (<computeroutput>fsw/build/cpu[x]/cfe/cfe-config.mak</computeroutput>) and set the options for your target. The default settings in the cfe-config.mak are for running vxWorks6.4 on an MCP750 PowerPC board. <linebreak/>
+</para><para><center> <bold> cfe-config.mak Settings </bold> </center> <table rows="5" cols="3"><row>
+<entry thead="no"><para><bold> cfe-config.mak variable </bold> </para></entry><entry thead="no"><para><bold> Valid selections </bold> </para></entry><entry thead="no"><para><bold> Notes </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>HWARCH </para></entry><entry thead="no"><para>x86, ppc, coldfire </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>PLATFORM </para></entry><entry thead="no"><para>mcp750, rad750, pc, mac, m5235bcc, sdnproto </para></entry><entry thead="no"><para>The m5235bcc abd sdoproto targets are not complete </para></entry></row>
+<row>
+<entry thead="no"><para>OS </para></entry><entry thead="no"><para>vxworks6, rtems, osx, linux </para></entry><entry thead="no"><para>VxWorks 5.5 is no longer supported </para></entry></row>
+<row>
+<entry thead="no"><para>BSP </para></entry><entry thead="no"><para>vxworks6.4, linux, osx, cygwin </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+<linebreak/>
+ Note that not all combinations are valid. See the <ref refid="cfedeploy_3" kindref="compound">Platform Specific Section </ref> for more information on each supported cFE target. <linebreak/>
+ <linebreak/>
+ <center> <heading level="4">Configure the cFE Core Parameter Files </heading>
+</center></para><para><center> </center> There are dozens of cFE configuration parameters that change many aspects of the cFE core. A description of the parameters can be found in the files listed below. Or, if the user would prefer to examine the configuration parameters by service type, they can be viewed using the following links: <linebreak/>
+</para><para><itemizedlist>
+<listitem>
+<para><ref refid="cfeescfg" kindref="compound">Executive Services </ref> </para></listitem>
+<listitem>
+<para><ref refid="cfeevscfg" kindref="compound">Event Services </ref> </para></listitem>
+<listitem>
+<para><ref refid="cfesbcfg" kindref="compound">Software Bus </ref> </para></listitem>
+<listitem>
+<para><ref refid="cfetblcfg" kindref="compound">Table Services </ref> </para></listitem>
+<listitem>
+<para><ref refid="cfetimecfg" kindref="compound">Time Services </ref> </para></listitem>
+<listitem>
+<para>cFE Platform Configuration </para></listitem>
+<listitem>
+<para><ref refid="cfe__mission__cfg_8h" kindref="compound">cFE Mission Configuration</ref> </para></listitem>
+</itemizedlist>
+</para><para><center> <bold> cFE core configuration files </bold> </center> <table rows="5" cols="2"><row>
+<entry thead="no"><para><bold> File </bold> </para></entry><entry thead="no"><para><bold> Description </bold> </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="" kindref="compound">build/cpu[x]/inc/cfe_platform_cfg.h </ref> </para></entry><entry thead="no"><para>Configures all options of the cFE core. See the configuration guide for details. </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="" kindref="compound">build/cpu[x]/inc/osconfig.h </ref> </para></entry><entry thead="no"><para>Configures the OS Abstraction Layer for this CPU. See the OS AL documentation and the header file for parameters. </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="" kindref="compound">build/cpu[x]/inc/cfe_msgids.h </ref> </para></entry><entry thead="no"><para>Software bus message IDs for the cFE Core applications. Make sure these do not conflict with the application message IDs. </para></entry></row>
+<row>
+<entry thead="no"><para>build/inc/cfe_mission_cfg.h </para></entry><entry thead="no"><para>Configures mission wide cFE configuration parameters. </para></entry></row>
+</table>
+</para><para>Next: <ref refid="cfedeploy_2_4" kindref="compound">Configure a Set of cFE Applications for Each CPU</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_2_2" kindref="compound">Configure the Build Directory for a Mission</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_2" kindref="compound">How to Configure, Build, and Run the cFE</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

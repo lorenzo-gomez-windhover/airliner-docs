@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_2_6_2" kind="page">
+    <compoundname>cfedeploy_2_6_2</compoundname>
+    <title>Setup the Target File Systems</title>
+    <detaileddescription>
+<para>The cFE requires a Non-Volatile disk volume (EEPROM, Flash, or Hard disk) and a Volatile (RAM) disk to operate. The Non-Volatile disk is used to store the cFE Application Startup file, cFE Applications, and Table images. The Volatile disk is used to store runtime logs, data files, and new cFE Applications and Tables. Because the cFE runs on many different platforms, it must be able to deal with different file system types and different paths. The cFE accomplishes this by using a file system abstraction. The abstracted cFE file system is similar to a UNIX file system, where the root directory starts with &quot;/&quot; and all disks are mounted on directory trees. For example: <itemizedlist>
+<listitem>
+<para>/ram0/apps/ -&gt; RAM disk 0, apps subdirectory </para></listitem>
+<listitem>
+<para>/ram1/data/ -&gt; RAM disk 1, data subdirectory </para></listitem>
+<listitem>
+<para>/hd0/tables/ -&gt; Hard Disk 0, tables subdirectory </para></listitem>
+</itemizedlist>
+</para><para>Using this abstraction, a file &quot;datafile1.dat&quot; on RAM disk 1 might be accessed from the cFE by using the path &quot;/ram1/data/datafile1.dat&quot;. Using the host vxWorks tools, the path to the same file would be: &quot;RAM:0/data/myfile.dat&quot;. If the cFE is running on a Linux development workstation, the file might be located at: &quot;/tmp/ramdev1/data/myfile.dat&quot;. The important part is that the cFE can access the files using a generic path, allowing the cFE software to remain portable.</para><para>There are a few ways to map these host file systems to cFE file systems: <itemizedlist>
+<listitem>
+<para><bold>Map existing target file systems to a cFE path.</bold> This is one of the most common ways to map the Non-Volatile disk to the cFE. The cFE rarely creates the non-volatile disk, instead it relies on the target OS to create/mount this file system and it simply is given a mapping to the disk to allow the cFE to access it. </para></listitem>
+<listitem>
+<para><bold>Create EEPROM/Flash/ATA File systems.</bold> The cFE through the OS Abstraction Layer has the ability on some targets to format or initialize a EEPROM or ATA disk device. This is less commonly used. </para></listitem>
+<listitem>
+<para><bold> Create RAM File Systems.</bold> The cFE can create RAM disks on the vxWorks targets. The cFE will create or re-initialize the RAM disk for the vxWorks targets. </para></listitem>
+</itemizedlist>
+</para><para>The following table shows examples of these file system mappings on various hosts:</para><para><center> <heading level="4">cFE File system mapping </heading>
+</center></para><para><center> </center> <table rows="10" cols="4"><row>
+<entry thead="no"><para><bold> Target Operating system </bold> </para></entry><entry thead="no"><para><bold> cFE File system path </bold> </para></entry><entry thead="no"><para><bold> Target OS File system path </bold> </para></entry><entry thead="no"><para><bold> Notes </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>vxWorks 6.4 </para></entry><entry thead="no"><para>/ram </para></entry><entry thead="no"><para>RAM:0/ </para></entry><entry thead="no"><para>Most vxWorks targets </para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>/cf </para></entry><entry thead="no"><para>CF:0/ or CF:1/ </para></entry><entry thead="no"><para>MCP750 </para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>/cf </para></entry><entry thead="no"><para>EEP:0/ </para></entry><entry thead="no"><para>RAD750 target </para></entry></row>
+<row>
+<entry thead="no"><para>Linux </para></entry><entry thead="no"><para>/ram </para></entry><entry thead="no"><para>/tmp/ramdev0 </para></entry><entry thead="no"><para>Multiple users on the same development machine should remap this to use a local directory. </para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>/cf </para></entry><entry thead="no"><para>/tmp/eedev0 </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Mac OS X </para></entry><entry thead="no"><para>/ram </para></entry><entry thead="no"><para>/tmp/ramdev0 </para></entry><entry thead="no"><para>Multiple users on the same development machine should remap this to use a local directory. </para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>/cf </para></entry><entry thead="no"><para>/tmp/eedev0 </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Windows/Cygwin </para></entry><entry thead="no"><para>/ram </para></entry><entry thead="no"><para>/tmp/ramdev0 </para></entry><entry thead="no"><para>On Cygwin, the directory is a Cygwin shell directory. /tmp/ramdev0 will probably map to: C:\cygwin\tmp\ramdev0 </para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>/cf </para></entry><entry thead="no"><para>/tmp/eedev0 </para></entry><entry thead="no"><para>C:\cygwin\tmp\eedev0 </para></entry></row>
+</table>
+</para><para>Next: <ref refid="cfedeploy_2_6_3" kindref="compound">Transfer the cFE Applications and Startup File to the Target Non-Volatile Disk</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_2_6_1" kindref="compound">Load the cFE Core Executable on the Target</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_2_6" kindref="compound">Load and Run the cFE Core and cFE Applications</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

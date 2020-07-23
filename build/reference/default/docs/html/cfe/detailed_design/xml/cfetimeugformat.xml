@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetimeugformat" kind="page">
+    <compoundname>cfetimeugformat</compoundname>
+    <title>Time Formats</title>
+    <detaileddescription>
+<para><bold>International Atomic Time</bold> (TAI) is one of two time formats supported by cFE TIME. TAI is the number of seconds and sub-seconds elapsed since the ground epoch as measured with the atomic clock previously described. TAI has no reference to leap seconds and is calculated using the following equation:</para><para><verbatim>TAI = MET + STCF 
+</verbatim></para><para>It should be noted that TAI is only &quot;true&quot; TAI when the selected ground epoch is the same as the TAI epoch (zero seconds after midnight, January 1, 1958). However, nothing precludes configuring cFE TIME to calculate time in the TAI format and setting the STCF to correlate to any other epoch definition.</para><para><bold>Coordinated Universal Time</bold> (UTC) is the other time format supported by cFE TIME. UTC differs from TAI in the fact that UTC includes a leap seconds adjustment. TIME computes UTC using the following equation:</para><para><verbatim>UTC = TAI - Leap Seconds.
+</verbatim></para><para>The preceding UTC equation might seem to imply that TAI includes leap seconds and UTC does not - which is not the case. In fact, the UTC calculation includes a leap seconds adjustment that subtracts leap seconds from the same time components used to create TAI. Alternatively, it might be less confusing to express the UTC equation as follows:</para><para><verbatim>UTC = MET + STCF - Leap Seconds
+</verbatim></para><para>Next: <ref refid="cfetimeugconfig" kindref="compound">Time Configuration</ref> <linebreak/>
+ Prev: <ref refid="cfetimeugcomponents" kindref="compound">Time Components</ref> <linebreak/>
+ Up To: <ref refid="cfetimeovr" kindref="compound">cFE Time Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

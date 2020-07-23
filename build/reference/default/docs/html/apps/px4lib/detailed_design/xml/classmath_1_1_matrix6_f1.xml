@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classmath_1_1_matrix6_f1" kind="class" language="C++" prot="public">
+    <compoundname>math::Matrix6F1</compoundname>
+    <includes refid="_matrix6_f1_8hpp" local="no">Matrix6F1.hpp</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmath_1_1_matrix6_f1_1a7533b28a9ad80c5f9a7f320244dbd6f8" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int math::Matrix6F1::SIZE</definition>
+        <argsstring></argsstring>
+        <name>SIZE</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+<para>Number of rows and columns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="17" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmath_1_1_matrix6_f1_1afd3308d26f34d5bfd9364fde33ac02c9" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+        <definition>Vector1F math::Matrix6F1::data[SIZE]</definition>
+        <argsstring>[SIZE]</argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>Rotation lookup enumeration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="20" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classmath_1_1_matrix6_f1_1a79aa11611ebd694109698cd018d94e59" compoundref="_matrix6_f1_8cpp" startline="26" endline="36">operator[]</referencedby>
+        <referencedby refid="classmath_1_1_matrix6_f1_1a4a588bf92233ddf86c8b9daac3bf5cdc" compoundref="_matrix6_f1_8cpp" startline="52" endline="60">Zero</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmath_1_1_matrix6_f1_1a9976db45b9f1e45f4a1a4c8dcff65375" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+        <definition>Vector1F math::Matrix6F1::nan[SIZE]</definition>
+        <argsstring>[SIZE]</argsstring>
+        <name>nan</name>
+        <briefdescription>
+<para>Vector of NaN row data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="23" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classmath_1_1_matrix6_f1_1a031a7b0b7bd0169d36ed5beac1baa2d2" compoundref="_matrix6_f1_8cpp" startline="7" endline="11">Matrix6F1</referencedby>
+        <referencedby refid="classmath_1_1_matrix6_f1_1a79aa11611ebd694109698cd018d94e59" compoundref="_matrix6_f1_8cpp" startline="26" endline="36">operator[]</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmath_1_1_matrix6_f1_1a9a0c2ddb28b21e5d61e9f7ba1360df42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix6F1::Matrix6F1</definition>
+        <argsstring>()</argsstring>
+        <name>Matrix6F1</name>
+        <briefdescription>
+<para>Matrix Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="36" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix6F1.cpp" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix6_f1_1a031a7b0b7bd0169d36ed5beac1baa2d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix6F1::Matrix6F1</definition>
+        <argsstring>(Vector1F m0, Vector1F m1, Vector1F m2, Vector1F m3, Vector1F m4, Vector1F m5)</argsstring>
+        <name>Matrix6F1</name>
+        <param>
+          <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+          <declname>m0</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+          <declname>m3</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+          <declname>m4</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+          <declname>m5</declname>
+        </param>
+        <briefdescription>
+<para>Matrix Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object with passed values.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">m0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector1F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector1F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector1F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector1F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m4</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector1F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m5</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector1F specifying a row </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="55" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix6F1.cpp" bodystart="7" bodyend="11"/>
+        <references refid="classmath_1_1_matrix6_f1_1a9976db45b9f1e45f4a1a4c8dcff65375" compoundref="_matrix6_f1_8hpp" startline="23">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix6_f1_1aafda43242c05d389516804380de90b1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix6F1::~Matrix6F1</definition>
+        <argsstring>()</argsstring>
+        <name>~Matrix6F1</name>
+        <briefdescription>
+<para>Matrix Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="67" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix6F1.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix6_f1_1a79aa11611ebd694109698cd018d94e59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref> &amp;</type>
+        <definition>Vector1F &amp; Matrix6F1::operator[]</definition>
+        <argsstring>(uint32 i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Index Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the [] behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> specifying a row</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="85" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix6F1.cpp" bodystart="26" bodyend="36"/>
+        <references refid="classmath_1_1_matrix6_f1_1afd3308d26f34d5bfd9364fde33ac02c9" compoundref="_matrix6_f1_8hpp" startline="20">data</references>
+        <references refid="classmath_1_1_matrix6_f1_1a9976db45b9f1e45f4a1a4c8dcff65375" compoundref="_matrix6_f1_8hpp" startline="23">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix6_f1_1a5f4e01632e45d52f4593fa2038d17c17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector1_f" kindref="compound">Vector1F</ref></type>
+        <definition>Vector1F Matrix6F1::operator[]</definition>
+        <argsstring>(uint32 i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Index Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the [] behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> specifying a row</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="103" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix6F1.cpp" bodystart="39" bodyend="49"/>
+        <references refid="classmath_1_1_matrix6_f1_1afd3308d26f34d5bfd9364fde33ac02c9" compoundref="_matrix6_f1_8hpp" startline="20">data</references>
+        <references refid="classmath_1_1_matrix6_f1_1a9976db45b9f1e45f4a1a4c8dcff65375" compoundref="_matrix6_f1_8hpp" startline="23">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix6_f1_1a4a588bf92233ddf86c8b9daac3bf5cdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Matrix6F1::Zero</definition>
+        <argsstring>(void)</argsstring>
+        <name>Zero</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Zero Matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function zeroes out all values of the matrix.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="115" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix6F1.cpp" bodystart="52" bodyend="60"/>
+        <references refid="classmath_1_1_matrix6_f1_1afd3308d26f34d5bfd9364fde33ac02c9" compoundref="_matrix6_f1_8hpp" startline="20">data</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="86">
+        <label>math::Matrix6F1</label>
+        <link refid="classmath_1_1_matrix6_f1"/>
+        <childnode refid="87" relation="usage">
+          <edgelabel>nan</edgelabel>
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="87">
+        <label>math::Vector1F</label>
+        <link refid="classmath_1_1_vector1_f"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" line="14" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix6F1.hpp" bodystart="13" bodyend="119"/>
+    <listofallmembers>
+      <member refid="classmath_1_1_matrix6_f1_1afd3308d26f34d5bfd9364fde33ac02c9" prot="private" virt="non-virtual"><scope>math::Matrix6F1</scope><name>data</name></member>
+      <member refid="classmath_1_1_matrix6_f1_1a9a0c2ddb28b21e5d61e9f7ba1360df42" prot="public" virt="non-virtual"><scope>math::Matrix6F1</scope><name>Matrix6F1</name></member>
+      <member refid="classmath_1_1_matrix6_f1_1a031a7b0b7bd0169d36ed5beac1baa2d2" prot="public" virt="non-virtual"><scope>math::Matrix6F1</scope><name>Matrix6F1</name></member>
+      <member refid="classmath_1_1_matrix6_f1_1a9976db45b9f1e45f4a1a4c8dcff65375" prot="private" virt="non-virtual"><scope>math::Matrix6F1</scope><name>nan</name></member>
+      <member refid="classmath_1_1_matrix6_f1_1a79aa11611ebd694109698cd018d94e59" prot="public" virt="non-virtual"><scope>math::Matrix6F1</scope><name>operator[]</name></member>
+      <member refid="classmath_1_1_matrix6_f1_1a5f4e01632e45d52f4593fa2038d17c17" prot="public" virt="non-virtual"><scope>math::Matrix6F1</scope><name>operator[]</name></member>
+      <member refid="classmath_1_1_matrix6_f1_1a7533b28a9ad80c5f9a7f320244dbd6f8" prot="private" virt="non-virtual"><scope>math::Matrix6F1</scope><name>SIZE</name></member>
+      <member refid="classmath_1_1_matrix6_f1_1a4a588bf92233ddf86c8b9daac3bf5cdc" prot="public" virt="non-virtual"><scope>math::Matrix6F1</scope><name>Zero</name></member>
+      <member refid="classmath_1_1_matrix6_f1_1aafda43242c05d389516804380de90b1a" prot="public" virt="non-virtual"><scope>math::Matrix6F1</scope><name>~Matrix6F1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

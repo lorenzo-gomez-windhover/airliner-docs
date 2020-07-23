@@ -1,0 +1,596 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="sch__msgdefs_8h" kind="file" language="C++">
+    <compoundname>sch_msgdefs.h</compoundname>
+    <includes refid="sch__platform__cfg_8h" local="yes">sch_platform_cfg.h</includes>
+    <includedby refid="sch__msg_8h" local="yes">apps/sch/fsw/src/sch_msg.h</includedby>
+    <incdepgraph>
+      <node id="527">
+        <label>apps/sch/fsw/src/sch_msgdefs.h</label>
+        <link refid="sch_msgdefs.h"/>
+        <childnode refid="528" relation="include">
+        </childnode>
+      </node>
+      <node id="528">
+        <label>sch_platform_cfg.h</label>
+        <link refid="sch__platform__cfg_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="530">
+        <label>apps/sch/fsw/src/sch_msg.h</label>
+        <link refid="sch__msg_8h"/>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="532" relation="include">
+        </childnode>
+        <childnode refid="533" relation="include">
+        </childnode>
+      </node>
+      <node id="533">
+        <label>apps/sch/fsw/src/sch_cmds.c</label>
+        <link refid="sch__cmds_8c"/>
+      </node>
+      <node id="531">
+        <label>apps/sch/fsw/src/sch_app.c</label>
+        <link refid="sch__app_8c"/>
+      </node>
+      <node id="532">
+        <label>apps/sch/fsw/src/sch_app.h</label>
+        <link refid="sch__app_8h"/>
+        <childnode refid="531" relation="include">
+        </childnode>
+        <childnode refid="533" relation="include">
+        </childnode>
+      </node>
+      <node id="529">
+        <label>apps/sch/fsw/src/sch_msgdefs.h</label>
+        <link refid="sch_msgdefs.h"/>
+        <childnode refid="530" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>Scheduler App Entry States</header>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a3c3c3058724b68ff42107cff3fbeeeaa" prot="public" static="no">
+        <name>SCH_UNUSED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="51" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1a7ef26738b00f573d8e58de0b3cfd1857" compoundref="sch__cmds_8c" startline="539" endline="620">SCH_DisableGroupCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a4bf238e6b7f364d503d635de6a757214" compoundref="sch__cmds_8c" startline="448" endline="529">SCH_EnableGroupCmd</referencedby>
+        <referencedby refid="sch__app_8h_1a58863cff7e97165f4302b72493711373" compoundref="sch__app_8c" startline="1014" endline="1121">SCH_ProcessNextEntry</referencedby>
+        <referencedby refid="sch__app_8h_1a78763b84859de8d421ff68b1be39ac55" compoundref="sch__app_8c" startline="1390" endline="1499">SCH_ValidateMessageData</referencedby>
+        <referencedby refid="sch__app_8h_1a8759e1b2bbfc770a43da32786599ba05" compoundref="sch__app_8c" startline="1190" endline="1380">SCH_ValidateScheduleData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a4863bca80e851a3a246e36b1b298db73" prot="public" static="no">
+        <name>SCH_ENABLED</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="52" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1a7d36f7c7881f03171058014b56d7c4d6" compoundref="sch__cmds_8c" startline="378" endline="438">SCH_DisableCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a25cca1d47d5337636c9343f2e58a86d7" compoundref="sch__cmds_8c" startline="308" endline="368">SCH_EnableCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a4bf238e6b7f364d503d635de6a757214" compoundref="sch__cmds_8c" startline="448" endline="529">SCH_EnableGroupCmd</referencedby>
+        <referencedby refid="sch__app_8h_1a7128e9225e88bcceaa22e9ba2807c263" compoundref="sch__app_8c" startline="952" endline="1004">SCH_ProcessNextSlot</referencedby>
+        <referencedby refid="sch__cmds_8h_1ae083a4f1719d8f65136116b0b4ceca03" compoundref="sch__cmds_8c" startline="662" endline="714">SCH_SendDiagTlmCmd</referencedby>
+        <referencedby refid="sch__app_8h_1a8759e1b2bbfc770a43da32786599ba05" compoundref="sch__app_8c" startline="1190" endline="1380">SCH_ValidateScheduleData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a1bb9b6a778c72103f9c48c673496f7ef" prot="public" static="no">
+        <name>SCH_DISABLED</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="53" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1a7d36f7c7881f03171058014b56d7c4d6" compoundref="sch__cmds_8c" startline="378" endline="438">SCH_DisableCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a7ef26738b00f573d8e58de0b3cfd1857" compoundref="sch__cmds_8c" startline="539" endline="620">SCH_DisableGroupCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a25cca1d47d5337636c9343f2e58a86d7" compoundref="sch__cmds_8c" startline="308" endline="368">SCH_EnableCmd</referencedby>
+        <referencedby refid="sch__app_8h_1a58863cff7e97165f4302b72493711373" compoundref="sch__app_8c" startline="1014" endline="1121">SCH_ProcessNextEntry</referencedby>
+        <referencedby refid="sch__cmds_8h_1ae083a4f1719d8f65136116b0b4ceca03" compoundref="sch__cmds_8c" startline="662" endline="714">SCH_SendDiagTlmCmd</referencedby>
+        <referencedby refid="sch__app_8h_1a8759e1b2bbfc770a43da32786599ba05" compoundref="sch__app_8c" startline="1190" endline="1380">SCH_ValidateScheduleData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Scheduler App Entry Types</header>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a72d6c6d22c9c99a7646f57c547afb722" prot="public" static="no">
+        <name>SCH_ACTIVITY_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="61" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a343748e9d5952c672ff8bd29df1759d2" prot="public" static="no">
+        <name>SCH_ACTIVITY_SEND_MSG</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="62" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a58863cff7e97165f4302b72493711373" compoundref="sch__app_8c" startline="1014" endline="1121">SCH_ProcessNextEntry</referencedby>
+        <referencedby refid="sch__app_8h_1a8759e1b2bbfc770a43da32786599ba05" compoundref="sch__app_8c" startline="1190" endline="1380">SCH_ValidateScheduleData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Synchronized to MET States</header>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a8b3e88ea3d976c81fd091f6f70e24184" prot="public" static="no">
+        <name>SCH_NOT_SYNCHRONIZED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="70" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a205386d033f6fdfe0b6e6815373aae80" compoundref="sch__app_8c" startline="791" endline="942">SCH_ProcessScheduleTable</referencedby>
+        <referencedby refid="sch__app_8h_1a1093debe154dea2b2040a0f8f76582b9" compoundref="sch__app_8c" startline="711" endline="781">SCH_TimerInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a8487279452fc187714c3e3ee70915331" prot="public" static="no">
+        <name>SCH_MINOR_SYNCHRONIZED</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="71" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a1093debe154dea2b2040a0f8f76582b9" compoundref="sch__app_8c" startline="711" endline="781">SCH_TimerInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a3c44f4540cf5de8d07368e21311432ee" prot="public" static="no">
+        <name>SCH_PENDING_MAJOR_SYNCH</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="72" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1ab92002b3160afcce40146f32b1ebba7f" prot="public" static="no">
+        <name>SCH_MAJOR_SYNCHRONIZED</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="73" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Major Frame Signal Source Identifiers</header>
+      <memberdef kind="define" id="sch__msgdefs_8h_1acf7d4e3206e5b49309b98e923f02e703" prot="public" static="no">
+        <name>SCH_MAJOR_FS_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="81" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a1093debe154dea2b2040a0f8f76582b9" compoundref="sch__app_8c" startline="711" endline="781">SCH_TimerInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a3b5381649512b5aa65e1969d19f82383" prot="public" static="no">
+        <name>SCH_MAJOR_FS_CFE_TIME</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="82" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a9b3b0460a88c4ab7d88b77036db14af3" prot="public" static="no">
+        <name>SCH_MAJOR_FS_MINOR_FRAME_TIMER</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="83" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Scheduler App Entry Group Bit Masks</header>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a4d11ce8a3451dede239ac5968c79674c" prot="public" static="no">
+        <name>SCH_GROUP_NUMBER_BIT_MASK</name>
+        <initializer>0xFF000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="91" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="91" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1a7ef26738b00f573d8e58de0b3cfd1857" compoundref="sch__cmds_8c" startline="539" endline="620">SCH_DisableGroupCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a4bf238e6b7f364d503d635de6a757214" compoundref="sch__cmds_8c" startline="448" endline="529">SCH_EnableGroupCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1af2caad7434b5b411a03ce68d78134d04" prot="public" static="no">
+        <name>SCH_MULTI_GROUP_BIT_MASK</name>
+        <initializer>0x00FFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="92" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="92" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1a7ef26738b00f573d8e58de0b3cfd1857" compoundref="sch__cmds_8c" startline="539" endline="620">SCH_DisableGroupCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a4bf238e6b7f364d503d635de6a757214" compoundref="sch__cmds_8c" startline="448" endline="529">SCH_EnableGroupCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Scheduler App Miscellaneous Limits</header>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a86546660af92be9970111a31a68238f4" prot="public" static="no">
+        <name>SCH_MIN_MSG_WORDS</name>
+        <initializer>(<ref refid="cfe__sb_8h_1acc49ae58990b23f72824e1b742c78cb8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CMD_HDR_SIZE</ref> / 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="100" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a78763b84859de8d421ff68b1be39ac55" compoundref="sch__app_8c" startline="1390" endline="1499">SCH_ValidateMessageData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a8d4957dff253e544275b614cace1ca72" prot="public" static="no">
+        <name>SCH_TABLE_ENTRIES</name>
+        <initializer>(<ref refid="sch__platform__cfg_8h_1a640d7089f602476608c00d5d9b613315" kindref="member">SCH_TOTAL_SLOTS</ref> * <ref refid="sch__platform__cfg_8h_1a191125a78975e2a0c581969c7d678b4e" kindref="member">SCH_ENTRIES_PER_SLOT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="101" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1a7ef26738b00f573d8e58de0b3cfd1857" compoundref="sch__cmds_8c" startline="539" endline="620">SCH_DisableGroupCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a4bf238e6b7f364d503d635de6a757214" compoundref="sch__cmds_8c" startline="448" endline="529">SCH_EnableGroupCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1ae083a4f1719d8f65136116b0b4ceca03" compoundref="sch__cmds_8c" startline="662" endline="714">SCH_SendDiagTlmCmd</referencedby>
+        <referencedby refid="sch__app_8h_1adc2b38ac20df199eeac775c384f9d2df" compoundref="sch__app_8c" startline="568" endline="701">SCH_TblInit</referencedby>
+        <referencedby refid="sch__app_8h_1a8759e1b2bbfc770a43da32786599ba05" compoundref="sch__app_8c" startline="1190" endline="1380">SCH_ValidateScheduleData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>CFS Scheduler Command Codes</header>
+      <memberdef kind="define" id="sch__msgdefs_8h_1aff13c67ad0852d59ca4ef44879566f57" prot="public" static="no">
+        <name>SCH_NOOP_CC</name>
+        <initializer>0   /* no-op command */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcmds_1_cfsschcmds000001"><xreftitle>Name</xreftitle><xrefdescription><para>Scheduler No-Op</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command performs no other function than to increment the command execution counter. The command may be used to verify general aliveness of the Scheduler Application.</para></simplesect>
+<xrefsect id="cfsschcmdmnems_1_cfsschcmdmnems000001"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_NOOP</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_s_c_h___no_args_cmd__t" kindref="compound">SCH_NoArgsCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="sch__events_8h_1a333ecd3c41dbc9990b080c681cc4466f" kindref="member">SCH_NOOP_CMD_EID</ref> informational event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>There are no error conditions for this command. If the Scheduler receives the command, the event is sent (although it may be filtered by EVS) and the counter is incremented unconditionally.</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="146" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="146" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1aa19ff038dce4c7435725974bbc49bfa8" compoundref="sch__cmds_8c" startline="66" endline="147">SCH_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1adebe9b4ed9ccc1528c1198cb1acd4ac8" prot="public" static="no">
+        <name>SCH_RESET_CC</name>
+        <initializer>1   /* Reset HK counters */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcmds_1_cfsschcmds000002"><xreftitle>Name</xreftitle><xrefdescription><para>Scheduler Reset Counters</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command resets the following counters within the Scheduler housekeeping telemetry:<itemizedlist>
+<listitem><para>Command Execution Counter ($sc_$cpu_SCH_CMDPC)</para></listitem><listitem><para>Command Error Counter ($sc_$cpu_SCH_CMDEC)</para></listitem><listitem><para>Schedule Activities Success Counter ($sc_$cpu_SCH_ActSuccessCtr)</para></listitem><listitem><para>Schedule Activities Failure Counter ($sc_$cpu_SCH_ActFailCtr)</para></listitem><listitem><para>Schedule Slots Processed Counter ($sc_$cpu_SCH_SlotProcCtr)</para></listitem><listitem><para>Schedule Skipping Slots Counter ($sc_$cpu_SCH_SlotSkipCtr)</para></listitem><listitem><para>Multiple Schedule Slots Processed Counter ($sc_$cpu_SCH_MultSlotCtr)</para></listitem><listitem><para>Awoke in Same Slot Counter ($sc_$cpu_SCH_SameSlotCtr)</para></listitem><listitem><para>Corrupted Table Data Counter ($sc_$cpu_SCH_BadTblDataCtr)</para></listitem><listitem><para>Table Loads Successfully Verified Counter ($sc_$cpu_SCH_TblPassVerifyCtr)</para></listitem><listitem><para>Table Loads Unsuccessfully Verified Counter ($sc_$cpu_SCH_TblFailVerifyCtr)</para></listitem><listitem><para>Valid Major Frames Received Counter ($sc_$cpu_SCH_ValidMajorFrameCtr)</para></listitem><listitem><para>Missed Major Frames Received Counter ($sc_$cpu_SCH_MissedMajorFrameCtr)</para></listitem><listitem><para>Unexpected Major Frames Received Counter ($sc_$cpu_SCH_UnexpectedMajorFrameCtr)</para></listitem></itemizedlist>
+</para></simplesect>
+<xrefsect id="cfsschcmdmnems_1_cfsschcmdmnems000002"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_ResetCtrs</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_s_c_h___no_args_cmd__t" kindref="compound">SCH_NoArgsCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="sch__events_8h_1a413a36e0a66d1471334fc7566d4f8aab" kindref="member">SCH_RESET_CMD_EID</ref> debug event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>There are no error conditions for this command. If the Scheduler receives the command, the event is sent (although it may be filtered by EVS) and the counter is incremented unconditionally.</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>This command is not inherently dangerous. However, it is possible for ground systems and on-board safing procedures to be designed such that they react to changes in the counter values that are reset by this command.</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="195" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="195" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1aa19ff038dce4c7435725974bbc49bfa8" compoundref="sch__cmds_8c" startline="66" endline="147">SCH_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a97454d5cfb6b63441c4464f8dab99098" prot="public" static="no">
+        <name>SCH_ENABLE_CC</name>
+        <initializer>2   /* Enable Schedule Table Entry */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcmds_1_cfsschcmds000003"><xreftitle>Name</xreftitle><xrefdescription><para>Enable Schedule Table Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command enables a single activity in the Schedule Definition Table.</para></simplesect>
+<xrefsect id="cfsschcmdmnems_1_cfsschcmdmnems000003"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_EnableEntry</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_s_c_h___entry_cmd__t" kindref="compound">SCH_EntryCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="sch__events_8h_1ad4bc902a2dbfa52aac0f26b8016937fb" kindref="member">SCH_ENABLE_CMD_EID</ref> debug event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid Slot (Minor Frame) specified in the command</para></listitem><listitem><para>Invalid Entry ID specified in the command</para></listitem><listitem><para>Current state is neither Enabled or Disabled (i.e. - it is corrupted or empty)</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>Command specific error event messages are issued for all error cases</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>Criticality is dependent entirely on the contents of the Schedule Definition Table entry being enabled</para></simplesect>
+<simplesect kind="see"><para><ref refid="sch__msgdefs_8h_1a98467babd59a6152a3ffc2b6fcf94a1a" kindref="member">SCH_DISABLE_CC</ref>, <ref refid="sch__msgdefs_8h_1a35a6fd9478cc7dbb5936bcc4b5e54a8d" kindref="member">SCH_ENABLE_GROUP_CC</ref>, <ref refid="sch__msgdefs_8h_1a1eac1a749ee38366ab99cbc899c6fd41" kindref="member">SCH_DISABLE_GROUP_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="231" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="231" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1aa19ff038dce4c7435725974bbc49bfa8" compoundref="sch__cmds_8c" startline="66" endline="147">SCH_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a98467babd59a6152a3ffc2b6fcf94a1a" prot="public" static="no">
+        <name>SCH_DISABLE_CC</name>
+        <initializer>3   /* disable schedule table entry */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcmds_1_cfsschcmds000004"><xreftitle>Name</xreftitle><xrefdescription><para>Disable Schedule Entry</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command disables a single activity in the Schedule Definition Table.</para></simplesect>
+<xrefsect id="cfsschcmdmnems_1_cfsschcmdmnems000004"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_DisableEntry</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_s_c_h___entry_cmd__t" kindref="compound">SCH_EntryCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="sch__events_8h_1ab121f57cb66e52bf03ee5aebbd7b54c2" kindref="member">SCH_DISABLE_CMD_EID</ref> debug event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>Invalid Slot (Minor Frame) specified in the command</para></listitem><listitem><para>Invalid Entry ID specified in the command</para></listitem><listitem><para>Current state is neither Enabled or Disabled (i.e. - it is corrupted or empty)</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>Command specific error event messages are issued for all error cases</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>Criticality is dependent entirely on the contents of the Schedule Definition Table entry being disabled</para></simplesect>
+<simplesect kind="see"><para><ref refid="sch__msgdefs_8h_1a97454d5cfb6b63441c4464f8dab99098" kindref="member">SCH_ENABLE_CC</ref>, <ref refid="sch__msgdefs_8h_1a35a6fd9478cc7dbb5936bcc4b5e54a8d" kindref="member">SCH_ENABLE_GROUP_CC</ref>, <ref refid="sch__msgdefs_8h_1a1eac1a749ee38366ab99cbc899c6fd41" kindref="member">SCH_DISABLE_GROUP_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="267" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="267" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1aa19ff038dce4c7435725974bbc49bfa8" compoundref="sch__cmds_8c" startline="66" endline="147">SCH_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a35a6fd9478cc7dbb5936bcc4b5e54a8d" prot="public" static="no">
+        <name>SCH_ENABLE_GROUP_CC</name>
+        <initializer>4   /* enable group of entries */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcmds_1_cfsschcmds000005"><xreftitle>Name</xreftitle><xrefdescription><para>Enable Group and/or Multi-Groups of Schedule Activities</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command enables a single group and/or a collection of Multi-Group Activities in the Schedule Definition Table.</para></simplesect>
+<xrefsect id="cfsschcmdmnems_1_cfsschcmdmnems000005"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_EnableGroup</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_s_c_h___group_cmd__t" kindref="compound">SCH_GroupCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="sch__events_8h_1a10d7bdb94ef40f5f820e7665b67a0eac" kindref="member">SCH_ENA_GRP_CMD_EID</ref> debug event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>No Group nor any Multi-Group was specified in the command</para></listitem><listitem><para>No activities with the specified Group and Multi-Group was located</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>Command specific error event messages are issued for all error cases</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>Criticality is dependent entirely on the contents of the Schedule Definition Table entries being enabled</para></simplesect>
+<simplesect kind="see"><para><ref refid="sch__msgdefs_8h_1a97454d5cfb6b63441c4464f8dab99098" kindref="member">SCH_ENABLE_CC</ref>, <ref refid="sch__msgdefs_8h_1a98467babd59a6152a3ffc2b6fcf94a1a" kindref="member">SCH_DISABLE_CC</ref>, <ref refid="sch__msgdefs_8h_1a1eac1a749ee38366ab99cbc899c6fd41" kindref="member">SCH_DISABLE_GROUP_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="303" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="303" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1aa19ff038dce4c7435725974bbc49bfa8" compoundref="sch__cmds_8c" startline="66" endline="147">SCH_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a1eac1a749ee38366ab99cbc899c6fd41" prot="public" static="no">
+        <name>SCH_DISABLE_GROUP_CC</name>
+        <initializer>5   /* disable group of entries */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcmds_1_cfsschcmds000006"><xreftitle>Name</xreftitle><xrefdescription><para>Disable Group and/or Multi-Groups of Schedule Activities</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command disables a single group and/or a collection of Multi-Group Activities in the Schedule Definition Table.</para></simplesect>
+<xrefsect id="cfsschcmdmnems_1_cfsschcmdmnems000006"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_DisableGroup</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_s_c_h___group_cmd__t" kindref="compound">SCH_GroupCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="sch__events_8h_1a093d7419db5a9c6b9c6e5577a7b9a0cb" kindref="member">SCH_DIS_GRP_CMD_EID</ref> debug event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command can fail for the following reasons:<itemizedlist>
+<listitem><para>No Group nor any Multi-Group was specified in the command</para></listitem><listitem><para>No activities with the specified Group and Multi-Group was located</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>Command specific error event messages are issued for all error cases</para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>Criticality is dependent entirely on the contents of the Schedule Definition Table entries being disabled</para></simplesect>
+<simplesect kind="see"><para><ref refid="sch__msgdefs_8h_1a97454d5cfb6b63441c4464f8dab99098" kindref="member">SCH_ENABLE_CC</ref>, <ref refid="sch__msgdefs_8h_1a98467babd59a6152a3ffc2b6fcf94a1a" kindref="member">SCH_DISABLE_CC</ref>, <ref refid="sch__msgdefs_8h_1a35a6fd9478cc7dbb5936bcc4b5e54a8d" kindref="member">SCH_ENABLE_GROUP_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="339" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="339" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1aa19ff038dce4c7435725974bbc49bfa8" compoundref="sch__cmds_8c" startline="66" endline="147">SCH_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a988bd1a3fd08823654b2bdf4f695c6b3" prot="public" static="no">
+        <name>SCH_ENABLE_SYNC_CC</name>
+        <initializer>6   /* enable major frame synchronization */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcmds_1_cfsschcmds000007"><xreftitle>Name</xreftitle><xrefdescription><para>Enable Major Frame Synchronization</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command allows the operator to enable processing and synchronization of the Major Frame Signal to the processing of the Schedule Definition Table.</para></simplesect>
+<xrefsect id="cfsschcmdmnems_1_cfsschcmdmnems000007"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_EnableSync</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_s_c_h___no_args_cmd__t" kindref="compound">SCH_NoArgsCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="sch__events_8h_1a16e0b6b024dea3ae0e43803b80506239" kindref="member">SCH_ENA_SYNC_CMD_EID</ref> debug event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>There are no error conditions for this command. If the Scheduler receives the command, the event is sent (although it may be filtered by EVS) and the counter is incremented unconditionally.</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>May cause a number of minor frames to be skipped when the major frame synchronization signal is received and acted upon.</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="373" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="373" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1aa19ff038dce4c7435725974bbc49bfa8" compoundref="sch__cmds_8c" startline="66" endline="147">SCH_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__msgdefs_8h_1a88063e9eba628a369ecfeafb22867287" prot="public" static="no">
+        <name>SCH_SEND_DIAG_TLM_CC</name>
+        <initializer>7   /* sends diagnostic message packet */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcmds_1_cfsschcmds000008"><xreftitle>Name</xreftitle><xrefdescription><para>Telemeter Scheduler Diagnostic Packet</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command generates and sends the Scheduler Application&apos;s Diagnostic Telemetry packet.</para></simplesect>
+<xrefsect id="cfsschcmdmnems_1_cfsschcmdmnems000008"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SCH_SendDiagnostic</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_s_c_h___no_args_cmd__t" kindref="compound">SCH_NoArgsCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SCH_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="sch__events_8h_1aafd0af9dff5ed932aefd1a94cf6ee4b9" kindref="member">SCH_SEND_DIAG_CMD_EID</ref> debug event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>There are no error conditions for this command. If the Scheduler receives the command, the event is sent (although it may be filtered by EVS) and the counter is incremented unconditionally.</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="405" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="405" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1aa19ff038dce4c7435725974bbc49bfa8" compoundref="sch__cmds_8c" startline="66" endline="147">SCH_AppPipe</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sch__msgdefs_8h_1a40c88a844e110e233af9a5232a0e34d8" prot="public" static="no">
+        <name>SCH_NUM_STATUS_BYTES_REQD</name>
+        <initializer>(((<ref refid="sch__msgdefs_8h_1a8d4957dff253e544275b614cace1ca72" kindref="member">SCH_TABLE_ENTRIES</ref>+7)/8)*2)</initializer>
+        <briefdescription>
+<para>Num Bytes req&apos;d to store entry states in diag pkt (2-bits per entry rounded up to nearest 16-bit word) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_msgdefs.h" line="104" column="9" bodyfile="apps/sch/fsw/src/sch_msgdefs.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1ae083a4f1719d8f65136116b0b4ceca03" compoundref="sch__cmds_8c" startline="662" endline="714">SCH_SendDiagTlmCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>$Id:<sp/>sch_msgdefs.h<sp/>1.3<sp/>2017/06/21<sp/>15:28:58EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/>Subsystem:<sp/>Scheduler<sp/>(SCH)<sp/>packet<sp/>macro<sp/>definitions</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/>Author:<sp/>David<sp/>Kobe</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/><sp/><sp/>These<sp/>Macro<sp/>definitions<sp/>have<sp/>been<sp/>put<sp/>in<sp/>this<sp/>file<sp/>(instead<sp/>of<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/><sp/>sch_msg.h)<sp/>so<sp/>this<sp/>file<sp/>can<sp/>be<sp/>included<sp/>directly<sp/>into<sp/>ASIST<sp/>build<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/>test<sp/>scripts.<sp/>ASIST<sp/>RDL<sp/>files<sp/>can<sp/>accept<sp/>C<sp/>language<sp/>#defines<sp/>but<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/>can&apos;t<sp/>handle<sp/>type<sp/>definitions.<sp/>As<sp/>a<sp/>result:<sp/>DO<sp/>NOT<sp/>PUT<sp/>ANY</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/><sp/>TYPEDEFS<sp/>OR<sp/>STRUCTURE<sp/>DEFINITIONS<sp/>IN<sp/>THIS<sp/>FILE!<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/><sp/><sp/>ADD<sp/>THEM<sp/>TO<sp/>sch_msg.h<sp/>IF<sp/>NEEDED!<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_sch_msgdefs_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_sch_msgdefs_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Include<sp/>section</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sch__platform__cfg_8h" kindref="compound">sch_platform_cfg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>SCH<sp/>application<sp/>definitions</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Table<sp/>value<sp/>definitions</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="51" refid="sch__msgdefs_8h_1a3c3c3058724b68ff42107cff3fbeeeaa" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_UNUSED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="sch__msgdefs_8h_1a4863bca80e851a3a246e36b1b298db73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_ENABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="sch__msgdefs_8h_1a1bb9b6a778c72103f9c48c673496f7ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_DISABLED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/>Table<sp/>Entry<sp/>Activity<sp/>Types</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="61" refid="sch__msgdefs_8h_1a72d6c6d22c9c99a7646f57c547afb722" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ACTIVITY_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="sch__msgdefs_8h_1a343748e9d5952c672ff8bd29df1759d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_ACTIVITY_SEND_MSG<sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">**<sp/>Synchronized<sp/>to<sp/>Mission<sp/>Elapsed<sp/>Time<sp/>States</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="70" refid="sch__msgdefs_8h_1a8b3e88ea3d976c81fd091f6f70e24184" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_NOT_SYNCHRONIZED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="sch__msgdefs_8h_1a8487279452fc187714c3e3ee70915331" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_MINOR_SYNCHRONIZED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="sch__msgdefs_8h_1a3c44f4540cf5de8d07368e21311432ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_PENDING_MAJOR_SYNCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="sch__msgdefs_8h_1ab92002b3160afcce40146f32b1ebba7f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_MAJOR_SYNCHRONIZED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">**<sp/>Major<sp/>Frame<sp/>Signal<sp/>Source<sp/>Identifiers</highlight></codeline>
+<codeline lineno="78"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="81" refid="sch__msgdefs_8h_1acf7d4e3206e5b49309b98e923f02e703" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MAJOR_FS_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="sch__msgdefs_8h_1a3b5381649512b5aa65e1969d19f82383" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_MAJOR_FS_CFE_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="sch__msgdefs_8h_1a9b3b0460a88c4ab7d88b77036db14af3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_MAJOR_FS_MINOR_FRAME_TIMER<sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">**<sp/>Schedule<sp/>table<sp/>group<sp/>data<sp/>field<sp/>masks</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="91" refid="sch__msgdefs_8h_1a4d11ce8a3451dede239ac5968c79674c" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_GROUP_NUMBER_BIT_MASK<sp/><sp/>0xFF000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="sch__msgdefs_8h_1af2caad7434b5b411a03ce68d78134d04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_MULTI_GROUP_BIT_MASK<sp/><sp/><sp/>0x00FFFFFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">**<sp/>Message<sp/>table<sp/>definitions</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="100" refid="sch__msgdefs_8h_1a86546660af92be9970111a31a68238f4" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MIN_MSG_WORDS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(CFE_SB_CMD_HDR_SIZE<sp/>/<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="sch__msgdefs_8h_1a8d4957dff253e544275b614cace1ca72" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_TABLE_ENTRIES<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SCH_TOTAL_SLOTS<sp/>*<sp/>SCH_ENTRIES_PER_SLOT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="sch__msgdefs_8h_1a40c88a844e110e233af9a5232a0e34d8" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_NUM_STATUS_BYTES_REQD<sp/><sp/><sp/><sp/>(((SCH_TABLE_ENTRIES+7)/8)*2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">**<sp/><sp/>SCH<sp/>command<sp/>packet<sp/>command<sp/>codes<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="comment">**<sp/>(SCH_GND_CMD_MID<sp/>and<sp/>SCH_SC_CMD_MID)</highlight></codeline>
+<codeline lineno="111"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="146" refid="sch__msgdefs_8h_1aff13c67ad0852d59ca4ef44879566f57" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_NOOP_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>no-op<sp/>command<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="sch__msgdefs_8h_1adebe9b4ed9ccc1528c1198cb1acd4ac8" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_RESET_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reset<sp/>HK<sp/>counters<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="sch__msgdefs_8h_1a97454d5cfb6b63441c4464f8dab99098" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENABLE_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Enable<sp/>Schedule<sp/>Table<sp/>Entry<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="sch__msgdefs_8h_1a98467babd59a6152a3ffc2b6fcf94a1a" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_DISABLE_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>disable<sp/>schedule<sp/>table<sp/>entry<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="sch__msgdefs_8h_1a35a6fd9478cc7dbb5936bcc4b5e54a8d" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENABLE_GROUP_CC<sp/><sp/><sp/><sp/><sp/>4<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>enable<sp/>group<sp/>of<sp/>entries<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339" refid="sch__msgdefs_8h_1a1eac1a749ee38366ab99cbc899c6fd41" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_DISABLE_GROUP_CC<sp/><sp/><sp/><sp/>5<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>disable<sp/>group<sp/>of<sp/>entries<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373" refid="sch__msgdefs_8h_1a988bd1a3fd08823654b2bdf4f695c6b3" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENABLE_SYNC_CC<sp/><sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>enable<sp/>major<sp/>frame<sp/>synchronization<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="sch__msgdefs_8h_1a88063e9eba628a369ecfeafb22867287" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SEND_DIAG_TLM_CC<sp/><sp/><sp/><sp/>7<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>sends<sp/>diagnostic<sp/>message<sp/>packet<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_sch_msgdefs_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/sch/fsw/src/sch_msgdefs.h"/>
+  </compounddef>
+</doxygen>

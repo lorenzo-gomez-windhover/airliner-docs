@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_low_pass_vector10_f" kind="class" language="C++" prot="public">
+    <compoundname>LowPassVector10F</compoundname>
+    <includes refid="_low_pass_vector10_f_8hpp" local="no">LowPassVector10F.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_low_pass_vector10_f_1ad4cd694913a64ac87d3a15c503e7d73b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LowPassVector10F::m_Initialized</definition>
+        <argsstring></argsstring>
+        <name>m_Initialized</name>
+        <briefdescription>
+<para>Initialization flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" line="73" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_low_pass_vector10_f_1a684543518c9fdbcffeab1b1e34ba718e" compoundref="_low_pass_vector10_f_8cpp" startline="17" endline="41">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_pass_vector10_f_1abfa2179ef47c02f38513aa68be7675b2" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector10_f" kindref="compound">math::Vector10F</ref></type>
+        <definition>math::Vector10F LowPassVector10F::m_State</definition>
+        <argsstring></argsstring>
+        <name>m_State</name>
+        <briefdescription>
+<para>State value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" line="76" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_low_pass_vector10_f_1a634ae79e26705e337ce5a65444e30d94" compoundref="_low_pass_vector10_f_8cpp" startline="43" endline="51">operator[]</referencedby>
+        <referencedby refid="class_low_pass_vector10_f_1a684543518c9fdbcffeab1b1e34ba718e" compoundref="_low_pass_vector10_f_8cpp" startline="17" endline="41">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_low_pass_vector10_f_1a7d466c0a7ed0e318a8785a80ae1621d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LowPassVector10F::LowPassVector10F</definition>
+        <argsstring>()</argsstring>
+        <name>LowPassVector10F</name>
+        <briefdescription>
+<para>Low Pass Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" line="23" column="1" bodyfile="apps/px4lib/fsw/src/math/LowPassVector10F.cpp" bodystart="5" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_low_pass_vector10_f_1a9dfb74be2f3226117530413f76fe0553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LowPassVector10F::~LowPassVector10F</definition>
+        <argsstring>()</argsstring>
+        <name>~LowPassVector10F</name>
+        <briefdescription>
+<para>Low Pass Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" line="35" column="1" bodyfile="apps/px4lib/fsw/src/math/LowPassVector10F.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_low_pass_vector10_f_1a684543518c9fdbcffeab1b1e34ba718e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector10_f" kindref="compound">math::Vector10F</ref></type>
+        <definition>math::Vector10F LowPassVector10F::Update</definition>
+        <argsstring>(math::Vector10F input, float dt, float cutoff)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="classmath_1_1_vector10_f" kindref="compound">math::Vector10F</ref></type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cutoff</declname>
+        </param>
+        <briefdescription>
+<para>Update Low Pass. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function updates the low pass filter with new values.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying the input value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying delta time in us </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cutoff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying cutoff frequency </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" line="51" column="1" bodyfile="apps/px4lib/fsw/src/math/LowPassVector10F.cpp" bodystart="17" bodyend="41"/>
+        <references refid="class_low_pass_vector10_f_1ad4cd694913a64ac87d3a15c503e7d73b" compoundref="_low_pass_vector10_f_8hpp" startline="73">m_Initialized</references>
+        <references refid="_low_pass_vector10_f_8cpp_1ab9c3c609e1d02430671de0a109410ac8" compoundref="_low_pass_vector10_f_8cpp" startline="3">M_PI_F</references>
+        <references refid="class_low_pass_vector10_f_1abfa2179ef47c02f38513aa68be7675b2" compoundref="_low_pass_vector10_f_8hpp" startline="76">m_State</references>
+        <references refid="classmath_1_1_vector10_f_1a413e45065aa6d05b4baf1bdd749ae046" compoundref="_vector10_f_8cpp" startline="54" endline="66">math::Vector10F::Zero</references>
+      </memberdef>
+      <memberdef kind="function" id="class_low_pass_vector10_f_1a634ae79e26705e337ce5a65444e30d94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float LowPassVector10F::operator[]</definition>
+        <argsstring>(uint32 i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Index Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the [] behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> specifying an index</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+at passed index of the vector or NaN if out of bounds </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" line="69" column="1" bodyfile="apps/px4lib/fsw/src/math/LowPassVector10F.cpp" bodystart="43" bodyend="51"/>
+        <references refid="class_low_pass_vector10_f_1abfa2179ef47c02f38513aa68be7675b2" compoundref="_low_pass_vector10_f_8hpp" startline="76">m_State</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="34">
+        <label>LowPassVector10F</label>
+        <link refid="class_low_pass_vector10_f"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>m_State</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>math::Vector10F</label>
+        <link refid="classmath_1_1_vector10_f"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" line="10" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/LowPassVector10F.hpp" bodystart="9" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_low_pass_vector10_f_1a7d466c0a7ed0e318a8785a80ae1621d6" prot="public" virt="non-virtual"><scope>LowPassVector10F</scope><name>LowPassVector10F</name></member>
+      <member refid="class_low_pass_vector10_f_1ad4cd694913a64ac87d3a15c503e7d73b" prot="private" virt="non-virtual"><scope>LowPassVector10F</scope><name>m_Initialized</name></member>
+      <member refid="class_low_pass_vector10_f_1abfa2179ef47c02f38513aa68be7675b2" prot="private" virt="non-virtual"><scope>LowPassVector10F</scope><name>m_State</name></member>
+      <member refid="class_low_pass_vector10_f_1a634ae79e26705e337ce5a65444e30d94" prot="public" virt="non-virtual"><scope>LowPassVector10F</scope><name>operator[]</name></member>
+      <member refid="class_low_pass_vector10_f_1a684543518c9fdbcffeab1b1e34ba718e" prot="public" virt="non-virtual"><scope>LowPassVector10F</scope><name>Update</name></member>
+      <member refid="class_low_pass_vector10_f_1a9dfb74be2f3226117530413f76fe0553" prot="public" virt="non-virtual"><scope>LowPassVector10F</scope><name>~LowPassVector10F</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

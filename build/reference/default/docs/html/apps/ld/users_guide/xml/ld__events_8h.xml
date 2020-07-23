@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ld__events_8h" kind="file" language="C++">
+    <compoundname>ld_events.h</compoundname>
+    <includedby refid="ld__app_8h" local="yes">apps/ld/fsw/src/ld_app.h</includedby>
+    <invincdepgraph>
+      <node id="48">
+        <label>apps/ld/fsw/src/ld_app.h</label>
+        <link refid="ld__app_8h"/>
+      </node>
+      <node id="47">
+        <label>apps/ld/fsw/src/ld_events.h</label>
+        <link refid="ld_events.h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ld__events_8h_1a3273fec17864070c2e54132105808c43" prot="public" static="no">
+        <name>LD_EventIds_t</name>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a991304067f5550ed6cabcfe533d492fd" prot="public">
+          <name>LD_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a0eab1c6676e928e177cc6274380df250" prot="public">
+          <name>LD_INIT_INF_EID</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the LD task has completed
+ initialization.
+
+ The first \c %d field contains the application major version defined
+     in #LD_MAJOR_VERSION.
+ The second \c %d field contains the application minor version defined
+     in #LD_MINOR_VERSION.
+ The third \c %d field contains the application revision number defined
+     in #LD_REVISION.
+ The fourth \c %d field contains the application revision number defined
+     in #LD_MISSION_REV.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43ab47741860ab8d88b87a0e4fea422a107" prot="public">
+          <name>LD_CMD_NOOP_EID</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task receives a NoOp
+ command.
+
+ The first \c %u field contains the application major version defined
+     in #LD_MAJOR_VERSION.
+ The first \c %d field contains the application major version defined
+     in #LD_MAJOR_VERSION.
+ The second \c %d field contains the application minor version defined
+     in #LD_MINOR_VERSION.
+ The third \c %d field contains the application revision number defined
+     in #LD_REVISION.
+ The fourth \c %d field contains the application revision number defined
+     in #LD_MISSION_REV.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43ad1aa10622ec9332bcc3cc185835d183a" prot="public">
+          <name>LD_SUBSCRIBE_ERR_EID</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task fails to subscribe
+ to a message at initialization.
+
+ The first \c %s field contains the name of the pipe.
+ The second \c %s field contains the macro name of the message.
+ The 32 bit hexadecimal number is the error code returned by CFE.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a0d0aa466e3b0e20ace2b06bf8ad813d9" prot="public">
+          <name>LD_PIPE_INIT_ERR_EID</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to create %s pipe (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to create %s pipe (0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task fails to create a
+ CFE Software Bus pipe at initialization.
+
+ The \c %s field contains the name of the pipe.
+ The 32 bit hexadecimal number is the error code returned by CFE.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a2a589d2cce15cf9a3c72a68b960a8eb1" prot="public">
+          <name>LD_CFGTBL_MANAGE_ERR_EID</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ The 32 bit hexadecimal number is the error code returned by CFE
+ #CFE_TBL_Manage function.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43abed715da503bbad32bfb9014ed039c80" prot="public">
+          <name>LD_CFGTBL_GETADDR_ERR_EID</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ The 32 bit hexadecimal number is the error code returned by CFE
+ #CFE_TBL_GetAddress function.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43adc7e882ff425e266740d8158a4f7a5e3" prot="public">
+          <name>LD_RCVMSG_ERR_EID</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task has
+ had an error reading from a pipe.
+
+ The \c %s field contains the name of the pipe.
+ The 32 bit hexadecimal number is the error code returned by CFE.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a0646e31ba3c42c96a154b8806a492e20" prot="public">
+          <name>LD_MSGID_ERR_EID</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task has received an invalid
+ message ID.
+
+ The \c %s field contains the name of the pipe.
+ The 16 bit hexadecimal number is the actual message ID received.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a11bea0415a681c8c65925444398893f5" prot="public">
+          <name>LD_CC_ERR_EID</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task has received an invalid
+ message ID.
+
+ The %u field contains the actual command code received.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43acafdfba482fc0d0c01a9379a9b620bfd" prot="public">
+          <name>LD_MSGLEN_ERR_EID</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS LDTask has
+ received a message with an invalid length.
+
+ The first \c %d field contains the message ID.
+ The second \c %d field contains the command code.
+ The third \c %d field contains the actual length.
+ The fourth \c %d field contains the expected length.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a44e1f653182ec1dc8647b2466ca999a3" prot="public">
+          <name>LD_CFGTBL_REG_ERR_EID</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task fails to
+ register the LD configuration table.
+
+ The 32 bit hexadecimal number is the error code returned by CFE
+ #CFE_TBL_Register function.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a7c0f952280b5b7eff12da07dc394447c" prot="public">
+          <name>LD_CFGTBL_LOAD_ERR_EID</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: ERROR
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task fails to
+ load the LD configuration table.
+
+ The 32 bit hexadecimal number is the error code returned by CFE
+ #CFE_TBL_Load function.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43ac9e32d32f4e9efe3ff114d5bbbfc6fb8" prot="public">
+          <name>LD_FREEFALL_DETECTED_EID</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Freefall detected&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Freefall detected&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task detects freefall.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43ac141663dd697fe00baf00bbcd2b435ec" prot="public">
+          <name>LD_GROUNDCONTACT_DETECTED_EID</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Ground contact detected&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Ground contact detected&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task detects groundcontact.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43a49473e49cce8fb920ff2607ac3d97bfe" prot="public">
+          <name>LD_LAND_DETECTED_EID</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Land detected&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Land detected&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task detects land.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43aa81cc63a9a2580e94bfb1757bda2e3cc" prot="public">
+          <name>LD_FLIGHT_DETECTED_EID</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Vehicle in flight&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsldevents_1_cfsldevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Vehicle in flight&apos; </computeroutput></para></xrefdescription></xrefsect><verbatim> \par Type: INFORMATION
+
+ \par Cause:
+
+ This event message is issued when the CFS LD Task detects flight.</verbatim> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ld__events_8h_1a3273fec17864070c2e54132105808c43ae4a2c1a9600dea723a7aa1a1ed6df3a7" prot="public">
+          <name>LD_EVT_CNT</name>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/src/ld_events.h" line="50" column="1" bodyfile="apps/ld/fsw/src/ld_events.h" bodystart="50" bodyend="302"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LD_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LD_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a991304067f5550ed6cabcfe533d492fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a991304067f5550ed6cabcfe533d492fd" kindref="member">LD_RESERVED_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a0eab1c6676e928e177cc6274380df250" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a0eab1c6676e928e177cc6274380df250" kindref="member">LD_INIT_INF_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ab47741860ab8d88b87a0e4fea422a107" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ab47741860ab8d88b87a0e4fea422a107" kindref="member">LD_CMD_NOOP_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ad1aa10622ec9332bcc3cc185835d183a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ad1aa10622ec9332bcc3cc185835d183a" kindref="member">LD_SUBSCRIBE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a0d0aa466e3b0e20ace2b06bf8ad813d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a0d0aa466e3b0e20ace2b06bf8ad813d9" kindref="member">LD_PIPE_INIT_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a2a589d2cce15cf9a3c72a68b960a8eb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a2a589d2cce15cf9a3c72a68b960a8eb1" kindref="member">LD_CFGTBL_MANAGE_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43abed715da503bbad32bfb9014ed039c80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43abed715da503bbad32bfb9014ed039c80" kindref="member">LD_CFGTBL_GETADDR_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43adc7e882ff425e266740d8158a4f7a5e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43adc7e882ff425e266740d8158a4f7a5e3" kindref="member">LD_RCVMSG_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a0646e31ba3c42c96a154b8806a492e20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a0646e31ba3c42c96a154b8806a492e20" kindref="member">LD_MSGID_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a11bea0415a681c8c65925444398893f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a11bea0415a681c8c65925444398893f5" kindref="member">LD_CC_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43acafdfba482fc0d0c01a9379a9b620bfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43acafdfba482fc0d0c01a9379a9b620bfd" kindref="member">LD_MSGLEN_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a44e1f653182ec1dc8647b2466ca999a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a44e1f653182ec1dc8647b2466ca999a3" kindref="member">LD_CFGTBL_REG_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a7c0f952280b5b7eff12da07dc394447c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a7c0f952280b5b7eff12da07dc394447c" kindref="member">LD_CFGTBL_LOAD_ERR_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ac9e32d32f4e9efe3ff114d5bbbfc6fb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ac9e32d32f4e9efe3ff114d5bbbfc6fb8" kindref="member">LD_FREEFALL_DETECTED_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ac141663dd697fe00baf00bbcd2b435ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ac141663dd697fe00baf00bbcd2b435ec" kindref="member">LD_GROUNDCONTACT_DETECTED_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a49473e49cce8fb920ff2607ac3d97bfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43a49473e49cce8fb920ff2607ac3d97bfe" kindref="member">LD_LAND_DETECTED_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>15,</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43aa81cc63a9a2580e94bfb1757bda2e3cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43aa81cc63a9a2580e94bfb1757bda2e3cc" kindref="member">LD_FLIGHT_DETECTED_EID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ae4a2c1a9600dea723a7aa1a1ed6df3a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43ae4a2c1a9600dea723a7aa1a1ed6df3a7" kindref="member">LD_EVT_CNT</ref></highlight></codeline>
+<codeline lineno="302"><highlight class="normal">}<sp/><ref refid="ld__events_8h_1a3273fec17864070c2e54132105808c43" kindref="member">LD_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LD_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/ld/fsw/src/ld_events.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="lc__mission__cfg_8h" kind="file" language="C++">
+    <compoundname>lc_mission_cfg.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lc__mission__cfg_8h_1a15d094fa2859f665e373526e3419d8b4" prot="public" static="no">
+        <name>LC_RTS_REQ_MID</name>
+        <initializer>0x18A9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000001"><xreftitle>Purpose</xreftitle><xrefdescription><para>RTS Request Message ID</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Message ID that will be used by the /LC_ExecuteRTS function to construct the RTS request message.</para></simplesect>
+We define this here to allow the LC application to be built without including headers from the application (e.g. SC) that will receive the command. Obviously, this definition must match the message ID expectyed by the receiving application.</para><para>A mission may choose to modify the /LC_ExecuteRTS function not to use this or define it using a message ID constant that is defined numerically elsewhere.</para><para><simplesect kind="par"><title>Limits:</title><para>This parameter shouldn&apos;t be larger than the value set for #CFE_SB_HIGHEST_VALID_MSGID. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/mission_inc/lc_mission_cfg.h" line="43" column="9" bodyfile="apps/lc/fsw/mission_inc/lc_mission_cfg.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__mission__cfg_8h_1afe6f027641a94befc5992e27ee8ecf3e" prot="public" static="no">
+        <name>LC_RTS_REQ_CC</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfslccfg_1_cfslccfg000002"><xreftitle>Purpose</xreftitle><xrefdescription><para>RTS Request Command Code</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Command code that will be used by the /LC_ExecuteRTS function to construct the RTS request message.</para></simplesect>
+We define this here to allow the LC application to be built without including headers from the application (e.g. SC) that will receive the command. Obviously, this definition must match the command code expected by the receiving application.</para><para><simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535). Of course we all know that the preceding limit describes the size of the variable returned by the API function <ref refid="cfe__sb__util_8c_1a7b1204be89237bd230fc79ecc88718b5" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_GetCmdCode</ref>. And that for as long as CFE uses the existing CCSDS packet format implementation, command codes are only 7 bits (unsigned) with an upper limit of 127 and a lower limit of zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/mission_inc/lc_mission_cfg.h" line="65" column="9" bodyfile="apps/lc/fsw/mission_inc/lc_mission_cfg.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>lc_mission_cfg.h<sp/>1.3<sp/>2017/01/22<sp/>17:24:26EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>Limit<sp/>Checker<sp/>(LC)<sp/>Application<sp/>Mission<sp/>Configuration<sp/>Header<sp/>File</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_lc_mission_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_lc_mission_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="lc__mission__cfg_8h_1a15d094fa2859f665e373526e3419d8b4" refkind="member"><highlight class="preprocessor">#define<sp/>LC_RTS_REQ_MID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x18A9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="lc__mission__cfg_8h_1afe6f027641a94befc5992e27ee8ecf3e" refkind="member"><highlight class="preprocessor">#define<sp/>LC_RTS_REQ_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_lc_mission_cfg_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/lc/fsw/mission_inc/lc_mission_cfg.h"/>
+  </compounddef>
+</doxygen>

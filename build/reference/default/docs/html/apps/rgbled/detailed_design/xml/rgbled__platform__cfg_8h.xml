@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="rgbled__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>rgbled_platform_cfg.h</compoundname>
+    <includes local="yes">osapi.h</includes>
+    <includedby refid="rgbled__app_8h" local="yes">apps/rgbled/fsw/src/rgbled_app.h</includedby>
+    <incdepgraph>
+      <node id="141">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="142">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="138">
+        <label>apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h</label>
+        <link refid="rgbled_platform_cfg.h"/>
+        <childnode refid="139" relation="include">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="139">
+        <label>osapi.h</label>
+        <link refid="osapi_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="140" relation="include">
+        </childnode>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="146">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="143">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="140">
+        <label>common_types.h</label>
+        <link refid="common__types_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="150">
+        <label>apps/rgbled/fsw/src/rgbled_app.cpp</label>
+        <link refid="rgbled__app_8cpp"/>
+      </node>
+      <node id="148">
+        <label>apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h</label>
+        <link refid="rgbled_platform_cfg.h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>apps/rgbled/fsw/src/rgbled_app.h</label>
+        <link refid="rgbled__app_8h"/>
+        <childnode refid="150" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1a37c1429d1fce250f2d58c4fd7d6abe45" prot="public" static="no">
+        <name>RGBLED_SELFTEST_TASK_FLAGS</name>
+        <initializer><ref refid="osapi-os-core_8h_1a1059ea6f1266dde89975fcc5fe04fe33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_ENABLE_CORE_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="10" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1abfd1f88cb8b1c5d2e7eff00e04af8961" prot="public" static="no">
+        <name>RGBLED_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;amc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="29" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a64c3e61589abfda7469c66f108045998" compoundref="rgbled__app_8cpp" startline="221" endline="283">RGBLED::InitApp</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1ac25b8e9f4ebaf107dca9bc995d5586da" compoundref="rgbled__app_8cpp" startline="493" endline="552">RGBLED::ProcessAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1a122cfa2ca9d3e316f6c112c8d992ed66" prot="public" static="no">
+        <name>RGBLED_SCH_PIPE_DEPTH</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="36" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">RGBLED::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1a11afc0e0308f2ab732851d41a04d2068" prot="public" static="no">
+        <name>RGBLED_SCH_PIPE_NAME</name>
+        <initializer>(&quot;RGBLED_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="43" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">RGBLED::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1ab6db7ef183a047f0a7481fd73c24c45c" prot="public" static="no">
+        <name>RGBLED_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="53" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1ac7683cfbb98406e008a926471ff65e26" compoundref="rgbled__app_8cpp" startline="615" endline="658">RGBLED::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1adaddb95e490a126965bd85bed3a32c9a" prot="public" static="no">
+        <name>RGBLED_WAKEUP_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the RGBLED_WAKEUP_MID_MAX_MSG_COUNT and RGBLED_SEND_HK_MID_MAX_MSG_COUNT must be less than RGBLED_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="62" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">RGBLED::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1a7c1b6ee61cdaa3634148706628269753" prot="public" static="no">
+        <name>RGBLED_SEND_HK_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the RGBLED_WAKEUP_MID_MAX_MSG_COUNT and RGBLED_SEND_HK_MID_MAX_MSG_COUNT must be less than RGBLED_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="71" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">RGBLED::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1a9fa7dec79d31256407db757f2c95034f" prot="public" static="no">
+        <name>RGBLED_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="78" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">RGBLED::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1a8742f7626725cdd8bcb288845bec2e90" prot="public" static="no">
+        <name>RGBLED_CMD_PIPE_NAME</name>
+        <initializer>(&quot;RGBLED_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="85" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">RGBLED::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1aa0196bc325f5b3ce9d2f606f37fabe6f" prot="public" static="no">
+        <name>RGBLED_DATA_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the data pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="92" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1afa27fdf86a4aeca9477db557195ad4a9" prot="public" static="no">
+        <name>RGBLED_DATA_PIPE_NAME</name>
+        <initializer>(&quot;RGBLED_DATA_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="99" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1a2fab7c67a0cc44a930dddb76a3052e46" prot="public" static="no">
+        <name>RGBLED_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/rgbled_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="107" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="rgbled__platform__cfg_8h_1a1aba06a2b77979522d5a85e0cf91935e" prot="public" static="no">
+        <name>RGBLED_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" line="114" column="9" bodyfile="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1ac7683cfbb98406e008a926471ff65e26" compoundref="rgbled__app_8cpp" startline="615" endline="658">RGBLED::AppMain</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RGBLED_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RGBLED_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi_8h" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osapi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="rgbled__platform__cfg_8h_1a37c1429d1fce250f2d58c4fd7d6abe45" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RGBLED_SELFTEST_TASK_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OS_ENABLE_CORE_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/>RGBLED<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="rgbled__platform__cfg_8h_1abfd1f88cb8b1c5d2e7eff00e04af8961" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="rgbled__platform__cfg_8h_1a122cfa2ca9d3e316f6c112c8d992ed66" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="rgbled__platform__cfg_8h_1a11afc0e0308f2ab732851d41a04d2068" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;RGBLED_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="rgbled__platform__cfg_8h_1ab6db7ef183a047f0a7481fd73c24c45c" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="rgbled__platform__cfg_8h_1adaddb95e490a126965bd85bed3a32c9a" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_WAKEUP_MID_MAX_MSG_COUNT<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="rgbled__platform__cfg_8h_1a7c1b6ee61cdaa3634148706628269753" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_SEND_HK_MID_MAX_MSG_COUNT<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="rgbled__platform__cfg_8h_1a9fa7dec79d31256407db757f2c95034f" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="rgbled__platform__cfg_8h_1a8742f7626725cdd8bcb288845bec2e90" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;RGBLED_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="rgbled__platform__cfg_8h_1aa0196bc325f5b3ce9d2f606f37fabe6f" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_DATA_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="rgbled__platform__cfg_8h_1afa27fdf86a4aeca9477db557195ad4a9" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_DATA_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;RGBLED_DATA_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="rgbled__platform__cfg_8h_1a2fab7c67a0cc44a930dddb76a3052e46" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/rgbled_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="rgbled__platform__cfg_8h_1a1aba06a2b77979522d5a85e0cf91935e" refkind="member"><highlight class="preprocessor">#define<sp/>RGBLED_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>RGBLED_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/rgbled/fsw/platform_inc/rgbled_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

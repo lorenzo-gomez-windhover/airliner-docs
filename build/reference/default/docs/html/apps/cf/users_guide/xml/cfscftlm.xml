@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfscftlm" kind="page">
+    <compoundname>cfscftlm</compoundname>
+    <title>CFS CF Telemetry</title>
+    <detaileddescription>
+<sect1 id="cfscftlm_1cfscftlmhk">
+<title>CF Housekeeping Telemetry Packet</title>
+<para>The Housekeeping Telemetry packet is sent by CF to the software bus on command. When CF receives the CF_SEND_HK_MID command, a packet is constructed and sent by CF. CF typically receives this command every four or five seconds.</para></sect1>
+<sect1 id="cfscftlm_1cfscftlmtrans">
+<title>CF Transaction Diagnostic Packet</title>
+<para>The Transaction Diagnostic packet is sent to the software bus on command. When CF receives the CF_CMD_MID command, with command code CF_SEND_TRANS_DIAG_DATA_CC, a packet with message <ref refid="struct_i_d" kindref="compound">ID</ref> CF_TRANS_TLM_MID is constructed and sent by CF. There are two categories of information in this packet. The information held by the outer layer and the information held by the engine. The information held by the engine is available only if the transaction is active.</para></sect1>
+<sect1 id="cfscftlm_1cfscftlmcfgpkt">
+<title>CF Configuration Packet</title>
+<para>The Configuration Packet is sent to the software bus on command. When CF receives the CF_CMD_MID command, with command code CF_SEND_CFG_PARAMS_CC, a packet with message <ref refid="struct_i_d" kindref="compound">ID</ref> CF_CONFIG_TLM_MID is constructed and sent by CF. The configuration packet contains both compile time parameters from the platform configuration file and run-time parameters from the table.</para></sect1>
+<sect1 id="cfscftlm_1cfscftlmque">
+<title>CF Queue Information File</title>
+<para>The CF Queue Information is written to a file on command. When CF receives the CF_CMD_MID command, with command code CF_WRITE_QUEUE_INFO_CC, the queue information written to a file. The filename and path is specified in the command. If the first character of the filename parameter in the command is a null terminator (or zero), then the default filename is used. The default filename is specified by the parameter CF_DEFAULT_QUEUE_INFO_FILENAME in the platform configuration file. The queue information contains an entry for each item on the specified queue. A queue entry consists of a filename, the source entity <ref refid="struct_i_d" kindref="compound">ID</ref>, transaction number and transaction status.</para><para>Prev: <ref refid="cfscfcmds" kindref="compound">CFS CF Commands</ref> <linebreak/>
+ Next: <ref refid="cfscftbl" kindref="compound">CFS CF Tables</ref></para><para><variablelist>
+<varlistentry><term><anchor id="cfscftlm_1_cfscftlm000001"/>Class <ref refid="struct_c_f___hk_packet__t" kindref="compound">CF_HkPacket_t</ref>  </term></varlistentry>
+<listitem><para>CF Application housekeeping Packet  </para></listitem>
+<varlistentry><term><anchor id="cfscftlm_1_cfscftlm000002"/>Class <ref refid="struct_c_f___trans_packet__t" kindref="compound">CF_TransPacket_t</ref>  </term></varlistentry>
+<listitem><para>CF Application Single Transaction Status Packet </para></listitem>
+</variablelist>
+</para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

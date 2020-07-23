@@ -1,0 +1,587 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_t_o___channel_data__t" kind="struct" language="C++" prot="public">
+    <compoundname>TO_ChannelData_t</compoundname>
+    <includes refid="to__channel_8h" local="no">to_channel.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a244d8398b88664699e7f5f8a236f8c67" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t TO_ChannelData_t::ConfigTblHdl</definition>
+        <argsstring></argsstring>
+        <name>ConfigTblHdl</name>
+        <briefdescription>
+<para>Config Table Handle. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>CFE_TBL_Handle_t is a int16 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="123" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="to__config__utils_8h_1a785259286f9ff3c70101ac4dcc9687d6" compoundref="to__config__utils_8c" startline="82" endline="161">TO_InitTables</referencedby>
+        <referencedby refid="to__config__utils_8h_1ae215a4f44ef7b2c6c044c92b9f196c5a" compoundref="to__config__utils_8c" startline="169" endline="192">TO_LoadBackupConfigTable</referencedby>
+        <referencedby refid="to__config__utils_8h_1a5d3873f8f44e359f5a59366495ce1b0a" compoundref="to__config__utils_8c" startline="447" endline="562">TO_ManageChannelTables</referencedby>
+        <referencedby refid="to__message__flow_8h_1ac51818b6e7c41431c1a7136db222f786" compoundref="to__message__flow_8c" startline="246" endline="380">TO_MessageFlow_Add</referencedby>
+        <referencedby refid="to__message__flow_8h_1a578514fd1ab8cedaeff6f2ed5007f30c" compoundref="to__message__flow_8c" startline="389" endline="476">TO_MessageFlow_Remove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1af695549fe0a3bb58fb50ce8b1c82bf8d" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t TO_ChannelData_t::DumpTblHdl</definition>
+        <argsstring></argsstring>
+        <name>DumpTblHdl</name>
+        <briefdescription>
+<para>Dump Table Handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="126" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="to__config__utils_8h_1a785259286f9ff3c70101ac4dcc9687d6" compoundref="to__config__utils_8c" startline="82" endline="161">TO_InitTables</referencedby>
+        <referencedby refid="to__config__utils_8h_1a5d3873f8f44e359f5a59366495ce1b0a" compoundref="to__config__utils_8c" startline="447" endline="562">TO_ManageChannelTables</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a3cd6da1de3ac3982f5f143f1e4f8090b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_o___channel_tbl__t" kindref="compound">TO_ChannelTbl_t</ref> *</type>
+        <definition>TO_ChannelTbl_t* TO_ChannelData_t::ConfigTblPtr</definition>
+        <argsstring></argsstring>
+        <name>ConfigTblPtr</name>
+        <briefdescription>
+<para>Config Table Pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title></title><para>A pointer to config table data from cFE table services.</para></simplesect>
+<simplesect kind="par"><title></title><para>Note, this pointer can be null if the table data is not current or valid. The reasons for this can occur outside of nominal app function and the pointer could be restored to a non-null value at another time. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="138" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="to__config__utils_8h_1a5d3873f8f44e359f5a59366495ce1b0a" compoundref="to__config__utils_8c" startline="447" endline="562">TO_ManageChannelTables</referencedby>
+        <referencedby refid="to__message__flow_8h_1ac51818b6e7c41431c1a7136db222f786" compoundref="to__message__flow_8c" startline="246" endline="380">TO_MessageFlow_Add</referencedby>
+        <referencedby refid="to__message__flow_8h_1a87528f0f9c5d6de7bb0ec8b322008b0f" compoundref="to__message__flow_8c" startline="44" endline="84">TO_MessageFlow_Buildup</referencedby>
+        <referencedby refid="to__message__flow_8h_1a52b0500c028ef4ffccde67e1f7fc5736" compoundref="to__message__flow_8c" startline="164" endline="194">TO_MessageFlow_GetObject</referencedby>
+        <referencedby refid="to__message__flow_8h_1ac317b7ccf8db87a5a1593c87902c5526" compoundref="to__message__flow_8c" startline="203" endline="237">TO_MessageFlow_GetPQueue</referencedby>
+        <referencedby refid="to__message__flow_8h_1acdfd5a6f094812e6cc8eda61b18794cf" compoundref="to__message__flow_8c" startline="485" endline="556">TO_MessageFlow_Query</referencedby>
+        <referencedby refid="to__message__flow_8h_1a578514fd1ab8cedaeff6f2ed5007f30c" compoundref="to__message__flow_8c" startline="389" endline="476">TO_MessageFlow_Remove</referencedby>
+        <referencedby refid="to__message__flow_8h_1abc4d493e5a13c30f5f3605d75ffdf290" compoundref="to__message__flow_8c" startline="93" endline="131">TO_MessageFlow_TeardownAll</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a0eb5f5b64109fa09d2447a5de52732d1" compoundref="to__priority__queue_8c" startline="77" endline="138">TO_PriorityQueue_BuildupAll</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aeac317e17702670f90c128ad16b04eac" compoundref="to__priority__queue_8c" startline="444" endline="461">TO_PriorityQueue_IsValid</referencedby>
+        <referencedby refid="to__priority__queue_8h_1ae8c51f4fbcf50eebff80861902009128" compoundref="to__priority__queue_8c" startline="369" endline="436">TO_PriorityQueue_Query</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aac89caa3d9236f42c1749e203896fbfe" compoundref="to__priority__queue_8c" startline="239" endline="360">TO_PriorityQueue_QueueMsg</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a77dc056f0fdda7855fc2795fe4d60130" compoundref="to__priority__queue_8c" startline="147" endline="231">TO_PriorityQueue_TeardownAll</referencedby>
+        <referencedby refid="to__scheduler_8h_1a5db204bafd76218aef545c50a8899bf5" compoundref="to__scheduler_8c" startline="44" endline="93">TO_Scheduler_Run</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a919fd1eb92c4b114bb6f0666f2ab741d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_o___channel_tbl__t" kindref="compound">TO_ChannelTbl_t</ref> *</type>
+        <definition>TO_ChannelTbl_t* TO_ChannelData_t::BackupTblPtr</definition>
+        <argsstring></argsstring>
+        <name>BackupTblPtr</name>
+        <briefdescription>
+<para>Pointer to the memory resident backup table, if the channel was configured to have one. If there is no backup table, this is null. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="143" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+        <referencedby refid="to__config__utils_8h_1ae215a4f44ef7b2c6c044c92b9f196c5a" compoundref="to__config__utils_8c" startline="169" endline="192">TO_LoadBackupConfigTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1aa62b35e4cb41d14b4bb5302bee76bac0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_o___channel_dump_tbl__t" kindref="compound">TO_ChannelDumpTbl_t</ref></type>
+        <definition>TO_ChannelDumpTbl_t TO_ChannelData_t::DumpTbl</definition>
+        <argsstring></argsstring>
+        <name>DumpTbl</name>
+        <briefdescription>
+<para>Dump Table Pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="146" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="146" bodyend="-1"/>
+        <referencedby refid="to__classifier_8h_1a11240d67cbafbbc5941a36194a6dbc6b" compoundref="to__classifier_8c" startline="46" endline="161">TO_Classifier_Run</referencedby>
+        <referencedby refid="to__config__utils_8h_1a785259286f9ff3c70101ac4dcc9687d6" compoundref="to__config__utils_8c" startline="82" endline="161">TO_InitTables</referencedby>
+        <referencedby refid="to__message__flow_8h_1ac51818b6e7c41431c1a7136db222f786" compoundref="to__message__flow_8c" startline="246" endline="380">TO_MessageFlow_Add</referencedby>
+        <referencedby refid="to__message__flow_8h_1acdfd5a6f094812e6cc8eda61b18794cf" compoundref="to__message__flow_8c" startline="485" endline="556">TO_MessageFlow_Query</referencedby>
+        <referencedby refid="to__message__flow_8h_1a578514fd1ab8cedaeff6f2ed5007f30c" compoundref="to__message__flow_8c" startline="389" endline="476">TO_MessageFlow_Remove</referencedby>
+        <referencedby refid="to__message__flow_8h_1a0a334f0286ee818d16ff7d0b0e3777ae" compoundref="to__message__flow_8c" startline="139" endline="155">TO_MessageFlow_ResetCountsAll</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a0eb5f5b64109fa09d2447a5de52732d1" compoundref="to__priority__queue_8c" startline="77" endline="138">TO_PriorityQueue_BuildupAll</referencedby>
+        <referencedby refid="to__priority__queue_8h_1ae8c51f4fbcf50eebff80861902009128" compoundref="to__priority__queue_8c" startline="369" endline="436">TO_PriorityQueue_Query</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aac89caa3d9236f42c1749e203896fbfe" compoundref="to__priority__queue_8c" startline="239" endline="360">TO_PriorityQueue_QueueMsg</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a15821672d7053345c3a64c49f76953b1" compoundref="to__priority__queue_8c" startline="57" endline="68">TO_PriorityQueue_ResetCountsAll</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a77dc056f0fdda7855fc2795fe4d60130" compoundref="to__priority__queue_8c" startline="147" endline="231">TO_PriorityQueue_TeardownAll</referencedby>
+        <referencedby refid="to__scheduler_8h_1a5db204bafd76218aef545c50a8899bf5" compoundref="to__scheduler_8c" startline="44" endline="93">TO_Scheduler_Run</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1aca7c9dd2d49f4006fed4f6a71805d4b7" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 TO_ChannelData_t::MemPoolBuffer[TO_NUM_BYTES_IN_MEM_POOL]</definition>
+        <argsstring>[TO_NUM_BYTES_IN_MEM_POOL]</argsstring>
+        <name>MemPoolBuffer</name>
+        <briefdescription>
+<para>Memory pool buffer for queued messages. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="149" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1afed9f833b5fd16c3111b77ab1f27d0ed" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::MemPoolHandle</definition>
+        <argsstring></argsstring>
+        <name>MemPoolHandle</name>
+        <briefdescription>
+<para>Memory pool handle for queued messages. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000001"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_MEMPOOLHNDL</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="153" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+        <referencedby refid="to__output__queue_8h_1af1814f951f7b9403d9a7ab96483729bf" compoundref="to__output__queue_8c" startline="157" endline="195">TO_OutputQueue_QueueMsg</referencedby>
+        <referencedby refid="to__output__queue_8h_1aff9b14b172f9137fd04403b88fb82b7c" compoundref="to__output__queue_8c" startline="83" endline="133">TO_OutputQueue_Teardown</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aac89caa3d9236f42c1749e203896fbfe" compoundref="to__priority__queue_8c" startline="239" endline="360">TO_PriorityQueue_QueueMsg</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a77dc056f0fdda7855fc2795fe4d60130" compoundref="to__priority__queue_8c" startline="147" endline="231">TO_PriorityQueue_TeardownAll</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1ad3ab7825a55824d6c702d167b09e44be" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::MemInUse</definition>
+        <argsstring></argsstring>
+        <name>MemInUse</name>
+        <briefdescription>
+<para>The total memory currently in use. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000002"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_MEMINUSE</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="157" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="to__output__queue_8h_1af1814f951f7b9403d9a7ab96483729bf" compoundref="to__output__queue_8c" startline="157" endline="195">TO_OutputQueue_QueueMsg</referencedby>
+        <referencedby refid="to__output__queue_8h_1aff9b14b172f9137fd04403b88fb82b7c" compoundref="to__output__queue_8c" startline="83" endline="133">TO_OutputQueue_Teardown</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aac89caa3d9236f42c1749e203896fbfe" compoundref="to__priority__queue_8c" startline="239" endline="360">TO_PriorityQueue_QueueMsg</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a77dc056f0fdda7855fc2795fe4d60130" compoundref="to__priority__queue_8c" startline="147" endline="231">TO_PriorityQueue_TeardownAll</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a5d0665d67121f44a5328692f481d7178" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::PeakMemInUse</definition>
+        <argsstring></argsstring>
+        <name>PeakMemInUse</name>
+        <briefdescription>
+<para>The peak memory in use. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000003"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_PKMEMINUSE</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="161" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a739b2ad962e8367d372b86f99631b694" compoundref="to__channel_8c" startline="339" endline="353">TO_Channel_ResetCounts</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aac89caa3d9236f42c1749e203896fbfe" compoundref="to__priority__queue_8c" startline="239" endline="360">TO_PriorityQueue_QueueMsg</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1ac4229e1c55b86ce6e3a4240891fbc891" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::MemFullCount</definition>
+        <argsstring></argsstring>
+        <name>MemFullCount</name>
+        <briefdescription>
+<para>The number of times a message was not queued due to memory pool being full. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlmmnems_1_cfstotlmmnems000004"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>TO_MEMFULLCNT</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="165" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="165" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a739b2ad962e8367d372b86f99631b694" compoundref="to__channel_8c" startline="339" endline="353">TO_Channel_ResetCounts</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aac89caa3d9236f42c1749e203896fbfe" compoundref="to__priority__queue_8c" startline="239" endline="360">TO_PriorityQueue_QueueMsg</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a2e1c7e792e076bb79422a288bdceb0f0" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::MutexID</definition>
+        <argsstring></argsstring>
+        <name>MutexID</name>
+        <briefdescription>
+<para>Mutex to protect the Channel data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="168" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="168" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a799005b901538f29d78e2fa2d82f5951" compoundref="to__channel_8c" startline="496" endline="545">TO_Channel_Cleanup</referencedby>
+        <referencedby refid="to__channel_8c_1a8e5a9754f2662b3fd2fab27b32468a72" compoundref="to__channel_8c" startline="446" endline="480">TO_Channel_Init</referencedby>
+        <referencedby refid="to__channel_8h_1abd7f00e3039cc7973efe1742fcd7183c" compoundref="to__channel_8c" startline="396" endline="412">TO_Channel_LockByRef</referencedby>
+        <referencedby refid="to__channel_8h_1a25eb73b46f445035d183767491d73fba" compoundref="to__channel_8c" startline="415" endline="431">TO_Channel_UnlockByRef</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a0374529ce8cbf258e0d9fdc4479801d9" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::SentMsgCount</definition>
+        <argsstring></argsstring>
+        <name>SentMsgCount</name>
+        <briefdescription>
+<para>Count of telemetry messages sent out the channel interface. Counter begins at zero with app initialization and rolls over. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000001"><xreftitle>Name</xreftitle><xrefdescription><para>Sent Channel Telemetry </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="173" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="173" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a739b2ad962e8367d372b86f99631b694" compoundref="to__channel_8c" startline="339" endline="353">TO_Channel_ResetCounts</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1acc7305c0bbed3172d4afee66657bf433" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::QueuedMsgCount</definition>
+        <argsstring></argsstring>
+        <name>QueuedMsgCount</name>
+        <briefdescription>
+<para>Count of telemetry messages queued on the TO channel&apos;s Priority Queues. Counter begins at zero with app initialization and rolls over. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000002"><xreftitle>Name</xreftitle><xrefdescription><para>Queued Channel Telemetry </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="178" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="178" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a739b2ad962e8367d372b86f99631b694" compoundref="to__channel_8c" startline="339" endline="353">TO_Channel_ResetCounts</referencedby>
+        <referencedby refid="to__classifier_8h_1a11240d67cbafbbc5941a36194a6dbc6b" compoundref="to__classifier_8c" startline="46" endline="161">TO_Classifier_Run</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1ae1cedd0cb9bc07fccd5138b63e8131b5" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::DropMsgCount</definition>
+        <argsstring></argsstring>
+        <name>DropMsgCount</name>
+        <briefdescription>
+<para>Count of telemetry messages rejected, and not passed into the channel&apos;s Priority Queues. Counter begins at zero with app initialization and rolls over. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000003"><xreftitle>Name</xreftitle><xrefdescription><para>Dropped Channel Telemetry </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="183" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a739b2ad962e8367d372b86f99631b694" compoundref="to__channel_8c" startline="339" endline="353">TO_Channel_ResetCounts</referencedby>
+        <referencedby refid="to__classifier_8h_1a11240d67cbafbbc5941a36194a6dbc6b" compoundref="to__classifier_8c" startline="46" endline="161">TO_Classifier_Run</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a2929ce0e344aa9dd411446e32998aaa9" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::FailedMsgCount</definition>
+        <argsstring></argsstring>
+        <name>FailedMsgCount</name>
+        <briefdescription>
+<para>Count of telemetry messages failed on interface write after being pulled from the output queue, and lost. Counter begins at zero with app initialization and rolls over. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000004"><xreftitle>Name</xreftitle><xrefdescription><para>Failed Channel Telemetry </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="188" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="188" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a739b2ad962e8367d372b86f99631b694" compoundref="to__channel_8c" startline="339" endline="353">TO_Channel_ResetCounts</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a6275d804ce5b8bfc2f6055fa269b4c72" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::BytesSent</definition>
+        <argsstring></argsstring>
+        <name>BytesSent</name>
+        <briefdescription>
+<para>The number of bytes sent out the channel&apos;s interface Counter begins at zero with app initialization and rolls over. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfstotlm_1_cfstotlm000005"><xreftitle>Name</xreftitle><xrefdescription><para>Channel Bytes Sent </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="193" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="193" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a739b2ad962e8367d372b86f99631b694" compoundref="to__channel_8c" startline="339" endline="353">TO_Channel_ResetCounts</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1af8a5f80ee6e2b051d3ce24d004f1d575" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_o___output_queue__t" kindref="compound">TO_OutputQueue_t</ref></type>
+        <definition>TO_OutputQueue_t TO_ChannelData_t::OutputQueue</definition>
+        <argsstring></argsstring>
+        <name>OutputQueue</name>
+        <briefdescription>
+<para>Struct for single output channel queue entry. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="196" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="196" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a8e5a9754f2662b3fd2fab27b32468a72" compoundref="to__channel_8c" startline="446" endline="480">TO_Channel_Init</referencedby>
+        <referencedby refid="to__output__queue_8h_1a82129ef132de6f4644c92e70c243e74e" compoundref="to__output__queue_8c" startline="204" endline="242">TO_OutputChannel_Query</referencedby>
+        <referencedby refid="to__output__queue_8h_1a3c4de961721844a97866314c5470c060" compoundref="to__output__queue_8c" startline="45" endline="73">TO_OutputQueue_Buildup</referencedby>
+        <referencedby refid="to__output__queue_8h_1af1814f951f7b9403d9a7ab96483729bf" compoundref="to__output__queue_8c" startline="157" endline="195">TO_OutputQueue_QueueMsg</referencedby>
+        <referencedby refid="to__output__queue_8h_1a6bcbdde8361c68900e97f1ec2ee82165" compoundref="to__output__queue_8c" startline="142" endline="148">TO_OutputQueue_ResetCounts</referencedby>
+        <referencedby refid="to__output__queue_8h_1aff9b14b172f9137fd04403b88fb82b7c" compoundref="to__output__queue_8c" startline="83" endline="133">TO_OutputQueue_Teardown</referencedby>
+        <referencedby refid="to__app_8h_1ad58ec2f3aa7e5fa678d17f7db6da0733" compoundref="to__app_8c" startline="776" endline="814">TO_ReportHousekeeping</referencedby>
+        <referencedby refid="to__scheduler_8h_1a5db204bafd76218aef545c50a8899bf5" compoundref="to__scheduler_8c" startline="44" endline="93">TO_Scheduler_Run</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1ac6f086eb49afa1197d79cf9c38758a3a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::CfCntSemId</definition>
+        <argsstring></argsstring>
+        <name>CfCntSemId</name>
+        <briefdescription>
+<para>CF Throttling Semaphore ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="199" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="199" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1aa849c34ae5a5f01890917c95141d88ec" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::CfCntSemMax</definition>
+        <argsstring></argsstring>
+        <name>CfCntSemMax</name>
+        <briefdescription>
+<para>CF Throttling Semaphore Max Count. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="202" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="202" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a73731ab685092dc885bc005499191d7b" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelData_t::channelIdx</definition>
+        <argsstring></argsstring>
+        <name>channelIdx</name>
+        <briefdescription>
+<para>Channel index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="205" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="205" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a8e5a9754f2662b3fd2fab27b32468a72" compoundref="to__channel_8c" startline="446" endline="480">TO_Channel_Init</referencedby>
+        <referencedby refid="to__channel_8h_1abd7f00e3039cc7973efe1742fcd7183c" compoundref="to__channel_8c" startline="396" endline="412">TO_Channel_LockByRef</referencedby>
+        <referencedby refid="to__channel_8h_1a25eb73b46f445035d183767491d73fba" compoundref="to__channel_8c" startline="415" endline="431">TO_Channel_UnlockByRef</referencedby>
+        <referencedby refid="to__classifier_8h_1a11240d67cbafbbc5941a36194a6dbc6b" compoundref="to__classifier_8c" startline="46" endline="161">TO_Classifier_Run</referencedby>
+        <referencedby refid="to__config__utils_8h_1a785259286f9ff3c70101ac4dcc9687d6" compoundref="to__config__utils_8c" startline="82" endline="161">TO_InitTables</referencedby>
+        <referencedby refid="to__config__utils_8h_1ae215a4f44ef7b2c6c044c92b9f196c5a" compoundref="to__config__utils_8c" startline="169" endline="192">TO_LoadBackupConfigTable</referencedby>
+        <referencedby refid="to__message__flow_8h_1a87528f0f9c5d6de7bb0ec8b322008b0f" compoundref="to__message__flow_8c" startline="44" endline="84">TO_MessageFlow_Buildup</referencedby>
+        <referencedby refid="to__message__flow_8h_1abc4d493e5a13c30f5f3605d75ffdf290" compoundref="to__message__flow_8c" startline="93" endline="131">TO_MessageFlow_TeardownAll</referencedby>
+        <referencedby refid="to__output__queue_8h_1a3c4de961721844a97866314c5470c060" compoundref="to__output__queue_8c" startline="45" endline="73">TO_OutputQueue_Buildup</referencedby>
+        <referencedby refid="to__output__queue_8h_1af1814f951f7b9403d9a7ab96483729bf" compoundref="to__output__queue_8c" startline="157" endline="195">TO_OutputQueue_QueueMsg</referencedby>
+        <referencedby refid="to__output__queue_8h_1aff9b14b172f9137fd04403b88fb82b7c" compoundref="to__output__queue_8c" startline="83" endline="133">TO_OutputQueue_Teardown</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a0eb5f5b64109fa09d2447a5de52732d1" compoundref="to__priority__queue_8c" startline="77" endline="138">TO_PriorityQueue_BuildupAll</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aac89caa3d9236f42c1749e203896fbfe" compoundref="to__priority__queue_8c" startline="239" endline="360">TO_PriorityQueue_QueueMsg</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a77dc056f0fdda7855fc2795fe4d60130" compoundref="to__priority__queue_8c" startline="147" endline="231">TO_PriorityQueue_TeardownAll</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a740d93579e05e5334e51b8c43762f1d7" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TO_ChannelData_t::CfCntSemName[OS_MAX_API_NAME]</definition>
+        <argsstring>[OS_MAX_API_NAME]</argsstring>
+        <name>CfCntSemName</name>
+        <briefdescription>
+<para>CF Throttling Semaphore Name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="208" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="208" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1acca6da22ee88e302711e05d4a473fa96" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TO_ChannelData_t::ConfigTableName[CFE_TBL_MAX_NAME_LENGTH]</definition>
+        <argsstring>[CFE_TBL_MAX_NAME_LENGTH]</argsstring>
+        <name>ConfigTableName</name>
+        <briefdescription>
+<para>Config Table Name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="211" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="211" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+        <referencedby refid="to__config__utils_8h_1a785259286f9ff3c70101ac4dcc9687d6" compoundref="to__config__utils_8c" startline="82" endline="161">TO_InitTables</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a2c862b191e0ddb9c4b0a1f7ddfa4132d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TO_ChannelData_t::ConfigTableFileName[OS_MAX_PATH_LEN]</definition>
+        <argsstring>[OS_MAX_PATH_LEN]</argsstring>
+        <name>ConfigTableFileName</name>
+        <briefdescription>
+<para>Config Table File Name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="214" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="214" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+        <referencedby refid="to__config__utils_8h_1a785259286f9ff3c70101ac4dcc9687d6" compoundref="to__config__utils_8c" startline="82" endline="161">TO_InitTables</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a6ade25e2c6828b793b0c902bdc3bd03e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TO_ChannelData_t::DumpTableName[CFE_TBL_MAX_NAME_LENGTH]</definition>
+        <argsstring>[CFE_TBL_MAX_NAME_LENGTH]</argsstring>
+        <name>DumpTableName</name>
+        <briefdescription>
+<para>Dump Table Name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="217" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="217" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+        <referencedby refid="to__config__utils_8h_1a785259286f9ff3c70101ac4dcc9687d6" compoundref="to__config__utils_8c" startline="82" endline="161">TO_InitTables</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a289a2a070c1d9f3bcd3e1d6dc5bbc700" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TO_ChannelData_t::ChannelName[OS_MAX_API_NAME]</definition>
+        <argsstring>[OS_MAX_API_NAME]</argsstring>
+        <name>ChannelName</name>
+        <briefdescription>
+<para>Channel Name. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="220" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="220" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+        <referencedby refid="to__output__queue_8h_1a3c4de961721844a97866314c5470c060" compoundref="to__output__queue_8c" startline="45" endline="73">TO_OutputQueue_Buildup</referencedby>
+        <referencedby refid="to__output__queue_8h_1aff9b14b172f9137fd04403b88fb82b7c" compoundref="to__output__queue_8c" startline="83" endline="133">TO_OutputQueue_Teardown</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a0eb5f5b64109fa09d2447a5de52732d1" compoundref="to__priority__queue_8c" startline="77" endline="138">TO_PriorityQueue_BuildupAll</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a36f9cd14d734b333b90d736899992407" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t TO_ChannelData_t::DataPipeId</definition>
+        <argsstring></argsstring>
+        <name>DataPipeId</name>
+        <briefdescription>
+<para>Data Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="223" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="223" bodyend="-1"/>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+        <referencedby refid="to__channel_8h_1a1d95a1917be003cf84b1ced1df39fdad" compoundref="to__channel_8c" startline="565" endline="606">TO_Channel_SBPipe_Dequeue_All</referencedby>
+        <referencedby refid="to__classifier_8h_1a11240d67cbafbbc5941a36194a6dbc6b" compoundref="to__classifier_8c" startline="46" endline="161">TO_Classifier_Run</referencedby>
+        <referencedby refid="to__message__flow_8h_1ac51818b6e7c41431c1a7136db222f786" compoundref="to__message__flow_8c" startline="246" endline="380">TO_MessageFlow_Add</referencedby>
+        <referencedby refid="to__message__flow_8h_1a87528f0f9c5d6de7bb0ec8b322008b0f" compoundref="to__message__flow_8c" startline="44" endline="84">TO_MessageFlow_Buildup</referencedby>
+        <referencedby refid="to__message__flow_8h_1a578514fd1ab8cedaeff6f2ed5007f30c" compoundref="to__message__flow_8c" startline="389" endline="476">TO_MessageFlow_Remove</referencedby>
+        <referencedby refid="to__message__flow_8h_1abc4d493e5a13c30f5f3605d75ffdf290" compoundref="to__message__flow_8c" startline="93" endline="131">TO_MessageFlow_TeardownAll</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_data__t_1a4144ecb6e35b4a2263d98f7dafac0bb1" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 TO_ChannelData_t::State</definition>
+        <argsstring></argsstring>
+        <name>State</name>
+        <briefdescription>
+<para>To hold the value of TO_ChannelState_t. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_channel.h" line="226" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="226" bodyend="-1"/>
+        <referencedby refid="to__channel_8c_1a799005b901538f29d78e2fa2d82f5951" compoundref="to__channel_8c" startline="496" endline="545">TO_Channel_Cleanup</referencedby>
+        <referencedby refid="to__channel_8c_1a8e5a9754f2662b3fd2fab27b32468a72" compoundref="to__channel_8c" startline="446" endline="480">TO_Channel_Init</referencedby>
+        <referencedby refid="to__channel_8h_1a593bd326d3da127157988963308ba1d9" compoundref="to__channel_8c" startline="126" endline="297">TO_Channel_OpenChannel</referencedby>
+        <referencedby refid="to__channel_8h_1a3e172a1d7f47ede5418b1e1c372b4414" compoundref="to__channel_8c" startline="300" endline="313">TO_Channel_ProcessTelemetryAll</referencedby>
+        <referencedby refid="to__channel_8h_1a3b0cf944a31e228faf2ead680ca8cc07" compoundref="to__channel_8c" startline="548" endline="562">TO_Channel_State</referencedby>
+        <referencedby refid="to__config__utils_8h_1a5d3873f8f44e359f5a59366495ce1b0a" compoundref="to__config__utils_8c" startline="447" endline="562">TO_ManageChannelTables</referencedby>
+        <referencedby refid="to__message__flow_8h_1ac51818b6e7c41431c1a7136db222f786" compoundref="to__message__flow_8c" startline="246" endline="380">TO_MessageFlow_Add</referencedby>
+        <referencedby refid="to__message__flow_8h_1acdfd5a6f094812e6cc8eda61b18794cf" compoundref="to__message__flow_8c" startline="485" endline="556">TO_MessageFlow_Query</referencedby>
+        <referencedby refid="to__message__flow_8h_1a578514fd1ab8cedaeff6f2ed5007f30c" compoundref="to__message__flow_8c" startline="389" endline="476">TO_MessageFlow_Remove</referencedby>
+        <referencedby refid="to__output__queue_8h_1a82129ef132de6f4644c92e70c243e74e" compoundref="to__output__queue_8c" startline="204" endline="242">TO_OutputChannel_Query</referencedby>
+        <referencedby refid="to__priority__queue_8h_1ae8c51f4fbcf50eebff80861902009128" compoundref="to__priority__queue_8c" startline="369" endline="436">TO_PriorityQueue_Query</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definition of Channel Data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="18">
+        <label>TO_ChannelDumpTbl_t</label>
+        <link refid="struct_t_o___channel_dump_tbl__t"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>OutputQueue</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>PriorityQueue</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>MessageFlow</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>TO_PriorityQueueMetrics_t</label>
+        <link refid="struct_t_o___priority_queue_metrics__t"/>
+      </node>
+      <node id="23">
+        <label>TO_PriorityQueue_t</label>
+        <link refid="struct_t_o___priority_queue__t"/>
+      </node>
+      <node id="20">
+        <label>TO_MessageFlowMetrics_t</label>
+        <link refid="struct_t_o___message_flow_metrics__t"/>
+      </node>
+      <node id="21">
+        <label>TO_ChannelTbl_t</label>
+        <link refid="struct_t_o___channel_tbl__t"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>MessageFlow</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>PriorityQueue</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>TO_MessageFlow_t</label>
+        <link refid="struct_t_o___message_flow__t"/>
+      </node>
+      <node id="17">
+        <label>TO_OutputQueue_t</label>
+        <link refid="struct_t_o___output_queue__t"/>
+      </node>
+      <node id="16">
+        <label>TO_ChannelData_t</label>
+        <link refid="struct_t_o___channel_data__t"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>OutputQueue</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>DumpTbl</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>BackupTblPtr</edgelabel>
+          <edgelabel>ConfigTblPtr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/to/fsw/src/to_channel.h" line="116" column="1" bodyfile="apps/to/fsw/src/to_channel.h" bodystart="115" bodyend="228"/>
+    <listofallmembers>
+      <member refid="struct_t_o___channel_data__t_1a919fd1eb92c4b114bb6f0666f2ab741d" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>BackupTblPtr</name></member>
+      <member refid="struct_t_o___channel_data__t_1a6275d804ce5b8bfc2f6055fa269b4c72" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>BytesSent</name></member>
+      <member refid="struct_t_o___channel_data__t_1ac6f086eb49afa1197d79cf9c38758a3a" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>CfCntSemId</name></member>
+      <member refid="struct_t_o___channel_data__t_1aa849c34ae5a5f01890917c95141d88ec" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>CfCntSemMax</name></member>
+      <member refid="struct_t_o___channel_data__t_1a740d93579e05e5334e51b8c43762f1d7" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>CfCntSemName</name></member>
+      <member refid="struct_t_o___channel_data__t_1a73731ab685092dc885bc005499191d7b" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>channelIdx</name></member>
+      <member refid="struct_t_o___channel_data__t_1a289a2a070c1d9f3bcd3e1d6dc5bbc700" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>ChannelName</name></member>
+      <member refid="struct_t_o___channel_data__t_1a2c862b191e0ddb9c4b0a1f7ddfa4132d" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>ConfigTableFileName</name></member>
+      <member refid="struct_t_o___channel_data__t_1acca6da22ee88e302711e05d4a473fa96" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>ConfigTableName</name></member>
+      <member refid="struct_t_o___channel_data__t_1a244d8398b88664699e7f5f8a236f8c67" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>ConfigTblHdl</name></member>
+      <member refid="struct_t_o___channel_data__t_1a3cd6da1de3ac3982f5f143f1e4f8090b" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>ConfigTblPtr</name></member>
+      <member refid="struct_t_o___channel_data__t_1a36f9cd14d734b333b90d736899992407" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>DataPipeId</name></member>
+      <member refid="struct_t_o___channel_data__t_1ae1cedd0cb9bc07fccd5138b63e8131b5" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>DropMsgCount</name></member>
+      <member refid="struct_t_o___channel_data__t_1a6ade25e2c6828b793b0c902bdc3bd03e" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>DumpTableName</name></member>
+      <member refid="struct_t_o___channel_data__t_1aa62b35e4cb41d14b4bb5302bee76bac0" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>DumpTbl</name></member>
+      <member refid="struct_t_o___channel_data__t_1af695549fe0a3bb58fb50ce8b1c82bf8d" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>DumpTblHdl</name></member>
+      <member refid="struct_t_o___channel_data__t_1a2929ce0e344aa9dd411446e32998aaa9" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>FailedMsgCount</name></member>
+      <member refid="struct_t_o___channel_data__t_1ac4229e1c55b86ce6e3a4240891fbc891" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>MemFullCount</name></member>
+      <member refid="struct_t_o___channel_data__t_1ad3ab7825a55824d6c702d167b09e44be" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>MemInUse</name></member>
+      <member refid="struct_t_o___channel_data__t_1aca7c9dd2d49f4006fed4f6a71805d4b7" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>MemPoolBuffer</name></member>
+      <member refid="struct_t_o___channel_data__t_1afed9f833b5fd16c3111b77ab1f27d0ed" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>MemPoolHandle</name></member>
+      <member refid="struct_t_o___channel_data__t_1a2e1c7e792e076bb79422a288bdceb0f0" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>MutexID</name></member>
+      <member refid="struct_t_o___channel_data__t_1af8a5f80ee6e2b051d3ce24d004f1d575" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>OutputQueue</name></member>
+      <member refid="struct_t_o___channel_data__t_1a5d0665d67121f44a5328692f481d7178" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>PeakMemInUse</name></member>
+      <member refid="struct_t_o___channel_data__t_1acc7305c0bbed3172d4afee66657bf433" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>QueuedMsgCount</name></member>
+      <member refid="struct_t_o___channel_data__t_1a0374529ce8cbf258e0d9fdc4479801d9" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>SentMsgCount</name></member>
+      <member refid="struct_t_o___channel_data__t_1a4144ecb6e35b4a2263d98f7dafac0bb1" prot="public" virt="non-virtual"><scope>TO_ChannelData_t</scope><name>State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

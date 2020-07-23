@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeevsugfaq" kind="page">
+    <compoundname>cfeevsugfaq</compoundname>
+    <title>Frequently Asked Questions about Event Services</title>
+    <detaileddescription>
+<para><table rows="8" cols="2"><row>
+<entry thead="no"><para><bold>(Q) My telemetry stream is being flooded with the same event message. How do I make it stop? </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>The most direct way to stop an event message from flooding your downlink stream is to send a command to EVS to filter the offending event (see <ref refid="cfeevsugmsgcntrl" kindref="compound">Event Message Control</ref> or <ref refid="cfe__evs__msg_8h_1ad2ace89952f7a556da6dd8389eed2fe6" kindref="member">$sc_$cpu_EVS_SetBinFltrMask </ref>). In order to stop the event message from being sent, a bit mask of <computeroutput>&apos;0xFFFF&apos;</computeroutput> should be used. If the event is not currently registered for filtering, the event message must be added using the command <ref refid="cfe__evs__msg_8h_1aa73089f56b77fa4373f01702025ab215" kindref="member">$sc_$cpu_EVS_AddEvtFltr </ref>. </para></entry></row>
+<row>
+<entry thead="no"><para><bold>(Q) I filtered an event message and would now like to see it again. What do I do in order to see those events again? </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>If the event message that you are interested is registered with EVS for filtering, then you have 2 options:</para><para><orderedlist>
+<listitem>
+<para>You can use the <ref refid="cfe__evs__msg_8h_1ad2ace89952f7a556da6dd8389eed2fe6" kindref="member">$sc_$cpu_EVS_SetBinFltrMask </ref> command using a bit mask of <computeroutput>&apos;0x0000&apos;</computeroutput> which will result in getting all of the events for that Event Id <linebreak/>
+ <linebreak/>
+ <bold>or</bold> <linebreak/>
+ <linebreak/>
+ </para></listitem>
+<listitem>
+<para>You can remove the registration of that event with EVS (see <ref refid="cfe__evs__msg_8h_1a9035f262e62a9e6fa42ae1e1e706e3e2" kindref="member">$sc_$cpu_EVS_DelEvtFltr </ref>).<linebreak/>
+ Note that option (1) is the preferred method. <linebreak/>
+ </para></listitem>
+</orderedlist>
+</para></entry></row>
+<row>
+<entry thead="no"><para><bold>(Q) What is the purpose of DEBUG event messages? </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>Event message of type &quot;DEBUG&quot; are primarily used during flight software development in order to provide information that is most likely not needed on orbit. Some commands send debug event messages as verification that a command request was received. When writing the EVS local event log to a file, for example, an event message of type DEBUG is issued. On orbit, this event message is probably not needed. Instead, the command counter is used for command verification. </para></entry></row>
+<row>
+<entry thead="no"><para><bold>(Q) How do I find out which events are registered for filtering? </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>EVS provides a command (<ref refid="cfe__evs__msg_8h_1ae95651a0f643f6558e29f04567359bf1" kindref="member">$sc_$cpu_EVS_WriteAppData2File </ref>) which generates a file containing all of the applications that have registered with EVS and all of the filters that are registered for each application. Note that EVS merely generates the file. The file must be transferred to the ground in order to view it. </para></entry></row>
+</table>
+</para><para>Prev: <ref refid="cfeevsugprocreset" kindref="compound">Effects of a Processor Reset on EVS</ref> <linebreak/>
+ Up To: <ref refid="cfeevsovr" kindref="compound">cFE Event Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

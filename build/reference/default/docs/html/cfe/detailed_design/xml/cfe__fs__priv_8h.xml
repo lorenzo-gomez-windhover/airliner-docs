@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__fs__priv_8h" kind="file" language="C++">
+    <compoundname>cfe_fs_priv.h</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includes refid="cfe__fs_8h" local="yes">cfe_fs.h</includes>
+    <includes refid="cfe__es_8h" local="yes">cfe_es.h</includes>
+    <includedby refid="cfe__fs__api_8c" local="yes">fs/cfe_fs_api.c</includedby>
+    <includedby refid="cfe__fs__decompress_8h" local="yes">fs/cfe_fs_decompress.h</includedby>
+    <includedby refid="cfe__fs__priv_8c" local="yes">fs/cfe_fs_priv.c</includedby>
+    <incdepgraph>
+      <node id="6253">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="6258">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h"/>
+      </node>
+      <node id="6252">
+        <label>fs/cfe_fs_priv.h</label>
+        <link refid="cfe_fs_priv.h"/>
+        <childnode refid="6253" relation="include">
+        </childnode>
+        <childnode refid="6254" relation="include">
+        </childnode>
+        <childnode refid="6256" relation="include">
+        </childnode>
+      </node>
+      <node id="6255">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h"/>
+        <childnode refid="6253" relation="include">
+        </childnode>
+      </node>
+      <node id="6257">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="6256">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h"/>
+        <childnode refid="6257" relation="include">
+        </childnode>
+        <childnode refid="6258" relation="include">
+        </childnode>
+      </node>
+      <node id="6254">
+        <label>cfe_fs.h</label>
+        <link refid="cfe__fs_8h"/>
+        <childnode refid="6253" relation="include">
+        </childnode>
+        <childnode refid="6255" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6263">
+        <label>fs/cfe_fs_priv.c</label>
+        <link refid="cfe__fs__priv_8c"/>
+      </node>
+      <node id="6259">
+        <label>fs/cfe_fs_priv.h</label>
+        <link refid="cfe_fs_priv.h"/>
+        <childnode refid="6260" relation="include">
+        </childnode>
+        <childnode refid="6261" relation="include">
+        </childnode>
+        <childnode refid="6263" relation="include">
+        </childnode>
+      </node>
+      <node id="6262">
+        <label>fs/cfe_fs_decompress.c</label>
+        <link refid="cfe__fs__decompress_8c"/>
+      </node>
+      <node id="6261">
+        <label>fs/cfe_fs_decompress.h</label>
+        <link refid="cfe__fs__decompress_8h"/>
+        <childnode refid="6262" relation="include">
+        </childnode>
+      </node>
+      <node id="6260">
+        <label>fs/cfe_fs_api.c</label>
+        <link refid="cfe__fs__api_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_c_f_e___f_s__t" prot="public">CFE_FS_t</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cfe__fs__priv_8h_1a5ec454174290160f79a769d8a5f284a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_FS_LockSharedData</definition>
+        <argsstring>(const char *FunctionName)</argsstring>
+        <name>CFE_FS_LockSharedData</name>
+        <param>
+          <type>const char *</type>
+          <declname>FunctionName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="fs/cfe_fs_priv.h" line="71" column="1" bodyfile="fs/cfe_fs_priv.c" bodystart="100" bodyend="117"/>
+        <references refid="cfe__es_8h_1a76ee880d8ee4f632420507997779c1aa" compoundref="cfe__es__api_8c" startline="784" endline="810">CFE_ES_GetAppID</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f" compoundref="osapi_8c" startline="3160" endline="3198">OS_MutSemTake</references>
+        <references refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" compoundref="osapi_8h" startline="87">OS_SUCCESS</references>
+        <references refid="struct_c_f_e___f_s__t_1a01c2b395a5fd9f5de4bcf285cb08bbf6" compoundref="cfe__fs__priv_8h" startline="63">CFE_FS_t::SharedDataMutexId</references>
+        <referencedby refid="cfe__fs__decompress_8c_1a2d9160967617e454ed049a0b6c202ae8" compoundref="cfe__fs__decompress_8c" startline="82" endline="100">CFE_FS_Decompress</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__fs__priv_8h_1ae560a3e5ded0b18389004af27e78b238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_FS_UnlockSharedData</definition>
+        <argsstring>(const char *FunctionName)</argsstring>
+        <name>CFE_FS_UnlockSharedData</name>
+        <param>
+          <type>const char *</type>
+          <declname>FunctionName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="fs/cfe_fs_priv.h" line="72" column="1" bodyfile="fs/cfe_fs_priv.c" bodystart="132" bodyend="147"/>
+        <references refid="cfe__es_8h_1a76ee880d8ee4f632420507997779c1aa" compoundref="cfe__es__api_8c" startline="784" endline="810">CFE_ES_GetAppID</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5" compoundref="osapi_8c" startline="3115" endline="3144">OS_MutSemGive</references>
+        <references refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" compoundref="osapi_8h" startline="87">OS_SUCCESS</references>
+        <references refid="struct_c_f_e___f_s__t_1a01c2b395a5fd9f5de4bcf285cb08bbf6" compoundref="cfe__fs__priv_8h" startline="63">CFE_FS_t::SharedDataMutexId</references>
+        <referencedby refid="cfe__fs__decompress_8c_1a2d9160967617e454ed049a0b6c202ae8" compoundref="cfe__fs__decompress_8c" startline="82" endline="100">CFE_FS_Decompress</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__fs__priv_8h_1a718c0cdfc8947abeeea43f0217cb0ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_FS_ByteSwapCFEHeader</definition>
+        <argsstring>(CFE_FS_Header_t *Hdr)</argsstring>
+        <name>CFE_FS_ByteSwapCFEHeader</name>
+        <param>
+          <type><ref refid="struct_c_f_e___f_s___header__t" kindref="compound">CFE_FS_Header_t</ref> *</type>
+          <declname>Hdr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="fs/cfe_fs_priv.h" line="73" column="1" bodyfile="fs/cfe_fs_api.c" bodystart="248" bodyend="259"/>
+        <references refid="struct_c_f_e___f_s___header__t_1a393be15ad3ba2f15780a12a75c35edd3" compoundref="cfe__fs_8h" startline="152">CFE_FS_Header_t::ApplicationID</references>
+        <references refid="cfe__fs__api_8c_1aadbe10d48248472a7dc95e56a0fe77b9" compoundref="cfe__fs__api_8c" startline="268" endline="278">CFE_FS_ByteSwapUint32</references>
+        <references refid="struct_c_f_e___f_s___header__t_1a7f7bcdfcab25fa12f4e377067fce5573" compoundref="cfe__fs_8h" startline="145">CFE_FS_Header_t::ContentType</references>
+        <references refid="struct_c_f_e___f_s___header__t_1a2838ca8f465d1433147553b0f09103a2" compoundref="cfe__fs_8h" startline="149">CFE_FS_Header_t::Length</references>
+        <references refid="struct_c_f_e___f_s___header__t_1aa301b81b809a04853f72c3ee2eb934c7" compoundref="cfe__fs_8h" startline="151">CFE_FS_Header_t::ProcessorID</references>
+        <references refid="struct_c_f_e___f_s___header__t_1a4e70daddf66a318603419763e6c8412d" compoundref="cfe__fs_8h" startline="150">CFE_FS_Header_t::SpacecraftID</references>
+        <references refid="struct_c_f_e___f_s___header__t_1ac1b5794c41f04cd1eee346f033f44e3a" compoundref="cfe__fs_8h" startline="146">CFE_FS_Header_t::SubType</references>
+        <references refid="struct_c_f_e___f_s___header__t_1ab93d7841af480696a4fb9e92d886e603" compoundref="cfe__fs_8h" startline="154">CFE_FS_Header_t::TimeSeconds</references>
+        <references refid="struct_c_f_e___f_s___header__t_1a97ec2fb7b82dc75846c62cf3f2a0fb69" compoundref="cfe__fs_8h" startline="155">CFE_FS_Header_t::TimeSubSeconds</references>
+        <referencedby refid="cfe__fs__api_8c_1a8c78a5e48135048f1d0710aef2d02349" compoundref="cfe__fs__api_8c" startline="73" endline="101">CFE_FS_ReadHeader</referencedby>
+        <referencedby refid="cfe__fs__api_8c_1a7f0315f283029e5ec7ade9fdfd38875d" compoundref="cfe__fs__api_8c" startline="121" endline="185">CFE_FS_WriteHeader</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__fs__priv_8h_1aadbe10d48248472a7dc95e56a0fe77b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_FS_ByteSwapUint32</definition>
+        <argsstring>(uint32 *Uint32ToSwapPtr)</argsstring>
+        <name>CFE_FS_ByteSwapUint32</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref> *</type>
+          <declname>Uint32ToSwapPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="fs/cfe_fs_priv.h" line="74" column="1" bodyfile="fs/cfe_fs_api.c" bodystart="268" bodyend="278"/>
+        <referencedby refid="cfe__fs__priv_8h_1a718c0cdfc8947abeeea43f0217cb0ac8" compoundref="cfe__fs__api_8c" startline="248" endline="259">CFE_FS_ByteSwapCFEHeader</referencedby>
+        <referencedby refid="cfe__fs__api_8c_1a42531e7041b38ddab54d779abbb3ba08" compoundref="cfe__fs__api_8c" startline="188" endline="239">CFE_FS_SetTimestamp</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:<sp/>cfe_fs_priv.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2012,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>header<sp/>file<sp/>contains<sp/>prototypes<sp/>for<sp/>private<sp/>functions<sp/>and<sp/>type</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>definitions<sp/>for<sp/>FS<sp/>internal<sp/>use.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>Author:<sp/><sp/>A.<sp/>Cudmore/NASA<sp/>GSFC<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>$Log:<sp/>cfe_fs_priv.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2012/01/13<sp/>12:11:29GMT-05:00<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Changed<sp/>license<sp/>text<sp/>to<sp/>reflect<sp/>open<sp/>source</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2010/10/04<sp/>17:07:14EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Cleaned<sp/>up<sp/>copyright<sp/>symbol.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2008/07/08<sp/>15:40:41EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Added<sp/>CFE_FS<sp/>global<sp/>data,<sp/>lock/unlock<sp/>functions,<sp/>log<sp/>messages<sp/>for<sp/>decompress<sp/>API.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/07/08<sp/>13:37:18EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cfe_fs_priv_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cfe_fs_priv_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Includes</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__fs_8h" kindref="compound">cfe_fs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__es_8h" kindref="compound">cfe_es.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Macro<sp/>Definitions</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>Type<sp/>Definitions</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">**<sp/><sp/>Typedef:<sp/>CFE_FS_t<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>This<sp/>structure<sp/>contains<sp/>the<sp/>FS<sp/>global<sp/>variables.</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="struct_c_f_e___f_s__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63" refid="struct_c_f_e___f_s__t_1a01c2b395a5fd9f5de4bcf285cb08bbf6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___f_s__t_1a01c2b395a5fd9f5de4bcf285cb08bbf6" kindref="member">SharedDataMutexId</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___f_s__t" kindref="compound">CFE_FS_t</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">**<sp/>FS<sp/>Function<sp/>Prototypes</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__fs__priv_8h_1a5ec454174290160f79a769d8a5f284a8" kindref="member">CFE_FS_LockSharedData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*FunctionName<sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__fs__priv_8h_1ae560a3e5ded0b18389004af27e78b238" kindref="member">CFE_FS_UnlockSharedData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*FunctionName<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__fs__priv_8h_1a718c0cdfc8947abeeea43f0217cb0ac8" kindref="member">CFE_FS_ByteSwapCFEHeader</ref>(<ref refid="struct_c_f_e___f_s___header__t" kindref="compound">CFE_FS_Header_t</ref><sp/>*Hdr);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__fs__priv_8h_1aadbe10d48248472a7dc95e56a0fe77b9" kindref="member">CFE_FS_ByteSwapUint32</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>*Uint32ToSwapPtr);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_cfe_fs_priv_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="fs/cfe_fs_priv.h"/>
+  </compounddef>
+</doxygen>

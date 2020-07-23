@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/lgc-ut-gcov.dir/__/unit_test/lgc_app_test.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/unit_test/lgc_cmds_test.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/unit_test/lgc_config_tbl_test.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/unit_test/lgc_testrunner.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/unit_test/lgc_test_utils.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/unit_test/stubs/ut_lgc_custom_hooks.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/unit_test/stubs/ut_lgc_custom_stubs.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/src/lgc_app.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/src/lgc_config_utils.cpp.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/utassert.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_es_hooks.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_es_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_evs_hooks.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_evs_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_fs_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_eeprom_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_memrange_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_memutils_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_ram_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_timer_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_psp_watchdog_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_sb_hooks.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_sb_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_tbl_hooks.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_tbl_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_time_hooks.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_cfe_time_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/utlist.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_osapi_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/ut_osfileapi_stubs.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/uttest.c.o"
+  "CMakeFiles/lgc-ut-gcov.dir/__/__/__/__/tools/ut_assert/src/uttools.c.o"
+  "lgc-ut-gcov.pdb"
+  "lgc-ut-gcov"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C CXX)
+  include(CMakeFiles/lgc-ut-gcov.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

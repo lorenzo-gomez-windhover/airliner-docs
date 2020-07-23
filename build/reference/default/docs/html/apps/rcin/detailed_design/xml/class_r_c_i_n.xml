@@ -1,0 +1,646 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_r_c_i_n" kind="class" language="C++" prot="public">
+    <compoundname>RCIN</compoundname>
+    <includes refid="rcin__app_8h" local="no">rcin_app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_r_c_i_n_1a467b727df8bb5d7ed00689e6ed4bf27f" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t RCIN::SchPipeId</definition>
+        <argsstring></argsstring>
+        <name>SchPipeId</name>
+        <briefdescription>
+<para>Scheduling Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="93" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="class_r_c_i_n_1ab88d7772334a15701ee16852f5eda3fd" compoundref="rcin__app_8cpp" startline="147" endline="207">InitPipe</referencedby>
+        <referencedby refid="class_r_c_i_n_1a1deef19c1968fd0123827e859abe85ba" compoundref="rcin__app_8cpp" startline="307" endline="369">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_c_i_n_1a60a13c20dbaa90cf7492d719d2481a45" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t RCIN::CmdPipeId</definition>
+        <argsstring></argsstring>
+        <name>CmdPipeId</name>
+        <briefdescription>
+<para>Command Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="96" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="class_r_c_i_n_1ab88d7772334a15701ee16852f5eda3fd" compoundref="rcin__app_8cpp" startline="147" endline="207">InitPipe</referencedby>
+        <referencedby refid="class_r_c_i_n_1a18303dbc5836dc71c32f9100ebcbdf72" compoundref="rcin__app_8cpp" startline="377" endline="421">ProcessCmdPipe</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_c_i_n_1afbc87dd5582f5caa84899dc4b92c9fa6" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 RCIN::uiRunStatus</definition>
+        <argsstring></argsstring>
+        <name>uiRunStatus</name>
+        <briefdescription>
+<para>Task Run Status. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="100" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="class_r_c_i_n_1ac62516777c460b34d88a3b7bb8f84788" compoundref="rcin__app_8cpp" startline="590" endline="633">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_c_i_n_1ab6ea94a203c1928472e582727ecb6720" prot="public" static="no" mutable="no">
+        <type>PX4_InputRcMsg_t</type>
+        <definition>PX4_InputRcMsg_t RCIN::InputRcMsg</definition>
+        <argsstring></argsstring>
+        <name>InputRcMsg</name>
+        <briefdescription>
+<para>Output Data published at the end of cycle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="103" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="class_r_c_i_n_1a7da57a12c24f296c511107ea384e6bdb" compoundref="rcin__app_8cpp" startline="215" endline="228">InitData</referencedby>
+        <referencedby refid="class_r_c_i_n_1a435f60ff7e592e2b007f858f2337f0d2" compoundref="rcin__app_8cpp" startline="531" endline="571">ReadDevice</referencedby>
+        <referencedby refid="class_r_c_i_n_1a8a4641eed5d3ef6f9662a8d36ffedd69" compoundref="rcin__app_8cpp" startline="485" endline="490">SendInputRcMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_c_i_n_1a1d1f4ba3a3db9dc6b7fb29a7610872e7" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 RCIN::StrikeCount</definition>
+        <argsstring></argsstring>
+        <name>StrikeCount</name>
+        <briefdescription>
+<para>Counter for invalid or failed reads from custom layer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="106" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="class_r_c_i_n_1a435f60ff7e592e2b007f858f2337f0d2" compoundref="rcin__app_8cpp" startline="531" endline="571">ReadDevice</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_c_i_n___hk_tlm__t" kindref="compound">RCIN_HkTlm_t</ref></type>
+        <definition>RCIN_HkTlm_t RCIN::HkTlm</definition>
+        <argsstring></argsstring>
+        <name>HkTlm</name>
+        <briefdescription>
+<para>Housekeeping Telemetry for downlink. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="109" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="class_r_c_i_n_1a54b7e3a2c67d98d75ec1355674f9bbe4" compoundref="rcin__app_8cpp" startline="236" endline="299">InitApp</referencedby>
+        <referencedby refid="class_r_c_i_n_1a7da57a12c24f296c511107ea384e6bdb" compoundref="rcin__app_8cpp" startline="215" endline="228">InitData</referencedby>
+        <referencedby refid="class_r_c_i_n_1af4418ac9a995f7af2f76d93e6e961f0a" compoundref="rcin__app_8cpp" startline="429" endline="465">ProcessAppCmds</referencedby>
+        <referencedby refid="class_r_c_i_n_1a18303dbc5836dc71c32f9100ebcbdf72" compoundref="rcin__app_8cpp" startline="377" endline="421">ProcessCmdPipe</referencedby>
+        <referencedby refid="class_r_c_i_n_1a435f60ff7e592e2b007f858f2337f0d2" compoundref="rcin__app_8cpp" startline="531" endline="571">ReadDevice</referencedby>
+        <referencedby refid="class_r_c_i_n_1a88b28a449eaea90fdb64415394c90e28" compoundref="rcin__app_8cpp" startline="472" endline="477">ReportHousekeeping</referencedby>
+        <referencedby refid="class_r_c_i_n_1a52b7a22fd5ca94e57fbc71bbb5e735b8" compoundref="rcin__app_8cpp" startline="498" endline="523">VerifyCmdLength</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_r_c_i_n_1a3e1057c015f3c3f0fa90cb5aae3fb0f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RCIN::RCIN</definition>
+        <argsstring>()</argsstring>
+        <name>RCIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="89" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1aa62b9e3d42c833e4cf5e1001a9f259ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RCIN::~RCIN</definition>
+        <argsstring>()</argsstring>
+        <name>~RCIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="90" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1ac62516777c460b34d88a3b7bb8f84788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RCIN::AppMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Radio Control Input (<ref refid="class_r_c_i_n" kindref="compound">RCIN</ref>) application entry point. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Radio Control Input Task application entry point. This function performs app initialization, then waits for the cFE ES Startup Sync, then executes the main processing loop.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>If there is an unrecoverable failure during initialization the main loop is never executed and the application will exit. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="124" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="590" bodyend="633"/>
+        <references refid="cfe__es_8h_1abeabe0f94cccfa5bfcfc2f43796da8d1">CFE_ES_APP_ERROR</references>
+        <references refid="cfe__es_8h_1a033dfcc82849cfb9a474a2cece5c9803">CFE_ES_APP_RUN</references>
+        <references refid="cfe__es__api_8c_1ad5d888f9bca5038624a04d04efce8325">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es__api_8c_1a426ef8e1796ccebba16c63c8e86fb842">CFE_ES_RegisterApp</references>
+        <references refid="cfe__es__api_8c_1ae8598bcba38a594d1c868924999da953">CFE_ES_RunLoop</references>
+        <references refid="cfe__es__api_8c_1a7dc343ea775a0e5773ecdf700581d548">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_r_c_i_n_1a54b7e3a2c67d98d75ec1355674f9bbe4" compoundref="rcin__app_8cpp" startline="236" endline="299">InitApp</references>
+        <references refid="rcin__perfids_8h_1a16e28d5a59c1720bd392b1e830861d57" compoundref="rcin__perfids_8h" startline="9">RCIN_MAIN_TASK_PERF_ID</references>
+        <references refid="rcin__platform__cfg_8h_1a9b2e39d519215e19a066bfd771bf9e71" compoundref="rcin__platform__cfg_8h" startline="49">RCIN_SCH_PIPE_PEND_TIME</references>
+        <references refid="rcin__platform__cfg_8h_1acbfb3bc1fe4e7ccb0763cdfa1ccf952d" compoundref="rcin__platform__cfg_8h" startline="110">RCIN_STARTUP_TIMEOUT_MSEC</references>
+        <references refid="class_r_c_i_n_1a1deef19c1968fd0123827e859abe85ba" compoundref="rcin__app_8cpp" startline="307" endline="369">RcvSchPipeMsg</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="class_r_c_i_n_1afbc87dd5582f5caa84899dc4b92c9fa6" compoundref="rcin__app_8h" startline="100">uiRunStatus</references>
+        <referencedby refid="rcin__app_8cpp_1a5833d21cad8275d4d4504c729c1d0ea0" compoundref="rcin__app_8cpp" startline="579" endline="582">RCIN_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a54b7e3a2c67d98d75ec1355674f9bbe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 RCIN::InitApp</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitApp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the Radio Control Input (<ref refid="class_r_c_i_n" kindref="compound">RCIN</ref>) application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Radio Control Input application initialization routine. This function performs all the required startup steps to initialize (or restore from CDS) <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> data structures and get the application registered with the cFE services so it can begin to receive command messages and send events.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="7" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__es_8h_1a426ef8e1796ccebba16c63c8e86fb842" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterApp</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #RCIN_InitEvent  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #RCIN_InitPipe  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #RCIN_InitData  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #RCIN_InitConfigTbl  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_TaskInstallDeleteHandler</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="150" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="236" bodyend="299"/>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" compoundref="rcin__app_8h" startline="109">HkTlm</references>
+        <references refid="class_r_c_i_n_1a7da57a12c24f296c511107ea384e6bdb" compoundref="rcin__app_8cpp" startline="215" endline="228">InitData</references>
+        <references refid="class_r_c_i_n_1a01ffcf8555e8e1f8a48d9cd12c3dd065" compoundref="rcin__app_8cpp" startline="83" endline="139">InitEvent</references>
+        <references refid="class_r_c_i_n_1ab88d7772334a15701ee16852f5eda3fd" compoundref="rcin__app_8cpp" startline="147" endline="207">InitPipe</references>
+        <references refid="osapi-os-core_8h_1a0de425c8dba312f44cf8803a69e7ca5e">OS_TaskInstallDeleteHandler</references>
+        <references refid="rcin__app_8cpp_1a5a56e730b3bff5a6a6d422cfe71ea62b" compoundref="rcin__app_8cpp" startline="641" endline="644">RCIN_CleanupCallback</references>
+        <references refid="rcin__custom_8h_1a09f629f34509fbd4ddfa0997448bde45">RCIN_Custom_Init</references>
+        <references refid="rcin__app_8h_1abd6213f2f2a140a3736a03076a721ca9" compoundref="rcin__app_8h" startline="58">RCIN_ERROR</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a01e2fbebb90d43241901ff4943b468b0" compoundref="rcin__events_8h" startline="232">RCIN_INIT_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a4de515723ebdf85d106d7c898ab4c2a3" compoundref="rcin__events_8h" startline="75">RCIN_INIT_INF_EID</references>
+        <references refid="rcin__app_8h_1a2123256de7dbf1fcff7a2dfd8c8596fcaa95bfd0054daeb574a3b6961f85ee518" compoundref="rcin__app_8h" startline="75">RCIN_INITIALIZED</references>
+        <references refid="rcin__version_8h_1a86571d84f3248b28107106e4175446c9" compoundref="rcin__version_8h" startline="53">RCIN_MAJOR_VERSION</references>
+        <references refid="rcin__version_8h_1a5386a5453a476e0c57d2e4f219429d83" compoundref="rcin__version_8h" startline="67">RCIN_MINOR_VERSION</references>
+        <references refid="rcin__platform__cfg_8h_1aba3e02c1b1fbe5039ddcbc9a5b0f74cc" compoundref="rcin__platform__cfg_8h" startline="25">RCIN_MISSION_REV</references>
+        <references refid="rcin__version_8h_1a9d332ff90a1b0e6093e31b3658cdb7c9" compoundref="rcin__version_8h" startline="81">RCIN_REVISION</references>
+        <references refid="struct_r_c_i_n___hk_tlm__t_1a13fd7c4e8916718b6bbd0772b745ea4b" compoundref="rcin__msg_8h" startline="154">RCIN_HkTlm_t::State</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_r_c_i_n_1ac62516777c460b34d88a3b7bb8f84788" compoundref="rcin__app_8cpp" startline="590" endline="633">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a01ffcf8555e8e1f8a48d9cd12c3dd065" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 RCIN::InitEvent</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitEvent</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Event Services and Event tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup cFE Event Services for use by the <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="168" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="83" bodyend="139"/>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1a9bdcfcf17abcc96df0078cac22b0ce7c">CFE_EVS_APP_FILTER_OVERLOAD</references>
+        <references refid="cfe__evs_8h_1a9c74cb368c56aff83d050a4807132460">CFE_EVS_BINARY_FILTER</references>
+        <references refid="cfe__evs_8h_1a26a77de85eafef643d4dcbfdf7b77422">CFE_EVS_NO_FILTER</references>
+        <references refid="cfe__evs_8c_1a991c19d964b501bf0908bb60812fda28">CFE_EVS_Register</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1a41a96a173a28d042e012dce9bebf793e">CFE_EVS_BinFilter_t::EventID</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1ab9881e02d2317fe2205379a25bc679b2">CFE_EVS_BinFilter_t::Mask</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5c4160805a2521f794573a69aad7ad90" compoundref="rcin__events_8h" startline="202">RCIN_CC_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a63adc8cee17caf7fdbc398697f178df4" compoundref="rcin__events_8h" startline="98">RCIN_CMD_NOOP_EID</references>
+        <references refid="rcin__custom_8h_1aa21a7b7c7e63c6874f0f4706cef09533">RCIN_Custom_Init_EventFilters</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a01e2fbebb90d43241901ff4943b468b0" compoundref="rcin__events_8h" startline="232">RCIN_INIT_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a4de515723ebdf85d106d7c898ab4c2a3" compoundref="rcin__events_8h" startline="75">RCIN_INIT_INF_EID</references>
+        <references refid="rcin__platform__cfg_8h_1ade61f36ab0fd7fa9e5db2e2685c9f8da" compoundref="rcin__platform__cfg_8h" startline="115">RCIN_MAX_EVENT_FILTERS</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2da7cf82fbabab07b5dfd71a40960d79" compoundref="rcin__events_8h" startline="188">RCIN_MSGID_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627af9e166e569ae9df37d5759ff856593ed" compoundref="rcin__events_8h" startline="219">RCIN_MSGLEN_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627aeeee8564f194e1b3d4b1f5acecbd623f" compoundref="rcin__events_8h" startline="257">RCIN_NOT_PUBLISHING_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a65658ac93885de42f0888cdf9e6682cc" compoundref="rcin__events_8h" startline="131">RCIN_PIPE_INIT_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a78cab03b02ab295f3c02f9e13febfee1" compoundref="rcin__events_8h" startline="245">RCIN_PUBLISHING_INF_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5891f50f9d13993c93446c5344b2409e" compoundref="rcin__events_8h" startline="173">RCIN_RCVMSG_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2c37a140b16bb30f4b4fa893493b37e2" compoundref="rcin__events_8h" startline="54">RCIN_RESERVED_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a6f0dc50fadeba5e0ca4e8dcef266eceb" compoundref="rcin__events_8h" startline="115">RCIN_SUBSCRIBE_ERR_EID</references>
+        <referencedby refid="class_r_c_i_n_1a54b7e3a2c67d98d75ec1355674f9bbe4" compoundref="rcin__app_8cpp" startline="236" endline="299">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a7da57a12c24f296c511107ea384e6bdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RCIN::InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global variables used by <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to initialize the <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> application data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="181" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="215" bodyend="228"/>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0">CFE_SB_InitMsg</references>
+        <references refid="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" compoundref="rcin__app_8h" startline="109">HkTlm</references>
+        <references refid="class_r_c_i_n_1ab6ea94a203c1928472e582727ecb6720" compoundref="rcin__app_8h" startline="103">InputRcMsg</references>
+        <references refid="rcin__custom_8h_1ac98bf07d5e149c7e26aeece2b8414999">RCIN_Custom_InitData</references>
+        <references refid="rcin__msgids_8h_1aab3c63f8168e72e443e401f62b7d39a4" compoundref="rcin__msgids_8h" startline="4">RCIN_HK_TLM_MID</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_r_c_i_n_1a54b7e3a2c67d98d75ec1355674f9bbe4" compoundref="rcin__app_8cpp" startline="236" endline="299">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1ab88d7772334a15701ee16852f5eda3fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 RCIN::InitPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize message pipes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup initialize the cFE Software Bus message pipes and subscribe to messages for the <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a5939c3681044a3d953d0fe72dd577889" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_SubscribeEx</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="202" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="147" bodyend="207"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2">CFE_SB_CreatePipe</references>
+        <references refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5">CFE_SB_Default_Qos</references>
+        <references refid="cfe__sb_8h_1afc2c2db1a504f544b430f33f28be769b">CFE_SB_Subscribe</references>
+        <references refid="cfe__sb_8h_1a5939c3681044a3d953d0fe72dd577889">CFE_SB_SubscribeEx</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_r_c_i_n_1a60a13c20dbaa90cf7492d719d2481a45" compoundref="rcin__app_8h" startline="96">CmdPipeId</references>
+        <references refid="rcin__msgids_8h_1acd1db14152ddb7a901ef6525ea5ba801" compoundref="rcin__msgids_8h" startline="7">RCIN_CMD_MID</references>
+        <references refid="rcin__platform__cfg_8h_1ab7902df9edb1be9a78dbc0c34bfe0748" compoundref="rcin__platform__cfg_8h" startline="74">RCIN_CMD_PIPE_DEPTH</references>
+        <references refid="rcin__platform__cfg_8h_1a029239e8e4a39180fc48d79bd5de7ee6" compoundref="rcin__platform__cfg_8h" startline="81">RCIN_CMD_PIPE_NAME</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a65658ac93885de42f0888cdf9e6682cc" compoundref="rcin__events_8h" startline="131">RCIN_PIPE_INIT_ERR_EID</references>
+        <references refid="rcin__platform__cfg_8h_1ad4c4ec2b4824f522579e2991650cee53" compoundref="rcin__platform__cfg_8h" startline="32">RCIN_SCH_PIPE_DEPTH</references>
+        <references refid="rcin__platform__cfg_8h_1a01b4186577d97be7a303ea124809b247" compoundref="rcin__platform__cfg_8h" startline="39">RCIN_SCH_PIPE_NAME</references>
+        <references refid="rcin__msgids_8h_1a2d8e5e921a20642e5663427231021567" compoundref="rcin__msgids_8h" startline="5">RCIN_SEND_HK_MID</references>
+        <references refid="rcin__platform__cfg_8h_1a2849ad5fce55694c6530a7d9507d2c65" compoundref="rcin__platform__cfg_8h" startline="67">RCIN_SEND_HK_MID_MAX_MSG_COUNT</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a6f0dc50fadeba5e0ca4e8dcef266eceb" compoundref="rcin__events_8h" startline="115">RCIN_SUBSCRIBE_ERR_EID</references>
+        <references refid="rcin__msgids_8h_1af7afeee2ebbbcf2f9ea637e70b6a209e" compoundref="rcin__msgids_8h" startline="6">RCIN_WAKEUP_MID</references>
+        <references refid="rcin__platform__cfg_8h_1ab248dd19634a79c4563f71d500179012" compoundref="rcin__platform__cfg_8h" startline="58">RCIN_WAKEUP_MID_MAX_MSG_COUNT</references>
+        <references refid="class_r_c_i_n_1a467b727df8bb5d7ed00689e6ed4bf27f" compoundref="rcin__app_8h" startline="93">SchPipeId</references>
+        <referencedby refid="class_r_c_i_n_1a54b7e3a2c67d98d75ec1355674f9bbe4" compoundref="rcin__app_8cpp" startline="236" endline="299">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a1deef19c1968fd0123827e859abe85ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 RCIN::RcvSchPipeMsg</definition>
+        <argsstring>(int32 iBlocking)</argsstring>
+        <name>RcvSchPipeMsg</name>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+          <declname>iBlocking</declname>
+        </param>
+        <briefdescription>
+<para>Receive and process messages from the scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function receives and processes messages for the <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> application from the SCH pipe. This function will pend for the type defined by iBlocking, allowing it to wait for messages, i.e. wakeup messages from scheduler.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iBlocking</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PEND_FOREVER</ref>, <ref refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_POLL</ref> or millisecond timeout</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a54840fe06aeb08b1e2c8df420474780d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_RcvMsg</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="225" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="307" bodyend="369"/>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1a68b8b8ed93cecb670c945388a797e970">CFE_SB_TIME_OUT</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_r_c_i_n_1a18303dbc5836dc71c32f9100ebcbdf72" compoundref="rcin__app_8cpp" startline="377" endline="421">ProcessCmdPipe</references>
+        <references refid="rcin__perfids_8h_1a16e28d5a59c1720bd392b1e830861d57" compoundref="rcin__perfids_8h" startline="9">RCIN_MAIN_TASK_PERF_ID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2da7cf82fbabab07b5dfd71a40960d79" compoundref="rcin__events_8h" startline="188">RCIN_MSGID_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5891f50f9d13993c93446c5344b2409e" compoundref="rcin__events_8h" startline="173">RCIN_RCVMSG_ERR_EID</references>
+        <references refid="rcin__msgids_8h_1a2d8e5e921a20642e5663427231021567" compoundref="rcin__msgids_8h" startline="5">RCIN_SEND_HK_MID</references>
+        <references refid="rcin__msgids_8h_1af7afeee2ebbbcf2f9ea637e70b6a209e" compoundref="rcin__msgids_8h" startline="6">RCIN_WAKEUP_MID</references>
+        <references refid="class_r_c_i_n_1a435f60ff7e592e2b007f858f2337f0d2" compoundref="rcin__app_8cpp" startline="531" endline="571">ReadDevice</references>
+        <references refid="class_r_c_i_n_1a88b28a449eaea90fdb64415394c90e28" compoundref="rcin__app_8cpp" startline="472" endline="477">ReportHousekeeping</references>
+        <references refid="class_r_c_i_n_1a467b727df8bb5d7ed00689e6ed4bf27f" compoundref="rcin__app_8h" startline="93">SchPipeId</references>
+        <references refid="class_r_c_i_n_1a8a4641eed5d3ef6f9662a8d36ffedd69" compoundref="rcin__app_8cpp" startline="485" endline="490">SendInputRcMsg</references>
+        <referencedby refid="class_r_c_i_n_1ac62516777c460b34d88a3b7bb8f84788" compoundref="rcin__app_8cpp" startline="590" endline="633">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a18303dbc5836dc71c32f9100ebcbdf72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RCIN::ProcessCmdPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessCmdPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Radio Control Input Task incoming command processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes incoming commands subscribed by <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="238" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="377" bodyend="421"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a">CFE_SB_POLL</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_r_c_i_n_1a60a13c20dbaa90cf7492d719d2481a45" compoundref="rcin__app_8h" startline="96">CmdPipeId</references>
+        <references refid="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" compoundref="rcin__app_8h" startline="109">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_r_c_i_n_1af4418ac9a995f7af2f76d93e6e961f0a" compoundref="rcin__app_8cpp" startline="429" endline="465">ProcessAppCmds</references>
+        <references refid="rcin__msgids_8h_1acd1db14152ddb7a901ef6525ea5ba801" compoundref="rcin__msgids_8h" startline="7">RCIN_CMD_MID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a2da7cf82fbabab07b5dfd71a40960d79" compoundref="rcin__events_8h" startline="188">RCIN_MSGID_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5891f50f9d13993c93446c5344b2409e" compoundref="rcin__events_8h" startline="173">RCIN_RCVMSG_ERR_EID</references>
+        <references refid="struct_r_c_i_n___hk_tlm__t_1ac421e2861e2af830d6bd7789b257b8b4" compoundref="rcin__msg_8h" startline="151">RCIN_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_r_c_i_n_1a1deef19c1968fd0123827e859abe85ba" compoundref="rcin__app_8cpp" startline="307" endline="369">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1af4418ac9a995f7af2f76d93e6e961f0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RCIN::ProcessAppCmds</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr)</argsstring>
+        <name>ProcessAppCmds</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <briefdescription>
+<para>Radio Control Input Task application commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes command messages specific to the <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="254" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="429" bodyend="465"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" compoundref="rcin__app_8h" startline="109">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a5c4160805a2521f794573a69aad7ad90" compoundref="rcin__events_8h" startline="202">RCIN_CC_ERR_EID</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a63adc8cee17caf7fdbc398697f178df4" compoundref="rcin__events_8h" startline="98">RCIN_CMD_NOOP_EID</references>
+        <references refid="rcin__version_8h_1a86571d84f3248b28107106e4175446c9" compoundref="rcin__version_8h" startline="53">RCIN_MAJOR_VERSION</references>
+        <references refid="rcin__version_8h_1a5386a5453a476e0c57d2e4f219429d83" compoundref="rcin__version_8h" startline="67">RCIN_MINOR_VERSION</references>
+        <references refid="rcin__platform__cfg_8h_1aba3e02c1b1fbe5039ddcbc9a5b0f74cc" compoundref="rcin__platform__cfg_8h" startline="25">RCIN_MISSION_REV</references>
+        <references refid="rcin__msg_8h_1a2552234e3a8e388e5e715ae429869394" compoundref="rcin__msg_8h" startline="88">RCIN_NOOP_CC</references>
+        <references refid="rcin__msg_8h_1a410dad3559d9e3c59bb854f026ef4022" compoundref="rcin__msg_8h" startline="121">RCIN_RESET_CC</references>
+        <references refid="rcin__version_8h_1a9d332ff90a1b0e6093e31b3658cdb7c9" compoundref="rcin__version_8h" startline="81">RCIN_REVISION</references>
+        <references refid="struct_r_c_i_n___hk_tlm__t_1a0e9eaac971bab8593621efdc2ff81a44" compoundref="rcin__msg_8h" startline="147">RCIN_HkTlm_t::usCmdCnt</references>
+        <references refid="struct_r_c_i_n___hk_tlm__t_1ac421e2861e2af830d6bd7789b257b8b4" compoundref="rcin__msg_8h" startline="151">RCIN_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_r_c_i_n_1a18303dbc5836dc71c32f9100ebcbdf72" compoundref="rcin__app_8cpp" startline="377" endline="421">ProcessCmdPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a88b28a449eaea90fdb64415394c90e28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RCIN::ReportHousekeeping</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReportHousekeeping</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends <ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> housekeeping message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function sends the housekeeping message</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="266" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="472" bodyend="477"/>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" compoundref="rcin__app_8h" startline="109">HkTlm</references>
+        <referencedby refid="class_r_c_i_n_1a1deef19c1968fd0123827e859abe85ba" compoundref="rcin__app_8cpp" startline="307" endline="369">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a8a4641eed5d3ef6f9662a8d36ffedd69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RCIN::SendInputRcMsg</definition>
+        <argsstring>(void)</argsstring>
+        <name>SendInputRcMsg</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends the InputRcMsg message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function publishes the InputRcMsg message.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="278" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="485" bodyend="490"/>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="class_r_c_i_n_1ab6ea94a203c1928472e582727ecb6720" compoundref="rcin__app_8h" startline="103">InputRcMsg</references>
+        <referencedby refid="class_r_c_i_n_1a1deef19c1968fd0123827e859abe85ba" compoundref="rcin__app_8cpp" startline="307" endline="369">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a52b7a22fd5ca94e57fbc71bbb5e735b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean RCIN::VerifyCmdLength</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr, uint16 usExpectedLen)</argsstring>
+        <name>VerifyCmdLength</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>usExpectedLen</declname>
+        </param>
+        <briefdescription>
+<para>Verify Command Length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function verifies the command message length.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">usExpectedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected length of the message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the message length matches expectations, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="298" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="498" bodyend="523"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__sb_8h_1ac32b86cf9e1d12a547792853c35f6aa1">CFE_SB_GetTotalMsgLength</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" compoundref="rcin__app_8h" startline="109">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627af9e166e569ae9df37d5759ff856593ed" compoundref="rcin__events_8h" startline="219">RCIN_MSGLEN_ERR_EID</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="struct_r_c_i_n___hk_tlm__t_1ac421e2861e2af830d6bd7789b257b8b4" compoundref="rcin__msg_8h" startline="151">RCIN_HkTlm_t::usCmdErrCnt</references>
+      </memberdef>
+      <memberdef kind="function" id="class_r_c_i_n_1a435f60ff7e592e2b007f858f2337f0d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RCIN::ReadDevice</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReadDevice</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Read RC device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function calls the custom layer to read from the device and updates the InputRC message with current values.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rcin/fsw/src/rcin_app.h" line="311" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.cpp" bodystart="531" bodyend="571"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" compoundref="rcin__app_8h" startline="109">HkTlm</references>
+        <references refid="class_r_c_i_n_1ab6ea94a203c1928472e582727ecb6720" compoundref="rcin__app_8h" startline="103">InputRcMsg</references>
+        <references refid="rcin__custom_8h_1a4c2e6e9d458777308b1deae97ff7c990">RCIN_Custom_Measure</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627aeeee8564f194e1b3d4b1f5acecbd623f" compoundref="rcin__events_8h" startline="257">RCIN_NOT_PUBLISHING_ERR_EID</references>
+        <references refid="rcin__app_8h_1a2123256de7dbf1fcff7a2dfd8c8596fcad21f19bd72e04380115f4edabd7c7bd1" compoundref="rcin__app_8h" startline="77">RCIN_NOTPUBLISHING</references>
+        <references refid="rcin__app_8h_1a2123256de7dbf1fcff7a2dfd8c8596fca21d958f10c77b79f7fa52b524c234605" compoundref="rcin__app_8h" startline="79">RCIN_PUBLISHING</references>
+        <references refid="rcin__events_8h_1a4c5707424dfcf1ea0be9df205d6ef627a78cab03b02ab295f3c02f9e13febfee1" compoundref="rcin__events_8h" startline="245">RCIN_PUBLISHING_INF_EID</references>
+        <references refid="rcin__app_8h_1a972c0303461210e9de65e08723bbbbfa" compoundref="rcin__app_8h" startline="61">RCIN_STRIKE_COUNT_THRES</references>
+        <references refid="struct_r_c_i_n___hk_tlm__t_1a13fd7c4e8916718b6bbd0772b745ea4b" compoundref="rcin__msg_8h" startline="154">RCIN_HkTlm_t::State</references>
+        <references refid="class_r_c_i_n_1a1d1f4ba3a3db9dc6b7fb29a7610872e7" compoundref="rcin__app_8h" startline="106">StrikeCount</references>
+        <referencedby refid="class_r_c_i_n_1a1deef19c1968fd0123827e859abe85ba" compoundref="rcin__app_8cpp" startline="307" endline="369">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_r_c_i_n" kindref="compound">RCIN</ref> Application Class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>RCIN_HkTlm_t</label>
+        <link refid="struct_r_c_i_n___hk_tlm__t"/>
+      </node>
+      <node id="1">
+        <label>RCIN</label>
+        <link refid="class_r_c_i_n"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>HkTlm</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/rcin/fsw/src/rcin_app.h" line="87" column="1" bodyfile="apps/rcin/fsw/src/rcin_app.h" bodystart="86" bodyend="312"/>
+    <listofallmembers>
+      <member refid="class_r_c_i_n_1ac62516777c460b34d88a3b7bb8f84788" prot="public" virt="non-virtual"><scope>RCIN</scope><name>AppMain</name></member>
+      <member refid="class_r_c_i_n_1a60a13c20dbaa90cf7492d719d2481a45" prot="public" virt="non-virtual"><scope>RCIN</scope><name>CmdPipeId</name></member>
+      <member refid="class_r_c_i_n_1a6b89f6832eddab03123c94e7982a0cfd" prot="public" virt="non-virtual"><scope>RCIN</scope><name>HkTlm</name></member>
+      <member refid="class_r_c_i_n_1a54b7e3a2c67d98d75ec1355674f9bbe4" prot="public" virt="non-virtual"><scope>RCIN</scope><name>InitApp</name></member>
+      <member refid="class_r_c_i_n_1a7da57a12c24f296c511107ea384e6bdb" prot="public" virt="non-virtual"><scope>RCIN</scope><name>InitData</name></member>
+      <member refid="class_r_c_i_n_1a01ffcf8555e8e1f8a48d9cd12c3dd065" prot="public" virt="non-virtual"><scope>RCIN</scope><name>InitEvent</name></member>
+      <member refid="class_r_c_i_n_1ab88d7772334a15701ee16852f5eda3fd" prot="public" virt="non-virtual"><scope>RCIN</scope><name>InitPipe</name></member>
+      <member refid="class_r_c_i_n_1ab6ea94a203c1928472e582727ecb6720" prot="public" virt="non-virtual"><scope>RCIN</scope><name>InputRcMsg</name></member>
+      <member refid="class_r_c_i_n_1af4418ac9a995f7af2f76d93e6e961f0a" prot="public" virt="non-virtual"><scope>RCIN</scope><name>ProcessAppCmds</name></member>
+      <member refid="class_r_c_i_n_1a18303dbc5836dc71c32f9100ebcbdf72" prot="public" virt="non-virtual"><scope>RCIN</scope><name>ProcessCmdPipe</name></member>
+      <member refid="class_r_c_i_n_1a3e1057c015f3c3f0fa90cb5aae3fb0f2" prot="public" virt="non-virtual"><scope>RCIN</scope><name>RCIN</name></member>
+      <member refid="class_r_c_i_n_1a1deef19c1968fd0123827e859abe85ba" prot="public" virt="non-virtual"><scope>RCIN</scope><name>RcvSchPipeMsg</name></member>
+      <member refid="class_r_c_i_n_1a435f60ff7e592e2b007f858f2337f0d2" prot="public" virt="non-virtual"><scope>RCIN</scope><name>ReadDevice</name></member>
+      <member refid="class_r_c_i_n_1a88b28a449eaea90fdb64415394c90e28" prot="public" virt="non-virtual"><scope>RCIN</scope><name>ReportHousekeeping</name></member>
+      <member refid="class_r_c_i_n_1a467b727df8bb5d7ed00689e6ed4bf27f" prot="public" virt="non-virtual"><scope>RCIN</scope><name>SchPipeId</name></member>
+      <member refid="class_r_c_i_n_1a8a4641eed5d3ef6f9662a8d36ffedd69" prot="public" virt="non-virtual"><scope>RCIN</scope><name>SendInputRcMsg</name></member>
+      <member refid="class_r_c_i_n_1a1d1f4ba3a3db9dc6b7fb29a7610872e7" prot="public" virt="non-virtual"><scope>RCIN</scope><name>StrikeCount</name></member>
+      <member refid="class_r_c_i_n_1afbc87dd5582f5caa84899dc4b92c9fa6" prot="public" virt="non-virtual"><scope>RCIN</scope><name>uiRunStatus</name></member>
+      <member refid="class_r_c_i_n_1a52b7a22fd5ca94e57fbc71bbb5e735b8" prot="public" virt="non-virtual"><scope>RCIN</scope><name>VerifyCmdLength</name></member>
+      <member refid="class_r_c_i_n_1aa62b9e3d42c833e4cf5e1001a9f259ce" prot="public" virt="non-virtual"><scope>RCIN</scope><name>~RCIN</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

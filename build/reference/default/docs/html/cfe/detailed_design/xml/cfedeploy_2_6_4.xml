@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_2_6_4" kind="page">
+    <compoundname>cfedeploy_2_6_4</compoundname>
+    <title>Description of Fields in the Startup script</title>
+    <detaileddescription>
+<para>This section is a small aside on the description of the fields contained within the startup script, cfe_es_startup.scr. Here is an example line:</para><para><verbatim>CFE_APP, /cf/apps/ci.o, CI_task_main,  CI_APP,  70,  4096, 0x0, 1;
+</verbatim></para><para>The fields are separated by commas and are:<linebreak/>
+ <itemizedlist>
+<listitem>
+<para><bold>Module Type</bold>: This field is the type of module we are loading. The choices are CFE_APP, CFE_LIB, CFE_DRV. CFE_APP is the standard cFE application. CFE_LIB is for a cFE shared library. CFE_DRV is for a cFE device driver (not currently implemented). <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Path and Filename</bold>: The second field is the path to the loadable module on the system. <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Entry Point</bold>: The third parameter is the entry point to the start of the code of the module (such as its initialization function or main function). <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>cFE Name</bold>: The fourth field is the cFE name for the Application or Library. <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Priority</bold>: The fifth field is the application&apos;s starting priority. Priorities can range from 0 to 255 (0 being highest). <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Stack Size</bold>: The sixth field is the application&apos;s stack size. <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Unused</bold>: The seventh field is unused. It used to be Load Address. Set this field to 0 (zero). <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Exception Action</bold>: The eight field is the Exception Action: This field specifies what the application will do if the cFE Application causes an exception. A &apos;1&apos; here means that the cFE will perform a Processor Reset. A &apos;0&apos; her means that the cFE will reset the Application without stopping the rest of the cFE Applications. <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para><para>Each line corresponds to one entity. At the end of the line, a semicolon delineates the end of the line. At the end of the file, a bang (exclamation point) delineates the end of the file.</para><para>Next: <ref refid="cfedeploy_2_6_5" kindref="compound">Start the cFE Core on the Target</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_2_6_3" kindref="compound">Transfer the cFE Applications and Startup File to the Target Non-Volatile Disk</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_2_6" kindref="compound">Load and Run the cFE Core and cFE Applications</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

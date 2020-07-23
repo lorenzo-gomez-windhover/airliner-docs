@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__psp__private_8h" kind="file" language="C++">
+    <compoundname>cfe_psp_private.h</compoundname>
+    <includes local="yes">cfe_psp.h</includes>
+    <includes refid="osapi-os-rtm_8h" local="yes">osapi-os-rtm.h</includes>
+    <includedby refid="cfe__psp__start_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_start.c</includedby>
+    <includedby refid="cfe__psp__support_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_support.c</includedby>
+    <includedby refid="psp__testcase_8c" local="yes">/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testcase.c</includedby>
+    <incdepgraph>
+      <node id="9463">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="9462">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_private.h</label>
+        <link refid="cfe_psp_private.h"/>
+        <childnode refid="9463" relation="include">
+        </childnode>
+        <childnode refid="9464" relation="include">
+        </childnode>
+      </node>
+      <node id="9464">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9467">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_support.c</label>
+        <link refid="cfe__psp__support_8c"/>
+      </node>
+      <node id="9466">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_start.c</label>
+        <link refid="cfe__psp__start_8c"/>
+      </node>
+      <node id="9465">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_private.h</label>
+        <link refid="cfe_psp_private.h"/>
+        <childnode refid="9466" relation="include">
+        </childnode>
+        <childnode refid="9467" relation="include">
+        </childnode>
+        <childnode refid="9468" relation="include">
+        </childnode>
+      </node>
+      <node id="9468">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/unit_test/psp_testcase.c</label>
+        <link refid="psp__testcase_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_c_f_e___p_s_p___global_data__t" prot="public">CFE_PSP_GlobalData_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cfe__psp__private_8h_1a8d39cf08753027e6ac6ffcea91e97196" prot="public" static="no">
+        <name>CFE_PSP_CPU_NAME_LENGTH</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_private.h" line="7" column="9" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_private.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="cfe__psp__start_8c_1ace00716301f96be8586509469486eb54" compoundref="cfe__psp__start_8c" startline="593" endline="629">CFE_PSP_ProcessArgumentDefaults</referencedby>
+        <referencedby refid="psp__testcase_8c_1a1b5b965abea1df074c75f532b72c803b" compoundref="cfe__psp__start_8c" startline="194" endline="441">PSP_Main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_CFE_PSP_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CFE_PSP_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_psp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi-os-rtm_8h" kindref="compound">osapi-os-rtm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="cfe__psp__private_8h_1a8d39cf08753027e6ac6ffcea91e97196" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFE_PSP_CPU_NAME_LENGTH<sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="struct_c_f_e___p_s_p___global_data__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12" refid="struct_c_f_e___p_s_p___global_data__t_1a770dc5de4b20b110513837b83ca2c1f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___p_s_p___global_data__t_1a770dc5de4b20b110513837b83ca2c1f7" kindref="member">TimerCounter</ref>;</highlight></codeline>
+<codeline lineno="13" refid="struct_c_f_e___p_s_p___global_data__t_1a91f0f5870b8871b226c9479cf2580ed2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___p_s_p___global_data__t_1a91f0f5870b8871b226c9479cf2580ed2" kindref="member">CFE_PSP_SpacecraftId</ref>;</highlight></codeline>
+<codeline lineno="14" refid="struct_c_f_e___p_s_p___global_data__t_1a1cadca2b59c46aeefeb160d7cf2dcd6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___p_s_p___global_data__t_1a1cadca2b59c46aeefeb160d7cf2dcd6d" kindref="member">CFE_PSP_CpuId</ref>;</highlight></codeline>
+<codeline lineno="15" refid="struct_c_f_e___p_s_p___global_data__t_1ae4a9baa97c5ebc8033bbbf5e34d39184" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_PSP_CpuName[<ref refid="cfe__psp__private_8h_1a8d39cf08753027e6ac6ffcea91e97196" kindref="member">CFE_PSP_CPU_NAME_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="16" refid="struct_c_f_e___p_s_p___global_data__t_1a0defb64891121a99f0499bb03d917723" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="osapi-os-rtm_8h_1a5bfa05ad22bea26fff5471f991031568" kindref="member">OS_RunTimeModeEnum_t</ref><sp/><sp/><ref refid="struct_c_f_e___p_s_p___global_data__t_1a0defb64891121a99f0499bb03d917723" kindref="member">CFE_PSP_RunMode</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___p_s_p___global_data__t" kindref="compound">CFE_PSP_GlobalData_t</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_private.h"/>
+  </compounddef>
+</doxygen>

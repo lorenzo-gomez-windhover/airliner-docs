@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeevsugprocreset" kind="page">
+    <compoundname>cfeevsugprocreset</compoundname>
+    <title>Effects of a Processor Reset on EVS</title>
+    <detaileddescription>
+<para>On a processor reset, the EVS Registry is cleared such that applications must re-register with EVS in order to use EVS services. All counters are also cleared with the exceptions of those listed below.</para><para>On a processor reset, the following EVS data is preserved (if the cFE is configured to include an <ref refid="cfeevsuglog" kindref="compound">Local Event Log</ref>):</para><para><itemizedlist>
+<listitem>
+<para>Local Event Log if the Local Event Log Mode is configured to Discard (1). If the Local Event Log Mode is configured to Overwrite (0), the contents of the log may be overwritten depending on the size and contents of the log prior to the reset. <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Local Event Log Full Flag <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Local Event Log overflow counter <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para><para>The Local Event Log Mode (overwrite/discard) is set to the configured value specified in the cfe_platform_cfg.h file. The default value is Discard (1). Discard mode will guarantee the contents of the event log are preserved over a processor restart.</para><para>This provides the ground with the capability to write the Local Event Log to a file and transfer it to the ground in order to help debug a reset.</para><para>Next: <ref refid="cfeevsugfaq" kindref="compound">Frequently Asked Questions about Event Services</ref> <linebreak/>
+ Prev: <ref refid="cfeevsugresetctrs" kindref="compound">Resetting EVS Counters</ref> <linebreak/>
+ Up To: <ref refid="cfeevsovr" kindref="compound">cFE Event Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

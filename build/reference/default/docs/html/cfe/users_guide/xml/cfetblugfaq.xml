@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetblugfaq" kind="page">
+    <compoundname>cfetblugfaq</compoundname>
+    <title>Frequently Asked Questions about Table Services</title>
+    <detaileddescription>
+<para><table rows="10" cols="2"><row>
+<entry thead="no"><para><bold>(Q) Is it an error to load a table image that is smaller than the registered size? </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>Table images that are smaller than the declared size of a table fall into one of two categories.</para><para>If the starting offset of the table image (as specified in the Table Image secondary file header) is not equal to zero, then the table image is considered to be a &quot;partial&quot; table load. Partial loads are valid as long as a table has been previously loaded with a non-&quot;partial&quot; table image.</para><para>If the starting offset of the table image is zero and the size is less than the declared size of the table, the image is considered &quot;short&quot; but valid. This feature allows application developers to use variable length tables. </para></entry></row>
+<row>
+<entry thead="no"><para><bold>(Q) I tried to validate a table and received the following event message that said the event failed:<linebreak/>
+ <center><computeroutput>&quot;MyApp validation failed for Inactive &apos;MyApp.MyTable&apos;, Status=0x####&quot;</computeroutput></center><linebreak/>
+ What happened? </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>The event message indicates the application who owns the table has discovered a problem with the contents of the image. The code number following the &apos;Status&apos; keyword is defined by the Application. The documentation for the specified Application should be referred to in order to identify the exact nature of the problem. </para></entry></row>
+<row>
+<entry thead="no"><para><bold>(Q) What commands do I use to load a table with a new image? </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>There are a number of steps required to load a table.<orderedlist>
+<listitem><para>The operator needs to create a cFE Table Services compatible table image file with the desired data contained in it. This can be accomplished by creating a &apos;C&apos; source file, compiling it with the appropriate cross compiler for the onboard platform and then running the <computeroutput>elf2cfetbl</computeroutput> utility on the resultant object file.</para></listitem><listitem><para>The file needs to be loaded into the onboard processor&apos;s filesystem using whichever file transfer protocol is used for that mission.</para></listitem><listitem><para>The <ref refid="cfe__tbl__msg_8h_1a9b03cc36b2894db18e00a70c89a1795f" kindref="member">Load Command </ref> is sent next to tell Table Services to load the table image file into the Inactive Table Image Buffer for the table identified in the file.</para></listitem><listitem><para>The <ref refid="cfe__tbl__msg_8h_1aafeae2981c35e35e8773a8c60b7553c9" kindref="member">Validate Command </ref> is then sent to validate the contents of the inactive table image. This will ensure the file was not corrupted or improperly defined. The results of the validation are reported in Table Services Housekeeping Telemetry. If a table does not have a validation function associated with it, the operator may wish to compare the computed CRC to verify the table contents match what was intended.</para></listitem><listitem><para>Upon successful validation, the operator then sends the <ref refid="cfe__tbl__msg_8h_1ab3fa1511e81c576198b96de7f10ba397" kindref="member">Activate Command. </ref> The application owning the table should, within a reasonable amount of time, perform a table update and send an event message. </para></listitem></orderedlist>
+</para></entry></row>
+<row>
+<entry thead="no"><para><bold>(Q) What causes cFE Table Services to generate the following sys log message:</bold></para><para><bold> <emphasis> “CFE_TBL:GetAddressInternal-App(%d) attempt to access unowned Tbl Handle=%d” </emphasis> </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>When an application sharing its table(s) with one or more applications is reloaded, the reloaded application’s table handle(s) are released.  cFE Table Services sees that the table(s) are shared and keeps a ‘shadow’ version of the table in the Table Services registry.  The registry will show the released, shared tables with no name. When the applications sharing the table attempt to access the table via the ‘old’, released handle, Table Services will return an error code to the applications and generate the sys log message.  The applications may then unregister the ‘old’ handle(s) in order to remove the released, shared table(s) from the Table Services registry and share the newly loaded application table(s). </para></entry></row>
+<row>
+<entry thead="no"><para><bold>(Q) When does the Table Services Abort Table Load command need to be issued? </bold></para></entry></row>
+<row>
+<entry thead="no"><para><nonbreakablespace/> </para></entry><entry thead="no"><para>The Abort command should be used whenever a table image has been loaded but the application has not yet activated it and the operator no longer wants the table to be loaded.</para><para>The purpose of the Abort command is to free a previously allocated table buffer. It should be noted, however, that multiple table loads to the SAME table without an intervening activation or abort, will simply OVERWRITE the previous table load using the SAME buffer.</para><para>Therefore, the most likely scenarios that would lead to a needed abort are as follows:</para><para><orderedlist>
+<listitem>
+<para>Operator loads a table and realizes immediately that the load is not wanted. </para><para></para></listitem>
+<listitem>
+<para>Operator loads a table and performs a validation on it. Regardless of whether the table passes or fails the validation, if the operator no longer wants to activate the table, the abort command should be issued.</para><para>It should be noted that a table image that fails activation is retained in the inactive buffer for diagnosis, if necessary. It is NOT released until it is aborted or overwritten and successfully validated and activated. </para><para></para></listitem>
+<listitem>
+<para>A table image was loaded; the image was successfully validated; the command for activation was sent; but the application fails to perform the activation.</para><para>The Abort command will free the table buffer and clear the activation request.</para><para>This situation can occur when either the application is improperly designed and fails to adequately manage its tables (sometimes seen in the lab during development) or the application is &quot;hung&quot; and not performing as it should. </para></listitem>
+</orderedlist>
+</para><para></para></entry></row>
+</table>
+</para><para>Prev: <ref refid="cfetblugprocreset" kindref="compound">Effects of Processor Reset on Tables</ref> <linebreak/>
+ Up To: <ref refid="cfetblovr" kindref="compound">cFE Table Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,806 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_m_p_c___config_tbl__t" kind="struct" language="C++" prot="public">
+    <compoundname>MPC_ConfigTbl_t</compoundname>
+    <includes refid="mpc__tbldefs_8h" local="no">mpc_tbldefs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1aa3470e0857efe0c09fa1860285ac0f12" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::THR_MIN</definition>
+        <argsstring></argsstring>
+        <name>THR_MIN</name>
+        <briefdescription>
+<para>Minimum thrust in auto thrust control. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>It&apos;s recommended to set it &gt; 0 to avoid free fall with zero thrust.</title><para></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1af7a90e7f3312c18eb8ecbdd49d998479" kindref="member">THR_MIN_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1adf6e6a65986bcc1837a716acb48d656e" kindref="member">THR_MIN_MAX</ref>, default 0.2. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="170" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a8b6ed9c83f8de1ce2e5720933e61c07f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::THR_HOVER</definition>
+        <argsstring></argsstring>
+        <name>THR_HOVER</name>
+        <briefdescription>
+<para>Hover thrust. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Vertical thrust required to hover. This value is mapped to center</title><para>stick for manual throttle control. With this value set to the thrust required to hover, transition from manual to ALTCTL mode while hovering will occur with the throttle stick near center, which is then interpreted as (near) zero demand for vertical speed.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a6c16c2f760364427fd45ed1239feb98d" kindref="member">THR_HOVER_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1aa40a7b2f6f5ff14146123b2aab3ee9a8" kindref="member">THR_HOVER_MAX</ref>, default 0.2. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="184" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a64244aa5fc3ba4ea0c6c5234e2d158c5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::THR_MAX</definition>
+        <argsstring></argsstring>
+        <name>THR_MAX</name>
+        <briefdescription>
+<para>Maximum thrust in auto thrust control. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limit max allowed thrust. Setting a value of one can put</title><para>the system into actuator saturation as no spread between the motors is possible any more. A value of 0.8 - 0.9 is recommended.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a8e56956b6364623fb716a88916b71c45" kindref="member">THR_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1af4168482aa4ab6ee7e6d9b5bdcd363ae" kindref="member">THR_MAX_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="196" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a8d1a416bd62c5467a08f4a9690ba44b2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MANTHR_MIN</definition>
+        <argsstring></argsstring>
+        <name>MANTHR_MIN</name>
+        <briefdescription>
+<para>Minimum manual thrust. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Minimum vertical thrust. It&apos;s recommended to set it &gt; 0 to avoid</title><para>free fall with zero thrust.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a418c867ce1b26d62b30618f09ad6dd8d" kindref="member">MANTHR_MIN_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a937dbe7bc883c00a4c8a70ec5bd203f9" kindref="member">MANTHR_MIN_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="206" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a5ca863f40df7f0a079791c3b6759e251" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MANTHR_MAX</definition>
+        <argsstring></argsstring>
+        <name>MANTHR_MAX</name>
+        <briefdescription>
+<para>Maximum manual thrust. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limit max allowed thrust. Setting a value of one can put</title><para>the system into actuator saturation as no spread between the motors is possible any more. A value of 0.8 - 0.9 is recommended.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a893fa75666a813d07c43b187775db5ea" kindref="member">MANTHR_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a020c16f6e863f610753f1935ced2e6a6" kindref="member">MANTHR_MAX_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="218" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a3342170e65db19336da03839ca8b9caa" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::Z_P</definition>
+        <argsstring></argsstring>
+        <name>Z_P</name>
+        <briefdescription>
+<para>Proportional gain for vertical position error. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a90ea19aa209a8ba522fb4f04b21eb884" kindref="member">Z_P_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1af474e52b5d2b69a7d7a102c6348e8bc8" kindref="member">Z_P_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="225" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a07c3b877884a93521d6c9757ef227ac1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::Z_VEL_P</definition>
+        <argsstring></argsstring>
+        <name>Z_VEL_P</name>
+        <briefdescription>
+<para>Proportional gain for vertical velocity error. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a689401292a0fff4c3d718fa1c345ae0a" kindref="member">Z_VEL_P_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1af3b303149df66c991bc4dee6ae846b5c" kindref="member">Z_VEL_P_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="232" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a9e5d62c8a70363efc86040419ad4c123" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::Z_VEL_I</definition>
+        <argsstring></argsstring>
+        <name>Z_VEL_I</name>
+        <briefdescription>
+<para>Integral gain for vertical velocity error. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Non zero value allows hovering thrust estimation on stabilized or</title><para>autonomous takeoff.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ad3ca541be1e30b49215f0ade40778353" kindref="member">Z_VEL_I_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a07b4bebcd003185acf58d4dc96031c16" kindref="member">Z_VEL_I_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="242" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a7cda035e0f5db994eefa95d09a9f8068" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::Z_VEL_D</definition>
+        <argsstring></argsstring>
+        <name>Z_VEL_D</name>
+        <briefdescription>
+<para>Differential gain for vertical velocity error. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a76c81351095e357fcf0851502a091c2d" kindref="member">Z_VEL_D_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a96fb1bd4396641bd54046e7aedc0784c" kindref="member">Z_VEL_D_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="249" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a88f8962ab99b2964010499c28578539f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::Z_VEL_MAX_UP</definition>
+        <argsstring></argsstring>
+        <name>Z_VEL_MAX_UP</name>
+        <briefdescription>
+<para>Maximum vertical ascent velocity. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Maximum vertical velocity in AUTO mode and endpoint for</title><para>stabilized modes (ALTCTRL, POSCTRL).</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a76c81351095e357fcf0851502a091c2d" kindref="member">Z_VEL_D_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a96fb1bd4396641bd54046e7aedc0784c" kindref="member">Z_VEL_D_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="261" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1aeeedefa7fb775cfd3da9100cf9155470" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::Z_VEL_MAX_DN</definition>
+        <argsstring></argsstring>
+        <name>Z_VEL_MAX_DN</name>
+        <briefdescription>
+<para>Maximum vertical descent velocity. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Maximum vertical velocity in AUTO mode and endpoint for</title><para>stabilized modes (ALTCTRL, POSCTRL).</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a5d9443b621390e04d0a0955da71c8f66" kindref="member">Z_VEL_MAX_DN_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a4bf7a5d9976039fe1602a4ee56e3b8ae" kindref="member">Z_VEL_MAX_DN_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="273" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a7ab4a24fb8ce4a8efa0664ccfd221515" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::Z_FF</definition>
+        <argsstring></argsstring>
+        <name>Z_FF</name>
+        <briefdescription>
+<para>Vertical velocity feed forward. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Feed forward weight for altitude control in stabilized modes</title><para>(ALTCTRL, POSCTRL). 0 will give slow response and no overshot, 1 - fast response and big overshot.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1aec3e41bce5538f618072a8737497641e" kindref="member">Z_FF_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1ad530fd8c73161b5fcdaaa11404d7133d" kindref="member">Z_FF_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="284" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a94ab7c6f7ef05f6ede934d3919c857d5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::XY_P</definition>
+        <argsstring></argsstring>
+        <name>XY_P</name>
+        <briefdescription>
+<para>Proportional gain for horizontal position error. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1acbaeda91deb849a97e463da41e941c0a" kindref="member">XY_P_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a2d921c03b66aa50c6dea1694adcb0c54" kindref="member">XY_P_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="291" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a28b0e7bf1b7693bffd920311b9af90e7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::XY_VEL_P</definition>
+        <argsstring></argsstring>
+        <name>XY_VEL_P</name>
+        <briefdescription>
+<para>Proportional gain for horizontal velocity error. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a6909884c676af82373a88f4497c7cd24" kindref="member">XY_VEL_P_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1adfcc9a9c8d2c102f318c68cdf395e38e" kindref="member">XY_VEL_P_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="298" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a02e2532daab6a272416fa01826d12141" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::XY_VEL_I</definition>
+        <argsstring></argsstring>
+        <name>XY_VEL_I</name>
+        <briefdescription>
+<para>Non-zero value allows to resist wind. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ada2dc7911490bf9b996992293cb89f78" kindref="member">XY_VEL_I_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a03b93878478c0a04fcaf3abc4e7b4ca4" kindref="member">XY_VEL_I_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="305" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a63e4e58da916b0e00410947e9c343367" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::XY_VEL_D</definition>
+        <argsstring></argsstring>
+        <name>XY_VEL_D</name>
+        <briefdescription>
+<para>Differential gain for horizontal velocity error. Small values help reduce fast oscillations. If value is too big oscillations will appear again. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1af1903317b3a00d49a7e5dfb313040548" kindref="member">XY_VEL_D_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a3b14934e263d3972e82f058e92addc5f" kindref="member">XY_VEL_D_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="314" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a4df59eedd1d9f9bc4fb19e3f14d766cb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::XY_CRUISE</definition>
+        <argsstring></argsstring>
+        <name>XY_CRUISE</name>
+        <briefdescription>
+<para>Nominal horizontal velocity in mission. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a13d91d635ac142ade7bb428e1f62b864" kindref="member">XY_CRUISE_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1ab78efdb4e98ca75ff17e5085859d2080" kindref="member">XY_CRUISE_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="323" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1af871daf2670a00262f7de4806f7921a0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::TARGET_THRE</definition>
+        <argsstring></argsstring>
+        <name>TARGET_THRE</name>
+        <briefdescription>
+<para>Distance Threshold Horizontal Auto. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>The distance defines at which point the vehicle</title><para>has to slow down to reach target if no direct passing to the next target is desired.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a2c98f7b22a81bad2bfddcf36af3fdc00" kindref="member">TARGET_THRE_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a7bbb18fcb0c9518f376f763cf22cc21d" kindref="member">TARGET_THRE_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="336" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a6e83ca52baecb072e11679b36861b6b0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::XY_VEL_MAX</definition>
+        <argsstring></argsstring>
+        <name>XY_VEL_MAX</name>
+        <briefdescription>
+<para>Maximum horizontal velocity. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Maximum horizontal velocity in AUTO mode. If higher speeds</title><para>are commanded in a mission they will be capped to this velocity.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) #XY_VEL_MIN &gt; <ref refid="struct_m_p_c___config_tbl__t_1a6e83ca52baecb072e11679b36861b6b0" kindref="member">XY_VEL_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="348" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1ab71d7bd78c417fbe917f92eaa5481404" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::XY_FF</definition>
+        <argsstring></argsstring>
+        <name>XY_FF</name>
+        <briefdescription>
+<para>Horizontal velocity feed forward. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Feed forward weight for position control in position control mode (POSCTRL).</title><para>0 will give slow response and no overshot, 1 - fast response and big overshot.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ac797312432a05e9805765a1e3b9ec49b" kindref="member">XY_FF_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1aea321954b025de2ba6253dae46ebd405" kindref="member">XY_FF_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="358" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1af9ec607deb88ae941d48baf777e960ab" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::TILTMAX_AIR</definition>
+        <argsstring></argsstring>
+        <name>TILTMAX_AIR</name>
+        <briefdescription>
+<para>Maximum tilt angle in air. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits maximum tilt in AUTO and POSCTRL modes during flight.</title><para></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a5a68e6ed0e1e1db7fdd2f76cc92c615e" kindref="member">TILTMAX_AIR_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a95b3ad53449015020a4203ffedd3ddda" kindref="member">TILTMAX_AIR_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: radians</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="369" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1ae0091820930a4849ec4c5bf6491e5309" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::TILTMAX_LND</definition>
+        <argsstring></argsstring>
+        <name>TILTMAX_LND</name>
+        <briefdescription>
+<para>Maximum tilt angle during landing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits maximum tilt angle on landing.</title><para></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a4af5139332c922f9689f86ca085cec39" kindref="member">TILTMAX_LND_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a83234c6109e037c58a0533b3cc7915cb" kindref="member">TILTMAX_LND_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: radians</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="380" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a40cde4beb9b297b1617864e70af6f060" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::LAND_SPEED</definition>
+        <argsstring></argsstring>
+        <name>LAND_SPEED</name>
+        <briefdescription>
+<para>Landing descend rate. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ac97284b0dcd7d149a94f741b2e76bd8e" kindref="member">LAND_SPEED_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1adbe878b29b97c03608c6aa8df271de61" kindref="member">LAND_SPEED_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="389" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a02276af74fbfb1dc4e0f4ffb28cd3483" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::TKO_SPEED</definition>
+        <argsstring></argsstring>
+        <name>TKO_SPEED</name>
+        <briefdescription>
+<para>Takeoff climb rate. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ac448ecc5cfd188b34934070b301cf017" kindref="member">TKO_SPEED_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a6f013a97bd2441306300b32ea3dc3535" kindref="member">TKO_SPEED_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="398" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a9e80a94cce1e08d38501ac197ab5381a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MAN_TILT_MAX</definition>
+        <argsstring></argsstring>
+        <name>MAN_TILT_MAX</name>
+        <briefdescription>
+<para>Maximal tilt angle in manual or altitude mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1abc131179fd1fdfb9ef74a9670eaca0b3" kindref="member">MAN_TILT_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a964170e23f134c2b510f331b1da7bacb" kindref="member">MAN_TILT_MAX_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: deg</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="407" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a7b64bf2a0c585df99ae09eb9944cdb05" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MAN_Y_MAX</definition>
+        <argsstring></argsstring>
+        <name>MAN_Y_MAX</name>
+        <briefdescription>
+<para>Max manual yaw rate. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a6b48f36f5efaaf0fcaea5d89e70cfa78" kindref="member">MAN_Y_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a27992a34316c794d054d3ccd9bb123ff" kindref="member">MAN_Y_MAX_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: deg/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="416" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a96be4f8eb09622fbbc0423b53a1b404c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::HOLD_DZ</definition>
+        <argsstring></argsstring>
+        <name>HOLD_DZ</name>
+        <briefdescription>
+<para>Deadzone of sticks where position hold is enabled. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a6b48f36f5efaaf0fcaea5d89e70cfa78" kindref="member">MAN_Y_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a27992a34316c794d054d3ccd9bb123ff" kindref="member">MAN_Y_MAX_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: deg/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="425" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a17d93a9bdf4b60c1d16a2da784537a4e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::HOLD_MAX_XY</definition>
+        <argsstring></argsstring>
+        <name>HOLD_MAX_XY</name>
+        <briefdescription>
+<para>Maximum horizontal velocity for which position hold is enabled (use 0 to disable check). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) #MAN_XY_MAX_MIN &gt; #MAN_XY_MAX_MAX.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="435" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="435" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1af13a3142a5b7a0bac7daf4c22c804f6f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::HOLD_MAX_Z</definition>
+        <argsstring></argsstring>
+        <name>HOLD_MAX_Z</name>
+        <briefdescription>
+<para>Maximum vertical velocity for which position hold is enabled (use 0 to disable check) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1af1dafb3bbb905376ec409e4adef2b4ca" kindref="member">HOLD_MAX_Z_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a5092555a13a03fe614ca2583b280200b" kindref="member">HOLD_MAX_Z_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="445" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a747b97f961a8b2ab5ebdee6e53067e8c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::VELD_LP</definition>
+        <argsstring></argsstring>
+        <name>VELD_LP</name>
+        <briefdescription>
+<para>Low pass filter cut freq. for numerical velocity derivative. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a44cad12ce74503ccb77cf3bcf362db56" kindref="member">VELD_LP_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a28d102c6d2b5525ecff79e4776c50758" kindref="member">VELD_LP_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: Hz</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="454" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1af7afc87d6bbd108b801b59200f7f1429" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::ACC_HOR_MAX</definition>
+        <argsstring></argsstring>
+        <name>ACC_HOR_MAX</name>
+        <briefdescription>
+<para>Maximum horizonal acceleration in velocity controlled modes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1aae601a48c49efe8b89147b2882fe081e" kindref="member">ACC_HOR_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1add77acde07e21f0e624d6ebd7935ceea" kindref="member">ACC_HOR_MAX_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="463" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a3e6cad9cec7f403f92d522e31d163e02" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::ACC_UP_MAX</definition>
+        <argsstring></argsstring>
+        <name>ACC_UP_MAX</name>
+        <briefdescription>
+<para>Maximum vertical acceleration in velocity controlled modes upward. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1af4caf097e1630fbfa5b5b0ceca7e3aad" kindref="member">ACC_UP_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1ac44dabeeef1133d2a20ff8cab01683fc" kindref="member">ACC_UP_MAX_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="472" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a77b8609906cbeb14abbadc39a46854ab" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::ACC_DOWN_MAX</definition>
+        <argsstring></argsstring>
+        <name>ACC_DOWN_MAX</name>
+        <briefdescription>
+<para>Maximum vertical acceleration in velocity controlled modes down. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a3dc7ff9dbd11e71444b1ae005e30597b" kindref="member">ACC_DOWN_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a68ea485d57a2945bf4cb685346f2732a" kindref="member">ACC_DOWN_MAX_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="481" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a0f7bdcf158a4b168fb8461b2424c0729" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 MPC_ConfigTbl_t::ALT_MODE</definition>
+        <argsstring></argsstring>
+        <name>ALT_MODE</name>
+        <briefdescription>
+<para>Altitude control mode, note mode 1 only tested with LPE. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a45049b702dda14b0efcc23aaf199f467" kindref="member">ALT_MODE_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a87e4677c8d51ff363103e68ddf5d67a5" kindref="member">ALT_MODE_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>0: Altitude following, 1: Terrain following</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="490" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1ab84a855f46ccdc16da15ba64026a9df0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::XY_MAN_EXPO</definition>
+        <argsstring></argsstring>
+        <name>XY_MAN_EXPO</name>
+        <briefdescription>
+<para>Manual control stick exponential curve sensitivity attenuation with small velocity setpoints. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a639f3c27cee23c6b86b91e878e0a5b34" kindref="member">XY_MAN_EXPO_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a2cc9be1fb5e0bfdac7ffce8212853755" kindref="member">XY_MAN_EXPO_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>0: Purely linear input curve, 1: Purely cubic input curve</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="500" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1ae5a13fd047a93a7fcdbc60955149dbae" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::Z_MAN_EXPO</definition>
+        <argsstring></argsstring>
+        <name>Z_MAN_EXPO</name>
+        <briefdescription>
+<para>Manual control stick vertical exponential curve. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>The higher the value the less sensitivity the stick has</title><para>around zero while still reaching the maximum value with full stick deflection.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a33c7a38f497168320b6052be889a6fc4" kindref="member">Z_MAN_EXPO_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a01b7078f9faa5133ac8f5952d4de1d20" kindref="member">Z_MAN_EXPO_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>0: Purely linear input curve, 1: Purely cubic input curve</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="513" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="513" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1af4b5388809a89355055008f2a23bd86d" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 MPC_ConfigTbl_t::LAND_ALT1</definition>
+        <argsstring></argsstring>
+        <name>LAND_ALT1</name>
+        <briefdescription>
+<para>Altitude for step 1 of slow landing (descend) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Below this altitude descending velocity gets limited</title><para>to a value between #Z_VEL_MAX and <ref refid="struct_m_p_c___config_tbl__t_1a40cde4beb9b297b1617864e70af6f060" kindref="member">LAND_SPEED</ref> to enable a smooth descent experience. Value needs to be higher than <ref refid="struct_m_p_c___config_tbl__t_1a861de1094d44d8edbd491a774270548c" kindref="member">LAND_ALT2</ref></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ac7d9683d84e8190940d0aca339ef055f" kindref="member">LAND_ALT1_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a1bab47596322120bdb348df7cb4fad7b" kindref="member">LAND_ALT1_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="527" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="527" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a861de1094d44d8edbd491a774270548c" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 MPC_ConfigTbl_t::LAND_ALT2</definition>
+        <argsstring></argsstring>
+        <name>LAND_ALT2</name>
+        <briefdescription>
+<para>Altitude for step 2 of slow landing (landing) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Below this altitude descending velocity gets limited to</title><para><ref refid="struct_m_p_c___config_tbl__t_1a40cde4beb9b297b1617864e70af6f060" kindref="member">LAND_SPEED</ref>. Value needs to be lower than <ref refid="struct_m_p_c___config_tbl__t_1af4b5388809a89355055008f2a23bd86d" kindref="member">LAND_ALT1</ref>.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a5713dc5308c1d2b8c028aa6fc4d3006a" kindref="member">LAND_ALT2_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1ab209b2a2278a1b00b28abaae818373c9" kindref="member">LAND_ALT2_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="539" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1ad0341372f873c3fdc42c308770dbe418" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::TKO_RAMP_T</definition>
+        <argsstring></argsstring>
+        <name>TKO_RAMP_T</name>
+        <briefdescription>
+<para>Position control smooth takeoff ramp time constant. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Increasing this value will make automatic and manual takeoff</title><para>slower. If it&apos;s too slow the drone might scratch the ground and tip over.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ab0129ce02d7e2dac0a70d34f01a52784" kindref="member">TKO_RAMP_T_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a1b975097915bf9d68965c2c8e4aa1471" kindref="member">TKO_RAMP_T_MAX</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="550" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="550" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a299900ee7d149d256c27daad8236b762" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MC_YAWRATE_MAX</definition>
+        <argsstring></argsstring>
+        <name>MC_YAWRATE_MAX</name>
+        <briefdescription>
+<para>Max yaw rate. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a88acc52b2766be7317852233c1c00566" kindref="member">MC_YAWRATE_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a00143ab68a5c7b9fac1da2248be0edef" kindref="member">MC_YAWRATE_MAX_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: deg/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="559" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="559" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a14b5a7f67bf7facc2ed774d0f0d31eb6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MC_YAW_P</definition>
+        <argsstring></argsstring>
+        <name>MC_YAW_P</name>
+        <briefdescription>
+<para>Yaw P gain. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Yaw proportional gain, i.e. desired angular speed in rad/s for error 1 rad.</title><para></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ae9abb92bda9f54e149db7d62d883f034" kindref="member">MC_YAW_P_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a7fba694faac19a3188ca7dca86000da0" kindref="member">MC_YAW_P_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: 1/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="570" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="570" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a2a1e9092b8006f2a7ca211383beb6481" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MPC_ConfigTbl_t::VT_OPT_RECOV_EN</definition>
+        <argsstring></argsstring>
+        <name>VT_OPT_RECOV_EN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="572" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="572" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a9424f764d9980affef29a2187a54948f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MPC_CRUISE_90</definition>
+        <argsstring></argsstring>
+        <name>MPC_CRUISE_90</name>
+        <briefdescription>
+<para>Cruising speed at 90. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Cruise speed when angle prev-current/current-next setpoint</title><para>is 90 degrees. It should be lower than <ref refid="struct_m_p_c___config_tbl__t_1a4df59eedd1d9f9bc4fb19e3f14d766cb" kindref="member">XY_CRUISE</ref>.</para></simplesect>
+<simplesect kind="par"><title>Applies only in AUTO modes (includes also RTL / hold / etc.)</title><para></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a667c34a68b10aa0049799f5d315e3b81" kindref="member">MPC_CRUISE_90_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1ad8d6f864013ab5c8e7da9eca2d7a2635" kindref="member">MPC_CRUISE_90_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="586" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a31187c25a95a14b9cf2eef9adb9c1a32" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MPC_JERK_MAX</definition>
+        <argsstring></argsstring>
+        <name>MPC_JERK_MAX</name>
+        <briefdescription>
+<para>Maximum jerk in manual controlled mode for BRAKING to zero. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>If this value is below MPC_JERK_MIN, the acceleration limit in xy</title><para>and z is MPC_ACC_HOR_MAX and MPC_ACC_UP_MAX respectively instantaneously when the user demands brake (=zero stick input). Otherwise the acceleration limit increases from current acceleration limit towards MPC_ACC_HOR_MAX/MPC_ACC_UP_MAX with jerk limit</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ad507d1041b8a9199db9e36f75d7c5a88" kindref="member">MPC_JERK_MAX_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1ac3011aa2ea30dd9288d0187a041d60cd" kindref="member">MPC_JERK_MAX_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s/s/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="601" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="601" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a6a9ca3f988321f325b0760a83af82edc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MPC_JERK_MIN</definition>
+        <argsstring></argsstring>
+        <name>MPC_JERK_MIN</name>
+        <briefdescription>
+<para>Minimum jerk in manual controlled mode for BRAKING to zero. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a54eaa8f528b4f495362e85754bf8060d" kindref="member">MPC_JERK_MIN_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1abcb9303fbdd82031cb55810918f365ea" kindref="member">MPC_JERK_MIN_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s/s/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="610" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="610" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1acaa04aaf9d4c95fafa84747f2d3aa46d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MPC_DEC_HOR_SLOW</definition>
+        <argsstring></argsstring>
+        <name>MPC_DEC_HOR_SLOW</name>
+        <briefdescription>
+<para>Slow horizontal manual deceleration for manual mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1a64b9f935dca917e5cc3d2ae625fc9243" kindref="member">MPC_DEC_HOR_SLOW_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a6d64ad00ba960b778623006e4dc0c1ee" kindref="member">MPC_DEC_HOR_SLOW_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="619" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1ad0acc58bb7322f24a8491e872ab1101b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::MPC_VEL_MANUAL</definition>
+        <argsstring></argsstring>
+        <name>MPC_VEL_MANUAL</name>
+        <briefdescription>
+<para>Maximum horizontal velocity setpoint for manual controlled mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>If velocity setpoint larger than MPC_XY_VEL_MAX is set, then</title><para>the setpoint will be capped to MPC_XY_VEL_MAX</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1aa3261ddc015186460c9549f59166639f" kindref="member">MPC_VEL_MANUAL_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1a1d181b69f73d47da48206fd8ac8c02a9" kindref="member">MPC_VEL_MANUAL_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m/s</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="631" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="631" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1a8e1eedc760be3be56b454a3b0ee48161" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::NAV_ACC_RAD</definition>
+        <argsstring></argsstring>
+        <name>NAV_ACC_RAD</name>
+        <briefdescription>
+<para>Acceptance Radius. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Default acceptance radius, overridden by acceptance radius of</title><para>waypoint if set. For fixed wing the L1 turning distance is used for horizontal acceptance.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) <ref refid="mpc__tbldefs_8h_1ac6d35fb58628eeadfe1b20010fc58d79" kindref="member">NAV_ACC_RAD_MIN</ref> &gt; <ref refid="mpc__tbldefs_8h_1ac245a3d7feae40068694010f806ed2d1" kindref="member">NAV_ACC_RAD_MAX</ref>.</para></simplesect>
+<simplesect kind="par"><title>Units: m</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="644" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_c___config_tbl__t_1adace14483b8cf66c44568ae18c2218fb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MPC_ConfigTbl_t::NAV_MIS_YAW_ERR</definition>
+        <argsstring></argsstring>
+        <name>NAV_MIS_YAW_ERR</name>
+        <briefdescription>
+<para>Max yaw error in degrees needed for waypoint heading acceptance. </para>        </briefdescription>
+        <detaileddescription>
+<para>NAV_MIS_YAW_ERR</para><para><simplesect kind="par"><title>Limits:</title><para>Min &gt; Max (incr.) NAV_MIS_YAW_ERR_MIN &gt; NAV_MIS_YAW_ERR_MAX , default 12.0.</para></simplesect>
+<simplesect kind="par"><title>Units: deg</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="655" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definition for a single config table entry. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="apps/mpc/fsw/src/mpc_tbldefs.h" line="162" column="1" bodyfile="apps/mpc/fsw/src/mpc_tbldefs.h" bodystart="161" bodyend="658"/>
+    <listofallmembers>
+      <member refid="struct_m_p_c___config_tbl__t_1a77b8609906cbeb14abbadc39a46854ab" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>ACC_DOWN_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1af7afc87d6bbd108b801b59200f7f1429" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>ACC_HOR_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a3e6cad9cec7f403f92d522e31d163e02" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>ACC_UP_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a0f7bdcf158a4b168fb8461b2424c0729" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>ALT_MODE</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a96be4f8eb09622fbbc0423b53a1b404c" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>HOLD_DZ</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a17d93a9bdf4b60c1d16a2da784537a4e" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>HOLD_MAX_XY</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1af13a3142a5b7a0bac7daf4c22c804f6f" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>HOLD_MAX_Z</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1af4b5388809a89355055008f2a23bd86d" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>LAND_ALT1</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a861de1094d44d8edbd491a774270548c" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>LAND_ALT2</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a40cde4beb9b297b1617864e70af6f060" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>LAND_SPEED</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a9e80a94cce1e08d38501ac197ab5381a" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MAN_TILT_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a7b64bf2a0c585df99ae09eb9944cdb05" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MAN_Y_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a5ca863f40df7f0a079791c3b6759e251" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MANTHR_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a8d1a416bd62c5467a08f4a9690ba44b2" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MANTHR_MIN</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a14b5a7f67bf7facc2ed774d0f0d31eb6" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MC_YAW_P</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a299900ee7d149d256c27daad8236b762" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MC_YAWRATE_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a9424f764d9980affef29a2187a54948f" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MPC_CRUISE_90</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1acaa04aaf9d4c95fafa84747f2d3aa46d" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MPC_DEC_HOR_SLOW</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a31187c25a95a14b9cf2eef9adb9c1a32" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MPC_JERK_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a6a9ca3f988321f325b0760a83af82edc" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MPC_JERK_MIN</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1ad0acc58bb7322f24a8491e872ab1101b" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>MPC_VEL_MANUAL</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a8e1eedc760be3be56b454a3b0ee48161" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>NAV_ACC_RAD</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1adace14483b8cf66c44568ae18c2218fb" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>NAV_MIS_YAW_ERR</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1af871daf2670a00262f7de4806f7921a0" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>TARGET_THRE</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a8b6ed9c83f8de1ce2e5720933e61c07f" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>THR_HOVER</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a64244aa5fc3ba4ea0c6c5234e2d158c5" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>THR_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1aa3470e0857efe0c09fa1860285ac0f12" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>THR_MIN</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1af9ec607deb88ae941d48baf777e960ab" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>TILTMAX_AIR</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1ae0091820930a4849ec4c5bf6491e5309" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>TILTMAX_LND</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1ad0341372f873c3fdc42c308770dbe418" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>TKO_RAMP_T</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a02276af74fbfb1dc4e0f4ffb28cd3483" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>TKO_SPEED</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a747b97f961a8b2ab5ebdee6e53067e8c" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>VELD_LP</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a2a1e9092b8006f2a7ca211383beb6481" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>VT_OPT_RECOV_EN</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a4df59eedd1d9f9bc4fb19e3f14d766cb" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>XY_CRUISE</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1ab71d7bd78c417fbe917f92eaa5481404" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>XY_FF</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1ab84a855f46ccdc16da15ba64026a9df0" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>XY_MAN_EXPO</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a94ab7c6f7ef05f6ede934d3919c857d5" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>XY_P</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a63e4e58da916b0e00410947e9c343367" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>XY_VEL_D</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a02e2532daab6a272416fa01826d12141" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>XY_VEL_I</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a6e83ca52baecb072e11679b36861b6b0" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>XY_VEL_MAX</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a28b0e7bf1b7693bffd920311b9af90e7" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>XY_VEL_P</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a7ab4a24fb8ce4a8efa0664ccfd221515" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>Z_FF</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1ae5a13fd047a93a7fcdbc60955149dbae" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>Z_MAN_EXPO</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a3342170e65db19336da03839ca8b9caa" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>Z_P</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a7cda035e0f5db994eefa95d09a9f8068" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>Z_VEL_D</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a9e5d62c8a70363efc86040419ad4c123" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>Z_VEL_I</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1aeeedefa7fb775cfd3da9100cf9155470" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>Z_VEL_MAX_DN</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a88f8962ab99b2964010499c28578539f" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>Z_VEL_MAX_UP</name></member>
+      <member refid="struct_m_p_c___config_tbl__t_1a07c3b877884a93521d6c9757ef227ac1" prot="public" virt="non-virtual"><scope>MPC_ConfigTbl_t</scope><name>Z_VEL_P</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

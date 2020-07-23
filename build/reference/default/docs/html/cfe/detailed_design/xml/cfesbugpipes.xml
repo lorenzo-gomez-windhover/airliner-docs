@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfesbugpipes" kind="page">
+    <compoundname>cfesbugpipes</compoundname>
+    <title>Pipes</title>
+    <detaileddescription>
+<para>The destinations to which messages are sent are called pipes. These are queues that can hold messages until they are read out and processed by a task. Each pipe is created at run-time through the <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> API. The pipe name and the pipe depth are given as arguments in the API. The pipe identifier (or PipeId) is given back to the caller after the API is executed. Each pipe can be read by only one task, but a task may read more than one pipe. Only the pipe owner is allowed to subscribe to messages on the pipe.</para><para>The Pipe IDs are specific to a particular processor (that is, the same ID number may refer to a different pipe on each processor). The pipe information for all pipes that have been created, may be requested at anytime by sending the <ref refid="cfe__sb__msg_8h_1a15ebd5480da86cdef4ec717cd6bb7c5f" kindref="member">&apos;Send Pipe Info&apos; SB command </ref>. The software bus also provides a set of figures regarding capacity, current utilization and high water marks relevant to pipes. This information may be requested by sending the command to <ref refid="cfe__sb__msg_8h_1a337072afa81db888b3493a19a1536e9e" kindref="member">dump the SB statistics packet </ref>.</para><para>Next: <ref refid="cfesbugsubs" kindref="compound">Subscriptions</ref> <linebreak/>
+ Prev: <ref refid="cfesbugmsgs" kindref="compound">Messages</ref> <linebreak/>
+ Up To: <ref refid="cfesbugterms" kindref="compound">Software Bus Terminology</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

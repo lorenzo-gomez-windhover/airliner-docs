@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfshktbl" kind="page">
+    <compoundname>cfshktbl</compoundname>
+    <title>CFS Housekeeping Table Definitions</title>
+    <detaileddescription>
+<para><table rows="1" cols="3"><row>
+<entry thead="no"><para><bold><ref refid="cfshkcmds" kindref="compound">CFS Housekeeping Commands</ref></bold> </para></entry><entry thead="no"><para><bold><ref refid="cfshktlm" kindref="compound">CFS Housekeeping Telemetry</ref></bold>  </para></entry><entry thead="no"><para><bold><ref refid="cfshkcfg" kindref="compound">CFS Housekeeping Configuration Parameters</ref></bold> </para></entry></row>
+</table>
+</para><para>The Housekeeping Application uses two tables. A load-dump table referred to as the &quot;copy table&quot; and a dump-only table referred to as the &quot;run-time table&quot;. Each table has the same number of entries, defined by the configuration parameter <ref refid="hk__platform__cfg_8h_1acba1b1ddefd87cf30a4963b0734deddf" kindref="member">HK_COPY_TABLE_ENTRIES</ref>. Each run-time table entry has a direct correspondence to the same copy table entry. During normal operation, the fields in the run-time table change periodically while the copy table fields are static. Two tables were chosen so that checksumming can be executed on the more-static copy table.</para><para><bold>HK Copy Table Validation</bold> - The HK copy table currently has an empty validation call-back function that always returns success. At the time of development, a validation process that would apply to all projects was not perceived.</para><para><bold>HK Copy Table Entries</bold> - Each entry in the copy table has five fields and can be translated to the following phrase: <linebreak/>
+ <emphasis>Copy A bytes from input message B, byte-offset C to output message Y, byte-offset Z. </emphasis></para><para>The structure format of a single copy table entry is as follows:</para><para><verbatim>typedef struct
+{
+    CFE_SB_MsgId_t      InputMid;    
+    uint16              InputOffset; 
+    CFE_SB_MsgId_t      OutputMid;   
+    uint16              OutputOffset;
+    uint16              NumBytes;    
+} hk_copy_table_entry_t;
+</verbatim></para><para><bold>HK Run-time Table Entries</bold> - Each entry in the run-time table holds the address of the output packet and has variables that tell whether the input message ID has been subscribed to and whether or not the data from this entry is present in the output packet (since the last time the output packet was sent).</para><para>The structure format of a single run-time table entry is as follows:</para><para><verbatim>typedef struct
+{
+    CFE_SB_MsgPtr_t     OutputPktAddr;
+    uint8               InputMidSubscribed;
+    uint8               DataPresent;
+} hk_runtime_tbl_entry_t;
+</verbatim></para><para><bold>HK Copy Table Updates</bold> - The copy table is polled for changes every housekeeping request. When an update is pending, HK cleans-up the SB subscriptions and frees the memory (allocated for output messages) from the old table. After the old table cleanup is complete, the new table is updated, then processed. The processing involves subscribing to input messages, allocating memory for the output messages and initializing runtime variables.</para><para>Next: <ref refid="cfshkcons" kindref="compound">CFS Housekeeping Constraints</ref> <linebreak/>
+ Prev: <ref refid="cfshktlm" kindref="compound">CFS Housekeeping Telemetry</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

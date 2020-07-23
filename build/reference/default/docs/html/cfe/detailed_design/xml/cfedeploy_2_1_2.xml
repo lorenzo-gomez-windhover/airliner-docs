@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_2_1_2" kind="page">
+    <compoundname>cfedeploy_2_1_2</compoundname>
+    <title>Create System Environment Variables</title>
+    <detaileddescription>
+<para>Because the cfe-core and cfe-apps directories can be located almost anywhere in the host directory structure, the following environment variables must be created on the host development system:</para><para><center> <bold> Environment Variables Needed by the cFE </bold> </center> <table rows="6" cols="3"><row>
+<entry thead="no"><para><bold> Environment Variable </bold> </para></entry><entry thead="no"><para><bold> Value ( in Linux as an example ) </bold> </para></entry><entry thead="no"><para><bold> Notes </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>CFE_CORE_SRC </para></entry><entry thead="no"><para>/home/cfeuser/cFE-5.2/fsw/cfe-core/src </para></entry><entry thead="no"><para>Set this variable to the location of the cfe-core source directory. </para></entry></row>
+<row>
+<entry thead="no"><para>CFE_ARC_SRC </para></entry><entry thead="no"><para>/home/cfeuser/cfe-5.2/fsw/cfe-core/arch </para></entry><entry thead="no"><para>Note that the arch directory or one branch of it can be moved anywhere as long as this environment variable is set. </para></entry></row>
+<row>
+<entry thead="no"><para>OSAL_SRC </para></entry><entry thead="no"><para>/home/cfeuser/cfe-5.2/fsw/cfe-core/os </para></entry><entry thead="no"><para>The location of the OS Abstraction project. This directory can be moved anywhere, and it will eventually be removed from the cFE source code and tracked as a separate project. </para></entry></row>
+<row>
+<entry thead="no"><para>CFE_MISSION_INC </para></entry><entry thead="no"><para>/home/cfeuser/cfe-5.2/build/inc </para></entry><entry thead="no"><para>The location of the mission include directory. This directory, along with the build directories can be located anywhere. </para></entry></row>
+<row>
+<entry thead="no"><para>CFE_APP_SRC </para></entry><entry thead="no"><para>/home/cfeuser/cFE-5.2/fsw/cfe-apps </para></entry><entry thead="no"><para>Set this variable to the location of the cfe-apps directory. This directory is optional, it provides a shared application directory for building multiple CPUs. </para></entry></row>
+</table>
+</para><para>To make building the cFE easier, a shell script is provided that can set the cFE environment variables relative to the cFE source distribution tree. The script is called “setvars.sh” and it is located in the &quot;fsw&quot; directory of the cFE source distribution. It can be executed on Linux, OS X, and cygwin ( bash shell, not the DOS Command prompt ). When it is executed, it will set the paths using the relative location of the cFE source distribution.</para><para>Example of using the setvars.sh script ( the cFE source distribution is cFE-5.2.tar )</para><para><verbatim>$ cd /home/cfeuser
+$ tar –xf cFE-5.2.tar
+$ cd cFE-5.2
+$ cd fsw
+$ . ./setvars.sh
+</verbatim></para><para>Now the environment variables are set. Note the use of the first &quot;.&quot; and space before the &quot;./setvars.sh&quot;. That is necessary to setup the environment variables properly.</para><para><center> <bold> Example Environment Variables for Different Development Hosts </bold> </center> <table rows="5" cols="3"><row>
+<entry thead="no"><para><bold> Host Operating System </bold> </para></entry><entry thead="no"><para><bold> Example Environment Variables </bold> </para></entry><entry thead="no"><para><bold> Notes </bold> </para></entry></row>
+<row>
+<entry thead="no"><para>Windows/Cygwin </para></entry><entry thead="no"><para>$ export CFE_CORE_SRC=/home/cfeuser/cFE-5.2/fsw/cfe-core/src <linebreak/>
+ $ export CFE_ARCH_SRC=/home/cfeuser/cFE-5.2/fsw/cfe-core/arch <linebreak/>
+ $ export OSAL_SRC=/home/cfeuser/cFE-5.2/fsw/cfe-core/os <linebreak/>
+ $ export CFE_MISSION_INC=/home/cfeuser/cFE-5.2/fsw/build/inc <linebreak/>
+ $ export CFE_APP_SRC=/home/cfeuser/cFE-5.2/fsw/cfe-apps </para></entry><entry thead="no"><para>1. The Windows/Cygwin environment variables are &quot;Bash&quot; shell variables, not Windows environment variables. </para></entry></row>
+<row>
+<entry thead="no"><para>Windows/vxWorks 6 Development Shell </para></entry><entry thead="no"><para>% set CFE_CORE_SRC=C:/cfeproject/cFE-5.2/fsw/cfe-core/src <linebreak/>
+ % set CFE_ARCH_SRC=C:/cfeproject/cFE-5.2/fsw/cfe-core/arch <linebreak/>
+ % set OSAL_SRC=C:/cfeproject/cFE-5.2/fsw/cfe-core/os <linebreak/>
+ % set CFE_MISSION_INC=C:/cfeproject/cFE-5.2/build/inc <linebreak/>
+ % set CFE_APP_SRC=C:/cfeproject/cFE-5.2/fsw/cfe-apps </para></entry><entry thead="no"><para>1. These environment variables can be set in the Windows control panel under system/environment variables. <linebreak/>
+<orderedlist>
+<listitem><para>Note the forward slash directory separators in the DOS environment variables. Because the vxWorks tools are half DOS and half-Unix, they don&apos;t seem to like the DOS style backslash. </para></listitem></orderedlist>
+</para></entry></row>
+<row>
+<entry thead="no"><para>Linux </para></entry><entry thead="no"><para>$ export CFE_CORE_SRC=/home/cfeuser/cFE-5.2/fsw/cfe-core/src <linebreak/>
+ $ export CFE_ARCH_SRC=/home/cfeuser/cFE-5.2/fsw/cfe-core/arch <linebreak/>
+ $ export OSAL_SRC=/home/cfeuser/cFE-5.2/fsw/cfe-core/os <linebreak/>
+ $ export CFE_MISSION_INC=/home/cfeuser/cFE-5.2/fsw/build/inc <linebreak/>
+ $ export CFE_APP_SRC=/home/cfeuser/cFE-5.2/fsw/cfe-apps </para></entry><entry thead="no"><para>These settings can be set in the user&apos;s .bash_profile </para></entry></row>
+<row>
+<entry thead="no"><para>Mac OS X </para></entry><entry thead="no"><para>$ export CFE_CORE_SRC=/Users/cfeuser/cFE-5.2/fsw/cfe-core/src <linebreak/>
+ $ export CFE_ARCH_SRC=/Users/cfeuser/cFE-5.2/fsw/cfe-core/arch <linebreak/>
+ $ export OSAL_SRC=/Users/cfeuser/cFE-5.2/fsw/cfe-core/os <linebreak/>
+ $ export CFE_MISSION_INC=/Users/cfeuser/cFE-5.2/fsw/build/inc <linebreak/>
+ $ export CFE_APP_SRC=/Users/cfeuser/cFE-5.2/fsw/cfe-apps </para></entry><entry thead="no"><para>These settings can be set in the user&apos;s .bash_profile </para></entry></row>
+</table>
+</para><para>Next: <ref refid="cfedeploy_2_2" kindref="compound">Configure the Build Directory for a Mission</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_2_1_1" kindref="compound">Setup the cFE Source Distribution</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_2_1" kindref="compound">Setup the Build Environment</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

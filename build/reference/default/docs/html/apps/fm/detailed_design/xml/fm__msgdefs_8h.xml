@@ -1,0 +1,646 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="fm__msgdefs_8h" kind="file" language="C++">
+    <compoundname>fm_msgdefs.h</compoundname>
+    <includedby refid="fm__app_8c" local="yes">apps/fm/fsw/src/fm_app.c</includedby>
+    <includedby refid="fm__child_8c" local="yes">apps/fm/fsw/src/fm_child.c</includedby>
+    <includedby refid="fm__cmds_8c" local="yes">apps/fm/fsw/src/fm_cmds.c</includedby>
+    <invincdepgraph>
+      <node id="766">
+        <label>apps/fm/fsw/src/fm_msgdefs.h</label>
+        <link refid="fm_msgdefs.h"/>
+        <childnode refid="767" relation="include">
+        </childnode>
+        <childnode refid="768" relation="include">
+        </childnode>
+        <childnode refid="769" relation="include">
+        </childnode>
+      </node>
+      <node id="767">
+        <label>apps/fm/fsw/src/fm_app.c</label>
+        <link refid="fm__app_8c"/>
+      </node>
+      <node id="769">
+        <label>apps/fm/fsw/src/fm_cmds.c</label>
+        <link refid="fm__cmds_8c"/>
+      </node>
+      <node id="768">
+        <label>apps/fm/fsw/src/fm_child.c</label>
+        <link refid="fm__child_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fm__msgdefs_8h_1a5d889623d69df793ef7935c68aa93391" prot="public" static="no">
+        <name>FM_NOOP_CC</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000001"><xreftitle>Name</xreftitle><xrefdescription><para>No Operation</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command performs no operation other than to generate an informational event that also contains software version data. The command is most often used as a general aliveness test by demonstrating that the application can receive commands and generate telemetry.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000001"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_NOOP</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___noop_cmd__t" kindref="compound">FM_NoopCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Informational event <ref refid="fm__events_8h_1a76e981c528ff643d4651f742c1c06a81" kindref="member">FM_NOOP_CMD_EID</ref> will be sent</para></listitem><listitem><para>Command success counter /FM_CMDPC will increment</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a7b9793a1ecd345cc8aed8b790f597b1d" kindref="member">FM_NOOP_PKT_ERR_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="65" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a0e3061222a36a492c354ec2b5e0511ea" prot="public" static="no">
+        <name>FM_RESET_CC</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000002"><xreftitle>Name</xreftitle><xrefdescription><para>Reset Counters</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command resets the following housekeeping telemetry:<itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC</para></listitem><listitem><para>Command error counter /FM_CMDEC</para></listitem><listitem><para>Command warning counter /FM_WarnCtr</para></listitem><listitem><para>Child cmd success counter /FM_ChildCMDPC</para></listitem><listitem><para>Child cmd error counter /FM_ChildCMDEC</para></listitem><listitem><para>Child cmd warning counter /FM_ChildWarnCtr</para></listitem></itemizedlist>
+</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000002"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_ResetCtrs</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___reset_cmd__t" kindref="compound">FM_ResetCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command counters will be set to zero (see description)</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a7118561e66f41c64be0c786f5eab6934" kindref="member">FM_RESET_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a229300d7f944d4d48e5728f4de2f36e0" kindref="member">FM_RESET_PKT_ERR_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="99" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a13c7bb50072bef1eb88376a9cc294526" prot="public" static="no">
+        <name>FM_COPY_CC</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000003"><xreftitle>Name</xreftitle><xrefdescription><para>Copy File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command copies the source file to the target file. The source must be an existing file and the target must not be a directory name. If the Overwrite command argument is TRUE, then the target may be an existing file, provided that the file is closed. If the Overwrite command argument is FALSE, then the target must not exist. The source and target may be on different file systems. Because of the possibility that this command might take a very long time to complete, command argument validation will be done immediately but copying the file will be performed by a lower priority child task. As such, the command result for this function only refers to the result of command argument verification and being able to place the command on the child task interface queue.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000003"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_FileCopy</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___copy_file_cmd__t" kindref="compound">FM_CopyFileCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment after validation</para></listitem><listitem><para>Child cmd success counter /FM_ChildCMDPC will increment after completion</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a61936ebdd90baf4aa685b6f27b94b71b" kindref="member">FM_COPY_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Overwrite is not TRUE (one) or FALSE (zero)</para></listitem><listitem><para>Source filename is invalid</para></listitem><listitem><para>Source file does not exist</para></listitem><listitem><para>Source filename is a directory</para></listitem><listitem><para>Target filename is invalid</para></listitem><listitem><para>Target file already exists</para></listitem><listitem><para>Target filename is a directory</para></listitem><listitem><para>Child task interface queue is full</para></listitem><listitem><para>Child task interface logic is broken</para></listitem><listitem><para>Failure of OS copy function</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC may increment</para></listitem><listitem><para>Child cmd error counter /FM_ChildCMDEC may increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1acd95234e48b5f195af8d15258f965b9e" kindref="member">FM_COPY_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a791c05a3429a3f8c39312d9de2a8a9f0" kindref="member">FM_COPY_OVR_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a29a34887f5d12be8fef27b8c447d876c" kindref="member">FM_COPY_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ad601318a7bbb814e7b0faf30e01e02db" kindref="member">FM_COPY_TGT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ab6089725ec7847901795bba8bdb01988" kindref="member">FM_COPY_CHILD_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1afd7b1f56eabbcf2543eda9adcb571d87" kindref="member">FM_COPY_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>Copying files may consume file space needed by other critical tasks. Also, copying very large files may consume more CPU resource than anticipated.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1a3b861d8e0f17cd3ee7f8fd6b11ebbb04" kindref="member">FM_MOVE_CC</ref>, <ref refid="fm__msgdefs_8h_1a31217b5303b3c219d6f0b82af5df3a57" kindref="member">FM_RENAME_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="159" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="159" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1af7b3897a02746febd5b39dd10d14856c" compoundref="fm__cmds_8c" startline="107" endline="169">FM_CopyFileCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a3b861d8e0f17cd3ee7f8fd6b11ebbb04" prot="public" static="no">
+        <name>FM_MOVE_CC</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000004"><xreftitle>Name</xreftitle><xrefdescription><para>Move File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command moves the source file to the target file. The source must be an existing file and the target must not be a directory name. If the Overwrite command argument is TRUE, then the target may be an existing file, provided that the file is closed. If the Overwrite command argument is FALSE, then the target must not exist. Source and target must both be on the same file system. The move command does not actually move any file data. The command modifies the file system directory structure to create a different file entry for the same file data. If the user wishes to move a file across file systems, he must first copy the file and then delete the original.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000004"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_FileMove</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___move_file_cmd__t" kindref="compound">FM_MoveFileCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a4a5e6a8fdbceda128c09f356509722a6" kindref="member">FM_MOVE_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Overwrite is not TRUE (one) or FALSE (zero)</para></listitem><listitem><para>Source filename is invalid</para></listitem><listitem><para>Source file does not exist</para></listitem><listitem><para>Source filename is a directory</para></listitem><listitem><para>Target filename is invalid</para></listitem><listitem><para>Target file already exists</para></listitem><listitem><para>Target filename is a directory</para></listitem><listitem><para>Failure of OS move function</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a0abd65c6eccd5d1bb5774e3322c48b2c" kindref="member">FM_MOVE_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1abf039fb95b3b6fdfefffcd50efb43c9f" kindref="member">FM_MOVE_OVR_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a299b8fecf72b018f8f8a181741650625" kindref="member">FM_MOVE_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a018eb40e7ec981d1cbddb9da25b70502" kindref="member">FM_MOVE_TGT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a8167fd4722f3a915559ccacae82cc659" kindref="member">FM_MOVE_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1a13c7bb50072bef1eb88376a9cc294526" kindref="member">FM_COPY_CC</ref>, <ref refid="fm__msgdefs_8h_1a31217b5303b3c219d6f0b82af5df3a57" kindref="member">FM_RENAME_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="211" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="211" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1a72c7234c737e4e799fa6171b89a57c59" compoundref="fm__cmds_8c" startline="178" endline="240">FM_MoveFileCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a31217b5303b3c219d6f0b82af5df3a57" prot="public" static="no">
+        <name>FM_RENAME_CC</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000005"><xreftitle>Name</xreftitle><xrefdescription><para>Rename File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command renames the source file to the target file. Source must be an existing file and target must not exist. Source and target must both be on the same file system. The rename command does not actually move any file data. The command modifies the file system directory structure to create a different file entry for the same file data. If the user wishes to rename a file across file systems, he must first copy the file and then delete the original.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000005"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_FileRename</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___rename_file_cmd__t" kindref="compound">FM_RenameFileCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a769cf8e730c1e1bbcbc330819db1fdec" kindref="member">FM_RENAME_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Source filename is invalid</para></listitem><listitem><para>Source file does not exist</para></listitem><listitem><para>Source filename is a directory</para></listitem><listitem><para>Target filename is invalid</para></listitem><listitem><para>Target file already exists</para></listitem><listitem><para>Target filename is a directory</para></listitem><listitem><para>Failure of OS rename function</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ae6945405eccc3143c81b8a14c7bfe81b" kindref="member">FM_RENAME_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a2bf31c5aff2aea31a3f194ff79f2d9b9" kindref="member">FM_RENAME_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a2e16280aeddb2261bc335d9ae3cebe22" kindref="member">FM_RENAME_TGT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a5b8f714271a3b934a9c7c29829d7d71a" kindref="member">FM_RENAME_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1a13c7bb50072bef1eb88376a9cc294526" kindref="member">FM_COPY_CC</ref>, <ref refid="fm__msgdefs_8h_1a3b861d8e0f17cd3ee7f8fd6b11ebbb04" kindref="member">FM_MOVE_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="257" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="257" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1ad5115365489fbc7bec549c8453c17893" compoundref="fm__cmds_8c" startline="249" endline="296">FM_RenameFileCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1aaad7efb631674edce885b94330ed6310" prot="public" static="no">
+        <name>FM_DELETE_CC</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000006"><xreftitle>Name</xreftitle><xrefdescription><para>Delete File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command deletes the source file. Source must be an existing file that is not open.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000006"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_Delete</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___delete_file_cmd__t" kindref="compound">FM_DeleteFileCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1ad8a6fb70c65523b86f3015b2546685fb" kindref="member">FM_DELETE_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Filename is invalid</para></listitem><listitem><para>File does not exist</para></listitem><listitem><para>File is open</para></listitem><listitem><para>Filename is a directory</para></listitem><listitem><para>Failure of OS delete function</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a6c6580c6163b1a669388b3330693e887" kindref="member">FM_DELETE_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a9bbe2371d2411a1ff141c3fba8de72c0" kindref="member">FM_DELETE_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a696b8ee5cefa4508cb0562a17182d7fc" kindref="member">FM_DELETE_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>The FM application does not provide a method to restore deleted files. Critical data may be lost when deleting files.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1a0ced7949ac26982a8b3839a79d2df727" kindref="member">FM_DELETE_ALL_CC</ref>, <ref refid="fm__msgdefs_8h_1a51e23a4d8cf42841743a01686eb97b85" kindref="member">FM_DELETE_DIR_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="295" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="295" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a0ced7949ac26982a8b3839a79d2df727" prot="public" static="no">
+        <name>FM_DELETE_ALL_CC</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000007"><xreftitle>Name</xreftitle><xrefdescription><para>Delete All Files</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command deletes all files in the source directory. Source must be an existing directory. Open files and sub-directories are not deleted. Because of the possibility that this command might take a very long time to complete, command argument validation will be done immediately but reading the directory and deleting each file will be performed by a lower priority child task. As such, the return value for this function only refers to the result of command argument verification and being able to place the command on the child task interface queue.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000007"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_DeleteAll</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___delete_all_cmd__t" kindref="compound">FM_DeleteAllCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment after validation</para></listitem><listitem><para>Child cmd success counter /FM_ChildCMDPC will increment after completion</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1aa406615f534d5d655b30e2443d3a6e2e" kindref="member">FM_DELETE_ALL_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid directory name</para></listitem><listitem><para>Directory does not exist</para></listitem><listitem><para>Directory name + separator + filename is too long</para></listitem><listitem><para>Failure of OS delete function</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC may increment</para></listitem><listitem><para>Child cmd error counter /FM_ChildCMDEC may increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1aa8e754da0405e8ca3e2124bc58a2bf20" kindref="member">FM_DELETE_ALL_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1aa689e0a9332a18c82cd06d47abaec643" kindref="member">FM_DELETE_ALL_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1adc66858e84cd3f4116663a045ef153fa" kindref="member">FM_DELETE_ALL_CHILD_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ad8ac4b872fb009db2a192e41b9413306" kindref="member">FM_DELETE_ALL_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Warning Conditions</title><para><itemizedlist>
+<listitem><para>Directory entry is not a file (sub-directory)</para></listitem><listitem><para>Directory entry is an open file</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Warning Verification</title><para><itemizedlist>
+<listitem><para>Warning counter /FM_WarnCtr will increment</para></listitem><listitem><para>Informational event <ref refid="fm__events_8h_1a1c0c088f32c0f42efe4b416b53d9c3af" kindref="member">FM_DELETE_ALL_WARNING_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>The FM application does not provide a method to restore deleted files. Critical data may be lost when deleting files. Also, deleting a very large number of files may consume more CPU resource than anticipated.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1aaad7efb631674edce885b94330ed6310" kindref="member">FM_DELETE_CC</ref>, <ref refid="fm__msgdefs_8h_1a51e23a4d8cf42841743a01686eb97b85" kindref="member">FM_DELETE_DIR_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="353" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="353" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1a9cbb8c1d8bd3982b24b836fa4bd94499" compoundref="fm__cmds_8c" startline="353" endline="398">FM_DeleteAllFilesCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a4f9b7dc7f6d4f2b9d887b412d8d5419c" prot="public" static="no">
+        <name>FM_DECOMPRESS_CC</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000008"><xreftitle>Name</xreftitle><xrefdescription><para>Decompress File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command invokes a CFE function to decompress the source file into the target file. Source must be an existing file and target must not exist. Source and target may be on different file systems. Because of the possibility that this command might take a very long time to complete, command argument validation will be done immediately but decompressing the source file into the target file will be performed by a lower priority child task. As such, the return value for this function only refers to the result of command argument verification and being able to place the command on the child task interface queue.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000008"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_Decompress</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___decompress_cmd__t" kindref="compound">FM_DecompressCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment after validation</para></listitem><listitem><para>Child cmd success counter /FM_ChildCMDPC will increment after completion</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a7cab09d166baec6395c38224cb7b4e9e" kindref="member">FM_DECOM_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid source filename</para></listitem><listitem><para>Source file does not exist</para></listitem><listitem><para>Invalid target filename</para></listitem><listitem><para>Target file does exist</para></listitem><listitem><para>Failure of CFE_FS_Decompress function</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC may increment</para></listitem><listitem><para>Child cmd error counter /FM_ChildCMDEC may increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a3cc6a998e9399f170898192accc30293" kindref="member">FM_DECOM_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1add9eede49129e5d0705d1ed14b986a5b" kindref="member">FM_DECOM_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a4a622c223b7915ab43d4223936727036" kindref="member">FM_DECOM_TGT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ab728d1305f7bd285a4fdb6f5a8128f6d" kindref="member">FM_DECOM_CFE_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>Decompressing a very large file may consume more CPU resource than anticipated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="401" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="401" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1aeb70765146cda5280ee2f432eb375a69" compoundref="fm__cmds_8c" startline="407" endline="454">FM_DecompressFileCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a88bd1dbfcda3821055d9e7640fb4eb7a" prot="public" static="no">
+        <name>FM_CONCAT_CC</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000009"><xreftitle>Name</xreftitle><xrefdescription><para>Concatenate Files</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command concatenates two source files into the target file. Sources must both be existing files and target must not exist. Sources and target may be on different file systems. Because of the possibility that this command might take a very long time to complete, command argument validation will be done immediately but copying the first source file to the target file and then appending the second source file to the target file will be performed by a lower priority child task. As such, the return value for this function only refers to the result of command argument verification and being able to place the command on the child task interface queue.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000009"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_FileCat</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___concat_cmd__t" kindref="compound">FM_ConcatCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment after validation</para></listitem><listitem><para>Child cmd success counter /FM_ChildCMDPC will increment after completion</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a717355caf97174153b7f332ead52465a" kindref="member">FM_CONCAT_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid source filename</para></listitem><listitem><para>Source file does not exist</para></listitem><listitem><para>Invalid target filename</para></listitem><listitem><para>Target file does exist</para></listitem><listitem><para>Failure of OS function (copy, open, read, write, etc.)</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC may increment</para></listitem><listitem><para>Child cmd error counter /FM_ChildCMDEC may increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ae28128863ee6741a31eec47381075d2f" kindref="member">FM_CONCAT_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a019bf0227f6238429108cd6f2cc41006" kindref="member">FM_CONCAT_SRC1_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a7dbbc297fb1c666678b1ecd32265ef97" kindref="member">FM_CONCAT_SRC2_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a600f744d89fac69f2dc9736796797b59" kindref="member">FM_CONCAT_TGT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1af88e259b5e2db1eaadf4a298a14868f1" kindref="member">FM_CONCAT_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>Concatenating very large files may consume more CPU resource than anticipated.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1a13c7bb50072bef1eb88376a9cc294526" kindref="member">FM_COPY_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="453" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="453" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1a1e0f804987928b47ee0adcb6e86774ab" compoundref="fm__cmds_8c" startline="463" endline="518">FM_ConcatFilesCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1ab76c0b00331550b02c42bd7d2166d32c" prot="public" static="no">
+        <name>FM_GET_FILE_INFO_CC</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000010"><xreftitle>Name</xreftitle><xrefdescription><para>Get File Information</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command creates an FM file information telemetry packet for the source file. The file information packet includes status that indicates whether source is a file that is open or closed, a directory, or does not exist. The file information data also includes a CRC, file size, last modify time and the source name. Because of the possibility that this command might take a very long time to complete, command argument validation will be done immediately but collecting the status data and calculating the CRC will be performed by a lower priority child task. As such, the return value for this function only refers to the result of command argument verification and being able to place the command on the child task interface queue.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000010"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_FileInfo</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___get_file_info_cmd__t" kindref="compound">FM_GetFileInfoCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment after validation</para></listitem><listitem><para>Child cmd success counter /FM_ChildCMDPC will increment after completion</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a439196cca44f092b17a9679cf091a792" kindref="member">FM_GET_FILE_INFO_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid source filename</para></listitem><listitem><para>Failure of OS_stat function</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC may increment</para></listitem><listitem><para>Child cmd error counter /FM_ChildCMDEC may increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a98b616c41c0378d3df9d6f2aa5875c10" kindref="member">FM_GET_FILE_INFO_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ae0b112d5902cb8651b0e215a4b9cd962" kindref="member">FM_GET_FILE_INFO_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a33b5ea9725ab3778b433c3eff5ab05c4" kindref="member">FM_GET_FILE_INFO_CHILD_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>Calculating the CRC for a very large file may consume more CPU resource than anticipated.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1aa09132772810436524d6d959f9be53dc" kindref="member">FM_GET_OPEN_FILES_CC</ref>, <ref refid="fm__msgdefs_8h_1ae4525ebab17346a1340824e97e00d5f1" kindref="member">FM_GET_DIR_FILE_CC</ref>, <ref refid="fm__msgdefs_8h_1a0c70b01f18aefa087fba4372be96261b" kindref="member">FM_GET_DIR_PKT_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="502" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="502" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1a66da86060eb3c7adcd7598e312e8c4b7" compoundref="fm__cmds_8c" startline="527" endline="578">FM_GetFileInfoCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1aa09132772810436524d6d959f9be53dc" prot="public" static="no">
+        <name>FM_GET_OPEN_FILES_CC</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000011"><xreftitle>Name</xreftitle><xrefdescription><para>Get Open Files Listing</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command creates an FM open files telemetry packet. The open files packet includes the number of open files and for each open file, the name of the file and the name of the application that has the file opened.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000011"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_ListOpenFiles</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___get_open_files_cmd__t" kindref="compound">FM_GetOpenFilesCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1ad8d591c49ea277ae8488c940fa4095cf" kindref="member">FM_GET_OPEN_FILES_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a8a5ab5bd315c467c8d90f284e99decff" kindref="member">FM_GET_OPEN_FILES_PKT_ERR_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1ab76c0b00331550b02c42bd7d2166d32c" kindref="member">FM_GET_FILE_INFO_CC</ref>, <ref refid="fm__msgdefs_8h_1ae4525ebab17346a1340824e97e00d5f1" kindref="member">FM_GET_DIR_FILE_CC</ref>, <ref refid="fm__msgdefs_8h_1a0c70b01f18aefa087fba4372be96261b" kindref="member">FM_GET_DIR_PKT_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="534" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="534" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1ada86146b2a3c857cd48947545294b6f2" prot="public" static="no">
+        <name>FM_CREATE_DIR_CC</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000012"><xreftitle>Name</xreftitle><xrefdescription><para>Create Directory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command creates the source directory. Source must be a valid directory name that does not exist.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000012"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_DirCreate</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___create_dir_cmd__t" kindref="compound">FM_CreateDirCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a5ce09eb7d68da904fdc6ca4b69c113b0" kindref="member">FM_CREATE_DIR_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid directory name</para></listitem><listitem><para>Directory name already exists</para></listitem><listitem><para>Failure of OS_mkdir function</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ace1196580a336752eb22a16e38f2d0dc" kindref="member">FM_CREATE_DIR_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1aafe112d343ac951cecec7ed021bc8600" kindref="member">FM_CREATE_DIR_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ae281de89683ac6faf9e4c56cffdf6099" kindref="member">FM_CREATE_DIR_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1a51e23a4d8cf42841743a01686eb97b85" kindref="member">FM_DELETE_DIR_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="569" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="569" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1a5fcf69c1170e59372afe376bc4c55188" compoundref="fm__cmds_8c" startline="626" endline="665">FM_CreateDirectoryCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a51e23a4d8cf42841743a01686eb97b85" prot="public" static="no">
+        <name>FM_DELETE_DIR_CC</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000013"><xreftitle>Name</xreftitle><xrefdescription><para>Remove Directory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command deletes the source directory, it does not delete the contents of the directory. Source must be a valid directory name that exists.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000013"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_DirDelete</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___delete_dir_cmd__t" kindref="compound">FM_DeleteDirCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1ae4fe0b934b9949c4693b72ad96490ddf" kindref="member">FM_DELETE_DIR_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid directory name</para></listitem><listitem><para>Directory does not exist</para></listitem><listitem><para>Directory is not empty</para></listitem><listitem><para>Failure of OS function (OS_opendir, OS_rmdir)</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1abc9c9ba6cf929c70c2eb46174d0f61c1" kindref="member">FM_DELETE_DIR_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a2ca9b6e9430e2d7a8e858452fe653647" kindref="member">FM_DELETE_DIR_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a714c9f64c8d55f7be5427a53bce8bf9a" kindref="member">FM_DELETE_DIR_EMPTY_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1afdcc3ca4ab3218fa2fadda6563c7033e" kindref="member">FM_DELETE_DIR_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>The unexpected loss of a directory may affect a critical tasks ability to store data.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1ada86146b2a3c857cd48947545294b6f2" kindref="member">FM_CREATE_DIR_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="608" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="608" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1a6de49e43b04468f049ccedc1952be290" compoundref="fm__cmds_8c" startline="674" endline="713">FM_DeleteDirectoryCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1ae4525ebab17346a1340824e97e00d5f1" prot="public" static="no">
+        <name>FM_GET_DIR_FILE_CC</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000014"><xreftitle>Name</xreftitle><xrefdescription><para>Get Directory Listing to a File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command writes a listing of the contents of the source directory to the target file. If the target filename buffer is empty, then the default target filename <ref refid="fm__platform__cfg_8h_1ac38bb49fee383cd80e17f0d8b68a1bc4" kindref="member">FM_DIR_LIST_FILE_DEFNAME</ref> is used. The command will overwrite a previous copy of the target file, if one exists. Because of the possibility that this command might take a very long time to complete, command argument validation will be done immediately but reading the directory will be performed by a lower priority child task. As such, the return value for this function only refers to the result of command argument verification and being able to place the command on the child task interface queue.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000014"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_DirListFile</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___get_dir_file_cmd__t" kindref="compound">FM_GetDirFileCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Success Verification</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment after validation</para></listitem><listitem><para>Child cmd success counter /FM_ChildCMDPC will increment after completion</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a706b5547a82c41f76ddbfa6401f9fb7f" kindref="member">FM_GET_DIR_FILE_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Invalid source directory name</para></listitem><listitem><para>Source directory does not exist</para></listitem><listitem><para>Directory name + separator is too long</para></listitem><listitem><para>Directory name + directory entry is too long</para></listitem><listitem><para>Invalid target filename</para></listitem><listitem><para>Target file is already open</para></listitem><listitem><para>Failure of OS function (OS_opendir, OS_creat, OS_write)</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Command Failure Verification</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC may increment</para></listitem><listitem><para>Child cmd error counter /FM_ChildCMDEC may increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ae7e8f7a1f56afd76efe083aa2d94f205" kindref="member">FM_GET_DIR_FILE_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a1cff26fa621108cf17509535f0b73bbc" kindref="member">FM_GET_DIR_FILE_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1aaff9ccacd7ea679d8476704f548a8bbd" kindref="member">FM_GET_DIR_FILE_TGT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a55bf771c49e815e8f25eb9860c9885ff" kindref="member">FM_GET_DIR_FILE_WARNING_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a0de1deb142efbbaeb5a553a09e8713c4" kindref="member">FM_GET_DIR_FILE_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>Reading a directory that contains thousands of files may consume more CPU resource than anticipated.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1a0c70b01f18aefa087fba4372be96261b" kindref="member">FM_GET_DIR_PKT_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="662" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="662" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1a7fe11f5ba185c987429ebfbd5b4d92e4" compoundref="fm__cmds_8c" startline="722" endline="788">FM_GetDirListFileCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a0c70b01f18aefa087fba4372be96261b" prot="public" static="no">
+        <name>FM_GET_DIR_PKT_CC</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000015"><xreftitle>Name</xreftitle><xrefdescription><para>Get Directory Listing to a Packet</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command creates a telemetry packet <ref refid="struct_f_m___dir_list_pkt__t" kindref="compound">FM_DirListPkt_t</ref> that contains a listing of the entries in the specified directory. Since the packet will likely hold fewer entries than will be possible in a directory, the command also provides an index argument to define which entry in the directory is the first entry reported in the telemetry packet. After reading the directory list and skipping entries until reaching the index of the first entry reported, the remaining entries in the packet are filled sequentially until either the packet is full or until there are no more entries in the directory. The first entry index is zero based - thus, when the first entry index is zero the first directory entry will be the first packet entry. The number of entries per packet <ref refid="fm__platform__cfg_8h_1ab89d57a7bce1efbbf4b2bdb0884dfda0" kindref="member">FM_DIR_LIST_PKT_ENTRIES</ref> is a platform configuration definition. Because of the possibility that this command might take a very long time to complete, command argument validation will be done immediately but reading the directory will be performed by a lower priority child task. As such, the return value for this function only refers to the result of command argument verification and being able to place the command on the child task interface queue.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000015"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_DirListTlm</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___get_dir_pkt_cmd__t" kindref="compound">FM_GetDirPktCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment after validation</para></listitem><listitem><para>Child cmd success counter /FM_ChildCMDPC will increment after completion</para></listitem><listitem><para>The <ref refid="struct_f_m___dir_list_pkt__t" kindref="compound">FM_DirListPkt_t</ref> telemetry packet will be sent</para></listitem><listitem><para>The <ref refid="fm__events_8h_1aa3a76cb27baacb14c4b39ddb3e6b519d" kindref="member">FM_GET_DIR_PKT_CMD_EID</ref> debug event will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>This command may fail for the following reason(s):<itemizedlist>
+<listitem><para>OS error received opening directory</para></listitem><listitem><para>OS error received requesting directory size</para></listitem><listitem><para>OS error received closing directory</para></listitem><listitem><para>Invalid directory pathname received</para></listitem><listitem><para>Command packet length not as expected</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Evidence of failure may be found in the following telemetry:</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC may increment</para></listitem><listitem><para>Child cmd error counter /FM_ChildCMDEC may increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a735acb390349090f0d7dd2e948ddce76" kindref="member">FM_GET_DIR_PKT_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a92d9f6935c6e377c693cba6722949e18" kindref="member">FM_GET_DIR_PKT_SRC_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a556001c0592c8ef0f34344f06b4d85c7" kindref="member">FM_GET_DIR_PKT_CHILD_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a822606d2445d0f9059c6e3ee1147a21f" kindref="member">FM_GET_DIR_PKT_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>Reading a directory that contains thousands of files may consume more CPU resource than anticipated.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1ae4525ebab17346a1340824e97e00d5f1" kindref="member">FM_GET_DIR_FILE_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="726" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="726" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1aaa7b87dc34b2a2e822418eca838ecf92" compoundref="fm__cmds_8c" startline="797" endline="844">FM_GetDirListPktCmd</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a508d38606b91d9908c20721246089fe0" prot="public" static="no">
+        <name>FM_GET_FREE_SPACE_CC</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000016"><xreftitle>Name</xreftitle><xrefdescription><para>Get Free Space</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command queries the amount of free space for each of the enabled entries in the file system free space table. The data is then placed in a telemetry packet and sent to ground.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000016"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_GetFreeSpace</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___get_free_space_cmd__t" kindref="compound">FM_GetFreeSpaceCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Evidence of success may be found in the following telemetry:</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment</para></listitem><listitem><para>Debug event <ref refid="fm__events_8h_1a5cea596dc858cf5698b31094100095a2" kindref="member">FM_GET_FREE_SPACE_CMD_EID</ref> will be sent</para></listitem><listitem><para>Telemetry packet <ref refid="struct_f_m___free_space_pkt__t" kindref="compound">FM_FreeSpacePkt_t</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Evidence of failure may be found in the following telemetry:</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a27644073fe504a2d3392c8aedd3124ea" kindref="member">FM_GET_FREE_SPACE_PKT_ERR_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="756" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="756" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a91ad85d38a9589cfa067d0b07533aa85" prot="public" static="no">
+        <name>FM_SET_TABLE_STATE_CC</name>
+        <initializer>17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000017"><xreftitle>Name</xreftitle><xrefdescription><para>Set Free Space Table Entry State</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command enables or disables a single entry in the FM file system free space table. Only table entries that are currently enabled or disabled may be modified by command. Unused table entries cannot be modified.</para></simplesect>
+<xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000017"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_GetTblState</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___set_table_state_cmd__t" kindref="compound">FM_SetTableStateCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Evidence of success may be found in the following telemetry:</title><para><itemizedlist>
+<listitem><para>Command success counter /FM_CMDPC will increment</para></listitem><listitem><para>Informational event <ref refid="fm__events_8h_1a68ab2db7cc071ccc306d81893d5d5b09" kindref="member">FM_SET_TABLE_STATE_CMD_EID</ref> will be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>FM file system free space table has not yet been loaded</para></listitem><listitem><para>Invalid command argument, table entry index arg is out of range</para></listitem><listitem><para>Invalid command argument, entry state arg is not enable/disable</para></listitem><listitem><para>Invalid current table entry state, entry is unused</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Evidence of failure may be found in the following telemetry:</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ab4d71817a7b31b8482ce3d093dbea457" kindref="member">FM_SET_TABLE_STATE_PKT_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a5b4012b9a59e21184f99e8df08a278c6" kindref="member">FM_SET_TABLE_STATE_TBL_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a3b8b8e1d07e93cb3a3fa2c2591639aab" kindref="member">FM_SET_TABLE_STATE_ARG_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ae6836b179a9ff5b0d9abf0b7d8356205" kindref="member">FM_SET_TABLE_STATE_UNUSED_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="793" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="793" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1a4b9711a4ca14deedc4f3abce2162764c" prot="public" static="no">
+        <name>FM_DELETE_INT_CC</name>
+        <initializer>18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000018"><xreftitle>Name</xreftitle><xrefdescription><para>Delete File (internal)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This is a special version of the <ref refid="fm__msgdefs_8h_1aaad7efb631674edce885b94330ed6310" kindref="member">FM_DELETE_CC</ref> command for use when the command is sent by another application, rather than from the ground. This version of the command will not generate a success event, nor will the command increment the command success counter. The intent is to avoid confusion resulting from telemetry representing the results of delete commands sent by other applications and those sent from the ground. Refer to <ref refid="fm__msgdefs_8h_1aaad7efb631674edce885b94330ed6310" kindref="member">FM_DELETE_CC</ref> command for use details.</para></simplesect>
+<simplesect kind="see"><para><ref refid="fm__msgdefs_8h_1aaad7efb631674edce885b94330ed6310" kindref="member">FM_DELETE_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="810" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="810" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a5cf5d58bf0f535d5028d348888d93fc6" compoundref="fm__child_8c" startline="446" endline="483">FM_ChildDeleteCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__msgdefs_8h_1adfda056d4436f4f55f40be106fd4bc87" prot="public" static="no">
+        <name>FM_SET_FILE_PERM_CC</name>
+        <initializer>19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcmds_1_cfsfmcmds000019"><xreftitle>Name</xreftitle><xrefdescription><para>Set Permissions of a file</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command sets the permissions for a file. This is a direct interface to OS_chmod in the OSAL. OS_chmod accepts a uint32 to set the file&apos;s mode. The mode value also contains the type of file (regular or directory, etc) so care should be taken to not change the file type from regular to directory or vice-versa. Examples for a regular file:</para></simplesect>
+0100700 (Decimal: 33216) - Read, Write and Execute 0100600 (Decimal: 33152) - Read, and Write 0100400 (Decimal: 33024) - Read Only</para><para>Examples for a directory: 0040700 (Decimal: 16832) - Read, Write and Execute 0040600 (Decimal: 16786) - Read, and Write 0040400 (Decimal: 16640) - Read Only</para><para>S_IFMT 0170000 bit mask for the file type bit field</para><para>S_IFSOCK 0140000 socket S_IFLNK 0120000 symbolic link S_IFREG 0100000 regular file S_IFBLK 0060000 block device S_IFDIR 0040000 directory S_IFCHR 0020000 character device S_IFIFO 0010000 FIFO <xrefsect id="cfsfmcmdmnems_1_cfsfmcmdmnems000018"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput></computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Packet Structure</title><para><ref refid="struct_f_m___set_perm_cmd__t" kindref="compound">FM_SetPermCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para><itemizedlist>
+<listitem><para>Invalid command packet length</para></listitem><listitem><para>Error from call to OS_chmod</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Evidence of failure may be found in the following telemetry:</title><para><itemizedlist>
+<listitem><para>Command error counter /FM_CMDEC will increment</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1ad4fd4f12f89342e9c24c856ea148eda9" kindref="member">FM_SET_PERM_ERR_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1abdb4792a8f523393ff983cd1415ab9a7" kindref="member">FM_SET_PERM_CMD_EID</ref> may be sent</para></listitem><listitem><para>Error event <ref refid="fm__events_8h_1a9ff454962e31f7acf84eb2594fa225a1" kindref="member">FM_SET_PERM_OS_ERR_EID</ref> may be sent</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para><itemizedlist>
+<listitem><para>There are no critical issues related to this command. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msgdefs.h" line="857" column="9" bodyfile="apps/fm/fsw/src/fm_msgdefs.h" bodystart="857" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1aa85951292940f7b849ad51b4406344a9" compoundref="fm__cmds_8c" startline="989" endline="1034">FM_SetPermissionsCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>$Id:<sp/>fm_msgdefs.h<sp/>1.4.1.2<sp/>2017/01/23<sp/>21:52:59EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/>Title:<sp/>CFS<sp/>File<sp/>Manager<sp/>(FM)<sp/>Application<sp/>Command<sp/>and<sp/>Telemetry</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Packet<sp/>Definitions<sp/>Header<sp/>File</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/>Purpose:<sp/>Specification<sp/>for<sp/>the<sp/>CFS<sp/>FM<sp/>command<sp/>and<sp/>telemetry<sp/>message</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>macro<sp/>definitions.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/>Author:<sp/>Susanne<sp/>L.<sp/>Strege,<sp/>Code<sp/>582<sp/>NASA<sp/>GSFC</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>References:</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/><sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.0a</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_fm_msgdefs_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_fm_msgdefs_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FM<sp/>command<sp/>packet<sp/>command<sp/>codes<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="fm__msgdefs_8h_1a5d889623d69df793ef7935c68aa93391" refkind="member"><highlight class="preprocessor">#define<sp/>FM_NOOP_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="fm__msgdefs_8h_1a0e3061222a36a492c354ec2b5e0511ea" refkind="member"><highlight class="preprocessor">#define<sp/>FM_RESET_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="fm__msgdefs_8h_1a13c7bb50072bef1eb88376a9cc294526" refkind="member"><highlight class="preprocessor">#define<sp/>FM_COPY_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="fm__msgdefs_8h_1a3b861d8e0f17cd3ee7f8fd6b11ebbb04" refkind="member"><highlight class="preprocessor">#define<sp/>FM_MOVE_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="fm__msgdefs_8h_1a31217b5303b3c219d6f0b82af5df3a57" refkind="member"><highlight class="preprocessor">#define<sp/>FM_RENAME_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295" refid="fm__msgdefs_8h_1aaad7efb631674edce885b94330ed6310" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DELETE_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="fm__msgdefs_8h_1a0ced7949ac26982a8b3839a79d2df727" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DELETE_ALL_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401" refid="fm__msgdefs_8h_1a4f9b7dc7f6d4f2b9d887b412d8d5419c" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DECOMPRESS_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="453" refid="fm__msgdefs_8h_1a88bd1dbfcda3821055d9e7640fb4eb7a" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CONCAT_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502" refid="fm__msgdefs_8h_1ab76c0b00331550b02c42bd7d2166d32c" refkind="member"><highlight class="preprocessor">#define<sp/>FM_GET_FILE_INFO_CC<sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="534" refid="fm__msgdefs_8h_1aa09132772810436524d6d959f9be53dc" refkind="member"><highlight class="preprocessor">#define<sp/>FM_GET_OPEN_FILES_CC<sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="535"><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="569" refid="fm__msgdefs_8h_1ada86146b2a3c857cd48947545294b6f2" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CREATE_DIR_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight></codeline>
+<codeline lineno="571"><highlight class="normal"></highlight></codeline>
+<codeline lineno="608" refid="fm__msgdefs_8h_1a51e23a4d8cf42841743a01686eb97b85" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DELETE_DIR_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610"><highlight class="normal"></highlight></codeline>
+<codeline lineno="662" refid="fm__msgdefs_8h_1ae4525ebab17346a1340824e97e00d5f1" refkind="member"><highlight class="preprocessor">#define<sp/>FM_GET_DIR_FILE_CC<sp/><sp/><sp/><sp/><sp/><sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="663"><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"></highlight></codeline>
+<codeline lineno="726" refid="fm__msgdefs_8h_1a0c70b01f18aefa087fba4372be96261b" refkind="member"><highlight class="preprocessor">#define<sp/>FM_GET_DIR_PKT_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="727"><highlight class="normal"></highlight></codeline>
+<codeline lineno="728"><highlight class="normal"></highlight></codeline>
+<codeline lineno="756" refid="fm__msgdefs_8h_1a508d38606b91d9908c20721246089fe0" refkind="member"><highlight class="preprocessor">#define<sp/>FM_GET_FREE_SPACE_CC<sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="757"><highlight class="normal"></highlight></codeline>
+<codeline lineno="758"><highlight class="normal"></highlight></codeline>
+<codeline lineno="793" refid="fm__msgdefs_8h_1a91ad85d38a9589cfa067d0b07533aa85" refkind="member"><highlight class="preprocessor">#define<sp/>FM_SET_TABLE_STATE_CC<sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="794"><highlight class="normal"></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"></highlight></codeline>
+<codeline lineno="810" refid="fm__msgdefs_8h_1a4b9711a4ca14deedc4f3abce2162764c" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DELETE_INT_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="811"><highlight class="normal"></highlight></codeline>
+<codeline lineno="857" refid="fm__msgdefs_8h_1adfda056d4436f4f55f40be106fd4bc87" refkind="member"><highlight class="preprocessor">#define<sp/>FM_SET_FILE_PERM_CC<sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="858"><highlight class="normal"></highlight></codeline>
+<codeline lineno="859"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_fm_msgdefs_h_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="860"><highlight class="normal"></highlight></codeline>
+<codeline lineno="861"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="863"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/fm/fsw/src/fm_msgdefs.h"/>
+  </compounddef>
+</doxygen>

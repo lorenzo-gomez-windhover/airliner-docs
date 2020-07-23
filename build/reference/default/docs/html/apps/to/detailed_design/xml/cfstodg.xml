@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfstodg" kind="page">
+    <compoundname>cfstodg</compoundname>
+    <title>TO Application Deployment Guide</title>
+    <detaileddescription>
+<para><heading level="1">Initial Integration </heading>
+</para><para>The first step in deploying the TO application is to coordinate the mission-wide message IDs and performance IDs. The values for CI should be accessible via the TO header files as noted below. The TO platform configuration file should be updated for the cFS environment, including expected cFS Scheduler (SCH) application table configuration.</para><para><heading level="2">Application Tailoring to the Mission </heading>
+</para><para>The TO message MIDs must not conflict with any other cFE service or cFS application in the mission build. Default values are in the ci_msgids.h, but mission-specific values are held in the mission configuration.</para><para>The TO performance ID(s) must not conflict with any other cFE service or cFS application in the mission build. Default values are in the ci_perfids.h, but mission-specific values are held in the mission configuration.</para><para><heading level="2">Application Tailoring to the Platform </heading>
+</para><para>In the <ref refid="to__platform__cfg_8h" kindref="compound">to_platform_cfg.h</ref> file, there are configuration parameters that control TO application behavior. This should be tailored to the specific platform needs. This behavior is built into the application during compilation.</para><para><heading level="2">CFS Scheduler Support </heading>
+</para><para>The cFS Scheduler (SCH) application should publish the TO_SEND_HK_MID and TO_SEND_TLM_MID commands for TO.</para><para>The TO_SEND_TLM_MID should be called at a rate required by TO responsiveness to its own commands being read from the cFE SB. Issuing commands to TO at a faster rate than its command pipe and SCH wakeup rate support would cause TO to miss some ground commands, just like any other cFS application.</para><para>The TO_SEND_HK_MID can be called at any time, and at any rate. However it is generally assumed to be at the same, or lower rate, than TO_SEND_TLM_MID.</para><para><heading level="2">Application Custom Interfaces (Platform Specific) </heading>
+</para><para>Each platform needs to provide to_custom source file(s) that implements the API defined in the <ref refid="to__custom_8h" kindref="compound">to_custom.h</ref> for initializing an interface, reading a message from the interface, and for cleaning up and closing the interface.</para><para>Next: <ref refid="cfstocmds" kindref="compound">TO Application Commands</ref> <linebreak/>
+ Prev: <ref refid="cfstoreq" kindref="compound">TO Application Requirements</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

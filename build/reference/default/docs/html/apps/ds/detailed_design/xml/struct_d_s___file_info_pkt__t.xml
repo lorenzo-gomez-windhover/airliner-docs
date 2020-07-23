@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_d_s___file_info_pkt__t" kind="struct" language="C++" prot="public">
+    <compoundname>DS_FileInfoPkt_t</compoundname>
+    <includes refid="ds__msg_8h" local="no">ds_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_s___file_info_pkt__t_1a8ce7744cbe54696f9b104b57164ec663" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 DS_FileInfoPkt_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE Software Bus telemetry message header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msg.h" line="395" column="1" bodyfile="apps/ds/fsw/src/ds_msg.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s___file_info_pkt__t_1a12584c83a0e3186071860043d1709818" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_s___file_info__t" kindref="compound">DS_FileInfo_t</ref></type>
+        <definition>DS_FileInfo_t DS_FileInfoPkt_t::FileInfo[DS_DEST_FILE_CNT]</definition>
+        <argsstring>[DS_DEST_FILE_CNT]</argsstring>
+        <name>FileInfo</name>
+        <briefdescription>
+<para>Current state of destination files. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsdstlmmnems_1_cfsdstlmmnems000024"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput></computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_msg.h" line="397" column="1" bodyfile="apps/ds/fsw/src/ds_msg.h" bodystart="397" bodyend="-1"/>
+        <referencedby refid="ds__cmds_8h_1a673c06a922af49a60928651246fbd70e" compoundref="ds__cmds_8c" startline="1323" endline="1415">DS_CmdGetFileInfo</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="cfsdstlm_1_cfsdstlm000002"><xreftitle>Name</xreftitle><xrefdescription><para>DS application file info packet </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="46">
+        <label>DS_FileInfo_t</label>
+        <link refid="struct_d_s___file_info__t"/>
+      </node>
+      <node id="45">
+        <label>DS_FileInfoPkt_t</label>
+        <link refid="struct_d_s___file_info_pkt__t"/>
+        <childnode refid="46" relation="usage">
+          <edgelabel>FileInfo</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/ds/fsw/src/ds_msg.h" line="394" column="1" bodyfile="apps/ds/fsw/src/ds_msg.h" bodystart="393" bodyend="399"/>
+    <listofallmembers>
+      <member refid="struct_d_s___file_info_pkt__t_1a12584c83a0e3186071860043d1709818" prot="public" virt="non-virtual"><scope>DS_FileInfoPkt_t</scope><name>FileInfo</name></member>
+      <member refid="struct_d_s___file_info_pkt__t_1a8ce7744cbe54696f9b104b57164ec663" prot="public" virt="non-virtual"><scope>DS_FileInfoPkt_t</scope><name>TlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

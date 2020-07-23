@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsdsfaqs" kind="page">
+    <compoundname>cfsdsfaqs</compoundname>
+    <title>CFS Data Storage Frequently Asked Questions</title>
+    <detaileddescription>
+<para><bold> (Q) How do I determine what message IDs are to be stored? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The Message IDs to be stored are specified in the Filter Table. To determine what these are, you must dump the filter table. This can be done by displaying the Filter Table display page and clicking the Refresh button. </emphasis></para><para><bold> (Q) Where are my files being stored? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The locations of the files are determined by the File Table entry that the message ID is associated with. The Filter table indicates what File index is being used to store that message IDs data. To trace the message ID to the File entry, both tables must be dumped. This can be done by displaying the File and Filter Table display pages and clicking the Refresh buttons on each page. </emphasis></para><para><bold> (Q) How are my files named? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The files are named as follows:<linebreak/>
+<linebreak/>
+ path + base + [time/seq characters] + extension.<linebreak/>
+<linebreak/>
+ If the file is a Sequence based file, the sequence characters will be based upon the next sequence number. For example, if path = /ram and base = seq and extension = .dat, the file would be named /ram/seq00000100.dat<linebreak/>
+ If the file is time based, the characters will be in the form YYYYDDDHHMMSS. For example if the file was created on day 123 at 14:15:22 using path = /ram, base = tim and extension = .dat, the file would be named /ram/tim2010123141522.dat <linebreak/>
+ <linebreak/>
+ The path, base and extension can be determined by looking in the File Table for the appropriate entry. Finally, the entire length of the filename must not exceed the length specified by the #OS_MAX_PATH_LEN configuration parameter. </emphasis></para><para>Prev: <ref refid="cfsdscons" kindref="compound">CFS Data Storage Operational Constraints</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

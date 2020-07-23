@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_low_pass" kind="class" language="C++" prot="public">
+    <compoundname>LowPass</compoundname>
+    <includes refid="_low_pass_8hpp" local="no">LowPass.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_low_pass_1af36a9b39153ed1912adcb43a8e1190b7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LowPass::m_Initialized</definition>
+        <argsstring></argsstring>
+        <name>m_Initialized</name>
+        <briefdescription>
+<para>Initialization flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPass.hpp" line="50" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/LowPass.hpp" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_low_pass_1a0311487456bc15034d1ccbe3c7d82993" compoundref="_low_pass_8cpp" startline="16" endline="40">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_low_pass_1a5dd4767d06901b2712097c3fa022c835" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float LowPass::m_State</definition>
+        <argsstring></argsstring>
+        <name>m_State</name>
+        <briefdescription>
+<para>State value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPass.hpp" line="53" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/LowPass.hpp" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_low_pass_1a0311487456bc15034d1ccbe3c7d82993" compoundref="_low_pass_8cpp" startline="16" endline="40">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_low_pass_1a23ab567dbd0e7faba96d2763baac6bc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LowPass::LowPass</definition>
+        <argsstring>()</argsstring>
+        <name>LowPass</name>
+        <briefdescription>
+<para>Low Pass Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPass.hpp" line="19" column="1" bodyfile="apps/px4lib/fsw/src/math/LowPass.cpp" bodystart="5" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_low_pass_1a225acb3b994857ab04c3f2912a390049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LowPass::~LowPass</definition>
+        <argsstring>()</argsstring>
+        <name>~LowPass</name>
+        <briefdescription>
+<para>Low Pass Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPass.hpp" line="31" column="1" bodyfile="apps/px4lib/fsw/src/math/LowPass.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_low_pass_1a0311487456bc15034d1ccbe3c7d82993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float LowPass::Update</definition>
+        <argsstring>(float value, float dt, float cutoff)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cutoff</declname>
+        </param>
+        <briefdescription>
+<para>Update Low Pass. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying the input value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying delta time in us </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cutoff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying cutoff frequency </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/LowPass.hpp" line="47" column="1" bodyfile="apps/px4lib/fsw/src/math/LowPass.cpp" bodystart="16" bodyend="40"/>
+        <references refid="class_low_pass_1af36a9b39153ed1912adcb43a8e1190b7" compoundref="_low_pass_8hpp" startline="50">m_Initialized</references>
+        <references refid="_low_pass_8cpp_1ab9c3c609e1d02430671de0a109410ac8" compoundref="_low_pass_8cpp" startline="3">M_PI_F</references>
+        <references refid="class_low_pass_1a5dd4767d06901b2712097c3fa022c835" compoundref="_low_pass_8hpp" startline="53">m_State</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="apps/px4lib/fsw/public_inc/math/LowPass.hpp" line="7" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/LowPass.hpp" bodystart="6" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_low_pass_1a23ab567dbd0e7faba96d2763baac6bc4" prot="public" virt="non-virtual"><scope>LowPass</scope><name>LowPass</name></member>
+      <member refid="class_low_pass_1af36a9b39153ed1912adcb43a8e1190b7" prot="public" virt="non-virtual"><scope>LowPass</scope><name>m_Initialized</name></member>
+      <member refid="class_low_pass_1a5dd4767d06901b2712097c3fa022c835" prot="public" virt="non-virtual"><scope>LowPass</scope><name>m_State</name></member>
+      <member refid="class_low_pass_1a0311487456bc15034d1ccbe3c7d82993" prot="public" virt="non-virtual"><scope>LowPass</scope><name>Update</name></member>
+      <member refid="class_low_pass_1a225acb3b994857ab04c3f2912a390049" prot="public" virt="non-virtual"><scope>LowPass</scope><name>~LowPass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

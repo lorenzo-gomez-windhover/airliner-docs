@@ -1,0 +1,883 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ds__events_8h" kind="file" language="C++">
+    <compoundname>ds_events.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ds__events_8h_1a312585c5452358e31820f048acdbe417" prot="public" static="no">
+        <name>DS_INIT_EID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Application Initialization Event&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Application initialized, version %d.%d.%d.%d, data at 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued if the Data Storage (DS) application successfully completes its initialization.</para><para>The first <computeroutput>%d</computeroutput> field contains the Major Version Number The second <computeroutput>%d</computeroutput> field contains the Minor Version Number The third <computeroutput>%d</computeroutput> field contains the Revision Number The fourth <computeroutput>%d</computeroutput> field contains the Mission Revision Number The <computeroutput>0x%08X</computeroutput> field contains the address of the global data structure (DS_AppData) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="46" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a57b1c7e9f3f3de5dd831d6fa2661990c" prot="public" static="no">
+        <name>DS_INIT_ERR_EID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Application Initialization Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unable to register for EVS services, err = 0x%08X&apos; </computeroutput> </para><para><computeroutput> &apos;Unable to create input pipe, err = 0x%08X&apos; </computeroutput> </para><para><computeroutput> &apos;Unable to subscribe to housekeeping request commands, err = 0x%08X&apos; </computeroutput> </para><para><computeroutput> &apos;Unable to subscribe to 1Hz wakeup commands, err = 0x%08X&apos; </computeroutput> </para><para><computeroutput> &apos;Unable to subscribe to DS commands, err = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the application receives an error while performing cFE initialization. The value displayed is the return code from the function that failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="66" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a981477fadccd70b1c260f12bb631d1d6" prot="public" static="no">
+        <name>DS_EXIT_ERR_EID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Application Termination Event&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Application terminating, err = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CRITICAL</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the application performs a voluntary termination. The termination may be caused by a cFE command requesting the application be terminated - or, the cause may result from the DS application having received an error when invoking a cFE or O/S function necessary for normal operation.</para><para>The value displayed is either zero (if cFE requested the termination) or the return code from the function that failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="87" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a504b1f923cb7a61291116ece57eca8f0" prot="public" static="no">
+        <name>DS_INIT_CDS_ERR_EID</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Critical Data Store Access Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Critical Data Store access error = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The DS application stores the current values for Destination Filename sequence counts in the Critical Data Store (CDS). This ensures that DS will not overwrite old data storage files following a processor reset. This event indicates an error at startup as DS is initializing access to the Critical Data Store. Subsequent CDS errors are ignored by DS. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="105" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a9df007db5ef8cd4d8130177c4d8f3ac7" prot="public" static="no">
+        <name>DS_INIT_TBL_CDS_EID</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Table Restored From CDS&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Destination File Table data restored from CDS&apos; </computeroutput> </para><para><computeroutput> &apos;Filter Table data restored from CDS&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+If configured to make DS tables critical, the DS application will try and recover the table data in use prior to a processor reset. These startup initialization events indicate that the table data has been restored from the Critical Data Store (CDS). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="123" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a1d5b45d38f17b5c52f08b170de0f00db" prot="public" static="no">
+        <name>DS_INIT_TBL_ERR_EID</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Table Create Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unable to register Filter Table: Error = 0x%08X&apos; </computeroutput> </para><para><computeroutput> &apos;Unable to register Destination File Table: Error = 0x%08X&apos; </computeroutput> </para><para><computeroutput> &apos;Unable to load default Destination File Table: Filename = &apos;%s&apos;, Error = 0x%08X&apos; </computeroutput> </para><para><computeroutput> &apos;Unable to load default Filter Table: Filename = &apos;%s&apos;, Error = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+At startup, the DS application must create both a packet filter table and a destination file definition table. After creating the tables, DS must then load default table data for each of the files. If DS is unable to create either table then the application will terminate. If DS is able to create both tables and is then unable to load both tables then DS will operate in a reduced function mode - thus allowing table load error recovery via the cFE Table Services command interface.</para><para>The values displayed indicate the cFE Table Services API function return code and the table filename, if appropriate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="149" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ab47338ee88967f253cb93c53cfa88b34" prot="public" static="no">
+        <name>DS_FIL_TBL_EID</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Destination File Table Validation Results&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Destination file table verify results: desc text = %s, good = %d, bad = %d, unused = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event describes the results of the Destination File Table validation function. The cFE Table Services Manager will call this function autonomously when the default table is loaded at startup and also whenever a table validate command (that targets this table) is processed.</para><para>The event text will indicate the descriptor text verification result (OK or bad), the number of table entries that were verified without error (good), the number of table entries that had one or more errors (bad) and the number of unused table entries (unused). Note that the totals also include the results of the verification test for the table description text. Thus, the sum of good + bad<itemizedlist>
+<listitem><para>unused results will equal the number of table entries plus one. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="173" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1af2cd0c63cb0bf504ace7bac8fa2ee5a5" prot="public" static="no">
+        <name>DS_FIL_TBL_ERR_EID</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Destination File Validation Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Destination file table verify err: invalid descriptor text&apos; </computeroutput> </para><para><computeroutput> &apos;Destination file table verify err: index = %d, invalid pathname text&apos; </computeroutput> </para><para><computeroutput> &apos;Destination file table verify err: index = %d, invalid basename text&apos; </computeroutput> </para><para><computeroutput> &apos;Destination file table verify err: index = %d, invalid extension text&apos; </computeroutput> </para><para><computeroutput> &apos;Destination file table verify err: index = %d, filename type = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Destination file table verify err: index = %d, file enable state = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Destination file table verify err: index = %d, max file size = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Destination file table verify err: index = %d, max file age = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Destination file table verify err: index = %d, sequence count = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+These are the errors that the DS application might encounter when verifying the contents of a Destination File Table. Note that only the first error detected for each table file will result in an event being generated. The remaining entries are still tested to establish the result counters but no further error events will be generated during this call to the verify function.</para><para>The event text will indicate the table index value (where appropriate), the invalid field name and the field value for non-string fields. If a string field is invalid then attempts to display the string could result in other errors. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="204" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ae30b903d37d67fd48aba25eb06dee818" prot="public" static="no">
+        <name>DS_FLT_TBL_EID</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Filter Table Validation Results&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Filter table verify results: desc text = %s, good = %d, bad = %d, unused = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event describes the results of the Packet Filter Table validation function. The cFE Table Services Manager will call this function autonomously when the default table is loaded at startup and also whenever a table validate command (that targets this table) is processed.</para><para>The event text will indicate the descriptor text verification result (OK or bad), the number of table entries that were verified without error (good), the number of table entries that had one or more errors (bad) and the number of unused table entries (unused). Note that the totals also include the results of the verification test for the table description text. Thus, the sum of good + bad<itemizedlist>
+<listitem><para>unused results will equal the number of table entries plus one. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="228" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a09f8d4a3421787c7e2f5e1cd2f1713df" prot="public" static="no">
+        <name>DS_FLT_TBL_ERR_EID</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Filter Table Validation Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Filter table verify err: invalid descriptor text&apos; </computeroutput> </para><para><computeroutput> &apos;Filter table verify err: MID = 0x%04X, index = %d, filter = %d, file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Filter table verify err: MID = 0x%04X, index = %d, filter = %d, filter type = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Filter table verify err: MID = 0x%04X, index = %d, filter = %d, filter parms N = %d, X = %d, O = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+These are the errors that the DS application might encounter when verifying the contents of a Packet Filter Table. Note that only the first error detected for each table file will result in an event being generated. The remaining entries are still tested to establish the result counters but no further error events will be generated during this call to the verify function.</para><para>The event text will indicate the message ID, table index value and filter index value (where appropriate), the field name and the field value for non-string fields. If a string field is invalid then attempts to display the string could result in other errors. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="254" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a2f062fe4abd518f9f36753b74ef13d64" prot="public" static="no">
+        <name>DS_FILE_NAME_ERR_EID</name>
+        <initializer>14</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Filename Create Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;FILE NAME error: dest = %d, path = &apos;%s&apos;, base = &apos;%s&apos;, seq = &apos;%s&apos;, ext = &apos;%s&apos;&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error occurs when an attempt to create a destination filename fails. The expected cause of this error is for the sum of the lengths of each filename element to be invalid, even though each individual element length is valid. Note that each of the individual element strings has been previously verified.</para><para>The event text will indicate the Destination File Table index, the file path string, the file basename string, the filename sequence string and the extension portion of the filename.</para><para>Note that the filename create error handler will also disable the destination to prevent the immediate re-occurrence of the error as more packets are written to this destination. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="280" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a80268c0645eccceb242293b4d4891d7a" prot="public" static="no">
+        <name>DS_CREATE_FILE_ERR_EID</name>
+        <initializer>15</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;File Create Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;FILE CREATE error: result = %d, dest = %d, name = &apos;%s&apos;&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error occurs when an attempt to create a destination file fails. The most common cause of this error is insufficient free space available on the target file system (disk). However, it is possible to specify a filename that is legal but still invalid (i.e. the path string has legal chars but does not exist).</para><para>The event text will indicate the result from the system function call to create the file, the Destination File Table index and the filename.</para><para>Note that the file create error handler will also disable the destination to prevent the immediate re-occurrence of the error as more packets are written to this destination. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="305" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ae191702002c636da16ffa186377f18c5" prot="public" static="no">
+        <name>DS_WRITE_FILE_ERR_EID</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;File Write Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;FILE WRITE error: result = %d, length = %d, dest = %d, name = &apos;%s&apos;&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error occurs when an attempt to write to a destination file fails. The most common cause of this error is insufficient free space available on the target file system (disk). Other causes for this error imply some sort of operational or file system failure and will require careful analysis.</para><para>The event text will indicate the result from the system function call to write to the file, the Destination File Table index and the filename.</para><para>Note that the file write error handler will also close the file and disable the destination to prevent the immediate re-occurrence of the error as more packets are written to this destination. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="330" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a6f59ed740425880457f224123fd37b02" prot="public" static="no">
+        <name>DS_CMD_CODE_ERR_EID</name>
+        <initializer>21</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid packet (command code)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid command code: MID = 0x%04X, CC = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This error occurs when a DS application command is received that has an undefined command code (CC). Ground systems generally prevent these errors so the cause is more likely to result from sending &quot;raw&quot; ground commands or on-board stored commands.</para><para>The event text will indicate the Message ID (MID) and command code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="349" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ac26089a1cfad1eb8ae63ab30b81a8b06" prot="public" static="no">
+        <name>DS_HK_REQUEST_ERR_EID</name>
+        <initializer>22</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Housekeeping request (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid HK request length: expected = %d, actual = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a HK request command. The cause of the failure is an invalid command packet length. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="364" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a7033113e142809dc48a3d73755472950" prot="public" static="no">
+        <name>DS_NOOP_CMD_EID</name>
+        <initializer>31</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;No-op command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;NOOP command, Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of an application NOOP command. The command is used primarily as an indicator that the DS application can receive commands and generate telemetry.</para><para>The first <computeroutput>%d</computeroutput> field contains the Major Version Number The second <computeroutput>%d</computeroutput> field contains the Minor Version Number The third <computeroutput>%d</computeroutput> field contains the Revision Number The fourth <computeroutput>%d</computeroutput> field contains the Mission Revision Number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="385" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a2c6a64ac2e95a6d7cc77bc32fdd9a696" prot="public" static="no">
+        <name>DS_NOOP_CMD_ERR_EID</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;No-op command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid NOOP command length: expected = %d, actual = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a NOOP command. The cause of the failure is an invalid command packet length. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="400" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a68de553f3ecf8c2d2b36eb2dd8795192" prot="public" static="no">
+        <name>DS_RESET_CMD_EID</name>
+        <initializer>33</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Housekeeping Counters command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset counters command&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a RESET housekeeping counters command. The command is used primarily to clear counters that have already been examined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="416" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1aa3de002cc317512541a61a91182553a1" prot="public" static="no">
+        <name>DS_RESET_CMD_ERR_EID</name>
+        <initializer>34</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Housekeeping Counters command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid RESET command length: expected = %d, actual = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a RESET command. The cause of the failure is an invalid command packet length. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="431" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1aa5e1a20b9eb72bfa3843d60d6fe3d2eb" prot="public" static="no">
+        <name>DS_ENADIS_CMD_EID</name>
+        <initializer>35</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Application Enable/Disable State command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;APP STATE command: state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the application enable/disable state for processing data storage packets. The DS application is always enabled to receive and process commands.</para><para>The event text will indicate the new setting for the application enable/disable state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="451" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ab4fed5394d953fc1506c7abd0ea2d7b2" prot="public" static="no">
+        <name>DS_ENADIS_CMD_ERR_EID</name>
+        <initializer>36</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Application Enable/Disable State command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid APP STATE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid APP STATE command arg: app state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the application enable/disable state. The cause of the failure may be an invalid command packet length or an invalid enable/disable state value.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="471" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="471" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1af071d669fd3c7e58a8e6dd662b8b0ed0" prot="public" static="no">
+        <name>DS_FILE_CMD_EID</name>
+        <initializer>37</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filter File Index command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000022"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;FILTER FILE command: MID = 0x%X, index = %d, filter = %d, file = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The Packet Filter Table consists of an array of packet structures, with each element in the array representing one packet message ID.</para><para>Each packet structure contains an array of filter structures, and each filter structure contains a destination file selection. Thus, each packet has multiple filters and each filter selects a file.</para><para>File selections are expressed as an index into the Destination File Table.</para><para>This event signals the successful execution of a command to set the destination file index for a single filter entry in the Packet Filter Table.</para><para>The event text will indicate the packet message ID, the filter table index, the filter array index and the new file table index selection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="500" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ae9caabfcdb3c8973b73bf672572442ac" prot="public" static="no">
+        <name>DS_FILE_CMD_ERR_EID</name>
+        <initializer>38</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filter File Index command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000023"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid FILTER FILE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER FILE command arg: invalid messageID = 0x%04X&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER FILE command arg: filter parameters index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER FILE command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER FILE command: packet filter table is not loaded&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER FILE command: Message ID 0x%04X is not in filter table&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the Destination File Table index for a Packet Filter Table entry. The cause of the failure may be an invalid command packet length, an invalid Message ID or an invalid filter parameters index.</para><para>The failure may also result from not having a Packet Filter Table loaded at the time the command was invoked or because the message ID was not found in the Packet Filter Table.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="528" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a6513997f39a54896719612087682e696" prot="public" static="no">
+        <name>DS_FTYPE_CMD_EID</name>
+        <initializer>39</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filter Type command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000024"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;FILTER TYPE command: MID = 0x%04X, index = %d, filter = %d, type = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The Packet Filter Table consists of an array of packet structures, with each element in the array representing one packet message ID.</para><para>Each packet structure contains an array of filter structures, and each filter structure contains a filter type selection. Thus, each packet has multiple filters and each filter selects a filter type.</para><para>This event signals the successful execution of a command to set the filter type for a single filter entry in the Packet Filter Table.</para><para>The event text will indicate the packet message ID, the filter table index, the filter array index and the new filter type selection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="553" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="553" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a0bcd6a7703ae4b02c95a2b4d7ff7586e" prot="public" static="no">
+        <name>DS_FTYPE_CMD_ERR_EID</name>
+        <initializer>40</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filter Type command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000025"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid FILTER TYPE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER TYPE command arg: invalid messageID = 0x%04X&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER TYPE command arg: filter parameters index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER TYPE command arg: filter type = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER TYPE command: packet filter table is not loaded&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER TYPE command: Message ID 0x%04X is not in filter table&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the filter type for a Packet Filter Table entry. The cause of the failure may be an invalid command packet length, an invalid message ID, an invalid Filter Parameters index or an invalid filter type.</para><para>The failure may also result from not having a Packet Filter Table loaded at the time the command was invoked or because the Message ID was not found in the Packet Filter Table.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="581" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ab224a2228f70f59901f6bb486935d06a" prot="public" static="no">
+        <name>DS_PARMS_CMD_EID</name>
+        <initializer>41</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filter Parameters command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000026"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;FILTER PARMS command: MID = 0x%04X, index = %d, filter = %d, N = %d, X = %d, O = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The Packet Filter Table consists of an array of packet structures, with each element in the array representing one packet message ID.</para><para>Each packet structure contains an array of filter structures, and each filter structure contains a set of filter parameters. Thus, each packet has multiple filters and each filter has unique filter parameters.</para><para>This event signals the successful execution of a command to set the filter parameters for a single filter entry in the Packet Filter Table.</para><para>The event text will indicate the packet message ID, the filter table index, the filter array index and the new filter parameters (N,X,O). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="607" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="607" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ae9459f1089affc5a65f3e4398a423767" prot="public" static="no">
+        <name>DS_PARMS_CMD_ERR_EID</name>
+        <initializer>42</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filter Parameters command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000027"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid FILTER PARMS command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER PARMS command arg: invalid messageID = 0x%04X&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER PARMS command arg: filter parameters index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER PARMS command arg: N = %d, X = %d, O = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER PARMS command: packet filter table is not loaded&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid FILTER PARMS command: Message ID 0x%04X is not in filter table&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the filter parameters for a Packet Filter Table entry. The cause of the failure may be an invalid command packet length, an invalid message ID, an invalid filter parameters index or an invalid filter parameters value (N,X,O).</para><para>The failure may also result from not having a Packet Filter Table loaded at the time the command was invoked or because the Message ID was not found in the Packet Filter Table.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="636" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="636" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a507ab5a6fca0523730b38b2f4fb0cb5f" prot="public" static="no">
+        <name>DS_NTYPE_CMD_EID</name>
+        <initializer>43</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filename Type command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000028"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST TYPE command: file table index = %d, filename type = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the filename type for a Destination File Table entry.</para><para>The event text will indicate the file table index, and the new filename type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="654" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a435723a21f0ffa7c2f084bedb34f8ced" prot="public" static="no">
+        <name>DS_NTYPE_CMD_ERR_EID</name>
+        <initializer>44</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filename Type command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000029"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST TYPE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST TYPE command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST TYPE command arg: filename type = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST TYPE command: destination file table is not loaded&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the filename type for the selected Destination File Table entry. The cause of the failure may be an invalid command packet length, an invalid file table index or an invalid filename type.</para><para>The failure may also result from not having a Destination File Table loaded at the time the command was invoked.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="679" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a46a3084ebf0bd0082e9c52082ff469f7" prot="public" static="no">
+        <name>DS_STATE_CMD_EID</name>
+        <initializer>45</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set File Enable/Disable State command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000030"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST STATE command: file table index = %d, file state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the enable/disable state for a Destination File Table entry.</para><para>The event text will indicate the file table index, and the new file enable/disable state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="697" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="697" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1aefe9110cb3459ba12313176ad3845d43" prot="public" static="no">
+        <name>DS_STATE_CMD_ERR_EID</name>
+        <initializer>46</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set File Enable/Disable State command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000031"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST STATE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST STATE command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST STATE command arg: file state = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST STATE command: destination file table is not loaded&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the enable/disable state for the selected Destination File Table entry. The cause of the failure may be an invalid command packet length, an invalid file table index or an invalid state selection.</para><para>The failure may also result from not having a Destination File Table loaded at the time the command was invoked.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="722" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="722" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ae5566deeadcffe380f5609242099d96b" prot="public" static="no">
+        <name>DS_PATH_CMD_EID</name>
+        <initializer>47</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filename Path command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000032"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST PATH command: file table index = %d, pathname = &apos;%s&apos;&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the path portion of the filename for a Destination File Table entry.</para><para>The event text will indicate the file table index, and the new filename path text. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="740" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="740" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a85c3b54eba56333d4b5a1c3e9ef97e14" prot="public" static="no">
+        <name>DS_PATH_CMD_ERR_EID</name>
+        <initializer>48</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filename Path command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000033"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST PATH command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST PATH command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST PATH command arg: pathname&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST PATH command: destination file table is not loaded&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the filename path text for a Destination File Table entry. The cause of the failure may be an invalid command packet length, an invalid file table index or invalid filename path text.</para><para>The failure may also result from not having a Destination File Table loaded at the time the command was invoked.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="765" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a833b757546220dfd1ca5063c20224c41" prot="public" static="no">
+        <name>DS_BASE_CMD_EID</name>
+        <initializer>49</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set File Basename command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000034"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST BASE command: file table index = %d, base filename = &apos;%s&apos;&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the basename portion of the filename for a Destination File Table entry.</para><para>The event text will indicate the file table index, and the new file basename text. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="783" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="783" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a53ad1a1183b0f95068dae1ee5828a61e" prot="public" static="no">
+        <name>DS_BASE_CMD_ERR_EID</name>
+        <initializer>50</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set File Basename command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000035"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST BASE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST BASE command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST BASE command arg: base filename&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST BASE command: destination file table is not loaded&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the base filename text for a Destination File Table entry. The cause of the failure may be an invalid command packet length, an invalid file table index or invalid base filename text.</para><para>The failure may also result from not having a Destination File Table loaded at the time the command was invoked.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="808" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="808" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a00a26c2f1ac338a2b75143197cf3aa83" prot="public" static="no">
+        <name>DS_EXT_CMD_EID</name>
+        <initializer>51</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filename Extension command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000036"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST EXT command: file table index = %d, extension = &apos;%s&apos;&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the extension portion of the filename for a Destination File Table entry.</para><para>The event text will indicate the file table index, and the new filename extension text. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="826" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="826" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1afc4e2ae866268003bf7fbfd87955bbed" prot="public" static="no">
+        <name>DS_EXT_CMD_ERR_EID</name>
+        <initializer>52</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Filename Extension command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000037"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST EXT command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST EXT command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST EXT command arg: extension&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST EXT command: destination file table is not loaded&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the filename extension text for a Destination File Table entry. The cause of the failure may be an invalid command packet length, an invalid file table index or invalid filename extension text.</para><para>The failure may also result from not having a Destination File Table loaded at the time the command was invoked.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="851" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="851" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a5c88d340fe37dbccd2de043e25bb3078" prot="public" static="no">
+        <name>DS_SIZE_CMD_EID</name>
+        <initializer>53</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Max File Size command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000038"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST SIZE command: file table index = %d, size limit = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the file size limit for a Destination File Table entry.</para><para>The event text will indicate the file table index, and the new file size limit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="869" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="869" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ada0cee8b112ca4d07b1372c05c4382c2" prot="public" static="no">
+        <name>DS_SIZE_CMD_ERR_EID</name>
+        <initializer>54</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Max File Size command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000039"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST SIZE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST SIZE command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST SIZE command arg: size limit = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST SIZE command: destination file table is not loaded&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the file size limit for a Destination File Table entry. The cause of the failure may be an invalid command packet length, an invalid file table index or an invalid file size limit.</para><para>The failure may also result from not having a Destination File Table loaded at the time the command was invoked.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="894" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="894" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a84742178209843518126c6cc209483b4" prot="public" static="no">
+        <name>DS_AGE_CMD_EID</name>
+        <initializer>55</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Max File Age command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000040"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST AGE command: file table index = %d, age limit = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the file age limit for a Destination File Table entry.</para><para>The event text will indicate the file table index, and the new file age limit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="912" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="912" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a41b6adc09fdb42a1aa3235aaccdb0eb2" prot="public" static="no">
+        <name>DS_AGE_CMD_ERR_EID</name>
+        <initializer>56</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Max File Age command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000041"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST AGE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST AGE command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST AGE command arg: age limit = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST AGE command: destination file table is not loaded&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the file age limit for a Destination File Table entry. The cause of the failure may be an invalid command packet length, an invalid file table index or an invalid file age limit.</para><para>The failure may also result from not having a Destination File Table loaded at the time the command was invoked.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="937" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="937" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ae268824c35751ca8152a0758c25a1fe3" prot="public" static="no">
+        <name>DS_SEQ_CMD_EID</name>
+        <initializer>57</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Sequence Count command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000042"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST COUNT command: file table index = %d, sequence count = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to set the sequence count for a Destination File Table entry.</para><para>The event text will indicate the file table index, and the new sequence count. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="955" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="955" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1aee9e22a37e28a67b3222cb3e3362ee34" prot="public" static="no">
+        <name>DS_SEQ_CMD_ERR_EID</name>
+        <initializer>58</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Sequence Count command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000043"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST COUNT command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST COUNT command arg: file table index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST COUNT command arg: sequence count = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST COUNT command: destination file table is not loaded&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to set the sequence count for a Destination File Table entry. The cause of the failure may be an invalid command packet length, an invalid file table index or an invalid sequence count.</para><para>The failure may also result from not having a Destination File Table loaded at the time the command was invoked.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="980" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="980" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1ac63ec4ce65125f011cb8b7db75d3b9cb" prot="public" static="no">
+        <name>DS_CLOSE_CMD_EID</name>
+        <initializer>59</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Close Destination File command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000044"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST CLOSE command: file table index = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to close the selected Destination File.</para><para>This command will succeed if the file table index is valid, regardless of whether there was an open file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="998" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="998" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a501ca586d026db86f40913434f485b14" prot="public" static="no">
+        <name>DS_CLOSE_CMD_ERR_EID</name>
+        <initializer>60</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Close Destination File command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000045"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST CLOSE command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid DEST CLOSE command arg: file table index = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to close the selected Destination File. The cause of the failure may be an invalid command packet length or an invalid file table index.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="1017" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="1017" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a42f0aa49f00a1dd122775f2356f1f5ef" prot="public" static="no">
+        <name>DS_MOVE_FILE_ERR_EID</name>
+        <initializer>61</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;File Move Error&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000046"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;FILE MOVE error: dir name = &apos;%s&apos;, filename = &apos;%s&apos;&apos; </computeroutput> </para><para><computeroutput> &apos;FILE MOVE error: src = &apos;%s&apos;, tgt = &apos;%s&apos;, result = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed attempt to move a Data Storage file from the temporary working directory it was created in, to the directory specified in the file definition table. The cause of the failure may be an invalid combined directory and filename length or the system file move function may have returned an error result.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="1038" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="1038" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a30b2a6d4b41a235636efb1bbb4508cd0" prot="public" static="no">
+        <name>DS_GET_FILE_INFO_CMD_EID</name>
+        <initializer>62</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Get File Info command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000047"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;GET FILE INFO command&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to get the file info diagnostic packet.</para><para>This command will succeed even if the selected file does not exist. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="1055" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="1055" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a65cd87d27edf46f76c021a0fd4055eee" prot="public" static="no">
+        <name>DS_GET_FILE_INFO_CMD_ERR_EID</name>
+        <initializer>63</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Get File Info command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000048"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid GET FILE INFO command length: expected = %d, actual = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to get the file info diagnostic packet. The cause of the failure is an invalid command packet length.</para><para>The event text will indicate the expected and actual packet size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="1073" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="1073" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a9fd17c836d1ddedec911134c888f14e4" prot="public" static="no">
+        <name>DS_ADD_MID_CMD_EID</name>
+        <initializer>64</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Add Message ID to Filter Table command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000049"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ADD MID command: MID = 0x%04X, index = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to add a new message ID to the Packet Filter Table.</para><para>The Packet Filter Table must be loaded and have an unused entry available for adding the new message ID. The new message ID must not be zero and must not already exist in the table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="1092" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="1092" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1af727c0ed96244a3db5ac9d681ae33db4" prot="public" static="no">
+        <name>DS_ADD_MID_CMD_ERR_EID</name>
+        <initializer>65</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Add Message ID to Filter Table command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000050"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid ADD MID command length: expected = %d, actual = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid ADD MID command arg: invalid MID = 0x%4X&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid ADD MID command: filter table is not loaded&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid ADD MID command: MID = 0x%4X is already in filter table at index = %d&apos; </computeroutput> </para><para><computeroutput> &apos;Invalid ADD MID command: filter table is full&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to add a new message ID to the Packet Filter Table. The cause of the failure may be an invalid command packet length or an invalid message ID.</para><para>The failure may also result from not having a Packet Filter Table loaded at the time the command was invoked. The loaded table must have an unused entry available for the new message ID and must not already contain the new message ID.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="1119" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="1119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1adcebc8482e782984f0219ce87cc5ec70" prot="public" static="no">
+        <name>DS_CLOSE_ALL_CMD_EID</name>
+        <initializer>66</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Close All Destination Files command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000051"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DEST CLOSE ALL command&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the successful execution of a command to close all open Destination Files.</para><para>This command will succeed regardless of whether there was an open file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="1136" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="1136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ds__events_8h_1a95074ed829651840fe6b0db5e0fd2fef" prot="public" static="no">
+        <name>DS_CLOSE_ALL_CMD_ERR_EID</name>
+        <initializer>67</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Close All Destination Files command (error)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000052"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid DEST CLOSE ALL command length: expected = %d, actual = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event signals the failed execution of a command to close all open Destination Files. The cause of the failure can only be an invalid command packet length.</para><para>The event text will indicate the cause of the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_events.h" line="1154" column="9" bodyfile="apps/ds/fsw/src/ds_events.h" bodystart="1154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>ds_events.h<sp/>1.3<sp/>2017/01/25<sp/>12:05:35EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/>The<sp/>CFS<sp/>Data<sp/>Storage<sp/>(DS)<sp/>Application<sp/>event<sp/>id<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ds_events_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ds_events_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Macro<sp/>definitions</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="ds__events_8h_1a312585c5452358e31820f048acdbe417" refkind="member"><highlight class="preprocessor">#define<sp/>DS_INIT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="ds__events_8h_1a57b1c7e9f3f3de5dd831d6fa2661990c" refkind="member"><highlight class="preprocessor">#define<sp/>DS_INIT_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="ds__events_8h_1a981477fadccd70b1c260f12bb631d1d6" refkind="member"><highlight class="preprocessor">#define<sp/>DS_EXIT_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="ds__events_8h_1a504b1f923cb7a61291116ece57eca8f0" refkind="member"><highlight class="preprocessor">#define<sp/>DS_INIT_CDS_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="ds__events_8h_1a9df007db5ef8cd4d8130177c4d8f3ac7" refkind="member"><highlight class="preprocessor">#define<sp/>DS_INIT_TBL_CDS_EID<sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="ds__events_8h_1a1d5b45d38f17b5c52f08b170de0f00db" refkind="member"><highlight class="preprocessor">#define<sp/>DS_INIT_TBL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="ds__events_8h_1ab47338ee88967f253cb93c53cfa88b34" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FIL_TBL_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="ds__events_8h_1af2cd0c63cb0bf504ace7bac8fa2ee5a5" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FIL_TBL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="ds__events_8h_1ae30b903d37d67fd48aba25eb06dee818" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FLT_TBL_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="ds__events_8h_1a09f8d4a3421787c7e2f5e1cd2f1713df" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FLT_TBL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="ds__events_8h_1a2f062fe4abd518f9f36753b74ef13d64" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FILE_NAME_ERR_EID<sp/><sp/><sp/><sp/><sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="ds__events_8h_1a80268c0645eccceb242293b4d4891d7a" refkind="member"><highlight class="preprocessor">#define<sp/>DS_CREATE_FILE_ERR_EID<sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330" refid="ds__events_8h_1ae191702002c636da16ffa186377f18c5" refkind="member"><highlight class="preprocessor">#define<sp/>DS_WRITE_FILE_ERR_EID<sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349" refid="ds__events_8h_1a6f59ed740425880457f224123fd37b02" refkind="member"><highlight class="preprocessor">#define<sp/>DS_CMD_CODE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364" refid="ds__events_8h_1ac26089a1cfad1eb8ae63ab30b81a8b06" refkind="member"><highlight class="preprocessor">#define<sp/>DS_HK_REQUEST_ERR_EID<sp/><sp/><sp/><sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385" refid="ds__events_8h_1a7033113e142809dc48a3d73755472950" refkind="member"><highlight class="preprocessor">#define<sp/>DS_NOOP_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400" refid="ds__events_8h_1a2c6a64ac2e95a6d7cc77bc32fdd9a696" refkind="member"><highlight class="preprocessor">#define<sp/>DS_NOOP_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416" refid="ds__events_8h_1a68de553f3ecf8c2d2b36eb2dd8795192" refkind="member"><highlight class="preprocessor">#define<sp/>DS_RESET_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431" refid="ds__events_8h_1aa3de002cc317512541a61a91182553a1" refkind="member"><highlight class="preprocessor">#define<sp/>DS_RESET_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/>34</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451" refid="ds__events_8h_1aa5e1a20b9eb72bfa3843d60d6fe3d2eb" refkind="member"><highlight class="preprocessor">#define<sp/>DS_ENADIS_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>35</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="471" refid="ds__events_8h_1ab4fed5394d953fc1506c7abd0ea2d7b2" refkind="member"><highlight class="preprocessor">#define<sp/>DS_ENADIS_CMD_ERR_EID<sp/><sp/><sp/><sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="500" refid="ds__events_8h_1af071d669fd3c7e58a8e6dd662b8b0ed0" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FILE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>37</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528" refid="ds__events_8h_1ae9caabfcdb3c8973b73bf672572442ac" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FILE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553" refid="ds__events_8h_1a6513997f39a54896719612087682e696" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FTYPE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>39</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight></codeline>
+<codeline lineno="581" refid="ds__events_8h_1a0bcd6a7703ae4b02c95a2b4d7ff7586e" refkind="member"><highlight class="preprocessor">#define<sp/>DS_FTYPE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight></codeline>
+<codeline lineno="583"><highlight class="normal"></highlight></codeline>
+<codeline lineno="607" refid="ds__events_8h_1ab224a2228f70f59901f6bb486935d06a" refkind="member"><highlight class="preprocessor">#define<sp/>DS_PARMS_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="636" refid="ds__events_8h_1ae9459f1089affc5a65f3e4398a423767" refkind="member"><highlight class="preprocessor">#define<sp/>DS_PARMS_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal"></highlight></codeline>
+<codeline lineno="638"><highlight class="normal"></highlight></codeline>
+<codeline lineno="654" refid="ds__events_8h_1a507ab5a6fca0523730b38b2f4fb0cb5f" refkind="member"><highlight class="preprocessor">#define<sp/>DS_NTYPE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"></highlight></codeline>
+<codeline lineno="679" refid="ds__events_8h_1a435723a21f0ffa7c2f084bedb34f8ced" refkind="member"><highlight class="preprocessor">#define<sp/>DS_NTYPE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/>44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="697" refid="ds__events_8h_1a46a3084ebf0bd0082e9c52082ff469f7" refkind="member"><highlight class="preprocessor">#define<sp/>DS_STATE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>45</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight></codeline>
+<codeline lineno="722" refid="ds__events_8h_1aefe9110cb3459ba12313176ad3845d43" refkind="member"><highlight class="preprocessor">#define<sp/>DS_STATE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/>46</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="723"><highlight class="normal"></highlight></codeline>
+<codeline lineno="724"><highlight class="normal"></highlight></codeline>
+<codeline lineno="740" refid="ds__events_8h_1ae5566deeadcffe380f5609242099d96b" refkind="member"><highlight class="preprocessor">#define<sp/>DS_PATH_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>47</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight></codeline>
+<codeline lineno="742"><highlight class="normal"></highlight></codeline>
+<codeline lineno="765" refid="ds__events_8h_1a85c3b54eba56333d4b5a1c3e9ef97e14" refkind="member"><highlight class="preprocessor">#define<sp/>DS_PATH_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="766"><highlight class="normal"></highlight></codeline>
+<codeline lineno="767"><highlight class="normal"></highlight></codeline>
+<codeline lineno="783" refid="ds__events_8h_1a833b757546220dfd1ca5063c20224c41" refkind="member"><highlight class="preprocessor">#define<sp/>DS_BASE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>49</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="784"><highlight class="normal"></highlight></codeline>
+<codeline lineno="785"><highlight class="normal"></highlight></codeline>
+<codeline lineno="808" refid="ds__events_8h_1a53ad1a1183b0f95068dae1ee5828a61e" refkind="member"><highlight class="preprocessor">#define<sp/>DS_BASE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="809"><highlight class="normal"></highlight></codeline>
+<codeline lineno="810"><highlight class="normal"></highlight></codeline>
+<codeline lineno="826" refid="ds__events_8h_1a00a26c2f1ac338a2b75143197cf3aa83" refkind="member"><highlight class="preprocessor">#define<sp/>DS_EXT_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>51</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="827"><highlight class="normal"></highlight></codeline>
+<codeline lineno="828"><highlight class="normal"></highlight></codeline>
+<codeline lineno="851" refid="ds__events_8h_1afc4e2ae866268003bf7fbfd87955bbed" refkind="member"><highlight class="preprocessor">#define<sp/>DS_EXT_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>52</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="852"><highlight class="normal"></highlight></codeline>
+<codeline lineno="853"><highlight class="normal"></highlight></codeline>
+<codeline lineno="869" refid="ds__events_8h_1a5c88d340fe37dbccd2de043e25bb3078" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SIZE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>53</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="870"><highlight class="normal"></highlight></codeline>
+<codeline lineno="871"><highlight class="normal"></highlight></codeline>
+<codeline lineno="894" refid="ds__events_8h_1ada0cee8b112ca4d07b1372c05c4382c2" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SIZE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>54</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="895"><highlight class="normal"></highlight></codeline>
+<codeline lineno="896"><highlight class="normal"></highlight></codeline>
+<codeline lineno="912" refid="ds__events_8h_1a84742178209843518126c6cc209483b4" refkind="member"><highlight class="preprocessor">#define<sp/>DS_AGE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>55</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="913"><highlight class="normal"></highlight></codeline>
+<codeline lineno="914"><highlight class="normal"></highlight></codeline>
+<codeline lineno="937" refid="ds__events_8h_1a41b6adc09fdb42a1aa3235aaccdb0eb2" refkind="member"><highlight class="preprocessor">#define<sp/>DS_AGE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>56</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="938"><highlight class="normal"></highlight></codeline>
+<codeline lineno="939"><highlight class="normal"></highlight></codeline>
+<codeline lineno="955" refid="ds__events_8h_1ae268824c35751ca8152a0758c25a1fe3" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SEQ_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>57</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="956"><highlight class="normal"></highlight></codeline>
+<codeline lineno="957"><highlight class="normal"></highlight></codeline>
+<codeline lineno="980" refid="ds__events_8h_1aee9e22a37e28a67b3222cb3e3362ee34" refkind="member"><highlight class="preprocessor">#define<sp/>DS_SEQ_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>58</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="981"><highlight class="normal"></highlight></codeline>
+<codeline lineno="982"><highlight class="normal"></highlight></codeline>
+<codeline lineno="998" refid="ds__events_8h_1ac63ec4ce65125f011cb8b7db75d3b9cb" refkind="member"><highlight class="preprocessor">#define<sp/>DS_CLOSE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>59</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="999"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1000"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1017" refid="ds__events_8h_1a501ca586d026db86f40913434f485b14" refkind="member"><highlight class="preprocessor">#define<sp/>DS_CLOSE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/>60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1018"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1019"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1038" refid="ds__events_8h_1a42f0aa49f00a1dd122775f2356f1f5ef" refkind="member"><highlight class="preprocessor">#define<sp/>DS_MOVE_FILE_ERR_EID<sp/><sp/><sp/><sp/><sp/>61</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1039"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1040"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1055" refid="ds__events_8h_1a30b2a6d4b41a235636efb1bbb4508cd0" refkind="member"><highlight class="preprocessor">#define<sp/>DS_GET_FILE_INFO_CMD_EID<sp/>62</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1056"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1057"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1073" refid="ds__events_8h_1a65cd87d27edf46f76c021a0fd4055eee" refkind="member"><highlight class="preprocessor">#define<sp/>DS_GET_FILE_INFO_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/>63</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1074"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1075"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1092" refid="ds__events_8h_1a9fd17c836d1ddedec911134c888f14e4" refkind="member"><highlight class="preprocessor">#define<sp/>DS_ADD_MID_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1093"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1094"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1119" refid="ds__events_8h_1af727c0ed96244a3db5ac9d681ae33db4" refkind="member"><highlight class="preprocessor">#define<sp/>DS_ADD_MID_CMD_ERR_EID<sp/><sp/><sp/>65</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1136" refid="ds__events_8h_1adcebc8482e782984f0219ce87cc5ec70" refkind="member"><highlight class="preprocessor">#define<sp/>DS_CLOSE_ALL_CMD_EID<sp/><sp/><sp/><sp/><sp/>66</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1154" refid="ds__events_8h_1a95074ed829651840fe6b0db5e0fd2fef" refkind="member"><highlight class="preprocessor">#define<sp/>DS_CLOSE_ALL_CMD_ERR_EID<sp/>67</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_ds_events_h_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1159"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1160"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1161"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/ds/fsw/src/ds_events.h"/>
+  </compounddef>
+</doxygen>

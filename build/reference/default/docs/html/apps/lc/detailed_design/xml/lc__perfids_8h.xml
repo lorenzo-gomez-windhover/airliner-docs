@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="lc__perfids_8h" kind="file" language="C++">
+    <compoundname>lc_perfids.h</compoundname>
+    <includedby refid="lc__app_8c" local="yes">apps/lc/fsw/src/lc_app.c</includedby>
+    <includedby refid="lc__watch_8c" local="yes">apps/lc/fsw/src/lc_watch.c</includedby>
+    <invincdepgraph>
+      <node id="406">
+        <label>apps/lc/fsw/mission_inc/lc_perfids.h</label>
+        <link refid="lc_perfids.h"/>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="408" relation="include">
+        </childnode>
+      </node>
+      <node id="408">
+        <label>apps/lc/fsw/src/lc_watch.c</label>
+        <link refid="lc__watch_8c"/>
+      </node>
+      <node id="407">
+        <label>apps/lc/fsw/src/lc_app.c</label>
+        <link refid="lc__app_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>CFS LC Application Performance IDs</header>
+      <memberdef kind="define" id="lc__perfids_8h_1a9fe41503eb97ddc5363c35206119156a" prot="public" static="no">
+        <name>LC_APPMAIN_PERF_ID</name>
+        <initializer>28</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/mission_inc/lc_perfids.h" line="30" column="9" bodyfile="apps/lc/fsw/mission_inc/lc_perfids.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a259fd13a6f04a6c8e129e02c162434f8" compoundref="lc__app_8c" startline="49" endline="162">LC_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__perfids_8h_1ad8121b157e682f69e643e17033d36e2c" prot="public" static="no">
+        <name>LC_WDT_SEARCH_PERF_ID</name>
+        <initializer>43</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/mission_inc/lc_perfids.h" line="31" column="9" bodyfile="apps/lc/fsw/mission_inc/lc_perfids.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1ab440c20ea75c8b3f418b52abc8da8e23" compoundref="lc__watch_8c" startline="246" endline="323">LC_CheckMsgForWPs</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>lc_perfids.h<sp/>1.3<sp/>2017/01/22<sp/>17:24:45EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>Limit<sp/>Checker<sp/>(LC)<sp/>Application<sp/>Performance<sp/>IDs</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_lc_perfids_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_lc_perfids_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Macro<sp/>Definitions</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*************************************************************************/</highlight></codeline>
+<codeline lineno="30" refid="lc__perfids_8h_1a9fe41503eb97ddc5363c35206119156a" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APPMAIN_PERF_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="lc__perfids_8h_1ad8121b157e682f69e643e17033d36e2c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LC_WDT_SEARCH_PERF_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_lc_perfids_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/lc/fsw/mission_inc/lc_perfids.h"/>
+  </compounddef>
+</doxygen>

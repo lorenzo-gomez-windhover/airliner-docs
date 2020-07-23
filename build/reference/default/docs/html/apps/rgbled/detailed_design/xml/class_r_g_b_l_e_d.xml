@@ -1,0 +1,613 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_r_g_b_l_e_d" kind="class" language="C++" prot="public">
+    <compoundname>RGBLED</compoundname>
+    <includes refid="rgbled__app_8h" local="no">rgbled_app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_r_g_b_l_e_d_1a28d6bcec717f946b059942fed2f43190" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t RGBLED::SchPipeId</definition>
+        <argsstring></argsstring>
+        <name>SchPipeId</name>
+        <briefdescription>
+<para>Scheduling Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="123" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.h" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">InitPipe</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1af25c02841d902690c5747e562fae0d4b" compoundref="rgbled__app_8cpp" startline="291" endline="433">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_l_e_d_1ab1f8921cdec2b54d749937cf09a00324" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t RGBLED::CmdPipeId</definition>
+        <argsstring></argsstring>
+        <name>CmdPipeId</name>
+        <briefdescription>
+<para>Command Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="126" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">InitPipe</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1a89b38fe559c8d45b0edfbb86c8c665e8" compoundref="rgbled__app_8cpp" startline="441" endline="485">ProcessCmdPipe</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_l_e_d_1ae02296d6663183ee4fffebf23a06bd1a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 RGBLED::uiRunStatus</definition>
+        <argsstring></argsstring>
+        <name>uiRunStatus</name>
+        <briefdescription>
+<para>Task Run Status. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="130" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1ac7683cfbb98406e008a926471ff65e26" compoundref="rgbled__app_8cpp" startline="615" endline="658">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_l_e_d_1ac86516668a2f370726f9259599b04fcf" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 RGBLED::previousState</definition>
+        <argsstring></argsstring>
+        <name>previousState</name>
+        <briefdescription>
+<para>The previous state of the app. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="133" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1ac25b8e9f4ebaf107dca9bc995d5586da" compoundref="rgbled__app_8cpp" startline="493" endline="552">ProcessAppCmds</referencedby>
+        <referencedby refid="rgbled__events_8h_1a14c260dbc7d6ef137f5ec735b99f66a9" compoundref="rgbled__app_8cpp" startline="665" endline="668">RGBLED_SelfTest_Complete</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_g_b_l_e_d___hk_tlm__t" kindref="compound">RGBLED_HkTlm_t</ref></type>
+        <definition>RGBLED_HkTlm_t RGBLED::HkTlm</definition>
+        <argsstring></argsstring>
+        <name>HkTlm</name>
+        <briefdescription>
+<para>Housekeeping Telemetry for downlink. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="136" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.h" bodystart="136" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1a64c3e61589abfda7469c66f108045998" compoundref="rgbled__app_8cpp" startline="221" endline="283">InitApp</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1ab516f30bd006ed8c7dd3aad13f343eaf" compoundref="rgbled__app_8cpp" startline="205" endline="214">InitData</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1ac25b8e9f4ebaf107dca9bc995d5586da" compoundref="rgbled__app_8cpp" startline="493" endline="552">ProcessAppCmds</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1a89b38fe559c8d45b0edfbb86c8c665e8" compoundref="rgbled__app_8cpp" startline="441" endline="485">ProcessCmdPipe</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1af25c02841d902690c5747e562fae0d4b" compoundref="rgbled__app_8cpp" startline="291" endline="433">RcvSchPipeMsg</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1ae55c0c53aadc9c683b5084c036fb031c" compoundref="rgbled__app_8cpp" startline="559" endline="564">ReportHousekeeping</referencedby>
+        <referencedby refid="rgbled__events_8h_1a14c260dbc7d6ef137f5ec735b99f66a9" compoundref="rgbled__app_8cpp" startline="665" endline="668">RGBLED_SelfTest_Complete</referencedby>
+        <referencedby refid="class_r_g_b_l_e_d_1aa4bda7f678b3fa0e28d976c3eb32c21e" compoundref="rgbled__app_8cpp" startline="571" endline="596">VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_l_e_d_1adc315f489968b33ea86c7674bf41e705" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_g_b_l_e_d___current_value_table__t" kindref="compound">RGBLED_CurrentValueTable_t</ref></type>
+        <definition>RGBLED_CurrentValueTable_t RGBLED::CVT</definition>
+        <argsstring></argsstring>
+        <name>CVT</name>
+        <briefdescription>
+<para>Current Value Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="139" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="class_r_g_b_l_e_d_1af25c02841d902690c5747e562fae0d4b" compoundref="rgbled__app_8cpp" startline="291" endline="433">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1a99cdcb4ed4646d5418728f00870f7a45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RGBLED::RGBLED</definition>
+        <argsstring>()</argsstring>
+        <name>RGBLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="119" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1a8fa577daef9bd5e93e609f355c78d7aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RGBLED::~RGBLED</definition>
+        <argsstring>()</argsstring>
+        <name>~RGBLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="120" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1ac7683cfbb98406e008a926471ff65e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RGBLED::AppMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> Control (<ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref>) application entry point. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para><ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> Control Task application entry point. This function performs app initialization, then waits for the cFE ES Startup Sync, then executes the main processing loop.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>If there is an unrecoverable failure during initialization the main loop is never executed and the application will exit. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="154" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="615" bodyend="658"/>
+        <references refid="cfe__es_8h_1abeabe0f94cccfa5bfcfc2f43796da8d1">CFE_ES_APP_ERROR</references>
+        <references refid="cfe__es_8h_1a033dfcc82849cfb9a474a2cece5c9803">CFE_ES_APP_RUN</references>
+        <references refid="cfe__es__api_8c_1ad5d888f9bca5038624a04d04efce8325">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es__api_8c_1a426ef8e1796ccebba16c63c8e86fb842">CFE_ES_RegisterApp</references>
+        <references refid="cfe__es__api_8c_1ae8598bcba38a594d1c868924999da953">CFE_ES_RunLoop</references>
+        <references refid="cfe__es__api_8c_1a7dc343ea775a0e5773ecdf700581d548">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_r_g_b_l_e_d_1a64c3e61589abfda7469c66f108045998" compoundref="rgbled__app_8cpp" startline="221" endline="283">InitApp</references>
+        <references refid="class_r_g_b_l_e_d_1af25c02841d902690c5747e562fae0d4b" compoundref="rgbled__app_8cpp" startline="291" endline="433">RcvSchPipeMsg</references>
+        <references refid="rgbled__perfids_8h_1ae4829f297393541f7b432e2835ebdb7c" compoundref="rgbled__perfids_8h" startline="8">RGBLED_MAIN_TASK_PERF_ID</references>
+        <references refid="rgbled__platform__cfg_8h_1ab6db7ef183a047f0a7481fd73c24c45c" compoundref="rgbled__platform__cfg_8h" startline="53">RGBLED_SCH_PIPE_PEND_TIME</references>
+        <references refid="rgbled__platform__cfg_8h_1a1aba06a2b77979522d5a85e0cf91935e" compoundref="rgbled__platform__cfg_8h" startline="114">RGBLED_STARTUP_TIMEOUT_MSEC</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="class_r_g_b_l_e_d_1ae02296d6663183ee4fffebf23a06bd1a" compoundref="rgbled__app_8h" startline="130">uiRunStatus</references>
+        <referencedby refid="rgbled__app_8cpp_1abc7c3923508535bcee9f62c52da76127" compoundref="rgbled__app_8cpp" startline="604" endline="607">RGBLED_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1a64c3e61589abfda7469c66f108045998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 RGBLED::InitApp</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitApp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> Control (<ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref>) application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para><ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> Control application initialization routine. This function performs all the required startup steps to initialize (or restore from CDS) <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> data structures and get the application registered with the cFE services so it can begin to receive command messages and send events.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="7" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__es_8h_1a426ef8e1796ccebba16c63c8e86fb842" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterApp</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #RGBLED_InitEvent  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #RGBLED_InitPipe  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #RGBLED_InitData  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #RGBLED_InitConfigTbl  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_TaskInstallDeleteHandler</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="180" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="221" bodyend="283"/>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" compoundref="rgbled__app_8h" startline="136">HkTlm</references>
+        <references refid="class_r_g_b_l_e_d_1ab516f30bd006ed8c7dd3aad13f343eaf" compoundref="rgbled__app_8cpp" startline="205" endline="214">InitData</references>
+        <references refid="class_r_g_b_l_e_d_1a0e294f847f0d0175eb4bbb807b3c7deb" compoundref="rgbled__app_8cpp" startline="77" endline="119">InitEvent</references>
+        <references refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" compoundref="rgbled__app_8cpp" startline="127" endline="198">InitPipe</references>
+        <references refid="osapi-os-core_8h_1a0de425c8dba312f44cf8803a69e7ca5e">OS_TaskInstallDeleteHandler</references>
+        <references refid="rgbled__app_8cpp_1a22c2dd9575353d0be700429a7dcab68b" compoundref="rgbled__app_8cpp" startline="675" endline="678">RGBLED_CleanupCallback</references>
+        <references refid="rgbled__custom_8h_1a4018edcc4b3e277e59801ded6ab64254">RGBLED_Custom_Init</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76aa08ccf8ecb2bd719577e2042ae49fde9" compoundref="rgbled__events_8h" startline="219">RGBLED_INIT_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a7b68323ea15acd7056b30980ef1dea02" compoundref="rgbled__events_8h" startline="75">RGBLED_INIT_INF_EID</references>
+        <references refid="rgbled__app_8h_1a3267ea73a2632055ca364285e8942c52a71b35b19697e1ffa3e3361259811eb81" compoundref="rgbled__app_8h" startline="65">RGBLED_INITIALIZED</references>
+        <references refid="rgbled__version_8h_1acd7ebb2ade6ce83816f7f2ba5e776b04" compoundref="rgbled__version_8h" startline="53">RGBLED_MAJOR_VERSION</references>
+        <references refid="rgbled__version_8h_1a0f0b2b66c40574e5e7f983819526663c" compoundref="rgbled__version_8h" startline="67">RGBLED_MINOR_VERSION</references>
+        <references refid="rgbled__platform__cfg_8h_1abfd1f88cb8b1c5d2e7eff00e04af8961" compoundref="rgbled__platform__cfg_8h" startline="29">RGBLED_MISSION_REV</references>
+        <references refid="rgbled__version_8h_1ac9d727926c9b8f3d798c27bf27e304a5" compoundref="rgbled__version_8h" startline="81">RGBLED_REVISION</references>
+        <references refid="struct_r_g_b_l_e_d___hk_tlm__t_1a8db0908110cf6b988fbfa9c3453d964f" compoundref="rgbled__msg_8h" startline="187">RGBLED_HkTlm_t::State</references>
+        <referencedby refid="class_r_g_b_l_e_d_1ac7683cfbb98406e008a926471ff65e26" compoundref="rgbled__app_8cpp" startline="615" endline="658">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1a0e294f847f0d0175eb4bbb807b3c7deb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 RGBLED::InitEvent</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitEvent</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Event Services and Event tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup cFE Event Services for use by the <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="198" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="77" bodyend="119"/>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1a9c74cb368c56aff83d050a4807132460">CFE_EVS_BINARY_FILTER</references>
+        <references refid="cfe__evs_8h_1a26a77de85eafef643d4dcbfdf7b77422">CFE_EVS_NO_FILTER</references>
+        <references refid="cfe__evs_8c_1a991c19d964b501bf0908bb60812fda28">CFE_EVS_Register</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1a41a96a173a28d042e012dce9bebf793e">CFE_EVS_BinFilter_t::EventID</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1ab9881e02d2317fe2205379a25bc679b2">CFE_EVS_BinFilter_t::Mask</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a7581b0723326e87c8767c40b7022c6d1" compoundref="rgbled__events_8h" startline="176">RGBLED_CC_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a764f73ef3843a308de01b8afb6536c1a" compoundref="rgbled__events_8h" startline="206">RGBLED_CMD_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76ab712ba42afb8c8d41b164e8682daa5b5" compoundref="rgbled__events_8h" startline="98">RGBLED_CMD_NOOP_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76aa08ccf8ecb2bd719577e2042ae49fde9" compoundref="rgbled__events_8h" startline="219">RGBLED_INIT_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a7b68323ea15acd7056b30980ef1dea02" compoundref="rgbled__events_8h" startline="75">RGBLED_INIT_INF_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a543c65b5604138e9c445a8c4d0cc46fa" compoundref="rgbled__events_8h" startline="162">RGBLED_MSGID_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76ab3e5568d4c9adfaf5138c79bf279c1b2" compoundref="rgbled__events_8h" startline="193">RGBLED_MSGLEN_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a2604787071b0278222707b339bc24001" compoundref="rgbled__events_8h" startline="131">RGBLED_PIPE_INIT_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76ae00db5517353ae6305c4d97dad52b9e2" compoundref="rgbled__events_8h" startline="147">RGBLED_RCVMSG_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a9a4980efcc47863737e19ee2e8f95517" compoundref="rgbled__events_8h" startline="54">RGBLED_RESERVED_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76afa8265f6e30f4899d04d3f5a45f497f7" compoundref="rgbled__events_8h" startline="115">RGBLED_SUBSCRIBE_ERR_EID</references>
+        <referencedby refid="class_r_g_b_l_e_d_1a64c3e61589abfda7469c66f108045998" compoundref="rgbled__app_8cpp" startline="221" endline="283">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1ab516f30bd006ed8c7dd3aad13f343eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RGBLED::InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global variables used by <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to initialize the <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> application data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="211" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="205" bodyend="214"/>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0">CFE_SB_InitMsg</references>
+        <references refid="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" compoundref="rgbled__app_8h" startline="136">HkTlm</references>
+        <references refid="rgbled__custom_8h_1aa224ab0521d9fa5de21f3a7b2f7c6f4c">RGBLED_Custom_InitData</references>
+        <references refid="rgbled__msgids_8h_1ad7ba8833408de67acf7c89b7c9a73720" compoundref="rgbled__msgids_8h" startline="7">RGBLED_HK_TLM_MID</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_r_g_b_l_e_d_1a64c3e61589abfda7469c66f108045998" compoundref="rgbled__app_8cpp" startline="221" endline="283">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 RGBLED::InitPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize message pipes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup initialize the cFE Software Bus message pipes and subscribe to messages for the <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a5939c3681044a3d953d0fe72dd577889" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_SubscribeEx</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="232" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="127" bodyend="198"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2">CFE_SB_CreatePipe</references>
+        <references refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5">CFE_SB_Default_Qos</references>
+        <references refid="cfe__sb_8h_1afc2c2db1a504f544b430f33f28be769b">CFE_SB_Subscribe</references>
+        <references refid="cfe__sb_8h_1a5939c3681044a3d953d0fe72dd577889">CFE_SB_SubscribeEx</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_r_g_b_l_e_d_1ab1f8921cdec2b54d749937cf09a00324" compoundref="rgbled__app_8h" startline="126">CmdPipeId</references>
+        <references refid="rgbled__msgids_8h_1a3b3f778352cf1097d693fc64b39d0a11" compoundref="rgbled__msgids_8h" startline="4">RGBLED_CMD_MID</references>
+        <references refid="rgbled__platform__cfg_8h_1a9fa7dec79d31256407db757f2c95034f" compoundref="rgbled__platform__cfg_8h" startline="78">RGBLED_CMD_PIPE_DEPTH</references>
+        <references refid="rgbled__platform__cfg_8h_1a8742f7626725cdd8bcb288845bec2e90" compoundref="rgbled__platform__cfg_8h" startline="85">RGBLED_CMD_PIPE_NAME</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a2604787071b0278222707b339bc24001" compoundref="rgbled__events_8h" startline="131">RGBLED_PIPE_INIT_ERR_EID</references>
+        <references refid="rgbled__platform__cfg_8h_1a122cfa2ca9d3e316f6c112c8d992ed66" compoundref="rgbled__platform__cfg_8h" startline="36">RGBLED_SCH_PIPE_DEPTH</references>
+        <references refid="rgbled__platform__cfg_8h_1a11afc0e0308f2ab732851d41a04d2068" compoundref="rgbled__platform__cfg_8h" startline="43">RGBLED_SCH_PIPE_NAME</references>
+        <references refid="rgbled__msgids_8h_1aa4cfc2cdae116f6aa8ed54614fa822d7" compoundref="rgbled__msgids_8h" startline="5">RGBLED_SEND_HK_MID</references>
+        <references refid="rgbled__platform__cfg_8h_1a7c1b6ee61cdaa3634148706628269753" compoundref="rgbled__platform__cfg_8h" startline="71">RGBLED_SEND_HK_MID_MAX_MSG_COUNT</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76afa8265f6e30f4899d04d3f5a45f497f7" compoundref="rgbled__events_8h" startline="115">RGBLED_SUBSCRIBE_ERR_EID</references>
+        <references refid="rgbled__msgids_8h_1a8f7a252653da20cd6188ead554108eeb" compoundref="rgbled__msgids_8h" startline="6">RGBLED_WAKEUP_MID</references>
+        <references refid="rgbled__platform__cfg_8h_1adaddb95e490a126965bd85bed3a32c9a" compoundref="rgbled__platform__cfg_8h" startline="62">RGBLED_WAKEUP_MID_MAX_MSG_COUNT</references>
+        <references refid="class_r_g_b_l_e_d_1a28d6bcec717f946b059942fed2f43190" compoundref="rgbled__app_8h" startline="123">SchPipeId</references>
+        <referencedby refid="class_r_g_b_l_e_d_1a64c3e61589abfda7469c66f108045998" compoundref="rgbled__app_8cpp" startline="221" endline="283">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1af25c02841d902690c5747e562fae0d4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 RGBLED::RcvSchPipeMsg</definition>
+        <argsstring>(int32 iBlocking)</argsstring>
+        <name>RcvSchPipeMsg</name>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+          <declname>iBlocking</declname>
+        </param>
+        <briefdescription>
+<para>Receive and process messages from the scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function receives and processes messages for the <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> application from the SCH pipe. This function will pend for the type defined by iBlocking, allowing it to wait for messages, i.e. wakeup messages from scheduler.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iBlocking</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PEND_FOREVER</ref>, <ref refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_POLL</ref> or millisecond timeout</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a54840fe06aeb08b1e2c8df420474780d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_RcvMsg</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="255" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="291" bodyend="433"/>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1a68b8b8ed93cecb670c945388a797e970">CFE_SB_TIME_OUT</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_r_g_b_l_e_d___hk_tlm__t_1a36750e7aebd10ea4b9002dc0a2160d32" compoundref="rgbled__msg_8h" startline="189">RGBLED_HkTlm_t::Color</references>
+        <references refid="class_r_g_b_l_e_d_1adc315f489968b33ea86c7674bf41e705" compoundref="rgbled__app_8h" startline="139">CVT</references>
+        <references refid="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" compoundref="rgbled__app_8h" startline="136">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_r_g_b_l_e_d_1a89b38fe559c8d45b0edfbb86c8c665e8" compoundref="rgbled__app_8cpp" startline="441" endline="485">ProcessCmdPipe</references>
+        <references refid="class_r_g_b_l_e_d_1ae55c0c53aadc9c683b5084c036fb031c" compoundref="rgbled__app_8cpp" startline="559" endline="564">ReportHousekeeping</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aaae33f05e0c52fba016516fd18f820e78" compoundref="rgbled__app_8h" startline="82">RGBLED_COLOR_AMBER</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aa5ed22b04340e7c0b121629e5dd0885d4" compoundref="rgbled__app_8h" startline="81">RGBLED_COLOR_BLUE</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aa95677e03e5f8c2698e04ad83b3804ee3" compoundref="rgbled__app_8h" startline="85">RGBLED_COLOR_CYAN</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aad184e0974e9742d344dee52b783f8899" compoundref="rgbled__app_8h" startline="80">RGBLED_COLOR_GREEN</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aaecff6bb3f17d40c29ca9caafad4ffd14" compoundref="rgbled__app_8h" startline="78">RGBLED_COLOR_OFF</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aa30b23c96a5ed24e44246404a7fc0fc85" compoundref="rgbled__app_8h" startline="84">RGBLED_COLOR_PURPLE</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aa3a46d32e194b8464f904dc9721ebc121" compoundref="rgbled__app_8h" startline="79">RGBLED_COLOR_RED</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aa442e54400185990f9194bc381bce95c1" compoundref="rgbled__app_8h" startline="86">RGBLED_COLOR_WHITE</references>
+        <references refid="rgbled__app_8h_1aabd9a2e3fcb057349077d92b22ff075aa48294d2e9cf049335e9b98729a11b890" compoundref="rgbled__app_8h" startline="83">RGBLED_COLOR_YELLOW</references>
+        <references refid="rgbled__custom_8h_1a2d483a5b6ae2554901aec81d3cf5aeab">RGBLED_Custom_SetColor</references>
+        <references refid="rgbled__app_8h_1a3267ea73a2632055ca364285e8942c52a71b35b19697e1ffa3e3361259811eb81" compoundref="rgbled__app_8h" startline="65">RGBLED_INITIALIZED</references>
+        <references refid="rgbled__perfids_8h_1ae4829f297393541f7b432e2835ebdb7c" compoundref="rgbled__perfids_8h" startline="8">RGBLED_MAIN_TASK_PERF_ID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a543c65b5604138e9c445a8c4d0cc46fa" compoundref="rgbled__events_8h" startline="162">RGBLED_MSGID_ERR_EID</references>
+        <references refid="rgbled__app_8h_1a3267ea73a2632055ca364285e8942c52a61d8cd8207bdae42f7f392fc87bdc12d" compoundref="rgbled__app_8h" startline="67">RGBLED_ON</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76ae00db5517353ae6305c4d97dad52b9e2" compoundref="rgbled__events_8h" startline="147">RGBLED_RCVMSG_ERR_EID</references>
+        <references refid="rgbled__app_8h_1a3267ea73a2632055ca364285e8942c52a820092a58a7595adafb17c40380da3f2" compoundref="rgbled__app_8h" startline="69">RGBLED_SELFTEST</references>
+        <references refid="rgbled__msgids_8h_1aa4cfc2cdae116f6aa8ed54614fa822d7" compoundref="rgbled__msgids_8h" startline="5">RGBLED_SEND_HK_MID</references>
+        <references refid="rgbled__msgids_8h_1a8f7a252653da20cd6188ead554108eeb" compoundref="rgbled__msgids_8h" startline="6">RGBLED_WAKEUP_MID</references>
+        <references refid="struct_r_g_b_l_e_d___current_value_table__t_1a5511c6c2b9c275089e2a1ce49fd414cd" compoundref="rgbled__app_8h" startline="109">RGBLED_CurrentValueTable_t::RGBLEDControl</references>
+        <references refid="class_r_g_b_l_e_d_1a28d6bcec717f946b059942fed2f43190" compoundref="rgbled__app_8h" startline="123">SchPipeId</references>
+        <references refid="struct_r_g_b_l_e_d___hk_tlm__t_1a8db0908110cf6b988fbfa9c3453d964f" compoundref="rgbled__msg_8h" startline="187">RGBLED_HkTlm_t::State</references>
+        <referencedby refid="class_r_g_b_l_e_d_1ac7683cfbb98406e008a926471ff65e26" compoundref="rgbled__app_8cpp" startline="615" endline="658">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1a89b38fe559c8d45b0edfbb86c8c665e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RGBLED::ProcessCmdPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessCmdPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> Control Task incoming command processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes incoming commands subscribed by <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="268" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="441" bodyend="485"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a">CFE_SB_POLL</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_r_g_b_l_e_d_1ab1f8921cdec2b54d749937cf09a00324" compoundref="rgbled__app_8h" startline="126">CmdPipeId</references>
+        <references refid="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" compoundref="rgbled__app_8h" startline="136">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_r_g_b_l_e_d_1ac25b8e9f4ebaf107dca9bc995d5586da" compoundref="rgbled__app_8cpp" startline="493" endline="552">ProcessAppCmds</references>
+        <references refid="rgbled__msgids_8h_1a3b3f778352cf1097d693fc64b39d0a11" compoundref="rgbled__msgids_8h" startline="4">RGBLED_CMD_MID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a543c65b5604138e9c445a8c4d0cc46fa" compoundref="rgbled__events_8h" startline="162">RGBLED_MSGID_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76ae00db5517353ae6305c4d97dad52b9e2" compoundref="rgbled__events_8h" startline="147">RGBLED_RCVMSG_ERR_EID</references>
+        <references refid="struct_r_g_b_l_e_d___hk_tlm__t_1a00bc7b8c76c9c94ae34842a0abea7f78" compoundref="rgbled__msg_8h" startline="185">RGBLED_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_r_g_b_l_e_d_1af25c02841d902690c5747e562fae0d4b" compoundref="rgbled__app_8cpp" startline="291" endline="433">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1ac25b8e9f4ebaf107dca9bc995d5586da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RGBLED::ProcessAppCmds</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr)</argsstring>
+        <name>ProcessAppCmds</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> Control Task application commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes command messages specific to the <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="284" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="493" bodyend="552"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" compoundref="rgbled__app_8h" startline="136">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_r_g_b_l_e_d_1ac86516668a2f370726f9259599b04fcf" compoundref="rgbled__app_8h" startline="133">previousState</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a7581b0723326e87c8767c40b7022c6d1" compoundref="rgbled__events_8h" startline="176">RGBLED_CC_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76a764f73ef3843a308de01b8afb6536c1a" compoundref="rgbled__events_8h" startline="206">RGBLED_CMD_ERR_EID</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76ab712ba42afb8c8d41b164e8682daa5b5" compoundref="rgbled__events_8h" startline="98">RGBLED_CMD_NOOP_EID</references>
+        <references refid="rgbled__custom_8h_1a20f3c037f633d7f8bc804c72ecaefdb1">RGBLED_Custom_SelfTest</references>
+        <references refid="rgbled__version_8h_1acd7ebb2ade6ce83816f7f2ba5e776b04" compoundref="rgbled__version_8h" startline="53">RGBLED_MAJOR_VERSION</references>
+        <references refid="rgbled__version_8h_1a0f0b2b66c40574e5e7f983819526663c" compoundref="rgbled__version_8h" startline="67">RGBLED_MINOR_VERSION</references>
+        <references refid="rgbled__platform__cfg_8h_1abfd1f88cb8b1c5d2e7eff00e04af8961" compoundref="rgbled__platform__cfg_8h" startline="29">RGBLED_MISSION_REV</references>
+        <references refid="rgbled__msg_8h_1a50f5f54c2bfffc52151d39187eaba1e5" compoundref="rgbled__msg_8h" startline="89">RGBLED_NOOP_CC</references>
+        <references refid="rgbled__msg_8h_1a4e93c87f2ad575dfe188112cdd7e5352" compoundref="rgbled__msg_8h" startline="122">RGBLED_RESET_CC</references>
+        <references refid="rgbled__version_8h_1ac9d727926c9b8f3d798c27bf27e304a5" compoundref="rgbled__version_8h" startline="81">RGBLED_REVISION</references>
+        <references refid="rgbled__app_8h_1a3267ea73a2632055ca364285e8942c52a820092a58a7595adafb17c40380da3f2" compoundref="rgbled__app_8h" startline="69">RGBLED_SELFTEST</references>
+        <references refid="rgbled__msg_8h_1a160c33c3721b8d88536401105ca7a70f" compoundref="rgbled__msg_8h" startline="154">RGBLED_SELFTEST_CC</references>
+        <references refid="struct_r_g_b_l_e_d___hk_tlm__t_1a8db0908110cf6b988fbfa9c3453d964f" compoundref="rgbled__msg_8h" startline="187">RGBLED_HkTlm_t::State</references>
+        <references refid="struct_r_g_b_l_e_d___hk_tlm__t_1af57a6c30727eb0c39a5d29fd5941a5a5" compoundref="rgbled__msg_8h" startline="181">RGBLED_HkTlm_t::usCmdCnt</references>
+        <references refid="struct_r_g_b_l_e_d___hk_tlm__t_1a00bc7b8c76c9c94ae34842a0abea7f78" compoundref="rgbled__msg_8h" startline="185">RGBLED_HkTlm_t::usCmdErrCnt</references>
+        <references refid="class_r_g_b_l_e_d_1aa4bda7f678b3fa0e28d976c3eb32c21e" compoundref="rgbled__app_8cpp" startline="571" endline="596">VerifyCmdLength</references>
+        <referencedby refid="class_r_g_b_l_e_d_1a89b38fe559c8d45b0edfbb86c8c665e8" compoundref="rgbled__app_8cpp" startline="441" endline="485">ProcessCmdPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1ae55c0c53aadc9c683b5084c036fb031c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RGBLED::ReportHousekeeping</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReportHousekeeping</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends <ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> housekeeping message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function sends the housekeeping message</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="296" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="559" bodyend="564"/>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" compoundref="rgbled__app_8h" startline="136">HkTlm</references>
+        <referencedby refid="class_r_g_b_l_e_d_1af25c02841d902690c5747e562fae0d4b" compoundref="rgbled__app_8cpp" startline="291" endline="433">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_l_e_d_1aa4bda7f678b3fa0e28d976c3eb32c21e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean RGBLED::VerifyCmdLength</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr, uint16 usExpectedLen)</argsstring>
+        <name>VerifyCmdLength</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>usExpectedLen</declname>
+        </param>
+        <briefdescription>
+<para>Verify Command Length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function verifies the command message length.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">usExpectedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected length of the message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the message length matches expectations, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/rgbled/fsw/src/rgbled_app.h" line="316" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.cpp" bodystart="571" bodyend="596"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__sb_8h_1ac32b86cf9e1d12a547792853c35f6aa1">CFE_SB_GetTotalMsgLength</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" compoundref="rgbled__app_8h" startline="136">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="rgbled__events_8h_1a9f81d8276eb409b6e368d2086d052a76ab3e5568d4c9adfaf5138c79bf279c1b2" compoundref="rgbled__events_8h" startline="193">RGBLED_MSGLEN_ERR_EID</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="struct_r_g_b_l_e_d___hk_tlm__t_1a00bc7b8c76c9c94ae34842a0abea7f78" compoundref="rgbled__msg_8h" startline="185">RGBLED_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_r_g_b_l_e_d_1ac25b8e9f4ebaf107dca9bc995d5586da" compoundref="rgbled__app_8cpp" startline="493" endline="552">ProcessAppCmds</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_r_g_b_l_e_d" kindref="compound">RGBLED</ref> Application Class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>RGBLED</label>
+        <link refid="class_r_g_b_l_e_d"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>CVT</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>HkTlm</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RGBLED_HkTlm_t</label>
+        <link refid="struct_r_g_b_l_e_d___hk_tlm__t"/>
+      </node>
+      <node id="2">
+        <label>RGBLED_CurrentValueTable_t</label>
+        <link refid="struct_r_g_b_l_e_d___current_value_table__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/rgbled/fsw/src/rgbled_app.h" line="117" column="1" bodyfile="apps/rgbled/fsw/src/rgbled_app.h" bodystart="116" bodyend="317"/>
+    <listofallmembers>
+      <member refid="class_r_g_b_l_e_d_1ac7683cfbb98406e008a926471ff65e26" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>AppMain</name></member>
+      <member refid="class_r_g_b_l_e_d_1ab1f8921cdec2b54d749937cf09a00324" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>CmdPipeId</name></member>
+      <member refid="class_r_g_b_l_e_d_1adc315f489968b33ea86c7674bf41e705" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>CVT</name></member>
+      <member refid="class_r_g_b_l_e_d_1a69eba0b4c9f34860a76c3608d7e76c5b" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>HkTlm</name></member>
+      <member refid="class_r_g_b_l_e_d_1a64c3e61589abfda7469c66f108045998" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>InitApp</name></member>
+      <member refid="class_r_g_b_l_e_d_1ab516f30bd006ed8c7dd3aad13f343eaf" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>InitData</name></member>
+      <member refid="class_r_g_b_l_e_d_1a0e294f847f0d0175eb4bbb807b3c7deb" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>InitEvent</name></member>
+      <member refid="class_r_g_b_l_e_d_1a40580bd01ba480cbd8592521d0e7f2fd" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>InitPipe</name></member>
+      <member refid="class_r_g_b_l_e_d_1ac86516668a2f370726f9259599b04fcf" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>previousState</name></member>
+      <member refid="class_r_g_b_l_e_d_1ac25b8e9f4ebaf107dca9bc995d5586da" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>ProcessAppCmds</name></member>
+      <member refid="class_r_g_b_l_e_d_1a89b38fe559c8d45b0edfbb86c8c665e8" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>ProcessCmdPipe</name></member>
+      <member refid="class_r_g_b_l_e_d_1af25c02841d902690c5747e562fae0d4b" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>RcvSchPipeMsg</name></member>
+      <member refid="class_r_g_b_l_e_d_1ae55c0c53aadc9c683b5084c036fb031c" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>ReportHousekeeping</name></member>
+      <member refid="class_r_g_b_l_e_d_1a99cdcb4ed4646d5418728f00870f7a45" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>RGBLED</name></member>
+      <member refid="class_r_g_b_l_e_d_1a28d6bcec717f946b059942fed2f43190" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>SchPipeId</name></member>
+      <member refid="class_r_g_b_l_e_d_1ae02296d6663183ee4fffebf23a06bd1a" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>uiRunStatus</name></member>
+      <member refid="class_r_g_b_l_e_d_1aa4bda7f678b3fa0e28d976c3eb32c21e" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>VerifyCmdLength</name></member>
+      <member refid="class_r_g_b_l_e_d_1a8fa577daef9bd5e93e609f355c78d7aa" prot="public" virt="non-virtual"><scope>RGBLED</scope><name>~RGBLED</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

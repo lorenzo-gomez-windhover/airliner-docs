@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ccsds_8c" kind="file" language="C++">
+    <compoundname>ccsds.c</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includes refid="ccsds_8h" local="yes">ccsds.h</includes>
+    <includes refid="osapi_8h" local="yes">osapi.h</includes>
+    <includes local="yes">cfe_psp.h</includes>
+    <incdepgraph>
+      <node id="7531">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="7525">
+        <label>stdarg.h</label>
+      </node>
+      <node id="7518">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="7535">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="7529">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7519">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7520" relation="include">
+        </childnode>
+      </node>
+      <node id="7526">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="7527">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="7528" relation="include">
+        </childnode>
+        <childnode refid="7529" relation="include">
+        </childnode>
+        <childnode refid="7530" relation="include">
+        </childnode>
+        <childnode refid="7531" relation="include">
+        </childnode>
+      </node>
+      <node id="7522">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="7521">
+        <label>osapi.h</label>
+        <link refid="osapi_8h"/>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7522" relation="include">
+        </childnode>
+        <childnode refid="7523" relation="include">
+        </childnode>
+        <childnode refid="7524" relation="include">
+        </childnode>
+        <childnode refid="7527" relation="include">
+        </childnode>
+        <childnode refid="7532" relation="include">
+        </childnode>
+        <childnode refid="7533" relation="include">
+        </childnode>
+        <childnode refid="7534" relation="include">
+        </childnode>
+        <childnode refid="7526" relation="include">
+        </childnode>
+      </node>
+      <node id="7534">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="7517">
+        <label>sb/ccsds.c</label>
+        <link refid="ccsds.c"/>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7521" relation="include">
+        </childnode>
+        <childnode refid="7535" relation="include">
+        </childnode>
+      </node>
+      <node id="7520">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="7523">
+        <label>osconfig.h</label>
+      </node>
+      <node id="7532">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="7533">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="7528">
+        <label>stdio.h</label>
+      </node>
+      <node id="7524">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="7525" relation="include">
+        </childnode>
+        <childnode refid="7526" relation="include">
+        </childnode>
+      </node>
+      <node id="7530">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ccsds_8c_1a4c028252ce89b5f9936eb94ed405dcef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCSDS_InitPkt</definition>
+        <argsstring>(CCSDS_PriHdr_t *PktPtr, uint16 StreamId, uint16 Length, boolean Clear)</argsstring>
+        <name>CCSDS_InitPkt</name>
+        <param>
+          <type><ref refid="struct_c_c_s_d_s___pri_hdr__t" kindref="compound">CCSDS_PriHdr_t</ref> *</type>
+          <declname>PktPtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref></type>
+          <declname>StreamId</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref></type>
+          <declname>Length</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member">boolean</ref></type>
+          <declname>Clear</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/ccsds.c" line="68" column="1" bodyfile="sb/ccsds.c" bodystart="68" bodyend="91"/>
+        <references refid="ccsds_8h_1a5ef1b59f37effb6078c69a0b0fa6983b" compoundref="ccsds_8h" startline="278">CCSDS_CLR_PRI_HDR</references>
+        <references refid="ccsds_8h_1aab1f13c533770a658839747053ed939b" compoundref="ccsds_8h" startline="244">CCSDS_RD_SEQ</references>
+        <references refid="ccsds_8h_1a94ec18434d66e673370f423967a4ea73" compoundref="ccsds_8h" startline="257">CCSDS_WR_LEN</references>
+        <references refid="ccsds_8h_1a5843082f40ceb361f8ad62bed77c5348" compoundref="ccsds_8h" startline="246">CCSDS_WR_SEQ</references>
+        <references refid="ccsds_8h_1af074cabfda43b65af0d6f837ec906aa2" compoundref="ccsds_8h" startline="219">CCSDS_WR_SID</references>
+        <referencedby refid="cfe__sb__util_8c_1a67765875dfff1d3d6d7cbc4a7ae2f8f0" compoundref="cfe__sb__util_8c" startline="81" endline="91">CFE_SB_InitMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ccsds_8c_1a3ca6f1bf8a7c70d2b625e39c1648f88e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCSDS_LoadCheckSum</definition>
+        <argsstring>(CCSDS_CmdPkt_t *PktPtr)</argsstring>
+        <name>CCSDS_LoadCheckSum</name>
+        <param>
+          <type><ref refid="struct_c_c_s_d_s___cmd_pkt__t" kindref="compound">CCSDS_CmdPkt_t</ref> *</type>
+          <declname>PktPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/ccsds.c" line="111" column="1" bodyfile="sb/ccsds.c" bodystart="111" bodyend="122"/>
+        <references refid="ccsds_8c_1a61f0deac4695cc5cdbcba836b5e29f6a" compoundref="ccsds_8c" startline="165" endline="176">CCSDS_ComputeCheckSum</references>
+        <references refid="ccsds_8h_1aa870fd6a5fb411c4498ea4bf1270d910" compoundref="ccsds_8h" startline="268">CCSDS_WR_CHECKSUM</references>
+        <references refid="struct_c_c_s_d_s___cmd_pkt__t_1a747a19f65e3823ebb03a859e9bf50a8d" compoundref="ccsds_8h" startline="136">CCSDS_CmdPkt_t::SecHdr</references>
+        <referencedby refid="cfe__sb__util_8c_1ab938a22e368e400c16ce7dc97767f237" compoundref="cfe__sb__util_8c" startline="585" endline="601">CFE_SB_GenerateChecksum</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ccsds_8c_1a14f37f00d3657456bc2b5246753291df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member">boolean</ref></type>
+        <definition>boolean CCSDS_ValidCheckSum</definition>
+        <argsstring>(CCSDS_CmdPkt_t *PktPtr)</argsstring>
+        <name>CCSDS_ValidCheckSum</name>
+        <param>
+          <type><ref refid="struct_c_c_s_d_s___cmd_pkt__t" kindref="compound">CCSDS_CmdPkt_t</ref> *</type>
+          <declname>PktPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/ccsds.c" line="141" column="1" bodyfile="sb/ccsds.c" bodystart="141" bodyend="146"/>
+        <references refid="ccsds_8c_1a61f0deac4695cc5cdbcba836b5e29f6a" compoundref="ccsds_8c" startline="165" endline="176">CCSDS_ComputeCheckSum</references>
+        <referencedby refid="cfe__sb__util_8c_1a3245babbfb1f2f2c5a2358d41fd004ad" compoundref="cfe__sb__util_8c" startline="616" endline="632">CFE_SB_ValidateChecksum</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ccsds_8c_1a61f0deac4695cc5cdbcba836b5e29f6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref></type>
+        <definition>uint8 CCSDS_ComputeCheckSum</definition>
+        <argsstring>(CCSDS_CmdPkt_t *PktPtr)</argsstring>
+        <name>CCSDS_ComputeCheckSum</name>
+        <param>
+          <type><ref refid="struct_c_c_s_d_s___cmd_pkt__t" kindref="compound">CCSDS_CmdPkt_t</ref> *</type>
+          <declname>PktPtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/ccsds.c" line="165" column="1" bodyfile="sb/ccsds.c" bodystart="165" bodyend="176"/>
+        <references refid="ccsds_8h_1a410fb70c08741e7edad1de6d3fceff21" compoundref="ccsds_8h" startline="255">CCSDS_RD_LEN</references>
+        <references refid="struct_c_c_s_d_s___cmd_pkt__t_1acf42deebafc9b98dd232939f7ad4f867" compoundref="ccsds_8h" startline="135">CCSDS_CmdPkt_t::PriHdr</references>
+        <referencedby refid="ccsds_8c_1a3ca6f1bf8a7c70d2b625e39c1648f88e" compoundref="ccsds_8c" startline="111" endline="122">CCSDS_LoadCheckSum</referencedby>
+        <referencedby refid="ccsds_8c_1a14f37f00d3657456bc2b5246753291df" compoundref="ccsds_8c" startline="141" endline="146">CCSDS_ValidCheckSum</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:<sp/><sp/>ccsds.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2012,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Functions<sp/>for<sp/>working<sp/>with<sp/>CCSDS<sp/>headers.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>$Log:<sp/>ccsds.c<sp/><sp/>$</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2012/01/13<sp/>12:15:11GMT-05:00<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/>Changed<sp/>license<sp/>text<sp/>to<sp/>reflect<sp/>open<sp/>source</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2010/10/25<sp/>15:00:51EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>Corrected<sp/>bad<sp/>apostrophe<sp/>in<sp/>prologue.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2010/10/04<sp/>15:21:32EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Cleaned<sp/>up<sp/>copyright<sp/>symbol.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2009/06/10<sp/>09:17:28EDT<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Updated<sp/>OS_Mem*<sp/>and<sp/>OS_BSP*<sp/>to<sp/>CFE_PSP_*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:29EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/MKS-CFE-PROJECT/fsw/cfe-core/src/sb/project.pj</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2007/09/24<sp/>11:02:22EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Removed<sp/>unused<sp/>macros</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2006/06/12<sp/>15:26:03EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Added<sp/>legal<sp/>statement</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Include<sp/>Files</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ccsds_8h" kindref="compound">ccsds.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi_8h" kindref="compound">osapi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_psp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CCSDS_InitPkt()</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/><sp/><sp/><sp/>Initialize<sp/>a<sp/>CCSDS<sp/>packet.<sp/><sp/>The<sp/>primary<sp/>header<sp/>is<sp/>initialized<sp/>with</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/><sp/><sp/><sp/>specified<sp/>values,<sp/>and<sp/>if<sp/>the<sp/>Clear<sp/>flag<sp/>is<sp/>set,<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>packet</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/><sp/><sp/><sp/>is<sp/>filled<sp/>with<sp/>zeros.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/><sp/><sp/><sp/>PktPtr<sp/><sp/><sp/>:<sp/>Pointer<sp/>to<sp/>primary<sp/>header<sp/>of<sp/>packet.</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">**<sp/><sp/><sp/><sp/>StreamId<sp/>:<sp/>Stream<sp/>ID<sp/>to<sp/>use<sp/>for<sp/>the<sp/>packet.</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/><sp/><sp/><sp/>Length<sp/><sp/><sp/>:<sp/>Length<sp/>of<sp/>the<sp/>packet<sp/>in<sp/>bytes.</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/><sp/><sp/><sp/>Clear<sp/><sp/><sp/><sp/>:<sp/>Indicates<sp/>whether<sp/>to<sp/>clear<sp/>the<sp/>entire<sp/>packet:</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRUE<sp/>=<sp/>fill<sp/>sequence<sp/>count<sp/>and<sp/>packet<sp/>data<sp/>with<sp/>zeros</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(used<sp/>after<sp/>a<sp/>cold<sp/>restart)</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FALSE<sp/>=<sp/>leave<sp/>sequence<sp/>count<sp/>and<sp/>packet<sp/>data<sp/>unchanged</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(used<sp/>after<sp/>a<sp/>warm<sp/>restart<sp/>if<sp/>data<sp/>must<sp/>be<sp/>preserved)</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">**<sp/><sp/><sp/><sp/>(none)</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="ccsds_8c_1a4c028252ce89b5f9936eb94ed405dcef" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ccsds_8c_1a4c028252ce89b5f9936eb94ed405dcef" kindref="member">CCSDS_InitPkt</ref><sp/>(<ref refid="struct_c_c_s_d_s___pri_hdr__t" kindref="compound">CCSDS_PriHdr_t</ref><sp/><sp/>*PktPtr,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>StreamId,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Length,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Clear<sp/>)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/>SeqCount;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Save<sp/>the<sp/>sequence<sp/>count<sp/>in<sp/>case<sp/>it<sp/>must<sp/>be<sp/>preserved.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/>SeqCount<sp/>=<sp/><ref refid="ccsds_8h_1aab1f13c533770a658839747053ed939b" kindref="member">CCSDS_RD_SEQ</ref>(*PktPtr);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Zero<sp/>the<sp/>entire<sp/>packet<sp/>if<sp/>needed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Clear)<sp/><sp/>CFE_PSP_MemSet((</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)PktPtr,<sp/>0,<sp/>Length);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Clear<sp/>the<sp/>primary<sp/>header.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><ref refid="ccsds_8h_1a5ef1b59f37effb6078c69a0b0fa6983b" kindref="member">CCSDS_CLR_PRI_HDR</ref>(*PktPtr);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>the<sp/>stream<sp/>ID<sp/>and<sp/>length<sp/>fields<sp/>in<sp/>the<sp/>primary<sp/>header.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><ref refid="ccsds_8h_1af074cabfda43b65af0d6f837ec906aa2" kindref="member">CCSDS_WR_SID</ref>(*PktPtr,<sp/>StreamId);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><ref refid="ccsds_8h_1a94ec18434d66e673370f423967a4ea73" kindref="member">CCSDS_WR_LEN</ref>(*PktPtr,<sp/>Length);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Restore<sp/>the<sp/>sequence<sp/>count<sp/>if<sp/>needed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!Clear)<sp/><sp/><ref refid="ccsds_8h_1a5843082f40ceb361f8ad62bed77c5348" kindref="member">CCSDS_WR_SEQ</ref>(*PktPtr,<sp/>SeqCount);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>END<sp/>CCSDS_InitPkt()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CCSDS_LoadCheckSum()</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="98"><highlight class="comment">**<sp/><sp/><sp/><sp/>Compute<sp/>and<sp/>load<sp/>a<sp/>checksum<sp/>for<sp/>a<sp/>CCSDS<sp/>command<sp/>packet<sp/>that<sp/>has<sp/>a</highlight></codeline>
+<codeline lineno="99"><highlight class="comment">**<sp/><sp/><sp/><sp/>secondary<sp/>header.</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">**<sp/><sp/><sp/><sp/>PktPtr<sp/><sp/><sp/>:<sp/>Pointer<sp/>to<sp/>header<sp/>of<sp/>command<sp/>packet.<sp/><sp/>The<sp/>packet<sp/>must</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>have<sp/>a<sp/>secondary<sp/>header<sp/>and<sp/>the<sp/>length<sp/>in<sp/>the<sp/>primary</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header<sp/>must<sp/>be<sp/>correct.<sp/><sp/>The<sp/>checksum<sp/>field<sp/>in<sp/>the<sp/>packet</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>will<sp/>be<sp/>modified.</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="108"><highlight class="comment">**<sp/><sp/><sp/><sp/>(none)</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="ccsds_8c_1a3ca6f1bf8a7c70d2b625e39c1648f88e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ccsds_8c_1a3ca6f1bf8a7c70d2b625e39c1648f88e" kindref="member">CCSDS_LoadCheckSum</ref><sp/>(<ref refid="struct_c_c_s_d_s___cmd_pkt__t" kindref="compound">CCSDS_CmdPkt_t</ref><sp/>*PktPtr)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/>CheckSum;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Clear<sp/>the<sp/>checksum<sp/>field<sp/>so<sp/>the<sp/>new<sp/>checksum<sp/>is<sp/>correct.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><ref refid="ccsds_8h_1aa870fd6a5fb411c4498ea4bf1270d910" kindref="member">CCSDS_WR_CHECKSUM</ref>(PktPtr-&gt;<ref refid="struct_c_c_s_d_s___cmd_pkt__t_1a747a19f65e3823ebb03a859e9bf50a8d" kindref="member">SecHdr</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Compute<sp/>and<sp/>load<sp/>new<sp/>checksum.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/>CheckSum<sp/>=<sp/><ref refid="ccsds_8c_1a61f0deac4695cc5cdbcba836b5e29f6a" kindref="member">CCSDS_ComputeCheckSum</ref>(PktPtr);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><ref refid="ccsds_8h_1aa870fd6a5fb411c4498ea4bf1270d910" kindref="member">CCSDS_WR_CHECKSUM</ref>(PktPtr-&gt;<ref refid="struct_c_c_s_d_s___cmd_pkt__t_1a747a19f65e3823ebb03a859e9bf50a8d" kindref="member">SecHdr</ref>,<sp/>CheckSum);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>END<sp/>CCSDS_LoadCheckSum()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="126"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CCSDS_ValidCheckSum()</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="128"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">**<sp/><sp/><sp/><sp/>Determine<sp/>whether<sp/>a<sp/>checksum<sp/>in<sp/>a<sp/>command<sp/>packet<sp/>is<sp/>valid.</highlight></codeline>
+<codeline lineno="130"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="131"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="132"><highlight class="comment">**<sp/><sp/><sp/><sp/>PktPtr<sp/><sp/><sp/>:<sp/>Pointer<sp/>to<sp/>header<sp/>of<sp/>command<sp/>packet.<sp/><sp/>The<sp/>packet<sp/>must</highlight></codeline>
+<codeline lineno="133"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>have<sp/>a<sp/>secondary<sp/>header<sp/>and<sp/>the<sp/>length<sp/>in<sp/>the<sp/>primary</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header<sp/>must<sp/>be<sp/>correct.</highlight></codeline>
+<codeline lineno="135"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="136"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">**<sp/><sp/><sp/><sp/>TRUE<sp/>if<sp/>checksum<sp/>of<sp/>packet<sp/>is<sp/>valid;<sp/>FALSE<sp/>if<sp/>not.</highlight></codeline>
+<codeline lineno="138"><highlight class="comment">**<sp/><sp/><sp/><sp/>A<sp/>valid<sp/>checksum<sp/>is<sp/>0.</highlight></codeline>
+<codeline lineno="139"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="ccsds_8c_1a14f37f00d3657456bc2b5246753291df" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="ccsds_8c_1a14f37f00d3657456bc2b5246753291df" kindref="member">CCSDS_ValidCheckSum</ref><sp/>(<ref refid="struct_c_c_s_d_s___cmd_pkt__t" kindref="compound">CCSDS_CmdPkt_t</ref><sp/>*PktPtr)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="ccsds_8c_1a61f0deac4695cc5cdbcba836b5e29f6a" kindref="member">CCSDS_ComputeCheckSum</ref>(PktPtr)<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>END<sp/>CCSDS_ValidCheckSum()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="150"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CCSDS_ComputeCheckSum()</highlight></codeline>
+<codeline lineno="151"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="152"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">**<sp/><sp/><sp/><sp/>Compute<sp/>the<sp/>checksum<sp/>for<sp/>a<sp/>command<sp/>packet.<sp/><sp/>The<sp/>checksum<sp/>is<sp/>the<sp/>XOR<sp/>of</highlight></codeline>
+<codeline lineno="154"><highlight class="comment">**<sp/><sp/><sp/><sp/>all<sp/>bytes<sp/>in<sp/>the<sp/>packet;<sp/>a<sp/>valid<sp/>checksum<sp/>is<sp/>zero.</highlight></codeline>
+<codeline lineno="155"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="156"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="157"><highlight class="comment">**<sp/><sp/><sp/><sp/>PktPtr<sp/><sp/><sp/>:<sp/>Pointer<sp/>to<sp/>header<sp/>of<sp/>command<sp/>packet.<sp/><sp/>The<sp/>packet<sp/>must</highlight></codeline>
+<codeline lineno="158"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>have<sp/>a<sp/>secondary<sp/>header<sp/>and<sp/>the<sp/>length<sp/>in<sp/>the<sp/>primary</highlight></codeline>
+<codeline lineno="159"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header<sp/>must<sp/>be<sp/>correct.</highlight></codeline>
+<codeline lineno="160"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="161"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="162"><highlight class="comment">**<sp/><sp/><sp/><sp/>TRUE<sp/>if<sp/>checksum<sp/>of<sp/>packet<sp/>is<sp/>valid;<sp/>FALSE<sp/>if<sp/>not.</highlight></codeline>
+<codeline lineno="163"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="ccsds_8c_1a61f0deac4695cc5cdbcba836b5e29f6a" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><ref refid="ccsds_8c_1a61f0deac4695cc5cdbcba836b5e29f6a" kindref="member">CCSDS_ComputeCheckSum</ref><sp/>(<ref refid="struct_c_c_s_d_s___cmd_pkt__t" kindref="compound">CCSDS_CmdPkt_t</ref><sp/>*PktPtr)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/>PktLen<sp/><sp/><sp/>=<sp/><ref refid="ccsds_8h_1a410fb70c08741e7edad1de6d3fceff21" kindref="member">CCSDS_RD_LEN</ref>(PktPtr-&gt;<ref refid="struct_c_c_s_d_s___cmd_pkt__t_1acf42deebafc9b98dd232939f7ad4f867" kindref="member">PriHdr</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/>*BytePtr<sp/><sp/>=<sp/>(<ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/>*)PktPtr;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/>CheckSum;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/>CheckSum<sp/>=<sp/>0xFF;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(PktLen--)<sp/><sp/>CheckSum<sp/>^=<sp/>*(BytePtr++);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CheckSum;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>END<sp/>CCSDS_ComputeCheckSum()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="sb/ccsds.c"/>
+  </compounddef>
+</doxygen>

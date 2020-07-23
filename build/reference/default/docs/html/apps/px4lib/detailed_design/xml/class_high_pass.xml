@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_high_pass" kind="class" language="C++" prot="public">
+    <compoundname>HighPass</compoundname>
+    <includes refid="_high_pass_8hpp" local="no">HighPass.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_high_pass_1a63b3bf9b2fc86a53362dfd9e154e6e84" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HighPass::m_PrevInput</definition>
+        <argsstring></argsstring>
+        <name>m_PrevInput</name>
+        <briefdescription>
+<para>Previous filter input value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/HighPass.hpp" line="50" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/HighPass.hpp" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_high_pass_1a4c6af478a767d2de968fffca2ca5e623" compoundref="_high_pass_8cpp" startline="17" endline="32">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_high_pass_1ad4f6474aa2c9bae3086e0daab2d8ff8e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HighPass::m_PrevOutput</definition>
+        <argsstring></argsstring>
+        <name>m_PrevOutput</name>
+        <briefdescription>
+<para>Previous filter output value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/HighPass.hpp" line="53" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/HighPass.hpp" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_high_pass_1a4c6af478a767d2de968fffca2ca5e623" compoundref="_high_pass_8cpp" startline="17" endline="32">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_high_pass_1ac58b517a09eca89ab22a95dafcd42cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HighPass::HighPass</definition>
+        <argsstring>()</argsstring>
+        <name>HighPass</name>
+        <briefdescription>
+<para>High Pass Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/HighPass.hpp" line="19" column="1" bodyfile="apps/px4lib/fsw/src/math/HighPass.cpp" bodystart="5" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_high_pass_1a6b76e97bbfa5dec95d8ee85191fa85b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HighPass::~HighPass</definition>
+        <argsstring>()</argsstring>
+        <name>~HighPass</name>
+        <briefdescription>
+<para>High Pass Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/HighPass.hpp" line="31" column="1" bodyfile="apps/px4lib/fsw/src/math/HighPass.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_high_pass_1a4c6af478a767d2de968fffca2ca5e623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float HighPass::Update</definition>
+        <argsstring>(float value, float dt, float cutoff)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cutoff</declname>
+        </param>
+        <briefdescription>
+<para>Update High Pass. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying the input value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying delta time in us </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cutoff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying cutoff frequency </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/HighPass.hpp" line="47" column="1" bodyfile="apps/px4lib/fsw/src/math/HighPass.cpp" bodystart="17" bodyend="32"/>
+        <references refid="_high_pass_8cpp_1ab9c3c609e1d02430671de0a109410ac8" compoundref="_high_pass_8cpp" startline="3">M_PI_F</references>
+        <references refid="class_high_pass_1a63b3bf9b2fc86a53362dfd9e154e6e84" compoundref="_high_pass_8hpp" startline="50">m_PrevInput</references>
+        <references refid="class_high_pass_1ad4f6474aa2c9bae3086e0daab2d8ff8e" compoundref="_high_pass_8hpp" startline="53">m_PrevOutput</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="apps/px4lib/fsw/public_inc/math/HighPass.hpp" line="7" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/HighPass.hpp" bodystart="6" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_high_pass_1ac58b517a09eca89ab22a95dafcd42cf5" prot="public" virt="non-virtual"><scope>HighPass</scope><name>HighPass</name></member>
+      <member refid="class_high_pass_1a63b3bf9b2fc86a53362dfd9e154e6e84" prot="public" virt="non-virtual"><scope>HighPass</scope><name>m_PrevInput</name></member>
+      <member refid="class_high_pass_1ad4f6474aa2c9bae3086e0daab2d8ff8e" prot="public" virt="non-virtual"><scope>HighPass</scope><name>m_PrevOutput</name></member>
+      <member refid="class_high_pass_1a4c6af478a767d2de968fffca2ca5e623" prot="public" virt="non-virtual"><scope>HighPass</scope><name>Update</name></member>
+      <member refid="class_high_pass_1a6b76e97bbfa5dec95d8ee85191fa85b1" prot="public" virt="non-virtual"><scope>HighPass</scope><name>~HighPass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

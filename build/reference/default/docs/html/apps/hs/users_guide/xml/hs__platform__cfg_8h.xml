@@ -1,0 +1,760 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="hs__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>hs_platform_cfg.h</compoundname>
+    <includedby refid="hs__msg_8h" local="yes">apps/hs/fsw/src/hs_msg.h</includedby>
+    <includedby refid="hs__tbl_8h" local="yes">apps/hs/fsw/src/hs_tbl.h</includedby>
+    <invincdepgraph>
+      <node id="8">
+        <label>apps/hs/fsw/src/hs_msg.h</label>
+        <link refid="hs__msg_8h"/>
+      </node>
+      <node id="9">
+        <label>apps/hs/fsw/src/hs_tbl.h</label>
+        <link refid="hs__tbl_8h"/>
+      </node>
+      <node id="7">
+        <label>apps/hs/fsw/platform_inc/hs_platform_cfg.h</label>
+        <link refid="hs_platform_cfg.h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hs__platform__cfg_8h_1af97f0b7ab889f1cfbabb166ae17aa5fc" prot="public" static="no">
+        <name>HS_APP_NAME</name>
+        <initializer>&quot;HS&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000001"><xreftitle>Purpose</xreftitle><xrefdescription><para>Application Name</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition must match the name used at startup by the cFE Executive Services when creating the HS application. Note that application names are also an argument to certain cFE commands. For example, the application name is needed to access tables via cFE Table Services commands.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>HS requires that this name be defined, but otherwise places no limits on the definition. Refer to CFE Executive Services for specific information on limits related to application names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="74" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a35dd6b87cfce1139eb65356a8abcf2fb" prot="public" static="no">
+        <name>HS_IDLE_TASK_NAME</name>
+        <initializer>&quot;HS_IDLE_TASK&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000002"><xreftitle>Purpose</xreftitle><xrefdescription><para>Idle Task Configuration Parameters (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>These parameters are used by <ref refid="cfe__es_8h_1a64768543df91e7856b4356fdc70ebe8c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_CreateChildTask</ref> Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>These limits will vary by platform and available resources. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="86" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1ac1d9084f09a74e0608813ff0758093a8" prot="public" static="no">
+        <name>HS_IDLE_TASK_STACK_PTR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="87" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a9ddb20db59176efa4c73439cca93ffcc" prot="public" static="no">
+        <name>HS_IDLE_TASK_STACK_SIZE</name>
+        <initializer>4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="88" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1aff271ce7e34ff7b92fe1135ae7eaeb04" prot="public" static="no">
+        <name>HS_IDLE_TASK_FLAGS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="89" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a8c4c98db2162226dfa7cf56472c64cf1" prot="public" static="no">
+        <name>HS_IDLE_TASK_PRIORITY</name>
+        <initializer>252</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000003"><xreftitle>Purpose</xreftitle><xrefdescription><para>Idle Task Priority (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter is used to set the priority of the Idle Task. It should be higher than all other user created tasks, but may need to be set lower than the maximum value if an OS uses its own minimum priority task. Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than 255. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="103" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1af18e1bed2f69b71da2ca157877c950a4" prot="public" static="no">
+        <name>HS_MAX_EXEC_CNT_SLOTS</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000004"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum reported execution counters</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of execution counters that can be specified to be reported in telemetry.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295).</para></simplesect>
+This parameter will dictate the size of the Execution Counter Table (XCT):</para><para>XCT Size = HS_MAX_EXEC_CNT_SLOTS * sizeof(<ref refid="struct_h_s___x_c_t_entry__t" kindref="compound">HS_XCTEntry_t</ref>)</para><para>The total size of this table should not exceed the cFE size limit for a single buffered table set by the #CFE_TBL_MAX_SNGL_TABLE_SIZE parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="124" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1acec142a05a8eeaaa7de5b40a845bfb9a" prot="public" static="no">
+        <name>HS_MAX_MSG_ACT_TYPES</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000005"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum message action types</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of Message Action action types.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than 4 less than an unsigned 16 bit integer (65531).</para></simplesect>
+This parameter must be greater than 0.</para><para>This parameter will influence the size of the Message Action Table (MAT):</para><para>MAT Size = HS_MAX_MSG_ACT_TYPES * (HS_MAX_MSG_ACT_SIZE + 4)</para><para>The total size of this table should not exceed the cFE size limit for a single buffered table set by the #CFE_TBL_MAX_SNGL_TABLE_SIZE parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="146" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a00fa7bc1e191b55d7d531fb77ccfcc26" prot="public" static="no">
+        <name>HS_MAX_MSG_ACT_SIZE</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000006"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum message action size (in bytes)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Size in bytes of maximum length of software bus message that can be sent using a Message Action action type.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than <ref refid="cfe__mission__cfg_8h_1ac5a1b99c0ee718d0a9c8148e70ddd473" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MAX_SB_MSG_SIZE</ref></para></simplesect>
+This parameter can&apos;t be smaller than a packet header</para><para>This parameter will influence the size of the Message Action Table (MAT):</para><para>MAT Size = HS_MAX_MSG_ACT_TYPES * (HS_MAX_MSG_ACT_SIZE + 4)</para><para>The total size of this table should not exceed the cFE size limit for a single buffered table set by the #CFE_TBL_MAX_SNGL_TABLE_SIZE parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="168" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1abb7a33e42588c9c1144ec3158a11511c" prot="public" static="no">
+        <name>HS_MAX_MONITORED_APPS</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000007"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of monitored applications</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of applications that can be monitored to assure check-ins</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295).</para></simplesect>
+This parameter must be greater than 0.</para><para>This parameter will dictate the size of the Application Monitor Table (AMT):</para><para>AMT Size = HS_MAX_MONITORED_APPS * sizeof(<ref refid="struct_h_s___a_m_t_entry__t" kindref="compound">HS_AMTEntry_t</ref>)</para><para>The total size of this table should not exceed the cFE size limit for a single buffered table set by the #CFE_TBL_MAX_SNGL_TABLE_SIZE parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="191" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a672c805a53473772c6de19c2ae4a7627" prot="public" static="no">
+        <name>HS_MAX_MONITORED_EVENTS</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000008"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of monitored events</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of events that can be monitored</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295).</para></simplesect>
+This parameter must be greater than 0.</para><para>This parameter will dictate the size of the Event Monitor Table (EMT):</para><para>EMT Size = HS_MAX_MONITORED_EVENTS * sizeof(<ref refid="struct_h_s___e_m_t_entry__t" kindref="compound">HS_EMTEntry_t</ref>)</para><para>The total size of this table should not exceed the cFE size limit for a single buffered table set by the #CFE_TBL_MAX_SNGL_TABLE_SIZE parameter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="214" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a02102183f216a55ebb72fe5dc1eefa67" prot="public" static="no">
+        <name>HS_WATCHDOG_TIMEOUT_VALUE</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000009"><xreftitle>Purpose</xreftitle><xrefdescription><para>Watchdog Timeout Value</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Number of milliseconds before a watchdog timeout occurs.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295).</para></simplesect>
+This parameter must be greater than 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="227" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a8a4d90c5cf6cbce9ddd6ce4081af0235" prot="public" static="no">
+        <name>HS_POST_PROCESSING_DELAY</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000010"><xreftitle>Purpose</xreftitle><xrefdescription><para>Time to wait after performing processing (in milliseconds)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the length of a task delay performed prior to checking the Software Bus for a Wakeup Message. This ensures that HS will run no more often than a certain rate. If this parameter is set to 0, no task delay will be performed. Time is in milliseconds.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="242" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a60e9c8756ae0458d8650a95f7eac2abb" prot="public" static="no">
+        <name>HS_WAKEUP_TIMEOUT</name>
+        <initializer>1200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000011"><xreftitle>Purpose</xreftitle><xrefdescription><para>Wakeup Message Software Bus Timeout</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter is passed into <ref refid="cfe__sb__api_8c_1a54840fe06aeb08b1e2c8df420474780d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_RcvMsg</ref> as the timeout value. It can specify <ref refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_POLL</ref>, <ref refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PEND_FOREVER</ref>, or a timeout value in milliseconds.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>This Parameter must be <ref refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_POLL</ref>, <ref refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PEND_FOREVER</ref>, or greater than 0 and less than 2^31 - 1</para></simplesect>
+As a timeout, this parameter should be less than (<ref refid="hs__platform__cfg_8h_1a02102183f216a55ebb72fe5dc1eefa67" kindref="member">HS_WATCHDOG_TIMEOUT_VALUE</ref> * 1000) - HS runtime in ms otherwise HS may not be able to service the watchdog in time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="260" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a98f309ddfe9dc81e42a91969455e9a87" prot="public" static="no">
+        <name>HS_CPU_ALIVE_STRING</name>
+        <initializer>&quot;.&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000012"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU aliveness output string</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>String that is output to via <ref refid="stubs_8c_1ae2f28612973b2d1a818b55015b2d8650" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_printf</ref> periodically if aliveness is enabled.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>None. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="272" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a81157200eab2673639af013da1910990" prot="public" static="no">
+        <name>HS_CPU_ALIVE_PERIOD</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000013"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU aliveness output period</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Rate in number of HS cycles at which the HS_CPU_ALIVE_STRING is output via the UART.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="285" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a7eec630401f001ca650fce23548eaf41" prot="public" static="no">
+        <name>HS_MAX_RESTART_ACTIONS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000014"><xreftitle>Purpose</xreftitle><xrefdescription><para>Max Number of Processor Resets that may be performed by HS</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of times that the HS App will attempt a processor reset as the result of either an Application Monitor or Event Monitor Failure</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535).</para></simplesect>
+Although not enforced, if this parameter is greater than or equal to #CFE_ES_MAX_PROCESSOR_RESETS then a POWER-ON reset will occur before the max count is reached, resetting the remaining actions to the value set here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="304" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a9e0d58a4fa84e7ab454247b6a473b6ca" prot="public" static="no">
+        <name>HS_CMD_PIPE_DEPTH</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000015"><xreftitle>Purpose</xreftitle><xrefdescription><para>Software bus command pipe depth</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Depth of the software bus pipe HS uses for commands and HK requests. Used during initialization in the call to <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than #CFE_SB_MAX_PIPE_DEPTH</para></simplesect>
+This parameter must be greater than 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="317" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a47092ad4c7dea3220588679e1e4cd734" prot="public" static="no">
+        <name>HS_EVENT_PIPE_DEPTH</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000016"><xreftitle>Purpose</xreftitle><xrefdescription><para>Software bus event pipe depth</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Depth of the software bus pipe HS uses for event monitoring. This should be set to supply sufficient room for the expected event message load per second. Used during initialization in the call to <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than #CFE_SB_MAX_PIPE_DEPTH</para></simplesect>
+This parameter must be greater than 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="332" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a2daf99e02fd26b556666d70831697a22" prot="public" static="no">
+        <name>HS_WAKEUP_PIPE_DEPTH</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000017"><xreftitle>Purpose</xreftitle><xrefdescription><para>Software bus wakeup pipe depth</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Depth of the software bus pipe HS uses for wakeup messages. Used during initialization in the call to <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than #CFE_SB_MAX_PIPE_DEPTH</para></simplesect>
+This parameter must be greater than 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="345" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a34b218cc037ced277741bc6c6a1c1642" prot="public" static="no">
+        <name>HS_RESET_TASK_DELAY</name>
+        <initializer>50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000018"><xreftitle>Purpose</xreftitle><xrefdescription><para>Time to wait before a processor reset (in milliseconds)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the length of the task delay (milliseconds) performed prior to calling <ref refid="cfe__es_8h_1a0e54725c2c038a86bae1f6ba553a9305" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_ResetCFE</ref> to allow for any event message to go out.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="358" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1ae0de3889e01f7ec7043b8c57596ced38" prot="public" static="no">
+        <name>HS_STARTUP_SYNC_TIMEOUT</name>
+        <initializer>65000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000019"><xreftitle>Purpose</xreftitle><xrefdescription><para>Time to wait for all apps to be started (in milliseconds)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the timeout for the <ref refid="cfe__es_8h_1a7dc343ea775a0e5773ecdf700581d548" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_WaitForStartupSync</ref> call that HS uses to wait for all of the Applications specified in the startup script to finish initialization. HS will wait this amount of time before assuming all startup script applications have been started and will then begin nominal processing.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295).</para></simplesect>
+This should be greater than or equal to the Startup Sync timeout for any application in the Application Monitor Table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="377" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a2d1e4b38ef494ddeaac5316c7179bf1e" prot="public" static="no">
+        <name>HS_APPMON_DEFAULT_STATE</name>
+        <initializer><ref refid="hs__msgdefs_8h_1ab3812a9cc5779e49f0a2e03cc01dd1f5" kindref="member">HS_STATE_ENABLED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000020"><xreftitle>Purpose</xreftitle><xrefdescription><para>Default State of the Application Monitor</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>State the Application Monitor is set to when the HS application starts.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be HS_STATE_ENABLED or HS_STATE_DISABLED </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="388" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a33bc5a8699766bf6a59a6961793cbf5e" prot="public" static="no">
+        <name>HS_EVENTMON_DEFAULT_STATE</name>
+        <initializer><ref refid="hs__msgdefs_8h_1ab3812a9cc5779e49f0a2e03cc01dd1f5" kindref="member">HS_STATE_ENABLED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000021"><xreftitle>Purpose</xreftitle><xrefdescription><para>Default State of the Event Monitor</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>State the Event Monitor is set to when the HS application starts.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be HS_STATE_ENABLED or HS_STATE_DISABLED </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="399" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a28b6d08ace5f9bc07de63a369dc15ab6" prot="public" static="no">
+        <name>HS_ALIVENESS_DEFAULT_STATE</name>
+        <initializer><ref refid="hs__msgdefs_8h_1ab3812a9cc5779e49f0a2e03cc01dd1f5" kindref="member">HS_STATE_ENABLED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000022"><xreftitle>Purpose</xreftitle><xrefdescription><para>Default State of the Aliveness Indicator</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>State the Aliveness Indicator is set to when the HS application starts.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be HS_STATE_ENABLED or HS_STATE_DISABLED </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="410" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a7a464b979d59658e4cbc97a1cf19e84f" prot="public" static="no">
+        <name>HS_CPUHOG_DEFAULT_STATE</name>
+        <initializer><ref refid="hs__msgdefs_8h_1ab3812a9cc5779e49f0a2e03cc01dd1f5" kindref="member">HS_STATE_ENABLED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000023"><xreftitle>Purpose</xreftitle><xrefdescription><para>Default State of the CPU Hogging Indicator</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>State the CPU Hogging Event Message is set to when the HS application starts.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be HS_STATE_ENABLED or HS_STATE_DISABLED </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="421" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a1b4e13b4b0069fc4b3f3b7ed4494ad85" prot="public" static="no">
+        <name>HS_AMT_FILENAME</name>
+        <initializer>&quot;/cf/apps/hs_amt.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000024"><xreftitle>Purpose</xreftitle><xrefdescription><para>Application Monitor Table (AMT) filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Default file to load the Applications Monitor Table from during a power-on reset sequence</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This string shouldn&apos;t be longer than #OS_MAX_PATH_LEN for the target platform in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="433" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a4ed545435af9a2d25a37ee213c9ba755" prot="public" static="no">
+        <name>HS_EMT_FILENAME</name>
+        <initializer>&quot;/cf/apps/hs_emt.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000025"><xreftitle>Purpose</xreftitle><xrefdescription><para>Event Monitor Table (EMT) filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Default file to load the Event Monitor Table from during a power-on reset sequence</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This string shouldn&apos;t be longer than #OS_MAX_PATH_LEN for the target platform in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="445" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a8b7bc76320f282deb11b06a609ec1861" prot="public" static="no">
+        <name>HS_XCT_FILENAME</name>
+        <initializer>&quot;/cf/apps/hs_xct.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000026"><xreftitle>Purpose</xreftitle><xrefdescription><para>Execution Counter Table (XCT) filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Default file to load the Execution Counters Table from during a power-on reset sequence</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This string shouldn&apos;t be longer than #OS_MAX_PATH_LEN for the target platform in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="457" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1af9d5e4968173e35e34283b867e043c23" prot="public" static="no">
+        <name>HS_MAT_FILENAME</name>
+        <initializer>&quot;/cf/apps/hs_mat.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000027"><xreftitle>Purpose</xreftitle><xrefdescription><para>Message Actions Table (MAT) filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Default file to load the Message Actions Table from during a power-on reset sequence</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This string shouldn&apos;t be longer than #OS_MAX_PATH_LEN for the target platform in question </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="469" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="469" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1abbf2b3f9c5a917b908ceaee3fe108968" prot="public" static="no">
+        <name>HS_UTIL_CALLS_PER_MARK</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000028"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Calls per Mark (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Number of times the Mark function must be called before it actually marks the time. This influences the interval size. The function calling the Mark function may not run at the same rate as the HS cycle (or HS may not want to monitor utilization every cycle) so this the interval to be at least as long as an HS cycle. Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="486" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a9f23ea35d95aa6fb4cdb71c07b52eafd" prot="public" static="no">
+        <name>HS_UTIL_CYCLES_PER_INTERVAL</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000029"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Cycles per Interval (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Number of HS Cycles it takes to complete a CPU Utilization Interval. HS will monitor the utilization after this number of HS wakeup cycles. Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="500" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="500" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1abc722785a578aea1b2fb25b389d80fd9" prot="public" static="no">
+        <name>HS_UTIL_PER_INTERVAL_TOTAL</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000030"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Total Utils Per Interval</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Number of Utils (counts) equal to full utilization. This allows for higher resolution than percentages, and non decimal based values.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="512" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="512" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a0cf7cfce668990deac13c839befb46e5" prot="public" static="no">
+        <name>HS_UTIL_PER_INTERVAL_HOGGING</name>
+        <initializer>9900</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000031"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Hogging Utils Per Interval</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Number of Utils (counts) equal to utilization which is considered hogging during one interval. A greater number of counts is also considered hogging.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than <ref refid="hs__platform__cfg_8h_1abc722785a578aea1b2fb25b389d80fd9" kindref="member">HS_UTIL_PER_INTERVAL_TOTAL</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="523" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="523" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a4f1378f01b9c0acd0b71a53346318a30" prot="public" static="no">
+        <name>HS_UTIL_CONV_MULT1</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000032"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Conversion Factor Multiplication 1 (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>First multiplication conversion factor. Number of idle ticks is multiplied this value first when converting to utils. Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>There may be processor dependent limits on value. Note that all math is done using &quot;uint32&quot; values; it is important that the number of loop iterations in HS_IDLE, times this value, not overflow.</para></simplesect>
+The result of the conversion must be a 32 bit signed integer (between -2147483648 and 2147483647). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="541" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="541" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1ac3f3abff71ebf0f11df537c214167d00" prot="public" static="no">
+        <name>HS_UTIL_CONV_DIV</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000033"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Conversion Factor Division (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Division conversion factor. Number of idle ticks is divided by this value after it has been multiplied by <ref refid="hs__platform__cfg_8h_1a4f1378f01b9c0acd0b71a53346318a30" kindref="member">HS_UTIL_CONV_MULT1</ref>. Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>There may be processor dependent limits on value.</para></simplesect>
+The result of the conversion must be a 32 bit signed integer (between -2147483648 and 2147483647). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="557" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="557" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1af4f042b9199589bcf8801f503da3609f" prot="public" static="no">
+        <name>HS_UTIL_CONV_MULT2</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000034"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Conversion Factor Multiplication 2 (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Second multiplication conversion factor. Number of idle ticks is multiplied this value after being divided by <ref refid="hs__platform__cfg_8h_1ac3f3abff71ebf0f11df537c214167d00" kindref="member">HS_UTIL_CONV_DIV</ref> after being multiplied by <ref refid="hs__platform__cfg_8h_1a4f1378f01b9c0acd0b71a53346318a30" kindref="member">HS_UTIL_CONV_MULT1</ref> when converting to utils. Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>There may be processor dependent limits on value.</para></simplesect>
+The result of the conversion must be a 32 bit signed integer (between -2147483648 and 2147483647). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="574" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="574" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1abe88735a9224b77d7992787a35db391e" prot="public" static="no">
+        <name>HS_UTIL_HOGGING_TIMEOUT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000035"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Hogging Timeout</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Number of intervals for which the hogging limit must be exceeded before hogging is reported.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="586" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1aba1688f8f188354a1e5c3bae75b2679f" prot="public" static="no">
+        <name>HS_UTIL_PEAK_NUM_INTERVAL</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000036"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Peak Utilization Number of Intervals</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Number of intervals over which the peak utilization is determined.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295).</para></simplesect>
+This parameter controls the size of the array which stores previously measured utilization values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="600" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a7f09ecf9e9f61471a3d71c1e245d62f4" prot="public" static="no">
+        <name>HS_UTIL_AVERAGE_NUM_INTERVAL</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000037"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Average Utilization Number of Intervals</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Number of intervals over which the average utilization is computed.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than <ref refid="hs__platform__cfg_8h_1aba1688f8f188354a1e5c3bae75b2679f" kindref="member">HS_UTIL_PEAK_NUM_INTERVAL</ref> . </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="610" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="610" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a6e058e49652df03567c72bad2e7e318a" prot="public" static="no">
+        <name>HS_UTIL_DIAG_MASK</name>
+        <initializer>0xFFFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000038"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Diagnostics Mask (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Count mask for CPU Utilization Calibration. Time will be marked when (Counts &amp; Mask) == Mask Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 32 bit integer (4294967295). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="624" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="624" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a4872135f49c30680867e31b68e2063a7" prot="public" static="no">
+        <name>HS_UTIL_TIME_DIAG_ARRAY_POWER</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000039"><xreftitle>Purpose</xreftitle><xrefdescription><para>CPU Utilization Diagnostics Array Configuration (custom)</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Time will be marked into an array of subseconds. The independant parameter controls the exponent to which 2 is raised to determine the array size. As such, large values will require significant memory usage. Note that these values are only necessarily relevant in the default hs_custom.c.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter must be less than 32 and may not be negative. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="638" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a18a612393a047f79010d214d13cd1f72" prot="public" static="no">
+        <name>HS_UTIL_TIME_DIAG_ARRAY_LENGTH</name>
+        <initializer>(1&lt;&lt;(<ref refid="hs__platform__cfg_8h_1a4872135f49c30680867e31b68e2063a7" kindref="member">HS_UTIL_TIME_DIAG_ARRAY_POWER</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="639" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1afd699792417a20e0ebe7524936967f23" prot="public" static="no">
+        <name>HS_UTIL_TIME_DIAG_ARRAY_MASK</name>
+        <initializer>(<ref refid="hs__platform__cfg_8h_1a18a612393a047f79010d214d13cd1f72" kindref="member">HS_UTIL_TIME_DIAG_ARRAY_LENGTH</ref> - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="640" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hs__platform__cfg_8h_1a0b5a46d7fc78d51c3da082a38ea1c4a2" prot="public" static="no">
+        <name>HS_MISSION_REV</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfshscfg_1_cfshscfg000040"><xreftitle>Purpose</xreftitle><xrefdescription><para>Mission specific version number for HS application</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;hs_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h" line="656" column="9" bodyfile="apps/hs/fsw/platform_inc/hs_platform_cfg.h" bodystart="656" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>hs_platform_cfg.h<sp/>1.3<sp/>2016/08/05<sp/>09:40:27EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>Health<sp/>and<sp/>Safety<sp/>(HS)<sp/>Application<sp/>Platform<sp/>Configuration<sp/>Header<sp/>File</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/><sp/>$Log:<sp/>hs_platform_cfg.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2016/08/05<sp/>09:40:27EDT<sp/>mdeschu<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/>Ticket<sp/>#40:<sp/>HS<sp/>hogging<sp/>initialization</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.2<sp/>2015/11/12<sp/>14:25:20EST<sp/>wmoleski<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/><sp/><sp/>Checking<sp/>in<sp/>changes<sp/>found<sp/>with<sp/>2010<sp/>vs<sp/>2009<sp/>MKS<sp/>files<sp/>for<sp/>the<sp/>cFS<sp/>HS<sp/>Application</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.15<sp/>2015/05/04<sp/>11:59:20EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/><sp/><sp/>Change<sp/>critical<sp/>event<sp/>to<sp/>monitored<sp/>event</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.14<sp/>2015/05/04<sp/>11:00:06EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/><sp/><sp/>Change<sp/>definitions<sp/>for<sp/>MAX_CRITICAL<sp/>to<sp/>MAX_MONITORED</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.13<sp/>2015/05/01<sp/>16:48:50EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/><sp/><sp/>Remove<sp/>critical<sp/>from<sp/>application<sp/>monitor<sp/>descriptions</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.12<sp/>2015/03/03<sp/>12:16:30EST<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>copyright<sp/>information</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.11<sp/>2011/10/17<sp/>16:50:20EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/><sp/><sp/>updated<sp/>calibration<sp/>parameter<sp/>notes</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.10<sp/>2011/10/13<sp/>18:49:51EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/><sp/><sp/>Updated<sp/>for<sp/>changes<sp/>to<sp/>cpu<sp/>utilization<sp/>calibration</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.9<sp/>2011/08/15<sp/>15:42:55EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/><sp/><sp/>Updated<sp/>so<sp/>application<sp/>name<sp/>is<sp/>configurable</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.8<sp/>2010/11/19<sp/>17:58:30EST<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>command<sp/>to<sp/>enable<sp/>and<sp/>disable<sp/>CPU<sp/>Hogging<sp/>Monitoring</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.7<sp/>2010/11/16<sp/>16:36:28EST<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/><sp/><sp/>Move<sp/>HS_MISSION_REV<sp/>from<sp/>local<sp/>header<sp/>to<sp/>platform<sp/>config<sp/>file</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.6<sp/>2010/10/14<sp/>17:45:42EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/><sp/><sp/>Removed<sp/>assumptions<sp/>of<sp/>rate<sp/>of<sp/>utilization<sp/>measurement</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.5<sp/>2010/09/29<sp/>18:28:10EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>Utilization<sp/>Monitoring</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.4<sp/>2010/09/13<sp/>14:41:39EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/><sp/><sp/>add<sp/>apps<sp/>subdir<sp/>to<sp/>default<sp/>table<sp/>path</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2009/08/20<sp/>16:03:02EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/><sp/><sp/>Changed<sp/>watchdog<sp/>timeout<sp/>to<sp/>be<sp/>in<sp/>milliseconds<sp/>rather<sp/>than<sp/>seconds<sp/>(to<sp/>match<sp/>the<sp/>new<sp/>API)</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.2<sp/>2009/05/04<sp/>17:44:35EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/><sp/><sp/>Updated<sp/>based<sp/>on<sp/>actions<sp/>from<sp/>Code<sp/>Walkthrough</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.1<sp/>2009/05/01<sp/>13:52:03EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/><sp/><sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/><sp/><sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/CFS-REPOSITORY/hs/fsw/platform_inc/project.pj</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_hs_platform_cfg_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_hs_platform_cfg_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="hs__platform__cfg_8h_1af97f0b7ab889f1cfbabb166ae17aa5fc" refkind="member"><highlight class="preprocessor">#define<sp/>HS_APP_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;HS&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="hs__platform__cfg_8h_1a35dd6b87cfce1139eb65356a8abcf2fb" refkind="member"><highlight class="preprocessor">#define<sp/>HS_IDLE_TASK_NAME<sp/><sp/>&quot;HS_IDLE_TASK&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="hs__platform__cfg_8h_1ac1d9084f09a74e0608813ff0758093a8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HS_IDLE_TASK_STACK_PTR<sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="hs__platform__cfg_8h_1a9ddb20db59176efa4c73439cca93ffcc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HS_IDLE_TASK_STACK_SIZE<sp/>4096</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="hs__platform__cfg_8h_1aff271ce7e34ff7b92fe1135ae7eaeb04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HS_IDLE_TASK_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="hs__platform__cfg_8h_1a8c4c98db2162226dfa7cf56472c64cf1" refkind="member"><highlight class="preprocessor">#define<sp/>HS_IDLE_TASK_PRIORITY<sp/><sp/><sp/>252</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="hs__platform__cfg_8h_1af18e1bed2f69b71da2ca157877c950a4" refkind="member"><highlight class="preprocessor">#define<sp/>HS_MAX_EXEC_CNT_SLOTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="hs__platform__cfg_8h_1acec142a05a8eeaaa7de5b40a845bfb9a" refkind="member"><highlight class="preprocessor">#define<sp/>HS_MAX_MSG_ACT_TYPES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="hs__platform__cfg_8h_1a00fa7bc1e191b55d7d531fb77ccfcc26" refkind="member"><highlight class="preprocessor">#define<sp/>HS_MAX_MSG_ACT_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="hs__platform__cfg_8h_1abb7a33e42588c9c1144ec3158a11511c" refkind="member"><highlight class="preprocessor">#define<sp/>HS_MAX_MONITORED_APPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="hs__platform__cfg_8h_1a672c805a53473772c6de19c2ae4a7627" refkind="member"><highlight class="preprocessor">#define<sp/>HS_MAX_MONITORED_EVENTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="hs__platform__cfg_8h_1a02102183f216a55ebb72fe5dc1eefa67" refkind="member"><highlight class="preprocessor">#define<sp/>HS_WATCHDOG_TIMEOUT_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>10000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="hs__platform__cfg_8h_1a8a4d90c5cf6cbce9ddd6ce4081af0235" refkind="member"><highlight class="preprocessor">#define<sp/>HS_POST_PROCESSING_DELAY<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="hs__platform__cfg_8h_1a60e9c8756ae0458d8650a95f7eac2abb" refkind="member"><highlight class="preprocessor">#define<sp/>HS_WAKEUP_TIMEOUT<sp/>1200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="hs__platform__cfg_8h_1a98f309ddfe9dc81e42a91969455e9a87" refkind="member"><highlight class="preprocessor">#define<sp/>HS_CPU_ALIVE_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="hs__platform__cfg_8h_1a81157200eab2673639af013da1910990" refkind="member"><highlight class="preprocessor">#define<sp/>HS_CPU_ALIVE_PERIOD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="hs__platform__cfg_8h_1a7eec630401f001ca650fce23548eaf41" refkind="member"><highlight class="preprocessor">#define<sp/>HS_MAX_RESTART_ACTIONS<sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="hs__platform__cfg_8h_1a9e0d58a4fa84e7ab454247b6a473b6ca" refkind="member"><highlight class="preprocessor">#define<sp/>HS_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332" refid="hs__platform__cfg_8h_1a47092ad4c7dea3220588679e1e4cd734" refkind="member"><highlight class="preprocessor">#define<sp/>HS_EVENT_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345" refid="hs__platform__cfg_8h_1a2daf99e02fd26b556666d70831697a22" refkind="member"><highlight class="preprocessor">#define<sp/>HS_WAKEUP_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358" refid="hs__platform__cfg_8h_1a34b218cc037ced277741bc6c6a1c1642" refkind="member"><highlight class="preprocessor">#define<sp/>HS_RESET_TASK_DELAY<sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377" refid="hs__platform__cfg_8h_1ae0de3889e01f7ec7043b8c57596ced38" refkind="member"><highlight class="preprocessor">#define<sp/>HS_STARTUP_SYNC_TIMEOUT<sp/><sp/><sp/>65000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388" refid="hs__platform__cfg_8h_1a2d1e4b38ef494ddeaac5316c7179bf1e" refkind="member"><highlight class="preprocessor">#define<sp/>HS_APPMON_DEFAULT_STATE<sp/><sp/><sp/>HS_STATE_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399" refid="hs__platform__cfg_8h_1a33bc5a8699766bf6a59a6961793cbf5e" refkind="member"><highlight class="preprocessor">#define<sp/>HS_EVENTMON_DEFAULT_STATE<sp/><sp/><sp/>HS_STATE_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410" refid="hs__platform__cfg_8h_1a28b6d08ace5f9bc07de63a369dc15ab6" refkind="member"><highlight class="preprocessor">#define<sp/>HS_ALIVENESS_DEFAULT_STATE<sp/><sp/><sp/>HS_STATE_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421" refid="hs__platform__cfg_8h_1a7a464b979d59658e4cbc97a1cf19e84f" refkind="member"><highlight class="preprocessor">#define<sp/>HS_CPUHOG_DEFAULT_STATE<sp/><sp/><sp/>HS_STATE_ENABLED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433" refid="hs__platform__cfg_8h_1a1b4e13b4b0069fc4b3f3b7ed4494ad85" refkind="member"><highlight class="preprocessor">#define<sp/>HS_AMT_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/hs_amt.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight></codeline>
+<codeline lineno="445" refid="hs__platform__cfg_8h_1a4ed545435af9a2d25a37ee213c9ba755" refkind="member"><highlight class="preprocessor">#define<sp/>HS_EMT_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/hs_emt.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="457" refid="hs__platform__cfg_8h_1a8b7bc76320f282deb11b06a609ec1861" refkind="member"><highlight class="preprocessor">#define<sp/>HS_XCT_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/hs_xct.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469" refid="hs__platform__cfg_8h_1af9d5e4968173e35e34283b867e043c23" refkind="member"><highlight class="preprocessor">#define<sp/>HS_MAT_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/hs_mat.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="486" refid="hs__platform__cfg_8h_1abbf2b3f9c5a917b908ceaee3fe108968" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_CALLS_PER_MARK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="500" refid="hs__platform__cfg_8h_1a9f23ea35d95aa6fb4cdb71c07b52eafd" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_CYCLES_PER_INTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight></codeline>
+<codeline lineno="512" refid="hs__platform__cfg_8h_1abc722785a578aea1b2fb25b389d80fd9" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_PER_INTERVAL_TOTAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight></codeline>
+<codeline lineno="523" refid="hs__platform__cfg_8h_1a0cf7cfce668990deac13c839befb46e5" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_PER_INTERVAL_HOGGING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9900</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"></highlight></codeline>
+<codeline lineno="541" refid="hs__platform__cfg_8h_1a4f1378f01b9c0acd0b71a53346318a30" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_CONV_MULT1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557" refid="hs__platform__cfg_8h_1ac3f3abff71ebf0f11df537c214167d00" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_CONV_DIV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight></codeline>
+<codeline lineno="574" refid="hs__platform__cfg_8h_1af4f042b9199589bcf8801f503da3609f" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_CONV_MULT2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="575"><highlight class="normal"></highlight></codeline>
+<codeline lineno="586" refid="hs__platform__cfg_8h_1abe88735a9224b77d7992787a35db391e" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_HOGGING_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="587"><highlight class="normal"></highlight></codeline>
+<codeline lineno="600" refid="hs__platform__cfg_8h_1aba1688f8f188354a1e5c3bae75b2679f" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_PEAK_NUM_INTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="601"><highlight class="normal"></highlight></codeline>
+<codeline lineno="610" refid="hs__platform__cfg_8h_1a7f09ecf9e9f61471a3d71c1e245d62f4" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_AVERAGE_NUM_INTERVAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="611"><highlight class="normal"></highlight></codeline>
+<codeline lineno="624" refid="hs__platform__cfg_8h_1a6e058e49652df03567c72bad2e7e318a" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_DIAG_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xFFFFFFFF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"></highlight></codeline>
+<codeline lineno="638" refid="hs__platform__cfg_8h_1a4872135f49c30680867e31b68e2063a7" refkind="member"><highlight class="preprocessor">#define<sp/>HS_UTIL_TIME_DIAG_ARRAY_POWER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="639" refid="hs__platform__cfg_8h_1a18a612393a047f79010d214d13cd1f72" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HS_UTIL_TIME_DIAG_ARRAY_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1&lt;&lt;(HS_UTIL_TIME_DIAG_ARRAY_POWER))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="640" refid="hs__platform__cfg_8h_1afd699792417a20e0ebe7524936967f23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HS_UTIL_TIME_DIAG_ARRAY_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(HS_UTIL_TIME_DIAG_ARRAY_LENGTH<sp/>-<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="641"><highlight class="normal"></highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656" refid="hs__platform__cfg_8h_1a0b5a46d7fc78d51c3da082a38ea1c4a2" refkind="member"><highlight class="preprocessor">#define<sp/>HS_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_hs_platform_cfg_h_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/hs/fsw/platform_inc/hs_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

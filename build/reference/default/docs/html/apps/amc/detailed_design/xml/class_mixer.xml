@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_mixer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Mixer</compoundname>
+    <derivedcompoundref refid="class_multirotor_mixer" prot="public" virt="non-virtual">MultirotorMixer</derivedcompoundref>
+    <includes refid="_mixer_8h" local="no">Mixer.h</includes>
+    <innerclass refid="struct_mixer_1_1_mixer_scaler__t" prot="public">Mixer::MixerScaler_t</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_mixer_1a67fe5f496f271116bf6ecfd5285d2ffe" prot="public" static="no">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref>(*</type>
+        <definition>typedef int32(*  Mixer::ControlCallback) (cpuaddr handle, uint8 control_group, uint8 control_index, float &amp;control)</definition>
+        <argsstring>)(cpuaddr handle, uint8 control_group, uint8 control_index, float &amp;control)</argsstring>
+        <name>ControlCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetch a control value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Token passed when the callback is registered. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>control_group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The group to fetch the control from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>control_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The group-relative index to fetch the control from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>control</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The returned control </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if the value was fetched, nonzero otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="160" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_mixer_1aad124dad50f89c91992136275dea28c4" prot="public" static="no" mutable="no">
+        <type><ref refid="class_mixer" kindref="compound">Mixer</ref> *</type>
+        <definition>Mixer* Mixer::m_Next</definition>
+        <argsstring></argsstring>
+        <name>m_Next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>next mixer in a list </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="149" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_mixer_1a389e7f35306cbe9e7f2bb51b5144651e" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_mixer_1a67fe5f496f271116bf6ecfd5285d2ffe" kindref="member">ControlCallback</ref></type>
+        <definition>ControlCallback Mixer::m_ControlCb</definition>
+        <argsstring></argsstring>
+        <name>m_ControlCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>client-supplied callback used when fetching control values </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="213" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.h" bodystart="209" bodyend="-1"/>
+        <referencedby refid="class_mixer_1ae492183513f803721d05f63646f1bb96" compoundref="_mixer_8cpp" startline="56" endline="63">get_control</referencedby>
+        <referencedby refid="class_mixer_1a40abfb73fb20c6cbe15a29978081a44e" compoundref="_mixer_8h" startline="209" endline="209">set_thrust_factor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_mixer_1a18d18543942e246ffe827af7098c7b2e" prot="protected" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1abddffd9b6badf27493baed70e95972b4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">cpuaddr</ref></type>
+        <definition>cpuaddr Mixer::m_CbHandle</definition>
+        <argsstring></argsstring>
+        <name>m_CbHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="214" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.h" bodystart="214" bodyend="-1"/>
+        <referencedby refid="class_mixer_1ae492183513f803721d05f63646f1bb96" compoundref="_mixer_8cpp" startline="56" endline="63">get_control</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mixer_1a63cc05bb95a8576679d9052dc2cb8594" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mixer::Mixer</definition>
+        <argsstring>(ControlCallback control_cb, cpuaddr cb_handle)</argsstring>
+        <name>Mixer</name>
+        <param>
+          <type><ref refid="class_mixer_1a67fe5f496f271116bf6ecfd5285d2ffe" kindref="member">ControlCallback</ref></type>
+          <declname>control_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1abddffd9b6badf27493baed70e95972b4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">cpuaddr</ref></type>
+          <declname>cb_handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>control_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback invoked when reading controls. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="170" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.cpp" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1af8db94e968ba1a3e03ffe9e377e0d6e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Mixer::~Mixer</definition>
+        <argsstring>()</argsstring>
+        <name>~Mixer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="171" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.h" bodystart="171" bodyend="171"/>
+        <references refid="class_mixer_1a7edec3b8cf363ee4d9a5960b5ad70287">get_saturation_status</references>
+        <references refid="class_mixer_1abfd08680054290a14e3a8753e5559986">groups_required</references>
+        <references refid="class_mixer_1ae34eba7df1860261a304427cdb082cb5">mix</references>
+        <references refid="class_mixer_1a66b49147d659eafe6480c9a8a62e2d87">set_trim</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1ae34eba7df1860261a304427cdb082cb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>virtual uint32 Mixer::mix</definition>
+        <argsstring>(float *outputs, uint32 space, uint16 *status_reg)=0</argsstring>
+        <name>mix</name>
+        <reimplementedby refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c">mix</reimplementedby>
+        <param>
+          <type>float *</type>
+          <declname>outputs</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>space</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref> *</type>
+          <declname>status_reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform the mixing function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array into which mixed output(s) should be placed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of available entries in the output array; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of entries in the output array that were populated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="180" column="1"/>
+        <referencedby refid="class_mixer_1af8db94e968ba1a3e03ffe9e377e0d6e9" compoundref="_mixer_8h" startline="171" endline="171">~Mixer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a7edec3b8cf363ee4d9a5960b5ad70287" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>virtual uint16 Mixer::get_saturation_status</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get_saturation_status</name>
+        <reimplementedby refid="class_multirotor_mixer_1a77589d179cc9c51a43053f9f3f93937b">get_saturation_status</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the saturation status.</para><para><simplesect kind="return"><para>Integer bitmask containing saturation_status from multirotor_motor_limits.msg . </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="187" column="1"/>
+        <referencedby refid="class_mixer_1af8db94e968ba1a3e03ffe9e377e0d6e9" compoundref="_mixer_8h" startline="171" endline="171">~Mixer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1abfd08680054290a14e3a8753e5559986" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Mixer::groups_required</definition>
+        <argsstring>(uint32 &amp;groups)=0</argsstring>
+        <name>groups_required</name>
+        <reimplementedby refid="class_multirotor_mixer_1a7c7362c6416c1b854b44e8b9f82bcfd6">groups_required</reimplementedby>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> &amp;</type>
+          <declname>groups</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Analyses the mix configuration and updates a bitmask of groups that are required.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>groups</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A bitmask of groups (0-31) that the mixer requires. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="195" column="1"/>
+        <referencedby refid="class_mixer_1af8db94e968ba1a3e03ffe9e377e0d6e9" compoundref="_mixer_8h" startline="171" endline="171">~Mixer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a66b49147d659eafe6480c9a8a62e2d87" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>virtual uint32 Mixer::set_trim</definition>
+        <argsstring>(float trim)=0</argsstring>
+        <name>set_trim</name>
+        <reimplementedby refid="class_multirotor_mixer_1abe62e269eb3816b4ad4638fc74e9dd0c">set_trim</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>trim</declname>
+        </param>
+        <briefdescription>
+<para>Set trim offset for this mixer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of outputs this mixer feeds to </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="202" column="1"/>
+        <referencedby refid="class_mixer_1af8db94e968ba1a3e03ffe9e377e0d6e9" compoundref="_mixer_8h" startline="171" endline="171">~Mixer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a40abfb73fb20c6cbe15a29978081a44e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Mixer::set_thrust_factor</definition>
+        <argsstring>(float val)</argsstring>
+        <name>set_thrust_factor</name>
+        <reimplementedby refid="class_multirotor_mixer_1a38799fea726a35e0668302cb5472ef68">set_thrust_factor</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="209" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.h" bodystart="209" bodyend="209"/>
+        <references refid="class_mixer_1a389e7f35306cbe9e7f2bb51b5144651e" compoundref="_mixer_8h" startline="209">m_ControlCb</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_mixer_1ae492183513f803721d05f63646f1bb96" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Mixer::get_control</definition>
+        <argsstring>(uint8 group, uint8 index)</argsstring>
+        <name>get_control</name>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>group</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invoke the client callback to fetch a control value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Control group to fetch from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Control index to fetch. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The control value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="223" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.cpp" bodystart="56" bodyend="63"/>
+        <references refid="class_mixer_1a18d18543942e246ffe827af7098c7b2e" compoundref="_mixer_8h" startline="214">m_CbHandle</references>
+        <references refid="class_mixer_1a389e7f35306cbe9e7f2bb51b5144651e" compoundref="_mixer_8h" startline="209">m_ControlCb</references>
+        <referencedby refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" compoundref="_multirotor_mixer_8cpp" startline="86" endline="298">MultirotorMixer::mix</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_mixer_1a3fd2f4fb9d64e58fb21ef683d1b05c16" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Mixer::scale</definition>
+        <argsstring>(const MixerScaler_t &amp;scaler, float input)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>const <ref refid="struct_mixer_1_1_mixer_scaler__t" kindref="compound">MixerScaler_t</ref> &amp;</type>
+          <declname>scaler</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform simpler linear scaling.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scaler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scaler configuration. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be scaled. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The scaled value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="232" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.cpp" bodystart="71" bodyend="94"/>
+        <references refid="struct_mixer_1_1_mixer_scaler__t_1af5dd408b859614e2ecd9dee5a14db160" compoundref="_mixer_8h" startline="145">Mixer::MixerScaler_t::max_output</references>
+        <references refid="struct_mixer_1_1_mixer_scaler__t_1aa5340c1d7a4ef559ffbe02df3a19c2ac" compoundref="_mixer_8h" startline="144">Mixer::MixerScaler_t::min_output</references>
+        <references refid="struct_mixer_1_1_mixer_scaler__t_1abf344325565f71f3634af35582deb4b5" compoundref="_mixer_8h" startline="141">Mixer::MixerScaler_t::negative_scale</references>
+        <references refid="struct_mixer_1_1_mixer_scaler__t_1a4165f359bb5b678c698595e355318128" compoundref="_mixer_8h" startline="143">Mixer::MixerScaler_t::offset</references>
+        <references refid="struct_mixer_1_1_mixer_scaler__t_1add8f87e712443f508f59fb09c3b2e9b5" compoundref="_mixer_8h" startline="142">Mixer::MixerScaler_t::positive_scale</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a08bd3788e2a1db3f9a1b207fd5fa643d" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 Mixer::scale_check</definition>
+        <argsstring>(const MixerScaler_t &amp;scaler)</argsstring>
+        <name>scale_check</name>
+        <param>
+          <type>const <ref refid="struct_mixer_1_1_mixer_scaler__t" kindref="compound">MixerScaler_t</ref> &amp;</type>
+          <declname>scaler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate a scaler</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scaler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scaler to be validated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if good, nonzero otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="240" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.cpp" bodystart="102" bodyend="125"/>
+        <references refid="struct_mixer_1_1_mixer_scaler__t_1af5dd408b859614e2ecd9dee5a14db160" compoundref="_mixer_8h" startline="145">Mixer::MixerScaler_t::max_output</references>
+        <references refid="struct_mixer_1_1_mixer_scaler__t_1aa5340c1d7a4ef559ffbe02df3a19c2ac" compoundref="_mixer_8h" startline="144">Mixer::MixerScaler_t::min_output</references>
+        <references refid="struct_mixer_1_1_mixer_scaler__t_1a4165f359bb5b678c698595e355318128" compoundref="_mixer_8h" startline="143">Mixer::MixerScaler_t::offset</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mixer_1a699b3e3617487f0c2ae7898221a3e685" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Mixer::Mixer</definition>
+        <argsstring>(const Mixer &amp;)</argsstring>
+        <name>Mixer</name>
+        <param>
+          <type>const <ref refid="class_mixer" kindref="compound">Mixer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="245" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mixer_1a62457ee4413b196efd2584234a0293dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_mixer" kindref="compound">Mixer</ref> &amp;</type>
+        <definition>Mixer&amp; Mixer::operator=</definition>
+        <argsstring>(const Mixer &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_mixer" kindref="compound">Mixer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/Mixer.h" line="246" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Abstract class defining a mixer mixing zero or more inputs to one or more outputs. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="19">
+        <label>Mixer</label>
+        <link refid="class_mixer"/>
+      </node>
+      <node id="20">
+        <label>MultirotorMixer</label>
+        <link refid="class_multirotor_mixer"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="21">
+        <label>Mixer</label>
+        <link refid="class_mixer"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>m_Next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/amc/fsw/src/mixer/Mixer.h" line="138" column="1" bodyfile="apps/amc/fsw/src/mixer/Mixer.h" bodystart="137" bodyend="247"/>
+    <listofallmembers>
+      <member refid="class_mixer_1a67fe5f496f271116bf6ecfd5285d2ffe" prot="public" virt="non-virtual"><scope>Mixer</scope><name>ControlCallback</name></member>
+      <member refid="class_mixer_1ae492183513f803721d05f63646f1bb96" prot="protected" virt="non-virtual"><scope>Mixer</scope><name>get_control</name></member>
+      <member refid="class_mixer_1a7edec3b8cf363ee4d9a5960b5ad70287" prot="public" virt="pure-virtual"><scope>Mixer</scope><name>get_saturation_status</name></member>
+      <member refid="class_mixer_1abfd08680054290a14e3a8753e5559986" prot="public" virt="pure-virtual"><scope>Mixer</scope><name>groups_required</name></member>
+      <member refid="class_mixer_1a18d18543942e246ffe827af7098c7b2e" prot="protected" virt="non-virtual"><scope>Mixer</scope><name>m_CbHandle</name></member>
+      <member refid="class_mixer_1a389e7f35306cbe9e7f2bb51b5144651e" prot="protected" virt="non-virtual"><scope>Mixer</scope><name>m_ControlCb</name></member>
+      <member refid="class_mixer_1aad124dad50f89c91992136275dea28c4" prot="public" virt="non-virtual"><scope>Mixer</scope><name>m_Next</name></member>
+      <member refid="class_mixer_1ae34eba7df1860261a304427cdb082cb5" prot="public" virt="pure-virtual"><scope>Mixer</scope><name>mix</name></member>
+      <member refid="class_mixer_1a63cc05bb95a8576679d9052dc2cb8594" prot="public" virt="non-virtual"><scope>Mixer</scope><name>Mixer</name></member>
+      <member refid="class_mixer_1a699b3e3617487f0c2ae7898221a3e685" prot="private" virt="non-virtual"><scope>Mixer</scope><name>Mixer</name></member>
+      <member refid="class_mixer_1a62457ee4413b196efd2584234a0293dd" prot="private" virt="non-virtual"><scope>Mixer</scope><name>operator=</name></member>
+      <member refid="class_mixer_1a3fd2f4fb9d64e58fb21ef683d1b05c16" prot="protected" virt="non-virtual"><scope>Mixer</scope><name>scale</name></member>
+      <member refid="class_mixer_1a08bd3788e2a1db3f9a1b207fd5fa643d" prot="protected" virt="non-virtual"><scope>Mixer</scope><name>scale_check</name></member>
+      <member refid="class_mixer_1a40abfb73fb20c6cbe15a29978081a44e" prot="public" virt="virtual"><scope>Mixer</scope><name>set_thrust_factor</name></member>
+      <member refid="class_mixer_1a66b49147d659eafe6480c9a8a62e2d87" prot="public" virt="pure-virtual"><scope>Mixer</scope><name>set_trim</name></member>
+      <member refid="class_mixer_1af8db94e968ba1a3e03ffe9e377e0d6e9" prot="public" virt="virtual"><scope>Mixer</scope><name>~Mixer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

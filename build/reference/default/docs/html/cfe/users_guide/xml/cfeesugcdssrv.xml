@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeesugcdssrv" kind="page">
+    <compoundname>cfeesugcdssrv</compoundname>
+    <title>Critical Data Store Service</title>
+    <detaileddescription>
+<para>Some missions are required, for health, safety and mission success criteria, to survive Processor Resets. These mission requirements frequently flow down to Attitude Control and/or Command and Data Handling requirements that force an Application developer to design a mechanism for retaining software state information through a Processor Reset. The cFE provides the Critical Data Store service to assist the developer in meeting these requirements.</para><para>The Critical Data Store is an area of memory that is not cleared during a Processor Reset. In addition, the contents of memory are validated when accessed with a Data Integrity Value that helps to ensure the contents have not been corrupted. Each processor platform, through the design of its Board Support Package, can implement this area of memory in a number of ways to ensure the contents survive a Processor Reset. Applications can allocate a section of this memory for their use in a way similar to the <ref refid="cfetblovr" kindref="compound">cFE Table Services Overview</ref>.</para><para>When an Application registers a Critical Data Store (CDS), the Executive Services allocates a section of the Critical Data Store memory for the application&apos;s use and assigns the Application specified name to the memory area. The operator can find and learn the characteristics of these Critical Data Stores by using the <ref refid="cfe__es__msg_8h_1a5f11957f91b93fb8956dec93cb200560" kindref="member">Dump CDS Registry Command. </ref> This command will dump the contents of the CDS Registry maintained by the Executive Services into a file that can be downlinked and examined by the operator.</para><para>The CDS Registry dump will identify the following information for each registered CDS:</para><para><itemizedlist>
+<listitem>
+<para><bold>Handle</bold> - the numeric identifier used by an Application to access the contents of the CDS <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Size</bold> - the number of bytes allocated to the specified CDS <linebreak/>
+ </para></listitem>
+<listitem>
+<para><bold>Table Flag</bold> - a flag that indicates whether the CDS is associated with a <ref refid="cfetblugcritical" kindref="compound">Critical Tables</ref> (when non-zero) or not (when equal to zero). </para></listitem>
+<listitem>
+<para><bold>Name</bold> - a processor specific name that uniquely identifies the CDS. The name comes in two parts, <computeroutput>&quot;AppName.CDSName&quot;</computeroutput>. <computeroutput>AppName</computeroutput> identifies which Application registered the CDS. <computeroutput>CDSName</computeroutput> is the name the Application assigned to the CDS. </para></listitem>
+</itemizedlist>
+</para><para>The format of the CDS Registry Dump File is a cFE Standard File header (see <ref refid="struct_c_f_e___f_s___header__t" kindref="compound">CFE_FS_Header_t</ref>) followed by one or more CDS Registry Dump File Records (see <ref refid="struct_c_f_e___e_s___c_d_s_reg_dump_rec__t" kindref="compound">CFE_ES_CDSRegDumpRec_t</ref>).</para><para>Next: <ref refid="cfeesugmempoolsrv" kindref="compound">Memory Pool Service</ref> <linebreak/>
+ Prev: <ref refid="cfeesugperfsrv" kindref="compound">Performance Data Collection Service</ref> <linebreak/>
+ Up To: <ref refid="cfeesovr" kindref="compound">cFE Executive Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

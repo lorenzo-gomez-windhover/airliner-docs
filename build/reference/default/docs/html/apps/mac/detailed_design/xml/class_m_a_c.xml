@@ -1,0 +1,1428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_m_a_c" kind="class" language="C++" prot="public">
+    <compoundname>MAC</compoundname>
+    <includes refid="mac__app_8hpp" local="no">mac_app.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_m_a_c_1ae776a7bda3eab9dae0c7c02c226cc0cc" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_f_e___e_v_s___bin_filter__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_BinFilter_t</ref></type>
+        <definition>CFE_EVS_BinFilter_t MAC::EventTbl[MAC_EVT_CNT]</definition>
+        <argsstring>[MAC_EVT_CNT]</argsstring>
+        <name>EventTbl</name>
+        <briefdescription>
+<para>CFE Event Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="222" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="222" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a6b3ccea970d13a67fcd1445fee2fda1e" compoundref="mac__app_8cpp" startline="86" endline="130">InitEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a258c5034198bfe2036dc3b884aa5aa23" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t MAC::SchPipeId</definition>
+        <argsstring></argsstring>
+        <name>SchPipeId</name>
+        <briefdescription>
+<para>Scheduling Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="225" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="225" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a4aba8bc15a567050c8e05ed674ded621" compoundref="mac__app_8cpp" startline="137" endline="313">InitPipe</referencedby>
+        <referencedby refid="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" compoundref="mac__app_8cpp" startline="441" endline="501">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a1945b684a2075c9aa8097b6457571e17" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t MAC::CmdPipeId</definition>
+        <argsstring></argsstring>
+        <name>CmdPipeId</name>
+        <briefdescription>
+<para>Command Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="228" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="228" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a4aba8bc15a567050c8e05ed674ded621" compoundref="mac__app_8cpp" startline="137" endline="313">InitPipe</referencedby>
+        <referencedby refid="class_m_a_c_1aa797020befa5b66153559668d451e15d" compoundref="mac__app_8cpp" startline="626" endline="667">ProcessNewCmds</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1abc40e6d6126728bf5878bc4397d1507d" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t MAC::DataPipeId</definition>
+        <argsstring></argsstring>
+        <name>DataPipeId</name>
+        <briefdescription>
+<para>Data Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="231" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="231" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a4aba8bc15a567050c8e05ed674ded621" compoundref="mac__app_8cpp" startline="137" endline="313">InitPipe</referencedby>
+        <referencedby refid="class_m_a_c_1abaa9e8d8f217c4546c704d59f2a3bf35" compoundref="mac__app_8cpp" startline="509" endline="618">ProcessIncomingData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1aab42e50878733788cc1a59f1d6694956" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 MAC::uiRunStatus</definition>
+        <argsstring></argsstring>
+        <name>uiRunStatus</name>
+        <briefdescription>
+<para>Task Run Status. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="236" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="236" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a6e53fa12eb5e515a80d8216b059fede1" compoundref="mac__app_8cpp" startline="782" endline="832">AppMain</referencedby>
+        <referencedby refid="class_m_a_c_1abaa9e8d8f217c4546c704d59f2a3bf35" compoundref="mac__app_8cpp" startline="509" endline="618">ProcessIncomingData</referencedby>
+        <referencedby refid="class_m_a_c_1aa797020befa5b66153559668d451e15d" compoundref="mac__app_8cpp" startline="626" endline="667">ProcessNewCmds</referencedby>
+        <referencedby refid="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" compoundref="mac__app_8cpp" startline="441" endline="501">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a489d5ebc67d7504de6d40ebb7225f70f" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t MAC::ParamTblHdl</definition>
+        <argsstring></argsstring>
+        <name>ParamTblHdl</name>
+        <briefdescription>
+<para>Param Table Handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="241" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="241" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1affd1e1e672fc02613a3908581e97e080" compoundref="mac__config__utils_8cpp" startline="431" endline="473">AcquireConfigPointers</referencedby>
+        <referencedby refid="class_m_a_c_1af070d9da92e27b578f5100d320c9ad5e" compoundref="mac__config__utils_8cpp" startline="50" endline="88">InitConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1ae797a0e7fdc50e034fb29dc1a25dc7f3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_a_c___param_tbl__t" kindref="compound">MAC_ParamTbl_t</ref> *</type>
+        <definition>MAC_ParamTbl_t* MAC::ParamTblPtr</definition>
+        <argsstring></argsstring>
+        <name>ParamTblPtr</name>
+        <briefdescription>
+<para>Param Table Pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="244" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="244" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1affd1e1e672fc02613a3908581e97e080" compoundref="mac__config__utils_8cpp" startline="431" endline="473">AcquireConfigPointers</referencedby>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1a5d65ed099a3f4ab1012a0939640a5c98" compoundref="mac__app_8cpp" startline="1182" endline="1239">UpdateParams</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1aa508a1ddc19ba9be12772781f69d7b3b" prot="public" static="no" mutable="no">
+        <type>PX4_ActuatorControlsMsg_t</type>
+        <definition>PX4_ActuatorControlsMsg_t MAC::m_ActuatorControls0</definition>
+        <argsstring></argsstring>
+        <name>m_ActuatorControls0</name>
+        <briefdescription>
+<para>Output Data published at the end of cycle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="247" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="247" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+        <referencedby refid="class_m_a_c_1a5b16256419dad3acab6834e12535ce28" compoundref="mac__app_8cpp" startline="727" endline="731">SendActuatorControls</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a3fa32b8d878bc725e237d96b228570cb" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_a_c___hk_tlm__t" kindref="compound">MAC_HkTlm_t</ref></type>
+        <definition>MAC_HkTlm_t MAC::HkTlm</definition>
+        <argsstring></argsstring>
+        <name>HkTlm</name>
+        <briefdescription>
+<para>Housekeeping Telemetry for downlink. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="250" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="250" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+        <referencedby refid="class_m_a_c_1ac84313f530ec12e9fd99f09673d2bd4b" compoundref="mac__app_8cpp" startline="674" endline="708">ProcessAppCmds</referencedby>
+        <referencedby refid="class_m_a_c_1aa797020befa5b66153559668d451e15d" compoundref="mac__app_8cpp" startline="626" endline="667">ProcessNewCmds</referencedby>
+        <referencedby refid="class_m_a_c_1a550036dcd5888e21e575a69f0784d06a" compoundref="mac__app_8cpp" startline="715" endline="719">ReportHousekeeping</referencedby>
+        <referencedby refid="class_m_a_c_1aa6d5286a9472e19b87375a5a1cdaf00d" compoundref="mac__app_8cpp" startline="738" endline="763">VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a20e06e7eb46da29e6d105e908322f7c0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_a_c___current_value_table__t" kindref="compound">MAC_CurrentValueTable_t</ref></type>
+        <definition>MAC_CurrentValueTable_t MAC::CVT</definition>
+        <argsstring></argsstring>
+        <name>CVT</name>
+        <briefdescription>
+<para>Current value table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="253" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="253" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a9a16e573567759fea28c79fcded7660c" compoundref="mac__app_8cpp" startline="942" endline="1043">ControlAttitude</referencedby>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+        <referencedby refid="class_m_a_c_1a5c86ef95919c3b83256b7f0f95384ea6" compoundref="mac__app_8cpp" startline="1168" endline="1180">PidAttenuations</referencedby>
+        <referencedby refid="class_m_a_c_1abaa9e8d8f217c4546c704d59f2a3bf35" compoundref="mac__app_8cpp" startline="509" endline="618">ProcessIncomingData</referencedby>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1ae8cf8adffc45ddba1625f9f5b0a63668" prot="public" static="no" mutable="no">
+        <type>math::Vector3F</type>
+        <definition>math::Vector3F MAC::m_AngularRatesPrevious</definition>
+        <argsstring></argsstring>
+        <name>m_AngularRatesPrevious</name>
+        <briefdescription>
+<para>Previous cycle rates. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="256" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="256" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1ae9884a45a6ece70955e5f29b5db43b7c" prot="public" static="no" mutable="no">
+        <type>math::Vector3F</type>
+        <definition>math::Vector3F MAC::m_AngularRatesSetpointPrevious</definition>
+        <argsstring></argsstring>
+        <name>m_AngularRatesSetpointPrevious</name>
+        <briefdescription>
+<para>Previous cycle rates setpoint. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="259" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="259" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a60aa132e1a57b0602c7153c12ccd3c80" prot="public" static="no" mutable="no">
+        <type>math::Vector3F</type>
+        <definition>math::Vector3F MAC::m_AngularRatesSetpoint</definition>
+        <argsstring></argsstring>
+        <name>m_AngularRatesSetpoint</name>
+        <briefdescription>
+<para>Current cycle rates setpoint. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="262" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="262" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a9a16e573567759fea28c79fcded7660c" compoundref="mac__app_8cpp" startline="942" endline="1043">ControlAttitude</referencedby>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a6cd8fd88fa92267391b0e6ff782db9ed" prot="public" static="no" mutable="no">
+        <type>math::Vector3F</type>
+        <definition>math::Vector3F MAC::m_AngularRatesIntegralError</definition>
+        <argsstring></argsstring>
+        <name>m_AngularRatesIntegralError</name>
+        <briefdescription>
+<para>Current cycle rates integral error. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="265" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="265" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1aaa6fee46c5696b8df4246925ad5fa5fb" prot="public" static="no" mutable="no">
+        <type>math::Vector3F</type>
+        <definition>math::Vector3F MAC::m_AttControl</definition>
+        <argsstring></argsstring>
+        <name>m_AttControl</name>
+        <briefdescription>
+<para>Current cycle calculated rates. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="268" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="268" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a15c61b20a3afbf2869eb8e954be6dfe2" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::m_SelectedGyro</definition>
+        <argsstring></argsstring>
+        <name>m_SelectedGyro</name>
+        <briefdescription>
+<para>Currently used gyro device. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="271" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="271" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1abaa9e8d8f217c4546c704d59f2a3bf35" compoundref="mac__app_8cpp" startline="509" endline="618">ProcessIncomingData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1ad85df3cf497cf4d001ca4ec2b0abb6a9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MAC::m_ThrustSp</definition>
+        <argsstring></argsstring>
+        <name>m_ThrustSp</name>
+        <briefdescription>
+<para>thrust setpoint </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="274" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="274" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a9a16e573567759fea28c79fcded7660c" compoundref="mac__app_8cpp" startline="942" endline="1043">ControlAttitude</referencedby>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_a_c_1a6840e7f79ca5b22851bef6ac464f90e6" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_a_c___params__t" kindref="compound">MAC_Params_t</ref></type>
+        <definition>MAC_Params_t MAC::m_Params</definition>
+        <argsstring></argsstring>
+        <name>m_Params</name>
+        <briefdescription>
+<para>Locally stored copy of params. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="277" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="277" bodyend="-1"/>
+        <referencedby refid="class_m_a_c_1a9a16e573567759fea28c79fcded7660c" compoundref="mac__app_8cpp" startline="942" endline="1043">ControlAttitude</referencedby>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+        <referencedby refid="class_m_a_c_1a5d65ed099a3f4ab1012a0939640a5c98" compoundref="mac__app_8cpp" startline="1182" endline="1239">UpdateParams</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_a_c_1a3fefccc59b40a218773b21b5280adb88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MAC::MAC</definition>
+        <argsstring>()</argsstring>
+        <name>MAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="218" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a9f7b01d1658bc5b8af3d1d67aea7af31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MAC::~MAC</definition>
+        <argsstring>()</argsstring>
+        <name>~MAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="219" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a6e53fa12eb5e515a80d8216b059fede1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::AppMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>CFS PWM Motor Controller Task (<ref refid="class_m_a_c" kindref="compound">MAC</ref>) application entry point. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>CFS PWM Motor Controller Task application entry point. This function performs app initialization, then waits for the cFE ES Startup Sync, then executes the RPR main processing loop.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>If there is an unrecoverable failure during initialization the main loop is never executed and the application will exit. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="292" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="782" bodyend="832"/>
+        <references refid="class_m_a_c_1affd1e1e672fc02613a3908581e97e080" compoundref="mac__config__utils_8cpp" startline="431" endline="473">AcquireConfigPointers</references>
+        <references refid="cfe__es_8h_1abeabe0f94cccfa5bfcfc2f43796da8d1">CFE_ES_APP_ERROR</references>
+        <references refid="cfe__es_8h_1a033dfcc82849cfb9a474a2cece5c9803">CFE_ES_APP_RUN</references>
+        <references refid="cfe__es__api_8c_1ad5d888f9bca5038624a04d04efce8325">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es__api_8c_1a426ef8e1796ccebba16c63c8e86fb842">CFE_ES_RegisterApp</references>
+        <references refid="cfe__es__api_8c_1ae8598bcba38a594d1c868924999da953">CFE_ES_RunLoop</references>
+        <references refid="cfe__es__api_8c_1a7dc343ea775a0e5773ecdf700581d548">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_m_a_c_1a555140bec351c759bdb2068f536a4168" compoundref="mac__app_8cpp" startline="367" endline="433">InitApp</references>
+        <references refid="mac__perfids_8h_1a626650ee113f28fab13c3f29d9d8e8d8" compoundref="mac__perfids_8h" startline="8">MAC_MAIN_TASK_PERF_ID</references>
+        <references refid="mac__platform__cfg_8h_1a8f6b706a87ec2702485ed80df8a88b89" compoundref="mac__platform__cfg_8h" startline="49">MAC_SCH_PIPE_PEND_TIME</references>
+        <references refid="mac__platform__cfg_8h_1a3d64ca4ddcb2fb9c79d556f6b8f2880b" compoundref="mac__platform__cfg_8h" startline="96">MAC_STARTUP_TIMEOUT_MSEC</references>
+        <references refid="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" compoundref="mac__app_8cpp" startline="441" endline="501">RcvSchPipeMsg</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="class_m_a_c_1aab42e50878733788cc1a59f1d6694956" compoundref="mac__app_8hpp" startline="236">uiRunStatus</references>
+        <referencedby refid="mac__app_8cpp_1a2fd1af6e3da27def368109c614e67b34" compoundref="mac__app_8cpp" startline="771" endline="774">MAC_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a555140bec351c759bdb2068f536a4168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::InitApp</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitApp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the CFS PWM Motor Controller (<ref refid="class_m_a_c" kindref="compound">MAC</ref>) application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>PWM Motor Controller application initialization routine. This function performs all the required startup steps to initialize (or restore from CDS) <ref refid="class_m_a_c" kindref="compound">MAC</ref> data structures and get the application registered with the cFE services so it can begin to receive command messages and send events.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="7" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__es_8h_1a426ef8e1796ccebba16c63c8e86fb842" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterApp</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #MAC_InitEvent  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #MAC_InitPipe  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #MAC_InitData  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #MAC_InitConfigTbl  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_TaskInstallDeleteHandler</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="318" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="367" bodyend="433"/>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_m_a_c_1af070d9da92e27b578f5100d320c9ad5e" compoundref="mac__config__utils_8cpp" startline="50" endline="88">InitConfigTbl</references>
+        <references refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</references>
+        <references refid="class_m_a_c_1a6b3ccea970d13a67fcd1445fee2fda1e" compoundref="mac__app_8cpp" startline="86" endline="130">InitEvent</references>
+        <references refid="class_m_a_c_1a4aba8bc15a567050c8e05ed674ded621" compoundref="mac__app_8cpp" startline="137" endline="313">InitPipe</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a234d3d3f6448dfd7a4dd3a12110d44c6" compoundref="mac__events_8h" startline="108">MAC_INIT_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5acedf9bfb202cf4750f543b6f19549b3c" compoundref="mac__events_8h" startline="82">MAC_INIT_INF_EID</references>
+        <references refid="mac__version_8h_1a171fb63fae346c29b927562221c36fb7" compoundref="mac__version_8h" startline="53">MAC_MAJOR_VERSION</references>
+        <references refid="mac__version_8h_1ac862ac1bfb45051ebf4813c0206bfdef" compoundref="mac__version_8h" startline="67">MAC_MINOR_VERSION</references>
+        <references refid="mac__platform__cfg_8h_1ab5fb598d4e1f61adc273a6047b3287be" compoundref="mac__platform__cfg_8h" startline="25">MAC_MISSION_REV</references>
+        <references refid="mac__version_8h_1a48eb0b9bd98eece2f367358d2284248d" compoundref="mac__version_8h" startline="81">MAC_REVISION</references>
+        <referencedby refid="class_m_a_c_1a6e53fa12eb5e515a80d8216b059fede1" compoundref="mac__app_8cpp" startline="782" endline="832">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a6b3ccea970d13a67fcd1445fee2fda1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::InitEvent</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitEvent</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Event Services and Event tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup cFE Event Services for use by the <ref refid="class_m_a_c" kindref="compound">MAC</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="336" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="86" bodyend="130"/>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1a9c74cb368c56aff83d050a4807132460">CFE_EVS_BINARY_FILTER</references>
+        <references refid="cfe__evs_8h_1a26a77de85eafef643d4dcbfdf7b77422">CFE_EVS_NO_FILTER</references>
+        <references refid="cfe__evs_8c_1a991c19d964b501bf0908bb60812fda28">CFE_EVS_Register</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1a41a96a173a28d042e012dce9bebf793e">CFE_EVS_BinFilter_t::EventID</references>
+        <references refid="class_m_a_c_1ae776a7bda3eab9dae0c7c02c226cc0cc" compoundref="mac__app_8hpp" startline="222">EventTbl</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5af3fb27f068f41207a22652c360f1e43f" compoundref="mac__events_8h" startline="95">MAC_CMD_INF_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5af7cb52dee5de9bf659e67bdc32fbbe3e" compoundref="mac__events_8h" startline="121">MAC_CONFIG_TABLE_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5afd38cf76a72511488269c058c9438e72" compoundref="mac__events_8h" startline="175">MAC_EVT_CNT</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a2ecde194df97825fe66189c145887d66" compoundref="mac__events_8h" startline="66">MAC_INF_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a234d3d3f6448dfd7a4dd3a12110d44c6" compoundref="mac__events_8h" startline="108">MAC_INIT_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5acedf9bfb202cf4750f543b6f19549b3c" compoundref="mac__events_8h" startline="82">MAC_INIT_INF_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5ab21c9219e28f0a3be1647e328fa07388" compoundref="mac__events_8h" startline="147">MAC_MSGID_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a48301bd18268b7fc1df3775c3b120c54" compoundref="mac__events_8h" startline="160">MAC_MSGLEN_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a61db44ef7b68517ab652fa559cc6bd8b" compoundref="mac__events_8h" startline="134">MAC_PIPE_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a4596da5bba27a2b99363efc83c08a32b" compoundref="mac__events_8h" startline="54">MAC_RESERVED_EID</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1ab9881e02d2317fe2205379a25bc679b2">CFE_EVS_BinFilter_t::Mask</references>
+        <referencedby refid="class_m_a_c_1a555140bec351c759bdb2068f536a4168" compoundref="mac__app_8cpp" startline="367" endline="433">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global variables used by <ref refid="class_m_a_c" kindref="compound">MAC</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to initialize the <ref refid="class_m_a_c" kindref="compound">MAC</ref> application data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="354" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="320" bodyend="360"/>
+        <references refid="struct_m_a_c___current_value_table__t_1abcb996276a24f8c243e2a32dcdc169d2" compoundref="mac__app_8hpp" startline="101">MAC_CurrentValueTable_t::Armed</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a94073b48cd63d00d2476bfa6e4e0a9fc" compoundref="mac__app_8hpp" startline="104">MAC_CurrentValueTable_t::BatteryStatus</references>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0">CFE_SB_InitMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a4fc529e4a8c52e434d7bfc06c8d9ce8a" compoundref="mac__app_8hpp" startline="107">MAC_CurrentValueTable_t::ControlState</references>
+        <references refid="class_m_a_c_1a20e06e7eb46da29e6d105e908322f7c0" compoundref="mac__app_8hpp" startline="253">CVT</references>
+        <references refid="class_m_a_c_1a3fa32b8d878bc725e237d96b228570cb" compoundref="mac__app_8hpp" startline="250">HkTlm</references>
+        <references refid="class_m_a_c_1aa508a1ddc19ba9be12772781f69d7b3b" compoundref="mac__app_8hpp" startline="247">m_ActuatorControls0</references>
+        <references refid="class_m_a_c_1a6cd8fd88fa92267391b0e6ff782db9ed" compoundref="mac__app_8hpp" startline="265">m_AngularRatesIntegralError</references>
+        <references refid="class_m_a_c_1ae8cf8adffc45ddba1625f9f5b0a63668" compoundref="mac__app_8hpp" startline="256">m_AngularRatesPrevious</references>
+        <references refid="class_m_a_c_1a60aa132e1a57b0602c7153c12ccd3c80" compoundref="mac__app_8hpp" startline="262">m_AngularRatesSetpoint</references>
+        <references refid="class_m_a_c_1ae9884a45a6ece70955e5f29b5db43b7c" compoundref="mac__app_8hpp" startline="259">m_AngularRatesSetpointPrevious</references>
+        <references refid="class_m_a_c_1aaa6fee46c5696b8df4246925ad5fa5fb" compoundref="mac__app_8hpp" startline="268">m_AttControl</references>
+        <references refid="class_m_a_c_1ad85df3cf497cf4d001ca4ec2b0abb6a9" compoundref="mac__app_8hpp" startline="274">m_ThrustSp</references>
+        <references refid="mac__msgids_8h_1a85eb8dbfa5e01223154e32bc7cd7cdc8" compoundref="mac__msgids_8h" startline="13">MAC_HK_TLM_MID</references>
+        <references refid="struct_m_a_c___current_value_table__t_1ac3ed521339fa0cfc204cbd0dc0006cd6" compoundref="mac__app_8hpp" startline="110">MAC_CurrentValueTable_t::ManualControlSp</references>
+        <references refid="mac__app_8hpp_1ab892e5ff1e8575ec446b62149cd95f09" compoundref="mac__app_8hpp" startline="67">MAX_GYRO_COUNT</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a63725adc35f06ec9896cc2f2137f06a0" compoundref="mac__app_8hpp" startline="113">MAC_CurrentValueTable_t::MotorLimits</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a269050c8721b7823b130073715bdf132" compoundref="mac__app_8hpp" startline="116">MAC_CurrentValueTable_t::SensorCorrection</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a8bb8739cd2ef7a1d1ffeff8a6e7f06e3" compoundref="mac__app_8hpp" startline="119">MAC_CurrentValueTable_t::SensorGyro</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="class_m_a_c_1a5d65ed099a3f4ab1012a0939640a5c98" compoundref="mac__app_8cpp" startline="1182" endline="1239">UpdateParams</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a860d4fdc6894880c5228eee8084bb09a" compoundref="mac__app_8hpp" startline="122">MAC_CurrentValueTable_t::VAttSp</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a7fe252adb0c8356f2ad973f3687ca4c6" compoundref="mac__app_8hpp" startline="125">MAC_CurrentValueTable_t::VControlMode</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a36ef590060bd045e6c22348f74371a7d" compoundref="mac__app_8hpp" startline="131">MAC_CurrentValueTable_t::VehicleStatus</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a72eea1ac82bcf620b6aafbf695eba120" compoundref="mac__app_8hpp" startline="128">MAC_CurrentValueTable_t::VRatesSp</references>
+        <referencedby refid="class_m_a_c_1a555140bec351c759bdb2068f536a4168" compoundref="mac__app_8cpp" startline="367" endline="433">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a4aba8bc15a567050c8e05ed674ded621" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::InitPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize message pipes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup initialize the cFE Software Bus message pipes and subscribe to messages for the <ref refid="class_m_a_c" kindref="compound">MAC</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a5939c3681044a3d953d0fe72dd577889" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_SubscribeEx</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="375" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="137" bodyend="313"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2">CFE_SB_CreatePipe</references>
+        <references refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5">CFE_SB_Default_Qos</references>
+        <references refid="cfe__sb_8h_1afc2c2db1a504f544b430f33f28be769b">CFE_SB_Subscribe</references>
+        <references refid="cfe__sb_8h_1a5939c3681044a3d953d0fe72dd577889">CFE_SB_SubscribeEx</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_m_a_c_1a1945b684a2075c9aa8097b6457571e17" compoundref="mac__app_8hpp" startline="228">CmdPipeId</references>
+        <references refid="class_m_a_c_1abc40e6d6126728bf5878bc4397d1507d" compoundref="mac__app_8hpp" startline="231">DataPipeId</references>
+        <references refid="mac__msgids_8h_1ad2dd07cce6cb98bb85f43d3dee5d270b" compoundref="mac__msgids_8h" startline="8">MAC_CMD_MID</references>
+        <references refid="mac__platform__cfg_8h_1ac094f8382fd6a3e68cf97703ebb0f4b2" compoundref="mac__platform__cfg_8h" startline="74">MAC_CMD_PIPE_DEPTH</references>
+        <references refid="mac__platform__cfg_8h_1a920019b7c53c168fda1ffa2d6b79c5eb" compoundref="mac__platform__cfg_8h" startline="81">MAC_CMD_PIPE_NAME</references>
+        <references refid="mac__app_8hpp_1ad604f7c1dad1c004b03df777d9956bdd" compoundref="mac__app_8hpp" startline="78">MAC_DATA_PIPE_DEPTH</references>
+        <references refid="mac__app_8hpp_1ae80fe06478ef26f409d043cf1e368ebf" compoundref="mac__app_8hpp" startline="85">MAC_DATA_PIPE_NAME</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a234d3d3f6448dfd7a4dd3a12110d44c6" compoundref="mac__events_8h" startline="108">MAC_INIT_ERR_EID</references>
+        <references refid="mac__msgids_8h_1a27e42cb2f4d66927caf4f793280eec6a" compoundref="mac__msgids_8h" startline="10">MAC_RUN_CONTROLLER_MID</references>
+        <references refid="mac__platform__cfg_8h_1afc0d5624478f32c0224d60ea4783f773" compoundref="mac__platform__cfg_8h" startline="32">MAC_SCH_PIPE_DEPTH</references>
+        <references refid="mac__platform__cfg_8h_1a4daec0717aae165097c64d32485cd520" compoundref="mac__platform__cfg_8h" startline="39">MAC_SCH_PIPE_NAME</references>
+        <references refid="mac__platform__cfg_8h_1a6b7c3fd79d2a48efd2727ed0f8522867" compoundref="mac__platform__cfg_8h" startline="67">MAC_SCH_PIPE_SEND_HK_RESERVED</references>
+        <references refid="mac__msgids_8h_1af00ff2c5118ab5071763d2f16e351a78" compoundref="mac__msgids_8h" startline="9">MAC_SEND_HK_MID</references>
+        <references refid="class_m_a_c_1a258c5034198bfe2036dc3b884aa5aa23" compoundref="mac__app_8hpp" startline="225">SchPipeId</references>
+        <referencedby refid="class_m_a_c_1a555140bec351c759bdb2068f536a4168" compoundref="mac__app_8cpp" startline="367" endline="433">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::RcvSchPipeMsg</definition>
+        <argsstring>(int32 iBlocking)</argsstring>
+        <name>RcvSchPipeMsg</name>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+          <declname>iBlocking</declname>
+        </param>
+        <briefdescription>
+<para>Receive and process messages from the scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function receives and processes messages for the <ref refid="class_m_a_c" kindref="compound">MAC</ref> application from the SCH pipe. This function will pend for the type defined by iBlocking, allowing it to wait for messages, i.e. wakeup messages from scheduler.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iBlocking</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PEND_FOREVER</ref>, <ref refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_POLL</ref> or millisecond timeout</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a54840fe06aeb08b1e2c8df420474780d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_RcvMsg</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="398" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="441" bodyend="501"/>
+        <references refid="cfe__es_8h_1abeabe0f94cccfa5bfcfc2f43796da8d1">CFE_ES_APP_ERROR</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1a68b8b8ed93cecb670c945388a797e970">CFE_SB_TIME_OUT</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="mac__perfids_8h_1a626650ee113f28fab13c3f29d9d8e8d8" compoundref="mac__perfids_8h" startline="8">MAC_MAIN_TASK_PERF_ID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5ab21c9219e28f0a3be1647e328fa07388" compoundref="mac__events_8h" startline="147">MAC_MSGID_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a61db44ef7b68517ab652fa559cc6bd8b" compoundref="mac__events_8h" startline="134">MAC_PIPE_ERR_EID</references>
+        <references refid="mac__msgids_8h_1a27e42cb2f4d66927caf4f793280eec6a" compoundref="mac__msgids_8h" startline="10">MAC_RUN_CONTROLLER_MID</references>
+        <references refid="mac__msgids_8h_1af00ff2c5118ab5071763d2f16e351a78" compoundref="mac__msgids_8h" startline="9">MAC_SEND_HK_MID</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_m_a_c_1abaa9e8d8f217c4546c704d59f2a3bf35" compoundref="mac__app_8cpp" startline="509" endline="618">ProcessIncomingData</references>
+        <references refid="class_m_a_c_1aa797020befa5b66153559668d451e15d" compoundref="mac__app_8cpp" startline="626" endline="667">ProcessNewCmds</references>
+        <references refid="class_m_a_c_1a550036dcd5888e21e575a69f0784d06a" compoundref="mac__app_8cpp" startline="715" endline="719">ReportHousekeeping</references>
+        <references refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</references>
+        <references refid="class_m_a_c_1a258c5034198bfe2036dc3b884aa5aa23" compoundref="mac__app_8hpp" startline="225">SchPipeId</references>
+        <references refid="class_m_a_c_1aab42e50878733788cc1a59f1d6694956" compoundref="mac__app_8hpp" startline="236">uiRunStatus</references>
+        <referencedby refid="class_m_a_c_1a6e53fa12eb5e515a80d8216b059fede1" compoundref="mac__app_8cpp" startline="782" endline="832">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1abaa9e8d8f217c4546c704d59f2a3bf35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool MAC::ProcessIncomingData</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessIncomingData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>PWM Motor Controller Task incoming data processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes incoming data subscribed by <ref refid="class_m_a_c" kindref="compound">MAC</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="411" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="509" bodyend="618"/>
+        <references refid="struct_m_a_c___current_value_table__t_1abcb996276a24f8c243e2a32dcdc169d2" compoundref="mac__app_8hpp" startline="101">MAC_CurrentValueTable_t::Armed</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a94073b48cd63d00d2476bfa6e4e0a9fc" compoundref="mac__app_8hpp" startline="104">MAC_CurrentValueTable_t::BatteryStatus</references>
+        <references refid="cfe__es_8h_1abeabe0f94cccfa5bfcfc2f43796da8d1">CFE_ES_APP_ERROR</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a">CFE_SB_POLL</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a4fc529e4a8c52e434d7bfc06c8d9ce8a" compoundref="mac__app_8hpp" startline="107">MAC_CurrentValueTable_t::ControlState</references>
+        <references refid="class_m_a_c_1a20e06e7eb46da29e6d105e908322f7c0" compoundref="mac__app_8hpp" startline="253">CVT</references>
+        <references refid="class_m_a_c_1abc40e6d6126728bf5878bc4397d1507d" compoundref="mac__app_8hpp" startline="231">DataPipeId</references>
+        <references refid="class_m_a_c_1a15c61b20a3afbf2869eb8e954be6dfe2" compoundref="mac__app_8hpp" startline="271">m_SelectedGyro</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5ab21c9219e28f0a3be1647e328fa07388" compoundref="mac__events_8h" startline="147">MAC_MSGID_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a61db44ef7b68517ab652fa559cc6bd8b" compoundref="mac__events_8h" startline="134">MAC_PIPE_ERR_EID</references>
+        <references refid="struct_m_a_c___current_value_table__t_1ac3ed521339fa0cfc204cbd0dc0006cd6" compoundref="mac__app_8hpp" startline="110">MAC_CurrentValueTable_t::ManualControlSp</references>
+        <references refid="mac__app_8hpp_1ab892e5ff1e8575ec446b62149cd95f09" compoundref="mac__app_8hpp" startline="67">MAX_GYRO_COUNT</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a63725adc35f06ec9896cc2f2137f06a0" compoundref="mac__app_8hpp" startline="113">MAC_CurrentValueTable_t::MotorLimits</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a269050c8721b7823b130073715bdf132" compoundref="mac__app_8hpp" startline="116">MAC_CurrentValueTable_t::SensorCorrection</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a8bb8739cd2ef7a1d1ffeff8a6e7f06e3" compoundref="mac__app_8hpp" startline="119">MAC_CurrentValueTable_t::SensorGyro</references>
+        <references refid="class_m_a_c_1aab42e50878733788cc1a59f1d6694956" compoundref="mac__app_8hpp" startline="236">uiRunStatus</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a860d4fdc6894880c5228eee8084bb09a" compoundref="mac__app_8hpp" startline="122">MAC_CurrentValueTable_t::VAttSp</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a7fe252adb0c8356f2ad973f3687ca4c6" compoundref="mac__app_8hpp" startline="125">MAC_CurrentValueTable_t::VControlMode</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a36ef590060bd045e6c22348f74371a7d" compoundref="mac__app_8hpp" startline="131">MAC_CurrentValueTable_t::VehicleStatus</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a72eea1ac82bcf620b6aafbf695eba120" compoundref="mac__app_8hpp" startline="128">MAC_CurrentValueTable_t::VRatesSp</references>
+        <referencedby refid="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" compoundref="mac__app_8cpp" startline="441" endline="501">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1aa797020befa5b66153559668d451e15d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::ProcessNewCmds</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessNewCmds</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>PWM Motor Controller Task incoming command processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes incoming commands subscribed by <ref refid="class_m_a_c" kindref="compound">MAC</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="424" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="626" bodyend="667"/>
+        <references refid="cfe__es_8h_1abeabe0f94cccfa5bfcfc2f43796da8d1">CFE_ES_APP_ERROR</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a">CFE_SB_POLL</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_m_a_c_1a1945b684a2075c9aa8097b6457571e17" compoundref="mac__app_8hpp" startline="228">CmdPipeId</references>
+        <references refid="class_m_a_c_1a3fa32b8d878bc725e237d96b228570cb" compoundref="mac__app_8hpp" startline="250">HkTlm</references>
+        <references refid="mac__msgids_8h_1ad2dd07cce6cb98bb85f43d3dee5d270b" compoundref="mac__msgids_8h" startline="8">MAC_CMD_MID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5ab21c9219e28f0a3be1647e328fa07388" compoundref="mac__events_8h" startline="147">MAC_MSGID_ERR_EID</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a61db44ef7b68517ab652fa559cc6bd8b" compoundref="mac__events_8h" startline="134">MAC_PIPE_ERR_EID</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_m_a_c_1ac84313f530ec12e9fd99f09673d2bd4b" compoundref="mac__app_8cpp" startline="674" endline="708">ProcessAppCmds</references>
+        <references refid="class_m_a_c_1aab42e50878733788cc1a59f1d6694956" compoundref="mac__app_8hpp" startline="236">uiRunStatus</references>
+        <references refid="struct_m_a_c___hk_tlm__t_1a16892cf43cbcd11bb8af5ba7f056bec5" compoundref="mac__msg_8h" startline="152">MAC_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" compoundref="mac__app_8cpp" startline="441" endline="501">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1ac84313f530ec12e9fd99f09673d2bd4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::ProcessAppCmds</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr)</argsstring>
+        <name>ProcessAppCmds</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <briefdescription>
+<para>PWM Motor Controller Task application commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes command messages specific to the <ref refid="class_m_a_c" kindref="compound">MAC</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="440" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="674" bodyend="708"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="class_m_a_c_1a3fa32b8d878bc725e237d96b228570cb" compoundref="mac__app_8hpp" startline="250">HkTlm</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5af3fb27f068f41207a22652c360f1e43f" compoundref="mac__events_8h" startline="95">MAC_CMD_INF_EID</references>
+        <references refid="mac__version_8h_1a171fb63fae346c29b927562221c36fb7" compoundref="mac__version_8h" startline="53">MAC_MAJOR_VERSION</references>
+        <references refid="mac__version_8h_1ac862ac1bfb45051ebf4813c0206bfdef" compoundref="mac__version_8h" startline="67">MAC_MINOR_VERSION</references>
+        <references refid="mac__platform__cfg_8h_1ab5fb598d4e1f61adc273a6047b3287be" compoundref="mac__platform__cfg_8h" startline="25">MAC_MISSION_REV</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5ab21c9219e28f0a3be1647e328fa07388" compoundref="mac__events_8h" startline="147">MAC_MSGID_ERR_EID</references>
+        <references refid="mac__msg_8h_1a7fdebae345318f16bd7238530cf625f4" compoundref="mac__msg_8h" startline="89">MAC_NOOP_CC</references>
+        <references refid="mac__msg_8h_1a62beee27eec439b69445ba10eac24b27" compoundref="mac__msg_8h" startline="122">MAC_RESET_CC</references>
+        <references refid="mac__version_8h_1a48eb0b9bd98eece2f367358d2284248d" compoundref="mac__version_8h" startline="81">MAC_REVISION</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_m_a_c___hk_tlm__t_1ae1d8999846f3b3bedc85296d27dba40f" compoundref="mac__msg_8h" startline="148">MAC_HkTlm_t::usCmdCnt</references>
+        <references refid="struct_m_a_c___hk_tlm__t_1a16892cf43cbcd11bb8af5ba7f056bec5" compoundref="mac__msg_8h" startline="152">MAC_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_m_a_c_1aa797020befa5b66153559668d451e15d" compoundref="mac__app_8cpp" startline="626" endline="667">ProcessNewCmds</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a550036dcd5888e21e575a69f0784d06a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::ReportHousekeeping</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReportHousekeeping</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends <ref refid="class_m_a_c" kindref="compound">MAC</ref> housekeeping message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function sends the housekeeping message</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="452" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="715" bodyend="719"/>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="class_m_a_c_1a3fa32b8d878bc725e237d96b228570cb" compoundref="mac__app_8hpp" startline="250">HkTlm</references>
+        <referencedby refid="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" compoundref="mac__app_8cpp" startline="441" endline="501">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a5b16256419dad3acab6834e12535ce28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::SendActuatorControls</definition>
+        <argsstring>(void)</argsstring>
+        <name>SendActuatorControls</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends the Actuator Output message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function publishes the actuator output message containing the commanding values to the motors.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="465" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="727" bodyend="731"/>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="class_m_a_c_1aa508a1ddc19ba9be12772781f69d7b3b" compoundref="mac__app_8hpp" startline="247">m_ActuatorControls0</references>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1aa6d5286a9472e19b87375a5a1cdaf00d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean MAC::VerifyCmdLength</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr, uint16 usExpectedLen)</argsstring>
+        <name>VerifyCmdLength</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>usExpectedLen</declname>
+        </param>
+        <briefdescription>
+<para>Verify Command Length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function verifies the command message length.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">usExpectedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected length of the message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the message length matches expectations, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="485" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="738" bodyend="763"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__sb_8h_1ac32b86cf9e1d12a547792853c35f6aa1">CFE_SB_GetTotalMsgLength</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_m_a_c_1a3fa32b8d878bc725e237d96b228570cb" compoundref="mac__app_8hpp" startline="250">HkTlm</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a48301bd18268b7fc1df3775c3b120c54" compoundref="mac__events_8h" startline="160">MAC_MSGLEN_ERR_EID</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="struct_m_a_c___hk_tlm__t_1a16892cf43cbcd11bb8af5ba7f056bec5" compoundref="mac__msg_8h" startline="152">MAC_HkTlm_t::usCmdErrCnt</references>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1af070d9da92e27b578f5100d320c9ad5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::InitConfigTbl</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitConfigTbl</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the <ref refid="class_m_a_c" kindref="compound">MAC</ref> configuration tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes <ref refid="class_m_a_c" kindref="compound">MAC</ref>&apos;s configuration tables. This includes the PWM and the Mixer configuration table.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #MAC_AcquireConfigPointers  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="505" column="1" bodyfile="apps/mac/fsw/src/mac_config_utils.cpp" bodystart="50" bodyend="88"/>
+        <references refid="class_m_a_c_1affd1e1e672fc02613a3908581e97e080" compoundref="mac__config__utils_8cpp" startline="431" endline="473">AcquireConfigPointers</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="cfe__tbl_8h_1a5f631dc4d2527e27968f0838a93a8d50">CFE_TBL_Load</references>
+        <references refid="cfe__tbl_8h_1a1cdd818488b284d4ec7be6cab93d2462">CFE_TBL_OPT_DEFAULT</references>
+        <references refid="cfe__tbl_8h_1a02649cb295b154981365de11e0bb6683">CFE_TBL_Register</references>
+        <references refid="cfe__tbl_8h_1a0b3eb338d875c3c700856e88947bc927ae367f0dfc5bef4a6200af4fffb8333be">CFE_TBL_SRC_FILE</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5a234d3d3f6448dfd7a4dd3a12110d44c6" compoundref="mac__events_8h" startline="108">MAC_INIT_ERR_EID</references>
+        <references refid="mac__platform__cfg_8h_1aa881b72d037fa5841ed70a9347fa9c34" compoundref="mac__platform__cfg_8h" startline="89">MAC_PARAM_TABLE_FILENAME</references>
+        <references refid="mac__tbldefs_8h_1a4d6c28efcb167f40d8685e9a43deffeb" compoundref="mac__tbldefs_8h" startline="139">MAC_PARAM_TABLENAME</references>
+        <references refid="class_m_a_c_1a489d5ebc67d7504de6d40ebb7225f70f" compoundref="mac__app_8hpp" startline="241">ParamTblHdl</references>
+        <references refid="class_m_a_c_1a01526f7143cb2f798a8a8326374087e4" compoundref="mac__config__utils_8cpp" startline="96" endline="424">ValidateParamTbl</references>
+        <referencedby refid="class_m_a_c_1a555140bec351c759bdb2068f536a4168" compoundref="mac__app_8cpp" startline="367" endline="433">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1affd1e1e672fc02613a3908581e97e080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::AcquireConfigPointers</definition>
+        <argsstring>(void)</argsstring>
+        <name>AcquireConfigPointers</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Obtain <ref refid="class_m_a_c" kindref="compound">MAC</ref> configuration tables data pointers. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function manages the configuration tables and obtains a pointer to their data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="1" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="522" column="1" bodyfile="apps/mac/fsw/src/mac_config_utils.cpp" bodystart="431" bodyend="473"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="cfe__tbl_8h_1ab76032b8a226594789df60e8449cface">CFE_TBL_GetAddress</references>
+        <references refid="cfe__error_8h_1a16d909d1b698830edc62f26fdb8c85c5">CFE_TBL_INFO_UPDATED</references>
+        <references refid="cfe__tbl_8h_1a55f9e6ac951e3e2b1ff42787e5f8c57c">CFE_TBL_Manage</references>
+        <references refid="cfe__tbl_8h_1a9707adcc7701671aaa4aa39f1608159a">CFE_TBL_ReleaseAddress</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5af7cb52dee5de9bf659e67bdc32fbbe3e" compoundref="mac__events_8h" startline="121">MAC_CONFIG_TABLE_ERR_EID</references>
+        <references refid="class_m_a_c_1a489d5ebc67d7504de6d40ebb7225f70f" compoundref="mac__app_8hpp" startline="241">ParamTblHdl</references>
+        <references refid="class_m_a_c_1ae797a0e7fdc50e034fb29dc1a25dc7f3" compoundref="mac__app_8hpp" startline="244">ParamTblPtr</references>
+        <references refid="class_m_a_c_1a5d65ed099a3f4ab1012a0939640a5c98" compoundref="mac__app_8cpp" startline="1182" endline="1239">UpdateParams</references>
+        <referencedby refid="class_m_a_c_1a6e53fa12eb5e515a80d8216b059fede1" compoundref="mac__app_8cpp" startline="782" endline="832">AppMain</referencedby>
+        <referencedby refid="class_m_a_c_1af070d9da92e27b578f5100d320c9ad5e" compoundref="mac__config__utils_8cpp" startline="50" endline="88">InitConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::RunController</definition>
+        <argsstring>(void)</argsstring>
+        <name>RunController</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Run Attitude Controller. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function cycles the attitude controller</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="552" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="834" bodyend="940"/>
+        <references refid="struct_m_a_c___params__t_1a3eacba6ab2a3c23ff36ddf08c91ae291" compoundref="mac__app_8hpp" startline="195">MAC_Params_t::acro_rate_max</references>
+        <references refid="struct_m_a_c___params__t_1a630865b79bef0fa97d7c93ff00d53d56" compoundref="mac__app_8hpp" startline="201">MAC_Params_t::bat_scale_en</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a94073b48cd63d00d2476bfa6e4e0a9fc" compoundref="mac__app_8hpp" startline="104">MAC_CurrentValueTable_t::BatteryStatus</references>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0">CFE_SB_InitMsg</references>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="class_m_a_c_1a9a16e573567759fea28c79fcded7660c" compoundref="mac__app_8cpp" startline="942" endline="1043">ControlAttitude</references>
+        <references refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a4fc529e4a8c52e434d7bfc06c8d9ce8a" compoundref="mac__app_8hpp" startline="107">MAC_CurrentValueTable_t::ControlState</references>
+        <references refid="class_m_a_c_1a20e06e7eb46da29e6d105e908322f7c0" compoundref="mac__app_8hpp" startline="253">CVT</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_m_a_c_1aa508a1ddc19ba9be12772781f69d7b3b" compoundref="mac__app_8hpp" startline="247">m_ActuatorControls0</references>
+        <references refid="class_m_a_c_1a6cd8fd88fa92267391b0e6ff782db9ed" compoundref="mac__app_8hpp" startline="265">m_AngularRatesIntegralError</references>
+        <references refid="class_m_a_c_1a60aa132e1a57b0602c7153c12ccd3c80" compoundref="mac__app_8hpp" startline="262">m_AngularRatesSetpoint</references>
+        <references refid="class_m_a_c_1aaa6fee46c5696b8df4246925ad5fa5fb" compoundref="mac__app_8hpp" startline="268">m_AttControl</references>
+        <references refid="class_m_a_c_1a6840e7f79ca5b22851bef6ac464f90e6" compoundref="mac__app_8hpp" startline="277">m_Params</references>
+        <references refid="class_m_a_c_1ad85df3cf497cf4d001ca4ec2b0abb6a9" compoundref="mac__app_8hpp" startline="274">m_ThrustSp</references>
+        <references refid="mac__app_8hpp_1ad0aaf392865ce42e9135656800241043" compoundref="mac__app_8hpp" startline="66">MANUAL_THROTTLE_MAX_MULTICOPTER</references>
+        <references refid="struct_m_a_c___current_value_table__t_1ac3ed521339fa0cfc204cbd0dc0006cd6" compoundref="mac__app_8hpp" startline="110">MAC_CurrentValueTable_t::ManualControlSp</references>
+        <references refid="mac__app_8hpp_1ab8ad87b795373a5dae2fc15191b3dc43" compoundref="mac__app_8hpp" startline="68">MICRO_SEC_TO_SEC_DIV</references>
+        <references refid="struct_m_a_c___params__t_1a9b21093a2cf0c9a71049ee46b31c3c33" compoundref="mac__app_8hpp" startline="198">MAC_Params_t::rattitude_thres</references>
+        <references refid="class_m_a_c_1a5b16256419dad3acab6834e12535ce28" compoundref="mac__app_8cpp" startline="727" endline="731">SendActuatorControls</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="mac__app_8hpp_1ac728720f719bf0f899c4a3fe44857631" compoundref="mac__app_8hpp" startline="70">TWENTY_MILLISECONDS</references>
+        <references refid="mac__app_8hpp_1a098aa994f73196d4766440c2ee44dc4a" compoundref="mac__app_8hpp" startline="69">TWO_MILLISECONDS</references>
+        <references refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a">uint64</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a7fe252adb0c8356f2ad973f3687ca4c6" compoundref="mac__app_8hpp" startline="125">MAC_CurrentValueTable_t::VControlMode</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a72eea1ac82bcf620b6aafbf695eba120" compoundref="mac__app_8hpp" startline="128">MAC_CurrentValueTable_t::VRatesSp</references>
+        <referencedby refid="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" compoundref="mac__app_8cpp" startline="441" endline="501">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a5d65ed099a3f4ab1012a0939640a5c98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::UpdateParams</definition>
+        <argsstring>(void)</argsstring>
+        <name>UpdateParams</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Update Params. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function copies params from the table into local data structures required for use</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="565" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="1182" bodyend="1239"/>
+        <references refid="struct_m_a_c___params__t_1a3eacba6ab2a3c23ff36ddf08c91ae291" compoundref="mac__app_8hpp" startline="195">MAC_Params_t::acro_rate_max</references>
+        <references refid="struct_m_a_c___params__t_1a2b1575333ab293cb72289ba7a2ffa2ff" compoundref="mac__app_8hpp" startline="138">MAC_Params_t::att_p</references>
+        <references refid="mac__app_8hpp_1add75a1ec5bf94f4641c69d9a824234aa" compoundref="mac__app_8hpp" startline="65">ATTITUDE_TC_DEFAULT</references>
+        <references refid="struct_m_a_c___params__t_1a3249d626bb33e4ca20686aaae5c80445" compoundref="mac__app_8hpp" startline="192">MAC_Params_t::auto_rate_max</references>
+        <references refid="struct_m_a_c___params__t_1a630865b79bef0fa97d7c93ff00d53d56" compoundref="mac__app_8hpp" startline="201">MAC_Params_t::bat_scale_en</references>
+        <references refid="struct_m_a_c___params__t_1aece68091daf5af39bed00012b0071beb" compoundref="mac__app_8hpp" startline="204">MAC_Params_t::board_rotation</references>
+        <references refid="class_m_a_c_1a6840e7f79ca5b22851bef6ac464f90e6" compoundref="mac__app_8hpp" startline="277">m_Params</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a6a2a3c1dd0505dc2562da9d21038eb2e" compoundref="mac__tbldefs_8h" startline="386">MAC_ParamTbl_t::MC_ACRO_P_MAX</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ac3c0743918099d8321eede4009fbeff1" compoundref="mac__tbldefs_8h" startline="378">MAC_ParamTbl_t::MC_ACRO_R_MAX</references>
+        <references refid="struct_m_a_c___param_tbl__t_1adc60ebb080f34ea11c42655a72c5f139" compoundref="mac__tbldefs_8h" startline="394">MAC_ParamTbl_t::MC_ACRO_Y_MAX</references>
+        <references refid="struct_m_a_c___param_tbl__t_1aa2ddb48900b6de050575777a6ee26110" compoundref="mac__tbldefs_8h" startline="426">MAC_ParamTbl_t::MC_BAT_SCALE_EN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ac8a75e63f16e96a5cf419ab64680f291" compoundref="mac__tbldefs_8h" startline="202">MAC_ParamTbl_t::MC_PITCH_P</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a39c77a200fe96ab0f550126481d57b12" compoundref="mac__tbldefs_8h" startline="418">MAC_ParamTbl_t::MC_PITCH_TC</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a99c1cd32fc6b62e908811880f4fb28a0" compoundref="mac__tbldefs_8h" startline="234">MAC_ParamTbl_t::MC_PITCHRATE_D</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a84f584196d5c7b7bdbb576bbd3e92594" compoundref="mac__tbldefs_8h" startline="242">MAC_ParamTbl_t::MC_PITCHRATE_FF</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a47527298366fa0125733e33502da9f16" compoundref="mac__tbldefs_8h" startline="218">MAC_ParamTbl_t::MC_PITCHRATE_I</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a6e8ba213afe3257e862d21cb90dd1ebd" compoundref="mac__tbldefs_8h" startline="354">MAC_ParamTbl_t::MC_PITCHRATE_MAX</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a49add488b7bdbbd89eede35bcd544a03" compoundref="mac__tbldefs_8h" startline="210">MAC_ParamTbl_t::MC_PITCHRATE_P</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a5e39643ee2b299b1a99861fa052094bd" compoundref="mac__tbldefs_8h" startline="226">MAC_ParamTbl_t::MC_PR_INT_LIM</references>
+        <references refid="struct_m_a_c___params__t_1a7cc66b54d29cdbf28d3a9a9c695858d4" compoundref="mac__app_8hpp" startline="189">MAC_Params_t::mc_rate_max</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a13b02ed4f1fe9ef6dab8d2beb562e3cb" compoundref="mac__tbldefs_8h" startline="402">MAC_ParamTbl_t::MC_RATT_TH</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a0a5e2bd6739c39465613bf92fc9e987e" compoundref="mac__tbldefs_8h" startline="154">MAC_ParamTbl_t::MC_ROLL_P</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a1b7369026a82c2e90a67c960f124dc3d" compoundref="mac__tbldefs_8h" startline="410">MAC_ParamTbl_t::MC_ROLL_TC</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a69e893bdce8879cb85425f439cebd79a" compoundref="mac__tbldefs_8h" startline="186">MAC_ParamTbl_t::MC_ROLLRATE_D</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a746febd70d6b918f0fc2aea86c4340da" compoundref="mac__tbldefs_8h" startline="194">MAC_ParamTbl_t::MC_ROLLRATE_FF</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a4a1c29fc5a1b22ca925b75492f12caaf" compoundref="mac__tbldefs_8h" startline="170">MAC_ParamTbl_t::MC_ROLLRATE_I</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a59670dcb0dac27e271509286c88b6612" compoundref="mac__tbldefs_8h" startline="346">MAC_ParamTbl_t::MC_ROLLRATE_MAX</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a18377e10fdd0476a86c6272b9ab2830e" compoundref="mac__tbldefs_8h" startline="162">MAC_ParamTbl_t::MC_ROLLRATE_P</references>
+        <references refid="struct_m_a_c___param_tbl__t_1af9b1b956b8abc6410d66c09187d3d0d4" compoundref="mac__tbldefs_8h" startline="178">MAC_ParamTbl_t::MC_RR_INT_LIM</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ad628cbdc3b450831b1dfdabdfee69af4" compoundref="mac__tbldefs_8h" startline="266">MAC_ParamTbl_t::MC_TPA_BREAK_D</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ab5a7e469fc4336f6a9a67b9633e62bb5" compoundref="mac__tbldefs_8h" startline="258">MAC_ParamTbl_t::MC_TPA_BREAK_I</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a0652e9c4a93a9ab760071f4f6e3f285e" compoundref="mac__tbldefs_8h" startline="250">MAC_ParamTbl_t::MC_TPA_BREAK_P</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ac67e08fb4bb71ada3acf084090a32e3d" compoundref="mac__tbldefs_8h" startline="290">MAC_ParamTbl_t::MC_TPA_RATE_D</references>
+        <references refid="struct_m_a_c___param_tbl__t_1abd7bcf8c3ce6fb3567e4b1f2f72d7d7c" compoundref="mac__tbldefs_8h" startline="282">MAC_ParamTbl_t::MC_TPA_RATE_I</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a54802cc95a60b0b96b470bd1bff28d39" compoundref="mac__tbldefs_8h" startline="274">MAC_ParamTbl_t::MC_TPA_RATE_P</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a47d22928ec1aa459fe0d8f5ec6b823c5" compoundref="mac__tbldefs_8h" startline="298">MAC_ParamTbl_t::MC_YAW_P</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a1c943b2e6f68680fc13a6007b43c3acb" compoundref="mac__tbldefs_8h" startline="330">MAC_ParamTbl_t::MC_YAWRATE_D</references>
+        <references refid="struct_m_a_c___param_tbl__t_1acecb99b4f8ffc79c8c69df727b5e0f07" compoundref="mac__tbldefs_8h" startline="338">MAC_ParamTbl_t::MC_YAWRATE_FF</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a0b53036c91e6460a794dcc7c8e24144d" compoundref="mac__tbldefs_8h" startline="314">MAC_ParamTbl_t::MC_YAWRATE_I</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ac6723d5b8e2917a82a14f68c13fd69c0" compoundref="mac__tbldefs_8h" startline="362">MAC_ParamTbl_t::MC_YAWRATE_MAX</references>
+        <references refid="struct_m_a_c___param_tbl__t_1afa2a2a86e07796e300beb5fa330a78a8" compoundref="mac__tbldefs_8h" startline="306">MAC_ParamTbl_t::MC_YAWRATE_P</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ad879407d13eebe87deef7d608ff8254c" compoundref="mac__tbldefs_8h" startline="370">MAC_ParamTbl_t::MC_YAWRAUTO_MAX</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a2927a2b1fe21eaf6c18cd405612c25f8" compoundref="mac__tbldefs_8h" startline="322">MAC_ParamTbl_t::MC_YR_INT_LIM</references>
+        <references refid="class_m_a_c_1ae797a0e7fdc50e034fb29dc1a25dc7f3" compoundref="mac__app_8hpp" startline="244">ParamTblPtr</references>
+        <references refid="struct_m_a_c___params__t_1ad4ecaa01f02960c5141d736036b5ea46" compoundref="mac__app_8hpp" startline="150">MAC_Params_t::rate_d</references>
+        <references refid="struct_m_a_c___params__t_1aea6ae0dda557c89098692b58753723f7" compoundref="mac__app_8hpp" startline="153">MAC_Params_t::rate_ff</references>
+        <references refid="struct_m_a_c___params__t_1aa15dbbb561d05b0910469248eec9b7d7" compoundref="mac__app_8hpp" startline="144">MAC_Params_t::rate_i</references>
+        <references refid="struct_m_a_c___params__t_1a42d02e71cf5570e3d1889213404d4590" compoundref="mac__app_8hpp" startline="147">MAC_Params_t::rate_int_lim</references>
+        <references refid="struct_m_a_c___params__t_1af14021f70d5b44e9a54f20a543459509" compoundref="mac__app_8hpp" startline="141">MAC_Params_t::rate_p</references>
+        <references refid="struct_m_a_c___params__t_1a9b21093a2cf0c9a71049ee46b31c3c33" compoundref="mac__app_8hpp" startline="198">MAC_Params_t::rattitude_thres</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a5a4f688175c6ed4fd7e9279cdf2a3b67" compoundref="mac__tbldefs_8h" startline="434">MAC_ParamTbl_t::SENS_BOARD_ROT</references>
+        <references refid="struct_m_a_c___params__t_1a30a914639fb604956aabc75ffcd0195d" compoundref="mac__app_8hpp" startline="165">MAC_Params_t::tpa_breakpoint_d</references>
+        <references refid="struct_m_a_c___params__t_1a863a03afbba5004ad12b550c15dc4d41" compoundref="mac__app_8hpp" startline="162">MAC_Params_t::tpa_breakpoint_i</references>
+        <references refid="struct_m_a_c___params__t_1a1b9f7633ee313cbad255e7ea0d0be2d3" compoundref="mac__app_8hpp" startline="159">MAC_Params_t::tpa_breakpoint_p</references>
+        <references refid="struct_m_a_c___params__t_1a965a53eaffaf248611419841419b68ac" compoundref="mac__app_8hpp" startline="174">MAC_Params_t::tpa_rate_d</references>
+        <references refid="struct_m_a_c___params__t_1a7262a259f37926f52357c63cea19a1fd" compoundref="mac__app_8hpp" startline="171">MAC_Params_t::tpa_rate_i</references>
+        <references refid="struct_m_a_c___params__t_1a452c6e3823bbd8adb911edc91649c548" compoundref="mac__app_8hpp" startline="168">MAC_Params_t::tpa_rate_p</references>
+        <referencedby refid="class_m_a_c_1affd1e1e672fc02613a3908581e97e080" compoundref="mac__config__utils_8cpp" startline="431" endline="473">AcquireConfigPointers</referencedby>
+        <referencedby refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" compoundref="mac__app_8cpp" startline="320" endline="360">InitData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a9a16e573567759fea28c79fcded7660c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::ControlAttitude</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>ControlAttitude</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Control Attitude. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function calculates the attitude setpoint</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of time delta </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="579" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="942" bodyend="1043"/>
+        <references refid="struct_m_a_c___params__t_1a2b1575333ab293cb72289ba7a2ffa2ff" compoundref="mac__app_8hpp" startline="138">MAC_Params_t::att_p</references>
+        <references refid="struct_m_a_c___params__t_1a3249d626bb33e4ca20686aaae5c80445" compoundref="mac__app_8hpp" startline="192">MAC_Params_t::auto_rate_max</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a4fc529e4a8c52e434d7bfc06c8d9ce8a" compoundref="mac__app_8hpp" startline="107">MAC_CurrentValueTable_t::ControlState</references>
+        <references refid="class_m_a_c_1a20e06e7eb46da29e6d105e908322f7c0" compoundref="mac__app_8hpp" startline="253">CVT</references>
+        <references refid="class_m_a_c_1a60aa132e1a57b0602c7153c12ccd3c80" compoundref="mac__app_8hpp" startline="262">m_AngularRatesSetpoint</references>
+        <references refid="class_m_a_c_1a6840e7f79ca5b22851bef6ac464f90e6" compoundref="mac__app_8hpp" startline="277">m_Params</references>
+        <references refid="class_m_a_c_1ad85df3cf497cf4d001ca4ec2b0abb6a9" compoundref="mac__app_8hpp" startline="274">m_ThrustSp</references>
+        <references refid="struct_m_a_c___params__t_1a7cc66b54d29cdbf28d3a9a9c695858d4" compoundref="mac__app_8hpp" startline="189">MAC_Params_t::mc_rate_max</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a860d4fdc6894880c5228eee8084bb09a" compoundref="mac__app_8hpp" startline="122">MAC_CurrentValueTable_t::VAttSp</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a7fe252adb0c8356f2ad973f3687ca4c6" compoundref="mac__app_8hpp" startline="125">MAC_CurrentValueTable_t::VControlMode</references>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MAC::ControlAttitudeRates</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>ControlAttitudeRates</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function calculates the rates required to meet the attitude setpoint</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of time delta </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="594" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="1045" bodyend="1166"/>
+        <references refid="struct_m_a_c___current_value_table__t_1abcb996276a24f8c243e2a32dcdc169d2" compoundref="mac__app_8hpp" startline="101">MAC_CurrentValueTable_t::Armed</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a4fc529e4a8c52e434d7bfc06c8d9ce8a" compoundref="mac__app_8hpp" startline="107">MAC_CurrentValueTable_t::ControlState</references>
+        <references refid="class_m_a_c_1a20e06e7eb46da29e6d105e908322f7c0" compoundref="mac__app_8hpp" startline="253">CVT</references>
+        <references refid="class_m_a_c_1a6cd8fd88fa92267391b0e6ff782db9ed" compoundref="mac__app_8hpp" startline="265">m_AngularRatesIntegralError</references>
+        <references refid="class_m_a_c_1ae8cf8adffc45ddba1625f9f5b0a63668" compoundref="mac__app_8hpp" startline="256">m_AngularRatesPrevious</references>
+        <references refid="class_m_a_c_1a60aa132e1a57b0602c7153c12ccd3c80" compoundref="mac__app_8hpp" startline="262">m_AngularRatesSetpoint</references>
+        <references refid="class_m_a_c_1ae9884a45a6ece70955e5f29b5db43b7c" compoundref="mac__app_8hpp" startline="259">m_AngularRatesSetpointPrevious</references>
+        <references refid="class_m_a_c_1aaa6fee46c5696b8df4246925ad5fa5fb" compoundref="mac__app_8hpp" startline="268">m_AttControl</references>
+        <references refid="class_m_a_c_1a6840e7f79ca5b22851bef6ac464f90e6" compoundref="mac__app_8hpp" startline="277">m_Params</references>
+        <references refid="class_m_a_c_1a15c61b20a3afbf2869eb8e954be6dfe2" compoundref="mac__app_8hpp" startline="271">m_SelectedGyro</references>
+        <references refid="class_m_a_c_1ad85df3cf497cf4d001ca4ec2b0abb6a9" compoundref="mac__app_8hpp" startline="274">m_ThrustSp</references>
+        <references refid="mac__app_8hpp_1a522adf85c2f14886186fe26a3726f9c5ae96f3c56d81c4014db70675ecaf482fd" compoundref="mac__app_8hpp" startline="95">MAC_AXIS_COUNT</references>
+        <references refid="mac__app_8hpp_1a522adf85c2f14886186fe26a3726f9c5a184136d053a6f62c810fc101d00061b7" compoundref="mac__app_8hpp" startline="93">MAC_AXIS_INDEX_PITCH</references>
+        <references refid="mac__app_8hpp_1a522adf85c2f14886186fe26a3726f9c5a2d65101e997a5543049ea7bd697eb316" compoundref="mac__app_8hpp" startline="92">MAC_AXIS_INDEX_ROLL</references>
+        <references refid="mac__app_8hpp_1a522adf85c2f14886186fe26a3726f9c5afed9024aae4990304321981cfa8bb08a" compoundref="mac__app_8hpp" startline="94">MAC_AXIS_INDEX_YAW</references>
+        <references refid="mac__app_8hpp_1a274583582515d5ebc144460ddff2eec7" compoundref="mac__app_8hpp" startline="64">MIN_TAKEOFF_THRUST</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a63725adc35f06ec9896cc2f2137f06a0" compoundref="mac__app_8hpp" startline="113">MAC_CurrentValueTable_t::MotorLimits</references>
+        <references refid="class_m_a_c_1ae797a0e7fdc50e034fb29dc1a25dc7f3" compoundref="mac__app_8hpp" startline="244">ParamTblPtr</references>
+        <references refid="class_m_a_c_1a5c86ef95919c3b83256b7f0f95384ea6" compoundref="mac__app_8cpp" startline="1168" endline="1180">PidAttenuations</references>
+        <references refid="struct_m_a_c___params__t_1ad4ecaa01f02960c5141d736036b5ea46" compoundref="mac__app_8hpp" startline="150">MAC_Params_t::rate_d</references>
+        <references refid="struct_m_a_c___params__t_1aea6ae0dda557c89098692b58753723f7" compoundref="mac__app_8hpp" startline="153">MAC_Params_t::rate_ff</references>
+        <references refid="struct_m_a_c___params__t_1aa15dbbb561d05b0910469248eec9b7d7" compoundref="mac__app_8hpp" startline="144">MAC_Params_t::rate_i</references>
+        <references refid="struct_m_a_c___params__t_1a42d02e71cf5570e3d1889213404d4590" compoundref="mac__app_8hpp" startline="147">MAC_Params_t::rate_int_lim</references>
+        <references refid="struct_m_a_c___params__t_1af14021f70d5b44e9a54f20a543459509" compoundref="mac__app_8hpp" startline="141">MAC_Params_t::rate_p</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a5a4f688175c6ed4fd7e9279cdf2a3b67" compoundref="mac__tbldefs_8h" startline="434">MAC_ParamTbl_t::SENS_BOARD_ROT</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a48dd4db382ee86552efabce4c631ae2b" compoundref="mac__tbldefs_8h" startline="442">MAC_ParamTbl_t::SENS_BOARD_X_OFF</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a7aee92537340a2d4ebdafa89a55690b0" compoundref="mac__tbldefs_8h" startline="450">MAC_ParamTbl_t::SENS_BOARD_Y_OFF</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a927eb2a86e686a2d606b70b995d0fb58" compoundref="mac__tbldefs_8h" startline="458">MAC_ParamTbl_t::SENS_BOARD_Z_OFF</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a269050c8721b7823b130073715bdf132" compoundref="mac__app_8hpp" startline="116">MAC_CurrentValueTable_t::SensorCorrection</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a8bb8739cd2ef7a1d1ffeff8a6e7f06e3" compoundref="mac__app_8hpp" startline="119">MAC_CurrentValueTable_t::SensorGyro</references>
+        <references refid="struct_m_a_c___params__t_1a30a914639fb604956aabc75ffcd0195d" compoundref="mac__app_8hpp" startline="165">MAC_Params_t::tpa_breakpoint_d</references>
+        <references refid="struct_m_a_c___params__t_1a863a03afbba5004ad12b550c15dc4d41" compoundref="mac__app_8hpp" startline="162">MAC_Params_t::tpa_breakpoint_i</references>
+        <references refid="struct_m_a_c___params__t_1a1b9f7633ee313cbad255e7ea0d0be2d3" compoundref="mac__app_8hpp" startline="159">MAC_Params_t::tpa_breakpoint_p</references>
+        <references refid="struct_m_a_c___params__t_1a965a53eaffaf248611419841419b68ac" compoundref="mac__app_8hpp" startline="174">MAC_Params_t::tpa_rate_d</references>
+        <references refid="struct_m_a_c___params__t_1a7262a259f37926f52357c63cea19a1fd" compoundref="mac__app_8hpp" startline="171">MAC_Params_t::tpa_rate_i</references>
+        <references refid="struct_m_a_c___params__t_1a452c6e3823bbd8adb911edc91649c548" compoundref="mac__app_8hpp" startline="168">MAC_Params_t::tpa_rate_p</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a36ef590060bd045e6c22348f74371a7d" compoundref="mac__app_8hpp" startline="131">MAC_CurrentValueTable_t::VehicleStatus</references>
+        <referencedby refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" compoundref="mac__app_8cpp" startline="834" endline="940">RunController</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_m_a_c_1a5c86ef95919c3b83256b7f0f95384ea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>math::Vector3F</type>
+        <definition>math::Vector3F MAC::PidAttenuations</definition>
+        <argsstring>(float tpa_breakpoint, float tpa_rate)</argsstring>
+        <name>PidAttenuations</name>
+        <param>
+          <type>float</type>
+          <declname>tpa_breakpoint</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>tpa_rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function adjusts the rates based on the current throttle value</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tpa_breakpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float Parameter for breakpoint </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">tpa_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float Parameter for rate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of adjusted rates </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="612" column="1" bodyfile="apps/mac/fsw/src/mac_app.cpp" bodystart="1168" bodyend="1180"/>
+        <references refid="class_m_a_c_1a20e06e7eb46da29e6d105e908322f7c0" compoundref="mac__app_8hpp" startline="253">CVT</references>
+        <references refid="mac__app_8hpp_1a522adf85c2f14886186fe26a3726f9c5a184136d053a6f62c810fc101d00061b7" compoundref="mac__app_8hpp" startline="93">MAC_AXIS_INDEX_PITCH</references>
+        <references refid="mac__app_8hpp_1a522adf85c2f14886186fe26a3726f9c5a2d65101e997a5543049ea7bd697eb316" compoundref="mac__app_8hpp" startline="92">MAC_AXIS_INDEX_ROLL</references>
+        <references refid="mac__app_8hpp_1a522adf85c2f14886186fe26a3726f9c5afed9024aae4990304321981cfa8bb08a" compoundref="mac__app_8hpp" startline="94">MAC_AXIS_INDEX_YAW</references>
+        <references refid="mac__app_8hpp_1aca9b64dd872385e0bb30942e68fb2a85" compoundref="mac__app_8hpp" startline="63">TPA_RATE_LOWER_LIMIT</references>
+        <references refid="struct_m_a_c___current_value_table__t_1a72eea1ac82bcf620b6aafbf695eba120" compoundref="mac__app_8hpp" startline="128">MAC_CurrentValueTable_t::VRatesSp</references>
+        <referencedby refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" compoundref="mac__app_8cpp" startline="1045" endline="1166">ControlAttitudeRates</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_m_a_c_1a01526f7143cb2f798a8a8326374087e4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MAC::ValidateParamTbl</definition>
+        <argsstring>(void *)</argsstring>
+        <name>ValidateParamTbl</name>
+        <param>
+          <type>void *</type>
+          <defname>ConfigTblPtr</defname>
+        </param>
+        <briefdescription>
+<para>Validate <ref refid="class_m_a_c" kindref="compound">MAC</ref> PWM configuration table. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function validates <ref refid="class_m_a_c" kindref="compound">MAC</ref>&apos;s PWM configuration table</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ConfigTblPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the table to validate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="1" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mac/fsw/src/mac_app.hpp" line="540" column="1" bodyfile="apps/mac/fsw/src/mac_config_utils.cpp" bodystart="96" bodyend="424"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="mac__tbldefs_8h_1a18d8b7e309226b480ba3d921d20b1a75" compoundref="mac__tbldefs_8h" startline="55">MAC_PARAM_NAME_MAX_LEN</references>
+        <references refid="mac__events_8h_1aa143491ae2a8080b57c55607c6ac20c5acfce40ed1f95bdbd8bbed816c9647e93" compoundref="mac__events_8h" startline="172">MAC_TBL_VALIDATE_ERR_EID</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a6a2a3c1dd0505dc2562da9d21038eb2e" compoundref="mac__tbldefs_8h" startline="386">MAC_ParamTbl_t::MC_ACRO_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1adc55f1f712689b6e30eec5a1244be19e" compoundref="mac__tbldefs_8h" startline="116">MC_ACRO_P_MAX_MAX</references>
+        <references refid="mac__tbldefs_8h_1aa416e42048baec57a65c30faf27b223f" compoundref="mac__tbldefs_8h" startline="115">MC_ACRO_P_MAX_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ac3c0743918099d8321eede4009fbeff1" compoundref="mac__tbldefs_8h" startline="378">MAC_ParamTbl_t::MC_ACRO_R_MAX</references>
+        <references refid="mac__tbldefs_8h_1ad15233e1911d3173db1c4c615171df07" compoundref="mac__tbldefs_8h" startline="114">MC_ACRO_R_MAX_MAX</references>
+        <references refid="mac__tbldefs_8h_1ac777894dcc6a18b5513a218ce88c3cd5" compoundref="mac__tbldefs_8h" startline="113">MC_ACRO_R_MAX_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1adc60ebb080f34ea11c42655a72c5f139" compoundref="mac__tbldefs_8h" startline="394">MAC_ParamTbl_t::MC_ACRO_Y_MAX</references>
+        <references refid="mac__tbldefs_8h_1a9a249bcd1e4796d71f2103182547ffe0" compoundref="mac__tbldefs_8h" startline="118">MC_ACRO_Y_MAX_MAX</references>
+        <references refid="mac__tbldefs_8h_1a89da9b7f7762c0581e3ef130f8e2717d" compoundref="mac__tbldefs_8h" startline="117">MC_ACRO_Y_MAX_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1aa2ddb48900b6de050575777a6ee26110" compoundref="mac__tbldefs_8h" startline="426">MAC_ParamTbl_t::MC_BAT_SCALE_EN</references>
+        <references refid="mac__tbldefs_8h_1a5273305dea789d51cb15c9ce5269b953" compoundref="mac__tbldefs_8h" startline="126">MC_BAT_SCALE_EN_MAX</references>
+        <references refid="mac__tbldefs_8h_1a2829ead19dd53a9803616cdf0ecb7131" compoundref="mac__tbldefs_8h" startline="125">MC_BAT_SCALE_EN_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ac8a75e63f16e96a5cf419ab64680f291" compoundref="mac__tbldefs_8h" startline="202">MAC_ParamTbl_t::MC_PITCH_P</references>
+        <references refid="mac__tbldefs_8h_1a25a72dd7cd703ef3a04ed3d0e8b37811" compoundref="mac__tbldefs_8h" startline="70">MC_PITCH_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1a5805b9c731837076f6bd0980d16621f2" compoundref="mac__tbldefs_8h" startline="69">MC_PITCH_P_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a39c77a200fe96ab0f550126481d57b12" compoundref="mac__tbldefs_8h" startline="418">MAC_ParamTbl_t::MC_PITCH_TC</references>
+        <references refid="mac__tbldefs_8h_1af1bcd4143ef5b55c21c331b84d0159ec" compoundref="mac__tbldefs_8h" startline="124">MC_PITCH_TC_MAX</references>
+        <references refid="mac__tbldefs_8h_1a7e9275fe4c0e25d00038e232d8bc8276" compoundref="mac__tbldefs_8h" startline="123">MC_PITCH_TC_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a99c1cd32fc6b62e908811880f4fb28a0" compoundref="mac__tbldefs_8h" startline="234">MAC_ParamTbl_t::MC_PITCHRATE_D</references>
+        <references refid="mac__tbldefs_8h_1aaf5af84dcbeb803394e63463938e1116" compoundref="mac__tbldefs_8h" startline="78">MC_PITCHRATE_D_MAX</references>
+        <references refid="mac__tbldefs_8h_1a2720bb6f0e9df21317be24ec0b7a463a" compoundref="mac__tbldefs_8h" startline="77">MC_PITCHRATE_D_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a84f584196d5c7b7bdbb576bbd3e92594" compoundref="mac__tbldefs_8h" startline="242">MAC_ParamTbl_t::MC_PITCHRATE_FF</references>
+        <references refid="mac__tbldefs_8h_1a8bfe9db0d57493fbac82eeceaeaf7cc5" compoundref="mac__tbldefs_8h" startline="80">MC_PITCHRATE_FF_MAX</references>
+        <references refid="mac__tbldefs_8h_1a660158335d81a1919a5f6bebe652f5a0" compoundref="mac__tbldefs_8h" startline="79">MC_PITCHRATE_FF_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a47527298366fa0125733e33502da9f16" compoundref="mac__tbldefs_8h" startline="218">MAC_ParamTbl_t::MC_PITCHRATE_I</references>
+        <references refid="mac__tbldefs_8h_1af498201f1a4af32af3709824b017bcaf" compoundref="mac__tbldefs_8h" startline="74">MC_PITCHRATE_I_MAX</references>
+        <references refid="mac__tbldefs_8h_1a8b157383082fd6e1ba56327924c89d4a" compoundref="mac__tbldefs_8h" startline="73">MC_PITCHRATE_I_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a6e8ba213afe3257e862d21cb90dd1ebd" compoundref="mac__tbldefs_8h" startline="354">MAC_ParamTbl_t::MC_PITCHRATE_MAX</references>
+        <references refid="mac__tbldefs_8h_1a63eb268f9cd2561cb8d197aca2d037d2" compoundref="mac__tbldefs_8h" startline="108">MC_PITCHRATE_MAX_MAX</references>
+        <references refid="mac__tbldefs_8h_1a59d83156f3b991c5b9f0dfc0b84f0eaa" compoundref="mac__tbldefs_8h" startline="107">MC_PITCHRATE_MAX_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a49add488b7bdbbd89eede35bcd544a03" compoundref="mac__tbldefs_8h" startline="210">MAC_ParamTbl_t::MC_PITCHRATE_P</references>
+        <references refid="mac__tbldefs_8h_1aa5e76ac5e0346ccbaa2643f4cf8c9b84" compoundref="mac__tbldefs_8h" startline="72">MC_PITCHRATE_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1a7eb03a49ea9abc758868c791007a5337" compoundref="mac__tbldefs_8h" startline="71">MC_PITCHRATE_P_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a5e39643ee2b299b1a99861fa052094bd" compoundref="mac__tbldefs_8h" startline="226">MAC_ParamTbl_t::MC_PR_INT_LIM</references>
+        <references refid="mac__tbldefs_8h_1ad7c179edb1a56be4bdf1836fc0f58d4c" compoundref="mac__tbldefs_8h" startline="76">MC_PR_INT_LIM_MAX</references>
+        <references refid="mac__tbldefs_8h_1a8aa7cecaeb0428734b2a320baf8290a8" compoundref="mac__tbldefs_8h" startline="75">MC_PR_INT_LIM_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a13b02ed4f1fe9ef6dab8d2beb562e3cb" compoundref="mac__tbldefs_8h" startline="402">MAC_ParamTbl_t::MC_RATT_TH</references>
+        <references refid="mac__tbldefs_8h_1a732fd9e58afd9e5d383ca6c29fbe8583" compoundref="mac__tbldefs_8h" startline="120">MC_RATT_TH_MAX</references>
+        <references refid="mac__tbldefs_8h_1a421609f1e684fb87fb80f08d027d881c" compoundref="mac__tbldefs_8h" startline="119">MC_RATT_TH_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a0a5e2bd6739c39465613bf92fc9e987e" compoundref="mac__tbldefs_8h" startline="154">MAC_ParamTbl_t::MC_ROLL_P</references>
+        <references refid="mac__tbldefs_8h_1a71753eca289c1577d85147832b25d31f" compoundref="mac__tbldefs_8h" startline="58">MC_ROLL_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1a2919b46f45218f0e718cc45821ae64b3" compoundref="mac__tbldefs_8h" startline="57">MC_ROLL_P_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a1b7369026a82c2e90a67c960f124dc3d" compoundref="mac__tbldefs_8h" startline="410">MAC_ParamTbl_t::MC_ROLL_TC</references>
+        <references refid="mac__tbldefs_8h_1aeab14f3a1c9d4fd304448e4e7a30343e" compoundref="mac__tbldefs_8h" startline="122">MC_ROLL_TC_MAX</references>
+        <references refid="mac__tbldefs_8h_1abd146857246cbeeeac5cf99396ca60cb" compoundref="mac__tbldefs_8h" startline="121">MC_ROLL_TC_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a69e893bdce8879cb85425f439cebd79a" compoundref="mac__tbldefs_8h" startline="186">MAC_ParamTbl_t::MC_ROLLRATE_D</references>
+        <references refid="mac__tbldefs_8h_1a7f1019c173f9b75c0f796950f8654557" compoundref="mac__tbldefs_8h" startline="64">MC_ROLLRATE_D_MAX</references>
+        <references refid="mac__tbldefs_8h_1ab238fb5b0b1a4d782d3d9f6e821ea69f" compoundref="mac__tbldefs_8h" startline="63">MC_ROLLRATE_D_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a746febd70d6b918f0fc2aea86c4340da" compoundref="mac__tbldefs_8h" startline="194">MAC_ParamTbl_t::MC_ROLLRATE_FF</references>
+        <references refid="mac__tbldefs_8h_1ae3e0b7a613e8311001370f3459da3cf8" compoundref="mac__tbldefs_8h" startline="68">MC_ROLLRATE_FF_MAX</references>
+        <references refid="mac__tbldefs_8h_1acafd4e18727b28cbda71ea7a180fda45" compoundref="mac__tbldefs_8h" startline="67">MC_ROLLRATE_FF_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a4a1c29fc5a1b22ca925b75492f12caaf" compoundref="mac__tbldefs_8h" startline="170">MAC_ParamTbl_t::MC_ROLLRATE_I</references>
+        <references refid="mac__tbldefs_8h_1a65e454f6edfedb42d0f4bf42c120d52f" compoundref="mac__tbldefs_8h" startline="62">MC_ROLLRATE_I_MAX</references>
+        <references refid="mac__tbldefs_8h_1a6056fe327b98924f6f1756592101a55a" compoundref="mac__tbldefs_8h" startline="61">MC_ROLLRATE_I_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a59670dcb0dac27e271509286c88b6612" compoundref="mac__tbldefs_8h" startline="346">MAC_ParamTbl_t::MC_ROLLRATE_MAX</references>
+        <references refid="mac__tbldefs_8h_1a3a8340717ef2093194b1bc10558456d1" compoundref="mac__tbldefs_8h" startline="106">MC_ROLLRATE_MAX_MAX</references>
+        <references refid="mac__tbldefs_8h_1a8535427f8268fdf54961993bed4dab9b" compoundref="mac__tbldefs_8h" startline="105">MC_ROLLRATE_MAX_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a18377e10fdd0476a86c6272b9ab2830e" compoundref="mac__tbldefs_8h" startline="162">MAC_ParamTbl_t::MC_ROLLRATE_P</references>
+        <references refid="mac__tbldefs_8h_1a8acbce28660b9c67d2f87cb001d86d39" compoundref="mac__tbldefs_8h" startline="60">MC_ROLLRATE_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1a9ae71227aa357a8bb34325c530941912" compoundref="mac__tbldefs_8h" startline="59">MC_ROLLRATE_P_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1af9b1b956b8abc6410d66c09187d3d0d4" compoundref="mac__tbldefs_8h" startline="178">MAC_ParamTbl_t::MC_RR_INT_LIM</references>
+        <references refid="mac__tbldefs_8h_1ab5c1b7185ede752498c71d6d773cb8eb" compoundref="mac__tbldefs_8h" startline="66">MC_RR_INT_LIM_MAX</references>
+        <references refid="mac__tbldefs_8h_1a2421bf386423910341ed8653d89925b0" compoundref="mac__tbldefs_8h" startline="65">MC_RR_INT_LIM_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ad628cbdc3b450831b1dfdabdfee69af4" compoundref="mac__tbldefs_8h" startline="266">MAC_ParamTbl_t::MC_TPA_BREAK_D</references>
+        <references refid="mac__tbldefs_8h_1a7acc93ccea837fc0ca8046842213e759" compoundref="mac__tbldefs_8h" startline="86">MC_TPA_BREAK_D_MAX</references>
+        <references refid="mac__tbldefs_8h_1a38b8a9e39cdd15be1611aed00a15efd7" compoundref="mac__tbldefs_8h" startline="85">MC_TPA_BREAK_D_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ab5a7e469fc4336f6a9a67b9633e62bb5" compoundref="mac__tbldefs_8h" startline="258">MAC_ParamTbl_t::MC_TPA_BREAK_I</references>
+        <references refid="mac__tbldefs_8h_1a7d3210a90e4d1011c7480760f067eb5d" compoundref="mac__tbldefs_8h" startline="84">MC_TPA_BREAK_I_MAX</references>
+        <references refid="mac__tbldefs_8h_1a13e363058592304ec5c35aef792ed89a" compoundref="mac__tbldefs_8h" startline="83">MC_TPA_BREAK_I_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a0652e9c4a93a9ab760071f4f6e3f285e" compoundref="mac__tbldefs_8h" startline="250">MAC_ParamTbl_t::MC_TPA_BREAK_P</references>
+        <references refid="mac__tbldefs_8h_1a9d9c3d9a2413868f594d9e9eacd8db4f" compoundref="mac__tbldefs_8h" startline="82">MC_TPA_BREAK_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1ac0ce7b706470c34940540bcc7e83d478" compoundref="mac__tbldefs_8h" startline="81">MC_TPA_BREAK_P_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ac67e08fb4bb71ada3acf084090a32e3d" compoundref="mac__tbldefs_8h" startline="290">MAC_ParamTbl_t::MC_TPA_RATE_D</references>
+        <references refid="mac__tbldefs_8h_1a33e2476b1deb7cdebd1fd6e052329375" compoundref="mac__tbldefs_8h" startline="92">MC_TPA_RATE_D_MAX</references>
+        <references refid="mac__tbldefs_8h_1a246b1acc2ba69d11bce510c087e767e6" compoundref="mac__tbldefs_8h" startline="91">MC_TPA_RATE_D_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1abd7bcf8c3ce6fb3567e4b1f2f72d7d7c" compoundref="mac__tbldefs_8h" startline="282">MAC_ParamTbl_t::MC_TPA_RATE_I</references>
+        <references refid="mac__tbldefs_8h_1a9c340fad7250ccc332c9047b58ed3162" compoundref="mac__tbldefs_8h" startline="90">MC_TPA_RATE_I_MAX</references>
+        <references refid="mac__tbldefs_8h_1a036743568c396b7154d18ed7f63e41da" compoundref="mac__tbldefs_8h" startline="89">MC_TPA_RATE_I_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a54802cc95a60b0b96b470bd1bff28d39" compoundref="mac__tbldefs_8h" startline="274">MAC_ParamTbl_t::MC_TPA_RATE_P</references>
+        <references refid="mac__tbldefs_8h_1a77354a79d0e3a7e01a6bd77e3251c1e7" compoundref="mac__tbldefs_8h" startline="88">MC_TPA_RATE_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1a6717f4548fe1fdad905cb2ed4f6bdd31" compoundref="mac__tbldefs_8h" startline="87">MC_TPA_RATE_P_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a47d22928ec1aa459fe0d8f5ec6b823c5" compoundref="mac__tbldefs_8h" startline="298">MAC_ParamTbl_t::MC_YAW_P</references>
+        <references refid="mac__tbldefs_8h_1a7fba694faac19a3188ca7dca86000da0" compoundref="mac__tbldefs_8h" startline="94">MC_YAW_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1ae9abb92bda9f54e149db7d62d883f034" compoundref="mac__tbldefs_8h" startline="93">MC_YAW_P_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a1c943b2e6f68680fc13a6007b43c3acb" compoundref="mac__tbldefs_8h" startline="330">MAC_ParamTbl_t::MC_YAWRATE_D</references>
+        <references refid="mac__tbldefs_8h_1a739e51557935965c67c58c7988e87248" compoundref="mac__tbldefs_8h" startline="102">MC_YAWRATE_D_MAX</references>
+        <references refid="mac__tbldefs_8h_1ab2761211ae39e8fc9847a89440b47eea" compoundref="mac__tbldefs_8h" startline="101">MC_YAWRATE_D_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1acecb99b4f8ffc79c8c69df727b5e0f07" compoundref="mac__tbldefs_8h" startline="338">MAC_ParamTbl_t::MC_YAWRATE_FF</references>
+        <references refid="mac__tbldefs_8h_1a605de14c4a5d51f714266af291751096" compoundref="mac__tbldefs_8h" startline="104">MC_YAWRATE_FF_MAX</references>
+        <references refid="mac__tbldefs_8h_1aa0a94d9d47048c7e82ab440179ad786d" compoundref="mac__tbldefs_8h" startline="103">MC_YAWRATE_FF_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a0b53036c91e6460a794dcc7c8e24144d" compoundref="mac__tbldefs_8h" startline="314">MAC_ParamTbl_t::MC_YAWRATE_I</references>
+        <references refid="mac__tbldefs_8h_1afe0780377a4868f1b0ad09d3a307576e" compoundref="mac__tbldefs_8h" startline="98">MC_YAWRATE_I_MAX</references>
+        <references refid="mac__tbldefs_8h_1a06ad3949d5b7531d1b5c425803a2332d" compoundref="mac__tbldefs_8h" startline="97">MC_YAWRATE_I_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ac6723d5b8e2917a82a14f68c13fd69c0" compoundref="mac__tbldefs_8h" startline="362">MAC_ParamTbl_t::MC_YAWRATE_MAX</references>
+        <references refid="mac__tbldefs_8h_1a00143ab68a5c7b9fac1da2248be0edef" compoundref="mac__tbldefs_8h" startline="110">MC_YAWRATE_MAX_MAX</references>
+        <references refid="mac__tbldefs_8h_1a88acc52b2766be7317852233c1c00566" compoundref="mac__tbldefs_8h" startline="109">MC_YAWRATE_MAX_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1afa2a2a86e07796e300beb5fa330a78a8" compoundref="mac__tbldefs_8h" startline="306">MAC_ParamTbl_t::MC_YAWRATE_P</references>
+        <references refid="mac__tbldefs_8h_1a29fd2395304b8e805f063d47e3a61f4a" compoundref="mac__tbldefs_8h" startline="96">MC_YAWRATE_P_MAX</references>
+        <references refid="mac__tbldefs_8h_1a8a3dda58b3543c7090343cceac281c18" compoundref="mac__tbldefs_8h" startline="95">MC_YAWRATE_P_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1ad879407d13eebe87deef7d608ff8254c" compoundref="mac__tbldefs_8h" startline="370">MAC_ParamTbl_t::MC_YAWRAUTO_MAX</references>
+        <references refid="mac__tbldefs_8h_1a245e79e9f1173acc0eb7be2a66ed0d0e" compoundref="mac__tbldefs_8h" startline="112">MC_YAWRAUTO_MAX_MAX</references>
+        <references refid="mac__tbldefs_8h_1a517db94cb5a9dac22a3ec6454ad7dd6b" compoundref="mac__tbldefs_8h" startline="111">MC_YAWRAUTO_MAX_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a2927a2b1fe21eaf6c18cd405612c25f8" compoundref="mac__tbldefs_8h" startline="322">MAC_ParamTbl_t::MC_YR_INT_LIM</references>
+        <references refid="mac__tbldefs_8h_1a6d2586083113ee0cde8620366696c76e" compoundref="mac__tbldefs_8h" startline="100">MC_YR_INT_LIM_MAX</references>
+        <references refid="mac__tbldefs_8h_1acac3c0015401a845ddd1966cc620f00c" compoundref="mac__tbldefs_8h" startline="99">MC_YR_INT_LIM_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a5a4f688175c6ed4fd7e9279cdf2a3b67" compoundref="mac__tbldefs_8h" startline="434">MAC_ParamTbl_t::SENS_BOARD_ROT</references>
+        <references refid="mac__tbldefs_8h_1a4b990f71ec0b3ec3275ac64a4c990098" compoundref="mac__tbldefs_8h" startline="128">SENS_BOARD_ROT_MAX</references>
+        <references refid="mac__tbldefs_8h_1a2f20f96f6d3f700b3409a29c013a1c48" compoundref="mac__tbldefs_8h" startline="127">SENS_BOARD_ROT_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a48dd4db382ee86552efabce4c631ae2b" compoundref="mac__tbldefs_8h" startline="442">MAC_ParamTbl_t::SENS_BOARD_X_OFF</references>
+        <references refid="mac__tbldefs_8h_1a1d47313d0e69b51cf441381d399d0b35" compoundref="mac__tbldefs_8h" startline="130">SENS_BOARD_X_OFF_MAX</references>
+        <references refid="mac__tbldefs_8h_1a164412f805a0f22d81027c6ae78da251" compoundref="mac__tbldefs_8h" startline="129">SENS_BOARD_X_OFF_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a7aee92537340a2d4ebdafa89a55690b0" compoundref="mac__tbldefs_8h" startline="450">MAC_ParamTbl_t::SENS_BOARD_Y_OFF</references>
+        <references refid="mac__tbldefs_8h_1a952cca9f1d0c964769ebe6471ea658c5" compoundref="mac__tbldefs_8h" startline="132">SENS_BOARD_Y_OFF_MAX</references>
+        <references refid="mac__tbldefs_8h_1abd8d3117b38105e22319bda9c7ddbe34" compoundref="mac__tbldefs_8h" startline="131">SENS_BOARD_Y_OFF_MIN</references>
+        <references refid="struct_m_a_c___param_tbl__t_1a927eb2a86e686a2d606b70b995d0fb58" compoundref="mac__tbldefs_8h" startline="458">MAC_ParamTbl_t::SENS_BOARD_Z_OFF</references>
+        <references refid="mac__tbldefs_8h_1aacca7a9013c30ac36e9af04a9ce27dd8" compoundref="mac__tbldefs_8h" startline="134">SENS_BOARD_Z_OFF_MAX</references>
+        <references refid="mac__tbldefs_8h_1a05f7cdb85c77854954f2b6475105543b" compoundref="mac__tbldefs_8h" startline="133">SENS_BOARD_Z_OFF_MIN</references>
+        <referencedby refid="class_m_a_c_1af070d9da92e27b578f5100d320c9ad5e" compoundref="mac__config__utils_8cpp" startline="50" endline="88">InitConfigTbl</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_m_a_c" kindref="compound">MAC</ref> Operational Data Structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>MAC_Params_t</label>
+        <link refid="struct_m_a_c___params__t"/>
+      </node>
+      <node id="2">
+        <label>MAC_CurrentValueTable_t</label>
+        <link refid="struct_m_a_c___current_value_table__t"/>
+      </node>
+      <node id="1">
+        <label>MAC</label>
+        <link refid="class_m_a_c"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>CVT</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>EventTbl</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>HkTlm</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ParamTblPtr</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Params</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>MAC_HkTlm_t</label>
+        <link refid="struct_m_a_c___hk_tlm__t"/>
+      </node>
+      <node id="3">
+        <label>CFE_EVS_BinFilter_t</label>
+        <link refid="struct_c_f_e___e_v_s___bin_filter__t" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="5">
+        <label>MAC_ParamTbl_t</label>
+        <link refid="struct_m_a_c___param_tbl__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/mac/fsw/src/mac_app.hpp" line="216" column="1" bodyfile="apps/mac/fsw/src/mac_app.hpp" bodystart="215" bodyend="614"/>
+    <listofallmembers>
+      <member refid="class_m_a_c_1affd1e1e672fc02613a3908581e97e080" prot="public" virt="non-virtual"><scope>MAC</scope><name>AcquireConfigPointers</name></member>
+      <member refid="class_m_a_c_1a6e53fa12eb5e515a80d8216b059fede1" prot="public" virt="non-virtual"><scope>MAC</scope><name>AppMain</name></member>
+      <member refid="class_m_a_c_1a1945b684a2075c9aa8097b6457571e17" prot="public" virt="non-virtual"><scope>MAC</scope><name>CmdPipeId</name></member>
+      <member refid="class_m_a_c_1a9a16e573567759fea28c79fcded7660c" prot="public" virt="non-virtual"><scope>MAC</scope><name>ControlAttitude</name></member>
+      <member refid="class_m_a_c_1a78d94f828c311c2cf06a0da26ef3cdba" prot="public" virt="non-virtual"><scope>MAC</scope><name>ControlAttitudeRates</name></member>
+      <member refid="class_m_a_c_1a20e06e7eb46da29e6d105e908322f7c0" prot="public" virt="non-virtual"><scope>MAC</scope><name>CVT</name></member>
+      <member refid="class_m_a_c_1abc40e6d6126728bf5878bc4397d1507d" prot="public" virt="non-virtual"><scope>MAC</scope><name>DataPipeId</name></member>
+      <member refid="class_m_a_c_1ae776a7bda3eab9dae0c7c02c226cc0cc" prot="public" virt="non-virtual"><scope>MAC</scope><name>EventTbl</name></member>
+      <member refid="class_m_a_c_1a3fa32b8d878bc725e237d96b228570cb" prot="public" virt="non-virtual"><scope>MAC</scope><name>HkTlm</name></member>
+      <member refid="class_m_a_c_1a555140bec351c759bdb2068f536a4168" prot="public" virt="non-virtual"><scope>MAC</scope><name>InitApp</name></member>
+      <member refid="class_m_a_c_1af070d9da92e27b578f5100d320c9ad5e" prot="public" virt="non-virtual"><scope>MAC</scope><name>InitConfigTbl</name></member>
+      <member refid="class_m_a_c_1ad71488590e75eedaf55aba5765302e78" prot="public" virt="non-virtual"><scope>MAC</scope><name>InitData</name></member>
+      <member refid="class_m_a_c_1a6b3ccea970d13a67fcd1445fee2fda1e" prot="public" virt="non-virtual"><scope>MAC</scope><name>InitEvent</name></member>
+      <member refid="class_m_a_c_1a4aba8bc15a567050c8e05ed674ded621" prot="public" virt="non-virtual"><scope>MAC</scope><name>InitPipe</name></member>
+      <member refid="class_m_a_c_1aa508a1ddc19ba9be12772781f69d7b3b" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_ActuatorControls0</name></member>
+      <member refid="class_m_a_c_1a6cd8fd88fa92267391b0e6ff782db9ed" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_AngularRatesIntegralError</name></member>
+      <member refid="class_m_a_c_1ae8cf8adffc45ddba1625f9f5b0a63668" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_AngularRatesPrevious</name></member>
+      <member refid="class_m_a_c_1a60aa132e1a57b0602c7153c12ccd3c80" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_AngularRatesSetpoint</name></member>
+      <member refid="class_m_a_c_1ae9884a45a6ece70955e5f29b5db43b7c" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_AngularRatesSetpointPrevious</name></member>
+      <member refid="class_m_a_c_1aaa6fee46c5696b8df4246925ad5fa5fb" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_AttControl</name></member>
+      <member refid="class_m_a_c_1a6840e7f79ca5b22851bef6ac464f90e6" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_Params</name></member>
+      <member refid="class_m_a_c_1a15c61b20a3afbf2869eb8e954be6dfe2" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_SelectedGyro</name></member>
+      <member refid="class_m_a_c_1ad85df3cf497cf4d001ca4ec2b0abb6a9" prot="public" virt="non-virtual"><scope>MAC</scope><name>m_ThrustSp</name></member>
+      <member refid="class_m_a_c_1a3fefccc59b40a218773b21b5280adb88" prot="public" virt="non-virtual"><scope>MAC</scope><name>MAC</name></member>
+      <member refid="class_m_a_c_1a489d5ebc67d7504de6d40ebb7225f70f" prot="public" virt="non-virtual"><scope>MAC</scope><name>ParamTblHdl</name></member>
+      <member refid="class_m_a_c_1ae797a0e7fdc50e034fb29dc1a25dc7f3" prot="public" virt="non-virtual"><scope>MAC</scope><name>ParamTblPtr</name></member>
+      <member refid="class_m_a_c_1a5c86ef95919c3b83256b7f0f95384ea6" prot="public" virt="non-virtual"><scope>MAC</scope><name>PidAttenuations</name></member>
+      <member refid="class_m_a_c_1ac84313f530ec12e9fd99f09673d2bd4b" prot="public" virt="non-virtual"><scope>MAC</scope><name>ProcessAppCmds</name></member>
+      <member refid="class_m_a_c_1abaa9e8d8f217c4546c704d59f2a3bf35" prot="public" virt="non-virtual"><scope>MAC</scope><name>ProcessIncomingData</name></member>
+      <member refid="class_m_a_c_1aa797020befa5b66153559668d451e15d" prot="public" virt="non-virtual"><scope>MAC</scope><name>ProcessNewCmds</name></member>
+      <member refid="class_m_a_c_1a7f2f68372facbdf9ced8306209e710df" prot="public" virt="non-virtual"><scope>MAC</scope><name>RcvSchPipeMsg</name></member>
+      <member refid="class_m_a_c_1a550036dcd5888e21e575a69f0784d06a" prot="public" virt="non-virtual"><scope>MAC</scope><name>ReportHousekeeping</name></member>
+      <member refid="class_m_a_c_1a102e8bd8fd2ad17e1dfd685836cd9834" prot="public" virt="non-virtual"><scope>MAC</scope><name>RunController</name></member>
+      <member refid="class_m_a_c_1a258c5034198bfe2036dc3b884aa5aa23" prot="public" virt="non-virtual"><scope>MAC</scope><name>SchPipeId</name></member>
+      <member refid="class_m_a_c_1a5b16256419dad3acab6834e12535ce28" prot="public" virt="non-virtual"><scope>MAC</scope><name>SendActuatorControls</name></member>
+      <member refid="class_m_a_c_1aab42e50878733788cc1a59f1d6694956" prot="public" virt="non-virtual"><scope>MAC</scope><name>uiRunStatus</name></member>
+      <member refid="class_m_a_c_1a5d65ed099a3f4ab1012a0939640a5c98" prot="public" virt="non-virtual"><scope>MAC</scope><name>UpdateParams</name></member>
+      <member refid="class_m_a_c_1a01526f7143cb2f798a8a8326374087e4" prot="public" virt="non-virtual"><scope>MAC</scope><name>ValidateParamTbl</name></member>
+      <member refid="class_m_a_c_1aa6d5286a9472e19b87375a5a1cdaf00d" prot="public" virt="non-virtual"><scope>MAC</scope><name>VerifyCmdLength</name></member>
+      <member refid="class_m_a_c_1a9f7b01d1658bc5b8af3d1d67aea7af31" prot="public" virt="non-virtual"><scope>MAC</scope><name>~MAC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

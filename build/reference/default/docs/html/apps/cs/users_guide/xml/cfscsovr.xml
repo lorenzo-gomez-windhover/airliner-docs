@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfscsovr" kind="page">
+    <compoundname>cfscsovr</compoundname>
+    <title>CFS Checksum Overview</title>
+    <detaileddescription>
+<para>The Checksum (CS) application of the Core Flight System (CFS) is responsible for ensuring the integrity of onboard memory. CS has the ability to ensure the integrity of Core Flight Executive (cFE) applications, cFE tables, the cFE core, the onboard operating system (OS), onboard EEPROM, as well as any memory regions (&quot;Memory&quot;) specified by the users.</para><para>All CS checksums regions are configurable allowing users to specify the enable/disable state for each region upon startup.</para><para>The cFE core and the OS checksum regions are enabled by default. These are the only two checksum regions that are not table driven. Additionally, the user may select other table driven areas to checksum, including:</para><para><itemizedlist>
+<listitem>
+<para><bold>EEPROM</bold>: A contiguous block of memory specified by a starting address and number of bytes. </para></listitem>
+<listitem>
+<para><bold>Memory</bold>: A contiguous block of (non-EEPROM) memory specified by a starting address and number of bytes. </para></listitem>
+<listitem>
+<para><bold>Tables</bold>: Any cFE or CFS application table, specified by the table name. </para></listitem>
+<listitem>
+<para><bold>Applications</bold>: Any cFE or CFS application, specified by the app name. </para></listitem>
+</itemizedlist>
+</para><para>All table driven checksum regions are also enabled by default.</para><para>The CS application is both table and schedule driven. All of the applications, tables, areas of EEPROM, and other memory areas to be checksummed must be defined by the user in four separate tables that can be controlled independently. For each checksum region that is enabled, CS will checksum up to <ref refid="cs__platform__cfg_8h_1ae1b017b8f16a4576d7e1f39678693d0c" kindref="member">CS_DEFAULT_BYTES_PER_CYCLE</ref> (a configuration parameter) bytes every time CS receives its background cycle MID from a scheduling application/source.</para><para>The CS application uses two sets of tables: a set of definition tables which the user populates on the ground with the set of applications, tables, areas of EEPROM and other memory areas, and a set of results tables which are dump only tables. The results tables are populated by CS automatically from the definition tables, but also contain more information. The results tables contain the checksum values for each object in the table as well as other information for CS to use during runtime. For more information see <ref refid="cfscstbl" kindref="compound">CFS Checksum Table Definitions</ref>.</para><para>Next: <ref refid="cfscsopr" kindref="compound">CFS Checksum Operation</ref> <linebreak/>
+ Prev: <ref refid="cfscsintro" kindref="compound">CFS Checksum Introduction</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

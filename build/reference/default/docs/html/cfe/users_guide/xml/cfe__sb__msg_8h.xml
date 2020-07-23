@@ -1,0 +1,608 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__sb__msg_8h" kind="file" language="C++">
+    <compoundname>cfe_sb_msg.h</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includes refid="cfe__sb_8h" local="yes">cfe_sb.h</includes>
+    <includes local="yes">osconfig.h</includes>
+    <includes refid="cfe__es_8h" local="yes">cfe_es.h</includes>
+    <includedby refid="cfe__sb__priv_8h" local="yes">sb/cfe_sb_priv.h</includedby>
+    <incdepgraph>
+      <node id="509">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="512">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="515">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+      </node>
+      <node id="518">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h"/>
+      </node>
+      <node id="516">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+      </node>
+      <node id="513">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="514">
+        <label>cfe_platform_cfg.h</label>
+      </node>
+      <node id="511">
+        <label>osconfig.h</label>
+      </node>
+      <node id="510">
+        <label>cfe_sb.h</label>
+        <link refid="cfe__sb_8h"/>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="515" relation="include">
+        </childnode>
+        <childnode refid="516" relation="include">
+        </childnode>
+      </node>
+      <node id="517">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h"/>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="518" relation="include">
+        </childnode>
+      </node>
+      <node id="508">
+        <label>inc/cfe_sb_msg.h</label>
+        <link refid="cfe_sb_msg.h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+        <childnode refid="517" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="520">
+        <label>sb/cfe_sb_priv.h</label>
+        <link refid="cfe__sb__priv_8h"/>
+      </node>
+      <node id="519">
+        <label>inc/cfe_sb_msg.h</label>
+        <link refid="cfe_sb_msg.h"/>
+        <childnode refid="520" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_c_f_e___s_b___write_file_info_cmd___payload__t" prot="public">CFE_SB_WriteFileInfoCmd_Payload_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___write_file_info_cmd__t" prot="public">CFE_SB_WriteFileInfoCmd_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___en_rout_cmd___payload__t" prot="public">CFE_SB_EnRoutCmd_Payload_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___en_rout_cmd__t" prot="public">CFE_SB_EnRoutCmd_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___h_k_msg___payload__t" prot="public">CFE_SB_HKMsg_Payload_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___h_k_msg__t" prot="public">CFE_SB_HKMsg_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___pipe_depth_stats__t" prot="public">CFE_SB_PipeDepthStats_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___stat_msg___payload__t" prot="public">CFE_SB_StatMsg_Payload_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___stat_msg__t" prot="public">CFE_SB_StatMsg_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___routing_file_entry__t" prot="public">CFE_SB_RoutingFileEntry_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___msg_map_file_entry__t" prot="public">CFE_SB_MsgMapFileEntry_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t" prot="public">CFE_SB_SubRprtMsg_Payload_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___sub_rprt_msg__t" prot="public">CFE_SB_SubRprtMsg_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___sub_entries__t" prot="public">CFE_SB_SubEntries_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___prev_sub_msg___payload__t" prot="public">CFE_SB_PrevSubMsg_Payload_t</innerclass>
+    <innerclass refid="struct_c_f_e___s_b___prev_sub_msg__t" prot="public">CFE_SB_PrevSubMsg_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cfe__sb__msg_8h_1a999217aab6a027b40db2e7fd8bc0a662" prot="public" static="no">
+        <name>CFE_SB_NOOP_CC</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000001"><xreftitle>Name</xreftitle><xrefdescription><para>Software Bus No-Op</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command performs no other function than to increment the command execution counter. The command may be used to verify general aliveness of the Software Bus task.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000047"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_NOOP</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound">CFE_SB_CmdHdr_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="cfe__sb__events_8h_1a16e9d8e79635d0fe53cc59fd1854955a" kindref="member">CFE_SB_CMD0_RCVD_EID</ref> informational event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>There are no error conditions for this command. If the Software Bus receives the command, the event is sent (although it may be filtered by EVS) and the counter is incremented unconditionally.</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="122" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1a5415ae258f12245239d04d7c9b661633" prot="public" static="no">
+        <name>CFE_SB_RESET_CTRS_CC</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000002"><xreftitle>Name</xreftitle><xrefdescription><para>Software Bus Reset Counters</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command resets the following counters within the Software Bus housekeeping telemetry:<itemizedlist>
+<listitem><para>Command Execution Counter ($sc_$cpu_SB_CMDPC)</para></listitem><listitem><para>Command Error Counter ($sc_$cpu_SB_CMDEC)</para></listitem></itemizedlist>
+</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000048"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_ResetCtrs</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound">CFE_SB_CmdHdr_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>The <ref refid="cfe__sb__events_8h_1a1257888d6fe11d2502da88f1f891e5f5" kindref="member">CFE_SB_CMD1_RCVD_EID</ref> informational event message will be generated</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>There are no error conditions for this command. If the Software Bus receives the command, the event is sent (although it may be filtered by EVS) and the counter is incremented unconditionally.</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>This command is not inherently dangerous. However, it is possible for ground systems and on-board safing procedures to be designed such that they react to changes in the counter values that are reset by this command.</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="159" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1a337072afa81db888b3493a19a1536e9e" prot="public" static="no">
+        <name>CFE_SB_SEND_SB_STATS_CC</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000003"><xreftitle>Name</xreftitle><xrefdescription><para>Send Software Bus Statistics</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will cause the SB task to send a statistics packet containing current utilization figures and high water marks which may be useful for checking the margin of the SB platform configuration settings.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000049"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_DumpStats</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound">CFE_SB_CmdHdr_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>Receipt of statistics packet with MsgId #CFE_SB_STATS_TLM_MID</para></listitem><listitem><para>The <ref refid="cfe__sb__events_8h_1ab2dc699d6e4487a01d584e68c164884f" kindref="member">CFE_SB_SND_STATS_EID</ref> debug event message will be generated. All debug events are filtered by default.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>There are no error conditions for this command. If the Software Bus receives the command, the debug event is sent and the counter is incremented unconditionally.</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>This command is not inherently dangerous. It will create and send a message on the software bus. If performed repeatedly, it is possible that receiver pipes may overflow.</para></simplesect>
+<simplesect kind="see"><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="194" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1ab4d37d9f4a72b51111105ac7bcc5e677" prot="public" static="no">
+        <name>CFE_SB_SEND_ROUTING_INFO_CC</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000004"><xreftitle>Name</xreftitle><xrefdescription><para>Write Software Bus Routing Info to a File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will create a file containing the software bus routing information. The routing information contains information about every subscription that has been received through the SB subscription APIs. An abosulte path and filename may be specified in the command. If this command field contains an empty string (NULL terminator as the first character) the default file path and name is used. The default file path and name is defined in the platform configuration file as #CFE_SB_DEFAULT_ROUTING_FILENAME.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000050"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_WriteRouting2File</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___write_file_info_cmd__t" kindref="compound">CFE_SB_WriteFileInfoCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDPC</computeroutput> -</bold> command execution counter will increment.</para></listitem><listitem><para>Specified filename created at specified location. See description.</para></listitem><listitem><para>The <ref refid="cfe__sb__events_8h_1a0ed8630a775f1ef8568997ad5b4c44fd" kindref="member">CFE_SB_SND_RTG_EID</ref> debug event message will be generated. All debug events are filtered by default.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para><itemizedlist>
+<listitem><para>Errors may occur during write operations to the file. Possible causes might be insufficient space in the file system or the filename or file path is improperly specified.</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>A command specific error event message is issued for all error cases. See <ref refid="cfe__sb__events_8h_1a53808074e714988de6be4ba0746e0133" kindref="member">CFE_SB_SND_RTG_ERR1_EID</ref> and <ref refid="cfe__sb__events_8h_1a5aac7fe818a335690905b259bca04f28" kindref="member">CFE_SB_FILEWRITE_ERR_EID</ref></para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>This command is not inherently dangerous. It will create a new file in the file system and could, if performed repeatedly without sufficient file management by the operator, fill the file system.</para></simplesect>
+<simplesect kind="see"><para><ref refid="cfe__sb__msg_8h_1a15ebd5480da86cdef4ec717cd6bb7c5f" kindref="member">CFE_SB_SEND_PIPE_INFO_CC</ref>, <ref refid="cfe__sb__msg_8h_1a816a54e26999699bca48fd1a17b553ff" kindref="member">CFE_SB_SEND_MAP_INFO_CC</ref>, <ref refid="struct_c_f_e___s_b___write_file_info_cmd__t" kindref="compound">CFE_SB_WriteFileInfoCmd_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="238" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1a6c1552061fbb6166c93a9d5f8d962a55" prot="public" static="no">
+        <name>CFE_SB_ENABLE_ROUTE_CC</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000005"><xreftitle>Name</xreftitle><xrefdescription><para>Enable Software Bus Route</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will enable a particular destination. The destination is specified in terms of MsgID and PipeID. The MsgId and PipeID are parmaters in the command. All destinations are enabled by default. This command is needed only after a <ref refid="cfe__sb__msg_8h_1abfa5fa31582c7834b85dd5b4abd2ec49" kindref="member">CFE_SB_DISABLE_ROUTE_CC</ref> command is used.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000051"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_EnaRoute</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___en_rout_cmd__t" kindref="compound">CFE_SB_EnRoutCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>View routing information <ref refid="cfe__sb__msg_8h_1ab4d37d9f4a72b51111105ac7bcc5e677" kindref="member">CFE_SB_SEND_ROUTING_INFO_CC</ref> to verify enable/disable state change</para></listitem><listitem><para>The <ref refid="cfe__sb__events_8h_1a131ef397927ccec9efe2b869fdc0416e" kindref="member">CFE_SB_ENBL_RTE2_EID</ref> debug event message will be generated. All debug events are filtered by default.</para></listitem><listitem><para>Destination will begin receiving messages.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>An Error may occur if the MsgId or PipeId parmaters do not pass validation or the destination does not exist.</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>A command specific error event message is issued for all error cases. See <ref refid="cfe__sb__events_8h_1af3cf0d01fa8726017b324aad751a6636" kindref="member">CFE_SB_ENBL_RTE1_EID</ref> or <ref refid="cfe__sb__events_8h_1a1081f58baded3de47d337f97f34e0891" kindref="member">CFE_SB_ENBL_RTE3_EID</ref></para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>This command is not inherently dangerous.</para></simplesect>
+<simplesect kind="see"><para><ref refid="cfe__sb__msg_8h_1ab4d37d9f4a72b51111105ac7bcc5e677" kindref="member">CFE_SB_SEND_ROUTING_INFO_CC</ref>, <ref refid="cfe__sb__msg_8h_1abfa5fa31582c7834b85dd5b4abd2ec49" kindref="member">CFE_SB_DISABLE_ROUTE_CC</ref>, <ref refid="struct_c_f_e___s_b___en_rout_cmd__t" kindref="compound">CFE_SB_EnRoutCmd_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="278" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1abfa5fa31582c7834b85dd5b4abd2ec49" prot="public" static="no">
+        <name>CFE_SB_DISABLE_ROUTE_CC</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000006"><xreftitle>Name</xreftitle><xrefdescription><para>Disable Software Bus Route</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will disable a particular destination. The destination is specified in terms of MsgID and PipeID. The MsgId and PipeID are parmaters in the command. All destinations are enabled by default.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000052"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_DisRoute</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___en_rout_cmd__t" kindref="compound">CFE_SB_EnRoutCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDPC</computeroutput> -</bold> command execution counter will increment</para></listitem><listitem><para>View routing information <ref refid="cfe__sb__msg_8h_1ab4d37d9f4a72b51111105ac7bcc5e677" kindref="member">CFE_SB_SEND_ROUTING_INFO_CC</ref> to verify enable/disable state change</para></listitem><listitem><para>The <ref refid="cfe__sb__events_8h_1a8686092ba9fc6862c32c66e412f14229" kindref="member">CFE_SB_DSBL_RTE2_EID</ref> debug event message will be generated. All debug events are filtered by default.</para></listitem><listitem><para>Destination will stop receiving messages.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>An Error may occur if the MsgId or PipeId parmaters do not pass validation or the destination does not exist.</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>A command specific error event message is issued for all error cases. See <ref refid="cfe__sb__events_8h_1a33b1be18282083aeb1ab9ffc3e916508" kindref="member">CFE_SB_DSBL_RTE1_EID</ref> or <ref refid="cfe__sb__events_8h_1a05ede2b452013e06401bcc7edbb160d7" kindref="member">CFE_SB_DSBL_RTE3_EID</ref></para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>This command is not intended to be used in nominal conditions. It is possible to get into a state where a destination cannot be re-enabled without reseting the processor. For instance, sending this command with #CFE_SB_CMD_MID and the SB_Cmd_Pipe would inhibit any ground commanding to the software bus until the processor was reset. There are similar problems that may occur when using this command.</para></simplesect>
+<simplesect kind="see"><para><ref refid="cfe__sb__msg_8h_1ab4d37d9f4a72b51111105ac7bcc5e677" kindref="member">CFE_SB_SEND_ROUTING_INFO_CC</ref>, <ref refid="cfe__sb__msg_8h_1a6c1552061fbb6166c93a9d5f8d962a55" kindref="member">CFE_SB_ENABLE_ROUTE_CC</ref>, <ref refid="struct_c_f_e___s_b___en_rout_cmd__t" kindref="compound">CFE_SB_EnRoutCmd_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="321" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1a15ebd5480da86cdef4ec717cd6bb7c5f" prot="public" static="no">
+        <name>CFE_SB_SEND_PIPE_INFO_CC</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000007"><xreftitle>Name</xreftitle><xrefdescription><para>Write Pipe Info to a File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description</title><para>This command will create a file containing the software bus pipe information. The pipe information contains information about every pipe that has been created through the <ref refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2" kindref="member">CFE_SB_CreatePipe</ref> API. An abosulte path and filename may be specified in the command. If this command field contains an empty string (NULL terminator as the first character) the default file path and name is used. The default file path and name is defined in the platform configuration file as #CFE_SB_DEFAULT_PIPE_FILENAME.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000053"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_WritePipe2File</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___write_file_info_cmd__t" kindref="compound">CFE_SB_WriteFileInfoCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDPC</computeroutput> -</bold> command execution counter will increment.</para></listitem><listitem><para>Specified filename created at specified location. See description.</para></listitem><listitem><para>The <ref refid="cfe__sb__events_8h_1a0ed8630a775f1ef8568997ad5b4c44fd" kindref="member">CFE_SB_SND_RTG_EID</ref> debug event message will be generated. All debug events are filtered by default.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para><itemizedlist>
+<listitem><para>Errors may occur during write operations to the file. Possible causes might be insufficient space in the file system or the filename or file path is improperly specified.</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>A command specific error event message is issued for all error cases. See <ref refid="cfe__sb__events_8h_1a53808074e714988de6be4ba0746e0133" kindref="member">CFE_SB_SND_RTG_ERR1_EID</ref> and <ref refid="cfe__sb__events_8h_1a5aac7fe818a335690905b259bca04f28" kindref="member">CFE_SB_FILEWRITE_ERR_EID</ref></para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>This command is not inherently dangerous. It will create a new file in the file system and could, if performed repeatedly without sufficient file management by the operator, fill the file system.</para></simplesect>
+<simplesect kind="see"><para><ref refid="cfe__sb__msg_8h_1ab4d37d9f4a72b51111105ac7bcc5e677" kindref="member">CFE_SB_SEND_ROUTING_INFO_CC</ref>, <ref refid="cfe__sb__msg_8h_1a816a54e26999699bca48fd1a17b553ff" kindref="member">CFE_SB_SEND_MAP_INFO_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="365" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1a816a54e26999699bca48fd1a17b553ff" prot="public" static="no">
+        <name>CFE_SB_SEND_MAP_INFO_CC</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000008"><xreftitle>Name</xreftitle><xrefdescription><para>Write Map Info to a File</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>This command will create a file containing the software bus message</title><para>map information. The message map is a lookup table (an array of uint16s)that allows fast access to the correct routing table element during a softeware bus send operation. This is diasgnostic information that may be needed due to the dynamic nature of the cFE software bus. An abosulte path and filename may be specified in the command. If this command field contains an empty string (NULL terminator as the first character) the default file path and name is used. The default file path and name is defined in the platform configuration file as #CFE_SB_DEFAULT_MAP_FILENAME.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000054"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_WriteMap2File</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___write_file_info_cmd__t" kindref="compound">CFE_SB_WriteFileInfoCmd_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command may be verified with the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDPC</computeroutput> -</bold> command execution counter will increment.</para></listitem><listitem><para>Specified filename created at specified location. See description.</para></listitem><listitem><para>The <ref refid="cfe__sb__events_8h_1a0ed8630a775f1ef8568997ad5b4c44fd" kindref="member">CFE_SB_SND_RTG_EID</ref> debug event message will be generated. All debug events are filtered by default.</para></listitem></itemizedlist>
+</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para><itemizedlist>
+<listitem><para>Errors may occur during write operations to the file. Possible causes might be insufficient space in the file system or the filename or file path is improperly specified.</para></listitem></itemizedlist>
+</para></simplesect>
+Evidence of failure may be found in the following telemetry:<itemizedlist>
+<listitem><para><bold><computeroutput>$sc_$cpu_SB_CMDEC</computeroutput> -</bold> command error counter will increment</para></listitem><listitem><para>A command specific error event message is issued for all error cases. See <ref refid="cfe__sb__events_8h_1a53808074e714988de6be4ba0746e0133" kindref="member">CFE_SB_SND_RTG_ERR1_EID</ref> and <ref refid="cfe__sb__events_8h_1a5aac7fe818a335690905b259bca04f28" kindref="member">CFE_SB_FILEWRITE_ERR_EID</ref></para></listitem></itemizedlist>
+</para><para><simplesect kind="par"><title>Criticality</title><para>This command is not inherently dangerous. It will create a new file in the file system and could, if performed repeatedly without sufficient file management by the operator, fill the file system.</para></simplesect>
+<simplesect kind="see"><para><ref refid="cfe__sb__msg_8h_1ab4d37d9f4a72b51111105ac7bcc5e677" kindref="member">CFE_SB_SEND_ROUTING_INFO_CC</ref>, <ref refid="cfe__sb__msg_8h_1a15ebd5480da86cdef4ec717cd6bb7c5f" kindref="member">CFE_SB_SEND_PIPE_INFO_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="410" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1a94af40a7b2f615fa88bb5e8f170daef8" prot="public" static="no">
+        <name>CFE_SB_ENABLE_SUB_REPORTING_CC</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000009"><xreftitle>Name</xreftitle><xrefdescription><para>Enable Subscription Reporting Command</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>This command will enable subscription reporting and is intended to</title><para>be used only by the CFS SBN (Software Bus Networking) Application. It is not intended to be sent from the ground or used by operations. When subscription reporting is enabled, SB will generate and send a software bus packet for each subscription received. The software bus packet that is sent contains the information received in the subscription API. This subscription report is neeeded by SBN if offboard routing is required.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000055"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_EnaSubRptg</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound">CFE_SB_CmdHdr_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command will result in the sending of a packet (with the #CFE_SB_ONESUB_TLM_MID MsgId) for each subscription received by SB through the subscription APIs.</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>None</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para><ref refid="struct_c_f_e___s_b___sub_rprt_msg__t" kindref="compound">CFE_SB_SubRprtMsg_t</ref>, <ref refid="cfe__sb__msg_8h_1af4758934ab229a6add6674dcb0ad8753" kindref="member">CFE_SB_DISABLE_SUB_REPORTING_CC</ref>, <ref refid="cfe__sb__msg_8h_1a42a3af1e40248a4ab0a34b1927eac6fe" kindref="member">CFE_SB_SEND_PREV_SUBS_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="442" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1af4758934ab229a6add6674dcb0ad8753" prot="public" static="no">
+        <name>CFE_SB_DISABLE_SUB_REPORTING_CC</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000010"><xreftitle>Name</xreftitle><xrefdescription><para>Disable Subscription Reporting Command</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>This command will disable subscription reporting and is intended to</title><para>be used only by the CFS SBN (Software Bus Networking) Application. It is not intended to be sent from the ground or used by operations. When subscription reporting is enabled, SB will generate and send a software bus packet for each subscription received. The software bus packet that is sent contains the information received in the subscription API. This subscription report is neeeded by SBN if offboard routing is required.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000056"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_DisSubRptg</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound">CFE_SB_CmdHdr_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command will result in the suppression of packets (with the #CFE_SB_ONESUB_TLM_MID MsgId) for each subscription received by SB through the subscription APIs.</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>None</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para><ref refid="struct_c_f_e___s_b___sub_rprt_msg__t" kindref="compound">CFE_SB_SubRprtMsg_t</ref>, <ref refid="cfe__sb__msg_8h_1a94af40a7b2f615fa88bb5e8f170daef8" kindref="member">CFE_SB_ENABLE_SUB_REPORTING_CC</ref>, <ref refid="cfe__sb__msg_8h_1a42a3af1e40248a4ab0a34b1927eac6fe" kindref="member">CFE_SB_SEND_PREV_SUBS_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="474" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="474" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__sb__msg_8h_1a42a3af1e40248a4ab0a34b1927eac6fe" prot="public" static="no">
+        <name>CFE_SB_SEND_PREV_SUBS_CC</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfesbcmds_1_cfesbcmds000011"><xreftitle>Name</xreftitle><xrefdescription><para>Send Previous Subscriptions Command</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>This command generates a series of packets that contain information</title><para>regarding all subscriptions previously received by SB. This command is intended to be used only by the CFS SBN(Software Bus Networking) Application. It is not intended to be sent from the ground or used by operations. When this command is received the software bus will generate and send a series of packets containing information about all subscription previously received.</para></simplesect>
+<xrefsect id="cfecmdmnems_1_cfecmdmnems000057"><xreftitle>Command Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_SB_SendPrevSubs</computeroutput> </bold> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Command Structure</title><para><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound">CFE_SB_CmdHdr_t</ref></para></simplesect>
+<simplesect kind="par"><title>Command Verification</title><para>Successful execution of this command will result in a series of packets (with the #CFE_SB_ALLSUBS_TLM_MID MsgId) being sent on the software bus.</para></simplesect>
+<simplesect kind="par"><title>Error Conditions</title><para>None</para></simplesect>
+<simplesect kind="par"><title>Criticality</title><para>None</para></simplesect>
+<simplesect kind="see"><para><ref refid="struct_c_f_e___s_b___prev_sub_msg__t" kindref="compound">CFE_SB_PrevSubMsg_t</ref>, <ref refid="cfe__sb__msg_8h_1a94af40a7b2f615fa88bb5e8f170daef8" kindref="member">CFE_SB_ENABLE_SUB_REPORTING_CC</ref>, <ref refid="cfe__sb__msg_8h_1af4758934ab229a6add6674dcb0ad8753" kindref="member">CFE_SB_DISABLE_SUB_REPORTING_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="506" column="9" bodyfile="inc/cfe_sb_msg.h" bodystart="506" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:<sp/>cfe_sb_msg.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2012,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/>Purpose:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>header<sp/>file<sp/>contains<sp/>structure<sp/>definitions<sp/>for<sp/>all<sp/>SB<sp/>command<sp/>and</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>telemetry<sp/>packets</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Author:<sp/><sp/><sp/>R.McGraw/SSI</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/>$Log:<sp/>cfe_sb_msg.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>Revision<sp/>1.11<sp/>2014/07/15<sp/>08:50:49GMT-05:00<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>DCR22588:1<sp/>Add<sp/>spare<sp/>byte<sp/>to<sp/>ena/dis<sp/>packet<sp/>route<sp/>cmd</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Revision<sp/>1.10<sp/>2012/01/13<sp/>12:32:51EST<sp/>acudmore</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Changed<sp/>license<sp/>text<sp/>to<sp/>reflect<sp/>open<sp/>source</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2011/12/20<sp/>10:53:44EST<sp/>rmcgraw</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>DCR17187:2<sp/>Changed<sp/><sp/><sp/><sp/>MsgIdToPipeErrCnt<sp/>to<sp/>MsgLimErrCnt</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2009/05/08<sp/>11:29:41EDT<sp/>rmcgraw</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>DCR7631:1<sp/>Changed<sp/>comment<sp/>regarding<sp/>internal<sp/>error<sp/>counter</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2009/04/01<sp/>15:22:38EDT<sp/>rmcgraw</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>DCR6296:4<sp/>Changed<sp/>tlm<sp/>item<sp/>pk-mem-in-use<sp/>to<sp/>unmarked<sp/>mem</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2009/02/26<sp/>17:47:24EST<sp/>rmcgraw</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>DCR6805:1<sp/>Corrected<sp/>comment<sp/>for<sp/>InUse<sp/>member<sp/>of<sp/>pipe<sp/>depth<sp/>stats</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2009/02/11<sp/>14:18:49EST<sp/>rmcgraw</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>DCR6269:1<sp/>Removed<sp/>the<sp/>&apos;Buf&apos;<sp/>in<sp/>MemInUse<sp/>names</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2009/02/06<sp/>12:55:55EST<sp/>rmcgraw</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>DCR5802:3<sp/>Removed<sp/>two<sp/>of<sp/>four<sp/>new<sp/>telemetry<sp/>items</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2009/02/05<sp/>16:19:38EST<sp/>rmcgraw</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>DCR5802:2<sp/>Added<sp/>SB<sp/>statistics<sp/>to<sp/>hk<sp/>pkt</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2008/12/08<sp/>12:06:58EST<sp/>dkobe</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Updates<sp/>to<sp/>correct<sp/>doxygen<sp/>errors</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:23EDT<sp/>ruperera</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>cfe<sp/>project<sp/>on<sp/>tlserver3</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Revision<sp/>1.13<sp/>2007/09/25<sp/>15:39:07EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>DCR5127<sp/>Added<sp/>doxygen<sp/>comments</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Revision<sp/>1.12<sp/>2007/09/19<sp/>15:31:59EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>DCR5055<sp/>Removed<sp/>SB<sp/>event<sp/>log<sp/>items<sp/>in<sp/>HK<sp/>tlm<sp/>pkt<sp/>and<sp/>statistics<sp/>pkt</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Revision<sp/>1.11<sp/>2007/09/18<sp/>13:50:59EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>DCR5045:1<sp/>Added<sp/>User<sp/>Guide<sp/>information<sp/>in<sp/>doxygen<sp/>comments</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/>Revision<sp/>1.10<sp/>2007/06/07<sp/>13:07:48EDT<sp/>dlkobe</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>Added<sp/>Command<sp/>and<sp/>Telemetry<sp/>doxygen<sp/>comments<sp/>to<sp/>TIME,<sp/>EVS<sp/>and<sp/>SB</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2007/06/02<sp/>10:10:14EDT<sp/>dlkobe</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>Added<sp/>doxygen<sp/>comments<sp/>for<sp/>User&apos;s<sp/>Guides</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2007/05/23<sp/>12:06:51EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>Added<sp/>doxygen<sp/>comments</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2007/05/16<sp/>15:13:41EDT<sp/>dlkobe</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">**<sp/>Added<sp/>MemPoolHandle<sp/>members<sp/>to<sp/>HK<sp/>packet</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2007/04/24<sp/>11:07:59EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>Added<sp/>PipeId<sp/>to<sp/>PipeDepthStats</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2007/04/24<sp/>09:39:29EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">**<sp/>Reformatted<sp/>SB<sp/>statistics<sp/>pkt<sp/>structure<sp/>and<sp/>PipeDepthStats<sp/>struct</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2007/04/19<sp/>15:47:23EDT<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">**<sp/>Moved<sp/>subscription<sp/>reporting<sp/>structs<sp/>to<sp/>cfe_sb_msg.h</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2007/03/27<sp/>13:47:41EST<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">**<sp/>Added<sp/>DupSubscriptionsCnt<sp/>to<sp/>HK<sp/>Tlm</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2007/03/27<sp/>08:59:54EST<sp/>rjmcgraw</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cfe_sb_msg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cfe_sb_msg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="79"><highlight class="comment">**<sp/>Includes</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__sb_8h" kindref="compound">cfe_sb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;osconfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__es_8h" kindref="compound">cfe_es.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">/****************************************</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">**<sp/>SB<sp/>task<sp/>command<sp/>packet<sp/>command<sp/>codes</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">****************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="cfe__sb__msg_8h_1a999217aab6a027b40db2e7fd8bc0a662" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_NOOP_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="cfe__sb__msg_8h_1a5415ae258f12245239d04d7c9b661633" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_RESET_CTRS_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="cfe__sb__msg_8h_1a337072afa81db888b3493a19a1536e9e" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SEND_SB_STATS_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="cfe__sb__msg_8h_1ab4d37d9f4a72b51111105ac7bcc5e677" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SEND_ROUTING_INFO_CC<sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="cfe__sb__msg_8h_1a6c1552061fbb6166c93a9d5f8d962a55" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_ENABLE_ROUTE_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="cfe__sb__msg_8h_1abfa5fa31582c7834b85dd5b4abd2ec49" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DISABLE_ROUTE_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365" refid="cfe__sb__msg_8h_1a15ebd5480da86cdef4ec717cd6bb7c5f" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SEND_PIPE_INFO_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410" refid="cfe__sb__msg_8h_1a816a54e26999699bca48fd1a17b553ff" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SEND_MAP_INFO_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="442" refid="cfe__sb__msg_8h_1a94af40a7b2f615fa88bb5e8f170daef8" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_ENABLE_SUB_REPORTING_CC<sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474" refid="cfe__sb__msg_8h_1af4758934ab229a6add6674dcb0ad8753" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_DISABLE_SUB_REPORTING_CC<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506" refid="cfe__sb__msg_8h_1a42a3af1e40248a4ab0a34b1927eac6fe" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_SB_SEND_PREV_SUBS_CC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"></highlight><highlight class="comment">/****************************</highlight></codeline>
+<codeline lineno="510"><highlight class="comment">**<sp/><sp/>SB<sp/>Command<sp/>Formats<sp/><sp/><sp/><sp/><sp/>**</highlight></codeline>
+<codeline lineno="511"><highlight class="comment">*****************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"></highlight></codeline>
+<codeline lineno="522" refid="struct_c_f_e___s_b___write_file_info_cmd___payload__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="523" refid="struct_c_f_e___s_b___write_file_info_cmd___payload__t_1a544cfb5036e15665e800d4b54a44ff20" refkind="member"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>Filename[OS_MAX_PATH_LEN];</highlight></codeline>
+<codeline lineno="524"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___write_file_info_cmd___payload__t" kindref="compound">CFE_SB_WriteFileInfoCmd_Payload_t</ref>;</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"></highlight></codeline>
+<codeline lineno="526" refid="struct_c_f_e___s_b___write_file_info_cmd__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="527" refid="struct_c_f_e___s_b___write_file_info_cmd__t_1aeee904c9ae862af6abbc70b9ee1bfd26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound">CFE_SB_CmdHdr_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___write_file_info_cmd__t_1aeee904c9ae862af6abbc70b9ee1bfd26" kindref="member">Hdr</ref>;</highlight></codeline>
+<codeline lineno="528" refid="struct_c_f_e___s_b___write_file_info_cmd__t_1aa7d6f3cc079e29b78024ac42357580a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___write_file_info_cmd___payload__t" kindref="compound">CFE_SB_WriteFileInfoCmd_Payload_t</ref><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___write_file_info_cmd__t_1aa7d6f3cc079e29b78024ac42357580a3" kindref="member">Payload</ref>;</highlight></codeline>
+<codeline lineno="529"><highlight class="normal">}<ref refid="struct_c_f_e___s_b___write_file_info_cmd__t" kindref="compound">CFE_SB_WriteFileInfoCmd_t</ref>;</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight></codeline>
+<codeline lineno="540" refid="struct_c_f_e___s_b___en_rout_cmd___payload__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542" refid="struct_c_f_e___s_b___en_rout_cmd___payload__t_1aca75dd1555e9ea91c28ba82074aef118" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member">CFE_SB_MsgId_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___en_rout_cmd___payload__t_1aca75dd1555e9ea91c28ba82074aef118" kindref="member">MsgId</ref>;</highlight></codeline>
+<codeline lineno="543" refid="struct_c_f_e___s_b___en_rout_cmd___payload__t_1a9520e3b95e8103931ec8f226ce316b0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member">CFE_SB_PipeId_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___en_rout_cmd___payload__t_1a9520e3b95e8103931ec8f226ce316b0f" kindref="member">Pipe</ref>;</highlight></codeline>
+<codeline lineno="544" refid="struct_c_f_e___s_b___en_rout_cmd___payload__t_1abdd208eb22e08c5d3b264c4fda2a826d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___en_rout_cmd___payload__t_1abdd208eb22e08c5d3b264c4fda2a826d" kindref="member">Spare</ref>;</highlight></codeline>
+<codeline lineno="545"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___en_rout_cmd___payload__t" kindref="compound">CFE_SB_EnRoutCmd_Payload_t</ref>;</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547" refid="struct_c_f_e___s_b___en_rout_cmd__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="548" refid="struct_c_f_e___s_b___en_rout_cmd__t_1ad5195f34ce38cf825c3deb0ea3f83e26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___cmd_hdr__t" kindref="compound">CFE_SB_CmdHdr_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___en_rout_cmd__t_1ad5195f34ce38cf825c3deb0ea3f83e26" kindref="member">Hdr</ref>;</highlight></codeline>
+<codeline lineno="549" refid="struct_c_f_e___s_b___en_rout_cmd__t_1a82b7af4d28a0a81d2954dca8f4a1c6a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___en_rout_cmd___payload__t" kindref="compound">CFE_SB_EnRoutCmd_Payload_t</ref><sp/><sp/><ref refid="struct_c_f_e___s_b___en_rout_cmd__t_1a82b7af4d28a0a81d2954dca8f4a1c6a2" kindref="member">Payload</ref>;</highlight></codeline>
+<codeline lineno="550"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___en_rout_cmd__t" kindref="compound">CFE_SB_EnRoutCmd_t</ref>;</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight><highlight class="comment">/****************************</highlight></codeline>
+<codeline lineno="554"><highlight class="comment">**<sp/><sp/>SB<sp/>Telemetry<sp/>Formats<sp/><sp/><sp/>**</highlight></codeline>
+<codeline lineno="555"><highlight class="comment">*****************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="556"><highlight class="normal"></highlight></codeline>
+<codeline lineno="560" refid="struct_c_f_e___s_b___h_k_msg___payload__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"></highlight></codeline>
+<codeline lineno="562" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1ab610bd336fa69029f614e70af5a4ab0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1ab610bd336fa69029f614e70af5a4ab0a" kindref="member">CommandCnt</ref>;</highlight></codeline>
+<codeline lineno="564" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a60daca26b5e375539d118e7edd5ee1f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a60daca26b5e375539d118e7edd5ee1f4" kindref="member">CmdErrCnt</ref>;</highlight></codeline>
+<codeline lineno="566" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a0afe0cbad1f511cc0af2e448f6b5689a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a0afe0cbad1f511cc0af2e448f6b5689a" kindref="member">NoSubscribersCnt</ref>;</highlight></codeline>
+<codeline lineno="568" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1abea3de6cdff3bd907c4de702160912cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1abea3de6cdff3bd907c4de702160912cf" kindref="member">MsgSendErrCnt</ref>;</highlight></codeline>
+<codeline lineno="571" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a38d3df65eb3a5d68b3a457b82961df4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a38d3df65eb3a5d68b3a457b82961df4a" kindref="member">MsgReceiveErrCnt</ref>;</highlight></codeline>
+<codeline lineno="573" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a805f919fb1a7cda4146afb7a9275cc24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a805f919fb1a7cda4146afb7a9275cc24" kindref="member">InternalErrCnt</ref>;</highlight></codeline>
+<codeline lineno="575" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1abc6e0a9bc6d295dacb45013c31cafa31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1abc6e0a9bc6d295dacb45013c31cafa31" kindref="member">CreatePipeErrCnt</ref>;</highlight></codeline>
+<codeline lineno="577" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a3a961502affbf30bd3e89539688a8491" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a3a961502affbf30bd3e89539688a8491" kindref="member">SubscribeErrCnt</ref>;</highlight></codeline>
+<codeline lineno="580" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a51ddda4c5e9e6d4bf7cbe1fc5c13d898" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a51ddda4c5e9e6d4bf7cbe1fc5c13d898" kindref="member">Spare</ref>;</highlight></codeline>
+<codeline lineno="582" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a8f67a325c75bdd236e8572ce26e0e4b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a8f67a325c75bdd236e8572ce26e0e4b1" kindref="member">DupSubscriptionsCnt</ref>;</highlight></codeline>
+<codeline lineno="584" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1aeb0f173a261c2e236b916ecdd7d8c14c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Spare2Align[2];</highlight></codeline>
+<codeline lineno="587" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a59da4c28d101e932ba28308d98bea249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a59da4c28d101e932ba28308d98bea249" kindref="member">PipeOverflowErrCnt</ref>;</highlight></codeline>
+<codeline lineno="589" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a98e1a8a67f5bb54a6288d42feb394874" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a98e1a8a67f5bb54a6288d42feb394874" kindref="member">MsgLimErrCnt</ref>;</highlight></codeline>
+<codeline lineno="592" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1af63831786e7c44c0d100d3da70423b08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__es_8h_1a3a4f2627e1ba40398def23ccbb6a049a" kindref="member">CFE_ES_MemHandle_t</ref><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1af63831786e7c44c0d100d3da70423b08" kindref="member">MemPoolHandle</ref>;</highlight></codeline>
+<codeline lineno="595" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a265d47d83d8346f3e52a64d64ec1f79d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a265d47d83d8346f3e52a64d64ec1f79d" kindref="member">MemInUse</ref>;</highlight></codeline>
+<codeline lineno="598" refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a393912034e265591c2b817ae57545723" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t_1a393912034e265591c2b817ae57545723" kindref="member">UnmarkedMem</ref>;</highlight></codeline>
+<codeline lineno="600"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t" kindref="compound">CFE_SB_HKMsg_Payload_t</ref>;</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"></highlight></codeline>
+<codeline lineno="602" refid="struct_c_f_e___s_b___h_k_msg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="603" refid="struct_c_f_e___s_b___h_k_msg__t_1a4e06db308e3fef8f5513c1d03c9c4365" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___tlm_hdr__t" kindref="compound">CFE_SB_TlmHdr_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg__t_1a4e06db308e3fef8f5513c1d03c9c4365" kindref="member">Hdr</ref>;</highlight></codeline>
+<codeline lineno="604" refid="struct_c_f_e___s_b___h_k_msg__t_1a7e7b485f54b705fe9accc276098f9c2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg___payload__t" kindref="compound">CFE_SB_HKMsg_Payload_t</ref><sp/><sp/><ref refid="struct_c_f_e___s_b___h_k_msg__t_1a7e7b485f54b705fe9accc276098f9c2e" kindref="member">Payload</ref>;</highlight></codeline>
+<codeline lineno="605"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___h_k_msg__t" kindref="compound">CFE_SB_HKMsg_t</ref>;</highlight></codeline>
+<codeline lineno="606"><highlight class="normal"></highlight></codeline>
+<codeline lineno="607"><highlight class="normal"></highlight></codeline>
+<codeline lineno="613" refid="struct_c_f_e___s_b___pipe_depth_stats__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"></highlight></codeline>
+<codeline lineno="615" refid="struct_c_f_e___s_b___pipe_depth_stats__t_1a81a22b174bd406c0575b9ead514b22d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member">CFE_SB_PipeId_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___pipe_depth_stats__t_1a81a22b174bd406c0575b9ead514b22d8" kindref="member">PipeId</ref>;</highlight></codeline>
+<codeline lineno="617" refid="struct_c_f_e___s_b___pipe_depth_stats__t_1a2d7c145862a63454613e5c8f2743365c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___pipe_depth_stats__t_1a2d7c145862a63454613e5c8f2743365c" kindref="member">Spare</ref>;</highlight></codeline>
+<codeline lineno="619" refid="struct_c_f_e___s_b___pipe_depth_stats__t_1ad4738ab32eba5047d28c85d9a620eabe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___pipe_depth_stats__t_1ad4738ab32eba5047d28c85d9a620eabe" kindref="member">Depth</ref>;</highlight></codeline>
+<codeline lineno="621" refid="struct_c_f_e___s_b___pipe_depth_stats__t_1ab1a161ad117ab2fd9e1cb10ff58f0e7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___pipe_depth_stats__t_1ab1a161ad117ab2fd9e1cb10ff58f0e7b" kindref="member">InUse</ref>;</highlight></codeline>
+<codeline lineno="623" refid="struct_c_f_e___s_b___pipe_depth_stats__t_1a8e48327cf6bf91c42a3e4bfe5554adad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___pipe_depth_stats__t_1a8e48327cf6bf91c42a3e4bfe5554adad" kindref="member">PeakInUse</ref>;</highlight></codeline>
+<codeline lineno="626"><highlight class="normal">}<ref refid="struct_c_f_e___s_b___pipe_depth_stats__t" kindref="compound">CFE_SB_PipeDepthStats_t</ref>;</highlight></codeline>
+<codeline lineno="627"><highlight class="normal"></highlight></codeline>
+<codeline lineno="633" refid="struct_c_f_e___s_b___stat_msg___payload__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="634"><highlight class="normal"></highlight></codeline>
+<codeline lineno="635" refid="struct_c_f_e___s_b___stat_msg___payload__t_1acc648d6130ed253a42dfaf16c2033458" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1acc648d6130ed253a42dfaf16c2033458" kindref="member">MsgIdsInUse</ref>;</highlight></codeline>
+<codeline lineno="637" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a612355ed819acfc4f829686edc3c6404" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a612355ed819acfc4f829686edc3c6404" kindref="member">PeakMsgIdsInUse</ref>;</highlight></codeline>
+<codeline lineno="639" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a1d9e624fd0b7f5dae011a5ebdb1eead1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a1d9e624fd0b7f5dae011a5ebdb1eead1" kindref="member">MaxMsgIdsAllowed</ref>;</highlight></codeline>
+<codeline lineno="642" refid="struct_c_f_e___s_b___stat_msg___payload__t_1ae9e840c679b1b8912c79abca5dc37a9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1ae9e840c679b1b8912c79abca5dc37a9e" kindref="member">PipesInUse</ref>;</highlight></codeline>
+<codeline lineno="644" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a3177b29cd982b7e06c48b453bc863a7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a3177b29cd982b7e06c48b453bc863a7c" kindref="member">PeakPipesInUse</ref>;</highlight></codeline>
+<codeline lineno="646" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a47584f89301eea66926fd6286fa001ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a47584f89301eea66926fd6286fa001ee" kindref="member">MaxPipesAllowed</ref>;</highlight></codeline>
+<codeline lineno="649" refid="struct_c_f_e___s_b___stat_msg___payload__t_1aa60e23da189a8b4ed1480d96c863b461" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1aa60e23da189a8b4ed1480d96c863b461" kindref="member">MemInUse</ref>;</highlight></codeline>
+<codeline lineno="651" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a536d072ca6396daba324ded24f4739c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a536d072ca6396daba324ded24f4739c0" kindref="member">PeakMemInUse</ref>;</highlight></codeline>
+<codeline lineno="653" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a492558bfcea5df91561fee73c251c941" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a492558bfcea5df91561fee73c251c941" kindref="member">MaxMemAllowed</ref>;</highlight></codeline>
+<codeline lineno="656" refid="struct_c_f_e___s_b___stat_msg___payload__t_1ae0469ecff4396cbe36a61e042b910187" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1ae0469ecff4396cbe36a61e042b910187" kindref="member">SubscriptionsInUse</ref>;</highlight></codeline>
+<codeline lineno="658" refid="struct_c_f_e___s_b___stat_msg___payload__t_1afff69951138831dad0892419f6e8db0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1afff69951138831dad0892419f6e8db0b" kindref="member">PeakSubscriptionsInUse</ref>;</highlight></codeline>
+<codeline lineno="660" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a2e8ade41497e967c3d6c3c9c106eb902" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a2e8ade41497e967c3d6c3c9c106eb902" kindref="member">MaxSubscriptionsAllowed</ref>;</highlight></codeline>
+<codeline lineno="664" refid="struct_c_f_e___s_b___stat_msg___payload__t_1acd1f6fad184755f99b91d1c8d7990271" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1acd1f6fad184755f99b91d1c8d7990271" kindref="member">SBBuffersInUse</ref>;</highlight></codeline>
+<codeline lineno="666" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a9bdb7fde097ff4f418e9fef4d7efc59f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a9bdb7fde097ff4f418e9fef4d7efc59f" kindref="member">PeakSBBuffersInUse</ref>;</highlight></codeline>
+<codeline lineno="669" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a99fa35c4beca05701103ea9d00d5fbb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t_1a99fa35c4beca05701103ea9d00d5fbb6" kindref="member">MaxPipeDepthAllowed</ref>;</highlight></codeline>
+<codeline lineno="671" refid="struct_c_f_e___s_b___stat_msg___payload__t_1a227a08f51fdfb034dd534fb2b7e6ee85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___pipe_depth_stats__t" kindref="compound">CFE_SB_PipeDepthStats_t</ref><sp/>PipeDepthStats[CFE_SB_MAX_PIPES];</highlight></codeline>
+<codeline lineno="673"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t" kindref="compound">CFE_SB_StatMsg_Payload_t</ref>;</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"></highlight></codeline>
+<codeline lineno="675" refid="struct_c_f_e___s_b___stat_msg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="676" refid="struct_c_f_e___s_b___stat_msg__t_1a1781da171a11ed544e1cea5f727a0b22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___tlm_hdr__t" kindref="compound">CFE_SB_TlmHdr_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg__t_1a1781da171a11ed544e1cea5f727a0b22" kindref="member">Hdr</ref>;</highlight></codeline>
+<codeline lineno="677" refid="struct_c_f_e___s_b___stat_msg__t_1a609bf74629727edb90854136c5196831" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg___payload__t" kindref="compound">CFE_SB_StatMsg_Payload_t</ref><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___stat_msg__t_1a609bf74629727edb90854136c5196831" kindref="member">Payload</ref>;</highlight></codeline>
+<codeline lineno="678"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___stat_msg__t" kindref="compound">CFE_SB_StatMsg_t</ref>;</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight></codeline>
+<codeline lineno="686" refid="struct_c_f_e___s_b___routing_file_entry__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="687" refid="struct_c_f_e___s_b___routing_file_entry__t_1a6cb6acd4325386730f16273b9941ecd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member">CFE_SB_MsgId_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___routing_file_entry__t_1a6cb6acd4325386730f16273b9941ecd0" kindref="member">MsgId</ref>;</highlight></codeline>
+<codeline lineno="688" refid="struct_c_f_e___s_b___routing_file_entry__t_1aa77728cf71c5ed6681555d4f6cb71ab8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member">CFE_SB_PipeId_t</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___routing_file_entry__t_1aa77728cf71c5ed6681555d4f6cb71ab8" kindref="member">PipeId</ref>;</highlight></codeline>
+<codeline lineno="689" refid="struct_c_f_e___s_b___routing_file_entry__t_1ab831e0a6bf4c577700826cffe7019940" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___routing_file_entry__t_1ab831e0a6bf4c577700826cffe7019940" kindref="member">State</ref>;</highlight></codeline>
+<codeline lineno="690" refid="struct_c_f_e___s_b___routing_file_entry__t_1af6e9017ca54a10800f666439e5e76d3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___routing_file_entry__t_1af6e9017ca54a10800f666439e5e76d3c" kindref="member">MsgCnt</ref>;</highlight></codeline>
+<codeline lineno="691" refid="struct_c_f_e___s_b___routing_file_entry__t_1a566a4fcbef9553d93b09f48dd19c9fdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AppName[OS_MAX_API_NAME];</highlight></codeline>
+<codeline lineno="692" refid="struct_c_f_e___s_b___routing_file_entry__t_1a45fc263c84f890399336ae1f97518472" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PipeName[OS_MAX_API_NAME];</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/>}<ref refid="struct_c_f_e___s_b___routing_file_entry__t" kindref="compound">CFE_SB_RoutingFileEntry_t</ref>;</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight></codeline>
+<codeline lineno="695"><highlight class="normal"></highlight></codeline>
+<codeline lineno="701" refid="struct_c_f_e___s_b___msg_map_file_entry__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="702" refid="struct_c_f_e___s_b___msg_map_file_entry__t_1a32251ac55a23851b651ff4207a8a62c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><ref refid="struct_c_f_e___s_b___msg_map_file_entry__t_1a32251ac55a23851b651ff4207a8a62c8" kindref="member">MsgId</ref>;</highlight></codeline>
+<codeline lineno="703" refid="struct_c_f_e___s_b___msg_map_file_entry__t_1a3f034a32b52da7179e54f3f98b9e5557" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member">uint16</ref><sp/><sp/><ref refid="struct_c_f_e___s_b___msg_map_file_entry__t_1a3f034a32b52da7179e54f3f98b9e5557" kindref="member">Index</ref>;</highlight></codeline>
+<codeline lineno="704"><highlight class="normal">}<ref refid="struct_c_f_e___s_b___msg_map_file_entry__t" kindref="compound">CFE_SB_MsgMapFileEntry_t</ref>;</highlight></codeline>
+<codeline lineno="705"><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"></highlight></codeline>
+<codeline lineno="717" refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight></codeline>
+<codeline lineno="719" refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t_1aa921fee5d18f656d14b67eb858514d48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t_1aa921fee5d18f656d14b67eb858514d48" kindref="member">SubType</ref>;</highlight></codeline>
+<codeline lineno="720" refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t_1a86f714ea447258b867fb4c63815be40d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member">CFE_SB_MsgId_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t_1a86f714ea447258b867fb4c63815be40d" kindref="member">MsgId</ref>;</highlight></codeline>
+<codeline lineno="721" refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t_1a2c2c940989e32534aa73b50b748b412e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___qos__t" kindref="compound">CFE_SB_Qos_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t_1a2c2c940989e32534aa73b50b748b412e" kindref="member">Qos</ref>;</highlight></codeline>
+<codeline lineno="722" refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t_1a71c4ac17cd0146e7c505ef850bd6c5d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member">CFE_SB_PipeId_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t_1a71c4ac17cd0146e7c505ef850bd6c5d8" kindref="member">Pipe</ref>;</highlight></codeline>
+<codeline lineno="724"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t" kindref="compound">CFE_SB_SubRprtMsg_Payload_t</ref>;</highlight></codeline>
+<codeline lineno="725"><highlight class="normal"></highlight></codeline>
+<codeline lineno="726" refid="struct_c_f_e___s_b___sub_rprt_msg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="727" refid="struct_c_f_e___s_b___sub_rprt_msg__t_1aa82eecfc129a4d4e44364046a4a75179" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___tlm_hdr__t" kindref="compound">CFE_SB_TlmHdr_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg__t_1aa82eecfc129a4d4e44364046a4a75179" kindref="member">Hdr</ref>;</highlight></codeline>
+<codeline lineno="728" refid="struct_c_f_e___s_b___sub_rprt_msg__t_1afe13117555fd527552588256645eeba3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t" kindref="compound">CFE_SB_SubRprtMsg_Payload_t</ref><sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg__t_1afe13117555fd527552588256645eeba3" kindref="member">Payload</ref>;</highlight></codeline>
+<codeline lineno="729"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___sub_rprt_msg__t" kindref="compound">CFE_SB_SubRprtMsg_t</ref>;</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"></highlight></codeline>
+<codeline lineno="731"><highlight class="normal"></highlight></codeline>
+<codeline lineno="740" refid="struct_c_f_e___s_b___sub_entries__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight></codeline>
+<codeline lineno="742" refid="struct_c_f_e___s_b___sub_entries__t_1a8f0afda6c087e6d3c59b8d51921baa8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member">CFE_SB_MsgId_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_entries__t_1a8f0afda6c087e6d3c59b8d51921baa8d" kindref="member">MsgId</ref>;</highlight></codeline>
+<codeline lineno="743" refid="struct_c_f_e___s_b___sub_entries__t_1a8fcc014c5fe12c384bfd9ab763656c0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___qos__t" kindref="compound">CFE_SB_Qos_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_entries__t_1a8fcc014c5fe12c384bfd9ab763656c0b" kindref="member">Qos</ref>;</highlight></codeline>
+<codeline lineno="744" refid="struct_c_f_e___s_b___sub_entries__t_1a474d1d539819d4097907c84bbfb619c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member">CFE_SB_PipeId_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_entries__t_1a474d1d539819d4097907c84bbfb619c4" kindref="member">Pipe</ref>;</highlight></codeline>
+<codeline lineno="746"><highlight class="normal">}<ref refid="struct_c_f_e___s_b___sub_entries__t" kindref="compound">CFE_SB_SubEntries_t</ref>;</highlight></codeline>
+<codeline lineno="747"><highlight class="normal"></highlight></codeline>
+<codeline lineno="748"><highlight class="normal"></highlight></codeline>
+<codeline lineno="758" refid="struct_c_f_e___s_b___prev_sub_msg___payload__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"></highlight></codeline>
+<codeline lineno="760" refid="struct_c_f_e___s_b___prev_sub_msg___payload__t_1a43eceb41563327c0ebb74bddffae6779" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___prev_sub_msg___payload__t_1a43eceb41563327c0ebb74bddffae6779" kindref="member">PktSegment</ref>;</highlight></codeline>
+<codeline lineno="761" refid="struct_c_f_e___s_b___prev_sub_msg___payload__t_1ab14cbc785f9e6fb0cafba2289def67a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___prev_sub_msg___payload__t_1ab14cbc785f9e6fb0cafba2289def67a6" kindref="member">TotalSegments</ref>;</highlight></codeline>
+<codeline lineno="762" refid="struct_c_f_e___s_b___prev_sub_msg___payload__t_1acbb3185efb8d00216f9d38eca0c38cf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___prev_sub_msg___payload__t_1acbb3185efb8d00216f9d38eca0c38cf8" kindref="member">Entries</ref>;</highlight></codeline>
+<codeline lineno="763" refid="struct_c_f_e___s_b___prev_sub_msg___payload__t_1a64a091179dbd78c6c33e0920cf385fa0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___sub_entries__t" kindref="compound">CFE_SB_SubEntries_t</ref><sp/><sp/>Entry[<ref refid="cfe__sb_8h_1a52552eef8a98fa61c13cca7d9406d04c" kindref="member">CFE_SB_SUB_ENTRIES_PER_PKT</ref>];</highlight></codeline>
+<codeline lineno="764"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___prev_sub_msg___payload__t" kindref="compound">CFE_SB_PrevSubMsg_Payload_t</ref>;</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"></highlight></codeline>
+<codeline lineno="766" refid="struct_c_f_e___s_b___prev_sub_msg__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="767" refid="struct_c_f_e___s_b___prev_sub_msg__t_1acfe751c242fe46a9c82cd9c05836f7cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___tlm_hdr__t" kindref="compound">CFE_SB_TlmHdr_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___prev_sub_msg__t_1acfe751c242fe46a9c82cd9c05836f7cc" kindref="member">Hdr</ref>;</highlight></codeline>
+<codeline lineno="768" refid="struct_c_f_e___s_b___prev_sub_msg__t_1affa1cc2b8c864cbf1cd182ce1936f49b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_f_e___s_b___prev_sub_msg___payload__t" kindref="compound">CFE_SB_PrevSubMsg_Payload_t</ref><sp/><ref refid="struct_c_f_e___s_b___prev_sub_msg__t_1affa1cc2b8c864cbf1cd182ce1936f49b" kindref="member">Payload</ref>;</highlight></codeline>
+<codeline lineno="769"><highlight class="normal">}<sp/><ref refid="struct_c_f_e___s_b___prev_sub_msg__t" kindref="compound">CFE_SB_PrevSubMsg_t</ref>;</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"></highlight></codeline>
+<codeline lineno="771"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="772"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="774"><highlight class="normal"></highlight></codeline>
+<codeline lineno="775"><highlight class="normal"></highlight></codeline>
+<codeline lineno="776"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_cfe_sb_msg_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="777"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/cfe_sb_msg.h"/>
+  </compounddef>
+</doxygen>

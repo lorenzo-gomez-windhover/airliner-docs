@@ -1,0 +1,1052 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_u_l_r" kind="class" language="C++" prot="public">
+    <compoundname>ULR</compoundname>
+    <includes refid="ulr__app_8h" local="no">ulr_app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_u_l_r_1ab4e74539145be5548cac17856c96c0b0" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t ULR::SchPipeId</definition>
+        <argsstring></argsstring>
+        <name>SchPipeId</name>
+        <briefdescription>
+<para>Scheduling Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="116" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="116" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1aa79b8831062301b23dfcdf738b1b1e85" compoundref="ulr__app_8cpp" startline="167" endline="230">InitPipe</referencedby>
+        <referencedby refid="class_u_l_r_1a8878b9f4e030a905a102dc209ab79698" compoundref="ulr__app_8cpp" startline="340" endline="396">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1ac00d44c13d751e540e2f1ed117933312" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t ULR::CmdPipeId</definition>
+        <argsstring></argsstring>
+        <name>CmdPipeId</name>
+        <briefdescription>
+<para>Command Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="119" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1aa79b8831062301b23dfcdf738b1b1e85" compoundref="ulr__app_8cpp" startline="167" endline="230">InitPipe</referencedby>
+        <referencedby refid="class_u_l_r_1ab40e3430d7dca8c489a96bbd9b7bf7b8" compoundref="ulr__app_8cpp" startline="405" endline="449">ProcessCmdPipe</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1a9f087cd307d65964e1fdf90c274367e1" prot="public" static="no" mutable="no">
+        <type><ref refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048da" kindref="member">ULR_ParserState_t</ref></type>
+        <definition>ULR_ParserState_t ULR::ParserState</definition>
+        <argsstring></argsstring>
+        <name>ParserState</name>
+        <briefdescription>
+<para>This variable contains the current state of the message parser. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="124" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1a14bc0fbaab5b74dad31ce521eccab6ce" compoundref="ulr__app_8cpp" startline="239" endline="267">InitData</referencedby>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1a5ccec5c0498b3d6e15b3618cd3e75060" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 ULR::ParserBuffer[ULR_BUF_LEN]</definition>
+        <argsstring>[ULR_BUF_LEN]</argsstring>
+        <name>ParserBuffer</name>
+        <briefdescription>
+<para>This is the buffer passed from the custom layer to the platform independent layer. Having this as a member attribute allows us to possibly debug certain errors by using MM to read the contents of this variable. We can&apos;t do that with variables allocated on the stack. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="131" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1a14bc0fbaab5b74dad31ce521eccab6ce" compoundref="ulr__app_8cpp" startline="239" endline="267">InitData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1a370ba48ee1792976091e8bcf4d8f9aa4" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_u_l_r___uart_message__t" kindref="compound">ULR_UartMessage_t</ref></type>
+        <definition>ULR_UartMessage_t ULR::UartMessage</definition>
+        <argsstring></argsstring>
+        <name>UartMessage</name>
+        <briefdescription>
+<para>This is the fully assembled message. Again, having this as a member attribute allows us to possibly debug certain errors by using MM to read the contents of this variable. We can&apos;t do that with variables allocated on the stack. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="137" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="137" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1ac0c5796a703b115fd303d095d1efe27f" compoundref="ulr__app_8cpp" startline="654" endline="673">IsChecksumOk</referencedby>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1a4027fbe758e571945bd2c4b5c3e431de" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 ULR::uiRunStatus</definition>
+        <argsstring></argsstring>
+        <name>uiRunStatus</name>
+        <briefdescription>
+<para>Task Run Status. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="140" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1ad81c9bb0dd73b30383a21e5c21d6984c" compoundref="ulr__app_8cpp" startline="600" endline="645">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1a4056e71d62093645d0b5914bdfd7ee76" prot="public" static="no" mutable="no">
+        <type>PX4_DistanceSensorMsg_t</type>
+        <definition>PX4_DistanceSensorMsg_t ULR::DistanceSensor</definition>
+        <argsstring></argsstring>
+        <name>DistanceSensor</name>
+        <briefdescription>
+<para>Output Data published at the end of cycle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="143" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1a14bc0fbaab5b74dad31ce521eccab6ce" compoundref="ulr__app_8cpp" startline="239" endline="267">InitData</referencedby>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+        <referencedby refid="class_u_l_r_1a492c120bcc646e858822b791d808d990" compoundref="ulr__app_8cpp" startline="527" endline="533">ReportDistance</referencedby>
+        <referencedby refid="class_u_l_r_1ac39c9240d0e0fb6592dd6cd57a785bcb" compoundref="ulr__app_8cpp" startline="504" endline="518">ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1ac874105cca5071fae23085d0884227b3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_u_l_r___hk_tlm__t" kindref="compound">ULR_HkTlm_t</ref></type>
+        <definition>ULR_HkTlm_t ULR::HkTlm</definition>
+        <argsstring></argsstring>
+        <name>HkTlm</name>
+        <briefdescription>
+<para>Housekeeping Telemetry for downlink. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="146" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="146" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1a14bc0fbaab5b74dad31ce521eccab6ce" compoundref="ulr__app_8cpp" startline="239" endline="267">InitData</referencedby>
+        <referencedby refid="class_u_l_r_1a26516485a680e4dc377d8a59278429e1" compoundref="ulr__app_8cpp" startline="458" endline="495">ProcessAppCmds</referencedby>
+        <referencedby refid="class_u_l_r_1ab40e3430d7dca8c489a96bbd9b7bf7b8" compoundref="ulr__app_8cpp" startline="405" endline="449">ProcessCmdPipe</referencedby>
+        <referencedby refid="class_u_l_r_1ac39c9240d0e0fb6592dd6cd57a785bcb" compoundref="ulr__app_8cpp" startline="504" endline="518">ReportHousekeeping</referencedby>
+        <referencedby refid="class_u_l_r_1a675732c065b3ac5c7b493ba736aae617" compoundref="ulr__app_8cpp" startline="542" endline="567">VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1ae31127fff677f7e3a8ccd05b456ea69d" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 ULR::ListenerTaskID</definition>
+        <argsstring></argsstring>
+        <name>ListenerTaskID</name>
+        <briefdescription>
+<para>ID of listener child task. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="149" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1a9b40ab3620f94fc649225598b184dfa8" compoundref="ulr__app_8cpp" startline="833" endline="868">InitListenerTask</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1af55ab427d8ff41417ba4c2ac6d0a5c9f" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 ULR::Mutex</definition>
+        <argsstring></argsstring>
+        <name>Mutex</name>
+        <briefdescription>
+<para>ID of the mutex used to protect data shared between the parent and the child task. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="153" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="153" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1a7d194b398d626362de28274257ad03ac" compoundref="ulr__app_8cpp" startline="682" endline="691">ChildContinueExec</referencedby>
+        <referencedby refid="class_u_l_r_1a9b40ab3620f94fc649225598b184dfa8" compoundref="ulr__app_8cpp" startline="833" endline="868">InitListenerTask</referencedby>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+        <referencedby refid="class_u_l_r_1a492c120bcc646e858822b791d808d990" compoundref="ulr__app_8cpp" startline="527" endline="533">ReportDistance</referencedby>
+        <referencedby refid="class_u_l_r_1ac39c9240d0e0fb6592dd6cd57a785bcb" compoundref="ulr__app_8cpp" startline="504" endline="518">ReportHousekeeping</referencedby>
+        <referencedby refid="class_u_l_r_1aa76432aa0d487c1eb2317842e4bbfb32" compoundref="ulr__app_8cpp" startline="699" endline="704">StopChild</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1a4960c7f2db6574a0cca7f73dc002101b" prot="public" static="no" mutable="no">
+        <type>math::LowPassFilter2p</type>
+        <definition>math::LowPassFilter2p ULR::HeightFilter</definition>
+        <argsstring></argsstring>
+        <name>HeightFilter</name>
+        <briefdescription>
+<para>Low pass filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="156" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="156" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_u_l_r_1a89ffb350befaf887ac600c6392aa3762" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool ULR::ChildContinueFlag</definition>
+        <argsstring></argsstring>
+        <name>ChildContinueFlag</name>
+        <briefdescription>
+<para>This flag is used by an internal function to signal whether the child task should continue looping or terminate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="161" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="161" bodyend="-1"/>
+        <referencedby refid="class_u_l_r_1a7d194b398d626362de28274257ad03ac" compoundref="ulr__app_8cpp" startline="682" endline="691">ChildContinueExec</referencedby>
+        <referencedby refid="class_u_l_r_1a9b40ab3620f94fc649225598b184dfa8" compoundref="ulr__app_8cpp" startline="833" endline="868">InitListenerTask</referencedby>
+        <referencedby refid="class_u_l_r_1aa76432aa0d487c1eb2317842e4bbfb32" compoundref="ulr__app_8cpp" startline="699" endline="704">StopChild</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_u_l_r_1aa533106ca41759683886c6ccfcec1e2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ULR::ULR</definition>
+        <argsstring>()</argsstring>
+        <name>ULR</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="110" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="83" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a0fef4cdfeb1a2d1849e200406f05781a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ULR::~ULR</definition>
+        <argsstring>()</argsstring>
+        <name>~ULR</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="113" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1ad81c9bb0dd73b30383a21e5c21d6984c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::AppMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Aerotenna uLanding Radar (<ref refid="class_u_l_r" kindref="compound">ULR</ref>) application entry point. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Aerotenna uLanding Radar Task application entry point. This function performs app initialization, then waits for the cFE ES Startup Sync, then executes the main processing loop.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>If there is an unrecoverable failure during initialization the main loop is never executed and the application will exit. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="176" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="600" bodyend="645"/>
+        <references refid="cfe__es_8h_1abeabe0f94cccfa5bfcfc2f43796da8d1">CFE_ES_APP_ERROR</references>
+        <references refid="cfe__es_8h_1a033dfcc82849cfb9a474a2cece5c9803">CFE_ES_APP_RUN</references>
+        <references refid="cfe__es__api_8c_1ad5d888f9bca5038624a04d04efce8325">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es__api_8c_1a426ef8e1796ccebba16c63c8e86fb842">CFE_ES_RegisterApp</references>
+        <references refid="cfe__es__api_8c_1ae8598bcba38a594d1c868924999da953">CFE_ES_RunLoop</references>
+        <references refid="cfe__es__api_8c_1a7dc343ea775a0e5773ecdf700581d548">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_u_l_r_1a51a5c11f3afbdbaaa8d02f739acfaa56" compoundref="ulr__app_8cpp" startline="276" endline="331">InitApp</references>
+        <references refid="class_u_l_r_1a8878b9f4e030a905a102dc209ab79698" compoundref="ulr__app_8cpp" startline="340" endline="396">RcvSchPipeMsg</references>
+        <references refid="class_u_l_r_1aa76432aa0d487c1eb2317842e4bbfb32" compoundref="ulr__app_8cpp" startline="699" endline="704">StopChild</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="class_u_l_r_1a4027fbe758e571945bd2c4b5c3e431de" compoundref="ulr__app_8h" startline="140">uiRunStatus</references>
+        <references refid="ulr__perfids_8h_1ab83ea3856408f07a90d39a2e3dc3f84a" compoundref="ulr__perfids_8h" startline="8">ULR_MAIN_TASK_PERF_ID</references>
+        <references refid="ulr__platform__cfg_8h_1a2c533fa1edd93291f25c33e78fb8502b" compoundref="ulr__platform__cfg_8h" startline="51">ULR_SCH_PIPE_PEND_TIME</references>
+        <references refid="ulr__platform__cfg_8h_1ae10edecce20a6a5e63fb4ce8693ba58f" compoundref="ulr__platform__cfg_8h" startline="112">ULR_STARTUP_TIMEOUT_MSEC</references>
+        <referencedby refid="ulr__app_8cpp_1a3402e3114a38198a141491ba22606125" compoundref="ulr__app_8cpp" startline="576" endline="579">ULR_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::ListenerTaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>ListenerTaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Listener task entry point. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function waits for device messages from the custom layer.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="188" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="712" bodyend="825"/>
+        <references refid="struct_u_l_r___uart_message__t_1a5b334d79055d20345828e1d61ab9a53c" compoundref="ulr__app_8h" startline="92">ULR_UartMessage_t::AltitudeH</references>
+        <references refid="struct_u_l_r___uart_message__t_1a9ecdf3b06297601ef401ef254d1cec43" compoundref="ulr__app_8h" startline="93">ULR_UartMessage_t::AltitudeL</references>
+        <references refid="cfe__es__api_8c_1a263795095b7eda1070864d75add8d91a">CFE_ES_ExitChildTask</references>
+        <references refid="cfe__es__api_8c_1a1e008c905bb89083293355b71ce4bc2d">CFE_ES_RegisterChildTask</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_u_l_r___uart_message__t_1aaa127e26a02f66fe485bf79b101dbcb1" compoundref="ulr__app_8h" startline="95">ULR_UartMessage_t::Checksum</references>
+        <references refid="class_u_l_r_1a7d194b398d626362de28274257ad03ac" compoundref="ulr__app_8cpp" startline="682" endline="691">ChildContinueExec</references>
+        <references refid="class_u_l_r_1a4056e71d62093645d0b5914bdfd7ee76" compoundref="ulr__app_8h" startline="143">DistanceSensor</references>
+        <references refid="class_u_l_r_1a4960c7f2db6574a0cca7f73dc002101b" compoundref="ulr__app_8h" startline="156">HeightFilter</references>
+        <references refid="class_u_l_r_1ac0c5796a703b115fd303d095d1efe27f" compoundref="ulr__app_8cpp" startline="654" endline="673">IsChecksumOk</references>
+        <references refid="class_u_l_r_1af55ab427d8ff41417ba4c2ac6d0a5c9f" compoundref="ulr__app_8h" startline="153">Mutex</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <references refid="class_u_l_r_1a9f087cd307d65964e1fdf90c274367e1" compoundref="ulr__app_8h" startline="124">ParserState</references>
+        <references refid="class_u_l_r_1aa270135eebf7ce9d00895ee37be02028">ReadDevice</references>
+        <references refid="class_u_l_r_1a492c120bcc646e858822b791d808d990" compoundref="ulr__app_8cpp" startline="527" endline="533">ReportDistance</references>
+        <references refid="struct_u_l_r___uart_message__t_1a5bcd79afdf00969327c47d7ff57315b8" compoundref="ulr__app_8h" startline="94">ULR_UartMessage_t::SNR</references>
+        <references refid="class_u_l_r_1a370ba48ee1792976091e8bcf4d8f9aa4" compoundref="ulr__app_8h" startline="137">UartMessage</references>
+        <references refid="ulr__app_8h_1a9df086a657f74df437171fcfb82c321f" compoundref="ulr__app_8h" startline="65">ULR_BUF_LEN</references>
+        <references refid="ulr__app_8cpp_1afed768860b75fdf058357f41e1bdbb46" compoundref="ulr__app_8cpp" startline="48">ULR_HEADER_SYNC_SYMBOL</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a028e22ebd454b74fc2f928617237c6d9" compoundref="ulr__events_8h" startline="265">ULR_INVALID_PARSER_STATE</references>
+        <references refid="ulr__app_8cpp_1a237f2e7feb2d6176b00f413caf44a30e" compoundref="ulr__app_8cpp" startline="60">ULR_MAX_DISTANCE</references>
+        <references refid="ulr__app_8cpp_1ac1dd010c3848bda889afa6dcb01f6e85" compoundref="ulr__app_8cpp" startline="56">ULR_MIN_DISTANCE</references>
+        <references refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048daa5f3546b5e24435fe486ae5878197b811" compoundref="ulr__app_8h" startline="77">ULR_PARSER_STATE_UNINITIALIZED</references>
+        <references refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048daa29892179f3b8d3c9ec494c7bafcd2483" compoundref="ulr__app_8h" startline="80">ULR_PARSER_STATE_WAITING_FOR_ALT_BYTE_1</references>
+        <references refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048daa8984a61880def709060f0be2b3e74b15" compoundref="ulr__app_8h" startline="81">ULR_PARSER_STATE_WAITING_FOR_ALT_BYTE_2</references>
+        <references refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048daad01f91270c04e13bb75011d153299755" compoundref="ulr__app_8h" startline="83">ULR_PARSER_STATE_WAITING_FOR_CHECKSUM</references>
+        <references refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048daaadc1c83c348dca777753fd179b1c52c0" compoundref="ulr__app_8h" startline="78">ULR_PARSER_STATE_WAITING_FOR_HEADER</references>
+        <references refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048daac50ef3e11252df8a44d95f71efc1121d" compoundref="ulr__app_8h" startline="82">ULR_PARSER_STATE_WAITING_FOR_SNR</references>
+        <references refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048daaa57e31c406c2d88dd74bb523a646eda1" compoundref="ulr__app_8h" startline="79">ULR_PARSER_STATE_WAITING_FOR_VERSION_ID</references>
+        <references refid="ulr__platform__cfg_8h_1a0c4a2733a2b14f2dba1a44c281d1d8b6" compoundref="ulr__platform__cfg_8h" startline="116">ULR_SENS_VARIANCE</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a5fc77d3d365f92bc37ba032af6cde303" compoundref="ulr__events_8h" startline="239">ULR_UNEXPECTED_DATA_BEFORE_HEADER</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a9aff1b9d25b54ee2df784507c8612a05" compoundref="ulr__events_8h" startline="224">ULR_UNEXPECTED_DATA_BEFORE_VERSION_ID</references>
+        <references refid="struct_u_l_r___uart_message__t_1ab5f1aa955931923d1889fbb7e701230d" compoundref="ulr__app_8h" startline="91">ULR_UartMessage_t::VersionID</references>
+        <referencedby refid="ulr__app_8h_1aa1754b930756a661d5d63464ee06923a" compoundref="ulr__app_8cpp" startline="588" endline="591">ULR_ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a9b40ab3620f94fc649225598b184dfa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 ULR::InitListenerTask</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitListenerTask</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Listener task entry point. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the listener task.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="200" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="833" bodyend="868"/>
+        <references refid="cfe__es__api_8c_1a64768543df91e7856b4356fdc70ebe8c">CFE_ES_CreateChildTask</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_u_l_r_1a89ffb350befaf887ac600c6392aa3762" compoundref="ulr__app_8h" startline="161">ChildContinueFlag</references>
+        <references refid="class_u_l_r_1ae31127fff677f7e3a8ccd05b456ea69d" compoundref="ulr__app_8h" startline="149">ListenerTaskID</references>
+        <references refid="class_u_l_r_1af55ab427d8ff41417ba4c2ac6d0a5c9f" compoundref="ulr__app_8h" startline="153">Mutex</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="osapi-os-core_8h_1a1cec40bf769e2db8614c1ef6d9906a8d">OS_MutSemCreate</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a06e9affd5996fa1438a60c38866c68b4" compoundref="ulr__events_8h" startline="278">ULR_LISTENER_CREATE_CHDTASK_ERR_EID</references>
+        <references refid="ulr__platform__cfg_8h_1a425fb047e77a6c460b637115b9aab26a" compoundref="ulr__platform__cfg_8h" startline="8">ULR_LISTENER_TASK_FLAGS</references>
+        <references refid="ulr__platform__cfg_8h_1a53e0f21e3a3634fb41c002922038c7c7" compoundref="ulr__platform__cfg_8h" startline="121">ULR_LISTENER_TASK_NAME</references>
+        <references refid="ulr__platform__cfg_8h_1a7d5a636182eda55b3176400151912681" compoundref="ulr__platform__cfg_8h" startline="119">ULR_LISTENER_TASK_PRIORITY</references>
+        <references refid="ulr__platform__cfg_8h_1a8c5d03d9f24d4a61ddfbff5709b5f82c" compoundref="ulr__platform__cfg_8h" startline="120">ULR_LISTENER_TASK_STACK_SIZE</references>
+        <references refid="ulr__app_8cpp_1aa1754b930756a661d5d63464ee06923a" compoundref="ulr__app_8cpp" startline="588" endline="591">ULR_ListenerTaskMain</references>
+        <references refid="ulr__platform__cfg_8h_1aa1f6b1f6a5a5030c24ea064fc96dccdf" compoundref="ulr__platform__cfg_8h" startline="122">ULR_MUTEX_NAME</references>
+        <referencedby refid="class_u_l_r_1a51a5c11f3afbdbaaa8d02f739acfaa56" compoundref="ulr__app_8cpp" startline="276" endline="331">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a51a5c11f3afbdbaaa8d02f739acfaa56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 ULR::InitApp</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitApp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the Aerotenna uLanding Radar (<ref refid="class_u_l_r" kindref="compound">ULR</ref>) application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Aerotenna uLanding Radar application initialization routine. This function performs all the required startup steps to initialize (or restore from CDS) <ref refid="class_u_l_r" kindref="compound">ULR</ref> data structures and get the application registered with the cFE services so it can begin to receive command messages and send events.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="7" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__es_8h_1a426ef8e1796ccebba16c63c8e86fb842" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterApp</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #ULR_InitEvent  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #ULR_InitPipe  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #ULR_InitData  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #ULR_InitConfigTbl  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_TaskInstallDeleteHandler</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="226" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="276" bodyend="331"/>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_u_l_r_1a14bc0fbaab5b74dad31ce521eccab6ce" compoundref="ulr__app_8cpp" startline="239" endline="267">InitData</references>
+        <references refid="class_u_l_r_1a3b6e650881120efa2bdb9cff03536485">InitDevice</references>
+        <references refid="class_u_l_r_1aa55f35a99424b266c2aa4a5329c3aecd" compoundref="ulr__app_8cpp" startline="108" endline="158">InitEvent</references>
+        <references refid="class_u_l_r_1a9b40ab3620f94fc649225598b184dfa8" compoundref="ulr__app_8cpp" startline="833" endline="868">InitListenerTask</references>
+        <references refid="class_u_l_r_1aa79b8831062301b23dfcdf738b1b1e85" compoundref="ulr__app_8cpp" startline="167" endline="230">InitPipe</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0ac1306408a2c3a3460481bb88b86b14ce" compoundref="ulr__events_8h" startline="75">ULR_INIT_INF_EID</references>
+        <references refid="ulr__version_8h_1a2da5612a9da1e2390b22c3cfcd1f2b99" compoundref="ulr__version_8h" startline="53">ULR_MAJOR_VERSION</references>
+        <references refid="ulr__version_8h_1af1ffb1135e5972c21b419e01d504c81e" compoundref="ulr__version_8h" startline="67">ULR_MINOR_VERSION</references>
+        <references refid="ulr__platform__cfg_8h_1a4d0d6ca1f0f4382b5b1ab6e2d65c1a1f" compoundref="ulr__platform__cfg_8h" startline="27">ULR_MISSION_REV</references>
+        <references refid="ulr__version_8h_1a07ea65dd84de86bd79ea8ed817ba433c" compoundref="ulr__version_8h" startline="81">ULR_REVISION</references>
+        <referencedby refid="class_u_l_r_1ad81c9bb0dd73b30383a21e5c21d6984c" compoundref="ulr__app_8cpp" startline="600" endline="645">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1aa55f35a99424b266c2aa4a5329c3aecd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 ULR::InitEvent</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitEvent</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Event Services and Event tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup cFE Event Services for use by the <ref refid="class_u_l_r" kindref="compound">ULR</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="244" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="108" bodyend="158"/>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1a9c74cb368c56aff83d050a4807132460">CFE_EVS_BINARY_FILTER</references>
+        <references refid="cfe__evs_8h_1a26a77de85eafef643d4dcbfdf7b77422">CFE_EVS_NO_FILTER</references>
+        <references refid="cfe__evs_8c_1a991c19d964b501bf0908bb60812fda28">CFE_EVS_Register</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1a41a96a173a28d042e012dce9bebf793e">CFE_EVS_BinFilter_t::EventID</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1ab9881e02d2317fe2205379a25bc679b2">CFE_EVS_BinFilter_t::Mask</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a0cb8bea6bbafb4c2f7801e8243e6d91f" compoundref="ulr__events_8h" startline="176">ULR_CC_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a28b0179b2bba587d53bc6d30cc77ce0c" compoundref="ulr__events_8h" startline="98">ULR_CMD_NOOP_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a96d1a34cb78a277050d55f5cbded380e" compoundref="ulr__events_8h" startline="208">ULR_CUSTOM_INIT_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0ac1306408a2c3a3460481bb88b86b14ce" compoundref="ulr__events_8h" startline="75">ULR_INIT_INF_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a2206f4bd15b66123fd94f8f68bbc0201" compoundref="ulr__events_8h" startline="253">ULR_INVALID_CHECKSUM</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a028e22ebd454b74fc2f928617237c6d9" compoundref="ulr__events_8h" startline="265">ULR_INVALID_PARSER_STATE</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a06e9affd5996fa1438a60c38866c68b4" compoundref="ulr__events_8h" startline="278">ULR_LISTENER_CREATE_CHDTASK_ERR_EID</references>
+        <references refid="ulr__app_8cpp_1a1ca1ac8443293b34ebc6312ec92d3dc2" compoundref="ulr__app_8cpp" startline="52">ULR_MAX_EVENT_FILTERS</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a4f6b151f1d823c8fcfdc66608abde257" compoundref="ulr__events_8h" startline="162">ULR_MSGID_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a7929863fee9c098f0c27562bd91a859d" compoundref="ulr__events_8h" startline="193">ULR_MSGLEN_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a8957fbcadbe2009951b42d6b1c3512d0" compoundref="ulr__events_8h" startline="131">ULR_PIPE_INIT_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a94c4e12e031c83c0a37dc6070a528ffc" compoundref="ulr__events_8h" startline="147">ULR_RCVMSG_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a52b1ad866852638cf5bf2e50c041b27d" compoundref="ulr__events_8h" startline="54">ULR_RESERVED_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0ab8636a9e73730f4b8897000fe8bb8210" compoundref="ulr__events_8h" startline="115">ULR_SUBSCRIBE_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a5fc77d3d365f92bc37ba032af6cde303" compoundref="ulr__events_8h" startline="239">ULR_UNEXPECTED_DATA_BEFORE_HEADER</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a9aff1b9d25b54ee2df784507c8612a05" compoundref="ulr__events_8h" startline="224">ULR_UNEXPECTED_DATA_BEFORE_VERSION_ID</references>
+        <referencedby refid="class_u_l_r_1a51a5c11f3afbdbaaa8d02f739acfaa56" compoundref="ulr__app_8cpp" startline="276" endline="331">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a14bc0fbaab5b74dad31ce521eccab6ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global variables used by <ref refid="class_u_l_r" kindref="compound">ULR</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to initialize the <ref refid="class_u_l_r" kindref="compound">ULR</ref> application data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="257" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="239" bodyend="267"/>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0">CFE_SB_InitMsg</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1aa9cbd2070815b83e4d164b3b63895f20" compoundref="ulr__msg_8h" startline="165">ULR_HkTlm_t::Covariance</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a27ae75c746abb1dab9fb5a1ead2c3f31" compoundref="ulr__msg_8h" startline="162">ULR_HkTlm_t::CurrentDistance</references>
+        <references refid="class_u_l_r_1a4056e71d62093645d0b5914bdfd7ee76" compoundref="ulr__app_8h" startline="143">DistanceSensor</references>
+        <references refid="class_u_l_r_1ac874105cca5071fae23085d0884227b3" compoundref="ulr__app_8h" startline="146">HkTlm</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a73b89c11937bd2aa7993f4eb402ca18a" compoundref="ulr__msg_8h" startline="159">ULR_HkTlm_t::MaxDistance</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a238d6bc794e285d4007007bd36c0d032" compoundref="ulr__msg_8h" startline="156">ULR_HkTlm_t::MinDistance</references>
+        <references refid="class_u_l_r_1a5ccec5c0498b3d6e15b3618cd3e75060" compoundref="ulr__app_8h" startline="131">ParserBuffer</references>
+        <references refid="class_u_l_r_1a9f087cd307d65964e1fdf90c274367e1" compoundref="ulr__app_8h" startline="124">ParserState</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a6c56a8e29c7be7e2fcef9c4b6a0bad17" compoundref="ulr__msg_8h" startline="171">ULR_HkTlm_t::SensorID</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1af6353a9c2c8d6f10c9489fc8fe5d20c8" compoundref="ulr__msg_8h" startline="174">ULR_HkTlm_t::SensorOrientation</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a71eee339694a535d7feb2b0311d08063" compoundref="ulr__msg_8h" startline="168">ULR_HkTlm_t::Type</references>
+        <references refid="ulr__msgids_8h_1abc281f710291da8ecb41f17d792511fd" compoundref="ulr__msgids_8h" startline="13">ULR_HK_TLM_MID</references>
+        <references refid="ulr__app_8cpp_1adc3069ff3e24618764233ce3098e4a87" compoundref="ulr__app_8cpp" startline="63">ULR_INVALID_DISTANCE</references>
+        <references refid="ulr__app_8cpp_1a237f2e7feb2d6176b00f413caf44a30e" compoundref="ulr__app_8cpp" startline="60">ULR_MAX_DISTANCE</references>
+        <references refid="ulr__app_8cpp_1ac1dd010c3848bda889afa6dcb01f6e85" compoundref="ulr__app_8cpp" startline="56">ULR_MIN_DISTANCE</references>
+        <references refid="ulr__app_8h_1a745875e6176e35f8b3a8dd7d1fd048daa5f3546b5e24435fe486ae5878197b811" compoundref="ulr__app_8h" startline="77">ULR_PARSER_STATE_UNINITIALIZED</references>
+        <references refid="ulr__platform__cfg_8h_1a0c4a2733a2b14f2dba1a44c281d1d8b6" compoundref="ulr__platform__cfg_8h" startline="116">ULR_SENS_VARIANCE</references>
+        <references refid="ulr__app_8cpp_1a348bd9881f744ed088970c3defd4f350" compoundref="ulr__app_8cpp" startline="66">ULR_SENSOR_ID</references>
+        <referencedby refid="class_u_l_r_1a51a5c11f3afbdbaaa8d02f739acfaa56" compoundref="ulr__app_8cpp" startline="276" endline="331">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1aa79b8831062301b23dfcdf738b1b1e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 ULR::InitPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize message pipes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup initialize the cFE Software Bus message pipes and subscribe to messages for the <ref refid="class_u_l_r" kindref="compound">ULR</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a5939c3681044a3d953d0fe72dd577889" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_SubscribeEx</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="278" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="167" bodyend="230"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2">CFE_SB_CreatePipe</references>
+        <references refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5">CFE_SB_Default_Qos</references>
+        <references refid="cfe__sb_8h_1afc2c2db1a504f544b430f33f28be769b">CFE_SB_Subscribe</references>
+        <references refid="cfe__sb_8h_1a5939c3681044a3d953d0fe72dd577889">CFE_SB_SubscribeEx</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_u_l_r_1ac00d44c13d751e540e2f1ed117933312" compoundref="ulr__app_8h" startline="119">CmdPipeId</references>
+        <references refid="class_u_l_r_1ab4e74539145be5548cac17856c96c0b0" compoundref="ulr__app_8h" startline="116">SchPipeId</references>
+        <references refid="ulr__msgids_8h_1ae1bb389063eda2fd60d883e0fa9680f0" compoundref="ulr__msgids_8h" startline="8">ULR_CMD_MID</references>
+        <references refid="ulr__platform__cfg_8h_1ae30e8bdb8f5bc41206b5b0505f9ed423" compoundref="ulr__platform__cfg_8h" startline="76">ULR_CMD_PIPE_DEPTH</references>
+        <references refid="ulr__platform__cfg_8h_1a9570c7eecccf7081015823d85d0b15bc" compoundref="ulr__platform__cfg_8h" startline="83">ULR_CMD_PIPE_NAME</references>
+        <references refid="ulr__msgids_8h_1a694c8ab9314e8e466f5e639e978c9f40" compoundref="ulr__msgids_8h" startline="10">ULR_MEASURE_MID</references>
+        <references refid="ulr__platform__cfg_8h_1a25802d91adacaa1d0a09538fb8c20ae7" compoundref="ulr__platform__cfg_8h" startline="60">ULR_MEASURE_MID_MAX_MSG_COUNT</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a8957fbcadbe2009951b42d6b1c3512d0" compoundref="ulr__events_8h" startline="131">ULR_PIPE_INIT_ERR_EID</references>
+        <references refid="ulr__platform__cfg_8h_1af8e6bce0c2ff08c774a91dcd4ed727a4" compoundref="ulr__platform__cfg_8h" startline="34">ULR_SCH_PIPE_DEPTH</references>
+        <references refid="ulr__platform__cfg_8h_1a7efd751d7d763261818590fd0e39556d" compoundref="ulr__platform__cfg_8h" startline="41">ULR_SCH_PIPE_NAME</references>
+        <references refid="ulr__msgids_8h_1a77a5f1c677c0bb23df9854d2190f3b57" compoundref="ulr__msgids_8h" startline="9">ULR_SEND_HK_MID</references>
+        <references refid="ulr__platform__cfg_8h_1a1728637c7938fbea8f9498a7016a70b1" compoundref="ulr__platform__cfg_8h" startline="69">ULR_SEND_HK_MID_MAX_MSG_COUNT</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0ab8636a9e73730f4b8897000fe8bb8210" compoundref="ulr__events_8h" startline="115">ULR_SUBSCRIBE_ERR_EID</references>
+        <referencedby refid="class_u_l_r_1a51a5c11f3afbdbaaa8d02f739acfaa56" compoundref="ulr__app_8cpp" startline="276" endline="331">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a8878b9f4e030a905a102dc209ab79698" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 ULR::RcvSchPipeMsg</definition>
+        <argsstring>(int32 iBlocking)</argsstring>
+        <name>RcvSchPipeMsg</name>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+          <declname>iBlocking</declname>
+        </param>
+        <briefdescription>
+<para>Receive and process messages from the scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function receives and processes messages for the <ref refid="class_u_l_r" kindref="compound">ULR</ref> application from the SCH pipe. This function will pend for the type defined by iBlocking, allowing it to wait for messages, i.e. wakeup messages from scheduler.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iBlocking</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PEND_FOREVER</ref>, <ref refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_POLL</ref> or millisecond timeout</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a54840fe06aeb08b1e2c8df420474780d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_RcvMsg</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="301" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="340" bodyend="396"/>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1a68b8b8ed93cecb670c945388a797e970">CFE_SB_TIME_OUT</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_u_l_r_1ab40e3430d7dca8c489a96bbd9b7bf7b8" compoundref="ulr__app_8cpp" startline="405" endline="449">ProcessCmdPipe</references>
+        <references refid="class_u_l_r_1ac39c9240d0e0fb6592dd6cd57a785bcb" compoundref="ulr__app_8cpp" startline="504" endline="518">ReportHousekeeping</references>
+        <references refid="class_u_l_r_1ab4e74539145be5548cac17856c96c0b0" compoundref="ulr__app_8h" startline="116">SchPipeId</references>
+        <references refid="ulr__perfids_8h_1ab83ea3856408f07a90d39a2e3dc3f84a" compoundref="ulr__perfids_8h" startline="8">ULR_MAIN_TASK_PERF_ID</references>
+        <references refid="ulr__msgids_8h_1a694c8ab9314e8e466f5e639e978c9f40" compoundref="ulr__msgids_8h" startline="10">ULR_MEASURE_MID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a4f6b151f1d823c8fcfdc66608abde257" compoundref="ulr__events_8h" startline="162">ULR_MSGID_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a94c4e12e031c83c0a37dc6070a528ffc" compoundref="ulr__events_8h" startline="147">ULR_RCVMSG_ERR_EID</references>
+        <references refid="ulr__msgids_8h_1a77a5f1c677c0bb23df9854d2190f3b57" compoundref="ulr__msgids_8h" startline="9">ULR_SEND_HK_MID</references>
+        <referencedby refid="class_u_l_r_1ad81c9bb0dd73b30383a21e5c21d6984c" compoundref="ulr__app_8cpp" startline="600" endline="645">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1ab40e3430d7dca8c489a96bbd9b7bf7b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::ProcessCmdPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessCmdPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Aerotenna uLanding Radar Task incoming command processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes incoming commands subscribed by <ref refid="class_u_l_r" kindref="compound">ULR</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="314" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="405" bodyend="449"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a">CFE_SB_POLL</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_u_l_r_1ac00d44c13d751e540e2f1ed117933312" compoundref="ulr__app_8h" startline="119">CmdPipeId</references>
+        <references refid="class_u_l_r_1ac874105cca5071fae23085d0884227b3" compoundref="ulr__app_8h" startline="146">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_u_l_r_1a26516485a680e4dc377d8a59278429e1" compoundref="ulr__app_8cpp" startline="458" endline="495">ProcessAppCmds</references>
+        <references refid="ulr__msgids_8h_1ae1bb389063eda2fd60d883e0fa9680f0" compoundref="ulr__msgids_8h" startline="8">ULR_CMD_MID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a4f6b151f1d823c8fcfdc66608abde257" compoundref="ulr__events_8h" startline="162">ULR_MSGID_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a94c4e12e031c83c0a37dc6070a528ffc" compoundref="ulr__events_8h" startline="147">ULR_RCVMSG_ERR_EID</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a72b8b9c091b810373c91f6458183ca6a" compoundref="ulr__msg_8h" startline="153">ULR_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_u_l_r_1a8878b9f4e030a905a102dc209ab79698" compoundref="ulr__app_8cpp" startline="340" endline="396">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a26516485a680e4dc377d8a59278429e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::ProcessAppCmds</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr)</argsstring>
+        <name>ProcessAppCmds</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <briefdescription>
+<para>Aerotenna uLanding Radar Task application commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes command messages specific to the <ref refid="class_u_l_r" kindref="compound">ULR</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="330" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="458" bodyend="495"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="class_u_l_r_1ac874105cca5071fae23085d0884227b3" compoundref="ulr__app_8h" startline="146">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a0cb8bea6bbafb4c2f7801e8243e6d91f" compoundref="ulr__events_8h" startline="176">ULR_CC_ERR_EID</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a28b0179b2bba587d53bc6d30cc77ce0c" compoundref="ulr__events_8h" startline="98">ULR_CMD_NOOP_EID</references>
+        <references refid="ulr__version_8h_1a2da5612a9da1e2390b22c3cfcd1f2b99" compoundref="ulr__version_8h" startline="53">ULR_MAJOR_VERSION</references>
+        <references refid="ulr__version_8h_1af1ffb1135e5972c21b419e01d504c81e" compoundref="ulr__version_8h" startline="67">ULR_MINOR_VERSION</references>
+        <references refid="ulr__platform__cfg_8h_1a4d0d6ca1f0f4382b5b1ab6e2d65c1a1f" compoundref="ulr__platform__cfg_8h" startline="27">ULR_MISSION_REV</references>
+        <references refid="ulr__msg_8h_1a4c4020bb90c144b52a85c8fbf11486a5" compoundref="ulr__msg_8h" startline="90">ULR_NOOP_CC</references>
+        <references refid="ulr__msg_8h_1a2f602fcbf250c4022d002c00678f24f1" compoundref="ulr__msg_8h" startline="123">ULR_RESET_CC</references>
+        <references refid="ulr__version_8h_1a07ea65dd84de86bd79ea8ed817ba433c" compoundref="ulr__version_8h" startline="81">ULR_REVISION</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a2859c97a664fd942abfdd95ba1db6cc1" compoundref="ulr__msg_8h" startline="149">ULR_HkTlm_t::usCmdCnt</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a72b8b9c091b810373c91f6458183ca6a" compoundref="ulr__msg_8h" startline="153">ULR_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_u_l_r_1ab40e3430d7dca8c489a96bbd9b7bf7b8" compoundref="ulr__app_8cpp" startline="405" endline="449">ProcessCmdPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1ac39c9240d0e0fb6592dd6cd57a785bcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::ReportHousekeeping</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReportHousekeeping</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends <ref refid="class_u_l_r" kindref="compound">ULR</ref> housekeeping message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function sends the housekeeping message</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="342" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="504" bodyend="518"/>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1aa9cbd2070815b83e4d164b3b63895f20" compoundref="ulr__msg_8h" startline="165">ULR_HkTlm_t::Covariance</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a27ae75c746abb1dab9fb5a1ead2c3f31" compoundref="ulr__msg_8h" startline="162">ULR_HkTlm_t::CurrentDistance</references>
+        <references refid="class_u_l_r_1a4056e71d62093645d0b5914bdfd7ee76" compoundref="ulr__app_8h" startline="143">DistanceSensor</references>
+        <references refid="class_u_l_r_1ac874105cca5071fae23085d0884227b3" compoundref="ulr__app_8h" startline="146">HkTlm</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a73b89c11937bd2aa7993f4eb402ca18a" compoundref="ulr__msg_8h" startline="159">ULR_HkTlm_t::MaxDistance</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a238d6bc794e285d4007007bd36c0d032" compoundref="ulr__msg_8h" startline="156">ULR_HkTlm_t::MinDistance</references>
+        <references refid="class_u_l_r_1af55ab427d8ff41417ba4c2ac6d0a5c9f" compoundref="ulr__app_8h" startline="153">Mutex</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a6c56a8e29c7be7e2fcef9c4b6a0bad17" compoundref="ulr__msg_8h" startline="171">ULR_HkTlm_t::SensorID</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1af6353a9c2c8d6f10c9489fc8fe5d20c8" compoundref="ulr__msg_8h" startline="174">ULR_HkTlm_t::SensorOrientation</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a71eee339694a535d7feb2b0311d08063" compoundref="ulr__msg_8h" startline="168">ULR_HkTlm_t::Type</references>
+        <referencedby refid="class_u_l_r_1a8878b9f4e030a905a102dc209ab79698" compoundref="ulr__app_8cpp" startline="340" endline="396">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1aa8a8163cee2512356abd61ae2234d8b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::SendDistanceSensor</definition>
+        <argsstring>(void)</argsstring>
+        <name>SendDistanceSensor</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends the DistanceSensor message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function publishes the DistanceSensor message.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="354" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a675732c065b3ac5c7b493ba736aae617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool ULR::VerifyCmdLength</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr, uint16 usExpectedLen)</argsstring>
+        <name>VerifyCmdLength</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>usExpectedLen</declname>
+        </param>
+        <briefdescription>
+<para>Verify Command Length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function verifies the command message length.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">usExpectedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected length of the message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the message length matches expectations, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="374" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="542" bodyend="567"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__sb_8h_1ac32b86cf9e1d12a547792853c35f6aa1">CFE_SB_GetTotalMsgLength</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_u_l_r_1ac874105cca5071fae23085d0884227b3" compoundref="ulr__app_8h" startline="146">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a7929863fee9c098f0c27562bd91a859d" compoundref="ulr__events_8h" startline="193">ULR_MSGLEN_ERR_EID</references>
+        <references refid="struct_u_l_r___hk_tlm__t_1a72b8b9c091b810373c91f6458183ca6a" compoundref="ulr__msg_8h" startline="153">ULR_HkTlm_t::usCmdErrCnt</references>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1ac0c5796a703b115fd303d095d1efe27f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool ULR::IsChecksumOk</definition>
+        <argsstring>(void)</argsstring>
+        <name>IsChecksumOk</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Verifies device message checksum. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function verifies the message from the device by checking the actual reported checksum against the expected echecksum..</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the actual and expected checksums match, FALSE if they do not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="524" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="654" bodyend="673"/>
+        <references refid="struct_u_l_r___uart_message__t_1a5b334d79055d20345828e1d61ab9a53c" compoundref="ulr__app_8h" startline="92">ULR_UartMessage_t::AltitudeH</references>
+        <references refid="struct_u_l_r___uart_message__t_1a9ecdf3b06297601ef401ef254d1cec43" compoundref="ulr__app_8h" startline="93">ULR_UartMessage_t::AltitudeL</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="struct_u_l_r___uart_message__t_1aaa127e26a02f66fe485bf79b101dbcb1" compoundref="ulr__app_8h" startline="95">ULR_UartMessage_t::Checksum</references>
+        <references refid="struct_u_l_r___uart_message__t_1a5bcd79afdf00969327c47d7ff57315b8" compoundref="ulr__app_8h" startline="94">ULR_UartMessage_t::SNR</references>
+        <references refid="class_u_l_r_1a370ba48ee1792976091e8bcf4d8f9aa4" compoundref="ulr__app_8h" startline="137">UartMessage</references>
+        <references refid="ulr__events_8h_1ac29924ffaf9bce5f81f45be3ec49dea0a2206f4bd15b66123fd94f8f68bbc0201" compoundref="ulr__events_8h" startline="253">ULR_INVALID_CHECKSUM</references>
+        <references refid="struct_u_l_r___uart_message__t_1ab5f1aa955931923d1889fbb7e701230d" compoundref="ulr__app_8h" startline="91">ULR_UartMessage_t::VersionID</references>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_u_l_r_1a3b6e650881120efa2bdb9cff03536485" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 ULR::InitDevice</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitDevice</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is defined in the platform specific package and initializes the device, whatever it is, to allow the application to read the sensor.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+0 if successful. Returns a negative number if unsuccessful. Meaning of actual return value is platform specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="394" column="1"/>
+        <referencedby refid="class_u_l_r_1a51a5c11f3afbdbaaa8d02f739acfaa56" compoundref="ulr__app_8cpp" startline="276" endline="331">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a492c120bcc646e858822b791d808d990" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::ReportDistance</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReportDistance</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Report the distance to the ground. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function publishes a most current distance measurement onto the software bus.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="407" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="527" bodyend="533"/>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="class_u_l_r_1a4056e71d62093645d0b5914bdfd7ee76" compoundref="ulr__app_8h" startline="143">DistanceSensor</references>
+        <references refid="class_u_l_r_1af55ab427d8ff41417ba4c2ac6d0a5c9f" compoundref="ulr__app_8h" startline="153">Mutex</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1a7d194b398d626362de28274257ad03ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool ULR::ChildContinueExec</definition>
+        <argsstring>(void)</argsstring>
+        <name>ChildContinueExec</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Determines if child task should continue. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function determines if the child task should continue or if it should terminate.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the child task should continue, FALSE if it should not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="424" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="682" bodyend="691"/>
+        <references refid="class_u_l_r_1a89ffb350befaf887ac600c6392aa3762" compoundref="ulr__app_8h" startline="161">ChildContinueFlag</references>
+        <references refid="class_u_l_r_1af55ab427d8ff41417ba4c2ac6d0a5c9f" compoundref="ulr__app_8h" startline="153">Mutex</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1aa76432aa0d487c1eb2317842e4bbfb32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::StopChild</definition>
+        <argsstring>(void)</argsstring>
+        <name>StopChild</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Signal the child task to terminate. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called by the parent task to signal the child task to terminate execution.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="437" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.cpp" bodystart="699" bodyend="704"/>
+        <references refid="class_u_l_r_1a89ffb350befaf887ac600c6392aa3762" compoundref="ulr__app_8h" startline="161">ChildContinueFlag</references>
+        <references refid="class_u_l_r_1af55ab427d8ff41417ba4c2ac6d0a5c9f" compoundref="ulr__app_8h" startline="153">Mutex</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <referencedby refid="class_u_l_r_1ad81c9bb0dd73b30383a21e5c21d6984c" compoundref="ulr__app_8cpp" startline="600" endline="645">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1abb5cc065765b45731cf9e14cbfd91f88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 ULR::GetDistance</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetDistance</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the distance measurements. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function measures the distance, applies limits, and publishes the results.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+0 if successful. Returns a negative number if unsuccessful. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="454" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1aa270135eebf7ce9d00895ee37be02028" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 ULR::ReadDevice</definition>
+        <argsstring>(uint8 *Buffer, uint32 *Size)</argsstring>
+        <name>ReadDevice</name>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref> *</type>
+          <declname>Buffer</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> *</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+<para>Read a measurement from the device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function retrieves a measurement from the device. This function is defined in the platform specific package. It provides the platform specific interface to the device, and applies any platform specific calibrations to return a measurement in &lt;TODO: Get units&gt;.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+0 if successful. Returns a negative number if unsuccessful. Meaning of actual return value is platform specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="475" column="1"/>
+        <referencedby refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" compoundref="ulr__app_8cpp" startline="712" endline="825">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_u_l_r_1af9f3bb1b4331ff073d33a6a6591a7120" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ULR::CloseDevice</definition>
+        <argsstring>(void)</argsstring>
+        <name>CloseDevice</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Close the uLanding Radar device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called when shutdown to close the device.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="487" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_u_l_r_1a35cab69cf35aff7b52f21b9eaf369592" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>static int32 ULR::ValidateConfigTbl</definition>
+        <argsstring>(void *)</argsstring>
+        <name>ValidateConfigTbl</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+<para>Validate <ref refid="class_u_l_r" kindref="compound">ULR</ref> configuration table. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function validates <ref refid="class_u_l_r" kindref="compound">ULR</ref>&apos;s configuration table</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ConfigTblPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the table to validate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="1" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/src/ulr_app.h" line="506" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_u_l_r" kindref="compound">ULR</ref> Application Class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>ULR_UartMessage_t</label>
+        <link refid="struct_u_l_r___uart_message__t"/>
+      </node>
+      <node id="2">
+        <label>ULR_HkTlm_t</label>
+        <link refid="struct_u_l_r___hk_tlm__t"/>
+      </node>
+      <node id="1">
+        <label>ULR</label>
+        <link refid="class_u_l_r"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>HkTlm</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>UartMessage</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/ulr/fsw/src/ulr_app.h" line="107" column="1" bodyfile="apps/ulr/fsw/src/ulr_app.h" bodystart="106" bodyend="525"/>
+    <listofallmembers>
+      <member refid="class_u_l_r_1ad81c9bb0dd73b30383a21e5c21d6984c" prot="public" virt="non-virtual"><scope>ULR</scope><name>AppMain</name></member>
+      <member refid="class_u_l_r_1a7d194b398d626362de28274257ad03ac" prot="private" virt="non-virtual"><scope>ULR</scope><name>ChildContinueExec</name></member>
+      <member refid="class_u_l_r_1a89ffb350befaf887ac600c6392aa3762" prot="public" virt="non-virtual"><scope>ULR</scope><name>ChildContinueFlag</name></member>
+      <member refid="class_u_l_r_1af9f3bb1b4331ff073d33a6a6591a7120" prot="private" virt="non-virtual"><scope>ULR</scope><name>CloseDevice</name></member>
+      <member refid="class_u_l_r_1ac00d44c13d751e540e2f1ed117933312" prot="public" virt="non-virtual"><scope>ULR</scope><name>CmdPipeId</name></member>
+      <member refid="class_u_l_r_1a4056e71d62093645d0b5914bdfd7ee76" prot="public" virt="non-virtual"><scope>ULR</scope><name>DistanceSensor</name></member>
+      <member refid="class_u_l_r_1abb5cc065765b45731cf9e14cbfd91f88" prot="private" virt="non-virtual"><scope>ULR</scope><name>GetDistance</name></member>
+      <member refid="class_u_l_r_1a4960c7f2db6574a0cca7f73dc002101b" prot="public" virt="non-virtual"><scope>ULR</scope><name>HeightFilter</name></member>
+      <member refid="class_u_l_r_1ac874105cca5071fae23085d0884227b3" prot="public" virt="non-virtual"><scope>ULR</scope><name>HkTlm</name></member>
+      <member refid="class_u_l_r_1a51a5c11f3afbdbaaa8d02f739acfaa56" prot="public" virt="non-virtual"><scope>ULR</scope><name>InitApp</name></member>
+      <member refid="class_u_l_r_1a14bc0fbaab5b74dad31ce521eccab6ce" prot="public" virt="non-virtual"><scope>ULR</scope><name>InitData</name></member>
+      <member refid="class_u_l_r_1a3b6e650881120efa2bdb9cff03536485" prot="private" virt="non-virtual"><scope>ULR</scope><name>InitDevice</name></member>
+      <member refid="class_u_l_r_1aa55f35a99424b266c2aa4a5329c3aecd" prot="public" virt="non-virtual"><scope>ULR</scope><name>InitEvent</name></member>
+      <member refid="class_u_l_r_1a9b40ab3620f94fc649225598b184dfa8" prot="public" virt="non-virtual"><scope>ULR</scope><name>InitListenerTask</name></member>
+      <member refid="class_u_l_r_1aa79b8831062301b23dfcdf738b1b1e85" prot="public" virt="non-virtual"><scope>ULR</scope><name>InitPipe</name></member>
+      <member refid="class_u_l_r_1ac0c5796a703b115fd303d095d1efe27f" prot="public" virt="non-virtual"><scope>ULR</scope><name>IsChecksumOk</name></member>
+      <member refid="class_u_l_r_1ae31127fff677f7e3a8ccd05b456ea69d" prot="public" virt="non-virtual"><scope>ULR</scope><name>ListenerTaskID</name></member>
+      <member refid="class_u_l_r_1a253b9b9f2395b41167e463a0dc0c0b37" prot="public" virt="non-virtual"><scope>ULR</scope><name>ListenerTaskMain</name></member>
+      <member refid="class_u_l_r_1af55ab427d8ff41417ba4c2ac6d0a5c9f" prot="public" virt="non-virtual"><scope>ULR</scope><name>Mutex</name></member>
+      <member refid="class_u_l_r_1a5ccec5c0498b3d6e15b3618cd3e75060" prot="public" virt="non-virtual"><scope>ULR</scope><name>ParserBuffer</name></member>
+      <member refid="class_u_l_r_1a9f087cd307d65964e1fdf90c274367e1" prot="public" virt="non-virtual"><scope>ULR</scope><name>ParserState</name></member>
+      <member refid="class_u_l_r_1a26516485a680e4dc377d8a59278429e1" prot="public" virt="non-virtual"><scope>ULR</scope><name>ProcessAppCmds</name></member>
+      <member refid="class_u_l_r_1ab40e3430d7dca8c489a96bbd9b7bf7b8" prot="public" virt="non-virtual"><scope>ULR</scope><name>ProcessCmdPipe</name></member>
+      <member refid="class_u_l_r_1a8878b9f4e030a905a102dc209ab79698" prot="public" virt="non-virtual"><scope>ULR</scope><name>RcvSchPipeMsg</name></member>
+      <member refid="class_u_l_r_1aa270135eebf7ce9d00895ee37be02028" prot="private" virt="non-virtual"><scope>ULR</scope><name>ReadDevice</name></member>
+      <member refid="class_u_l_r_1a492c120bcc646e858822b791d808d990" prot="private" virt="non-virtual"><scope>ULR</scope><name>ReportDistance</name></member>
+      <member refid="class_u_l_r_1ac39c9240d0e0fb6592dd6cd57a785bcb" prot="public" virt="non-virtual"><scope>ULR</scope><name>ReportHousekeeping</name></member>
+      <member refid="class_u_l_r_1ab4e74539145be5548cac17856c96c0b0" prot="public" virt="non-virtual"><scope>ULR</scope><name>SchPipeId</name></member>
+      <member refid="class_u_l_r_1aa8a8163cee2512356abd61ae2234d8b1" prot="public" virt="non-virtual"><scope>ULR</scope><name>SendDistanceSensor</name></member>
+      <member refid="class_u_l_r_1aa76432aa0d487c1eb2317842e4bbfb32" prot="private" virt="non-virtual"><scope>ULR</scope><name>StopChild</name></member>
+      <member refid="class_u_l_r_1a370ba48ee1792976091e8bcf4d8f9aa4" prot="public" virt="non-virtual"><scope>ULR</scope><name>UartMessage</name></member>
+      <member refid="class_u_l_r_1a4027fbe758e571945bd2c4b5c3e431de" prot="public" virt="non-virtual"><scope>ULR</scope><name>uiRunStatus</name></member>
+      <member refid="class_u_l_r_1aa533106ca41759683886c6ccfcec1e2d" prot="public" virt="non-virtual"><scope>ULR</scope><name>ULR</name></member>
+      <member refid="class_u_l_r_1a35cab69cf35aff7b52f21b9eaf369592" prot="public" virt="non-virtual"><scope>ULR</scope><name>ValidateConfigTbl</name></member>
+      <member refid="class_u_l_r_1a675732c065b3ac5c7b493ba736aae617" prot="public" virt="non-virtual"><scope>ULR</scope><name>VerifyCmdLength</name></member>
+      <member refid="class_u_l_r_1a0fef4cdfeb1a2d1849e200406f05781a" prot="public" virt="non-virtual"><scope>ULR</scope><name>~ULR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

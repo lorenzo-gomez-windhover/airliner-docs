@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsdscons" kind="page">
+    <compoundname>cfsdscons</compoundname>
+    <title>CFS Data Storage Operational Constraints</title>
+    <detaileddescription>
+<para>The Data Storage (DS) application attempts to load the File and Filter Tables from DS_DEF_DEST_FILENAME and DS_DEF_FILTER_FILENAME upon startup. If the load fails for either of these tables, DS will still start in the mode of operation as defined by the DS_DEF_ENABLE_STATE configuration parameter. If this configuration parameter is set to ENABLED mode and either the File and/or Filter Table failed to load, DS will not store any messages until both tables are loaded with valid data. This can be accomplished by using the cFE Table Services commands after creating a table load image file and uploading it to the spacecraft&apos;s file system. Until both tables are loaded with valid data, DS will increment the #DS_IGNOREDPKTCNT for each received packet that is discarded.</para><para>Next: <ref refid="cfsdsfaqs" kindref="compound">CFS Data Storage Frequently Asked Questions</ref> <linebreak/>
+ Prev: <ref refid="cfsdscfg" kindref="compound">CFS Data Storage Configuration Parameters</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

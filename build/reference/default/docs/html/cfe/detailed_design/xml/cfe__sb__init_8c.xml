@@ -1,0 +1,785 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__sb__init_8c" kind="file" language="C++">
+    <compoundname>cfe_sb_init.c</compoundname>
+    <includes refid="cfe__sb__priv_8h" local="yes">cfe_sb_priv.h</includes>
+    <includes refid="cfe__sb_8h" local="yes">cfe_sb.h</includes>
+    <includes refid="osapi_8h" local="yes">osapi.h</includes>
+    <includes local="yes">cfe_msgids.h</includes>
+    <includes refid="cfe__es_8h" local="yes">cfe_es.h</includes>
+    <includes local="yes">cfe_psp.h</includes>
+    <includes refid="cfe__error_8h" local="yes">cfe_error.h</includes>
+    <includes refid="cfe__sb__events_8h" local="yes">cfe_sb_events.h</includes>
+    <incdepgraph>
+      <node id="7625">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="7619">
+        <label>stdarg.h</label>
+      </node>
+      <node id="7612">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="7639">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="7644">
+        <label>cfe_sb_events.h</label>
+        <link refid="cfe__sb__events_8h"/>
+      </node>
+      <node id="7623">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7640">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7629" relation="include">
+        </childnode>
+      </node>
+      <node id="7631">
+        <label>cfe_msgids.h</label>
+      </node>
+      <node id="7620">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="7634">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h"/>
+      </node>
+      <node id="7636">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+      </node>
+      <node id="7637">
+        <label>cfe_evs_msg.h</label>
+        <link refid="cfe__evs__msg_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7636" relation="include">
+        </childnode>
+        <childnode refid="7615" relation="include">
+        </childnode>
+        <childnode refid="7638" relation="include">
+        </childnode>
+        <childnode refid="7633" relation="include">
+        </childnode>
+      </node>
+      <node id="7621">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="7622" relation="include">
+        </childnode>
+        <childnode refid="7623" relation="include">
+        </childnode>
+        <childnode refid="7624" relation="include">
+        </childnode>
+        <childnode refid="7625" relation="include">
+        </childnode>
+      </node>
+      <node id="7616">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="7615">
+        <label>osapi.h</label>
+        <link refid="osapi_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7616" relation="include">
+        </childnode>
+        <childnode refid="7617" relation="include">
+        </childnode>
+        <childnode refid="7618" relation="include">
+        </childnode>
+        <childnode refid="7621" relation="include">
+        </childnode>
+        <childnode refid="7626" relation="include">
+        </childnode>
+        <childnode refid="7627" relation="include">
+        </childnode>
+        <childnode refid="7628" relation="include">
+        </childnode>
+        <childnode refid="7620" relation="include">
+        </childnode>
+      </node>
+      <node id="7628">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="7611">
+        <label>cfe_sb_priv.h</label>
+        <link refid="cfe__sb__priv_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7613" relation="include">
+        </childnode>
+        <childnode refid="7638" relation="include">
+        </childnode>
+        <childnode refid="7643" relation="include">
+        </childnode>
+        <childnode refid="7636" relation="include">
+        </childnode>
+        <childnode refid="7633" relation="include">
+        </childnode>
+      </node>
+      <node id="7610">
+        <label>sb/cfe_sb_init.c</label>
+        <link refid="cfe_sb_init.c"/>
+        <childnode refid="7611" relation="include">
+        </childnode>
+        <childnode refid="7638" relation="include">
+        </childnode>
+        <childnode refid="7615" relation="include">
+        </childnode>
+        <childnode refid="7631" relation="include">
+        </childnode>
+        <childnode refid="7633" relation="include">
+        </childnode>
+        <childnode refid="7639" relation="include">
+        </childnode>
+        <childnode refid="7632" relation="include">
+        </childnode>
+        <childnode refid="7644" relation="include">
+        </childnode>
+      </node>
+      <node id="7629">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="7630">
+        <label>cfe_platform_cfg.h</label>
+      </node>
+      <node id="7617">
+        <label>osconfig.h</label>
+      </node>
+      <node id="7626">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="7638">
+        <label>cfe_sb.h</label>
+        <link refid="cfe__sb_8h"/>
+        <childnode refid="7617" relation="include">
+        </childnode>
+        <childnode refid="7639" relation="include">
+        </childnode>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7629" relation="include">
+        </childnode>
+        <childnode refid="7630" relation="include">
+        </childnode>
+        <childnode refid="7640" relation="include">
+        </childnode>
+        <childnode refid="7636" relation="include">
+        </childnode>
+      </node>
+      <node id="7633">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h"/>
+        <childnode refid="7629" relation="include">
+        </childnode>
+        <childnode refid="7634" relation="include">
+        </childnode>
+      </node>
+      <node id="7614">
+        <label>cfe.h</label>
+        <link refid="cfe_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7615" relation="include">
+        </childnode>
+        <childnode refid="7629" relation="include">
+        </childnode>
+        <childnode refid="7630" relation="include">
+        </childnode>
+        <childnode refid="7631" relation="include">
+        </childnode>
+        <childnode refid="7632" relation="include">
+        </childnode>
+        <childnode refid="7633" relation="include">
+        </childnode>
+        <childnode refid="7635" relation="include">
+        </childnode>
+        <childnode refid="7641" relation="include">
+        </childnode>
+        <childnode refid="7638" relation="include">
+        </childnode>
+        <childnode refid="7636" relation="include">
+        </childnode>
+        <childnode refid="7642" relation="include">
+        </childnode>
+        <childnode refid="7639" relation="include">
+        </childnode>
+      </node>
+      <node id="7635">
+        <label>cfe_evs.h</label>
+        <link refid="cfe__evs_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7636" relation="include">
+        </childnode>
+        <childnode refid="7637" relation="include">
+        </childnode>
+        <childnode refid="7615" relation="include">
+        </childnode>
+        <childnode refid="7638" relation="include">
+        </childnode>
+      </node>
+      <node id="7627">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="7641">
+        <label>cfe_fs.h</label>
+        <link refid="cfe__fs_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7636" relation="include">
+        </childnode>
+      </node>
+      <node id="7613">
+        <label>private/cfe_private.h</label>
+        <link refid="cfe__private_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7614" relation="include">
+        </childnode>
+        <childnode refid="7630" relation="include">
+        </childnode>
+      </node>
+      <node id="7642">
+        <label>cfe_tbl.h</label>
+        <link refid="cfe__tbl_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7636" relation="include">
+        </childnode>
+        <childnode refid="7617" relation="include">
+        </childnode>
+      </node>
+      <node id="7632">
+        <label>cfe_error.h</label>
+        <link refid="cfe__error_8h"/>
+        <childnode refid="7615" relation="include">
+        </childnode>
+      </node>
+      <node id="7622">
+        <label>stdio.h</label>
+      </node>
+      <node id="7643">
+        <label>cfe_sb_msg.h</label>
+        <link refid="cfe__sb__msg_8h"/>
+        <childnode refid="7612" relation="include">
+        </childnode>
+        <childnode refid="7638" relation="include">
+        </childnode>
+        <childnode refid="7617" relation="include">
+        </childnode>
+        <childnode refid="7633" relation="include">
+        </childnode>
+      </node>
+      <node id="7618">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="7619" relation="include">
+        </childnode>
+        <childnode refid="7620" relation="include">
+        </childnode>
+      </node>
+      <node id="7624">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cfe__sb__init_8c_1a3f3691a70564ac6f6c54b56d2a0c361a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+        <definition>uint32 CFE_SB_MemPoolDefSize[CFE_ES_MAX_MEMPOOL_BLOCK_SIZES]</definition>
+        <argsstring>[CFE_ES_MAX_MEMPOOL_BLOCK_SIZES]</argsstring>
+        <name>CFE_SB_MemPoolDefSize</name>
+        <initializer>= 
+{
+    CFE_SB_MAX_BLOCK_SIZE,
+    CFE_SB_MEM_BLOCK_SIZE_16,
+    CFE_SB_MEM_BLOCK_SIZE_15,
+    CFE_SB_MEM_BLOCK_SIZE_14,
+    CFE_SB_MEM_BLOCK_SIZE_13,
+    CFE_SB_MEM_BLOCK_SIZE_12,
+    CFE_SB_MEM_BLOCK_SIZE_11,
+    CFE_SB_MEM_BLOCK_SIZE_10,
+    CFE_SB_MEM_BLOCK_SIZE_09,
+    CFE_SB_MEM_BLOCK_SIZE_08,
+    CFE_SB_MEM_BLOCK_SIZE_07,
+    CFE_SB_MEM_BLOCK_SIZE_06,
+    CFE_SB_MEM_BLOCK_SIZE_05,
+    CFE_SB_MEM_BLOCK_SIZE_04,
+    CFE_SB_MEM_BLOCK_SIZE_03,
+    CFE_SB_MEM_BLOCK_SIZE_02,
+    CFE_SB_MEM_BLOCK_SIZE_01
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/cfe_sb_init.c" line="82" column="1" bodyfile="sb/cfe_sb_init.c" bodystart="82" bodyend="-1"/>
+        <referencedby refid="cfe__sb__priv_8h_1acaab249a878acdab893837f3ff7a584c" compoundref="cfe__sb__init_8c" startline="181" endline="200">CFE_SB_InitBuffers</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cfe__sb__init_8c_1a10df878846322b41e32312d413be8da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_SB_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/cfe_sb_init.c" line="118" column="1" bodyfile="sb/cfe_sb_init.c" bodystart="118" bodyend="163"/>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" compoundref="cfe__sb__task_8c" startline="105">CFE_SB</references>
+        <references refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5" compoundref="cfe__sb__task_8c" startline="106">CFE_SB_Default_Qos</references>
+        <references refid="cfe__sb__priv_8h_1a0de0e798b082f24c02d2b64ce9916719" compoundref="cfe__sb__priv_8h" startline="130">CFE_SB_DISABLE</references>
+        <references refid="cfe__sb__init_8c_1acaab249a878acdab893837f3ff7a584c" compoundref="cfe__sb__init_8c" startline="181" endline="200">CFE_SB_InitBuffers</references>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0" compoundref="cfe__sb__util_8c" startline="81" endline="91">CFE_SB_InitMsg</references>
+        <references refid="cfe__sb__init_8c_1a3e9e77eeaa314087e45a7cfe8ad41993" compoundref="cfe__sb__init_8c" startline="247" endline="259">CFE_SB_InitMsgMap</references>
+        <references refid="cfe__sb__init_8c_1a0200f69ca4c5dd0c7c6f112d1410aa70" compoundref="cfe__sb__init_8c" startline="217" endline="229">CFE_SB_InitPipeTbl</references>
+        <references refid="cfe__sb__init_8c_1ac951ce5cc4c336383502c7bc3eab7123" compoundref="cfe__sb__init_8c" startline="277" endline="291">CFE_SB_InitRoutingTbl</references>
+        <references refid="cfe__sb__priv_8h_1ad1e9efff5ad6ecb0f257d5ec741e0f1c" compoundref="cfe__sb__priv_8h" startline="144">CFE_SB_QOS_LOW_PRIORITY</references>
+        <references refid="cfe__sb__priv_8h_1aa4aa514ce5a28141e0d1d35d9b7f61d9" compoundref="cfe__sb__priv_8h" startline="145">CFE_SB_QOS_LOW_RELIABILITY</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___s_b___stat_msg__t_1a1781da171a11ed544e1cea5f727a0b22" compoundref="cfe__sb__msg_8h" startline="676">CFE_SB_StatMsg_t::Hdr</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="osapi-os-core_8h_1a1cec40bf769e2db8614c1ef6d9906a8d" compoundref="osapi_8c" startline="2910" endline="3047">OS_MutSemCreate</references>
+        <references refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" compoundref="osapi_8h" startline="87">OS_SUCCESS</references>
+        <references refid="struct_c_f_e___s_b___tlm_hdr__t_1af137ae8bf218c2ddc22583847535b583" compoundref="cfe__sb_8h" startline="135">CFE_SB_TlmHdr_t::Pri</references>
+        <references refid="struct_c_f_e___s_b___qos__t_1ad3d2be85fd6ae49344ed70aa0a57df0c" compoundref="cfe__sb_8h" startline="182">CFE_SB_Qos_t::Priority</references>
+        <references refid="struct_c_f_e___s_b___qos__t_1adff0dd4ccb04e862db28afe8b4722cfb" compoundref="cfe__sb_8h" startline="183">CFE_SB_Qos_t::Reliability</references>
+        <references refid="structcfe__sb__t_1a7901579fe0b442c4bd14dfc5d7da858f" compoundref="cfe__sb__priv_8h" startline="290">cfe_sb_t::SenderReporting</references>
+        <references refid="structcfe__sb__t_1ab0dd2e1418852a08cc0bf96078a95bc6" compoundref="cfe__sb__priv_8h" startline="288">cfe_sb_t::SharedDataMutexId</references>
+        <references refid="structcfe__sb__t_1a11a51501a72bd467720097a56741bf10" compoundref="cfe__sb__priv_8h" startline="296">cfe_sb_t::StatTlmMsg</references>
+        <references refid="structcfe__sb__t_1a28d2211968e0b9eac2abed73ba3edfd5" compoundref="cfe__sb__priv_8h" startline="289">cfe_sb_t::SubscriptionReporting</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" compoundref="common__types_8h" startline="314">TRUE</references>
+        <references refid="structcfe__sb__t_1a91a66b1d1c6f6d92afeca8a871d78eac" compoundref="cfe__sb__priv_8h" startline="293">cfe_sb_t::ZeroCopyTail</references>
+      </memberdef>
+      <memberdef kind="function" id="cfe__sb__init_8c_1acaab249a878acdab893837f3ff7a584c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_SB_InitBuffers</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_InitBuffers</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/cfe_sb_init.c" line="181" column="1" bodyfile="sb/cfe_sb_init.c" bodystart="181" bodyend="200"/>
+        <references refid="cfe__es_8h_1aa97d866642d474c34790e4d46717ac6b" compoundref="cfe__es_8h" startline="154">CFE_ES_MAX_MEMPOOL_BLOCK_SIZES</references>
+        <references refid="cfe__es_8h_1a46c1b23ca468cf628194c0a564e1a416" compoundref="cfe__es_8h" startline="202">CFE_ES_NO_MUTEX</references>
+        <references refid="cfe__es_8h_1ae096a654808a468170036a1207f813f3" compoundref="cfe__esmempool_8c" startline="147" endline="296">CFE_ES_PoolCreateEx</references>
+        <references refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" compoundref="cfe__sb__task_8c" startline="105">CFE_SB</references>
+        <references refid="cfe__sb__init_8c_1a3f3691a70564ac6f6c54b56d2a0c361a" compoundref="cfe__sb__init_8c" startline="82">CFE_SB_MemPoolDefSize</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" compoundref="cfe__error_8h" startline="162">CFE_SUCCESS</references>
+        <references refid="structcfe__sb__t_1a90bdc25d960a21768722fdf7a1c9f4b7" compoundref="cfe__sb__priv_8h" startline="299">cfe_sb_t::Mem</references>
+        <references refid="struct_c_f_e___s_b___mem_params__t_1a1f221b2ba93f37db6fc57686d19996f3" compoundref="cfe__sb__priv_8h" startline="276">CFE_SB_MemParams_t::Partition</references>
+        <references refid="struct_c_f_e___s_b___mem_params__t_1a63493b0949a70519749bc60b382c3d44" compoundref="cfe__sb__priv_8h" startline="275">CFE_SB_MemParams_t::PoolHdl</references>
+        <referencedby refid="cfe__sb__init_8c_1a10df878846322b41e32312d413be8da2" compoundref="cfe__sb__init_8c" startline="118" endline="163">CFE_SB_EarlyInit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__sb__init_8c_1a0200f69ca4c5dd0c7c6f112d1410aa70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_SB_InitPipeTbl</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_InitPipeTbl</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/cfe_sb_init.c" line="217" column="1" bodyfile="sb/cfe_sb_init.c" bodystart="217" bodyend="229"/>
+        <references refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" compoundref="cfe__sb__task_8c" startline="105">CFE_SB</references>
+        <references refid="cfe__sb__priv_8h_1aded841d2a1f046d3433c23cf5bc6597e" compoundref="cfe__sb__priv_8h" startline="107">CFE_SB_INVALID_PIPE</references>
+        <references refid="cfe__sb__priv_8h_1a61b7a420c4b730f4c253cf28e94f77c5" compoundref="cfe__sb__priv_8h" startline="127">CFE_SB_NOT_IN_USE</references>
+        <references refid="cfe__sb__priv_8h_1ade485b7e25e839a3282b96e45bf23464" compoundref="cfe__sb__priv_8h" startline="106">CFE_SB_UNUSED_QUEUE</references>
+        <references refid="struct_c_f_e___s_b___pipe_d__t_1a2c196db206fb36ad7c335664992d9da4" compoundref="cfe__sb__priv_8h" startline="261">CFE_SB_PipeD_t::CurrentBuff</references>
+        <references refid="struct_c_f_e___s_b___pipe_d__t_1aee4ecc553a79e3a94f94dfa13535d023" compoundref="cfe__sb__priv_8h" startline="251">CFE_SB_PipeD_t::InUse</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1" compoundref="stubs_8c" startline="36">OS_MAX_API_NAME</references>
+        <references refid="struct_c_f_e___s_b___pipe_d__t_1a08c581ea5b94cb3481df5806dd8139e4" compoundref="cfe__sb__priv_8h" startline="252">CFE_SB_PipeD_t::PipeId</references>
+        <references refid="struct_c_f_e___s_b___pipe_d__t_1adcdc596b1ea37288fe84d696c7f7e132" compoundref="cfe__sb__priv_8h" startline="253">CFE_SB_PipeD_t::PipeName</references>
+        <references refid="structcfe__sb__t_1a25f46c05b72f8c60a39cce179308b614" compoundref="cfe__sb__priv_8h" startline="294">cfe_sb_t::PipeTbl</references>
+        <references refid="struct_c_f_e___s_b___pipe_d__t_1a8314bd2c2ba07fa46eb2c5ab029dac56" compoundref="cfe__sb__priv_8h" startline="257">CFE_SB_PipeD_t::SysQueueId</references>
+        <referencedby refid="cfe__sb__init_8c_1a10df878846322b41e32312d413be8da2" compoundref="cfe__sb__init_8c" startline="118" endline="163">CFE_SB_EarlyInit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__sb__init_8c_1a3e9e77eeaa314087e45a7cfe8ad41993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_SB_InitMsgMap</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_InitMsgMap</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/cfe_sb_init.c" line="247" column="1" bodyfile="sb/cfe_sb_init.c" bodystart="247" bodyend="259"/>
+        <references refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" compoundref="cfe__sb__task_8c" startline="105">CFE_SB</references>
+        <references refid="cfe__sb__priv_8h_1ade8cd3834120ca7ab077203207e5194c" compoundref="cfe__sb__priv_8h" startline="103">CFE_SB_AVAILABLE</references>
+        <references refid="structcfe__sb__t_1adb0efd8ed24a5c1bf3fdf2741b4c48f6" compoundref="cfe__sb__priv_8h" startline="300">cfe_sb_t::MsgMap</references>
+        <referencedby refid="cfe__sb__init_8c_1a10df878846322b41e32312d413be8da2" compoundref="cfe__sb__init_8c" startline="118" endline="163">CFE_SB_EarlyInit</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__sb__init_8c_1ac951ce5cc4c336383502c7bc3eab7123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_SB_InitRoutingTbl</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_InitRoutingTbl</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sb/cfe_sb_init.c" line="277" column="1" bodyfile="sb/cfe_sb_init.c" bodystart="277" bodyend="291"/>
+        <references refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" compoundref="cfe__sb__task_8c" startline="105">CFE_SB</references>
+        <references refid="cfe__sb__priv_8h_1ad5e2892f393253303e66416bbc91869d" compoundref="cfe__sb__priv_8h" startline="105">CFE_SB_INVALID_MSG_ID</references>
+        <references refid="struct_c_f_e___s_b___route_entry__t_1a281f94b6809f59b45c05b73765d8fe4e" compoundref="cfe__sb__priv_8h" startline="236">CFE_SB_RouteEntry_t::Destinations</references>
+        <references refid="struct_c_f_e___s_b___route_entry__t_1aa0f6d453782a0c589b55c22e82c7784e" compoundref="cfe__sb__priv_8h" startline="238">CFE_SB_RouteEntry_t::ListHeadPtr</references>
+        <references refid="struct_c_f_e___s_b___route_entry__t_1abaf8386cd8d62c358f4228945077380b" compoundref="cfe__sb__priv_8h" startline="235">CFE_SB_RouteEntry_t::MsgId</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="common__types_8h" startline="310">NULL</references>
+        <references refid="structcfe__sb__t_1a91898fcdb7f77d3c6da60c3526725770" compoundref="cfe__sb__priv_8h" startline="301">cfe_sb_t::RoutingTbl</references>
+        <references refid="struct_c_f_e___s_b___route_entry__t_1a7954e4e05c639bde04b3ada3c7152640" compoundref="cfe__sb__priv_8h" startline="237">CFE_SB_RouteEntry_t::SeqCnt</references>
+        <referencedby refid="cfe__sb__init_8c_1a10df878846322b41e32312d413be8da2" compoundref="cfe__sb__init_8c" startline="118" endline="163">CFE_SB_EarlyInit</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:<sp/>cfe_sb_init.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2012,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASAs<sp/>Goddard</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>file<sp/>contains<sp/>the<sp/>source<sp/>code<sp/>for<sp/>the<sp/>SB<sp/>Initialization.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Author:<sp/><sp/><sp/>R.McGraw/SSI</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/>$Log:<sp/>cfe_sb_init.c<sp/><sp/>$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>Revision<sp/>1.12<sp/>2012/01/13<sp/>12:15:12GMT-05:00<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>Changed<sp/>license<sp/>text<sp/>to<sp/>reflect<sp/>open<sp/>source</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Revision<sp/>1.11<sp/>2010/11/04<sp/>16:41:25EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Added<sp/>optional<sp/>sender<sp/>information<sp/>storage</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Revision<sp/>1.10<sp/>2010/10/20<sp/>12:36:52EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Updated<sp/>memory<sp/>pool<sp/>creation<sp/>to<sp/>select<sp/>no<sp/>semaphore<sp/>control.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2009/07/24<sp/>18:24:57EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Added<sp/>Zero<sp/>Copy<sp/>Mode</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2009/07/17<sp/>17:57:56EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Updated<sp/>MsgMap<sp/>(and<sp/>associated<sp/>variables)<sp/>from<sp/>a<sp/>uint16<sp/>to<sp/>an<sp/>CFE_SB_MsgId_t</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2009/06/10<sp/>09:18:02EDT<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Updated<sp/>OS_Mem*<sp/>and<sp/>OS_BSP*<sp/>to<sp/>CFE_PSP_*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2009/03/30<sp/>10:48:48EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>DCR5801:2Added<sp/>missing<sp/>\n<sp/>in<sp/>mutex-creation-failed<sp/>sys<sp/>log<sp/>msg</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2009/02/11<sp/>14:21:43EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>DCR6269:1<sp/>Changes<sp/>for<sp/>new<sp/>SB<sp/>defined<sp/>mem<sp/>pool<sp/>sizes</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2009/02/06<sp/>11:29:05EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>DCR5801:2<sp/>General<sp/>Cleanup</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2009/02/03<sp/>11:06:59EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>DCR5801:2<sp/>Changed<sp/>destination<sp/>desciptors<sp/>from<sp/>array<sp/>based<sp/>to<sp/>linked<sp/>list</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2009/01/30<sp/>10:35:39EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>DCR5801:1<sp/>Initialize<sp/>destinations<sp/>to<sp/>zero</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:31EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>cfe<sp/>project<sp/>on<sp/>tlserver3</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Revision<sp/>1.27<sp/>2007/09/13<sp/>09:38:20EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>Initialized<sp/>new<sp/>StopRecurseFlags<sp/>array</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Revision<sp/>1.26<sp/>2007/07/12<sp/>17:03:49EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>DCR4680:1<sp/>Removed<sp/>Event<sp/>log<sp/>mutes<sp/>creation</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/>Revision<sp/>1.25<sp/>2007/06/04<sp/>13:24:07EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>DCR4473:1<sp/>Moved<sp/>SB<sp/>stat<sp/>initialization<sp/>from<sp/>task<sp/>init<sp/>to<sp/>early<sp/>init</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>Revision<sp/>1.24<sp/>2007/05/18<sp/>16:11:17EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>DCR3052:9<sp/>Moved<sp/>initialization<sp/>of<sp/>subscription<sp/>report<sp/>state<sp/>from<sp/>app<sp/>init<sp/>to<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>early<sp/>init</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>Revision<sp/>1.23<sp/>2007/04/26<sp/>09:25:31EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/>Changed<sp/>EarlyInit<sp/>to<sp/>report<sp/>and<sp/>return<sp/>errors</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">**<sp/>Revision<sp/>1.22<sp/>2006/10/16<sp/>14:30:54EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/>Minor<sp/>changes<sp/>to<sp/>comply<sp/>with<sp/>MISRA<sp/>standard</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>Revision<sp/>1.21<sp/>2006/09/01<sp/>11:08:11EDT<sp/>kkaudra<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="comment">**<sp/>IV&amp;V:Removed<sp/>cfe_evs.h</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">**<sp/>Revision<sp/>1.20<sp/>2006/07/26<sp/>07:51:53EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="comment">**<sp/>Changed<sp/>status<sp/>format<sp/>from<sp/>dec<sp/>to<sp/>hex</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">**<sp/><sp/>Include<sp/>Files</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__sb__priv_8h" kindref="compound">cfe_sb_priv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__sb_8h" kindref="compound">cfe_sb.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi_8h" kindref="compound">osapi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_msgids.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__es_8h" kindref="compound">cfe_es.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_psp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__error_8h" kindref="compound">cfe_error.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__sb__events_8h" kindref="compound">cfe_sb_events.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="79"><highlight class="comment">**<sp/><sp/>External<sp/>Declarations</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="cfe__sb__init_8c_1a3f3691a70564ac6f6c54b56d2a0c361a" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><ref refid="cfe__sb__init_8c_1a3f3691a70564ac6f6c54b56d2a0c361a" kindref="member">CFE_SB_MemPoolDefSize</ref>[<ref refid="cfe__es_8h_1aa97d866642d474c34790e4d46717ac6b" kindref="member">CFE_ES_MAX_MEMPOOL_BLOCK_SIZES</ref>]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MAX_BLOCK_SIZE,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_16,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_15,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_14,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_13,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_12,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_11,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_10,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_09,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_08,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_07,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_06,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_05,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_04,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_03,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_02,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>CFE_SB_MEM_BLOCK_SIZE_01</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_SB_EarlyInit()</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="108"><highlight class="comment">**<sp/><sp/><sp/><sp/>Initialize<sp/>the<sp/>Software<sp/>Bus<sp/>routing<sp/>tables.</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="110"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="111"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="112"><highlight class="comment">**<sp/><sp/>Notes:</highlight></codeline>
+<codeline lineno="113"><highlight class="comment">**<sp/><sp/><sp/><sp/>This<sp/>function<sp/>MUST<sp/>be<sp/>called<sp/>before<sp/>any<sp/>SB<sp/>API&apos;s<sp/>are<sp/>called.</highlight></codeline>
+<codeline lineno="114"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="115"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="116"><highlight class="comment">**<sp/><sp/><sp/><sp/>CFE_SUCCESS</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="cfe__sb__init_8c_1a10df878846322b41e32312d413be8da2" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__sb__init_8c_1a10df878846322b41e32312d413be8da2" kindref="member">CFE_SB_EarlyInit</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/>Stat<sp/>=<sp/><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member">CFE_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5" kindref="member">CFE_SB_Default_Qos</ref>.<ref refid="struct_c_f_e___s_b___qos__t_1ad3d2be85fd6ae49344ed70aa0a57df0c" kindref="member">Priority</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="cfe__sb__priv_8h_1ad1e9efff5ad6ecb0f257d5ec741e0f1c" kindref="member">CFE_SB_QOS_LOW_PRIORITY</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5" kindref="member">CFE_SB_Default_Qos</ref>.<ref refid="struct_c_f_e___s_b___qos__t_1adff0dd4ccb04e862db28afe8b4722cfb" kindref="member">Reliability</ref><sp/>=<sp/><ref refid="cfe__sb__priv_8h_1aa4aa514ce5a28141e0d1d35d9b7f61d9" kindref="member">CFE_SB_QOS_LOW_RELIABILITY</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>Stat<sp/>=<sp/><ref refid="osapi-os-core_8h_1a1cec40bf769e2db8614c1ef6d9906a8d" kindref="member">OS_MutSemCreate</ref>(&amp;<ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1ab0dd2e1418852a08cc0bf96078a95bc6" kindref="member">SharedDataMutexId</ref>,<sp/></highlight><highlight class="stringliteral">&quot;CFE_SB_DataMutex&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Stat<sp/>!=<sp/><ref refid="osapi_8h_1a35b2b8984c2833372a467771063b05be" kindref="member">OS_SUCCESS</ref>){</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d" kindref="member">CFE_ES_WriteToSysLog</ref>(</highlight><highlight class="stringliteral">&quot;SB<sp/>shared<sp/>data<sp/>mutex<sp/>creation<sp/>failed!<sp/>RC=0x%08x\n&quot;</highlight><highlight class="normal">,(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Stat);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Stat;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">/*<sp/>end<sp/>if<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>the<sp/>state<sp/>of<sp/>susbcription<sp/>reporting<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a28d2211968e0b9eac2abed73ba3edfd5" kindref="member">SubscriptionReporting</ref><sp/>=<sp/><ref refid="cfe__sb__priv_8h_1a0de0e798b082f24c02d2b64ce9916719" kindref="member">CFE_SB_DISABLE</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>the<sp/>state<sp/>of<sp/>sender<sp/>reporting<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a7901579fe0b442c4bd14dfc5d7da858f" kindref="member">SenderReporting</ref><sp/>=<sp/>CFE_SB_DEFAULT_REPORT_SENDER;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>memory<sp/>partition.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>Stat<sp/>=<sp/><ref refid="cfe__sb__init_8c_1acaab249a878acdab893837f3ff7a584c" kindref="member">CFE_SB_InitBuffers</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Stat<sp/>!=<sp/><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member">CFE_SUCCESS</ref>){</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>error<sp/>reported<sp/>in<sp/>CFE_SB_InitBuffers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Stat;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">/*<sp/>end<sp/>if<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>the<sp/>pipe<sp/>table.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb__init_8c_1a0200f69ca4c5dd0c7c6f112d1410aa70" kindref="member">CFE_SB_InitPipeTbl</ref>();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>the<sp/>routing<sp/>index<sp/>look<sp/>up<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb__init_8c_1a3e9e77eeaa314087e45a7cfe8ad41993" kindref="member">CFE_SB_InitMsgMap</ref>();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>the<sp/>routing<sp/>table.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb__init_8c_1ac951ce5cc4c336383502c7bc3eab7123" kindref="member">CFE_SB_InitRoutingTbl</ref>();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>the<sp/>SB<sp/>Statistics<sp/>Pkt<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0" kindref="member">CFE_SB_InitMsg</ref>(&amp;<ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a11a51501a72bd467720097a56741bf10" kindref="member">StatTlmMsg</ref>.<ref refid="struct_c_f_e___s_b___stat_msg__t_1a1781da171a11ed544e1cea5f727a0b22" kindref="member">Hdr</ref>.<ref refid="struct_c_f_e___s_b___tlm_hdr__t_1af137ae8bf218c2ddc22583847535b583" kindref="member">Pri</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_SB_STATS_TLM_MID,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_f_e___s_b___stat_msg__t" kindref="compound">CFE_SB_StatMsg_t</ref>),</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a91a66b1d1c6f6d92afeca8a871d78eac" kindref="member">ZeroCopyTail</ref><sp/>=<sp/><ref refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Stat;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight><highlight class="comment">/*<sp/>end<sp/>CFE_SB_EarlyInit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="168"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_SB_InitBuffers()</highlight></codeline>
+<codeline lineno="169"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="170"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="171"><highlight class="comment">**<sp/><sp/><sp/><sp/>Initialize<sp/>the<sp/>Software<sp/>Bus<sp/>Buffer<sp/>Pool.</highlight></codeline>
+<codeline lineno="172"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="173"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="174"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="175"><highlight class="comment">**<sp/><sp/>Notes:</highlight></codeline>
+<codeline lineno="176"><highlight class="comment">**<sp/><sp/><sp/><sp/>This<sp/>function<sp/>MUST<sp/>be<sp/>called<sp/>before<sp/>any<sp/>SB<sp/>API&apos;s<sp/>are<sp/>called.</highlight></codeline>
+<codeline lineno="177"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="178"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="179"><highlight class="comment">**<sp/><sp/><sp/><sp/>none</highlight></codeline>
+<codeline lineno="180"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="cfe__sb__priv_8h_1acaab249a878acdab893837f3ff7a584c" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><sp/><ref refid="cfe__sb__init_8c_1acaab249a878acdab893837f3ff7a584c" kindref="member">CFE_SB_InitBuffers</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/>Stat<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>Stat<sp/>=<sp/><ref refid="cfe__es_8h_1ae096a654808a468170036a1207f813f3" kindref="member">CFE_ES_PoolCreateEx</ref>(&amp;<ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a90bdc25d960a21768722fdf7a1c9f4b7" kindref="member">Mem</ref>.<ref refid="struct_c_f_e___s_b___mem_params__t_1a63493b0949a70519749bc60b382c3d44" kindref="member">PoolHdl</ref>,<sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a90bdc25d960a21768722fdf7a1c9f4b7" kindref="member">Mem</ref>.<ref refid="struct_c_f_e___s_b___mem_params__t_1a1f221b2ba93f37db6fc57686d19996f3" kindref="member">Partition</ref>,<sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_SB_BUF_MEMORY_BYTES,<sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es_8h_1aa97d866642d474c34790e4d46717ac6b" kindref="member">CFE_ES_MAX_MEMPOOL_BLOCK_SIZES</ref>,<sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="cfe__sb__init_8c_1a3f3691a70564ac6f6c54b56d2a0c361a" kindref="member">CFE_SB_MemPoolDefSize</ref>[0],</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es_8h_1a46c1b23ca468cf628194c0a564e1a416" kindref="member">CFE_ES_NO_MUTEX</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Stat<sp/>!=<sp/><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member">CFE_SUCCESS</ref>){</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__es_8h_1a51146afa3e65ab120411c9264b45fa1d" kindref="member">CFE_ES_WriteToSysLog</ref>(</highlight><highlight class="stringliteral">&quot;PoolCreate<sp/>failed<sp/>for<sp/>SB<sp/>Buffers,<sp/>gave<sp/>adr<sp/>0x%lx,size<sp/>%d,stat=0x%x\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal">)<ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a90bdc25d960a21768722fdf7a1c9f4b7" kindref="member">Mem</ref>.<ref refid="struct_c_f_e___s_b___mem_params__t_1a1f221b2ba93f37db6fc57686d19996f3" kindref="member">Partition</ref>,CFE_SB_BUF_MEMORY_BYTES,(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Stat);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Stat;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member">CFE_SUCCESS</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight><highlight class="comment">/*<sp/>end<sp/>CFE_SB_InitBuffers<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="204"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_SB_InitPipeTbl()</highlight></codeline>
+<codeline lineno="205"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="206"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="207"><highlight class="comment">**<sp/><sp/><sp/><sp/>Initialize<sp/>the<sp/>Software<sp/>Bus<sp/>Pipe<sp/>Table.</highlight></codeline>
+<codeline lineno="208"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="209"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="210"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="211"><highlight class="comment">**<sp/><sp/>Notes:</highlight></codeline>
+<codeline lineno="212"><highlight class="comment">**<sp/><sp/><sp/><sp/>This<sp/>function<sp/>MUST<sp/>be<sp/>called<sp/>before<sp/>any<sp/>SB<sp/>API&apos;s<sp/>are<sp/>called.</highlight></codeline>
+<codeline lineno="213"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="214"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="215"><highlight class="comment">**<sp/><sp/><sp/><sp/>none</highlight></codeline>
+<codeline lineno="216"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="cfe__sb__priv_8h_1a0200f69ca4c5dd0c7c6f112d1410aa70" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__sb__init_8c_1a0200f69ca4c5dd0c7c6f112d1410aa70" kindref="member">CFE_SB_InitPipeTbl</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/><sp/>i;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;CFE_SB_MAX_PIPES;i++){</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a25f46c05b72f8c60a39cce179308b614" kindref="member">PipeTbl</ref>[i].<ref refid="struct_c_f_e___s_b___pipe_d__t_1aee4ecc553a79e3a94f94dfa13535d023" kindref="member">InUse</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="cfe__sb__priv_8h_1a61b7a420c4b730f4c253cf28e94f77c5" kindref="member">CFE_SB_NOT_IN_USE</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a25f46c05b72f8c60a39cce179308b614" kindref="member">PipeTbl</ref>[i].<ref refid="struct_c_f_e___s_b___pipe_d__t_1a8314bd2c2ba07fa46eb2c5ab029dac56" kindref="member">SysQueueId</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="cfe__sb__priv_8h_1ade485b7e25e839a3282b96e45bf23464" kindref="member">CFE_SB_UNUSED_QUEUE</ref>;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a25f46c05b72f8c60a39cce179308b614" kindref="member">PipeTbl</ref>[i].<ref refid="struct_c_f_e___s_b___pipe_d__t_1a08c581ea5b94cb3481df5806dd8139e4" kindref="member">PipeId</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="cfe__sb__priv_8h_1aded841d2a1f046d3433c23cf5bc6597e" kindref="member">CFE_SB_INVALID_PIPE</ref>;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a25f46c05b72f8c60a39cce179308b614" kindref="member">PipeTbl</ref>[i].<ref refid="struct_c_f_e___s_b___pipe_d__t_1a2c196db206fb36ad7c335664992d9da4" kindref="member">CurrentBuff</ref><sp/><sp/><sp/>=<sp/><ref refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_PSP_MemSet(&amp;<ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a25f46c05b72f8c60a39cce179308b614" kindref="member">PipeTbl</ref>[i].<ref refid="struct_c_f_e___s_b___pipe_d__t_1adcdc596b1ea37288fe84d696c7f7e132" kindref="member">PipeName</ref>[0],0,<ref refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1" kindref="member">OS_MAX_API_NAME</ref>);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">/*<sp/>end<sp/>for<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight><highlight class="comment">/*<sp/>end<sp/>CFE_SB_InitPipeTbl<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="234"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_SB_InitMsgMap()</highlight></codeline>
+<codeline lineno="235"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="236"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="237"><highlight class="comment">**<sp/><sp/><sp/><sp/>Initialize<sp/>the<sp/>Software<sp/>Bus<sp/>Message<sp/>Map.</highlight></codeline>
+<codeline lineno="238"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="239"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="240"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="241"><highlight class="comment">**<sp/><sp/>Notes:</highlight></codeline>
+<codeline lineno="242"><highlight class="comment">**<sp/><sp/><sp/><sp/>This<sp/>function<sp/>MUST<sp/>be<sp/>called<sp/>before<sp/>any<sp/>SB<sp/>API&apos;s<sp/>are<sp/>called.</highlight></codeline>
+<codeline lineno="243"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="244"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="245"><highlight class="comment">**<sp/><sp/><sp/><sp/>none</highlight></codeline>
+<codeline lineno="246"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="cfe__sb__priv_8h_1a3e9e77eeaa314087e45a7cfe8ad41993" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__sb__init_8c_1a3e9e77eeaa314087e45a7cfe8ad41993" kindref="member">CFE_SB_InitMsgMap</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MESSAGE_FORMAT_IS_CCSDS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member">CFE_SB_MsgId_t</ref><sp/><sp/><sp/>appId;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(appId=0;<sp/>appId<sp/>&lt;<sp/>(CFE_SB_HIGHEST_VALID_MSGID<sp/>+<sp/>1);<sp/>appId++)<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1adb0efd8ed24a5c1bf3fdf2741b4c48f6" kindref="member">MsgMap</ref>[appId]<sp/>=<sp/><ref refid="cfe__sb__priv_8h_1ade8cd3834120ca7ab077203207e5194c" kindref="member">CFE_SB_AVAILABLE</ref>;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight><highlight class="comment">/*<sp/>end<sp/>CFE_SB_InitMsgMap<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="264"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_SB_InitRoutingTbl()</highlight></codeline>
+<codeline lineno="265"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="266"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="267"><highlight class="comment">**<sp/><sp/><sp/><sp/>Initialize<sp/>the<sp/>Software<sp/>Bus<sp/>Routing<sp/>Table.</highlight></codeline>
+<codeline lineno="268"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="269"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="270"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="271"><highlight class="comment">**<sp/><sp/>Notes:</highlight></codeline>
+<codeline lineno="272"><highlight class="comment">**<sp/><sp/><sp/><sp/>This<sp/>function<sp/>MUST<sp/>be<sp/>called<sp/>before<sp/>any<sp/>SB<sp/>API&apos;s<sp/>are<sp/>called.</highlight></codeline>
+<codeline lineno="273"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="274"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="275"><highlight class="comment">**<sp/><sp/><sp/><sp/>none</highlight></codeline>
+<codeline lineno="276"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="cfe__sb__priv_8h_1ac951ce5cc4c336383502c7bc3eab7123" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__sb__init_8c_1ac951ce5cc4c336383502c7bc3eab7123" kindref="member">CFE_SB_InitRoutingTbl</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><sp/>i;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Initialize<sp/>routing<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;CFE_SB_MAX_MSG_IDS;i++){</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a91898fcdb7f77d3c6da60c3526725770" kindref="member">RoutingTbl</ref>[i].<ref refid="struct_c_f_e___s_b___route_entry__t_1abaf8386cd8d62c358f4228945077380b" kindref="member">MsgId</ref><sp/>=<sp/><ref refid="cfe__sb__priv_8h_1ad5e2892f393253303e66416bbc91869d" kindref="member">CFE_SB_INVALID_MSG_ID</ref>;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a91898fcdb7f77d3c6da60c3526725770" kindref="member">RoutingTbl</ref>[i].<ref refid="struct_c_f_e___s_b___route_entry__t_1a7954e4e05c639bde04b3ada3c7152640" kindref="member">SeqCnt</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a91898fcdb7f77d3c6da60c3526725770" kindref="member">RoutingTbl</ref>[i].<ref refid="struct_c_f_e___s_b___route_entry__t_1a281f94b6809f59b45c05b73765d8fe4e" kindref="member">Destinations</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb__priv_8h_1abd90a2f7a6a2cf62d26a4db3c5c41b1e" kindref="member">CFE_SB</ref>.<ref refid="structcfe__sb__t_1a91898fcdb7f77d3c6da60c3526725770" kindref="member">RoutingTbl</ref>[i].<ref refid="struct_c_f_e___s_b___route_entry__t_1aa0f6d453782a0c589b55c22e82c7784e" kindref="member">ListHeadPtr</ref><sp/>=<sp/><ref refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">/*<sp/>end<sp/>for<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}</highlight><highlight class="comment">/*<sp/>end<sp/>CFE_SB_InitRoutingTbl<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="sb/cfe_sb_init.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1736 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_n_a_v" kind="class" language="C++" prot="public">
+    <compoundname>NAV</compoundname>
+    <includes refid="nav__app_8h" local="no">nav_app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_n_a_v_1a6ccb530f111a1d639e55cd336c9f2717" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t NAV::SchPipeId</definition>
+        <argsstring></argsstring>
+        <name>SchPipeId</name>
+        <briefdescription>
+<para>Scheduling Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="194" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1aa87603bd125f5561089208a5b696e445" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t NAV::CmdPipeId</definition>
+        <argsstring></argsstring>
+        <name>CmdPipeId</name>
+        <briefdescription>
+<para>Command Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="197" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1ad01e26de6a38b5c475607e22d9295106" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 NAV::uiRunStatus</definition>
+        <argsstring></argsstring>
+        <name>uiRunStatus</name>
+        <briefdescription>
+<para>Task Run Status. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="201" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1ac9732330017624acd8237d85c16d267a" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t NAV::ConfigTblHdl</definition>
+        <argsstring></argsstring>
+        <name>ConfigTblHdl</name>
+        <briefdescription>
+<para>Config Table Handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="205" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a63cadc632c7f8ff63ebca86ceaff0dd0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_n_a_v___config_tbl__t" kindref="compound">NAV_ConfigTbl_t</ref> *</type>
+        <definition>NAV_ConfigTbl_t* NAV::ConfigTblPtr</definition>
+        <argsstring></argsstring>
+        <name>ConfigTblPtr</name>
+        <briefdescription>
+<para>Config Table Pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="207" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a111bfd76562a6ff7884c3d683268aec3" prot="public" static="no" mutable="no">
+        <type>PX4_MissionResultMsg_t</type>
+        <definition>PX4_MissionResultMsg_t NAV::MissionResultMsg</definition>
+        <argsstring></argsstring>
+        <name>MissionResultMsg</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Output Data published at the end of cycle. </para>        </briefdescription>
+        <detaileddescription>
+<para>The mission result message </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="211" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="211" bodyend="-1"/>
+        <referencedby refid="class_n_a_v_1afd870e22478a1d8cc6db6fe376acc4e3" compoundref="nav__app_8h" startline="832" endline="835">GetMissionResultMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a612863ec97170b00d0ea6975071a2eab" prot="public" static="no" mutable="no">
+        <type>PX4_PositionSetpointTripletMsg_t</type>
+        <definition>PX4_PositionSetpointTripletMsg_t NAV::PositionSetpointTripletMsg</definition>
+        <argsstring></argsstring>
+        <name>PositionSetpointTripletMsg</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>The position set point triplet message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="213" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="213" bodyend="-1"/>
+        <referencedby refid="class_n_a_v_1a47fd2527e836a1ab31c06bae93b381e8" compoundref="nav__app_8h" startline="848" endline="851">GetPositionSetpointTripletMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a70f92c95c00054e3e4f65ca2472ebd59" prot="public" static="no" mutable="no">
+        <type>PX4_PositionSetpointTripletMsg_t</type>
+        <definition>PX4_PositionSetpointTripletMsg_t NAV::TakeoffTripletMsg</definition>
+        <argsstring></argsstring>
+        <name>TakeoffTripletMsg</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>A temporary triplet type message to store take off triplet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="215" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="215" bodyend="-1"/>
+        <referencedby refid="class_n_a_v_1a2a84da3eae96bb03a9abde7138070ae1" compoundref="nav__app_8h" startline="864" endline="867">GetTakeoffTripletMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a1a57d88200d339698ed3ad84f4dff57c" prot="public" static="no" mutable="no">
+        <type>PX4_PositionSetpointTripletMsg_t</type>
+        <definition>PX4_PositionSetpointTripletMsg_t NAV::RepositionTripletMsg</definition>
+        <argsstring></argsstring>
+        <name>RepositionTripletMsg</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>A temporary triplet type message to store reposition triplet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="217" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="217" bodyend="-1"/>
+        <referencedby refid="class_n_a_v_1a7b0a4acc0e8077c8f7498d71169d8f07" compoundref="nav__app_8h" startline="880" endline="883">GetRepositionTripletMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a39e32021eaf8f50af6f1058202dce545" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_n_a_v___hk_tlm__t" kindref="compound">NAV_HkTlm_t</ref></type>
+        <definition>NAV_HkTlm_t NAV::HkTlm</definition>
+        <argsstring></argsstring>
+        <name>HkTlm</name>
+        <briefdescription>
+<para>Housekeeping Telemetry for downlink. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="221" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a11953689847672b25ea5bbc5c864c3d9" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_n_a_v___current_value_table__t" kindref="compound">NAV_CurrentValueTable_t</ref></type>
+        <definition>NAV_CurrentValueTable_t NAV::CVT</definition>
+        <argsstring></argsstring>
+        <name>CVT</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Current Value Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="223" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a47aa11bcd133f0c270106965f257a302" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_n_a_v___mission_item__t" kindref="compound">NAV_MissionItem_t</ref></type>
+        <definition>NAV_MissionItem_t NAV::MissionItem</definition>
+        <argsstring></argsstring>
+        <name>MissionItem</name>
+        <briefdescription>
+<para>The mission item variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="226" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a1c163aac791999187ea9635bc89a85de" prot="public" static="no" mutable="no">
+        <type><ref refid="nav__app_8h_1ae02f18e7a1ae74fe24fdd5e7f76a974c" kindref="member">RTLState</ref></type>
+        <definition>RTLState NAV::RtlState</definition>
+        <argsstring></argsstring>
+        <name>RtlState</name>
+        <briefdescription>
+<para>RTL state initialization. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="228" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1ad675e2d30045c31878a907ebdf638b35" prot="public" static="no" mutable="no">
+        <type>PX4_VehicleStatusMsg_t</type>
+        <definition>PX4_VehicleStatusMsg_t NAV::PreviousState</definition>
+        <argsstring></argsstring>
+        <name>PreviousState</name>
+        <briefdescription>
+<para>This variable stores previously encountered navigation state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="230" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a76a4a0c5929e2e2616b481a0077332b2" prot="public" static="no" mutable="no">
+        <type>PX4_VehicleCommandMsg_t</type>
+        <definition>PX4_VehicleCommandMsg_t NAV::PreviousCommand</definition>
+        <argsstring></argsstring>
+        <name>PreviousCommand</name>
+        <briefdescription>
+<para>This variable stores previously encountered navigation command. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="232" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1ad56032e053624bef93a5ce10f120a8ec" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::NewCommandArrived</definition>
+        <argsstring></argsstring>
+        <name>NewCommandArrived</name>
+        <briefdescription>
+<para>Flag is set to true if a previously unseen command is encountered. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="234" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1aaea05f1fc431f3333963b53e7c38d720" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::CanLoiterAtSetpoint</definition>
+        <argsstring></argsstring>
+        <name>CanLoiterAtSetpoint</name>
+        <briefdescription>
+<para>Will allow to loiter at setpoint. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="236" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a5bde75d26e55a06bd96df9509c25899a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::LoiterPositionSet</definition>
+        <argsstring></argsstring>
+        <name>LoiterPositionSet</name>
+        <briefdescription>
+<para>True if loiter position is set. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="238" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a5ab34456360bae018c6fb4117e46fb4c" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::WaypointPositionReached</definition>
+        <argsstring></argsstring>
+        <name>WaypointPositionReached</name>
+        <briefdescription>
+<para>True if waypoint position is reached. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="240" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a5f90fafd0722bd9749c23586e8a436ee" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::WaypointYawReached</definition>
+        <argsstring></argsstring>
+        <name>WaypointYawReached</name>
+        <briefdescription>
+<para>True if waypoint yaw is reached. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="242" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a0f9581b1550a07b5374d321a86106e4a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+        <definition>uint64 NAV::TimeFirstInsideOrbit</definition>
+        <argsstring></argsstring>
+        <name>TimeFirstInsideOrbit</name>
+        <briefdescription>
+<para>Default time first time inside orbit in mission item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="244" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1aec4e4d6eb2eff27d9ceb38adb9e610fb" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+        <definition>uint64 NAV::ActionStart</definition>
+        <argsstring></argsstring>
+        <name>ActionStart</name>
+        <briefdescription>
+<para>Default action start in mission item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="246" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a8cf43ad4de5bb0e936937fce88c1e316" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+        <definition>uint64 NAV::TimeWpReached</definition>
+        <argsstring></argsstring>
+        <name>TimeWpReached</name>
+        <briefdescription>
+<para>Default time for waypoint reached in mission item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="248" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a4d3156b3575ce3eae7f7933ea81d8d37" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float NAV::MissionCruisingSpeed</definition>
+        <argsstring></argsstring>
+        <name>MissionCruisingSpeed</name>
+        <briefdescription>
+<para>Default mission cruising speed in mission item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="250" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a1513ab300a41539391d4aacad5da22de" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float NAV::MissionThrottle</definition>
+        <argsstring></argsstring>
+        <name>MissionThrottle</name>
+        <briefdescription>
+<para>Default mission throttle in mission item. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="252" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a81e71ff2fb41747321bb60fe0fee0919" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::VehicleStatusUpdateOnce</definition>
+        <argsstring></argsstring>
+        <name>VehicleStatusUpdateOnce</name>
+        <briefdescription>
+<para>True if vehicle status message is updated once by navigation states. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="254" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a99f50f3b57213283b597f6a2c90835a2" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::MissionResultUpdated</definition>
+        <argsstring></argsstring>
+        <name>MissionResultUpdated</name>
+        <briefdescription>
+<para>True if mission result message is updated by navigation states. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="256" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1af6e6da22ec5dcbfad7669a971a0fb253" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::PositionSetpointTripletUpdated</definition>
+        <argsstring></argsstring>
+        <name>PositionSetpointTripletUpdated</name>
+        <briefdescription>
+<para>True if position setpoint triplet message is updated by navigation states. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="258" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a9e4f057430a99d25974a3b5fb1745163" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float NAV::ForceDescentTarget</definition>
+        <argsstring></argsstring>
+        <name>ForceDescentTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="259" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a14ab0b7d34065b9679f1488bb8911948" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::ForceDescentExecuting</definition>
+        <argsstring></argsstring>
+        <name>ForceDescentExecuting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="260" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_n_a_v_1a4ce2bd2c7435d62d71350d4f559c5729" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::ForceDescentCompleted</definition>
+        <argsstring></argsstring>
+        <name>ForceDescentCompleted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="261" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_n_a_v_1a47133e45475072d8001c7f672bf38fa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NAV::NAV</definition>
+        <argsstring>()</argsstring>
+        <name>NAV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="190" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a101a4de4da7de460c90ce32a22825c19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>NAV::~NAV</definition>
+        <argsstring>()</argsstring>
+        <name>~NAV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="191" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a3f3c5a80ea8002fe2007edb19df2df5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::AppMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Navigator (<ref refid="class_n_a_v" kindref="compound">NAV</ref>) application entry point. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Navigator Task application entry point. This function performs app initialization, then waits for the cFE ES Startup Sync, then executes the main processing loop.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>If there is an unrecoverable failure during initialization the main loop is never executed and the application will exit. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="276" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a1a9c2c17b4eadef2507caa8d1cf30c4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 NAV::InitApp</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitApp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the Navigator (<ref refid="class_n_a_v" kindref="compound">NAV</ref>) application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Navigator application initialization routine. This function performs all the required startup steps to initialize (or restore from CDS) <ref refid="class_n_a_v" kindref="compound">NAV</ref> data structures and get the application registered with the cFE services so it can begin to receive command messages and send events.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="7" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__es_8h_1a426ef8e1796ccebba16c63c8e86fb842" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterApp</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #NAV_InitEvent  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #NAV_InitPipe  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #NAV_InitData  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #NAV_InitConfigTbl  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_TaskInstallDeleteHandler</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="302" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a06f3025fcf053949c898481f2f116abb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 NAV::InitEvent</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitEvent</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Event Services and Event tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup cFE Event Services for use by the <ref refid="class_n_a_v" kindref="compound">NAV</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="320" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a02152e1511e831e277e654505f0c6ec2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global variables used by <ref refid="class_n_a_v" kindref="compound">NAV</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to initialize the <ref refid="class_n_a_v" kindref="compound">NAV</ref> application data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="333" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a0c058b6dd5ab20d93b36176e57522874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 NAV::InitPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize message pipes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup initialize the cFE Software Bus message pipes and subscribe to messages for the <ref refid="class_n_a_v" kindref="compound">NAV</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a5939c3681044a3d953d0fe72dd577889" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_SubscribeEx</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="354" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1af9f204f67479007fbcebc068a52a5013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 NAV::RcvSchPipeMsg</definition>
+        <argsstring>(int32 iBlocking)</argsstring>
+        <name>RcvSchPipeMsg</name>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+          <declname>iBlocking</declname>
+        </param>
+        <briefdescription>
+<para>Receive and process messages from the scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function receives and processes messages for the <ref refid="class_n_a_v" kindref="compound">NAV</ref> application from the SCH pipe. This function will pend for the type defined by iBlocking, allowing it to wait for messages, i.e. wakeup messages from scheduler.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iBlocking</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PEND_FOREVER</ref>, <ref refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_POLL</ref> or millisecond timeout</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a54840fe06aeb08b1e2c8df420474780d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_RcvMsg</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="377" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1afc9e6edbc99806c3ea542c83de9e313f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::ProcessCmdPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessCmdPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Navigator Task incoming command processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes incoming commands subscribed by <ref refid="class_n_a_v" kindref="compound">NAV</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="390" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1aac80673e3c2dc0c9e827966715e0284f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::ProcessAppCmds</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr)</argsstring>
+        <name>ProcessAppCmds</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <briefdescription>
+<para>Navigator Task application commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes command messages specific to the <ref refid="class_n_a_v" kindref="compound">NAV</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="406" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a03cfea20609f75ddd7bf06e3bd4e5211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::ReportHousekeeping</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReportHousekeeping</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends <ref refid="class_n_a_v" kindref="compound">NAV</ref> housekeeping message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function sends the housekeeping message</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="418" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a6b9327da9829097d3741b53df485088d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::SendMissionResultMsg</definition>
+        <argsstring>(void)</argsstring>
+        <name>SendMissionResultMsg</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends the MissionResultMsg message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function publishes the MissionResultMsg message containing &lt;TODO&gt;</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="431" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a87699766163cb7794e92295ebac83906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::SendPositionSetpointTripletMsg</definition>
+        <argsstring>(void)</argsstring>
+        <name>SendPositionSetpointTripletMsg</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends the PositionSetpointTripletMsg message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function publishes the PositionSetpointTripletMsg message containing &lt;TODO&gt;</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="444" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1aedd91af48aee88d2a9631a32b73879ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::VerifyCmdLength</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr, uint16 usExpectedLen)</argsstring>
+        <name>VerifyCmdLength</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>usExpectedLen</declname>
+        </param>
+        <briefdescription>
+<para>Verify Command Length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function verifies the command message length.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">usExpectedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected length of the message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the message length matches expectations, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="464" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ada7fbc8c1f71a96f5dca57150e1de9d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 NAV::Execute</definition>
+        <argsstring>(void)</argsstring>
+        <name>Execute</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Navigation Task. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Executes every time a new message is available, verifies message validity and updates messages and publishes them to software bus.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+at the end of task. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="481" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a6d663ad388100caf9dec86e2ad054148" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::Takeoff</definition>
+        <argsstring>(void)</argsstring>
+        <name>Takeoff</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Vehicle Takeoff. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Sets position set point triplet for vehicle takeoff.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="494" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a98b1ec2ab2d4b849bb3dc8fc79ca0630" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::TakeoffActive</definition>
+        <argsstring>(void)</argsstring>
+        <name>TakeoffActive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Takeoff Routine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This routine call is persistent until vehicle is in takeoff state, if mission is reached or vehicle lands, performs state transition.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="508" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ac015997089c32f76471713323997b0a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::Land</definition>
+        <argsstring>(void)</argsstring>
+        <name>Land</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Vehicle Land. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Sets position set point triplet for vehicle land.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="520" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ab3d332d7b5f897be39eb1db9dc3166b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::LandActive</definition>
+        <argsstring>(void)</argsstring>
+        <name>LandActive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Land Routine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This routine call is persistent until vehicle is in land state, if mission is reached or vehicle lands, performs state transition.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="533" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a27b2e38576ba766cae0817ba36147754" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::Loiter</definition>
+        <argsstring>(void)</argsstring>
+        <name>Loiter</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Vehicle Loiter. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Sets position set point triplet for vehicle loiter.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="545" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ad7b57fd6aae3f1e7d8b5a5e526b5e3db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::LoiterActive</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoiterActive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Loiter Routine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This routine call is persistent until vehicle is in loiter state, if mission is reached or vehicle lands, performs state transition.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="558" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a6fef4f750f452cf4ffe1a02e013a9060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::LoiterReposition</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoiterReposition</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Loiter Reposition routine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>When necessary, while loitering performs re-positioning.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="570" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1af8d876b0651cdaf736487a3d38d71fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::LoiterSetPosition</definition>
+        <argsstring>(void)</argsstring>
+        <name>LoiterSetPosition</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set Loiter Position Setpoint. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Sets position set point triplet.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="582" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a650504400eee8c15fb24f499310f9fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::Rtl</definition>
+        <argsstring>(void)</argsstring>
+        <name>Rtl</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Vehicle return to launch. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Sets position set point triplet for vehicle rtl.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="594" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a7eef3399e1bdffdf6a4b4e46501923d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::SetRtlItem</definition>
+        <argsstring>(void)</argsstring>
+        <name>SetRtlItem</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set RTL Position Setpoint. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Sets position setpoint triplet based on RTL state received.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="606" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a21e5b1a1979184ecbd1234140282a11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::AdvanceRtl</definition>
+        <argsstring>(void)</argsstring>
+        <name>AdvanceRtl</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>RTL State Transitions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Transits from one state to another to complete return to launch.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="618" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ad206177c7c6a618bf35da0ac9cbea8a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::RtlActive</definition>
+        <argsstring>(void)</argsstring>
+        <name>RtlActive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>RTL Routine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This routine call is persistent until vehicle is in RTL state, calls AdvanceRtl function for state transition.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="631" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a6a4601f9e392595b3314c4997c454f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::StateChangeDetect</definition>
+        <argsstring>(void)</argsstring>
+        <name>StateChangeDetect</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Detect State change. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Detects if the navigation state is changed.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if state changes, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="647" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1aa6f25e06045a666d8a5baad6ab4b4ed6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::CacheCommandEventHist</definition>
+        <argsstring>(void)</argsstring>
+        <name>CacheCommandEventHist</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Store Previous Commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>A local application variable stores previously received vehicle command in the last execution cycle.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="660" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a825e7244d80d5fe45ceb188952624511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::IsMissionItemReached</definition>
+        <argsstring>(void)</argsstring>
+        <name>IsMissionItemReached</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Verify Mission Item Reach. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>A navigation state invokes a navigation action and this function checks if the end of this action is reached.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the mission item is reached, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="677" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a56a1d9afd9b10a0e0c7ba7e6b8a4dcf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::SetMissionFaliure</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>SetMissionFaliure</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+<para>Marks Mission Result Message as Fail. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Sets MissionFaliure field in mission result message to false, creates a critical severity event.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Reason</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A reason to why the mission failed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="692" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a5ee61e56110e0ae89ecd96beb14083ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::ConvertMissionItemToCurrentSetpoint</definition>
+        <argsstring>(PX4_PositionSetpoint_t *, NAV_MissionItem_t *)</argsstring>
+        <name>ConvertMissionItemToCurrentSetpoint</name>
+        <param>
+          <type>PX4_PositionSetpoint_t *</type>
+        </param>
+        <param>
+          <type><ref refid="struct_n_a_v___mission_item__t" kindref="compound">NAV_MissionItem_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Sets Current Position Setpoint. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function verifies the command message length.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">PositionSetpointTriplet_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to position setpoint triplet</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">MissionItem_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to navigation mission item </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="708" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a3c05c2d7f6e4b54da859a8b2cbdf66ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::SetLoiterItem</definition>
+        <argsstring>(NAV_MissionItem_t *)</argsstring>
+        <name>SetLoiterItem</name>
+        <param>
+          <type><ref refid="struct_n_a_v___mission_item__t" kindref="compound">NAV_MissionItem_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Sets Loiter Setpoint Triplet. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Prepares position setpoint triplet for loiter state.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MissionItem_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to navigation mission item </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="722" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a5d290f4c498aa8b4b671dc45d05704eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float NAV::GetTimeInside</definition>
+        <argsstring>(NAV_MissionItem_t *)</argsstring>
+        <name>GetTimeInside</name>
+        <param>
+          <type><ref refid="struct_n_a_v___mission_item__t" kindref="compound">NAV_MissionItem_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Returns Value Assigned to GetTimeInside. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Returns Value Assigned to GetTimeInside field in mission item.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MissionItem_ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to navigation mission item</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Value Assigned to GetTimeInside if vehicle command is takeoff, else return 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="740" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a9bc4f4d13ad0ccfef2df8341a27d53a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::HomePositionValid</definition>
+        <argsstring>(void)</argsstring>
+        <name>HomePositionValid</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Validate Home Position Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Checks home position message timestamp and validates message.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the home position message is valid, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="756" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ab13609b6c753515394a76b07b56096d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float NAV::GetDefaultAcceptedRadius</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetDefaultAcceptedRadius</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return Default Accepted Radius. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+default accepted radius. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="769" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a374e20ad10478fe05c437132567ad516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::SetAcceptedRadius</definition>
+        <argsstring>(float)</argsstring>
+        <name>SetAcceptedRadius</name>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+<para>Sets Accepted Radius. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">AcceptedRadius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A float value which represents accepted radius. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="780" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1af626f618637dadd013218eb78812fed1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float NAV::GetAltitudeAcceptedRadius</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetAltitudeAcceptedRadius</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return Altitude Accepted Radius. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+altitude accepted radius. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="793" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ae62bbbb0ed6ebf826397daa1688efe43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float NAV::GetCruisingThrottle</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetCruisingThrottle</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return Cruising Throttle. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+cruising throttle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="806" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ab297b936d2613a6c990fac4775d40351" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float NAV::GetCruisingSpeed</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetCruisingSpeed</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return Cruising Speed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+cruising speed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="819" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1afd870e22478a1d8cc6db6fe376acc4e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_MissionResultMsg_t *</type>
+        <definition>PX4_MissionResultMsg_t* NAV::GetMissionResultMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetMissionResultMsg</name>
+        <briefdescription>
+<para>Returns Address of Mission Result Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Mission Result Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="832" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="832" bodyend="835"/>
+        <references refid="class_n_a_v_1a111bfd76562a6ff7884c3d683268aec3" compoundref="nav__app_8h" startline="211">MissionResultMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a47fd2527e836a1ab31c06bae93b381e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_PositionSetpointTripletMsg_t *</type>
+        <definition>PX4_PositionSetpointTripletMsg_t* NAV::GetPositionSetpointTripletMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetPositionSetpointTripletMsg</name>
+        <briefdescription>
+<para>Returns Address of Position Setpoint Triplet Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Position Setpoint Triplet Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="848" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="848" bodyend="851"/>
+        <references refid="class_n_a_v_1a612863ec97170b00d0ea6975071a2eab" compoundref="nav__app_8h" startline="213">PositionSetpointTripletMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a2a84da3eae96bb03a9abde7138070ae1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_PositionSetpointTripletMsg_t *</type>
+        <definition>PX4_PositionSetpointTripletMsg_t* NAV::GetTakeoffTripletMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetTakeoffTripletMsg</name>
+        <briefdescription>
+<para>Returns Address of Take off Triplet Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Take off Triplet Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="864" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="864" bodyend="867"/>
+        <references refid="class_n_a_v_1a70f92c95c00054e3e4f65ca2472ebd59" compoundref="nav__app_8h" startline="215">TakeoffTripletMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a7b0a4acc0e8077c8f7498d71169d8f07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_PositionSetpointTripletMsg_t *</type>
+        <definition>PX4_PositionSetpointTripletMsg_t* NAV::GetRepositionTripletMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetRepositionTripletMsg</name>
+        <briefdescription>
+<para>Returns Address of Reposition Triplet Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Reposition Triplet Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="880" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="880" bodyend="883"/>
+        <references refid="class_n_a_v_1a1a57d88200d339698ed3ad84f4dff57c" compoundref="nav__app_8h" startline="217">RepositionTripletMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ac89cc200147bc6c8d22cfdf515c45221" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_HomePositionMsg_t *</type>
+        <definition>PX4_HomePositionMsg_t* NAV::GetHomePosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetHomePosition</name>
+        <briefdescription>
+<para>Returns Address of Home Position Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Home Position Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="896" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="896" bodyend="899"/>
+        <references refid="struct_n_a_v___current_value_table__t_1af8d374a9502d4661337263a3505c5244" compoundref="nav__app_8h" startline="82">NAV_CurrentValueTable_t::HomePositionMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a3b32eefe5e15d4bb3d33c694e409d2c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_MissionMsg_t *</type>
+        <definition>PX4_MissionMsg_t* NAV::GetMissionMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetMissionMsg</name>
+        <briefdescription>
+<para>Returns Address of Mission Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Mission Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="912" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="912" bodyend="915"/>
+        <references refid="struct_n_a_v___current_value_table__t_1aab097143379eccb468dac382e9504959" compoundref="nav__app_8h" startline="84">NAV_CurrentValueTable_t::MissionMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a188b43a09f046f48709e4d8d92ca5b5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_VehicleGlobalPositionMsg_t *</type>
+        <definition>PX4_VehicleGlobalPositionMsg_t* NAV::GetVehicleGlobalPositionMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetVehicleGlobalPositionMsg</name>
+        <briefdescription>
+<para>Returns Address of Vehicle Global Position Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Vehicle Global Position Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="928" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="928" bodyend="931"/>
+        <references refid="struct_n_a_v___current_value_table__t_1a43834b6a29b038d747199f9d1537a30a" compoundref="nav__app_8h" startline="88">NAV_CurrentValueTable_t::VehicleGlobalPosition</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a908ae38b9557cf1ca7d2d3592857870d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_VehicleStatusMsg_t *</type>
+        <definition>PX4_VehicleStatusMsg_t* NAV::GetVehicleStatusMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetVehicleStatusMsg</name>
+        <briefdescription>
+<para>Returns Address of Vehicle Status Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Vehicle Status Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="944" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="944" bodyend="947"/>
+        <references refid="struct_n_a_v___current_value_table__t_1a6d35b41398d6b60bd063f3d4a93d00ea" compoundref="nav__app_8h" startline="90">NAV_CurrentValueTable_t::VehicleStatusMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a566a6eb88d09e21bb0ff819531560b7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_VehicleLandDetectedMsg_t *</type>
+        <definition>PX4_VehicleLandDetectedMsg_t* NAV::GetVehicleLandDetectedMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetVehicleLandDetectedMsg</name>
+        <briefdescription>
+<para>Returns Address of Vehicle Land Detected Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Vehicle Land Detected Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="960" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="960" bodyend="963"/>
+        <references refid="struct_n_a_v___current_value_table__t_1ae7056893e3116871b01e289f56c5bbd5" compoundref="nav__app_8h" startline="92">NAV_CurrentValueTable_t::VehicleLandDetectedMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1ae624ce8bdf8d8ad948fba35f90b08a73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_VehicleLocalPositionMsg_t *</type>
+        <definition>PX4_VehicleLocalPositionMsg_t* NAV::GetVehicleLocalPositionMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetVehicleLocalPositionMsg</name>
+        <briefdescription>
+<para>Returns Address of Vehicle Local Position Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Vehicle Local Position Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="976" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="976" bodyend="979"/>
+        <references refid="struct_n_a_v___current_value_table__t_1aafa63474f4c8eafc69964e0b3dbb2bc9" compoundref="nav__app_8h" startline="94">NAV_CurrentValueTable_t::VehicleLocalPositionMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1afedcfa981ad036fd148ce737dbc5e38a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PX4_VehicleCommandMsg_t *</type>
+        <definition>PX4_VehicleCommandMsg_t* NAV::GetVehicleCommandMsg</definition>
+        <argsstring>()</argsstring>
+        <name>GetVehicleCommandMsg</name>
+        <briefdescription>
+<para>Returns Address of Vehicle Command Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Address of Vehicle Command Message. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="992" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="992" bodyend="995"/>
+        <references refid="struct_n_a_v___current_value_table__t_1a2be73a089e0703d61bc6f08e8b83d1ae" compoundref="nav__app_8h" startline="96">NAV_CurrentValueTable_t::VehicleCommandMsg</references>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1aface2890ddb4399fdea48a56955e0b76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool NAV::IsPlannedMission</definition>
+        <argsstring>()</argsstring>
+        <name>IsPlannedMission</name>
+        <briefdescription>
+<para>Returns False to function call. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+false since mission not planned. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="1008" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="1008" bodyend="1011"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a2ee4ce611cd2c71654b3c6cb8a9c0e83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::SetCanLoiterAtSetpoint</definition>
+        <argsstring>(osalbool can_loiter)</argsstring>
+        <name>SetCanLoiterAtSetpoint</name>
+        <param>
+          <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+          <declname>can_loiter</declname>
+        </param>
+        <briefdescription>
+<para>Sets CanLoiterAtSetpoint. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">can_loiter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A application specific osalbool variable. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="1022" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="1022" bodyend="1025"/>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1a59f2b183c4f35bfc72621e5ddaccc34d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NAV::SetPositionSetpointTripletUpdated</definition>
+        <argsstring>()</argsstring>
+        <name>SetPositionSetpointTripletUpdated</name>
+        <briefdescription>
+<para>Sets PositionSetpointTripletUpdated to True. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="1034" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="1034" bodyend="1037"/>
+        <references refid="class_n_a_v_1afe14d293530f67ff15bfed4dd76de456">AcquireConfigPointers</references>
+        <references refid="class_n_a_v_1ad8eb7b1c09228049d83388e897b07f94">InitConfigTbl</references>
+        <references refid="class_n_a_v_1a9d86f31f800807c852f8157b84013b09">ValidateConfigTbl</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_n_a_v_1ad8eb7b1c09228049d83388e897b07f94" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 NAV::InitConfigTbl</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitConfigTbl</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the <ref refid="class_n_a_v" kindref="compound">NAV</ref> configuration tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes <ref refid="class_n_a_v" kindref="compound">NAV</ref>&apos;s configuration tables. This includes &lt;TODO&gt;.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #NAV_AcquireConfigPointers  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="1058" column="1"/>
+        <referencedby refid="class_n_a_v_1a59f2b183c4f35bfc72621e5ddaccc34d" compoundref="nav__app_8h" startline="1034" endline="1037">SetPositionSetpointTripletUpdated</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_n_a_v_1afe14d293530f67ff15bfed4dd76de456" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 NAV::AcquireConfigPointers</definition>
+        <argsstring>(void)</argsstring>
+        <name>AcquireConfigPointers</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Obtain <ref refid="class_n_a_v" kindref="compound">NAV</ref> configuration tables data pointers. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function manages the configuration tables and obtains a pointer to their data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="1" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="1075" column="1"/>
+        <referencedby refid="class_n_a_v_1a59f2b183c4f35bfc72621e5ddaccc34d" compoundref="nav__app_8h" startline="1034" endline="1037">SetPositionSetpointTripletUpdated</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_n_a_v_1a9d86f31f800807c852f8157b84013b09" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>static int32 NAV::ValidateConfigTbl</definition>
+        <argsstring>(void *)</argsstring>
+        <name>ValidateConfigTbl</name>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+<para>Validate <ref refid="class_n_a_v" kindref="compound">NAV</ref> configuration table. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function validates <ref refid="class_n_a_v" kindref="compound">NAV</ref>&apos;s configuration table</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ConfigTblPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the table to validate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="1" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/nav/fsw/src/nav_app.h" line="1094" column="1"/>
+        <referencedby refid="class_n_a_v_1a59f2b183c4f35bfc72621e5ddaccc34d" compoundref="nav__app_8h" startline="1034" endline="1037">SetPositionSetpointTripletUpdated</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_n_a_v" kindref="compound">NAV</ref> Application Class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>NAV_MissionItem_t</label>
+        <link refid="struct_n_a_v___mission_item__t"/>
+      </node>
+      <node id="4">
+        <label>NAV_HkTlm_t</label>
+        <link refid="struct_n_a_v___hk_tlm__t"/>
+      </node>
+      <node id="2">
+        <label>NAV_CurrentValueTable_t</label>
+        <link refid="struct_n_a_v___current_value_table__t"/>
+      </node>
+      <node id="5">
+        <label>NAV_ConfigTbl_t</label>
+        <link refid="struct_n_a_v___config_tbl__t"/>
+      </node>
+      <node id="1">
+        <label>NAV</label>
+        <link refid="class_n_a_v"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>CVT</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>MissionItem</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>HkTlm</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ConfigTblPtr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/nav/fsw/src/nav_app.h" line="188" column="1" bodyfile="apps/nav/fsw/src/nav_app.h" bodystart="187" bodyend="1095"/>
+    <listofallmembers>
+      <member refid="class_n_a_v_1afe14d293530f67ff15bfed4dd76de456" prot="private" virt="non-virtual"><scope>NAV</scope><name>AcquireConfigPointers</name></member>
+      <member refid="class_n_a_v_1aec4e4d6eb2eff27d9ceb38adb9e610fb" prot="public" virt="non-virtual"><scope>NAV</scope><name>ActionStart</name></member>
+      <member refid="class_n_a_v_1a21e5b1a1979184ecbd1234140282a11d" prot="public" virt="non-virtual"><scope>NAV</scope><name>AdvanceRtl</name></member>
+      <member refid="class_n_a_v_1a3f3c5a80ea8002fe2007edb19df2df5b" prot="public" virt="non-virtual"><scope>NAV</scope><name>AppMain</name></member>
+      <member refid="class_n_a_v_1aa6f25e06045a666d8a5baad6ab4b4ed6" prot="public" virt="non-virtual"><scope>NAV</scope><name>CacheCommandEventHist</name></member>
+      <member refid="class_n_a_v_1aaea05f1fc431f3333963b53e7c38d720" prot="public" virt="non-virtual"><scope>NAV</scope><name>CanLoiterAtSetpoint</name></member>
+      <member refid="class_n_a_v_1aa87603bd125f5561089208a5b696e445" prot="public" virt="non-virtual"><scope>NAV</scope><name>CmdPipeId</name></member>
+      <member refid="class_n_a_v_1ac9732330017624acd8237d85c16d267a" prot="public" virt="non-virtual"><scope>NAV</scope><name>ConfigTblHdl</name></member>
+      <member refid="class_n_a_v_1a63cadc632c7f8ff63ebca86ceaff0dd0" prot="public" virt="non-virtual"><scope>NAV</scope><name>ConfigTblPtr</name></member>
+      <member refid="class_n_a_v_1a5ee61e56110e0ae89ecd96beb14083ef" prot="public" virt="non-virtual"><scope>NAV</scope><name>ConvertMissionItemToCurrentSetpoint</name></member>
+      <member refid="class_n_a_v_1a11953689847672b25ea5bbc5c864c3d9" prot="public" virt="non-virtual"><scope>NAV</scope><name>CVT</name></member>
+      <member refid="class_n_a_v_1ada7fbc8c1f71a96f5dca57150e1de9d4" prot="public" virt="non-virtual"><scope>NAV</scope><name>Execute</name></member>
+      <member refid="class_n_a_v_1a4ce2bd2c7435d62d71350d4f559c5729" prot="public" virt="non-virtual"><scope>NAV</scope><name>ForceDescentCompleted</name></member>
+      <member refid="class_n_a_v_1a14ab0b7d34065b9679f1488bb8911948" prot="public" virt="non-virtual"><scope>NAV</scope><name>ForceDescentExecuting</name></member>
+      <member refid="class_n_a_v_1a9e4f057430a99d25974a3b5fb1745163" prot="public" virt="non-virtual"><scope>NAV</scope><name>ForceDescentTarget</name></member>
+      <member refid="class_n_a_v_1af626f618637dadd013218eb78812fed1" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetAltitudeAcceptedRadius</name></member>
+      <member refid="class_n_a_v_1ab297b936d2613a6c990fac4775d40351" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetCruisingSpeed</name></member>
+      <member refid="class_n_a_v_1ae62bbbb0ed6ebf826397daa1688efe43" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetCruisingThrottle</name></member>
+      <member refid="class_n_a_v_1ab13609b6c753515394a76b07b56096d4" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetDefaultAcceptedRadius</name></member>
+      <member refid="class_n_a_v_1ac89cc200147bc6c8d22cfdf515c45221" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetHomePosition</name></member>
+      <member refid="class_n_a_v_1a3b32eefe5e15d4bb3d33c694e409d2c0" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetMissionMsg</name></member>
+      <member refid="class_n_a_v_1afd870e22478a1d8cc6db6fe376acc4e3" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetMissionResultMsg</name></member>
+      <member refid="class_n_a_v_1a47fd2527e836a1ab31c06bae93b381e8" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetPositionSetpointTripletMsg</name></member>
+      <member refid="class_n_a_v_1a7b0a4acc0e8077c8f7498d71169d8f07" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetRepositionTripletMsg</name></member>
+      <member refid="class_n_a_v_1a2a84da3eae96bb03a9abde7138070ae1" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetTakeoffTripletMsg</name></member>
+      <member refid="class_n_a_v_1a5d290f4c498aa8b4b671dc45d05704eb" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetTimeInside</name></member>
+      <member refid="class_n_a_v_1afedcfa981ad036fd148ce737dbc5e38a" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetVehicleCommandMsg</name></member>
+      <member refid="class_n_a_v_1a188b43a09f046f48709e4d8d92ca5b5e" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetVehicleGlobalPositionMsg</name></member>
+      <member refid="class_n_a_v_1a566a6eb88d09e21bb0ff819531560b7e" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetVehicleLandDetectedMsg</name></member>
+      <member refid="class_n_a_v_1ae624ce8bdf8d8ad948fba35f90b08a73" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetVehicleLocalPositionMsg</name></member>
+      <member refid="class_n_a_v_1a908ae38b9557cf1ca7d2d3592857870d" prot="public" virt="non-virtual"><scope>NAV</scope><name>GetVehicleStatusMsg</name></member>
+      <member refid="class_n_a_v_1a39e32021eaf8f50af6f1058202dce545" prot="public" virt="non-virtual"><scope>NAV</scope><name>HkTlm</name></member>
+      <member refid="class_n_a_v_1a9bc4f4d13ad0ccfef2df8341a27d53a2" prot="public" virt="non-virtual"><scope>NAV</scope><name>HomePositionValid</name></member>
+      <member refid="class_n_a_v_1a1a9c2c17b4eadef2507caa8d1cf30c4e" prot="public" virt="non-virtual"><scope>NAV</scope><name>InitApp</name></member>
+      <member refid="class_n_a_v_1ad8eb7b1c09228049d83388e897b07f94" prot="private" virt="non-virtual"><scope>NAV</scope><name>InitConfigTbl</name></member>
+      <member refid="class_n_a_v_1a02152e1511e831e277e654505f0c6ec2" prot="public" virt="non-virtual"><scope>NAV</scope><name>InitData</name></member>
+      <member refid="class_n_a_v_1a06f3025fcf053949c898481f2f116abb" prot="public" virt="non-virtual"><scope>NAV</scope><name>InitEvent</name></member>
+      <member refid="class_n_a_v_1a0c058b6dd5ab20d93b36176e57522874" prot="public" virt="non-virtual"><scope>NAV</scope><name>InitPipe</name></member>
+      <member refid="class_n_a_v_1a825e7244d80d5fe45ceb188952624511" prot="public" virt="non-virtual"><scope>NAV</scope><name>IsMissionItemReached</name></member>
+      <member refid="class_n_a_v_1aface2890ddb4399fdea48a56955e0b76" prot="public" virt="non-virtual"><scope>NAV</scope><name>IsPlannedMission</name></member>
+      <member refid="class_n_a_v_1ac015997089c32f76471713323997b0a8" prot="public" virt="non-virtual"><scope>NAV</scope><name>Land</name></member>
+      <member refid="class_n_a_v_1ab3d332d7b5f897be39eb1db9dc3166b3" prot="public" virt="non-virtual"><scope>NAV</scope><name>LandActive</name></member>
+      <member refid="class_n_a_v_1a27b2e38576ba766cae0817ba36147754" prot="public" virt="non-virtual"><scope>NAV</scope><name>Loiter</name></member>
+      <member refid="class_n_a_v_1ad7b57fd6aae3f1e7d8b5a5e526b5e3db" prot="public" virt="non-virtual"><scope>NAV</scope><name>LoiterActive</name></member>
+      <member refid="class_n_a_v_1a5bde75d26e55a06bd96df9509c25899a" prot="public" virt="non-virtual"><scope>NAV</scope><name>LoiterPositionSet</name></member>
+      <member refid="class_n_a_v_1a6fef4f750f452cf4ffe1a02e013a9060" prot="public" virt="non-virtual"><scope>NAV</scope><name>LoiterReposition</name></member>
+      <member refid="class_n_a_v_1af8d876b0651cdaf736487a3d38d71fa8" prot="public" virt="non-virtual"><scope>NAV</scope><name>LoiterSetPosition</name></member>
+      <member refid="class_n_a_v_1a4d3156b3575ce3eae7f7933ea81d8d37" prot="public" virt="non-virtual"><scope>NAV</scope><name>MissionCruisingSpeed</name></member>
+      <member refid="class_n_a_v_1a47aa11bcd133f0c270106965f257a302" prot="public" virt="non-virtual"><scope>NAV</scope><name>MissionItem</name></member>
+      <member refid="class_n_a_v_1a111bfd76562a6ff7884c3d683268aec3" prot="public" virt="non-virtual"><scope>NAV</scope><name>MissionResultMsg</name></member>
+      <member refid="class_n_a_v_1a99f50f3b57213283b597f6a2c90835a2" prot="public" virt="non-virtual"><scope>NAV</scope><name>MissionResultUpdated</name></member>
+      <member refid="class_n_a_v_1a1513ab300a41539391d4aacad5da22de" prot="public" virt="non-virtual"><scope>NAV</scope><name>MissionThrottle</name></member>
+      <member refid="class_n_a_v_1a47133e45475072d8001c7f672bf38fa3" prot="public" virt="non-virtual"><scope>NAV</scope><name>NAV</name></member>
+      <member refid="class_n_a_v_1ad56032e053624bef93a5ce10f120a8ec" prot="public" virt="non-virtual"><scope>NAV</scope><name>NewCommandArrived</name></member>
+      <member refid="class_n_a_v_1a612863ec97170b00d0ea6975071a2eab" prot="public" virt="non-virtual"><scope>NAV</scope><name>PositionSetpointTripletMsg</name></member>
+      <member refid="class_n_a_v_1af6e6da22ec5dcbfad7669a971a0fb253" prot="public" virt="non-virtual"><scope>NAV</scope><name>PositionSetpointTripletUpdated</name></member>
+      <member refid="class_n_a_v_1a76a4a0c5929e2e2616b481a0077332b2" prot="public" virt="non-virtual"><scope>NAV</scope><name>PreviousCommand</name></member>
+      <member refid="class_n_a_v_1ad675e2d30045c31878a907ebdf638b35" prot="public" virt="non-virtual"><scope>NAV</scope><name>PreviousState</name></member>
+      <member refid="class_n_a_v_1aac80673e3c2dc0c9e827966715e0284f" prot="public" virt="non-virtual"><scope>NAV</scope><name>ProcessAppCmds</name></member>
+      <member refid="class_n_a_v_1afc9e6edbc99806c3ea542c83de9e313f" prot="public" virt="non-virtual"><scope>NAV</scope><name>ProcessCmdPipe</name></member>
+      <member refid="class_n_a_v_1af9f204f67479007fbcebc068a52a5013" prot="public" virt="non-virtual"><scope>NAV</scope><name>RcvSchPipeMsg</name></member>
+      <member refid="class_n_a_v_1a03cfea20609f75ddd7bf06e3bd4e5211" prot="public" virt="non-virtual"><scope>NAV</scope><name>ReportHousekeeping</name></member>
+      <member refid="class_n_a_v_1a1a57d88200d339698ed3ad84f4dff57c" prot="public" virt="non-virtual"><scope>NAV</scope><name>RepositionTripletMsg</name></member>
+      <member refid="class_n_a_v_1a650504400eee8c15fb24f499310f9fd6" prot="public" virt="non-virtual"><scope>NAV</scope><name>Rtl</name></member>
+      <member refid="class_n_a_v_1ad206177c7c6a618bf35da0ac9cbea8a2" prot="public" virt="non-virtual"><scope>NAV</scope><name>RtlActive</name></member>
+      <member refid="class_n_a_v_1a1c163aac791999187ea9635bc89a85de" prot="public" virt="non-virtual"><scope>NAV</scope><name>RtlState</name></member>
+      <member refid="class_n_a_v_1a6ccb530f111a1d639e55cd336c9f2717" prot="public" virt="non-virtual"><scope>NAV</scope><name>SchPipeId</name></member>
+      <member refid="class_n_a_v_1a6b9327da9829097d3741b53df485088d" prot="public" virt="non-virtual"><scope>NAV</scope><name>SendMissionResultMsg</name></member>
+      <member refid="class_n_a_v_1a87699766163cb7794e92295ebac83906" prot="public" virt="non-virtual"><scope>NAV</scope><name>SendPositionSetpointTripletMsg</name></member>
+      <member refid="class_n_a_v_1a374e20ad10478fe05c437132567ad516" prot="public" virt="non-virtual"><scope>NAV</scope><name>SetAcceptedRadius</name></member>
+      <member refid="class_n_a_v_1a2ee4ce611cd2c71654b3c6cb8a9c0e83" prot="public" virt="non-virtual"><scope>NAV</scope><name>SetCanLoiterAtSetpoint</name></member>
+      <member refid="class_n_a_v_1a3c05c2d7f6e4b54da859a8b2cbdf66ad" prot="public" virt="non-virtual"><scope>NAV</scope><name>SetLoiterItem</name></member>
+      <member refid="class_n_a_v_1a56a1d9afd9b10a0e0c7ba7e6b8a4dcf9" prot="public" virt="non-virtual"><scope>NAV</scope><name>SetMissionFaliure</name></member>
+      <member refid="class_n_a_v_1a59f2b183c4f35bfc72621e5ddaccc34d" prot="public" virt="non-virtual"><scope>NAV</scope><name>SetPositionSetpointTripletUpdated</name></member>
+      <member refid="class_n_a_v_1a7eef3399e1bdffdf6a4b4e46501923d8" prot="public" virt="non-virtual"><scope>NAV</scope><name>SetRtlItem</name></member>
+      <member refid="class_n_a_v_1a6a4601f9e392595b3314c4997c454f68" prot="public" virt="non-virtual"><scope>NAV</scope><name>StateChangeDetect</name></member>
+      <member refid="class_n_a_v_1a6d663ad388100caf9dec86e2ad054148" prot="public" virt="non-virtual"><scope>NAV</scope><name>Takeoff</name></member>
+      <member refid="class_n_a_v_1a98b1ec2ab2d4b849bb3dc8fc79ca0630" prot="public" virt="non-virtual"><scope>NAV</scope><name>TakeoffActive</name></member>
+      <member refid="class_n_a_v_1a70f92c95c00054e3e4f65ca2472ebd59" prot="public" virt="non-virtual"><scope>NAV</scope><name>TakeoffTripletMsg</name></member>
+      <member refid="class_n_a_v_1a0f9581b1550a07b5374d321a86106e4a" prot="public" virt="non-virtual"><scope>NAV</scope><name>TimeFirstInsideOrbit</name></member>
+      <member refid="class_n_a_v_1a8cf43ad4de5bb0e936937fce88c1e316" prot="public" virt="non-virtual"><scope>NAV</scope><name>TimeWpReached</name></member>
+      <member refid="class_n_a_v_1ad01e26de6a38b5c475607e22d9295106" prot="public" virt="non-virtual"><scope>NAV</scope><name>uiRunStatus</name></member>
+      <member refid="class_n_a_v_1a9d86f31f800807c852f8157b84013b09" prot="public" virt="non-virtual"><scope>NAV</scope><name>ValidateConfigTbl</name></member>
+      <member refid="class_n_a_v_1a81e71ff2fb41747321bb60fe0fee0919" prot="public" virt="non-virtual"><scope>NAV</scope><name>VehicleStatusUpdateOnce</name></member>
+      <member refid="class_n_a_v_1aedd91af48aee88d2a9631a32b73879ee" prot="public" virt="non-virtual"><scope>NAV</scope><name>VerifyCmdLength</name></member>
+      <member refid="class_n_a_v_1a5ab34456360bae018c6fb4117e46fb4c" prot="public" virt="non-virtual"><scope>NAV</scope><name>WaypointPositionReached</name></member>
+      <member refid="class_n_a_v_1a5f90fafd0722bd9749c23586e8a436ee" prot="public" virt="non-virtual"><scope>NAV</scope><name>WaypointYawReached</name></member>
+      <member refid="class_n_a_v_1a101a4de4da7de460c90ce32a22825c19" prot="public" virt="non-virtual"><scope>NAV</scope><name>~NAV</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

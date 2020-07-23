@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="pe__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>pe_platform_cfg.h</compoundname>
+    <includedby refid="pe__tbldefs_8h" local="yes">apps/pe/fsw/src/pe_tbldefs.h</includedby>
+    <invincdepgraph>
+      <node id="7">
+        <label>apps/pe/fsw/platform_inc/pe_platform_cfg.h</label>
+        <link refid="pe_platform_cfg.h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>apps/pe/fsw/src/pe_tbldefs.h</label>
+        <link refid="pe__tbldefs_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a8dea2f551bc69c03940a4ce845d4cb54" prot="public" static="no">
+        <name>PE_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for PE application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;amc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="25" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1ad43bfdbd5c55932fca597b0a601eccb1" prot="public" static="no">
+        <name>PE_SCH_PIPE_DEPTH</name>
+        <initializer>(20)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="32" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a3f46aaf049dd1866297ecd9c47b763f0" prot="public" static="no">
+        <name>PE_SCH_PIPE_NAME</name>
+        <initializer>(&quot;PE_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="39" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a542b317478c9217b7e479db049fa8ce3" prot="public" static="no">
+        <name>PE_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="49" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1ac52bde160758de32ea8299636bb933e9" prot="public" static="no">
+        <name>PE_WAKEUP_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the PE_WAKEUP_MID_MAX_MSG_COUNT and PE_SEND_HK_MID_MAX_MSG_COUNT must be less than PE_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="58" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a18f65f36cde344dc6fea76ce9b1a5029" prot="public" static="no">
+        <name>PE_SEND_HK_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the PE_WAKEUP_MID_MAX_MSG_COUNT and PE_SEND_HK_MID_MAX_MSG_COUNT must be less than PE_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="67" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a4f5cc32a7193a3c9909d8892145028d6" prot="public" static="no">
+        <name>PE_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="74" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a0f3225488481bfcc9873a7b58fac49f1" prot="public" static="no">
+        <name>PE_CMD_PIPE_NAME</name>
+        <initializer>(&quot;PE_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="81" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a1f159a7de8090ebb305e8ac721e69161" prot="public" static="no">
+        <name>PE_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/pe_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="89" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a6546726dbf22f6db76c6a8d7f63e5bd6" prot="public" static="no">
+        <name>PE_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="96" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a772950283b3698be60843f3dff44d4ed" prot="public" static="no">
+        <name>PE_MAX_EVENT_FILTERS</name>
+        <initializer>(64)</initializer>
+        <briefdescription>
+<para>MAx event filters the PE app can use. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter cannot exceed TODO </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="103" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a70b4348374333947d69af812a6a419df" prot="public" static="no">
+        <name>REQ_BARO_INIT_COUNT</name>
+        <initializer>(100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="108" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a40d8f84c03f1dbdce202ced6e11bf269" prot="public" static="no">
+        <name>BARO_TIMEOUT</name>
+        <initializer>(100000) /* 0.1 s */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="109" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a39874882bcc0dc3b79451870c6fa9ed2" prot="public" static="no">
+        <name>REQ_GPS_INIT_COUNT</name>
+        <initializer>(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="112" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a75e36ec8607f707f480ac824c7f793ef" prot="public" static="no">
+        <name>GPS_TIMEOUT</name>
+        <initializer>(1000000) /* 1.0 s */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="113" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1ad218c6d5382bc12c3cbe1f42f3c9eb5e" prot="public" static="no">
+        <name>REQ_LAND_INIT_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="116" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1aa0d71f3d5b5f4bcab98cc413ba286bfe" prot="public" static="no">
+        <name>LAND_TIMEOUT</name>
+        <initializer>(1000000) /* 1.0 s */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="117" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a2e11f44766379a5745cff02e1e5f8b3d" prot="public" static="no">
+        <name>REQ_DIST_INIT_COUNT</name>
+        <initializer>(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="120" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1ac2e06e0172b995e9b0adc0e2c7e916c6" prot="public" static="no">
+        <name>DIST_TIMEOUT</name>
+        <initializer>(150000) /* 0.1 s */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="121" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a3d0f96cf8d4340637c0156dc85a76d94" prot="public" static="no">
+        <name>DIST_BETA_MAX</name>
+        <initializer>(700)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="122" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a323b9025018179f1daf7d00616d490a2" prot="public" static="no">
+        <name>DIST_SENSOR_TYPE</name>
+        <initializer>(3) /* 3 = radar */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="123" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a5e5c0f851b105e4b0a5ea135bc7d3d4f" prot="public" static="no">
+        <name>REQ_FLOW_INIT_COUNT</name>
+        <initializer>(10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="126" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a8acd86218a4aea43df84a4b4cd9cc2d1" prot="public" static="no">
+        <name>FLOW_TIMEOUT</name>
+        <initializer>(1000000) /* 1.0 s */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="127" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pe__platform__cfg_8h_1a2c3976bfc27c07324776fa55bd06b55c" prot="public" static="no">
+        <name>FLOW_GYRO_HP_CUTOFF</name>
+        <initializer>(0.001f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h" line="128" column="9" bodyfile="apps/pe/fsw/platform_inc/pe_platform_cfg.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>PE_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PE_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/>PE<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="pe__platform__cfg_8h_1a8dea2f551bc69c03940a4ce845d4cb54" refkind="member"><highlight class="preprocessor">#define<sp/>PE_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="pe__platform__cfg_8h_1ad43bfdbd5c55932fca597b0a601eccb1" refkind="member"><highlight class="preprocessor">#define<sp/>PE_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(20)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="pe__platform__cfg_8h_1a3f46aaf049dd1866297ecd9c47b763f0" refkind="member"><highlight class="preprocessor">#define<sp/>PE_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;PE_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="pe__platform__cfg_8h_1a542b317478c9217b7e479db049fa8ce3" refkind="member"><highlight class="preprocessor">#define<sp/>PE_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="pe__platform__cfg_8h_1ac52bde160758de32ea8299636bb933e9" refkind="member"><highlight class="preprocessor">#define<sp/>PE_WAKEUP_MID_MAX_MSG_COUNT<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="pe__platform__cfg_8h_1a18f65f36cde344dc6fea76ce9b1a5029" refkind="member"><highlight class="preprocessor">#define<sp/>PE_SEND_HK_MID_MAX_MSG_COUNT<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="pe__platform__cfg_8h_1a4f5cc32a7193a3c9909d8892145028d6" refkind="member"><highlight class="preprocessor">#define<sp/>PE_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="pe__platform__cfg_8h_1a0f3225488481bfcc9873a7b58fac49f1" refkind="member"><highlight class="preprocessor">#define<sp/>PE_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;PE_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="pe__platform__cfg_8h_1a1f159a7de8090ebb305e8ac721e69161" refkind="member"><highlight class="preprocessor">#define<sp/>PE_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/pe_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="pe__platform__cfg_8h_1a6546726dbf22f6db76c6a8d7f63e5bd6" refkind="member"><highlight class="preprocessor">#define<sp/>PE_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="pe__platform__cfg_8h_1a772950283b3698be60843f3dff44d4ed" refkind="member"><highlight class="preprocessor">#define<sp/>PE_MAX_EVENT_FILTERS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>Sensor<sp/>Configuration<sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Baro<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="pe__platform__cfg_8h_1a70b4348374333947d69af812a6a419df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REQ_BARO_INIT_COUNT<sp/><sp/><sp/><sp/><sp/>(100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="pe__platform__cfg_8h_1a40d8f84c03f1dbdce202ced6e11bf269" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BARO_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(100000)<sp/></highlight><highlight class="comment">/*<sp/>0.1<sp/>s<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GPS<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="pe__platform__cfg_8h_1a39874882bcc0dc3b79451870c6fa9ed2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REQ_GPS_INIT_COUNT<sp/><sp/><sp/><sp/><sp/><sp/>(10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="pe__platform__cfg_8h_1a75e36ec8607f707f480ac824c7f793ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GPS_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1000000)<sp/></highlight><highlight class="comment">/*<sp/>1.0<sp/>s<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Land<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="pe__platform__cfg_8h_1ad218c6d5382bc12c3cbe1f42f3c9eb5e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REQ_LAND_INIT_COUNT<sp/><sp/><sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="pe__platform__cfg_8h_1aa0d71f3d5b5f4bcab98cc413ba286bfe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LAND_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1000000)<sp/></highlight><highlight class="comment">/*<sp/>1.0<sp/>s<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Distance<sp/>sensor<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="pe__platform__cfg_8h_1a2e11f44766379a5745cff02e1e5f8b3d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REQ_DIST_INIT_COUNT<sp/><sp/><sp/><sp/><sp/>(10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="pe__platform__cfg_8h_1ac2e06e0172b995e9b0adc0e2c7e916c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIST_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(150000)<sp/></highlight><highlight class="comment">/*<sp/>0.1<sp/>s<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="pe__platform__cfg_8h_1a3d0f96cf8d4340637c0156dc85a76d94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIST_BETA_MAX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(700)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="pe__platform__cfg_8h_1a323b9025018179f1daf7d00616d490a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIST_SENSOR_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(3)<sp/></highlight><highlight class="comment">/*<sp/>3<sp/>=<sp/>radar<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Optical<sp/>flow<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="pe__platform__cfg_8h_1a5e5c0f851b105e4b0a5ea135bc7d3d4f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REQ_FLOW_INIT_COUNT<sp/><sp/><sp/><sp/><sp/>(10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="pe__platform__cfg_8h_1a8acd86218a4aea43df84a4b4cd9cc2d1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLOW_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1000000)<sp/></highlight><highlight class="comment">/*<sp/>1.0<sp/>s<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="pe__platform__cfg_8h_1a2c3976bfc27c07324776fa55bd06b55c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FLOW_GYRO_HP_CUTOFF<sp/><sp/><sp/><sp/><sp/>(0.001f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PE_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/pe/fsw/platform_inc/pe_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

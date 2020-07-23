@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ulr__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>ulr_platform_cfg.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a425fb047e77a6c460b637115b9aab26a" prot="public" static="no">
+        <name>ULR_LISTENER_TASK_FLAGS</name>
+        <initializer><ref refid="osapi-os-core_8h_1a1059ea6f1266dde89975fcc5fe04fe33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_ENABLE_CORE_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="8" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a4d0d6ca1f0f4382b5b1ab6e2d65c1a1f" prot="public" static="no">
+        <name>ULR_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for ULR application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;amc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="27" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1af8e6bce0c2ff08c774a91dcd4ed727a4" prot="public" static="no">
+        <name>ULR_SCH_PIPE_DEPTH</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="34" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a7efd751d7d763261818590fd0e39556d" prot="public" static="no">
+        <name>ULR_SCH_PIPE_NAME</name>
+        <initializer>(&quot;ULR_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="41" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a2c533fa1edd93291f25c33e78fb8502b" prot="public" static="no">
+        <name>ULR_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="51" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a25802d91adacaa1d0a09538fb8c20ae7" prot="public" static="no">
+        <name>ULR_MEASURE_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the ULR_MEASURE_MID_MAX_MSG_COUNT and ULR_SEND_HK_MID_MAX_MSG_COUNT must be less than ULR_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="60" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a1728637c7938fbea8f9498a7016a70b1" prot="public" static="no">
+        <name>ULR_SEND_HK_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the ULR_MEASURE_MID_MAX_MSG_COUNT and ULR_SEND_HK_MID_MAX_MSG_COUNT must be less than ULR_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="69" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1ae30e8bdb8f5bc41206b5b0505f9ed423" prot="public" static="no">
+        <name>ULR_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="76" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a9570c7eecccf7081015823d85d0b15bc" prot="public" static="no">
+        <name>ULR_CMD_PIPE_NAME</name>
+        <initializer>(&quot;ULR_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="83" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a1a22d6f8217b2870390b17e6130d0395" prot="public" static="no">
+        <name>ULR_DATA_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the data pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="90" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a1b540dda23392e18d1efde4b128fe955" prot="public" static="no">
+        <name>ULR_DATA_PIPE_NAME</name>
+        <initializer>(&quot;ULR_DATA_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="97" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1aeb48e5505aa0cb492d8ca2295d187e9c" prot="public" static="no">
+        <name>ULR_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/ulr_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="105" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1ae10edecce20a6a5e63fb4ce8693ba58f" prot="public" static="no">
+        <name>ULR_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="112" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1ae00f58a62523898c736d77a87c46aa7e" prot="public" static="no">
+        <name>ULR_CUSTOM_PORT_PATH</name>
+        <initializer>&quot;/dev/ttyS6&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="115" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a0c4a2733a2b14f2dba1a44c281d1d8b6" prot="public" static="no">
+        <name>ULR_SENS_VARIANCE</name>
+        <initializer>(0.045f * 0.045f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="116" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a7d5a636182eda55b3176400151912681" prot="public" static="no">
+        <name>ULR_LISTENER_TASK_PRIORITY</name>
+        <initializer>(64)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="119" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a8c5d03d9f24d4a61ddfbff5709b5f82c" prot="public" static="no">
+        <name>ULR_LISTENER_TASK_STACK_SIZE</name>
+        <initializer>(16000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="120" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1a53e0f21e3a3634fb41c002922038c7c7" prot="public" static="no">
+        <name>ULR_LISTENER_TASK_NAME</name>
+        <initializer>&quot;ULR_LISTENER&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="121" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ulr__platform__cfg_8h_1aa1f6b1f6a5a5030c24ea064fc96dccdf" prot="public" static="no">
+        <name>ULR_MUTEX_NAME</name>
+        <initializer>&quot;ULR_MUTEX&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" line="122" column="9" bodyfile="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>ULR_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ULR_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="ulr__platform__cfg_8h_1a425fb047e77a6c460b637115b9aab26a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ULR_LISTENER_TASK_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OS_ENABLE_CORE_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/>ULR<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="ulr__platform__cfg_8h_1a4d0d6ca1f0f4382b5b1ab6e2d65c1a1f" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="ulr__platform__cfg_8h_1af8e6bce0c2ff08c774a91dcd4ed727a4" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="ulr__platform__cfg_8h_1a7efd751d7d763261818590fd0e39556d" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;ULR_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="ulr__platform__cfg_8h_1a2c533fa1edd93291f25c33e78fb8502b" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="ulr__platform__cfg_8h_1a25802d91adacaa1d0a09538fb8c20ae7" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_MEASURE_MID_MAX_MSG_COUNT<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="ulr__platform__cfg_8h_1a1728637c7938fbea8f9498a7016a70b1" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_SEND_HK_MID_MAX_MSG_COUNT<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="ulr__platform__cfg_8h_1ae30e8bdb8f5bc41206b5b0505f9ed423" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="ulr__platform__cfg_8h_1a9570c7eecccf7081015823d85d0b15bc" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;ULR_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="ulr__platform__cfg_8h_1a1a22d6f8217b2870390b17e6130d0395" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_DATA_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="ulr__platform__cfg_8h_1a1b540dda23392e18d1efde4b128fe955" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_DATA_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;ULR_DATA_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="ulr__platform__cfg_8h_1aeb48e5505aa0cb492d8ca2295d187e9c" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/ulr_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="ulr__platform__cfg_8h_1ae10edecce20a6a5e63fb4ce8693ba58f" refkind="member"><highlight class="preprocessor">#define<sp/>ULR_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TODO:<sp/><sp/>Add<sp/>Doxygen<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="ulr__platform__cfg_8h_1ae00f58a62523898c736d77a87c46aa7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ULR_CUSTOM_PORT_PATH<sp/><sp/><sp/><sp/>&quot;/dev/ttyS6&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="ulr__platform__cfg_8h_1a0c4a2733a2b14f2dba1a44c281d1d8b6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ULR_SENS_VARIANCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0.045f<sp/>*<sp/>0.045f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="ulr__platform__cfg_8h_1a7d5a636182eda55b3176400151912681" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ULR_LISTENER_TASK_PRIORITY<sp/><sp/><sp/><sp/><sp/><sp/>(64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="ulr__platform__cfg_8h_1a8c5d03d9f24d4a61ddfbff5709b5f82c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ULR_LISTENER_TASK_STACK_SIZE<sp/><sp/><sp/><sp/>(16000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="ulr__platform__cfg_8h_1a53e0f21e3a3634fb41c002922038c7c7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ULR_LISTENER_TASK_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ULR_LISTENER&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="ulr__platform__cfg_8h_1aa1f6b1f6a5a5030c24ea064fc96dccdf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ULR_MUTEX_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ULR_MUTEX&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ULR_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/ulr/fsw/platform_inc/ulr_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

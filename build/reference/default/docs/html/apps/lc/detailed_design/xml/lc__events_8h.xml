@@ -1,0 +1,1174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="lc__events_8h" kind="file" language="C++">
+    <compoundname>lc_events.h</compoundname>
+    <includedby refid="lc__action_8c" local="yes">apps/lc/fsw/src/lc_action.c</includedby>
+    <includedby refid="lc__app_8c" local="yes">apps/lc/fsw/src/lc_app.c</includedby>
+    <includedby refid="lc__cmds_8c" local="yes">apps/lc/fsw/src/lc_cmds.c</includedby>
+    <includedby refid="lc__watch_8c" local="yes">apps/lc/fsw/src/lc_watch.c</includedby>
+    <invincdepgraph>
+      <node id="643">
+        <label>apps/lc/fsw/src/lc_action.c</label>
+        <link refid="lc__action_8c"/>
+      </node>
+      <node id="645">
+        <label>apps/lc/fsw/src/lc_cmds.c</label>
+        <link refid="lc__cmds_8c"/>
+      </node>
+      <node id="646">
+        <label>apps/lc/fsw/src/lc_watch.c</label>
+        <link refid="lc__watch_8c"/>
+      </node>
+      <node id="642">
+        <label>apps/lc/fsw/src/lc_events.h</label>
+        <link refid="lc_events.h"/>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+      </node>
+      <node id="644">
+        <label>apps/lc/fsw/src/lc_app.c</label>
+        <link refid="lc__app_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lc__events_8h_1a8e2a474eb5aa7005744ea2ccc9260ef0" prot="public" static="no">
+        <name>LC_TASK_EXIT_EID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Task terminating, err = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Task terminating, err = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CRITICAL</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS Limit Checker exits due to a fatal error condition.</para><para>The <computeroutput>err</computeroutput> field contains the return status from the cFE call that caused the task to terminate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="37" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a259fd13a6f04a6c8e129e02c162434f8" compoundref="lc__app_8c" startline="49" endline="162">LC_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ac0d83d51db7733c5763be480a7429169" prot="public" static="no">
+        <name>LC_INIT_INF_EID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;LC Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;LC Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS Limit Checker has completed initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the Application&apos;s Major Version Number The second <computeroutput>d</computeroutput> field contains the Application&apos;s Minor Version Number The third <computeroutput>d</computeroutput> field contains the Application&apos;s Revision Number The fourth <computeroutput>d</computeroutput> field contains the Application&apos;s Mission Revision Number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="54" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a54102554728ad1335ea7b98a64e3f029" compoundref="lc__app_8c" startline="171" endline="221">LC_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a1c87e3e2ee724d04dedae475e38f1567" prot="public" static="no">
+        <name>LC_CR_PIPE_ERR_EID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Creating LC Pipe, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Creating LC Pipe, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS Limit Checker is unable to create its command pipe via the <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref> API</para><para>The <computeroutput>RC</computeroutput> field contains the return status from the <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref> call that generated the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="70" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa472134a38c0f730055a659321f97b3f" compoundref="lc__app_8c" startline="261" endline="326">LC_SbInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1af092f7d40a59fc22aa7271f23be2f3fc" prot="public" static="no">
+        <name>LC_SUB_HK_REQ_ERR_EID</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Subscribing to HK Request, MID=0x%04X, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Subscribing to HK Request, MID=0x%04X, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS Limit Checker is unable to subscribe to its Housekeeping Request message via the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> API</para><para>The <computeroutput>MID</computeroutput> field contains the Message ID that LC was attempting to subscribe to. The <computeroutput>RC</computeroutput> field contains the return status from the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> call that generated the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="88" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa472134a38c0f730055a659321f97b3f" compoundref="lc__app_8c" startline="261" endline="326">LC_SbInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a5417a3bee72e6d8dd7b08f6bb06ee920" prot="public" static="no">
+        <name>LC_SUB_GND_CMD_ERR_EID</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Subscribing to GND CMD, MID=0x%04X, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Subscribing to GND CMD, MID=0x%04X, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS Limit Checker is unable to subscribe to its ground commands via the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> API</para><para>The <computeroutput>MID</computeroutput> field contains the Message ID that LC was attempting to subscribe to. The <computeroutput>RC</computeroutput> field contains the return status from the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> call that generated the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="106" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="106" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa472134a38c0f730055a659321f97b3f" compoundref="lc__app_8c" startline="261" endline="326">LC_SbInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a34f8c8f4172a6b48650037e3c49bcde9" prot="public" static="no">
+        <name>LC_SUB_SAMPLE_CMD_ERR_EID</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Subscribing to Sample CMD, MID=0x%04X, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Subscribing to Sample CMD, MID=0x%04X, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS Limit Checker is unable to subscribe to its actionpoint sample command via the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> API</para><para>The <computeroutput>MID</computeroutput> field contains the Message ID that LC was attempting to subscribe to. The <computeroutput>RC</computeroutput> field contains the return status from the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> call that generated the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="124" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa472134a38c0f730055a659321f97b3f" compoundref="lc__app_8c" startline="261" endline="326">LC_SbInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a76d9c76ccb3f273cbe54649ef36984a5" prot="public" static="no">
+        <name>LC_WDT_REGISTER_ERR_EID</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error registering WDT, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error registering WDT, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the watchpoint definition table (WDT) could not be registered.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="139" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a4085a38bec3dc28bcfdef58b721b7d0d" compoundref="lc__app_8c" startline="577" endline="723">LC_CreateDefinitionTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a0939a81679b7b971581d6ac494fe9431" prot="public" static="no">
+        <name>LC_WDT_REREGISTER_ERR_EID</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error re-registering WDT, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error re-registering WDT, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the watchpoint definition table (WDT) could not be registered non-critical after first registering and then unregistering the table as critical. This sequence can only occur when the WDT succeeds and the ADT fails the attempt to register as a critical table. This error is extremely unlikely to occur.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="158" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a4085a38bec3dc28bcfdef58b721b7d0d" compoundref="lc__app_8c" startline="577" endline="723">LC_CreateDefinitionTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a33457a7ed62d62d7b09740e9bb5be188" prot="public" static="no">
+        <name>LC_ADT_REGISTER_ERR_EID</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error registering ADT, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error registering ADT, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the actionpoint definition table (ADT) could not be registered.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="173" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="173" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a4085a38bec3dc28bcfdef58b721b7d0d" compoundref="lc__app_8c" startline="577" endline="723">LC_CreateDefinitionTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a3c3ad472acad745704d25a5547588cef" prot="public" static="no">
+        <name>LC_WRT_REGISTER_ERR_EID</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error registering WRT, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error registering WRT, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the watchpoint results table (WRT) could not be registered.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="188" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="188" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa2cd3acf820ba63b91f37d6c8443facb" compoundref="lc__app_8c" startline="505" endline="568">LC_CreateResultTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ace455b7c71c136e4df79eed6f117f8c4" prot="public" static="no">
+        <name>LC_ART_REGISTER_ERR_EID</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error registering ART, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error registering ART, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the actionpoint results table (ART) could not be registered.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="203" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="203" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa2cd3acf820ba63b91f37d6c8443facb" compoundref="lc__app_8c" startline="505" endline="568">LC_CreateResultTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ae2710170e55ebfc3a014ed0f2c07b3ed" prot="public" static="no">
+        <name>LC_WRT_CDS_REGISTER_ERR_EID</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error registering WRT CDS Area, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error registering WRT CDS Area, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CDS area for the watchpoint restuls table (WRT) data could not be registered.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__es_8h_1a60638b671a23cda3eb9282b153a8dfb1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterCDS</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="218" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="218" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a017d8a0d2571a5205567126cfa83110f" compoundref="lc__app_8c" startline="732" endline="852">LC_CreateTaskCDS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a224b82c92d4c58e3092404add104f44d" prot="public" static="no">
+        <name>LC_ART_CDS_REGISTER_ERR_EID</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error registering ART CDS Area, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error registering ART CDS Area, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CDS area for the actionpont restuls table (ART) data could not be registered.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__es_8h_1a60638b671a23cda3eb9282b153a8dfb1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterCDS</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="233" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="233" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a017d8a0d2571a5205567126cfa83110f" compoundref="lc__app_8c" startline="732" endline="852">LC_CreateTaskCDS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a3024c76845db56dacf01ac250c5b297d" prot="public" static="no">
+        <name>LC_APP_CDS_REGISTER_ERR_EID</name>
+        <initializer>14</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error registering application data CDS Area, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error registering application data CDS Area, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CDS area for the LC application data could not be registered.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__es_8h_1a60638b671a23cda3eb9282b153a8dfb1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterCDS</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="248" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="248" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a017d8a0d2571a5205567126cfa83110f" compoundref="lc__app_8c" startline="732" endline="852">LC_CreateTaskCDS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ab46ce6fa8710561c03f0b5d3b0198980" prot="public" static="no">
+        <name>LC_WDT_LOAD_ERR_EID</name>
+        <initializer>15</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error (RC=0x%08X) Loading WDT with &apos;%s&apos;&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error (RC=0x%08X) Loading WDT with &apos;%s&apos;&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an error is encountered loading the watchpoint definition table (WDT) from the default file image</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> call that generated the error, the <computeroutput>with</computeroutput> field is the name of the load file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="265" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="265" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a944a5a8efe4a94a6dd15cd0e9810146f" compoundref="lc__app_8c" startline="861" endline="965">LC_LoadDefaultTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a773aef28784314ce441f2065848e6f6b" prot="public" static="no">
+        <name>LC_ADT_LOAD_ERR_EID</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error (RC=0x%08X) Loading ADT with &apos;%s&apos;&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error (RC=0x%08X) Loading ADT with &apos;%s&apos;&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an error is encountered loading the actionpoint definition table (ADT) from the default file image</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> call that generated the error, the <computeroutput>with</computeroutput> field is the name of the load file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="282" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="282" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a944a5a8efe4a94a6dd15cd0e9810146f" compoundref="lc__app_8c" startline="861" endline="965">LC_LoadDefaultTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a67a89d19f665dd0050b5537a4740c707" prot="public" static="no">
+        <name>LC_WRT_GETADDR_ERR_EID</name>
+        <initializer>17</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error getting WRT address, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error getting WRT address, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the address can&apos;t be obtained from table services for the watchpoint results table (WRT).</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="297" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="297" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa2cd3acf820ba63b91f37d6c8443facb" compoundref="lc__app_8c" startline="505" endline="568">LC_CreateResultTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a64b0584b958be3bbdf3e6fcbb4e4f1fb" prot="public" static="no">
+        <name>LC_ART_GETADDR_ERR_EID</name>
+        <initializer>18</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error getting ART address, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error getting ART address, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the address can&apos;t be obtained from table services for the actionpoint results table (ART).</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="312" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="312" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa2cd3acf820ba63b91f37d6c8443facb" compoundref="lc__app_8c" startline="505" endline="568">LC_CreateResultTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a2f19b1ed66a33bf5765c5ea5cb758dd0" prot="public" static="no">
+        <name>LC_WDT_GETADDR_ERR_EID</name>
+        <initializer>19</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error getting WDT address, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error getting WDT address, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the address can&apos;t be obtained from table services for the watchpoint definition table (WDT).</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="327" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="327" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a944a5a8efe4a94a6dd15cd0e9810146f" compoundref="lc__app_8c" startline="861" endline="965">LC_LoadDefaultTables</referencedby>
+        <referencedby refid="lc__cmds_8h_1a01e5376da2846281e33cad4f77b00376" compoundref="lc__cmds_8c" startline="1066" endline="1128">LC_ManageTables</referencedby>
+        <referencedby refid="lc__app_8h_1aa56fa68d9b7c2592c6303f88b8cf767a" compoundref="lc__app_8c" startline="335" endline="496">LC_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a697e7a0613fb5917ae33f9bd874e4ae4" prot="public" static="no">
+        <name>LC_ADT_GETADDR_ERR_EID</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error getting ADT address, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error getting ADT address, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the address can&apos;t be obtained from table services for the actionpoint definition table (ADT).</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="342" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="342" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1a944a5a8efe4a94a6dd15cd0e9810146f" compoundref="lc__app_8c" startline="861" endline="965">LC_LoadDefaultTables</referencedby>
+        <referencedby refid="lc__cmds_8h_1a01e5376da2846281e33cad4f77b00376" compoundref="lc__cmds_8c" startline="1066" endline="1128">LC_ManageTables</referencedby>
+        <referencedby refid="lc__app_8h_1aa56fa68d9b7c2592c6303f88b8cf767a" compoundref="lc__app_8c" startline="335" endline="496">LC_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a3b2f685b86e8dab5e02c9a121f328581" prot="public" static="no">
+        <name>LC_CDS_RESTORED_INF_EID</name>
+        <initializer>21</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Previous state restored from Critical Data Store&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Previous state restored from Critical Data Store&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued following a processor reset when the entire LC execution state has been successfully restored from the Critical Data Store (CDS). Application global data, actionpoint results data and watchpoint results data were restored from CDS areas managed directly by LC. Actionpoint definition table data and watchpoint definition table data were restored from the CDS area managed by cFE Table Services.</para><para>Note that an attempt to use CDS is only made when the appropriate parameter is enabled in the LC platform configuration header file.</para><para><simplesect kind="see"><para>#LC_SAVE_TO_CDS, <ref refid="lc__events_8h_1ab4ca77ab15fc9a0a96a93ab6b53e3bdf" kindref="member">LC_CDS_UPDATED_INF_EID</ref>, <ref refid="lc__events_8h_1a41c17d9467fa019fff2b2808fb8c38f8" kindref="member">LC_CDS_DISABLED_INF_EID</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="364" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="364" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa56fa68d9b7c2592c6303f88b8cf767a" compoundref="lc__app_8c" startline="335" endline="496">LC_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ab4ca77ab15fc9a0a96a93ab6b53e3bdf" prot="public" static="no">
+        <name>LC_CDS_UPDATED_INF_EID</name>
+        <initializer>22</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Default state loaded and written to CDS, activity mask = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000022"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Default state loaded and written to CDS, activity mask = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued following LC startup initialization when the entire LC execution state has been set to default values successfully stored to the Critical Data Store (CDS). Application global data, actionpoint results data and watchpoint results data were stored to CDS areas managed directly by LC. Actionpoint and watchpoint definition table data are stored to the CDS area managed by cFE Table Services.</para><para>This event implies that the CDS areas were created successfully. The reason that previous data was not restored may be due to the reset type (warm vs cold) or to a failure to restore the entire set of data described above. If data from any CDS area cannot be restored, then all data is set to defaults and written to CDS.</para><para>Refer to the <computeroutput>ActivityMask</computeroutput> bit field for specific information about which CDS areas were created and successfully restored if there are any questions about why the previous values were not restored.</para><para>Note that an attempt to use CDS is only made when the appropriate parameter is enabled in the LC platform configuration header file.</para><para><simplesect kind="see"><para>#LC_SAVE_TO_CDS, <ref refid="lc__events_8h_1a3b2f685b86e8dab5e02c9a121f328581" kindref="member">LC_CDS_RESTORED_INF_EID</ref>, <ref refid="lc__events_8h_1a41c17d9467fa019fff2b2808fb8c38f8" kindref="member">LC_CDS_DISABLED_INF_EID</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="398" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="398" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa56fa68d9b7c2592c6303f88b8cf767a" compoundref="lc__app_8c" startline="335" endline="496">LC_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a41c17d9467fa019fff2b2808fb8c38f8" prot="public" static="no">
+        <name>LC_CDS_DISABLED_INF_EID</name>
+        <initializer>23</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;LC use of Critical Data Store disabled, activity mask = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000023"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;LC use of Critical Data Store disabled, activity mask = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued following LC startup initialization when the entire LC execution state has been set to default values successfully stored to the Critical Data Store (CDS). Application global data, actionpoint results data and watchpoint results data were stored to CDS areas managed directly by LC. Actionpoint and watchpoint definition table data are stored to the CDS area managed by cFE Table Services.</para><para>This event implies that the CDS areas were not created successfully or that LC was unable to write the default values to CDS.</para><para>Refer to the <computeroutput>ActivityMask</computeroutput> bit field for specific information about which CDS areas were created successfully.</para><para>Note that an attempt to use CDS is only made when the appropriate parameter is enabled in the LC platform configuration header file.</para><para><simplesect kind="see"><para>#LC_SAVE_TO_CDS, <ref refid="lc__events_8h_1a3b2f685b86e8dab5e02c9a121f328581" kindref="member">LC_CDS_RESTORED_INF_EID</ref>, <ref refid="lc__events_8h_1ab4ca77ab15fc9a0a96a93ab6b53e3bdf" kindref="member">LC_CDS_UPDATED_INF_EID</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="426" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="426" bodyend="-1"/>
+        <referencedby refid="lc__app_8h_1aa56fa68d9b7c2592c6303f88b8cf767a" compoundref="lc__app_8c" startline="335" endline="496">LC_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a86cf139315d3cc1c683ec9fdb10e65c6" prot="public" static="no">
+        <name>LC_CC_ERR_EID</name>
+        <initializer>24</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid command code: ID = 0x%04X, CC = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000024"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid command code: ID = 0x%04X, CC = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a software bus message is received with an invalid command code.</para><para>The <computeroutput>ID</computeroutput> field contains the message ID, the <computeroutput>CC</computeroutput> field contains the command code that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="441" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="441" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a87ded018db3d328d1c8008e61e04b399" compoundref="lc__cmds_8c" startline="37" endline="120">LC_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a4d931c459253dbd97dc4ddb7f016bb7d" prot="public" static="no">
+        <name>LC_APSAMPLE_APNUM_ERR_EID</name>
+        <initializer>25</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Sample AP error: invalid AP number, start = %d, end = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000025"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Sample AP error: invalid AP number, start = %d, end = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgids_8h_1a156d2d4b7fa00933aa4f34253f8dfe74" kindref="member">LC_SAMPLE_AP_MID</ref> message has been received with an invalid actionpoint start or end number specified</para><para>The <computeroutput>invalid</computeroutput> <computeroutput>AP</computeroutput> <computeroutput>number</computeroutput> fields are the numbers specified in the command message that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="456" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="456" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1ad88b3e2cc05b9cda93568a23700ada3b" compoundref="lc__cmds_8c" startline="127" endline="198">LC_SampleAPReq</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ac75826f2a18a3508bb9c72793ca79d75" prot="public" static="no">
+        <name>LC_NOOP_INF_EID</name>
+        <initializer>26</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;No-op command: Version %d.%d.%d.%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000026"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;No-op command: Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a NOOP command has been received.</para><para>The first <computeroutput>d</computeroutput> field contains the Application&apos;s Major Version Number The second <computeroutput>d</computeroutput> field contains the Application&apos;s Minor Version Number The third <computeroutput>d</computeroutput> field contains the Application&apos;s Revision Number The fourth <computeroutput>d</computeroutput> field contains the Application&apos;s Mission Revision Number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="472" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="472" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a26c4f2c53c8b06b13ba57252c1685cb9" compoundref="lc__cmds_8c" startline="520" endline="541">LC_NoopCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a66516eba1b295fbc8503fd7c80e8babc" prot="public" static="no">
+        <name>LC_RESET_DBG_EID</name>
+        <initializer>27</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset counters command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000027"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset counters command&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a reset counters command has been received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="484" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="484" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a7838bf2d2fa9f8658e9953884c6aacbf" compoundref="lc__cmds_8c" startline="548" endline="565">LC_ResetCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a70c521927aee68fa6dfcadd0ad962e66" prot="public" static="no">
+        <name>LC_LCSTATE_INF_EID</name>
+        <initializer>28</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set LC state command: new state = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000028"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set LC state command: new state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1ae89692a0175dd7fbe39b0cb63ddc1ba9" kindref="member">LC_SET_LC_STATE_CC</ref> command has been successfully executed</para><para>The <computeroutput>new</computeroutput> <computeroutput>state</computeroutput> field is the state specified in the command message that the LC operating state has been set to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="499" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="499" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a031ff2b6e5e0f266cb31441d99df3a34" compoundref="lc__cmds_8c" startline="591" endline="628">LC_SetLCStateCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ad2d5c41fb4db0741576b288bd52776cd" prot="public" static="no">
+        <name>LC_LCSTATE_ERR_EID</name>
+        <initializer>29</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set LC state error: invalid state = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000029"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set LC state error: invalid state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1ae89692a0175dd7fbe39b0cb63ddc1ba9" kindref="member">LC_SET_LC_STATE_CC</ref> command has been received with an invalid state argument specified</para><para>The <computeroutput>invalid</computeroutput> <computeroutput>state</computeroutput> field is the state specified in the command message that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="514" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="514" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a031ff2b6e5e0f266cb31441d99df3a34" compoundref="lc__cmds_8c" startline="591" endline="628">LC_SetLCStateCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a48442f0766e3cbea03c5d0da37176dc5" prot="public" static="no">
+        <name>LC_APSTATE_NEW_ERR_EID</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set AP state error: AP = %d, Invalid new state = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000030"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set AP state error: AP = %d, Invalid new state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a65ef61d17b6006a1f24bbeb61de06612" kindref="member">LC_SET_AP_STATE_CC</ref> command has been received with an invalid state argument specified</para><para>The <computeroutput>AP</computeroutput> field is the specified actionpoint number and the <computeroutput>Invalid</computeroutput> <computeroutput>new</computeroutput> <computeroutput>state</computeroutput> field is the state specified in the command message that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="530" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="530" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a7efe8ab90266cfc9462b226d156274f2" compoundref="lc__cmds_8c" startline="635" endline="762">LC_SetAPStateCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a3562c85b42f90a9524564e5b17604e69" prot="public" static="no">
+        <name>LC_APSTATE_CURR_ERR_EID</name>
+        <initializer>31</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set AP state error: AP = %d, Invalid current AP state = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000031"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set AP state error: AP = %d, Invalid current AP state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a65ef61d17b6006a1f24bbeb61de06612" kindref="member">LC_SET_AP_STATE_CC</ref> command has been received and the current actionpoint state is either <ref refid="lc__msgdefs_8h_1ac156605f5aaa3c12b9c2ad2af5b28569" kindref="member">LC_ACTION_NOT_USED</ref> or <ref refid="lc__msgdefs_8h_1a96216b9bd442bbfb94406364260ea711" kindref="member">LC_APSTATE_PERMOFF</ref> which can only be changed with a table load.</para><para>The <computeroutput>AP</computeroutput> field is the specified actionpoint number and the <computeroutput>Invalid</computeroutput> <computeroutput>current</computeroutput> <computeroutput>AP</computeroutput> <computeroutput>state</computeroutput> field is the current state that was determined invalid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="548" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="548" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a7efe8ab90266cfc9462b226d156274f2" compoundref="lc__cmds_8c" startline="635" endline="762">LC_SetAPStateCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1aa33921533f2e9ad4949e3fbed3c8157f" prot="public" static="no">
+        <name>LC_APSTATE_APNUM_ERR_EID</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set AP state error: Invalid AP number = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000032"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set AP state error: Invalid AP number = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a65ef61d17b6006a1f24bbeb61de06612" kindref="member">LC_SET_AP_STATE_CC</ref> command has been received with an invalid actionpoint number specified</para><para>The <computeroutput>Invalid</computeroutput> <computeroutput>AP</computeroutput> <computeroutput>number</computeroutput> field is the number specified in the command message that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="563" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="563" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a7efe8ab90266cfc9462b226d156274f2" compoundref="lc__cmds_8c" startline="635" endline="762">LC_SetAPStateCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a67e8ec527bf8f595bbc3b5e3b6e0096a" prot="public" static="no">
+        <name>LC_APSTATE_INF_EID</name>
+        <initializer>33</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set AP state command: AP = %d, New state = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000033"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set AP state command: AP = %d, New state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a65ef61d17b6006a1f24bbeb61de06612" kindref="member">LC_SET_AP_STATE_CC</ref> command has been successfully executed</para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number, the <computeroutput>New</computeroutput> <computeroutput>state</computeroutput> field is the state specified in the command message that the actionpoint state has been set to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="579" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="579" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a7efe8ab90266cfc9462b226d156274f2" compoundref="lc__cmds_8c" startline="635" endline="762">LC_SetAPStateCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1aa858905d2fe7e077f3359401932e2b94" prot="public" static="no">
+        <name>LC_APOFF_APNUM_ERR_EID</name>
+        <initializer>34</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set AP perm off error: Invalid AP number = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000034"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set AP perm off error: Invalid AP number = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a6a28b576275502e48c64148592cdf132" kindref="member">LC_SET_AP_PERMOFF_CC</ref> command has been received with an invalid actionpoint number specified</para><para>The <computeroutput>Invalid</computeroutput> <computeroutput>AP</computeroutput> <computeroutput>number</computeroutput> field is the number specified in the command message that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="594" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="594" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1af14faaf83ac61d3b0b34c1dae3b2d5f0" compoundref="lc__cmds_8c" startline="769" endline="834">LC_SetAPPermOffCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a6d4ddf91c861d70a391aa0e205fe7d9d" prot="public" static="no">
+        <name>LC_APOFF_CURR_ERR_EID</name>
+        <initializer>35</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set AP perm off error, AP NOT Disabled: AP = %d, Current state = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000035"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set AP perm off error, AP NOT Disabled: AP = %d, Current state = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a6a28b576275502e48c64148592cdf132" kindref="member">LC_SET_AP_PERMOFF_CC</ref> command has been received and the current actionpoint state is not <ref refid="lc__msgdefs_8h_1abebab7aac8a748c086cdf4b74dcdd489" kindref="member">LC_APSTATE_DISABLED</ref></para><para>The <computeroutput>AP</computeroutput> field is the specified actionpoint number and the The <computeroutput>Current</computeroutput> <computeroutput>state</computeroutput> field is the current state of the actionpoint </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="611" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="611" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1af14faaf83ac61d3b0b34c1dae3b2d5f0" compoundref="lc__cmds_8c" startline="769" endline="834">LC_SetAPPermOffCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a7fafdacc1a8f6e7f15358dc9fda5fd66" prot="public" static="no">
+        <name>LC_APOFF_INF_EID</name>
+        <initializer>36</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set AP permanently off command: AP = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000036"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set AP permanently off command: AP = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a6a28b576275502e48c64148592cdf132" kindref="member">LC_SET_AP_PERMOFF_CC</ref> command has been successfully executed</para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number that has been set to permanently off </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="626" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="626" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1af14faaf83ac61d3b0b34c1dae3b2d5f0" compoundref="lc__cmds_8c" startline="769" endline="834">LC_SetAPPermOffCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a9e5c81a7536fab42c76a04bb2896ac71" prot="public" static="no">
+        <name>LC_APSTATS_APNUM_ERR_EID</name>
+        <initializer>37</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset AP stats error: invalid AP number = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000037"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset AP stats error: invalid AP number = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a3c3a4a2329644e392441e0e271eb0f90" kindref="member">LC_RESET_AP_STATS_CC</ref> command has been received with an invalid actionpoint number specified</para><para>The <computeroutput>invalid</computeroutput> <computeroutput>AP</computeroutput> <computeroutput>number</computeroutput> field is the number specified in the command message that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="641" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="641" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a943516f6b3aaddc461c3df6fda86a487" compoundref="lc__cmds_8c" startline="841" endline="881">LC_ResetAPStatsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1af6bce5e25f4fffc3f74cb0d12d4cd89d" prot="public" static="no">
+        <name>LC_APSTATS_INF_EID</name>
+        <initializer>38</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset AP stats command: AP = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000038"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset AP stats command: AP = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a3c3a4a2329644e392441e0e271eb0f90" kindref="member">LC_RESET_AP_STATS_CC</ref> command has been successfully executed</para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number whose stats have been cleared </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="656" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="656" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a943516f6b3aaddc461c3df6fda86a487" compoundref="lc__cmds_8c" startline="841" endline="881">LC_ResetAPStatsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a4a07ddf45073775119e7a20a0a2b4628" prot="public" static="no">
+        <name>LC_WPSTATS_WPNUM_ERR_EID</name>
+        <initializer>39</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset WP stats error: invalid WP number = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000039"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset WP stats error: invalid WP number = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a8c47e49846b71cf6addd1750396953f8" kindref="member">LC_RESET_WP_STATS_CC</ref> command has been received with an invalid watchpoint number specified</para><para>The <computeroutput>invalid</computeroutput> <computeroutput>WP</computeroutput> <computeroutput>number</computeroutput> field is the number specified in the command message that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="671" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="671" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a708ea854841bca3cd6caabc8fac72f2b" compoundref="lc__cmds_8c" startline="921" endline="961">LC_ResetWPStatsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a22c431e469c87acbc037edad627859ff" prot="public" static="no">
+        <name>LC_WPSTATS_INF_EID</name>
+        <initializer>40</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset WP stats command: WP = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000040"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset WP stats command: WP = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgdefs_8h_1a8c47e49846b71cf6addd1750396953f8" kindref="member">LC_RESET_WP_STATS_CC</ref> command has been successfully executed</para><para>The <computeroutput>WP</computeroutput> field is the watchpoint number whose stats have been cleared </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="686" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="686" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a708ea854841bca3cd6caabc8fac72f2b" compoundref="lc__cmds_8c" startline="921" endline="961">LC_ResetWPStatsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a3c193b6ea414b8345279368ab42fb696" prot="public" static="no">
+        <name>LC_HKREQ_LEN_ERR_EID</name>
+        <initializer>41</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid HK request msg length: ID = 0x%04X, CC = %d, Len = %d, Expected = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000041"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid HK request msg length: ID = 0x%04X, CC = %d, Len = %d, Expected = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a housekeeping request is received with a message length that doesn&apos;t match the expected value.</para><para>The <computeroutput>ID</computeroutput> field contains the message ID, the <computeroutput>CC</computeroutput> field contains the command code, the <computeroutput>Len</computeroutput> field is the actual length returned by the <ref refid="cfe__sb__util_8c_1ac32b86cf9e1d12a547792853c35f6aa1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_GetTotalMsgLength</ref> call, and the <computeroutput>Expected</computeroutput> field is the expected length for the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="703" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="703" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a9a59990d245343719a7816e481aa8436" compoundref="lc__cmds_8c" startline="1005" endline="1057">LC_VerifyMsgLength</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1aed9c5d548741f67f32ba053e017b3baa" prot="public" static="no">
+        <name>LC_APSAMPLE_LEN_ERR_EID</name>
+        <initializer>42</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid AP sample msg length: ID = 0x%04X, CC = %d, Len = %d, Expected = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000042"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid AP sample msg length: ID = 0x%04X, CC = %d, Len = %d, Expected = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a actionpoint sample request is received with a message length that doesn&apos;t match the expected value.</para><para>The <computeroutput>ID</computeroutput> field contains the message ID, the <computeroutput>CC</computeroutput> field contains the command code, the <computeroutput>Len</computeroutput> field is the actual length returned by the <ref refid="cfe__sb__util_8c_1ac32b86cf9e1d12a547792853c35f6aa1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_GetTotalMsgLength</ref> call, and the <computeroutput>Expected</computeroutput> field is the expected length for the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="720" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="720" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a9a59990d245343719a7816e481aa8436" compoundref="lc__cmds_8c" startline="1005" endline="1057">LC_VerifyMsgLength</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a88727dabc3531b3f0a6421a476a8190a" prot="public" static="no">
+        <name>LC_LEN_ERR_EID</name>
+        <initializer>43</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid msg length: ID = 0x%04X, CC = %d, Len = %d, Expected = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000043"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid msg length: ID = 0x%04X, CC = %d, Len = %d, Expected = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a ground command message is received with a message length that doesn&apos;t match the expected value.</para><para>The <computeroutput>ID</computeroutput> field contains the message ID, the <computeroutput>CC</computeroutput> field contains the command code, the <computeroutput>Len</computeroutput> field is the actual length returned by the <ref refid="cfe__sb__util_8c_1ac32b86cf9e1d12a547792853c35f6aa1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_GetTotalMsgLength</ref> call, and the <computeroutput>Expected</computeroutput> field is the expected length for a message with that command code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="737" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="737" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a9a59990d245343719a7816e481aa8436" compoundref="lc__cmds_8c" startline="1005" endline="1057">LC_VerifyMsgLength</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a3188fd5869e40de65ee08ad6d2eb8f00" prot="public" static="no">
+        <name>LC_UNSUB_WP_ERR_EID</name>
+        <initializer>44</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error unsubscribing watchpoint: MID=0x%04X, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000044"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error unsubscribing watchpoint: MID=0x%04X, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an error is encountered unsubscribing to a watchpoint message ID</para><para>The <computeroutput>MID</computeroutput> field is the message ID, the <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__sb__api_8c_1a70ea901e65f03221e3787d73733db060" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Unsubscribe</ref> call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="752" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="752" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1a99b6bf02d703e90c2ecc8c2f7b3350c5" compoundref="lc__watch_8c" startline="67" endline="133">LC_CreateHashTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a5336b2b87a5a1d1c624b222b3fcd079f" prot="public" static="no">
+        <name>LC_SUB_WP_ERR_EID</name>
+        <initializer>45</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error subscribing watchpoint: MID=0x%04X, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000045"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error subscribing watchpoint: MID=0x%04X, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an error is encountered when subscribing to a watchpoint message iD</para><para>The <computeroutput>MID</computeroutput> field is the message ID, the <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="767" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="767" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1aab872d73326be7501c52ecaae5552b52" compoundref="lc__watch_8c" startline="142" endline="238">LC_AddWatchpoint</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ab79d33c512284d96da1136540afc759a" prot="public" static="no">
+        <name>LC_WRT_NO_SAVE_ERR_EID</name>
+        <initializer>46</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;WRT data NOT saved to CDS on exit, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000046"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;WRT data NOT saved to CDS on exit, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the watchpoint results table (WRT) data could not be saved to the CDS on application exit.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__es_8h_1a4e188008567eae18b36d80408f34e8f9" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_CopyToCDS</ref> call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="783" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="783" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a2792d98041733619a8004b19ccf9b1ef" compoundref="lc__cmds_8c" startline="1137" endline="1184">LC_UpdateTaskCDS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a45509bb09a08c1b4b59d1d79fa99099d" prot="public" static="no">
+        <name>LC_ART_NO_SAVE_ERR_EID</name>
+        <initializer>47</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ART data NOT saved to CDS on exit, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000047"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ART data NOT saved to CDS on exit, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the actionpoint results table (ART) data could not be saved to the CDS on application exit.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__es_8h_1a4e188008567eae18b36d80408f34e8f9" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_CopyToCDS</ref> call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="799" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="799" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a2792d98041733619a8004b19ccf9b1ef" compoundref="lc__cmds_8c" startline="1137" endline="1184">LC_UpdateTaskCDS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a7d0f55d2a28a638ae3b34ff5725f59f7" prot="public" static="no">
+        <name>LC_APP_NO_SAVE_START_ERR_EID</name>
+        <initializer>48</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Application data NOT saved to CDS on startup, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000048"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Application data NOT saved to CDS on startup, RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the LC application data could not be saved to the CDS on application startup.</para><para>The <computeroutput>RC</computeroutput> field is the return code from the <ref refid="cfe__es_8h_1a4e188008567eae18b36d80408f34e8f9" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_CopyToCDS</ref> call that generated the error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="814" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="814" bodyend="-1"/>
+        <referencedby refid="lc__cmds_8h_1a2792d98041733619a8004b19ccf9b1ef" compoundref="lc__cmds_8c" startline="1137" endline="1184">LC_UpdateTaskCDS</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a8da45310ae5723ee2c9a738678c18b7a" prot="public" static="no">
+        <name>LC_MID_INF_EID</name>
+        <initializer>49</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Msg with unreferenced message ID rcvd: ID = 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000049"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Msg with unreferenced message ID rcvd: ID = 0x%04X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a software bus message has been received that isn&apos;t a recognized LC message and has no defined watchpoints referencing it&apos;s message ID</para><para>The <computeroutput>ID</computeroutput> field is the message ID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="829" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="829" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1ab440c20ea75c8b3f418b52abc8da8e23" compoundref="lc__watch_8c" startline="246" endline="323">LC_CheckMsgForWPs</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1aa773d0739f68ff03e61016828728ad3e" prot="public" static="no">
+        <name>LC_WP_DATATYPE_ERR_EID</name>
+        <initializer>50</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;WP has undefined data type: WP = %d, DataType = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000050"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;WP has undefined data type: WP = %d, DataType = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued whenever an undefined watchpoint data type identifier is detected</para><para>The <computeroutput>WP</computeroutput> field is the watchpoint number, the <computeroutput>DataType</computeroutput> field is the data type value that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="844" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="844" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1ad12e535a25095691f281eb41d1d77d3e" compoundref="lc__watch_8c" startline="884" endline="978">LC_GetSizedWPData</referencedby>
+        <referencedby refid="lc__watch_8h_1a75a9d72418617f8fd042643512bfbbbf" compoundref="lc__watch_8c" startline="455" endline="572">LC_OperatorCompare</referencedby>
+        <referencedby refid="lc__watch_8h_1a4acd49120c9e78940ae0d0268a12804a" compoundref="lc__watch_8c" startline="785" endline="862">LC_WPOffsetValid</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1afb852734c7ab653c42c799140edb4894" prot="public" static="no">
+        <name>LC_WP_OPERID_ERR_EID</name>
+        <initializer>51</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;WP has invalid operator ID: WP = %d, OperID = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000051"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;WP has invalid operator ID: WP = %d, OperID = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued whenever an undefined watchpoint operator identifier is detected</para><para>The <computeroutput>WP</computeroutput> field is the watchpoint number, the <computeroutput>OperID</computeroutput> field is the operator ID value that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="859" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="859" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1a2a2e97b3fdc06ae4b890c8046084d8da" compoundref="lc__watch_8c" startline="694" endline="777">LC_FloatCompare</referencedby>
+        <referencedby refid="lc__watch_8h_1a74722fc33938e1b80caafffccb2ca7cf" compoundref="lc__watch_8c" startline="580" endline="630">LC_SignedCompare</referencedby>
+        <referencedby refid="lc__watch_8h_1a31b37668a39bebc86b7e461168fd5b6f" compoundref="lc__watch_8c" startline="637" endline="687">LC_UnsignedCompare</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1af4232118af1e1b76c5609a8474d7de18" prot="public" static="no">
+        <name>LC_WP_NAN_ERR_EID</name>
+        <initializer>52</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;WP data value is a float NAN: WP = %d, Value = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000052"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;WP data value is a float NAN: WP = %d, Value = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a watchpoint is defined as a float type, but the extracted value would equate to a floating point NAN (not-a-number) value</para><para>The <computeroutput>WP</computeroutput> field is the watchpoint number, the <computeroutput>Value</computeroutput> field is the watchpoint value that triggered the error displayed as a 32 bit hexidecimal number. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="876" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="876" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1a2a2e97b3fdc06ae4b890c8046084d8da" compoundref="lc__watch_8c" startline="694" endline="777">LC_FloatCompare</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a1278adfff1d5625a242aab59ee32b41e" prot="public" static="no">
+        <name>LC_WP_OFFSET_ERR_EID</name>
+        <initializer>53</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;WP offset error: MID = %d, WP = %d, Offset = %d, DataSize = %d, MsgLen = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000053"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;WP offset error: MID = %d, WP = %d, Offset = %d, DataSize = %d, MsgLen = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a watchpoint offset value extends past the end of the message as reported by the <ref refid="cfe__sb__util_8c_1ac32b86cf9e1d12a547792853c35f6aa1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_GetTotalMsgLength</ref> function</para><para>The <computeroutput>MID</computeroutput> field is the message ID, the <computeroutput>WP</computeroutput> field is the watchpoint number, the <computeroutput>Offset</computeroutput> field is the watchpoint offset, the <computeroutput>DataSize</computeroutput> field is the size of the watchpoint data in bytes, the <computeroutput>MsgLen</computeroutput> field is the reported message length from <ref refid="cfe__sb__util_8c_1ac32b86cf9e1d12a547792853c35f6aa1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_GetTotalMsgLength</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="894" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="894" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1a4acd49120c9e78940ae0d0268a12804a" compoundref="lc__watch_8c" startline="785" endline="862">LC_WPOffsetValid</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a98880682ba32f941d813caa1090adeb6" prot="public" static="no">
+        <name>LC_WDTVAL_FPERR_EID</name>
+        <initializer>54</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;WDT verify float err: WP = %d, Err = %d, ComparisonValue = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000054"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;WDT verify float err: WP = %d, Err = %d, ComparisonValue = 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued on the first error when a table validation fails for a watchpoint definition table (WDT) load and the error is a failed floating point check. This error is caused when the data type for a wachpoint definition is floating point and the comparison value equates to a floating point NAN (not-a-number) or infinite value.</para><para>The <computeroutput>WP</computeroutput> field is the watchpoint number, the <computeroutput>Err</computeroutput> field is an error identifier, the <computeroutput>ComparisonValue</computeroutput> field contains the data that triggered the error displayed as a 32 bit hexadecimal number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="914" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="914" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1abf6cf8d9c9ec77aa8a3210c1ec7d3225" compoundref="lc__watch_8c" startline="985" endline="1130">LC_ValidateWDT</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a7cbdf2847f4f3e705711a503d0274a36" prot="public" static="no">
+        <name>LC_WDTVAL_ERR_EID</name>
+        <initializer>55</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;WDT verify err: WP = %d, Err = %d, DType = %d, Oper = %d, MID = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000055"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;WDT verify err: WP = %d, Err = %d, DType = %d, Oper = %d, MID = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued on the first error when a table validation fails for a watchpoint definition table (WDT) load and the error is NOT a failed floating point check.</para><para>The <computeroutput>WP</computeroutput> field is the watchpoint number and the other fields are from that watchpoint&apos;s definition table entry that failed validation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="930" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="930" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1abf6cf8d9c9ec77aa8a3210c1ec7d3225" compoundref="lc__watch_8c" startline="985" endline="1130">LC_ValidateWDT</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a44b541c902b35ec3543444143773798d" prot="public" static="no">
+        <name>LC_WDTVAL_INF_EID</name>
+        <initializer>56</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;WDT verify results: good = %d, bad = %d, unused = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000056"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;WDT verify results: good = %d, bad = %d, unused = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a table validation has been completed for a watchpoint definition table (WDT) load</para><para>The <computeroutput>good</computeroutput> field is number of entries that passed, the <computeroutput>bad</computeroutput> field is number of entries that failed, the <computeroutput>unused</computeroutput> field is the number of entries that weren&apos;t checked because they were marked unused. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="947" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="947" bodyend="-1"/>
+        <referencedby refid="lc__watch_8h_1abf6cf8d9c9ec77aa8a3210c1ec7d3225" compoundref="lc__watch_8c" startline="985" endline="1130">LC_ValidateWDT</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ac246ee0580ff26ff341a0f4b2a084d92" prot="public" static="no">
+        <name>LC_APSAMPLE_CURR_ERR_EID</name>
+        <initializer>57</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Sample AP error, invalid current AP state: AP = %d, State = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000057"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Sample AP error, invalid current AP state: AP = %d, State = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the <ref refid="lc__msgids_8h_1a156d2d4b7fa00933aa4f34253f8dfe74" kindref="member">LC_SAMPLE_AP_MID</ref> message has been received and the current state for the specified actionpoint state is either <ref refid="lc__msgdefs_8h_1ac156605f5aaa3c12b9c2ad2af5b28569" kindref="member">LC_ACTION_NOT_USED</ref> or <ref refid="lc__msgdefs_8h_1a96216b9bd442bbfb94406364260ea711" kindref="member">LC_APSTATE_PERMOFF</ref>.</para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number, the <computeroutput>state</computeroutput> field is the current state of the actionpoint </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="963" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="963" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1aa14577d681d2838955e5f46961b80d36" compoundref="lc__action_8c" startline="36" endline="81">LC_SampleAPs</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1af892b45575d16b77cb0d801446b86b30" prot="public" static="no">
+        <name>LC_AP_PASSTOFAIL_INF_EID</name>
+        <initializer>58</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;AP state change from PASS to FAIL: AP = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000058"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;AP state change from PASS to FAIL: AP = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an actionpoint evaluation transitions from <ref refid="lc__tbldefs_8h_1a0d820b4ac78559654a530fca07d3618d" kindref="member">LC_ACTION_PASS</ref> to <ref refid="lc__tbldefs_8h_1a9b113f330c8222236cf4e92732e024c5" kindref="member">LC_ACTION_FAIL</ref></para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number that transitioned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="977" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="977" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1aed82bf20a64eb4f149d664ba5dfbf64f" compoundref="lc__action_8c" startline="88" endline="296">LC_SampleSingleAP</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a057f257a21408a416ea4e82b51a56c29" prot="public" static="no">
+        <name>LC_PASSIVE_FAIL_DBG_EID</name>
+        <initializer>59</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;AP failed while LC App passive: AP = %d, FailCount = %d, RTS = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000059"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;AP failed while LC App passive: AP = %d, FailCount = %d, RTS = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an actionpoint fails evaluation while the LC task operating state is <ref refid="lc__msgdefs_8h_1aee2ca039f888b9e78e1aab09abc358a4" kindref="member">LC_STATE_PASSIVE</ref></para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number, the <computeroutput>FailCount</computeroutput> field is how many times this actionpoint has failed, the <computeroutput>RTS</computeroutput> field is the RTS that wasn&apos;t initiated because LC was passive. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="993" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="993" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1aed82bf20a64eb4f149d664ba5dfbf64f" compoundref="lc__action_8c" startline="88" endline="296">LC_SampleSingleAP</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a138211bcba823cafcebafe0c2d44254a" prot="public" static="no">
+        <name>LC_AP_PASSIVE_FAIL_INF_EID</name>
+        <initializer>60</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;AP failed while passive: AP = %d, FailCount = %d, RTS = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000060"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;AP failed while passive: AP = %d, FailCount = %d, RTS = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an actionpoint fails evaluation while the actionpoint state is <ref refid="lc__msgdefs_8h_1a50c3fd705ae749e6b015d926e4183c54" kindref="member">LC_APSTATE_PASSIVE</ref></para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number, the <computeroutput>FailCount</computeroutput> field is how many times this actionpoint has failed, the <computeroutput>RTS</computeroutput> field is the RTS that wasn&apos;t initiated because the actionpoint was passive. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1009" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1009" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1aed82bf20a64eb4f149d664ba5dfbf64f" compoundref="lc__action_8c" startline="88" endline="296">LC_SampleSingleAP</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a39930e6cb01c1e9cf20fe12ae106f2c8" prot="public" static="no">
+        <name>LC_AP_FAILTOPASS_INF_EID</name>
+        <initializer>61</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;AP state change from FAIL to PASS: AP = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000061"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;AP state change from FAIL to PASS: AP = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an actionpoint evaluation transitions from <ref refid="lc__tbldefs_8h_1a9b113f330c8222236cf4e92732e024c5" kindref="member">LC_ACTION_FAIL</ref> to <ref refid="lc__tbldefs_8h_1a0d820b4ac78559654a530fca07d3618d" kindref="member">LC_ACTION_PASS</ref></para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number that transitioned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1023" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1023" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1aed82bf20a64eb4f149d664ba5dfbf64f" compoundref="lc__action_8c" startline="88" endline="296">LC_SampleSingleAP</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a37a2fd62ba99ed8c413ad337b6eac12e" prot="public" static="no">
+        <name>LC_ACTION_ERROR_ERR_EID</name>
+        <initializer>62</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;AP evaluated to error: AP = %d, Result = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000062"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;AP evaluated to error: AP = %d, Result = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an actionpoint evaluation results in <ref refid="lc__tbldefs_8h_1a69b1f15ea8bd9f62b4f3ea9eab7dcfa6" kindref="member">LC_ACTION_ERROR</ref></para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number, the <computeroutput>Result</computeroutput> field is the evaluation value that triggered the error </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1038" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1038" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1aed82bf20a64eb4f149d664ba5dfbf64f" compoundref="lc__action_8c" startline="88" endline="296">LC_SampleSingleAP</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1ad0f3d4fdd908a92207d5a092afa2203a" prot="public" static="no">
+        <name>LC_INVALID_RPN_ERR_EID</name>
+        <initializer>63</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;AP has illegal RPN expression: AP = %d, LastOperand = %d, StackPtr = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000063"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;AP has illegal RPN expression: AP = %d, LastOperand = %d, StackPtr = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an illegal Reverse Polish Notation (RPN) expression is detected during an actionpoint evaluation</para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number, the <computeroutput>LastOperand</computeroutput> field is the operand when the error occured, the <computeroutput>StackPtr</computeroutput> field is the value of the equation stack pointer when the error occured. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1054" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1054" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1abadbfde7b325bbc8d3f73c70471b3245" compoundref="lc__action_8c" startline="311" endline="512">LC_EvaluateRPN</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a706db69bec0a68d2799e48901aaa94b2" prot="public" static="no">
+        <name>LC_ADTVAL_RPNERR_EID</name>
+        <initializer>64</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ADT verify RPN err: AP = %d, Index = %d, StackDepth = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000064"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ADT verify RPN err: AP = %d, Index = %d, StackDepth = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued on the first error when a table validation fails for a actionpoint definition table (ADT) load and the error is a failed RPN equation check.</para><para>The <computeroutput>AP</computeroutput> field is the watchpoint number, the <computeroutput>Index</computeroutput> field is the index into the equation where the error occurred, and the <computeroutput>StackDepth</computeroutput> field contains the RPN stack index when the error occurred. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1071" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1071" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1a337165fbbfd418481f55ea0828d45075" compoundref="lc__action_8c" startline="519" endline="646">LC_ValidateADT</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a377133b13f7238f713c6e2797aefa686" prot="public" static="no">
+        <name>LC_ADTVAL_ERR_EID</name>
+        <initializer>65</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ADT verify err: AP = %d, Err = %d, State = %d, RTS = %d, FailCnt = %d, EvtType = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000065"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ADT verify err: AP = %d, Err = %d, State = %d, RTS = %d, FailCnt = %d, EvtType = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued on the first error when a table validation fails for an actioinpoint definition table (ADT) load and the error is NOT a failed RPN equation check.</para><para>The <computeroutput>AP</computeroutput> field is the actionpoint number and the other fields are from that actionpoint&apos;s definition table entry that failed validation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1087" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1087" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1a337165fbbfd418481f55ea0828d45075" compoundref="lc__action_8c" startline="519" endline="646">LC_ValidateADT</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a23d89d65d057abafa6ee928ed837397d" prot="public" static="no">
+        <name>LC_ADTVAL_INF_EID</name>
+        <initializer>66</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ADT verify results: good = %d, bad = %d, unused = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000066"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ADT verify results: good = %d, bad = %d, unused = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a table validation has been completed for an actionpoint definition table (ADT) load</para><para>The <computeroutput>good</computeroutput> field is number of entries that passed, the <computeroutput>bad</computeroutput> field is number of entries that failed, the <computeroutput>unused</computeroutput> field is the number of entries that weren&apos;t checked because they were marked unused. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1104" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1104" bodyend="-1"/>
+        <referencedby refid="lc__action_8h_1a337165fbbfd418481f55ea0828d45075" compoundref="lc__action_8c" startline="519" endline="646">LC_ValidateADT</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a1b7db020c5e971dff37992c8e6ee0131" prot="public" static="no">
+        <name>LC_CFCALL_ERR_EID</name>
+        <initializer>67</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Unexpected LC_CustomFunction call: WP = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000067"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unexpected LC_CustomFunction call: WP = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the mission specific custom function /LC_CustomFunction is called with an unexpected watchpoint ID</para><para>The <computeroutput>WP</computeroutput> field is the watchpoint number that generated the call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1120" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lc__events_8h_1a2c9b9e7477adabc6409522ae731809e1" prot="public" static="no">
+        <name>LC_BASE_AP_EID</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Base event ID for events defined in the Actionpoint Definition Table&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Type: User defined in Actionpoint Definition Table</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The actionpoint base event ID is designed to avoid conflicts between the event ID&apos;s defined above for use by the LC application and the user defined event ID&apos;s in the actionpoint table.</para><para>These events are generated when the evaluation of an actionpoint results in sending a command to the stored command (SC) processor to start a real time command sequence (RTS). The event text is user defined and specific to the particular actionpoint.</para><para>Note that user defined event ID&apos;s can be easily recognized if the base number is easily recognizable. For example, using the value 1000 for the base event ID and using the actionpoint table index as the offset portion creates an obvious correlation. Thus, if an LC event ID is 1025 then it is immediately apparent that the event is the user defined event for actionpoint table index 25. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/lc/fsw/src/lc_events.h" line="1144" column="9" bodyfile="apps/lc/fsw/src/lc_events.h" bodystart="1144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>lc_events.h<sp/>1.3<sp/>2017/01/22<sp/>17:24:47EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>Specification<sp/>for<sp/>the<sp/>CFS<sp/>Limit<sp/>Checker<sp/>(LC)<sp/>event<sp/>identifers.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_lc_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_lc_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="lc__events_8h_1a8e2a474eb5aa7005744ea2ccc9260ef0" refkind="member"><highlight class="preprocessor">#define<sp/>LC_TASK_EXIT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="lc__events_8h_1ac0d83d51db7733c5763be480a7429169" refkind="member"><highlight class="preprocessor">#define<sp/>LC_INIT_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="lc__events_8h_1a1c87e3e2ee724d04dedae475e38f1567" refkind="member"><highlight class="preprocessor">#define<sp/>LC_CR_PIPE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="lc__events_8h_1af092f7d40a59fc22aa7271f23be2f3fc" refkind="member"><highlight class="preprocessor">#define<sp/>LC_SUB_HK_REQ_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="lc__events_8h_1a5417a3bee72e6d8dd7b08f6bb06ee920" refkind="member"><highlight class="preprocessor">#define<sp/>LC_SUB_GND_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="lc__events_8h_1a34f8c8f4172a6b48650037e3c49bcde9" refkind="member"><highlight class="preprocessor">#define<sp/>LC_SUB_SAMPLE_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="lc__events_8h_1a76d9c76ccb3f273cbe54649ef36984a5" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WDT_REGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="lc__events_8h_1a0939a81679b7b971581d6ac494fe9431" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WDT_REREGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="lc__events_8h_1a33457a7ed62d62d7b09740e9bb5be188" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ADT_REGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="lc__events_8h_1a3c3ad472acad745704d25a5547588cef" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WRT_REGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="lc__events_8h_1ace455b7c71c136e4df79eed6f117f8c4" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ART_REGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="lc__events_8h_1ae2710170e55ebfc3a014ed0f2c07b3ed" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WRT_CDS_REGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="lc__events_8h_1a224b82c92d4c58e3092404add104f44d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ART_CDS_REGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="lc__events_8h_1a3024c76845db56dacf01ac250c5b297d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APP_CDS_REGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="lc__events_8h_1ab46ce6fa8710561c03f0b5d3b0198980" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WDT_LOAD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="lc__events_8h_1a773aef28784314ce441f2065848e6f6b" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ADT_LOAD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="lc__events_8h_1a67a89d19f665dd0050b5537a4740c707" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WRT_GETADDR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="lc__events_8h_1a64b0584b958be3bbdf3e6fcbb4e4f1fb" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ART_GETADDR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327" refid="lc__events_8h_1a2f19b1ed66a33bf5765c5ea5cb758dd0" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WDT_GETADDR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="lc__events_8h_1a697e7a0613fb5917ae33f9bd874e4ae4" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ADT_GETADDR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364" refid="lc__events_8h_1a3b2f685b86e8dab5e02c9a121f328581" refkind="member"><highlight class="preprocessor">#define<sp/>LC_CDS_RESTORED_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398" refid="lc__events_8h_1ab4ca77ab15fc9a0a96a93ab6b53e3bdf" refkind="member"><highlight class="preprocessor">#define<sp/>LC_CDS_UPDATED_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426" refid="lc__events_8h_1a41c17d9467fa019fff2b2808fb8c38f8" refkind="member"><highlight class="preprocessor">#define<sp/>LC_CDS_DISABLED_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="lc__events_8h_1a86cf139315d3cc1c683ec9fdb10e65c6" refkind="member"><highlight class="preprocessor">#define<sp/>LC_CC_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="456" refid="lc__events_8h_1a4d931c459253dbd97dc4ddb7f016bb7d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSAMPLE_APNUM_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472" refid="lc__events_8h_1ac75826f2a18a3508bb9c72793ca79d75" refkind="member"><highlight class="preprocessor">#define<sp/>LC_NOOP_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484" refid="lc__events_8h_1a66516eba1b295fbc8503fd7c80e8babc" refkind="member"><highlight class="preprocessor">#define<sp/>LC_RESET_DBG_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>27</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499" refid="lc__events_8h_1a70c521927aee68fa6dfcadd0ad962e66" refkind="member"><highlight class="preprocessor">#define<sp/>LC_LCSTATE_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="514" refid="lc__events_8h_1ad2d5c41fb4db0741576b288bd52776cd" refkind="member"><highlight class="preprocessor">#define<sp/>LC_LCSTATE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>29</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"></highlight></codeline>
+<codeline lineno="530" refid="lc__events_8h_1a48442f0766e3cbea03c5d0da37176dc5" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSTATE_NEW_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight></codeline>
+<codeline lineno="548" refid="lc__events_8h_1a3562c85b42f90a9524564e5b17604e69" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSTATE_CURR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563" refid="lc__events_8h_1aa33921533f2e9ad4949e3fbed3c8157f" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSTATE_APNUM_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="564"><highlight class="normal"></highlight></codeline>
+<codeline lineno="579" refid="lc__events_8h_1a67e8ec527bf8f595bbc3b5e3b6e0096a" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSTATE_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="580"><highlight class="normal"></highlight></codeline>
+<codeline lineno="594" refid="lc__events_8h_1aa858905d2fe7e077f3359401932e2b94" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APOFF_APNUM_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>34</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="611" refid="lc__events_8h_1a6d4ddf91c861d70a391aa0e205fe7d9d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APOFF_CURR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>35</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="626" refid="lc__events_8h_1a7fafdacc1a8f6e7f15358dc9fda5fd66" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APOFF_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="627"><highlight class="normal"></highlight></codeline>
+<codeline lineno="641" refid="lc__events_8h_1a9e5c81a7536fab42c76a04bb2896ac71" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSTATS_APNUM_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>37</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight></codeline>
+<codeline lineno="656" refid="lc__events_8h_1af6bce5e25f4fffc3f74cb0d12d4cd89d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSTATS_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="657"><highlight class="normal"></highlight></codeline>
+<codeline lineno="671" refid="lc__events_8h_1a4a07ddf45073775119e7a20a0a2b4628" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WPSTATS_WPNUM_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>39</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="672"><highlight class="normal"></highlight></codeline>
+<codeline lineno="686" refid="lc__events_8h_1a22c431e469c87acbc037edad627859ff" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WPSTATS_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703" refid="lc__events_8h_1a3c193b6ea414b8345279368ab42fb696" refkind="member"><highlight class="preprocessor">#define<sp/>LC_HKREQ_LEN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight></codeline>
+<codeline lineno="720" refid="lc__events_8h_1aed9c5d548741f67f32ba053e017b3baa" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSAMPLE_LEN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight></codeline>
+<codeline lineno="737" refid="lc__events_8h_1a88727dabc3531b3f0a6421a476a8190a" refkind="member"><highlight class="preprocessor">#define<sp/>LC_LEN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight></codeline>
+<codeline lineno="752" refid="lc__events_8h_1a3188fd5869e40de65ee08ad6d2eb8f00" refkind="member"><highlight class="preprocessor">#define<sp/>LC_UNSUB_WP_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="753"><highlight class="normal"></highlight></codeline>
+<codeline lineno="767" refid="lc__events_8h_1a5336b2b87a5a1d1c624b222b3fcd079f" refkind="member"><highlight class="preprocessor">#define<sp/>LC_SUB_WP_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>45</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="768"><highlight class="normal"></highlight></codeline>
+<codeline lineno="783" refid="lc__events_8h_1ab79d33c512284d96da1136540afc759a" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WRT_NO_SAVE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>46</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="784"><highlight class="normal"></highlight></codeline>
+<codeline lineno="799" refid="lc__events_8h_1a45509bb09a08c1b4b59d1d79fa99099d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ART_NO_SAVE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>47</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="800"><highlight class="normal"></highlight></codeline>
+<codeline lineno="814" refid="lc__events_8h_1a7d0f55d2a28a638ae3b34ff5725f59f7" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APP_NO_SAVE_START_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="815"><highlight class="normal"></highlight></codeline>
+<codeline lineno="829" refid="lc__events_8h_1a8da45310ae5723ee2c9a738678c18b7a" refkind="member"><highlight class="preprocessor">#define<sp/>LC_MID_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>49</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="830"><highlight class="normal"></highlight></codeline>
+<codeline lineno="844" refid="lc__events_8h_1aa773d0739f68ff03e61016828728ad3e" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WP_DATATYPE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="845"><highlight class="normal"></highlight></codeline>
+<codeline lineno="859" refid="lc__events_8h_1afb852734c7ab653c42c799140edb4894" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WP_OPERID_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>51</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="860"><highlight class="normal"></highlight></codeline>
+<codeline lineno="876" refid="lc__events_8h_1af4232118af1e1b76c5609a8474d7de18" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WP_NAN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>52</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="877"><highlight class="normal"></highlight></codeline>
+<codeline lineno="894" refid="lc__events_8h_1a1278adfff1d5625a242aab59ee32b41e" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WP_OFFSET_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>53</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="895"><highlight class="normal"></highlight></codeline>
+<codeline lineno="914" refid="lc__events_8h_1a98880682ba32f941d813caa1090adeb6" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WDTVAL_FPERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>54</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="915"><highlight class="normal"></highlight></codeline>
+<codeline lineno="930" refid="lc__events_8h_1a7cbdf2847f4f3e705711a503d0274a36" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WDTVAL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>55</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="931"><highlight class="normal"></highlight></codeline>
+<codeline lineno="947" refid="lc__events_8h_1a44b541c902b35ec3543444143773798d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_WDTVAL_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>56</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="948"><highlight class="normal"></highlight></codeline>
+<codeline lineno="963" refid="lc__events_8h_1ac246ee0580ff26ff341a0f4b2a084d92" refkind="member"><highlight class="preprocessor">#define<sp/>LC_APSAMPLE_CURR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>57</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="964"><highlight class="normal"></highlight></codeline>
+<codeline lineno="977" refid="lc__events_8h_1af892b45575d16b77cb0d801446b86b30" refkind="member"><highlight class="preprocessor">#define<sp/>LC_AP_PASSTOFAIL_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>58</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="978"><highlight class="normal"></highlight></codeline>
+<codeline lineno="993" refid="lc__events_8h_1a057f257a21408a416ea4e82b51a56c29" refkind="member"><highlight class="preprocessor">#define<sp/>LC_PASSIVE_FAIL_DBG_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>59</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="994"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1009" refid="lc__events_8h_1a138211bcba823cafcebafe0c2d44254a" refkind="member"><highlight class="preprocessor">#define<sp/>LC_AP_PASSIVE_FAIL_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1010"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1023" refid="lc__events_8h_1a39930e6cb01c1e9cf20fe12ae106f2c8" refkind="member"><highlight class="preprocessor">#define<sp/>LC_AP_FAILTOPASS_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>61</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1024"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1038" refid="lc__events_8h_1a37a2fd62ba99ed8c413ad337b6eac12e" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ACTION_ERROR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>62</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1039"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1054" refid="lc__events_8h_1ad0f3d4fdd908a92207d5a092afa2203a" refkind="member"><highlight class="preprocessor">#define<sp/>LC_INVALID_RPN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>63</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1055"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1071" refid="lc__events_8h_1a706db69bec0a68d2799e48901aaa94b2" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ADTVAL_RPNERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1072"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1087" refid="lc__events_8h_1a377133b13f7238f713c6e2797aefa686" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ADTVAL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>65</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1088"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1104" refid="lc__events_8h_1a23d89d65d057abafa6ee928ed837397d" refkind="member"><highlight class="preprocessor">#define<sp/>LC_ADTVAL_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>66</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1120" refid="lc__events_8h_1a1b7db020c5e971dff37992c8e6ee0131" refkind="member"><highlight class="preprocessor">#define<sp/>LC_CFCALL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>67</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1144" refid="lc__events_8h_1a2c9b9e7477adabc6409522ae731809e1" refkind="member"><highlight class="preprocessor">#define<sp/>LC_BASE_AP_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_lc_events_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1148"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1149"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1150"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/lc/fsw/src/lc_events.h"/>
+  </compounddef>
+</doxygen>

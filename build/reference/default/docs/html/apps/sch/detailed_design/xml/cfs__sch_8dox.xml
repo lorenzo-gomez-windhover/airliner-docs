@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfs__sch_8dox" kind="file" language="C++">
+    <compoundname>cfs_sch.dox</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="635"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/><sp/><sp/><sp/>Type;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Activity<sp/>Type<sp/>may<sp/>be<sp/>SCH_ACTIVITY_NONE<sp/>or<sp/>SCH_ACTIVITY_SEND_MSG<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/>Frequency;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>seconds<sp/>between<sp/>Activity<sp/>execution<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="637"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/>Remainder;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Seconds<sp/>offset<sp/>to<sp/>perform<sp/>Activity<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/>MessageIndex;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Byte<sp/>index<sp/>into<sp/>Message<sp/>Definition<sp/>Table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><sp/><sp/>GroupData;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Group<sp/>and<sp/>Multi-Group<sp/>membership<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/>}<sp/><ref refid="struct_s_c_h___schedule_entry__t" kindref="compound">SCH_ScheduleEntry_t</ref>;</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/>\endverbatim</highlight></codeline>
+<codeline lineno="642"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="643"><highlight class="normal"><sp/><sp/>The<sp/>first<sp/>element,<sp/>\c<sp/>EnableState,<sp/>identifies<sp/>whether<sp/>the<sp/>specified<sp/>Activity<sp/>is<sp/>currently<sp/></highlight></codeline>
+<codeline lineno="644"><highlight class="normal"><sp/><sp/>\link<sp/>#<ref refid="sch__msgdefs_8h_1a3c3c3058724b68ff42107cff3fbeeeaa" kindref="member">SCH_UNUSED</ref><sp/>unspecified<sp/>\endlink<sp/>(i.e.<sp/>-<sp/>unused),<sp/>\link<sp/>#<ref refid="sch__msgdefs_8h_1a4863bca80e851a3a246e36b1b298db73" kindref="member">SCH_ENABLED</ref><sp/>Enabled<sp/>\endlink</highlight></codeline>
+<codeline lineno="645"><highlight class="normal"><sp/><sp/>(i.e.<sp/>-<sp/>the<sp/>Activity<sp/>will<sp/>be<sp/>acted<sp/>upon<sp/>once<sp/>SCH<sp/>has<sp/>loaded<sp/>the<sp/>table),<sp/>or<sp/></highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/>\link<sp/>#<ref refid="sch__msgdefs_8h_1a1bb9b6a778c72103f9c48c673496f7ef" kindref="member">SCH_DISABLED</ref><sp/>Disabled<sp/>\endlink<sp/>(i.e.<sp/>-<sp/>the<sp/>Activity<sp/>will<sp/>NOT<sp/>be<sp/>acted<sp/>upon<sp/>once<sp/></highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/>SCH<sp/>has<sp/>loaded<sp/>the<sp/>table).</highlight></codeline>
+<codeline lineno="648"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="649"><highlight class="normal"><sp/><sp/>The<sp/>second<sp/>element,<sp/>\c<sp/>Type,<sp/>specifies<sp/>whether<sp/>the<sp/>Activity<sp/>is<sp/>to<sp/>\link<sp/>#<ref refid="sch__msgdefs_8h_1a343748e9d5952c672ff8bd29df1759d2" kindref="member">SCH_ACTIVITY_SEND_MSG</ref><sp/></highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/>send<sp/>a<sp/>message<sp/>\endlink<sp/>or<sp/>to<sp/>do<sp/>\link<sp/>#<ref refid="sch__msgdefs_8h_1a72d6c6d22c9c99a7646f57c547afb722" kindref="member">SCH_ACTIVITY_NONE</ref><sp/>nothing<sp/>\endlink.<sp/><sp/>This</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/>parameter<sp/>can<sp/>be<sp/>used<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>future<sp/>expansion<sp/>of<sp/>Activity<sp/>types<sp/>that<sp/>may<sp/>be<sp/>added<sp/>at<sp/>a<sp/>later<sp/>date.</highlight></codeline>
+<codeline lineno="652"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/>The<sp/>third<sp/>element,<sp/>\c<sp/>Frequency,<sp/>specifies<sp/>the<sp/>number<sp/>of<sp/>Major<sp/>Frames<sp/>that<sp/>need<sp/>to<sp/>occur<sp/>between</highlight></codeline>
+<codeline lineno="654"><highlight class="normal"><sp/><sp/>Activity<sp/>processing.<sp/><sp/>For<sp/>example,<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>equal<sp/>to<sp/>one<sp/>(1),<sp/>the<sp/>specified<sp/>Activity<sp/>will<sp/>occur<sp/></highlight></codeline>
+<codeline lineno="655"><highlight class="normal"><sp/><sp/>each<sp/>time<sp/>SCH<sp/>processes<sp/>the<sp/>table.<sp/><sp/>If<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>equal<sp/>to<sp/>two<sp/>(2),<sp/>the<sp/>specified<sp/>Activity<sp/>will<sp/>occur<sp/></highlight></codeline>
+<codeline lineno="656"><highlight class="normal"><sp/><sp/>every<sp/>other<sp/>time<sp/>SCH<sp/>processes<sp/>the<sp/>table,<sp/>etc.</highlight></codeline>
+<codeline lineno="657"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/>The<sp/>fourth<sp/>element,<sp/>\c<sp/>Remainder,<sp/>specifies<sp/>how<sp/>many<sp/>Major<sp/>Frames<sp/>need<sp/>to<sp/>occur<sp/>BEFORE<sp/>the<sp/>first<sp/>time</highlight></codeline>
+<codeline lineno="659"><highlight class="normal"><sp/><sp/>the<sp/>Activity<sp/>will<sp/>be<sp/>processed.<sp/><sp/>This<sp/>value<sp/>must<sp/>be<sp/>less<sp/>than<sp/>the<sp/>\c<sp/>Frequency<sp/>term<sp/>specified<sp/>above.</highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/>This<sp/>term<sp/>allows<sp/>the<sp/>user<sp/>to<sp/>stagger<sp/>events<sp/>that<sp/>occur<sp/>on<sp/>a<sp/>common<sp/>frequency<sp/>to<sp/>spread<sp/>the<sp/>CPU<sp/>load</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/>over<sp/>time.<sp/><sp/>For<sp/>example,<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>there<sp/>are<sp/>two<sp/>activities<sp/>whose<sp/>\c<sp/>Frequency<sp/>element<sp/>is<sp/>two,<sp/>one<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/>activity</highlight><highlight class="stringliteral">&apos;s<sp/>\c<sp/>Remainder<sp/>is<sp/>a<sp/>zero<sp/>(0)<sp/>and<sp/>the<sp/>other<sp/>is<sp/>a<sp/>one<sp/>(1),<sp/>then<sp/>each<sp/>Activity<sp/>would<sp/>occur<sp/>on</highlight></codeline>
+<codeline lineno="663"><highlight class="stringliteral"><sp/><sp/>the<sp/>second<sp/>the<sp/>other<sp/>does<sp/>not.</highlight></codeline>
+<codeline lineno="664"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="665"><highlight class="stringliteral"><sp/><sp/>The<sp/>fifth<sp/>element,<sp/>\c<sp/>MessageIndex,<sp/>indicates<sp/>which<sp/>message<sp/>entry<sp/>in<sp/>the<sp/>Message<sp/>Definition<sp/>Table<sp/>(see</highlight></codeline>
+<codeline lineno="666"><highlight class="stringliteral"><sp/><sp/>below)<sp/>is<sp/>to<sp/>be<sp/>transmitted<sp/>when<sp/>this<sp/>Activity<sp/>is<sp/>processed.</highlight></codeline>
+<codeline lineno="667"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="668"><highlight class="stringliteral"><sp/><sp/>The<sp/>last<sp/>element,<sp/>\c<sp/>GroupData,<sp/>allows<sp/>the<sp/>user<sp/>to<sp/>assign<sp/>the<sp/>Activity<sp/>a<sp/>Group<sp/>identifier<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="669"><highlight class="stringliteral"><sp/><sp/>also<sp/>designate<sp/>the<sp/>item<sp/>as<sp/>belonging<sp/>to<sp/>one<sp/>or<sp/>more<sp/>groups<sp/>of<sp/>groups.<sp/><sp/>The<sp/>\c<sp/>GroupData<sp/>element</highlight></codeline>
+<codeline lineno="670"><highlight class="stringliteral"><sp/><sp/>has<sp/>two<sp/>bit-fields<sp/>that<sp/>are<sp/>of<sp/>interest.<sp/><sp/>The<sp/>bit<sp/>structure<sp/>is<sp/>shown<sp/>below:<sp/>&lt;BR&gt;&lt;BR&gt;</highlight></codeline>
+<codeline lineno="671"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="672"><highlight class="stringliteral"><sp/><sp/>&lt;table<sp/>border=&quot;1&quot;<sp/>width=&quot;100%&quot;&gt;</highlight></codeline>
+<codeline lineno="673"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="674"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;</highlight></codeline>
+<codeline lineno="675"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;b&gt;MSB&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="676"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/>colspan=&quot;30&quot;&gt;&amp;nbsp;</highlight></codeline>
+<codeline lineno="677"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;</highlight></codeline>
+<codeline lineno="678"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;b&gt;LSB&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="679"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="680"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="681"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/>width=&quot;20&quot;&gt;&lt;b&gt;31&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="682"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;b&gt;30&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;29&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;28&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;27&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="683"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;b&gt;26&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;25&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;24&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;23&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="684"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;b&gt;22&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;21&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;20&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;19&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="685"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;b&gt;18&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;17&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;16&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;15&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="686"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;b&gt;14&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;13&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;12&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;11&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="687"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;b&gt;10&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;09&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;08&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;07&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="688"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;b&gt;06&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;05&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;04&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;03&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="689"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td&gt;&lt;b&gt;02&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;01&lt;/b&gt;&lt;/td&gt;<sp/>&lt;td&gt;&lt;b&gt;00&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="690"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="691"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;tr&gt;</highlight></codeline>
+<codeline lineno="692"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/>colspan=&quot;8&quot;&gt;</highlight></codeline>
+<codeline lineno="693"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;b&gt;Group<sp/>#<sp/>(1-255)&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="694"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;td<sp/>colspan=&quot;24&quot;&gt;</highlight></codeline>
+<codeline lineno="695"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;b&gt;Multi-Group<sp/>Bit<sp/>Mask&lt;/b&gt;&lt;/td&gt;</highlight></codeline>
+<codeline lineno="696"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/tr&gt;</highlight></codeline>
+<codeline lineno="697"><highlight class="stringliteral"><sp/><sp/>&lt;/table&gt;</highlight></codeline>
+<codeline lineno="698"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="699"><highlight class="stringliteral"><sp/><sp/>A<sp/>Group<sp/>Number,<sp/>ranging<sp/>from<sp/>1-255<sp/>(zero<sp/>if<sp/>no<sp/>group<sp/>ID<sp/>is<sp/>wanted),<sp/>can<sp/>be<sp/>assigned<sp/>to<sp/>any<sp/>number</highlight></codeline>
+<codeline lineno="700"><highlight class="stringliteral"><sp/><sp/>of<sp/>Activities.<sp/><sp/>When<sp/>that<sp/>group<sp/>number<sp/>is<sp/>used<sp/>in<sp/>a<sp/>\link<sp/>#SCH_ENABLE_GROUP_CC<sp/>Group<sp/>Enable/Disable<sp/></highlight></codeline>
+<codeline lineno="701"><highlight class="stringliteral"><sp/><sp/>Command<sp/>\endlink,<sp/>all<sp/>the<sp/>Activities<sp/>with<sp/>that<sp/>group<sp/>number<sp/>will<sp/>have<sp/>their<sp/>enable/disable<sp/>status<sp/></highlight></codeline>
+<codeline lineno="702"><highlight class="stringliteral"><sp/><sp/>changed<sp/>simultaneously.</highlight></codeline>
+<codeline lineno="703"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="704"><highlight class="stringliteral"><sp/><sp/>Similarly,<sp/>individual<sp/>bits<sp/>in<sp/>the<sp/>Multi-Group<sp/>Bit<sp/>Mask<sp/>can<sp/>be<sp/>set<sp/>to<sp/>one.<sp/><sp/>A<sp/>bit<sp/>mask<sp/>setting<sp/>one</highlight></codeline>
+<codeline lineno="705"><highlight class="stringliteral"><sp/><sp/>or<sp/>more<sp/>of<sp/>these<sp/>bits<sp/>used<sp/>in<sp/>an<sp/>\link<sp/>#SCH_ENABLE_GROUP_CC<sp/>Group<sp/>Enable/Disable<sp/>Command<sp/>\endlink<sp/></highlight></codeline>
+<codeline lineno="706"><highlight class="stringliteral"><sp/><sp/>will<sp/>cause<sp/>all<sp/>Activities<sp/>with<sp/>a<sp/>similar<sp/>bit<sp/>set<sp/>to<sp/>have<sp/>their<sp/>enable/disable<sp/>status<sp/>changed<sp/></highlight></codeline>
+<codeline lineno="707"><highlight class="stringliteral"><sp/><sp/>simultaneously.<sp/><sp/>This<sp/>essentially<sp/>allows<sp/>the<sp/>user<sp/>to<sp/>make<sp/>a<sp/>group<sp/>of<sp/>groups<sp/>and<sp/>to<sp/>treat<sp/>them<sp/>as<sp/></highlight></codeline>
+<codeline lineno="708"><highlight class="stringliteral"><sp/><sp/>a<sp/>single<sp/>group<sp/>in<sp/>a<sp/>command.</highlight></codeline>
+<codeline lineno="709"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="710"><highlight class="stringliteral"><sp/><sp/>If<sp/>the<sp/>user<sp/>wishes<sp/>to<sp/>leave<sp/>a<sp/>spot<sp/>empty<sp/>in<sp/>the<sp/>table,<sp/>ALL<sp/>fields<sp/>must<sp/>be<sp/>set<sp/>to<sp/>zero.<sp/><sp/>Any<sp/>values</highlight></codeline>
+<codeline lineno="711"><highlight class="stringliteral"><sp/><sp/>in<sp/>any<sp/>field<sp/>will<sp/>cause<sp/>the<sp/>table<sp/>to<sp/>be<sp/>rejected<sp/>as<sp/>corrupt.</highlight></codeline>
+<codeline lineno="712"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="713"><highlight class="stringliteral"><sp/><sp/>A<sp/>sample<sp/>Schedule<sp/>Definition<sp/>Table<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>\c<sp/>tables<sp/>sub-directory<sp/>for<sp/>the<sp/>SCH<sp/>App.</highlight></codeline>
+<codeline lineno="714"><highlight class="stringliteral"><sp/><sp/>This<sp/>sample<sp/>Schedule<sp/>Definition<sp/>Table<sp/>defines<sp/>a<sp/>default<sp/>configuration<sp/>for<sp/>a<sp/>complete<sp/>CFS<sp/>system.</highlight></codeline>
+<codeline lineno="715"><highlight class="stringliteral"><sp/><sp/>The<sp/>user<sp/>will<sp/>be<sp/>required<sp/>to<sp/>uncomment<sp/>out<sp/>those<sp/>CFS<sp/>Applications<sp/>they<sp/>wish<sp/>to<sp/>include<sp/>in<sp/>their</highlight></codeline>
+<codeline lineno="716"><highlight class="stringliteral"><sp/><sp/>configuration.</highlight></codeline>
+<codeline lineno="717"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="718"><highlight class="stringliteral"><sp/><sp/>&lt;H3&gt;Message<sp/>Definition<sp/>Table<sp/>(MDT)&lt;/H3&gt;</highlight></codeline>
+<codeline lineno="719"><highlight class="stringliteral"><sp/></highlight></codeline>
+<codeline lineno="720"><highlight class="stringliteral"><sp/><sp/>\verbatim</highlight></codeline>
+<codeline lineno="721"><highlight class="stringliteral"><sp/><sp/>typedef<sp/>struct</highlight></codeline>
+<codeline lineno="722"><highlight class="stringliteral"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="723"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>uint16<sp/><sp/><sp/>MessageBuffer[SCH_MAX_MSG_WORDS];<sp/>/*<sp/>Packed<sp/>Messages<sp/>*/</highlight></codeline>
+<codeline lineno="724"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="725"><highlight class="stringliteral"><sp/><sp/>}<sp/>SCH_MessageEntry_t;</highlight></codeline>
+<codeline lineno="726"><highlight class="stringliteral"><sp/><sp/>\endverbatim</highlight></codeline>
+<codeline lineno="727"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="728"><highlight class="stringliteral"><sp/><sp/>The<sp/>Message<sp/>Definition<sp/>Table<sp/>is<sp/>simply<sp/>an<sp/>array<sp/>of<sp/>fixed<sp/>length<sp/>byte<sp/>arrays<sp/>(i.e.<sp/>-<sp/>a<sp/>two</highlight></codeline>
+<codeline lineno="729"><highlight class="stringliteral"><sp/><sp/>dimensional<sp/>byte<sp/>array).<sp/><sp/>The<sp/>number<sp/>of<sp/>rows<sp/>in<sp/>the<sp/>array<sp/>is<sp/>defined<sp/>by<sp/>the<sp/>configuration</highlight></codeline>
+<codeline lineno="730"><highlight class="stringliteral"><sp/><sp/>parameter<sp/>#SCH_MAX_MESSAGES.<sp/><sp/>The<sp/>size<sp/>of<sp/>each<sp/>row<sp/>is<sp/>defined<sp/>by<sp/>the<sp/>configuration<sp/>parameter</highlight></codeline>
+<codeline lineno="731"><highlight class="stringliteral"><sp/><sp/>#SCH_MAX_MSG_WORDS.<sp/><sp/>Each<sp/>row<sp/>can<sp/>contain<sp/>the<sp/>binary<sp/>definition<sp/>of<sp/>a<sp/>single<sp/>message<sp/>the<sp/>user</highlight></codeline>
+<codeline lineno="732"><highlight class="stringliteral"><sp/><sp/>wishes<sp/>SCH<sp/>to<sp/>output<sp/>on<sp/>the<sp/>Software<sp/>Bus.<sp/><sp/>The<sp/>first<sp/>row<sp/>cannot<sp/>be<sp/>used<sp/>because<sp/>it<sp/>would<sp/>map</highlight></codeline>
+<codeline lineno="733"><highlight class="stringliteral"><sp/><sp/>to<sp/>the<sp/>&quot;Unused&quot;<sp/>parameter<sp/>of<sp/>zero<sp/>in<sp/>the<sp/>Schedule<sp/>Definition<sp/>Table.<sp/><sp/>The<sp/>index<sp/>for<sp/>each<sp/>following</highlight></codeline>
+<codeline lineno="734"><highlight class="stringliteral"><sp/><sp/>row<sp/>is<sp/>what<sp/>needs<sp/>to<sp/>be<sp/>specified<sp/>in<sp/>the<sp/>Schedule<sp/>Definition<sp/>Table<sp/>as<sp/>the<sp/>\c<sp/>MessageIndex<sp/>to</highlight></codeline>
+<codeline lineno="735"><highlight class="stringliteral"><sp/><sp/>assign<sp/>the<sp/>message<sp/>to<sp/>the<sp/>appropriate<sp/>Activity.</highlight></codeline>
+<codeline lineno="736"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="737"><highlight class="stringliteral"><sp/><sp/>A<sp/>sample<sp/>Message<sp/>Definition<sp/>Table<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>\c<sp/>tables<sp/>sub-directory<sp/>for<sp/>the<sp/>SCH<sp/>App.</highlight></codeline>
+<codeline lineno="738"><highlight class="stringliteral"><sp/><sp/>This<sp/>sample<sp/>Message<sp/>Definition<sp/>Table<sp/>contains<sp/>default<sp/>messages<sp/>used<sp/>for<sp/>a<sp/>complete<sp/>CFS<sp/>system.</highlight></codeline>
+<codeline lineno="739"><highlight class="stringliteral"><sp/><sp/>In<sp/>order<sp/>to<sp/>use<sp/>the<sp/>sample<sp/>Message<sp/>Definition<sp/>Table<sp/>for<sp/>a<sp/>full<sp/>up<sp/>CFS<sp/>system,<sp/>the<sp/>message</highlight></codeline>
+<codeline lineno="740"><highlight class="stringliteral"><sp/><sp/>definitions<sp/>must<sp/>be<sp/>uncommented<sp/>out.</highlight></codeline>
+<codeline lineno="741"><highlight class="stringliteral"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="742"><highlight class="stringliteral">**/</highlight></codeline>
+<codeline lineno="743"><highlight class="stringliteral"></highlight></codeline>
+    </programlisting>
+    <location file="apps/sch/docs/dox_src/users_guide/cfs_sch.dox"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_3_5" kind="page">
+    <compoundname>cfedeploy_3_5</compoundname>
+    <title>PC / Linux Platform</title>
+    <detaileddescription>
+<para><center> <heading level="4">cFE Core Configuration for the PC / Linux Platform </heading>
+</center></para><para><center> </center> <center> <bold> cfe-config.mak Settings </bold> </center> <table rows="5" cols="3"><row>
+<entry thead="no"><para><bold>cfe-config.mak variable </bold> </para></entry><entry thead="no"><para><bold>Required selection </bold> </para></entry><entry thead="no"><para><bold>Notes</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>HWARCH </para></entry><entry thead="no"><para>x86 </para></entry></row>
+<row>
+<entry thead="no"><para>PLATFORM </para></entry><entry thead="no"><para>pc </para></entry></row>
+<row>
+<entry thead="no"><para>OS </para></entry><entry thead="no"><para>linux </para></entry></row>
+<row>
+<entry thead="no"><para>BSP </para></entry><entry thead="no"><para>linux </para></entry></row>
+</table>
+</para><para><center> <heading level="4">How to run the cFE on the PC / Linux Platform </heading>
+</center></para><para><center> </center></para><para><orderedlist>
+<listitem>
+<para>Create the directory to hold the non-volatile applications. <verbatim>        $ mkdir /tmp/eedev0/apps</verbatim> </para></listitem>
+<listitem>
+<para>Change the extension of the files files listed in the startup script to <computeroutput>.so</computeroutput> (from the default of <computeroutput>.o</computeroutput>) </para></listitem>
+<listitem>
+<para>Copy the files listed in the startup script (and the startup script) to the non-volatile directory. <verbatim>        ...fsw/build/cpu1]$cp exe/ci.so /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/to.so /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/sch.so /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/tst_lib.so /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/cfe_es_startup.scr /tmp/eedev0/apps</verbatim> </para></listitem>
+<listitem>
+<para>To run the cFE, type the following: <verbatim>        ...fsw/build/cpu1]$ ./exe/core-linux.bin PO 1</verbatim> On Linux, the cFE uses POSIX Message Queues. Because of the default kernel configuration, this usually requires the core-linux.bin binary to run as the root user. So, it may be necessary to run the cFE on linux as follows: <verbatim>        .../fsw/build/cpu1]$ su
+        password: &lt;enter root password here&gt;
+        .../fsw/build/cpu1]# ./exe/core-linux.bin</verbatim> <bold>Note:</bold> See section called <ref refid="cfedeploy_3_6" kindref="compound">PC / Cygwin-Windows Platform</ref>. </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">Exception Handling </heading>
+</center></para><para><center> </center></para><para>This port does not install exception handlers. Exceptions will be caught by the operating system or debugger. The UNIX signal handler facility could be used to catch exceptions in the cFE.</para><para><center> <heading level="4">BSP Panic </heading>
+</center></para><para><center> </center></para><para>If the cFE core startup fails, the generic cFE code will call the #OS_BSPPanic routine. This is a target specific routine. If the cFE Startup fails and calls #OS_BSPPanic, this port will exit to the shell.</para><para><center> <heading level="4">Compressed file support </heading>
+</center></para><para><center> </center></para><para>The cFE supports loading compressed cFE Application files. The files must be compressed with the “gzip” utility. An example: “$ gzip ci.o “. This will produce the file “ci.o.gz”. When the cFE code detects the .gz file extension, it will uncompress the cFE application when loading it.</para><para>Next: <ref refid="cfedeploy_3_6" kindref="compound">PC / Cygwin-Windows Platform</ref> <bold>OR</bold> <ref refid="cfedeploy_3_7" kindref="compound">Notes on Parameters to starting the cFE in Linux, OS X, and Cygwin</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_3_4" kindref="compound">Macintosh / OS X Platform</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_3" kindref="compound">Target Specific Instructions</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

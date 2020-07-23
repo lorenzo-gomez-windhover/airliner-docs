@@ -1,0 +1,583 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="fm__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>fm_platform_cfg.h</compoundname>
+    <includedby refid="fm__msg_8h" local="yes">apps/fm/fsw/src/fm_msg.h</includedby>
+    <includedby refid="fm__app_8c" local="yes">apps/fm/fsw/src/fm_app.c</includedby>
+    <includedby refid="fm__verify_8h" local="yes">apps/fm/fsw/src/fm_verify.h</includedby>
+    <includedby refid="fm__child_8c" local="yes">apps/fm/fsw/src/fm_child.c</includedby>
+    <includedby refid="fm__cmds_8c" local="yes">apps/fm/fsw/src/fm_cmds.c</includedby>
+    <includedby refid="fm__tbl_8c" local="yes">apps/fm/fsw/src/fm_tbl.c</includedby>
+    <invincdepgraph>
+      <node id="456">
+        <label>apps/fm/fsw/src/fm_msg.h</label>
+        <link refid="fm__msg_8h"/>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+      </node>
+      <node id="457">
+        <label>apps/fm/fsw/src/fm_app.c</label>
+        <link refid="fm__app_8c"/>
+      </node>
+      <node id="460">
+        <label>apps/fm/fsw/src/fm_cmd_utils.c</label>
+        <link refid="fm__cmd__utils_8c"/>
+      </node>
+      <node id="461">
+        <label>apps/fm/fsw/src/fm_cmds.c</label>
+        <link refid="fm__cmds_8c"/>
+      </node>
+      <node id="462">
+        <label>apps/fm/fsw/src/fm_symbols.c</label>
+        <link refid="fm__symbols_8c"/>
+      </node>
+      <node id="455">
+        <label>apps/fm/fsw/platform_inc/fm_platform_cfg.h</label>
+        <link refid="fm_platform_cfg.h"/>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+      </node>
+      <node id="463">
+        <label>apps/fm/fsw/src/fm_tbl.c</label>
+        <link refid="fm__tbl_8c"/>
+      </node>
+      <node id="459">
+        <label>apps/fm/fsw/src/fm_child.c</label>
+        <link refid="fm__child_8c"/>
+      </node>
+      <node id="458">
+        <label>apps/fm/fsw/src/fm_child.h</label>
+        <link refid="fm__child_8h"/>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="464">
+        <label>apps/fm/fsw/src/fm_verify.h</label>
+        <link refid="fm__verify_8h"/>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fm__platform__cfg_8h_1acf7bdce9fed1c9b5b28a9aeda58e8fbd" prot="public" static="no">
+        <name>FM_CHILD_TASK_FLAGS</name>
+        <initializer><ref refid="osapi-os-core_8h_1a1059ea6f1266dde89975fcc5fe04fe33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_ENABLE_CORE_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="37" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3dd7c87e5bc7606add8e69323e0795f1" compoundref="fm__child_8c" startline="54" endline="101">FM_ChildInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a862365ab74e5604ccef25da38b439608" prot="public" static="no">
+        <name>FM_APP_NAME</name>
+        <initializer>&quot;FM&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000001"><xreftitle>Purpose</xreftitle><xrefdescription><para>File Manager Application Name</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition must match the name used at startup by the cFE Executive Services when creating the FM application. Note that application names are also an argument to certain cFE commands. For example, the application name is needed to access tables via cFE Table Services commands.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this name be defined, but otherwise places no limits on the definition. Refer to CFE Executive Services for specific information on limits related to application names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="53" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a2faac7be36efa1157f3691744db72631" prot="public" static="no">
+        <name>FM_APP_PIPE_NAME</name>
+        <initializer>&quot;FM_CMD_PIPE&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000002"><xreftitle>Purpose</xreftitle><xrefdescription><para>File Manager Command Pipe Name</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition is the name used at startup when creating a cFE Software Bus command pipe for the FM application.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this name be defined, but otherwise places no limits on the definition. Refer to CFE Software Bus Services for specific information on limits related to pipe names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="67" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1a1d291a92a04c7fd196ac554c1d5c33b0" compoundref="fm__app_8c" startline="153" endline="232">FM_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1ae330024c3b3e75ce430ad99d377ea980" prot="public" static="no">
+        <name>FM_APP_PIPE_DEPTH</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000003"><xreftitle>Purpose</xreftitle><xrefdescription><para>File Manager Command Pipe Depth</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the total number of packets that may queue in the FM command pipe. The limit for individual message types in the queue is the default cFE Software Bus subscription limit of four.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The FM application limits this value to be no less than 4 and no greater than 20 packets at any one time in the command pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="82" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1a1d291a92a04c7fd196ac554c1d5c33b0" compoundref="fm__app_8c" startline="153" endline="232">FM_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1af09fc52078ada43006c2f946aab790b4" prot="public" static="no">
+        <name>FM_MISSION_REV</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mission specific version number for FM application</para><para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;fm_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="98" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1a1d291a92a04c7fd196ac554c1d5c33b0" compoundref="fm__app_8c" startline="153" endline="232">FM_AppInit</referencedby>
+        <referencedby refid="fm__cmds_8h_1a2b2439666479dcfcb3cc582d8d3ba532" compoundref="fm__cmds_8c" startline="45" endline="64">FM_NoopCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1ac38bb49fee383cd80e17f0d8b68a1bc4" prot="public" static="no">
+        <name>FM_DIR_LIST_FILE_DEFNAME</name>
+        <initializer>&quot;/ram/fm_dirlist.out&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000004"><xreftitle>Purpose</xreftitle><xrefdescription><para>Default Directory List Output Filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition is the default output filename used by the Get Directory List to File command handler when the output filename is not provided. The default filename is used whenever the commanded output filename is the empty string.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The FM application does not place a limit on this configuration parameter, however the symbol must be defined and the name will be subject to the same verification tests as a commanded output filename. Set this parameter to the empty string if no default filename is desired. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="122" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="fm__cmds_8h_1a7fe11f5ba185c987429ebfbd5b4d92e4" compoundref="fm__cmds_8c" startline="722" endline="788">FM_GetDirListFileCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1abd424538512fb782d2c9714936010a8d" prot="public" static="no">
+        <name>FM_DIR_LIST_FILE_ENTRIES</name>
+        <initializer>3000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000005"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum Directory List Output File Entries</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the upper limit for the number of directory entries that may be written to a Directory List output file. Directory List files are variable length, based on the number of directory entries actually written to the file. There may zero entries written to the file if the directory is empty. For most environments, this definition will play no role at all, as it will be set to a number much larger than the count of files that will ever exist in any directory at one time.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The FM application limits this value to be no less than 100 and no greater than 10000. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="141" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="141" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1aa0bc195d165713d7c107a09a55135d1a" compoundref="fm__child_8c" startline="1471" endline="1593">FM_ChildDirListFileLoop</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a4824237f0ee2c1bf26065322180f0450" prot="public" static="no">
+        <name>FM_DIR_LIST_FILE_SUBTYPE</name>
+        <initializer>12345</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000006"><xreftitle>Purpose</xreftitle><xrefdescription><para>Directory List Output File Header Sub-Type</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the cFE File Header sub-type value for FM Directory List data files. The value may be used to differentiate FM Directory List files from other data files.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The FM application places no limits on this unsigned 32 bit value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="154" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="154" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a37da339a9867e1cb45d831c81d4a0a0a" compoundref="fm__child_8c" startline="1389" endline="1462">FM_ChildDirListFileInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1ab89d57a7bce1efbbf4b2bdb0884dfda0" prot="public" static="no">
+        <name>FM_DIR_LIST_PKT_ENTRIES</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000007"><xreftitle>Purpose</xreftitle><xrefdescription><para>Directory List Telemetry Packet Entry Count</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the number of directory entries contained in the Directory List telemetry packet. The command handler will read directory entries until reaching the index of the start entry (set via command argument) and then continue to read directory entries and populate the telemtry packet until there are either no more unread directory entries or until the telemetry packet is full.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The FM application limits this value to be no less than 10 and and no greater than 100. The number of directory entries in the telemetry packet will in large part determine the packet size. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="179" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="179" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a9eb81011943d9b7efd2817d9eff72e03" compoundref="fm__child_8c" startline="1222" endline="1346">FM_ChildDirListPktCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1ae41510cbe8ec5f58635ff6510faadd63" prot="public" static="no">
+        <name>FM_CHILD_FILE_BLOCK_SIZE</name>
+        <initializer>2048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000008"><xreftitle>Purpose</xreftitle><xrefdescription><para>Child Task File I/O Control Settings</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>These definitions control the amount of file data that the FM child task will process before giving up the CPU to allow other tasks time to run.</para></simplesect>
+FM_CHILD_FILE_BLOCK_SIZE defines the size of each block of file data that the FM child task will read or write. This value also defines the size of the FM child task I/O buffer that exists in global memory.</para><para>FM_CHILD_FILE_LOOP_COUNT defines the number of file data blocks that may be processed before the FM child task sleeps (gives up the CPU).</para><para>FM_CHILD_FILE_SLEEP_MS defines the length of time (in milli-secs) before the FM child task wakes (re-acquires the CPU). Note that many platforms will limit the precision of this value.</para><para>Thus the combination of the 3 values control CPU use by the FM child task. Using a smaller block size minimizes the amount of RAM used by the file I/O buffer, but at the expense of file efficiency. Adjust each of the values such that the combination is appropriate for the target platform.</para><para>For example, if the block size is 2048 and the loop count is 16 and the sleep time is 20, then while processing a 1 Mbyte file there will be 32 sleep cycles of 20ms each, for a total task delay of 0.64 seconds.</para><para><simplesect kind="par"><title>Limits:</title><para>FM_CHILD_FILE_BLOCK_SIZE: The FM application limits this value to be no less than 256 bytes and no greater than 32KB.</para></simplesect>
+FM_CHILD_FILE_LOOP_COUNT: The FM application limits this value to be non-zero. There is no upper limit - a very large number effectively means that the FM child task will not surrender the CPU to other lower priority tasks.</para><para>FM_CHILD_FILE_SLEEP_MS: The FM application limits this value to be no no greater than 100 ms. The value zero generally means a very short task delay - refer to the target platform documentation for specifics. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="227" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="227" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a56e7773f1b8ab3fea6e3511edbbce859" compoundref="fm__child_8c" startline="690" endline="861">FM_ChildConcatCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1af1428dea27332a7d934fa984a9ad2421" prot="public" static="no">
+        <name>FM_CHILD_FILE_LOOP_COUNT</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="228" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="228" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a56e7773f1b8ab3fea6e3511edbbce859" compoundref="fm__child_8c" startline="690" endline="861">FM_ChildConcatCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1ac0d6c709f86f04a72da408ca551daaf4" prot="public" static="no">
+        <name>FM_CHILD_FILE_SLEEP_MS</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="229" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="229" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a56e7773f1b8ab3fea6e3511edbbce859" compoundref="fm__child_8c" startline="690" endline="861">FM_ChildConcatCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a7034e669b121a395215aa567b86242d4" prot="public" static="no">
+        <name>FM_CHILD_STAT_SLEEP_MS</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000009"><xreftitle>Purpose</xreftitle><xrefdescription><para>Child file stat sleep</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>OS_stat is a CPU intensive call. FM uses the OS_stat call to query a file’s size, date, and mode when setting up directory listings. Querying a large number of files and/or files large in size when processing directory listing commands can cause FM to hog the CPU. To mitigate this, options to sleep a configurable number of milliseconds between calls to OS_stat for a configurable number of files in a directory listing is provided. A large sleep cycle will not hang the CPU but it may take a long time for directory listing to complete. A shorter sleep cycle will speed up the directory listing commands but may cause FM to hog the CPU.</para></simplesect>
+FM_CHILD_STAT_SLEEP_MS: The number of milliseconds to sleep each cycle. One cycle is FM_CHILD_STAT_SLEEP_FILECOUNT.</para><para>FM_CHILD_STAT_SLEEP_FILECOUNT: The number of files to process (OS_stat) before sleeping FM_CHILD_STAT_SLEEP_MS. Works in tandem with FM_CHILD_STAT_SLEEP_MS to reduce CPU hogging while allowing slightly more customization to balance time the operator is waiting to get data back from a directory listing versus FM hogging the CPU with calls to OS_stat</para><para>In short: High SLEEP_MS means less CPU hogging by FM but a longer time to process a dir listing command Low SLEEP_MS means more potential CPU hogging by FM but shorter time to process a dir listing command High FILECOUNT means more potential CPU hogging by FM but a shorter time to process a dir listing command Low FILECOUNT means less CPU hogging by FM but longer time to process a dir listing command <simplesect kind="par"><title>Limits:</title><para>The default is zero unless the mission needs require them to be changed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="263" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="263" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1aacef3ed2d1c3a8b63506bb7bd7a740c7" compoundref="fm__child_8c" startline="1641" endline="1667">FM_ChildSleepStat</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1ace83585f0302db2c752f269a07bb7df0" prot="public" static="no">
+        <name>FM_CHILD_STAT_SLEEP_FILECOUNT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="264" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="264" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1aa0bc195d165713d7c107a09a55135d1a" compoundref="fm__child_8c" startline="1471" endline="1593">FM_ChildDirListFileLoop</referencedby>
+        <referencedby refid="fm__child_8h_1a9eb81011943d9b7efd2817d9eff72e03" compoundref="fm__child_8c" startline="1222" endline="1346">FM_ChildDirListPktCmd</referencedby>
+        <referencedby refid="fm__child_8h_1aacef3ed2d1c3a8b63506bb7bd7a740c7" compoundref="fm__child_8c" startline="1641" endline="1667">FM_ChildSleepStat</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a5946b5cc35e5d43c6a3236b729305567" prot="public" static="no">
+        <name>FM_CHILD_QUEUE_DEPTH</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000010"><xreftitle>Purpose</xreftitle><xrefdescription><para>Child Task Command Queue Entry Count</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the array depth for the command arguments queue in the FM main task to FM child task handshake interface. The value sets the upper limit for the number of commands that can be waiting in the queue to be processed by the low priority FM child task. A multi-entry command queue prevents the occasional slow command from being rejected because the child task has not yet completed the previous slow command.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The FM application limits this value to be no less than 1 and no greater than 10. There must be at least one because this is the method for passing command arguments from the parent to the child task. The upper limit is arbitrary. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="282" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="282" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a04b7cf4ab2461b64d56c0016401e5455" compoundref="fm__child_8c" startline="153" endline="206">FM_ChildLoop</referencedby>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1ac9c86c0af3de1d880983c142daa81391" compoundref="fm__cmd__utils_8c" startline="578" endline="603">FM_InvokeChildTask</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1aab165c5c2ca675a8ac2e22901b6b10c2" compoundref="fm__cmd__utils_8c" startline="524" endline="569">FM_VerifyChildTask</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a1483497ee6c5c69e341cbad381134353" prot="public" static="no">
+        <name>FM_CHILD_TASK_NAME</name>
+        <initializer>&quot;FM_CHILD_TASK&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000011"><xreftitle>Purpose</xreftitle><xrefdescription><para>Child Task Name - cFE object name</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the FM child task object name. The task object name is required during child task creation by cFE Executive Services.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this name be defined, but otherwise places no limits on the definition. Refer to CFE Executive Services for specific information on limits related to object names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="296" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="296" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3dd7c87e5bc7606add8e69323e0795f1" compoundref="fm__child_8c" startline="54" endline="101">FM_ChildInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a3412d5f9f7c7846d492a0ae74697ec9d" prot="public" static="no">
+        <name>FM_CHILD_TASK_STACK_SIZE</name>
+        <initializer>20480</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000012"><xreftitle>Purpose</xreftitle><xrefdescription><para>Child Task Stack Size</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the size in bytes of the FM child task stack. It is highly recommended that this assignment be made by someone familiar with the system requirements for tasks running on the target platform.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The FM application limits this value to be no less than 2048 and no greater than 20480. These limits are purely arbitrary and may need to be modified for specific platforms. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="312" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="312" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3dd7c87e5bc7606add8e69323e0795f1" compoundref="fm__child_8c" startline="54" endline="101">FM_ChildInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1adff03cc829c9dafd69a3561cd2ab711a" prot="public" static="no">
+        <name>FM_CHILD_TASK_PRIORITY</name>
+        <initializer>205</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000013"><xreftitle>Purpose</xreftitle><xrefdescription><para>Child Task Execution Priority</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the execution priority for the FM child task. It is highly recommended that this assignment be made by someone familiar with the system requirements for tasks running on the target platform.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Value to be no less than 1 and no greater than 255.</para></simplesect>
+<simplesect kind="par"><title>Priority Values:</title><para>Note that a small value has higher priority than a large value. Thus, 100 is higher priority than 150. It is also necessary to ensure that a child task has lower priority than its parent. It should be clear that a child task that runs ahead of its parent defeats the purpose of having a child task to run in the background. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="334" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="334" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3dd7c87e5bc7606add8e69323e0795f1" compoundref="fm__child_8c" startline="54" endline="101">FM_ChildInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a166202caab5a1347da966db9e5708aa0" prot="public" static="no">
+        <name>FM_CHILD_SEM_NAME</name>
+        <initializer>&quot;FM_CHILD_SEM&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000014"><xreftitle>Purpose</xreftitle><xrefdescription><para>Child Task Semaphore Name - cFE object name</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This definition sets the FM child task semaphore object name. The semaphore object name is required during semaphore creation by cFE Executive Services.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this name be defined, but otherwise places no limits on the definition. Refer to CFE Executive Services for specific information on limits related to object names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="349" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="349" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3dd7c87e5bc7606add8e69323e0795f1" compoundref="fm__child_8c" startline="54" endline="101">FM_ChildInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a04294d09b6545090149e9239921895fb" prot="public" static="no">
+        <name>FM_TABLE_CFE_NAME</name>
+        <initializer>&quot;FreeSpace&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000015"><xreftitle>Purpose</xreftitle><xrefdescription><para>Free Space Table Name - cFE object name</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Table object name is required during table creation.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this name be defined, but otherwise places no limits on the definition. Refer to CFE Table Services for specific information on limits related to table names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="368" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="368" bodyend="-1"/>
+        <referencedby refid="fm__tbl_8h_1a33cd393cf5094320d110aaefee2fa4e6" compoundref="fm__tbl_8c" startline="41" endline="66">FM_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a9980552e96de94729968be048613a277" prot="public" static="no">
+        <name>FM_TABLE_DEF_NAME</name>
+        <initializer>&quot;/cf/apps/fm_freespace.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000016"><xreftitle>Purpose</xreftitle><xrefdescription><para>Free Space Table Name - filename with path</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Table name with path is required to load table at startup.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this name be defined, but otherwise places no limits on the definition. If the named table does not exist or fails validation, the table load will fail. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="381" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="381" bodyend="-1"/>
+        <referencedby refid="fm__tbl_8h_1a33cd393cf5094320d110aaefee2fa4e6" compoundref="fm__tbl_8c" startline="41" endline="66">FM_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a1a3e06ca95b53fbfabddaaf7a0bbb609" prot="public" static="no">
+        <name>FM_TABLE_FILENAME</name>
+        <initializer>&quot;fm_freespace.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000017"><xreftitle>Purpose</xreftitle><xrefdescription><para>Free Space Table Name - filename without path</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Table name without path defines the output name for the table file created during the table make process.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this name be defined, but otherwise places no limits on the definition. If the table name is not valid then the make process may fail, or the table file may be unloadable to the target hardware. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="396" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a71a408680ee9f1c0026f1ed6cd753c50" prot="public" static="no">
+        <name>FM_TABLE_DEF_DESC</name>
+        <initializer>&quot;FM File System Free Space Table&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000018"><xreftitle>Purpose</xreftitle><xrefdescription><para>Free Space Table Description</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Table files contain headers that include descriptive text. This text will be put into the file header during the table make process.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this name be defined, but otherwise places no limits on the definition. Refer to cFE Table Services for limits related to table descriptive text. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="411" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1ab35639dc9fa9e21622f9b0584675d8d1" prot="public" static="no">
+        <name>FM_TABLE_ENTRY_COUNT</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000019"><xreftitle>Purpose</xreftitle><xrefdescription><para>Number of Free Space Table Entries</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This value defines the number of entries in both the FM file system free space table and the FM file system free space telemetry packet. Note: this value does not define the number of file systems present or supported by the CFE-OSAL, the value only defines the number of file systems for which FM may be enabled to report free space data.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM limits this value to be not less than 1 and not greater than 16. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="426" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="426" bodyend="-1"/>
+        <referencedby refid="fm__cmds_8h_1a22d28bce401b7af457415f71e7ffd9f2" compoundref="fm__cmds_8c" startline="853" endline="911">FM_GetFreeSpaceCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a1a658988540f6dfbbc497fb697ede89a" compoundref="fm__cmds_8c" startline="920" endline="980">FM_SetTableStateCmd</referencedby>
+        <referencedby refid="fm__tbl_8h_1affb4f1da66cb4533ca39147b807831f1" compoundref="fm__tbl_8c" startline="75" endline="189">FM_ValidateTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="fm__platform__cfg_8h_1a59c2620125097819f9aa1aa8d93dfee9" prot="public" static="no">
+        <name>FM_TABLE_VALIDATION_ERR</name>
+        <initializer>(0xCF000080L)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmcfg_1_cfsfmcfg000020"><xreftitle>Purpose</xreftitle><xrefdescription><para>Table Data Validation Error Code</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Table data is verified during the table load process. Should the validation process fail, this value will be returned by FM to cFE Table Services and displayed in an event message.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>FM requires that this value be defined, but otherwise places no limits on the definition. Refer to cFE Table Services for limits related to error return values. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h" line="441" column="9" bodyfile="apps/fm/fsw/platform_inc/fm_platform_cfg.h" bodystart="441" bodyend="-1"/>
+        <referencedby refid="fm__tbl_8h_1affb4f1da66cb4533ca39147b807831f1" compoundref="fm__tbl_8c" startline="75" endline="189">FM_ValidateTable</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>$Id:<sp/>fm_platform_cfg.h<sp/>1.6.1.2<sp/>2017/01/23<sp/>21:53:19EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/>Title:<sp/>File<sp/>Manager<sp/>(FM)<sp/>Platform<sp/>Configuration<sp/>Header<sp/>File</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/>Purpose:<sp/>Specification<sp/>for<sp/>the<sp/>CFS<sp/>FM<sp/>application<sp/>constants</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>that<sp/>can<sp/>be<sp/>configured<sp/>form<sp/>one<sp/>platform<sp/>to<sp/>another</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>Author:<sp/>Susanne<sp/>L.<sp/>Strege,<sp/>Code<sp/>582<sp/>NASA<sp/>GSFC</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>References:</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/><sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.0a</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_fm_platform_cfg_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_fm_platform_cfg_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FM<sp/>platform<sp/>configuration<sp/>parameters<sp/>-<sp/>application<sp/>definitions<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="fm__platform__cfg_8h_1acf7bdce9fed1c9b5b28a9aeda58e8fbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FM_CHILD_TASK_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OS_ENABLE_CORE_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="fm__platform__cfg_8h_1a862365ab74e5604ccef25da38b439608" refkind="member"><highlight class="preprocessor">#define<sp/>FM_APP_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;FM&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="fm__platform__cfg_8h_1a2faac7be36efa1157f3691744db72631" refkind="member"><highlight class="preprocessor">#define<sp/>FM_APP_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;FM_CMD_PIPE&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="fm__platform__cfg_8h_1ae330024c3b3e75ce430ad99d377ea980" refkind="member"><highlight class="preprocessor">#define<sp/>FM_APP_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="fm__platform__cfg_8h_1af09fc52078ada43006c2f946aab790b4" refkind="member"><highlight class="preprocessor">#define<sp/>FM_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FM<sp/>platform<sp/>configuration<sp/>parameters<sp/>-<sp/>output<sp/>file<sp/>definitions<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="fm__platform__cfg_8h_1ac38bb49fee383cd80e17f0d8b68a1bc4" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DIR_LIST_FILE_DEFNAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/ram/fm_dirlist.out&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="fm__platform__cfg_8h_1abd424538512fb782d2c9714936010a8d" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DIR_LIST_FILE_ENTRIES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="fm__platform__cfg_8h_1a4824237f0ee2c1bf26065322180f0450" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DIR_LIST_FILE_SUBTYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12345</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FM<sp/>platform<sp/>configuration<sp/>parameters<sp/>-<sp/>TLM<sp/>packet<sp/>definitions<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="fm__platform__cfg_8h_1ab89d57a7bce1efbbf4b2bdb0884dfda0" refkind="member"><highlight class="preprocessor">#define<sp/>FM_DIR_LIST_PKT_ENTRIES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FM<sp/>platform<sp/>configuration<sp/>parameters<sp/>-<sp/>child<sp/>task<sp/>definitions<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="fm__platform__cfg_8h_1ae41510cbe8ec5f58635ff6510faadd63" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CHILD_FILE_BLOCK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2048</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="fm__platform__cfg_8h_1af1428dea27332a7d934fa984a9ad2421" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FM_CHILD_FILE_LOOP_COUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="fm__platform__cfg_8h_1ac0d6c709f86f04a72da408ca551daaf4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FM_CHILD_FILE_SLEEP_MS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="fm__platform__cfg_8h_1a7034e669b121a395215aa567b86242d4" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CHILD_STAT_SLEEP_MS<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264" refid="fm__platform__cfg_8h_1ace83585f0302db2c752f269a07bb7df0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FM_CHILD_STAT_SLEEP_FILECOUNT<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="fm__platform__cfg_8h_1a5946b5cc35e5d43c6a3236b729305567" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CHILD_QUEUE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="fm__platform__cfg_8h_1a1483497ee6c5c69e341cbad381134353" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CHILD_TASK_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;FM_CHILD_TASK&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="fm__platform__cfg_8h_1a3412d5f9f7c7846d492a0ae74697ec9d" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CHILD_TASK_STACK_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20480</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334" refid="fm__platform__cfg_8h_1adff03cc829c9dafd69a3561cd2ab711a" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CHILD_TASK_PRIORITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>205</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349" refid="fm__platform__cfg_8h_1a166202caab5a1347da966db9e5708aa0" refkind="member"><highlight class="preprocessor">#define<sp/>FM_CHILD_SEM_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;FM_CHILD_SEM&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>FM<sp/>platform<sp/>configuration<sp/>parameters<sp/>-<sp/>table<sp/>definitions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="fm__platform__cfg_8h_1a04294d09b6545090149e9239921895fb" refkind="member"><highlight class="preprocessor">#define<sp/>FM_TABLE_CFE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;FreeSpace&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381" refid="fm__platform__cfg_8h_1a9980552e96de94729968be048613a277" refkind="member"><highlight class="preprocessor">#define<sp/>FM_TABLE_DEF_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/fm_freespace.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396" refid="fm__platform__cfg_8h_1a1a3e06ca95b53fbfabddaaf7a0bbb609" refkind="member"><highlight class="preprocessor">#define<sp/>FM_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;fm_freespace.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411" refid="fm__platform__cfg_8h_1a71a408680ee9f1c0026f1ed6cd753c50" refkind="member"><highlight class="preprocessor">#define<sp/>FM_TABLE_DEF_DESC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;FM<sp/>File<sp/>System<sp/>Free<sp/>Space<sp/>Table&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426" refid="fm__platform__cfg_8h_1ab35639dc9fa9e21622f9b0584675d8d1" refkind="member"><highlight class="preprocessor">#define<sp/>FM_TABLE_ENTRY_COUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="fm__platform__cfg_8h_1a59c2620125097819f9aa1aa8d93dfee9" refkind="member"><highlight class="preprocessor">#define<sp/>FM_TABLE_VALIDATION_ERR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0xCF000080L)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_fm_platform_cfg_h_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/fm/fsw/platform_inc/fm_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

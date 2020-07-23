@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfscstbl" kind="page">
+    <compoundname>cfscstbl</compoundname>
+    <title>CFS Checksum Table Definitions</title>
+    <detaileddescription>
+<para><table rows="1" cols="3"><row>
+<entry thead="no"><para><bold><ref refid="cfscscmds" kindref="compound">CFS Checksum Commands</ref></bold> </para></entry><entry thead="no"><para><bold><ref refid="cfscstlm" kindref="compound">CFS Checksum Telemetry</ref></bold>  </para></entry><entry thead="no"><para><bold><ref refid="cfscscfg" kindref="compound">CFS Checksum Configuration Parameters</ref></bold> </para></entry></row>
+</table>
+</para><para>The Checksum application uses eight tables (four definition tables and four corresponding results tables). The CS App copies the data from each definition tables at initialization and during table updates, and stores the data in the corresponding results tables. The CS app accesses this data from each results table for processing, and saves its state in the same table.</para><para>The definitions tables are load-dump tables, and the results tables are dump-only.</para><para><bold>EEPROM Definition Table</bold> and <bold>Memory Definition Table</bold></para><para>There are <ref refid="cs__platform__cfg_8h_1ae13d12a9004374839755f0ff3b26b6fc" kindref="member">CS_MAX_NUM_EEPROM_TABLE_ENTRIES</ref> entries defined for the EEPROM Definition Table, and <ref refid="cs__platform__cfg_8h_1af810a883bf000824b5e855339fcd5f4b" kindref="member">CS_MAX_NUM_MEMORY_TABLE_ENTRIES</ref> entries defined for the Memory Definition Table.</para><para>The format of a single entry in the EEPROM Definition Table or the Memory Definition Table is:</para><para><verbatim>typedef struct 
+{
+    uint16                      State;              
+    uint16                      Filler16;           
+    uint32                      StartAddress;       
+    uint32                      NumBytesToChecksum; 
+} CS_Def_EepromMemory_Table_Entry_t;
+</verbatim></para><para><bold>Tables Definition Table</bold></para><para>There are <ref refid="cs__platform__cfg_8h_1a601ea903b1428909ff57b9188620632c" kindref="member">CS_MAX_NUM_TABLES_TABLE_ENTRIES</ref> entries defined for the Tables Definition Table.</para><para>The format of a single entry in the Tables Definition Table is:</para><para><verbatim>typedef struct 
+{
+    uint16                      State;                          
+    char                        Name[CFE_TBL_MAX_FULL_NAME_LEN];
+} CS_Def_Tables_Table_Entry_t;
+</verbatim></para><para><bold>Apps Definition Table</bold></para><para>There are <ref refid="cs__platform__cfg_8h_1a5851a73ceabfe68587857cd45f479f2e" kindref="member">CS_MAX_NUM_APP_TABLE_ENTRIES</ref> entries defined for the Apps Definition Table.</para><para>The format of a single entry in the Apps Definition Table is:</para><para><verbatim>typedef struct 
+{
+    uint16                      State;                 
+    char                        Name[OS_MAX_API_NAME]; 
+} CS_Def_App_Table_Entry_t;
+</verbatim></para><para><bold>EEPROM Results Table</bold> and <bold>Memory Results Table</bold></para><para>There are <ref refid="cs__platform__cfg_8h_1ae13d12a9004374839755f0ff3b26b6fc" kindref="member">CS_MAX_NUM_EEPROM_TABLE_ENTRIES</ref> entries defined for the EEPROM Results Table, and <ref refid="cs__platform__cfg_8h_1af810a883bf000824b5e855339fcd5f4b" kindref="member">CS_MAX_NUM_MEMORY_TABLE_ENTRIES</ref> entries defined for the Memory Results Table.</para><para>The format of a single entry in the EEPROM Definition Table or the Memory Results Table is:</para><para><verbatim>typedef struct 
+{
+    uint16                      State;              
+    uint16                      ComputedYet;        
+    uint32                      StartAddress;       
+    uint32                      NumBytesToChecksum; 
+    uint32                      ComparisonValue;    
+    uint32                      ByteOffset;         
+    uint32                      TempChecksumValue;  
+} CS_Res_EepromMemory_Table_Entry_t;
+</verbatim></para><para><bold>Tables Results Table</bold></para><para>There are <ref refid="cs__platform__cfg_8h_1a601ea903b1428909ff57b9188620632c" kindref="member">CS_MAX_NUM_TABLES_TABLE_ENTRIES</ref> entries defined for the Tables Results Table.</para><para>The format of a single entry in the Tables Results Table is:</para><para><verbatim>typedef struct 
+{
+    uint16                      State;                 
+    uint16                      ComputedYet;           
+    uint32                      StartAddress;          
+    uint32                      NumBytesToChecksum;    
+    uint32                      ComparisonValue;       
+    uint32                      ByteOffset;            
+    uint32                      TempChecksumValue;     
+    CFE_TBL_Handle_t            TblHandle;             
+    boolean                     IsCSOwner;             
+    char                        Name[CFE_TBL_MAX_FULL_NAME_LEN];
+} CS_Res_Tables_Table_Entry_t;
+</verbatim></para><para><bold>Apps Results Table</bold></para><para>There are <ref refid="cs__platform__cfg_8h_1a5851a73ceabfe68587857cd45f479f2e" kindref="member">CS_MAX_NUM_APP_TABLE_ENTRIES</ref> entries defined for the Apps Results Table.</para><para>The format of a single entry in the Apps Results Table is:</para><para><verbatim>typedef struct 
+{
+    uint16                      State;                 
+    uint16                      ComputedYet;           
+    uint32                      StartAddress;          
+    uint32                      NumBytesToChecksum;    
+    uint32                      ComparisonValue;       
+    uint32                      ByteOffset;            
+    uint32                      TempChecksumValue;     
+    char                        Name[OS_MAX_API_NAME]; 
+} CS_Res_App_Table_Entry_t;
+</verbatim></para><para>Next: <ref refid="cfscscfg" kindref="compound">CFS Checksum Configuration Parameters</ref> <linebreak/>
+ Prev: <ref refid="cfscstlm" kindref="compound">CFS Checksum Telemetry</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ci__events_8h" kind="file" language="C++">
+    <compoundname>ci_events.h</compoundname>
+    <includedby refid="ci__app_8h" local="yes">apps/ci/fsw/src/ci_app.h</includedby>
+    <includedby refid="ci__app_8c" local="yes">apps/ci/fsw/src/ci_app.c</includedby>
+    <invincdepgraph>
+      <node id="187">
+        <label>apps/ci/fsw/src/ci_config_utils.c</label>
+        <link refid="ci__config__utils_8c"/>
+      </node>
+      <node id="184">
+        <label>apps/ci/fsw/src/ci_events.h</label>
+        <link refid="ci_events.h"/>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>apps/ci/fsw/src/ci_app.c</label>
+        <link refid="ci__app_8c"/>
+      </node>
+      <node id="185">
+        <label>apps/ci/fsw/src/ci_app.h</label>
+        <link refid="ci__app_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382" prot="public" static="no">
+        <name>CI_EventIds_t</name>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a987cdd9382efd9dd9c797c89d9127d45" prot="public">
+          <name>CI_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a21e4baf16776238dd647cb3f2a35ae13" prot="public">
+          <name>CI_INIT_INF_EID</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI Initialized. Version %d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI Initialized. Version %d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has completed initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the Application&apos;s Major Version Number The second <computeroutput>d</computeroutput> field contains the Application&apos;s Minor Version Number The third <computeroutput>d</computeroutput> field contains the Application&apos;s Revision Number </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382adb4a27ea65bbee37e6904772fa0f7253" prot="public">
+          <name>CI_CONFIG_TABLE_INF_EID</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This message is generated when a table is initialized. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a723c083530f60afcf9fa76bae2e5940c" prot="public">
+          <name>CI_CMD_INF_EID</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Recvd $x cmd (us)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Recvd $x cmd (us)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has received and processed a command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ae35196b91ffe177027d33e3883bf1fcb" prot="public">
+          <name>CI_ERR_EID</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when TBD </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ad09eb681b92dc5cdba8d633283f37e4e" prot="public">
+          <name>CI_INIT_ERR_EID</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has had an error in initialization. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0ab95f8100545434e097dd659f7e584f" prot="public">
+          <name>CI_CONFIG_TABLE_ERR_EID</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has had an error with the configuration table. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382afd5fef452b51449b2d6dadb981203f69" prot="public">
+          <name>CI_TIMEOUT_TABLE_ERR_EID</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - &apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - &apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has had an error with the timeout table. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a267db5ce2a19fb7deaa043e7cc805752" prot="public">
+          <name>CI_CMD_ERR_EID</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - $commandError&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - $commandError&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has had an error processing a command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0a81ffdcbd5e85f676772a1b2cbd862c" prot="public">
+          <name>CI_PIPE_ERR_EID</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI: SB pipe read error (0x%08X), app will exit&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI: SB pipe read error (0x%08X), app will exit&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has had an error reading from a pipe. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a1a3c2e14bc0ff7cff49bff0594675bec" prot="public">
+          <name>CI_MSGID_ERR_EID</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Recvd invalid $type msgId (0x%04x)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Recvd invalid $type msgId (0x%04x)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has received an invalid message ID. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a842e00da11ba30347714615f3aafa2f9" prot="public">
+          <name>CI_MSGLEN_ERR_EID</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Rcvd invalid msgLen: msgId=0x%08X, cmdCode=d, msgLen=d, expectedLen=d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Rcvd invalid msgLen: msgId=0x%08X, cmdCode=d, msgLen=d, expectedLen=d" </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has received a message with a bad length. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a9e67eca6a9ce636b36b686299571a3fe" prot="public">
+          <name>CI_LISTENER_CREATE_CHDTASK_ERR_EID</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Listener child task failed. CFE_ES_CreateChildTask returned: 0x%08X&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Listener child task failed. CFE_ES_CreateChildTask returned: 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when CI has failed to create its child listener task. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382af7370ce62602836d5ed7072d4528f138" prot="public">
+          <name>CI_CMD_INGEST_ERR_EID</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Ld, cmd %0x %0x dropped, too long&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Ld, cmd %0x %0x dropped, too long&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when CI&apos;s listener thread received a msg greater than the max allowed size. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382aca8975cde9f24187a5dd3fbd81bd274b" prot="public">
+          <name>CI_SOCKET_ERR_EID</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Bind socket failed = d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Bind socket failed = d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CI listener encounters an error connecting to a socket. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382adaeecc07f3749830037621805619f976" prot="public">
+          <name>CI_ENA_INF_EID</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - UDP command input enabled on port u.&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - UDP command input enabled on port u.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CI listener successfully binds to a socket. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382af4b0dc48c0a1079e8392dc3e08e08ac0" prot="public">
+          <name>CI_CMD_INVALID_EID</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Rcvd invalid cmd&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Rcvd invalid cmd&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS CI Task has encountered an issue with a received command. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ac8f2db4f42cbd137dc8079dd751d59fc" prot="public">
+          <name>CI_CMD_UNAUTHORIZED_EID</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd not authorized&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd not authorized&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the command CI has received is not authorized to execute. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a2dca418ac5eff87906a34d1318fba7de" prot="public">
+          <name>CI_CMD_AUTH_TIMEOUT_EID</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd authorization timeout&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd authorization timeout&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when an authorized command has timed out. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a67a1e565665baac3a997698859664a84" prot="public">
+          <name>CI_CMD_AUTH_NOT_REG_EID</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd not registered&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd not registered&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to authorize a command that is not registered. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382aac3c125516196abb7d3f7ef29fd2225a" prot="public">
+          <name>CI_CMD_AUTH_INV_MODE_EID</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd not 2-step&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd not 2-step&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to authorize a command that is not 2-step. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a59dd66fb81d294d1042c842d3ba171cd" prot="public">
+          <name>CI_CMD_AUTH_INV_STATE_EID</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd already authorized&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd already authorized&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to authorize a command that is already authorized. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a6eee862cdace4e61c15001acba41a6e6" prot="public">
+          <name>CI_CMD_AUTHORIZED_EID</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd authorized&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000022"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd authorized&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a command is authorized. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a4e6519336e5fce1a9600557414252169" prot="public">
+          <name>CI_CMD_DEAUTH_NOT_REG_EID</name>
+          <initializer>= 23</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd not registered&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000023"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd not registered&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a command is not registered. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382abc49b6f3fc3e3e41f8e2038be228989a" prot="public">
+          <name>CI_CMD_DEAUTH_INV_MODE_EID</name>
+          <initializer>= 24</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd not 2-step&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000024"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd not 2-step&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to deauthorize a command that is not 2-step. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a65c4efabd8d85daabf384fe86385ac42" prot="public">
+          <name>CI_CMD_DEAUTH_INV_STATE_EID</name>
+          <initializer>= 25</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd not authorized&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000025"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd not authorized&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to deauthorize a command that is not authorized. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a24d118d7110e2bd1aaffae69e98bd51e" prot="public">
+          <name>CI_CMD_DEAUTHORIZED_EID</name>
+          <initializer>= 26</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd deauthorized&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000026"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd deauthorized&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a command is deauthorized. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0d9a8ec3adc9eaff46e1e328f6712676" prot="public">
+          <name>CI_CMD_REGISTERED_EID</name>
+          <initializer>= 27</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd registered&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000027"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd registered&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a command is registered. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382acf964b34bc747f2e2cfce56e64e38ee5" prot="public">
+          <name>CI_CMD_ALREADY_REGISTERED_EID</name>
+          <initializer>= 28</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd already registered&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000028"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd already registered&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to register a command that is already registered. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a9a5f8b36337aac44395182205521c740" prot="public">
+          <name>CI_CMD_DEREGISTERED_EID</name>
+          <initializer>= 29</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd deregistered&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000029"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd deregistered&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a command is deregistered. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382acbd75e561f81b5249c1853791694049f" prot="public">
+          <name>CI_CMD_NOT_REGISTERED_EID</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd not registered&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000030"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd not registered&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to deregister a command that is not registered. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382abb4550e8f4efd05b88cbb9deb39774c9" prot="public">
+          <name>CI_CMD_REG_ERR_EID</name>
+          <initializer>= 31</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Unable to register cmd&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000031"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Unable to register cmd&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to register a command and an error is encountered. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ace5645a9d83a8a5bf02e2985c6d19dcb" prot="public">
+          <name>CI_CMD_UPDT_REG_INVLD_STATE_EID</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Invalid state of command to update&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000032"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Invalid state of command to update&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when attempting to update a 2-step registered command while it is authorized </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a556963175e88ad3801f13e0d498cbfd6" prot="public">
+          <name>CI_CMD_UPDATE_REG_EID</name>
+          <initializer>= 33</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;CI - Cmd updated&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfscievents_1_cfscievents000033"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CI - Cmd updated&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when a command registration is updated. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a4b720ca863709a697bf8e048959b2244" prot="public">
+          <name>CI_EVT_CNT</name>
+          <initializer>= 35</initializer>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ci/fsw/src/ci_events.h" line="51" column="1" bodyfile="apps/ci/fsw/src/ci_events.h" bodystart="51" bodyend="482"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CI_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CI_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a987cdd9382efd9dd9c797c89d9127d45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a987cdd9382efd9dd9c797c89d9127d45" kindref="member">CI_RESERVED_EID</ref><sp/>=<sp/>0,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a21e4baf16776238dd647cb3f2a35ae13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a21e4baf16776238dd647cb3f2a35ae13" kindref="member">CI_INIT_INF_EID</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382adb4a27ea65bbee37e6904772fa0f7253" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382adb4a27ea65bbee37e6904772fa0f7253" kindref="member">CI_CONFIG_TABLE_INF_EID</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a723c083530f60afcf9fa76bae2e5940c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a723c083530f60afcf9fa76bae2e5940c" kindref="member">CI_CMD_INF_EID</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ae35196b91ffe177027d33e3883bf1fcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ae35196b91ffe177027d33e3883bf1fcb" kindref="member">CI_ERR_EID</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ad09eb681b92dc5cdba8d633283f37e4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ad09eb681b92dc5cdba8d633283f37e4e" kindref="member">CI_INIT_ERR_EID</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0ab95f8100545434e097dd659f7e584f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0ab95f8100545434e097dd659f7e584f" kindref="member">CI_CONFIG_TABLE_ERR_EID</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382afd5fef452b51449b2d6dadb981203f69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382afd5fef452b51449b2d6dadb981203f69" kindref="member">CI_TIMEOUT_TABLE_ERR_EID</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a267db5ce2a19fb7deaa043e7cc805752" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a267db5ce2a19fb7deaa043e7cc805752" kindref="member">CI_CMD_ERR_EID</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0a81ffdcbd5e85f676772a1b2cbd862c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0a81ffdcbd5e85f676772a1b2cbd862c" kindref="member">CI_PIPE_ERR_EID</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a1a3c2e14bc0ff7cff49bff0594675bec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a1a3c2e14bc0ff7cff49bff0594675bec" kindref="member">CI_MSGID_ERR_EID</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a842e00da11ba30347714615f3aafa2f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a842e00da11ba30347714615f3aafa2f9" kindref="member">CI_MSGLEN_ERR_EID</ref><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a9e67eca6a9ce636b36b686299571a3fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a9e67eca6a9ce636b36b686299571a3fe" kindref="member">CI_LISTENER_CREATE_CHDTASK_ERR_EID</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382af7370ce62602836d5ed7072d4528f138" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382af7370ce62602836d5ed7072d4528f138" kindref="member">CI_CMD_INGEST_ERR_EID</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382aca8975cde9f24187a5dd3fbd81bd274b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382aca8975cde9f24187a5dd3fbd81bd274b" kindref="member">CI_SOCKET_ERR_EID</ref><sp/>=<sp/>14,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382adaeecc07f3749830037621805619f976" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382adaeecc07f3749830037621805619f976" kindref="member">CI_ENA_INF_EID</ref><sp/>=<sp/>15,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382af4b0dc48c0a1079e8392dc3e08e08ac0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382af4b0dc48c0a1079e8392dc3e08e08ac0" kindref="member">CI_CMD_INVALID_EID</ref><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ac8f2db4f42cbd137dc8079dd751d59fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ac8f2db4f42cbd137dc8079dd751d59fc" kindref="member">CI_CMD_UNAUTHORIZED_EID</ref><sp/>=<sp/>17,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a2dca418ac5eff87906a34d1318fba7de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a2dca418ac5eff87906a34d1318fba7de" kindref="member">CI_CMD_AUTH_TIMEOUT_EID</ref><sp/>=<sp/>18,</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a67a1e565665baac3a997698859664a84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a67a1e565665baac3a997698859664a84" kindref="member">CI_CMD_AUTH_NOT_REG_EID</ref><sp/>=<sp/>19,</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382aac3c125516196abb7d3f7ef29fd2225a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382aac3c125516196abb7d3f7ef29fd2225a" kindref="member">CI_CMD_AUTH_INV_MODE_EID</ref><sp/>=<sp/>20,</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a59dd66fb81d294d1042c842d3ba171cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a59dd66fb81d294d1042c842d3ba171cd" kindref="member">CI_CMD_AUTH_INV_STATE_EID</ref><sp/>=<sp/>21,</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a6eee862cdace4e61c15001acba41a6e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a6eee862cdace4e61c15001acba41a6e6" kindref="member">CI_CMD_AUTHORIZED_EID</ref><sp/>=<sp/>22,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a4e6519336e5fce1a9600557414252169" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a4e6519336e5fce1a9600557414252169" kindref="member">CI_CMD_DEAUTH_NOT_REG_EID</ref><sp/>=<sp/>23,</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382abc49b6f3fc3e3e41f8e2038be228989a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382abc49b6f3fc3e3e41f8e2038be228989a" kindref="member">CI_CMD_DEAUTH_INV_MODE_EID</ref><sp/>=<sp/>24,</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a65c4efabd8d85daabf384fe86385ac42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a65c4efabd8d85daabf384fe86385ac42" kindref="member">CI_CMD_DEAUTH_INV_STATE_EID</ref><sp/>=<sp/>25,</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a24d118d7110e2bd1aaffae69e98bd51e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a24d118d7110e2bd1aaffae69e98bd51e" kindref="member">CI_CMD_DEAUTHORIZED_EID</ref><sp/>=<sp/>26,</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0d9a8ec3adc9eaff46e1e328f6712676" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a0d9a8ec3adc9eaff46e1e328f6712676" kindref="member">CI_CMD_REGISTERED_EID</ref><sp/>=<sp/>27,</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382acf964b34bc747f2e2cfce56e64e38ee5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382acf964b34bc747f2e2cfce56e64e38ee5" kindref="member">CI_CMD_ALREADY_REGISTERED_EID</ref><sp/>=<sp/>28,</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a9a5f8b36337aac44395182205521c740" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a9a5f8b36337aac44395182205521c740" kindref="member">CI_CMD_DEREGISTERED_EID</ref><sp/>=<sp/>29,</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382acbd75e561f81b5249c1853791694049f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382acbd75e561f81b5249c1853791694049f" kindref="member">CI_CMD_NOT_REGISTERED_EID</ref><sp/>=<sp/>30,</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="454" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382abb4550e8f4efd05b88cbb9deb39774c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382abb4550e8f4efd05b88cbb9deb39774c9" kindref="member">CI_CMD_REG_ERR_EID</ref><sp/>=<sp/>31,</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ace5645a9d83a8a5bf02e2985c6d19dcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382ace5645a9d83a8a5bf02e2985c6d19dcb" kindref="member">CI_CMD_UPDT_REG_INVLD_STATE_EID</ref><sp/>=<sp/>32,</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"></highlight></codeline>
+<codeline lineno="478" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a556963175e88ad3801f13e0d498cbfd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a556963175e88ad3801f13e0d498cbfd6" kindref="member">CI_CMD_UPDATE_REG_EID</ref><sp/>=<sp/>33,</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481" refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a4b720ca863709a697bf8e048959b2244" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382a4b720ca863709a697bf8e048959b2244" kindref="member">CI_EVT_CNT</ref><sp/>=<sp/>35</highlight></codeline>
+<codeline lineno="482"><highlight class="normal">}<sp/><ref refid="ci__events_8h_1a4968544c5de3648a9c6a582d04ff5382" kindref="member">CI_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CI_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="493"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/ci/fsw/src/ci_events.h"/>
+  </compounddef>
+</doxygen>

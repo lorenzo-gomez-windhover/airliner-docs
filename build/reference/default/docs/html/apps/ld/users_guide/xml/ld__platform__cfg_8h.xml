@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ld__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>ld_platform_cfg.h</compoundname>
+    <includedby refid="ld__app_8h" local="yes">apps/ld/fsw/src/ld_app.h</includedby>
+    <includedby refid="ld__tbldefs_8h" local="yes">apps/ld/fsw/src/ld_tbldefs.h</includedby>
+    <invincdepgraph>
+      <node id="11">
+        <label>apps/ld/fsw/src/ld_tbldefs.h</label>
+        <link refid="ld__tbldefs_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>apps/ld/fsw/src/ld_app.h</label>
+        <link refid="ld__app_8h"/>
+      </node>
+      <node id="9">
+        <label>apps/ld/fsw/platform_inc/ld_platform_cfg.h</label>
+        <link refid="ld_platform_cfg.h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ld__platform__cfg_8h_1afea49883f3410a4c691b8d5af256a6f8" prot="public" static="no">
+        <name>LD_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for <ref refid="class_l_d" kindref="compound">LD</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;amc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="25" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1a78ee347beec396a7c0d49247804c209e" prot="public" static="no">
+        <name>LD_SCH_PIPE_DEPTH</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="32" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1ae4b8ec3c1eb1fc10f55172c7c73c5a7d" prot="public" static="no">
+        <name>LD_SCH_PIPE_NAME</name>
+        <initializer>(&quot;LD_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="39" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1a39578af741d1b32a81fc088220aa9cf1" prot="public" static="no">
+        <name>LD_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="49" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1a657e34477098b225bd8d339949caf621" prot="public" static="no">
+        <name>LD_WAKEUP_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the LD_WAKEUP_MID_MAX_MSG_COUNT and LD_SEND_HK_MID_MAX_MSG_COUNT must be less than LD_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="58" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1a62220483ac80351f74ce5c92970a99f1" prot="public" static="no">
+        <name>LD_SEND_HK_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the LD_WAKEUP_MID_MAX_MSG_COUNT and LD_SEND_HK_MID_MAX_MSG_COUNT must be less than LD_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="67" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1a8c38465532ed351af8c6b50ae25e835e" prot="public" static="no">
+        <name>LD_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="74" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1ae39834d31d6a63bbb8a7126e2982e1d8" prot="public" static="no">
+        <name>LD_CMD_PIPE_NAME</name>
+        <initializer>(&quot;LD_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="81" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1a31c3faa8e71e4b0b31f629f00148d314" prot="public" static="no">
+        <name>LD_DATA_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the data pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="88" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1a455dda2842177b3a27a5e28560d85636" prot="public" static="no">
+        <name>LD_DATA_PIPE_NAME</name>
+        <initializer>(&quot;LD_DATA_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="95" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1a4d14c935610e8ae61e0e1e27bf193504" prot="public" static="no">
+        <name>LD_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/ld_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="103" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ld__platform__cfg_8h_1aeee9bc93e64260c0e5d31aa2816b7246" prot="public" static="no">
+        <name>LD_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h" line="110" column="9" bodyfile="apps/ld/fsw/platform_inc/ld_platform_cfg.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LD_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LD_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/>LD<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="ld__platform__cfg_8h_1afea49883f3410a4c691b8d5af256a6f8" refkind="member"><highlight class="preprocessor">#define<sp/>LD_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="ld__platform__cfg_8h_1a78ee347beec396a7c0d49247804c209e" refkind="member"><highlight class="preprocessor">#define<sp/>LD_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="ld__platform__cfg_8h_1ae4b8ec3c1eb1fc10f55172c7c73c5a7d" refkind="member"><highlight class="preprocessor">#define<sp/>LD_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;LD_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="ld__platform__cfg_8h_1a39578af741d1b32a81fc088220aa9cf1" refkind="member"><highlight class="preprocessor">#define<sp/>LD_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="ld__platform__cfg_8h_1a657e34477098b225bd8d339949caf621" refkind="member"><highlight class="preprocessor">#define<sp/>LD_WAKEUP_MID_MAX_MSG_COUNT<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="ld__platform__cfg_8h_1a62220483ac80351f74ce5c92970a99f1" refkind="member"><highlight class="preprocessor">#define<sp/>LD_SEND_HK_MID_MAX_MSG_COUNT<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="ld__platform__cfg_8h_1a8c38465532ed351af8c6b50ae25e835e" refkind="member"><highlight class="preprocessor">#define<sp/>LD_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="ld__platform__cfg_8h_1ae39834d31d6a63bbb8a7126e2982e1d8" refkind="member"><highlight class="preprocessor">#define<sp/>LD_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;LD_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="ld__platform__cfg_8h_1a31c3faa8e71e4b0b31f629f00148d314" refkind="member"><highlight class="preprocessor">#define<sp/>LD_DATA_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="ld__platform__cfg_8h_1a455dda2842177b3a27a5e28560d85636" refkind="member"><highlight class="preprocessor">#define<sp/>LD_DATA_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;LD_DATA_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="ld__platform__cfg_8h_1a4d14c935610e8ae61e0e1e27bf193504" refkind="member"><highlight class="preprocessor">#define<sp/>LD_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/ld_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="ld__platform__cfg_8h_1aeee9bc93e64260c0e5d31aa2816b7246" refkind="member"><highlight class="preprocessor">#define<sp/>LD_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LD_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/ld/fsw/platform_inc/ld_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

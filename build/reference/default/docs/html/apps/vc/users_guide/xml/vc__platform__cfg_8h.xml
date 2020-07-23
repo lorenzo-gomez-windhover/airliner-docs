@@ -1,0 +1,613 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="vc__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>vc_platform_cfg.h</compoundname>
+    <includes local="no">arpa/inet.h</includes>
+    <includedby refid="vc__msg_8h" local="yes">apps/vc/fsw/src/vc_msg.h</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>arpa/inet.h</label>
+      </node>
+      <node id="8">
+        <label>apps/vc/fsw/platform_inc/vc_platform_cfg.h</label>
+        <link refid="vc_platform_cfg.h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>apps/vc/fsw/src/vc_msg.h</label>
+        <link refid="vc__msg_8h"/>
+      </node>
+      <node id="10">
+        <label>apps/vc/fsw/platform_inc/vc_platform_cfg.h</label>
+        <link refid="vc_platform_cfg.h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a19f089f416e3048ae00e5eddee299d92" prot="public" static="no">
+        <name>VC_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for VC application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;vc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="60" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a343d04b38be5b39d3f1063ad3bb60571" prot="public" static="no">
+        <name>VC_SCH_PIPE_DEPTH</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="67" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a5a86c82c0aa1dbc61fdb500f8d2ff642" prot="public" static="no">
+        <name>VC_SCH_PIPE_NAME</name>
+        <initializer>(&quot;VC_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="74" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a58ce7af577a587c83ecc99f2a0dcddf4" prot="public" static="no">
+        <name>VC_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="84" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a428c4111e3a111af537e0fcb72f45dea" prot="public" static="no">
+        <name>VC_SCH_PIPE_WAKEUP_RESERVED</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the VC_SCH_PIPE_WAKEUP_RESERVED and VC_SCH_PIPE_SEND_HK_RESERVED must be less than VC_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="93" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a85023d1e95f1b75531680ca3df9960cb" prot="public" static="no">
+        <name>VC_SCH_PIPE_SEND_HK_RESERVED</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the VC_SCH_PIPE_WAKEUP_RESERVED and VC_SCH_PIPE_SEND_HK_RESERVED must be less than VC_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="102" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a3ba8e44719f916af66942bbe3ab7420f" prot="public" static="no">
+        <name>VC_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="109" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a72945b3ecaea8db906f4d71704fcc928" prot="public" static="no">
+        <name>VC_CMD_PIPE_NAME</name>
+        <initializer>(&quot;VC_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="116" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a5fc21a3e365cd0e296b7f76b7bfe1693" prot="public" static="no">
+        <name>VC_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="123" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a5ba4a688a4ddd5f3b665891fb62ded06" prot="public" static="no">
+        <name>VC_ADDRESS_LENGTH</name>
+        <initializer>INET_ADDRSTRLEN</initializer>
+        <briefdescription>
+<para>The max address length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 16 for IPV4. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="130" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1adf1f4a1c4c3a124a9ebb84a048d915c6" prot="public" static="no">
+        <name>VC_MAX_OUTPUT_CHANNELS</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para>Max channels allowed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Minimum of 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="140" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a91bcad55909cf1451461b9b9654c7fbd" prot="public" static="no">
+        <name>VC_MAX_DEVICE_PATH</name>
+        <initializer>OS_MAX_LOCAL_PATH_LEN</initializer>
+        <briefdescription>
+<para>Max device path length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>OS_MAX_LOCAL_PATH_LEN </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="147" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a805898c940e09fc31ae979e164d7207e" prot="public" static="no">
+        <name>VC_MAX_DEVICES</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>Max number of camera devices. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Minimum of 1. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="154" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a32024889ff6eac51441330c2be778e3b" prot="public" static="no">
+        <name>VC_MAX_BUFFER_SIZE</name>
+        <initializer>115200</initializer>
+        <briefdescription>
+<para>Max buffer size. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Minimum based on configured device driver requirements. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="161" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1af24794e41eb2472365a6f3aadc8202fc" prot="public" static="no">
+        <name>VC_MAX_PACKET_SIZE</name>
+        <initializer>65527</initializer>
+        <briefdescription>
+<para>Max packet size. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>UDP max payload size. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="168" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a7f9ea39d169e02bb90e46aa7fc93d0c0" prot="public" static="no">
+        <name>VC_MAX_RETRY_ATTEMPTS</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Retry attemps for interrupted calls. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>None. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="175" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1add05dea3f844020f9dcef99cba447c51" prot="public" static="no">
+        <name>VC_MAX_RETRY_SLEEP_USEC</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para>Sleep time micro seconds for interrupted calls. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>None. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="182" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a6c76c7d942c48e8534b2af35dc319baf" prot="public" static="no">
+        <name>VC_STREAMING_TASK_PRIORITY</name>
+        <initializer>50</initializer>
+        <briefdescription>
+<para>Streaming task priority. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>0 to MAX_PRIORITY (usually 255) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="189" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a506fe9c5a355b7b620877e7604248ce2" prot="public" static="no">
+        <name>VC_STREAMING_TASK_NAME</name>
+        <initializer>&quot;VC_STREAM&quot;</initializer>
+        <briefdescription>
+<para>Streaming task name. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>OS_MAX_API_NAME </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="196" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1aa9ea9926cbdbcd742616ca250eb819e5" prot="public" static="no">
+        <name>VC_FRAME_WIDTH</name>
+        <initializer>320</initializer>
+        <briefdescription>
+<para>Video resolution width. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Specific to device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="205" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1ab5c5ce2bc9f8755439196bcdf83396d8" prot="public" static="no">
+        <name>VC_FRAME_HEIGHT</name>
+        <initializer>180</initializer>
+        <briefdescription>
+<para>Video resolution height. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Specific to device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="212" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1ac1dd95274d610ef4e9cc6c258b533a47" prot="public" static="no">
+        <name>VC_FRAMERATE</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para>Video frame rate. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Specific to device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="219" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a3ab699928f1b78aa8a754406ab3a0f73" prot="public" static="no">
+        <name>VC_DEVICE_PATH</name>
+        <initializer>&quot;/dev/video0&quot;</initializer>
+        <briefdescription>
+<para>Video camera device path. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>OS_MAX_LOCAL_PATH_LEN </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="226" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a01f2b0a904f7dca8bcc51f22533b4fc4" prot="public" static="no">
+        <name>VC_DESTINATION_IP</name>
+        <initializer>&quot;10.10.0.115&quot;</initializer>
+        <briefdescription>
+<para>Ground system ip address. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>INET_ADDRSTRLEN </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="236" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a0632e0757011fb33f639ff11bcdc2ba1" prot="public" static="no">
+        <name>VC_DESTINATION_PORT</name>
+        <initializer>(3001)</initializer>
+        <briefdescription>
+<para>Ground system port. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>uint16 decimal </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="243" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a4bc97c9e4fff59767e8f6302317ae831" prot="public" static="no">
+        <name>VC_SOURCE_IP</name>
+        <initializer>&quot;0&quot;</initializer>
+        <briefdescription>
+<para>Source system ip address. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>INET_ADDRSTRLEN </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="250" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1aae8c4b4d46be9c9ea97c933dd94d3884" prot="public" static="no">
+        <name>VC_SOURCE_PORT</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Source system port. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>uint16 decimal </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="257" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1ae34ac257ac1f8462514aeb3eea4c1dda" prot="public" static="no">
+        <name>VC_V4L_IO_METHOD</name>
+        <initializer>V4L2_MEMORY_USERPTR</initializer>
+        <briefdescription>
+<para>V4L streaming io method. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>V4L specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="266" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1aa6aaac32037ba928178df776c0e3e6c7" prot="public" static="no">
+        <name>VC_V4L_BUFFER_TYPE</name>
+        <initializer>V4L2_BUF_TYPE_VIDEO_CAPTURE</initializer>
+        <briefdescription>
+<para>V4L buffer type. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>V4L specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="273" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1aff2335119cadc6435cba1f1a092721ec" prot="public" static="no">
+        <name>VC_V4L_VIDEO_FORMAT</name>
+        <initializer>V4L2_PIX_FMT_MJPEG</initializer>
+        <briefdescription>
+<para>V4L video format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>V4L specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="280" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a40e2f2d10c64fdfd44611041b049d07b" prot="public" static="no">
+        <name>VC_V4L_VIDEO_FIELD_ORDER</name>
+        <initializer>V4L2_FIELD_NONE</initializer>
+        <briefdescription>
+<para>V4L field order. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>V4L specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="287" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a80f0d68275cbaed633454018fa107267" prot="public" static="no">
+        <name>VC_V4L_BUFFER_REQUEST</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>V4L buffers to request. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>V4L specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="294" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a81bbf3d1f7fb955cb40b0ac0b32d0466" prot="public" static="no">
+        <name>VC_V4L_MEMORY_TYPE</name>
+        <initializer>V4L2_MEMORY_USERPTR</initializer>
+        <briefdescription>
+<para>V4L Memory Type. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>V4L specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="301" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a59b9db89853151dadf642147bb565503" prot="public" static="no">
+        <name>VC_BUFFER_FILL_TIMEOUT_SEC</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Wait time for camera data in seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>None. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="310" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1a5e7396ab8d966dcf85f2601b1bb54359" prot="public" static="no">
+        <name>VC_BUFFER_FILL_TIMEOUT_USEC</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Wait time for camera data in microseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>None. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="317" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="vc__platform__cfg_8h_1af0df4aa5d97e6262bcc2bed1e343d7d3" prot="public" static="no">
+        <name>VC_BUFFER_TIMEOUTS_ALLOWED</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Max timeouts until exiting streaming task. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>None. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h" line="324" column="9" bodyfile="apps/vc/fsw/platform_inc/vc_platform_cfg.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VC_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VC_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arpa/inet.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>VC<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="vc__platform__cfg_8h_1a19f089f416e3048ae00e5eddee299d92" refkind="member"><highlight class="preprocessor">#define<sp/>VC_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="vc__platform__cfg_8h_1a343d04b38be5b39d3f1063ad3bb60571" refkind="member"><highlight class="preprocessor">#define<sp/>VC_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="vc__platform__cfg_8h_1a5a86c82c0aa1dbc61fdb500f8d2ff642" refkind="member"><highlight class="preprocessor">#define<sp/>VC_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;VC_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="vc__platform__cfg_8h_1a58ce7af577a587c83ecc99f2a0dcddf4" refkind="member"><highlight class="preprocessor">#define<sp/>VC_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="vc__platform__cfg_8h_1a428c4111e3a111af537e0fcb72f45dea" refkind="member"><highlight class="preprocessor">#define<sp/>VC_SCH_PIPE_WAKEUP_RESERVED<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="vc__platform__cfg_8h_1a85023d1e95f1b75531680ca3df9960cb" refkind="member"><highlight class="preprocessor">#define<sp/>VC_SCH_PIPE_SEND_HK_RESERVED<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="vc__platform__cfg_8h_1a3ba8e44719f916af66942bbe3ab7420f" refkind="member"><highlight class="preprocessor">#define<sp/>VC_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="vc__platform__cfg_8h_1a72945b3ecaea8db906f4d71704fcc928" refkind="member"><highlight class="preprocessor">#define<sp/>VC_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;VC_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="vc__platform__cfg_8h_1a5fc21a3e365cd0e296b7f76b7bfe1693" refkind="member"><highlight class="preprocessor">#define<sp/>VC_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="vc__platform__cfg_8h_1a5ba4a688a4ddd5f3b665891fb62ded06" refkind="member"><highlight class="preprocessor">#define<sp/>VC_ADDRESS_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INET_ADDRSTRLEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Custom<sp/>Settings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="vc__platform__cfg_8h_1adf1f4a1c4c3a124a9ebb84a048d915c6" refkind="member"><highlight class="preprocessor">#define<sp/>VC_MAX_OUTPUT_CHANNELS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="vc__platform__cfg_8h_1a91bcad55909cf1451461b9b9654c7fbd" refkind="member"><highlight class="preprocessor">#define<sp/>VC_MAX_DEVICE_PATH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OS_MAX_LOCAL_PATH_LEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="vc__platform__cfg_8h_1a805898c940e09fc31ae979e164d7207e" refkind="member"><highlight class="preprocessor">#define<sp/>VC_MAX_DEVICES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="vc__platform__cfg_8h_1a32024889ff6eac51441330c2be778e3b" refkind="member"><highlight class="preprocessor">#define<sp/>VC_MAX_BUFFER_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>115200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="vc__platform__cfg_8h_1af24794e41eb2472365a6f3aadc8202fc" refkind="member"><highlight class="preprocessor">#define<sp/>VC_MAX_PACKET_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>65527</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="vc__platform__cfg_8h_1a7f9ea39d169e02bb90e46aa7fc93d0c0" refkind="member"><highlight class="preprocessor">#define<sp/>VC_MAX_RETRY_ATTEMPTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="vc__platform__cfg_8h_1add05dea3f844020f9dcef99cba447c51" refkind="member"><highlight class="preprocessor">#define<sp/>VC_MAX_RETRY_SLEEP_USEC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="vc__platform__cfg_8h_1a6c76c7d942c48e8534b2af35dc319baf" refkind="member"><highlight class="preprocessor">#define<sp/>VC_STREAMING_TASK_PRIORITY<sp/><sp/><sp/><sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="vc__platform__cfg_8h_1a506fe9c5a355b7b620877e7604248ce2" refkind="member"><highlight class="preprocessor">#define<sp/>VC_STREAMING_TASK_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;VC_STREAM&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Camera<sp/>settings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="vc__platform__cfg_8h_1aa9ea9926cbdbcd742616ca250eb819e5" refkind="member"><highlight class="preprocessor">#define<sp/>VC_FRAME_WIDTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>320</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="vc__platform__cfg_8h_1ab5c5ce2bc9f8755439196bcdf83396d8" refkind="member"><highlight class="preprocessor">#define<sp/>VC_FRAME_HEIGHT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>180</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="vc__platform__cfg_8h_1ac1dd95274d610ef4e9cc6c258b533a47" refkind="member"><highlight class="preprocessor">#define<sp/>VC_FRAMERATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="vc__platform__cfg_8h_1a3ab699928f1b78aa8a754406ab3a0f73" refkind="member"><highlight class="preprocessor">#define<sp/>VC_DEVICE_PATH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/dev/video0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Ground<sp/>system<sp/>settings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="vc__platform__cfg_8h_1a01f2b0a904f7dca8bcc51f22533b4fc4" refkind="member"><highlight class="preprocessor">#define<sp/>VC_DESTINATION_IP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;10.10.0.115&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="vc__platform__cfg_8h_1a0632e0757011fb33f639ff11bcdc2ba1" refkind="member"><highlight class="preprocessor">#define<sp/>VC_DESTINATION_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(3001)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="vc__platform__cfg_8h_1a4bc97c9e4fff59767e8f6302317ae831" refkind="member"><highlight class="preprocessor">#define<sp/>VC_SOURCE_IP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="vc__platform__cfg_8h_1aae8c4b4d46be9c9ea97c933dd94d3884" refkind="member"><highlight class="preprocessor">#define<sp/>VC_SOURCE_PORT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>V4L<sp/>settings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="vc__platform__cfg_8h_1ae34ac257ac1f8462514aeb3eea4c1dda" refkind="member"><highlight class="preprocessor">#define<sp/>VC_V4L_IO_METHOD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V4L2_MEMORY_USERPTR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="vc__platform__cfg_8h_1aa6aaac32037ba928178df776c0e3e6c7" refkind="member"><highlight class="preprocessor">#define<sp/>VC_V4L_BUFFER_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V4L2_BUF_TYPE_VIDEO_CAPTURE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="vc__platform__cfg_8h_1aff2335119cadc6435cba1f1a092721ec" refkind="member"><highlight class="preprocessor">#define<sp/>VC_V4L_VIDEO_FORMAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V4L2_PIX_FMT_MJPEG<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="vc__platform__cfg_8h_1a40e2f2d10c64fdfd44611041b049d07b" refkind="member"><highlight class="preprocessor">#define<sp/>VC_V4L_VIDEO_FIELD_ORDER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V4L2_FIELD_NONE<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="vc__platform__cfg_8h_1a80f0d68275cbaed633454018fa107267" refkind="member"><highlight class="preprocessor">#define<sp/>VC_V4L_BUFFER_REQUEST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="vc__platform__cfg_8h_1a81bbf3d1f7fb955cb40b0ac0b32d0466" refkind="member"><highlight class="preprocessor">#define<sp/>VC_V4L_MEMORY_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V4L2_MEMORY_USERPTR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Timeout<sp/>settings<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="vc__platform__cfg_8h_1a59b9db89853151dadf642147bb565503" refkind="member"><highlight class="preprocessor">#define<sp/>VC_BUFFER_FILL_TIMEOUT_SEC<sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="vc__platform__cfg_8h_1a5e7396ab8d966dcf85f2601b1bb54359" refkind="member"><highlight class="preprocessor">#define<sp/>VC_BUFFER_FILL_TIMEOUT_USEC<sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324" refid="vc__platform__cfg_8h_1af0df4aa5d97e6262bcc2bed1e343d7d3" refkind="member"><highlight class="preprocessor">#define<sp/>VC_BUFFER_TIMEOUTS_ALLOWED<sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>VC_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/vc/fsw/platform_inc/vc_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

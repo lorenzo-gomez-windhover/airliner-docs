@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsnavopr" kind="page">
+    <compoundname>cfsnavopr</compoundname>
+    <title>NAV Application Operation</title>
+    <detaileddescription>
+<para>The following operations are carried out by the <ref refid="class_n_a_v" kindref="compound">NAV</ref> Application: <heading level="2">1. Receive and act to vehicle command message </heading>
+</para><para>a. When a command is passed, either takeoff, land or return to launch navigator reads the command.<linebreak/>
+ b. Store current position as previous and goal as next.<linebreak/>
+ c. Store new current position.<linebreak/>
+ d. Assign yaw to current position set point.<linebreak/>
+ e. Assign latitude and longitude to current set point.<linebreak/>
+ f. Assign altitude to current set point.<linebreak/>
+ g. Assign set point triplet validity.<linebreak/>
+</para><para><heading level="2">2. Receive and act to vehicle status message </heading>
+</para><para>a. On receipt of a new navigation state set position setpoint triplet message.<linebreak/>
+ b. while in a navigation state do activities to update position setpoint triplet message and identify if the next position is reached.<linebreak/>
+</para><para><heading level="2">3. Set and publish position set point triplet </heading>
+</para><para>a. The position setpoint triplet contains 3 position setpoints they are named as previous, current and next.<linebreak/>
+ b. Previous setpoint store history as old as one level, current setpoint stores present position and next setpoint will store position which is supposed to be reached by the vehicle.<linebreak/>
+ c. This message is published on to software bus.<linebreak/>
+</para><para>Next: <ref refid="cfsnavreq" kindref="compound">NAV Application Requirements</ref> <linebreak/>
+ Prev: <ref refid="cfsnavovr" kindref="compound">NAV Application Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

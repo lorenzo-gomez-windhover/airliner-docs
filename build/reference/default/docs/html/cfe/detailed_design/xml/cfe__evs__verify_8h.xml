@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__evs__verify_8h" kind="file" language="C++">
+    <compoundname>cfe_evs_verify.h</compoundname>
+    <includedby refid="cfe__evs__task_8h" local="yes">evs/cfe_evs_task.h</includedby>
+    <invincdepgraph>
+      <node id="6101">
+        <label>evs/cfe_evs_verify.h</label>
+        <link refid="cfe_evs_verify.h"/>
+        <childnode refid="6102" relation="include">
+        </childnode>
+      </node>
+      <node id="6105">
+        <label>evs/cfe_evs_log.c</label>
+        <link refid="cfe__evs__log_8c"/>
+      </node>
+      <node id="6107">
+        <label>evs/cfe_evs_utils.c</label>
+        <link refid="cfe__evs__utils_8c"/>
+      </node>
+      <node id="6104">
+        <label>evs/cfe_evs_utils.h</label>
+        <link refid="cfe__evs__utils_8h"/>
+        <childnode refid="6103" relation="include">
+        </childnode>
+        <childnode refid="6105" relation="include">
+        </childnode>
+        <childnode refid="6106" relation="include">
+        </childnode>
+        <childnode refid="6107" relation="include">
+        </childnode>
+      </node>
+      <node id="6103">
+        <label>evs/cfe_evs.c</label>
+        <link refid="cfe__evs_8c"/>
+      </node>
+      <node id="6106">
+        <label>evs/cfe_evs_task.c</label>
+        <link refid="cfe__evs__task_8c"/>
+      </node>
+      <node id="6102">
+        <label>evs/cfe_evs_task.h</label>
+        <link refid="cfe__evs__task_8h"/>
+        <childnode refid="6103" relation="include">
+        </childnode>
+        <childnode refid="6104" relation="include">
+        </childnode>
+        <childnode refid="6105" relation="include">
+        </childnode>
+        <childnode refid="6106" relation="include">
+        </childnode>
+        <childnode refid="6107" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:<sp/>cfe_evs_verify.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2012,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>header<sp/>file<sp/>performs<sp/>compile<sp/>time<sp/>checking<sp/>for<sp/>EVS<sp/>configuration</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/>parameters.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>Author:<sp/><sp/><sp/>K.Audra(Microtel)</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>$Revision:<sp/>1.5<sp/>$</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>$Log:<sp/>cfe_evs_verify.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2012/01/13<sp/>12:00:56GMT-05:00<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Changed<sp/>license<sp/>text<sp/>to<sp/>reflect<sp/>open<sp/>source</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2010/10/27<sp/>16:35:23EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Updated<sp/>error<sp/>message<sp/>for<sp/>default<sp/>log<sp/>mode<sp/>test</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2010/10/25<sp/>15:01:43EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Corrected<sp/>bad<sp/>apostrophe<sp/>in<sp/>prologue.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2010/10/04<sp/>15:27:14EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Cleaned<sp/>up<sp/>copyright<sp/>symbol.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:15EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/MKS-CFE-PROJECT/fsw/cfe-core/src/evs/project.pj</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2007/05/03<sp/>09:15:54EDT<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>I<sp/>added<sp/>checks<sp/>against<sp/>the<sp/>EVS<sp/>parameters<sp/>that<sp/>made<sp/>sense.<sp/>This<sp/>included<sp/>ones<sp/>that<sp/>had<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>counter-limited<sp/>max&apos;s<sp/>as<sp/>well<sp/>as<sp/>ones<sp/>that<sp/>only<sp/>had<sp/>a<sp/>specific<sp/>number<sp/>of<sp/>possible<sp/>values</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2007/04/23<sp/>10:28:11EDT<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>I<sp/>removed<sp/>the<sp/>#defines<sp/>in<sp/>evs_verify.gh<sp/>that<sp/>weren&apos;t<sp/>hard<sp/>max<sp/>values</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2006/06/08<sp/>14:14:54EDT<sp/>njyanchik<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>I<sp/>added<sp/>the<sp/>appropriate<sp/>legal<sp/>headers<sp/>to<sp/>all<sp/>of<sp/>the<sp/>evs<sp/>files</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cfe_evs_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cfe_evs_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:<sp/>Besides<sp/>the<sp/>checks<sp/>in<sp/>this<sp/>file,<sp/>there<sp/>is<sp/>one<sp/>more<sp/>in<sp/>cfe_evs_task.h.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*<sp/>The<sp/>check<sp/>is<sp/>not<sp/>here<sp/>because<sp/>it<sp/>is<sp/>checking<sp/>a<sp/>local<sp/>#define<sp/>based<sp/>on<sp/>a<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*<sp/>configuration<sp/>parameter</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_EVS_MAX_EVENT_FILTERS<sp/>&gt;<sp/>32767</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_EVS_MAX_EVENT_FILTERS<sp/>cannot<sp/>be<sp/>more<sp/>than<sp/>32767!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_EVS_DEFAULT_TYPE_FLAG<sp/>&gt;<sp/>0x0F<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_EVS_DEFAULT_TYPE_FLAG<sp/>cannot<sp/>be<sp/>more<sp/>than<sp/>0x0F!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CFE_EVS_DEFAULT_LOG_MODE<sp/>!=<sp/>0)<sp/>&amp;&amp;<sp/>(CFE_EVS_DEFAULT_LOG_MODE<sp/>!=<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_EVS_DEFAULT_LOG_MODE<sp/>can<sp/>only<sp/>be<sp/>0<sp/>(Overwrite)<sp/>or<sp/>1<sp/>(Discard)!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_EVS_LOG_MAX<sp/>&gt;<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_EVS_LOG_MAX<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>65535</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#if(<sp/>CFE_EVS_DEFAULT_MSG_FORMAT_MODE<sp/>!=<sp/>CFE_EVS_LONG_FORMAT)<sp/>&amp;&amp;<sp/>(CFE_EVS_DEFAULT_MSG_FORMAT_MODE<sp/>!=<sp/>CFE_EVS_SHORT_FORMAT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_EVS_DEFAULT_MSG_FORMAT<sp/>can<sp/>only<sp/>be<sp/>CFE_EVS_LONG_FORMAT<sp/>or<sp/>CFE_EVS_SHORT_FORMAT<sp/>!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFE_EVS_PORT_DEFAULT<sp/>&gt;<sp/>0x0F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CFE_EVS_PORT_DEFAULT<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>0x0F!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_cfe_evs_verify_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="evs/cfe_evs_verify.h"/>
+  </compounddef>
+</doxygen>

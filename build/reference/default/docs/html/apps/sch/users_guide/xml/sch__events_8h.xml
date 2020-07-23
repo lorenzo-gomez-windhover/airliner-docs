@@ -1,0 +1,789 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="sch__events_8h" kind="file" language="C++">
+    <compoundname>sch_events.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sch__events_8h_1a2143003d800956b0a42acb189559dc97" prot="public" static="no">
+        <name>SCH_INITSTATS_INF_EID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;SCH Initialized. Version d.d.d.d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;SCH Initialized. Version d.d.d.d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the Scheduler App completes its initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the Application&apos;s Major Version Number The second <computeroutput>d</computeroutput> field contains the Application&apos;s Minor Version Number The third <computeroutput>d</computeroutput> field contains the Application&apos;s Revision Number The fourth <computeroutput>d</computeroutput> field contains the Application&apos;s Mission Revision Number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="55" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a256a037e3b606b512b11a07fc9ebcf92" prot="public" static="no">
+        <name>SCH_APP_EXIT_EID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;SCH App: terminating, err = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;SCH App: terminating, err = 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: CRITICAL</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always issued whenever the Scheduler Application exits. Exiting can be caused by an error during initialization, while loading a table or on command via the ES. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="68" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a81c7648731fb8579658ee3ad64f6a6e6" prot="public" static="no">
+        <name>SCH_CR_PIPE_ERR_EID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Creating SB Pipe, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Creating SB Pipe, RC=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when Scheduler is unable to create its command pipe via the <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref> API.</para><para>The <computeroutput>RC</computeroutput> field contains the return code from the <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="82" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ae3f383a940a0199ce06958cb1d422314" prot="public" static="no">
+        <name>SCH_SUB_HK_REQ_ERR_EID</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Subscribing to HK Request(MID=0x%04X), RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Subscribing to HK Request(MID=0x%04X), RC=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when Scheduler is unable to subscribe to its Housekeeping Request message via the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> API.</para><para>The <computeroutput>MID</computeroutput> value identifies the Message ID that Scheduler was attempting to subscribe to. The <computeroutput>RC</computeroutput> value contains the return code that was obtained from the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="98" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a1935c5e4374cf3af5c7bcf0473a9e4a1" prot="public" static="no">
+        <name>SCH_SUB_GND_CMD_ERR_EID</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Subscribing to GND CMD(MID=0x%04X), RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Subscribing to GND CMD(MID=0x%04X), RC=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when Scheduler is unable to subscribe to its Ground commands via the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> API.</para><para>The <computeroutput>MID</computeroutput> value identifies the Message ID that Scheduler was attempting to subscribe to. The <computeroutput>RC</computeroutput> value contains the return code that was obtained from the <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="114" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1afdb83b5dd5111305728c15e192ba6bb7" prot="public" static="no">
+        <name>SCH_SDT_REG_ERR_EID</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Registering SDT, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Registering SDT, RC=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when Scheduler is unable to register its Schedule Definition Table with cFE Table Services via the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> API.</para><para>The <computeroutput>RC</computeroutput> value is the return code from the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> API call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="128" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a60d28cfacc16c1d0e899df00d9af99ca" prot="public" static="no">
+        <name>SCH_MDT_REG_ERR_EID</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Registering MDT, RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Registering MDT, RC=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when Scheduler is unable to register its Message Definition Table with cFE Table Services via the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> API.</para><para>The <computeroutput>RC</computeroutput> value is the return code from the <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> API call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="142" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a00b148cce3c683c09b56029c416ea387" prot="public" static="no">
+        <name>SCH_SDT_LOAD_ERR_EID</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error (RC=0x%08X) Loading SDT with s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error (RC=0x%08X) Loading SDT with s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when Scheduler is unable to load its Schedule Definition Table with cFE Table Services via the <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> API.</para><para>The <computeroutput>RC</computeroutput> value is the return code from the <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> API call and <computeroutput>s</computeroutput> is the filename that was used for the load attempt. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="157" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a75646ae6d481e98d542a494e3c820d2e" prot="public" static="no">
+        <name>SCH_MDT_LOAD_ERR_EID</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error (RC=0x%08X) Loading MDT with s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error (RC=0x%08X) Loading MDT with s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when Scheduler is unable to load its Message Definition Table with cFE Table Services via the <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> API.</para><para>The <computeroutput>RC</computeroutput> value is the return code from the <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> API call and <computeroutput>s</computeroutput> is the filename that was used for the load attempt. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="172" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a9ca4152086ae41a90e6965e646b82208" prot="public" static="no">
+        <name>SCH_ACQ_PTR_ERR_EID</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Acquiring Tbl Ptrs (RC=0x%08X)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Acquiring Tbl Ptrs (RC=0x%08X)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when Scheduler is unable to obtain pointers to the contents of either the Schedule Definition Table or the Message Definition Table with cFE Table Services via the <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> API.</para><para>The <computeroutput>RC</computeroutput> value is the return code from the <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="187" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a44d4138566976dff1e1cd1b3ba600f82" prot="public" static="no">
+        <name>SCH_MINOR_FRAME_TIMER_CREATE_ERR_EID</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error creating Timer (RC=0x%08X)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error creating Timer (RC=0x%08X)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an error is detected while creating the Timer via the <ref refid="sch__custom_8h_1a460799de20a37103670e068ec0cd3854" kindref="member">SCH_CustomEarlyInit</ref> call.</para><para>The <computeroutput>RC</computeroutput> value is the return code from the <ref refid="sch__custom_8h_1a460799de20a37103670e068ec0cd3854" kindref="member">SCH_CustomEarlyInit</ref> call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="201" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a681ef7909a2bf197cdc1455f20b75a41" prot="public" static="no">
+        <name>SCH_MINOR_FRAME_TIMER_ACC_WARN_EID</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;OS Timer Accuracy (d &gt; reqd d usec) requires Minor Frame MET sync&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;OS Timer Accuracy (d &gt; reqd d usec) requires Minor Frame MET sync&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the minor frame timer obtained from OSAL has a specified clock accuracy that is not adequate enough for the Scheduler to maintain precise enough timing. The Scheduler will try to maintain conistent timing by implementing an additional minor frame synchronization to the MET clock. This means the Scheduler may end up needing to process more than one minor frame at a time if the minor frame timer does not stay close enough to required time.</para><para>The first <computeroutput>d</computeroutput> field specifies the clock accuracy (in microseconds) obtained for the minor frame timer and the second <computeroutput>d</computeroutput> field specifies the clock accuracy (in microseconds) that Scheduler has determined is necessary to maintain adequate timing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="221" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1affe219cf221b8d99d6f3d16c64e69113" prot="public" static="no">
+        <name>SCH_MAJOR_FRAME_SUB_ERR_EID</name>
+        <initializer>14</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error initializing Timers (RC=0x%08X)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error initializing Timers (RC=0x%08X)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated during initialization when the Scheduler Application is attempting to attach to the cFE TIME Services Time Synchronization Signal and start the minor frame timer.</para><para>The <computeroutput>RC</computeroutput> field identifies the return code from the <ref refid="sch__custom_8h_1a769b51f7ffc7c7711cc7bf0856702a77" kindref="member">SCH_CustomLateInit</ref> function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="236" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ad6719efdf25d2fd4d049cc76540a59f2" prot="public" static="no">
+        <name>SCH_SEM_CREATE_ERR_EID</name>
+        <initializer>15</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error creating Main Loop Timing Semaphore (RC=0x%08X)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error creating Main Loop Timing Semaphore (RC=0x%08X)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when Scheduler is unable to create the necessary semaphore used to synchronize itself with the Major and Minor Frame timing sources.</para><para>The <computeroutput>RC</computeroutput> value is the return code obtained from the <ref refid="osapi_8c_1a03750816f6dff3a2adfcebde8b07175d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_BinSemCreate</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="250" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a6782d568df5b282bce3d5a11e8e76bc5" prot="public" static="no">
+        <name>SCH_SAME_SLOT_EID</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Slot did not increment: slot = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Slot did not increment: slot = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the Scheduler has determined that it has awoken in the same minor frame slot as the last cycle. It will not perform any activities this cycle and may need to perform two sets of activities next cycle to make up for the lost time.</para><para>The <computeroutput>d</computeroutput> field identifies the Minor Frame (slot) since the last Major Frame Signal. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="266" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a3d22029ece03daab899155c861a90db3" prot="public" static="no">
+        <name>SCH_SKIPPED_SLOTS_EID</name>
+        <initializer>17</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Slots skipped: slot = d, count = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Slots skipped: slot = d, count = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a significant jump in minor frame timing has occurred and the Scheduler has determined that catching up is not feasible.</para><para>The <computeroutput>slot</computeroutput> value identifies what the minor frame to be executed is. The <computeroutput>count</computeroutput> field identifies the number of minor frames that were skipped in order to get to the current minor frame. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="282" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a09da55d4b05f10b67a494237cbf79bfe" prot="public" static="no">
+        <name>SCH_MULTI_SLOTS_EID</name>
+        <initializer>18</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Multiple slots processed: slot = d, count = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Multiple slots processed: slot = d, count = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the Scheduler determines that more than one minor frame needs to be processed in order to keep up with the current time.</para><para>The <computeroutput>slot</computeroutput> value identifies the current minor frame. The <computeroutput>count</computeroutput> field specifies the number of minor frames processed on this cycle. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="297" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a7106064c2a3fc6047b96df11eb32b6ba" prot="public" static="no">
+        <name>SCH_CORRUPTION_EID</name>
+        <initializer>19</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Corrupt data error (1): slot = d, entry = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Corrupt data error (1): slot = d, entry = d&apos; </computeroutput> </para><para><computeroutput> &apos;Corrupt data error (2): msg = d, freq = d, type = d, rem = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Activity is found in the Schedule Definition Table that has inappropriate values. The table must have become corrupt since being loaded since the value(s) that are incorrect were verified before the table was loaded.</para><para>The <computeroutput>slot</computeroutput> value identifies the minor frame containing the error. The <computeroutput>entry</computeroutput> value identifies which entry for the specified minor frame is in error. The <computeroutput>msg</computeroutput> value specifies the index into the Message Definition Table. The <computeroutput>freq</computeroutput> value specifies the activity&apos;s frequency (in seconds) The <computeroutput>type</computeroutput> value specifies the activity&apos;s type The <computeroutput>rem</computeroutput> value specifies the activity&apos;s remainder (used to stagger items with the same frequency value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="319" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a5cc7d962d11700c662adc8f339b7e593" prot="public" static="no">
+        <name>SCH_PACKET_SEND_EID</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Activity error: slot = d, entry = d, err = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Activity error: slot = d, entry = d, err = 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Send Message Activity fails to send the message via the <ref refid="cfe__sb__api_8c_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_SendMsg</ref> API.</para><para>The <computeroutput>slot</computeroutput> field identifies the minor frame in the Schedule Definition Table containing the activity that failed. The <computeroutput>entry</computeroutput> field identifies the entry in the minor frame that failed. The <computeroutput>err</computeroutput> field specifies the return code from the <ref refid="cfe__sb__api_8c_1a91b4b63f7d168bd78dc92d894ad7f77d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_SendMsg</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="336" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1af8eb00478531ff0f7b5b871387367869" prot="public" static="no">
+        <name>SCH_NOISY_MAJOR_FRAME_ERR_EID</name>
+        <initializer>21</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Major Frame Sync too noisy (Slot d). Disabling synchronization.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Major Frame Sync too noisy (Slot d). Disabling synchronization.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when two consecutive Major Frame Signals are received significantly earlier than expected.</para><para>The <computeroutput>Slot</computeroutput> field identifies the current slot when the Major Frame Signal arrived. It should have been the last slot in the schedule. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="351" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a7d5634d49287b21e94b50cef2b02172d" prot="public" static="no">
+        <name>SCH_SCHEDULE_TBL_ERR_EID</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Schedule tbl verify error - idx[d] ena[d] typ[d] fre[d] rem[d] msg[d] grp[0x%08X]&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Schedule tbl verify error - idx[d] ena[d] typ[d] fre[d] rem[d] msg[d] grp[0x%08X]&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the operator has requested validation of a new Schedule Definition Table and it contains an error.</para><para>The <computeroutput>idx</computeroutput> field specifies the index into the Schedule Definition Table containing the error. The index is a linear count with the first entry in the table being index zero. The <computeroutput>ena</computeroutput> field specifies the contents of the Enable/Disable field for the entry in error. The <computeroutput>typ</computeroutput> field specifies the contents of the Activity Type field for the entry in error. The <computeroutput>fre</computeroutput> field specifies the contents of the Frequency field for the entry in error. The <computeroutput>rem</computeroutput> field specifies the contents of the Remainder field for the entry in error. The <computeroutput>msg</computeroutput> field specifies the contents of the Message Index for the entry in error. The <computeroutput>grp</computeroutput> field specifies the contents of the Group/Multi-Group field for the entry in error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="372" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1aaf1c92d4e949026b4f85c2f79210b47a" prot="public" static="no">
+        <name>SCH_SCHEDULE_TABLE_EID</name>
+        <initializer>31</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Schedule table verify results <ndash/> good[d] bad[d] unused[d]&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000022"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Schedule table verify results <ndash/> good[d] bad[d] unused[d]&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message provides a statistics summary of the results of validating the contents of a new Schedule Definition Table.</para><para>The <computeroutput>good</computeroutput> field specifies the number of entries that were deemed correct. The <computeroutput>bad</computeroutput> field specifies the number of entries that contained an error. The <computeroutput>unused</computeroutput> field specifies the number of entries that are empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="388" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a60de1571f084de6c9bde8353674f8b9a" prot="public" static="no">
+        <name>SCH_MESSAGE_TBL_ERR_EID</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Message tbl verify err - idx[d] mid[0xX] len[d] buf[d]&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000023"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Message tbl verify err - idx[d] mid[0xX] len[d] buf[d]&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the operator has requested validation of a new Message Definition Table and it contains an error.</para><para>The <computeroutput>idx</computeroutput> field specifies the index into the Message Definition Table containing the error. The index is a linear count with the first entry in the table being index zero. The <computeroutput>mid</computeroutput> field specifies the contents of the Message ID field for the entry in error. The <computeroutput>len</computeroutput> field specifies the contents of the Message Length field for the entry in error. The <computeroutput>buf</computeroutput> field specifies the index into an empty message that contains data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="406" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a3a3ae4906a52675ab0f10b23605b28b2" prot="public" static="no">
+        <name>SCH_MESSAGE_TABLE_EID</name>
+        <initializer>33</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Message tbl verify results - good[d] bad[d] unused[d]&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000024"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Message tbl verify results - good[d] bad[d] unused[d]&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message provides a statistics summary of the results of validating the contents of a new Message Definition Table.</para><para>The <computeroutput>good</computeroutput> field specifies the number of entries that were deemed correct. The <computeroutput>bad</computeroutput> field specifies the number of entries that contained an error. The <computeroutput>unused</computeroutput> field specifies the number of entries that are empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="422" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a333ecd3c41dbc9990b080c681cc4466f" prot="public" static="no">
+        <name>SCH_NOOP_CMD_EID</name>
+        <initializer>40</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;NO-op command. Version d.d.d.d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000025"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;NO-op command. Version d.d.d.d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued when Scheduler receives the <ref refid="sch__msgdefs_8h_1aff13c67ad0852d59ca4ef44879566f57" kindref="member">Scheduler NO-OP Command </ref>.</para><para>The first <computeroutput>d</computeroutput> field contains the Application&apos;s Major Version Number The second <computeroutput>d</computeroutput> field contains the Application&apos;s Minor Version Number The third <computeroutput>d</computeroutput> field contains the Application&apos;s Revision Number The fourth <computeroutput>d</computeroutput> field contains the Application&apos;s Mission Revision Number </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="439" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a413a36e0a66d1471334fc7566d4f8aab" prot="public" static="no">
+        <name>SCH_RESET_CMD_EID</name>
+        <initializer>41</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;RESET command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000026"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;RESET command&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued in response to a Scheduler <ref refid="sch__msgdefs_8h_1adebe9b4ed9ccc1528c1198cb1acd4ac8" kindref="member">Reset Counters command </ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="451" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ad4bc902a2dbfa52aac0f26b8016937fb" prot="public" static="no">
+        <name>SCH_ENABLE_CMD_EID</name>
+        <initializer>42</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ENABLE command: slot = d, entry = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000027"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ENABLE command: slot = d, entry = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a97454d5cfb6b63441c4464f8dab99098" kindref="member">Enable Entry Command </ref> is received and successfully processed.</para><para>The <computeroutput>slot</computeroutput> field specifies the slot index from the Enable command. The <computeroutput>entry</computeroutput> field specifies the entry index from the Enable command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="466" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="466" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ab121f57cb66e52bf03ee5aebbd7b54c2" prot="public" static="no">
+        <name>SCH_DISABLE_CMD_EID</name>
+        <initializer>43</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;DISABLE command: slot = d, entry = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000028"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DISABLE command: slot = d, entry = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a98467babd59a6152a3ffc2b6fcf94a1a" kindref="member">Disable Entry Command </ref> is received and successfully processed.</para><para>The <computeroutput>slot</computeroutput> field specifies the slot index from the Disable command. The <computeroutput>entry</computeroutput> field specifies the entry index from the Disable command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="481" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a10d7bdb94ef40f5f820e7665b67a0eac" prot="public" static="no">
+        <name>SCH_ENA_GRP_CMD_EID</name>
+        <initializer>44</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ENABLE GROUP command: match count = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000029"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ENABLE GROUP command: match count = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a35a6fd9478cc7dbb5936bcc4b5e54a8d" kindref="member">Enable Group Command </ref> is received and successfully processed.</para><para>The <computeroutput>count</computeroutput> field specifies the number of Activities in the Schedule Definition Table that were Enabled due to this command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="496" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="496" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a093d7419db5a9c6b9c6e5577a7b9a0cb" prot="public" static="no">
+        <name>SCH_DIS_GRP_CMD_EID</name>
+        <initializer>45</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;DISABLE GROUP command: match count = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000030"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DISABLE GROUP command: match count = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a1eac1a749ee38366ab99cbc899c6fd41" kindref="member">Disable Group Command </ref> is received and successfully processed.</para><para>The <computeroutput>count</computeroutput> field specifies the number of Activities in the Schedule Definition Table that were Disabled due to this command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="511" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="511" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a16e0b6b024dea3ae0e43803b80506239" prot="public" static="no">
+        <name>SCH_ENA_SYNC_CMD_EID</name>
+        <initializer>46</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Major Frame Synchronization Enabled&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000031"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Major Frame Synchronization Enabled&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued when the Scheduler receives a <ref refid="sch__msgdefs_8h_1a988bd1a3fd08823654b2bdf4f695c6b3" kindref="member">Enable Sync Command </ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="523" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="523" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1aafd0af9dff5ed932aefd1a94cf6ee4b9" prot="public" static="no">
+        <name>SCH_SEND_DIAG_CMD_EID</name>
+        <initializer>47</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Transmitting Diagnostic Message&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000032"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Transmitting Diagnostic Message&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued when the Scheduler receives a <ref refid="sch__msgdefs_8h_1a88063e9eba628a369ecfeafb22867287" kindref="member">Send Diagnostic Telemetry Command </ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="535" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a3c2b9df457018122b51e02c4a64ce08d" prot="public" static="no">
+        <name>SCH_ENABLE_CMD_ARG_ERR_EID</name>
+        <initializer>50</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ENABLE cmd: invalid argument, slot=d (&lt;d), entry=d (&lt;d)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000033"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ENABLE cmd: invalid argument, slot=d (&lt;d), entry=d (&lt;d)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a97454d5cfb6b63441c4464f8dab99098" kindref="member">Enable Entry Command </ref> is received that contains either a slot or entry index that is out of the acceptable range.</para><para>The <computeroutput>slot</computeroutput> parameters identify first-the slot in the command, second-the maximum allowed slot The <computeroutput>entry</computeroutput> parameters identify first-the entry index in the command, second-the maximum allowed entry index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="551" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="551" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ab25b9e84f06d75ae7644b19a5ccc9c86" prot="public" static="no">
+        <name>SCH_ENABLE_CMD_ENTRY_ERR_EID</name>
+        <initializer>51</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ENABLE command: invalid state = d, slot = d, entry = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000034"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ENABLE command: invalid state = d, slot = d, entry = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a97454d5cfb6b63441c4464f8dab99098" kindref="member">Enable Entry Command </ref> is received that specifies a slot that does not have an appropriate State.</para><para>The <computeroutput>state</computeroutput> parameter identifies the current state of the specified table entry. The state should be either <ref refid="sch__msgdefs_8h_1a4863bca80e851a3a246e36b1b298db73" kindref="member">SCH_ENABLED</ref>, or <ref refid="sch__msgdefs_8h_1a1bb9b6a778c72103f9c48c673496f7ef" kindref="member">SCH_DISABLED</ref>. If it is <ref refid="sch__msgdefs_8h_1a3c3c3058724b68ff42107cff3fbeeeaa" kindref="member">SCH_UNUSED</ref>, the operator is not allowed to enable it. Any other value represents a corrupted table. The <computeroutput>slot</computeroutput> parameter identifies the slot specified in the Enable command. The <computeroutput>entry</computeroutput> parameter identifies the entry index specified in the Enable command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="569" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="569" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1abbbdffaf3a9a53153aba67f76b346839" prot="public" static="no">
+        <name>SCH_DISABLE_CMD_ARG_ERR_EID</name>
+        <initializer>52</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;DISABLE cmd: invalid argument, slot=d (&lt;d), entry=d (&lt;d)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000035"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DISABLE cmd: invalid argument, slot=d (&lt;d), entry=d (&lt;d)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a98467babd59a6152a3ffc2b6fcf94a1a" kindref="member">Disable Entry Command </ref> is received that contains either a slot or entry index that is out of the acceptable range.</para><para>The <computeroutput>slot</computeroutput> parameters identify first-the slot in the command, second-the maximum allowed slot The <computeroutput>entry</computeroutput> parameters identify first-the entry index in the command, second-the maximum allowed entry index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="585" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a16f497f25d045c5e801b50cfaeea8ab1" prot="public" static="no">
+        <name>SCH_DISABLE_CMD_ENTRY_ERR_EID</name>
+        <initializer>53</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;DISABLE command: invalid state = d, slot = d, entry = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000036"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DISABLE command: invalid state = d, slot = d, entry = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a98467babd59a6152a3ffc2b6fcf94a1a" kindref="member">Disable Entry Command </ref> is received that specifies a slot that does not have an appropriate State.</para><para>The <computeroutput>state</computeroutput> parameter identifies the current state of the specified table entry. The state should be either <ref refid="sch__msgdefs_8h_1a4863bca80e851a3a246e36b1b298db73" kindref="member">SCH_ENABLED</ref>, or <ref refid="sch__msgdefs_8h_1a1bb9b6a778c72103f9c48c673496f7ef" kindref="member">SCH_DISABLED</ref>. If it is <ref refid="sch__msgdefs_8h_1a3c3c3058724b68ff42107cff3fbeeeaa" kindref="member">SCH_UNUSED</ref>, the operator is not allowed to disable it. Any other value represents a corrupted table. The <computeroutput>slot</computeroutput> parameter identifies the slot specified in the Disable command. The <computeroutput>entry</computeroutput> parameter identifies the entry index specified in the Disable command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="603" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="603" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1af4161cac1856709b11fe34d4e4f30271" prot="public" static="no">
+        <name>SCH_ENA_GRP_CMD_ERR_EID</name>
+        <initializer>54</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ENABLE GROUP command: invalid argument, no groups selected&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000037"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ENABLE GROUP command: invalid argument, no groups selected&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a35a6fd9478cc7dbb5936bcc4b5e54a8d" kindref="member">Enable Group Command </ref> is received that does not specify either a group or a multi-group. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="615" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="615" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a1693b293344b191bda7ef84366eb67b8" prot="public" static="no">
+        <name>SCH_ENA_GRP_NOT_FOUND_ERR_EID</name>
+        <initializer>55</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ENABLE GROUP command: Neither Group d nor Multi-Group 0x%06X found&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000038"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ENABLE GROUP command: Neither Group d nor Multi-Group 0x%06X found&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a35a6fd9478cc7dbb5936bcc4b5e54a8d" kindref="member">Enable Group Command </ref> is received that specifies either a group and/or multi-group that cannot be located as being associated with any Activities defined in the Schedule Definition Table.</para><para>The <computeroutput>Group</computeroutput> field identifies the Group ID number that was in the received Enable Group command. The <computeroutput>Multi-Group</computeroutput> field identifies the Multi-Group bit mask that was in the received Enable Group command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="631" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="631" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a7b3262d4162697944408caca0d77e53c" prot="public" static="no">
+        <name>SCH_DIS_GRP_CMD_ERR_EID</name>
+        <initializer>56</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;DISABLE GROUP command: invalid argument, no groups selected&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000039"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DISABLE GROUP command: invalid argument, no groups selected&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a1eac1a749ee38366ab99cbc899c6fd41" kindref="member">Disable Group Command </ref> is received that does not specify either a group or a multi-group. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="643" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="643" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1afc9ac9162862cc253aa6752f9144d97d" prot="public" static="no">
+        <name>SCH_DIS_GRP_NOT_FOUND_ERR_EID</name>
+        <initializer>57</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;DISABLE GROUP command: Neither Group d nor Multi-Group 0x%06X found&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000040"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;DISABLE GROUP command: Neither Group d nor Multi-Group 0x%06X found&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a <ref refid="sch__msgdefs_8h_1a1eac1a749ee38366ab99cbc899c6fd41" kindref="member">Disable Group Command </ref> is received that specifies either a group and/or multi-group that cannot be located as being associated with any Activities defined in the Schedule Definition Table.</para><para>The <computeroutput>Group</computeroutput> field identifies the Group ID number that was in the received Disable Group command. The <computeroutput>Multi-Group</computeroutput> field identifies the Multi-Group bit mask that was in the received Disable Group command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="659" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ae31e105060e10bea7f771a275990d6fb" prot="public" static="no">
+        <name>SCH_CC_ERR_EID</name>
+        <initializer>58</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid command code: ID = 0x%04X, CC = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000041"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid command code: ID = 0x%04X, CC = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when Scheduler obtains a message from its command pipe that does not have a valid command code for either the Ground Message ID or the Flight Message ID.</para><para>The <computeroutput>ID</computeroutput> field identifies the Message ID of the message with the inappropriate command code. The <computeroutput>CC</computeroutput> field identifies the Command Code found in the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="676" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a1b0be4d0a46e6c95e635156fbd702e81" prot="public" static="no">
+        <name>SCH_MD_ERR_EID</name>
+        <initializer>59</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Msg with Invalid message ID Rcvd <ndash/> ID = 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000042"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Msg with Invalid message ID Rcvd <ndash/> ID = 0x%04X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when Scheduler obtains a message from its command pipe with a message ID that it did not subscribe to.</para><para>The <computeroutput>ID</computeroutput> field identifies the Message ID of the obtained message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="690" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="690" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1af4a0a7f8d400a0613ebbbd0994ef1b17" prot="public" static="no">
+        <name>SCH_CMD_LEN_ERR_EID</name>
+        <initializer>60</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cmd Msg with Bad length Rcvd: ID = 0x%04X, CC = d, Exp Len = d, Len = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000043"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cmd Msg with Bad length Rcvd: ID = 0x%04X, CC = d, Exp Len = d, Len = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated whenever the Scheduler receives a command message whose length does not correctly correspond to the length expected for a message with its command code.</para><para>The <computeroutput>ID</computeroutput> field specifies the Message ID of the message in error. The <computeroutput>CC</computeroutput> field specifies the Command Code. The <bold> Exp Len </bold> field specifies the Expected Length for a command with this command code. The <computeroutput>Len</computeroutput> field specifies the actual length of the command received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="707" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="707" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ad8507995231994fac553fcc32a6997bf" prot="public" static="no">
+        <name>SCH_DEADLINE_REG_ERR_EID</name>
+        <initializer>61</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="709" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="709" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a5ac8a2a5f59f561a8f39178638d8fe23" prot="public" static="no">
+        <name>SCH_SLOT_DEADLINE_FULL_ERR_EID</name>
+        <initializer>62</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="710" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="710" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ad3099d0430a10678d3003c12f3737316" prot="public" static="no">
+        <name>SCH_SUB_ACTIVITY_DONE_REQ_ERR_EID</name>
+        <initializer>63</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="711" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="711" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a1b76a23d02e6b7dd7a7fc2e1669b1f66" prot="public" static="no">
+        <name>SCH_UNEXPECTED_ACT_DONE_ERR_EID</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="712" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="712" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1ad6a1ae80f583b2e1d4ce10e860141408" prot="public" static="no">
+        <name>SCH_MUTEX_CREATE_ERR_EID</name>
+        <initializer>65</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="713" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="713" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a6ac8426f12012af423a8ebffed490c0a" prot="public" static="no">
+        <name>SCH_AD_CHILD_TASK_CREATE_ERR_EID</name>
+        <initializer>66</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="714" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="714" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__events_8h_1a2dd1b2d2fbb81908bd0926e8589bd828" prot="public" static="no">
+        <name>SCH_AD_RCVD_UNEXPECTED_MSG_ERR_EID</name>
+        <initializer>67</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_events.h" line="715" column="9" bodyfile="apps/sch/fsw/src/sch_events.h" bodystart="715" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>$Id:<sp/>sch_events.h<sp/>1.3<sp/>2017/06/21<sp/>15:29:22EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/>Subsystem:<sp/>Scheduler<sp/>(SCH)<sp/>event<sp/>message<sp/>ID&apos;s</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/>Author:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_sch_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_sch_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Include<sp/>section</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>(none)</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Macro<sp/>definitions</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="sch__events_8h_1a2143003d800956b0a42acb189559dc97" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_INITSTATS_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="sch__events_8h_1a256a037e3b606b512b11a07fc9ebcf92" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_APP_EXIT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="sch__events_8h_1a81c7648731fb8579658ee3ad64f6a6e6" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_CR_PIPE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="sch__events_8h_1ae3f383a940a0199ce06958cb1d422314" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SUB_HK_REQ_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="sch__events_8h_1a1935c5e4374cf3af5c7bcf0473a9e4a1" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SUB_GND_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="sch__events_8h_1afdb83b5dd5111305728c15e192ba6bb7" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SDT_REG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="sch__events_8h_1a60d28cfacc16c1d0e899df00d9af99ca" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MDT_REG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="sch__events_8h_1a00b148cce3c683c09b56029c416ea387" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SDT_LOAD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="sch__events_8h_1a75646ae6d481e98d542a494e3c820d2e" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MDT_LOAD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="sch__events_8h_1a9ca4152086ae41a90e6965e646b82208" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ACQ_PTR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="sch__events_8h_1a44d4138566976dff1e1cd1b3ba600f82" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MINOR_FRAME_TIMER_CREATE_ERR_EID<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="sch__events_8h_1a681ef7909a2bf197cdc1455f20b75a41" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MINOR_FRAME_TIMER_ACC_WARN_EID<sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="sch__events_8h_1affe219cf221b8d99d6f3d16c64e69113" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MAJOR_FRAME_SUB_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="sch__events_8h_1ad6719efdf25d2fd4d049cc76540a59f2" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SEM_CREATE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="sch__events_8h_1a6782d568df5b282bce3d5a11e8e76bc5" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SAME_SLOT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="sch__events_8h_1a3d22029ece03daab899155c861a90db3" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SKIPPED_SLOTS_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="sch__events_8h_1a09da55d4b05f10b67a494237cbf79bfe" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MULTI_SLOTS_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="sch__events_8h_1a7106064c2a3fc6047b96df11eb32b6ba" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_CORRUPTION_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="sch__events_8h_1a5cc7d962d11700c662adc8f339b7e593" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_PACKET_SEND_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351" refid="sch__events_8h_1af8eb00478531ff0f7b5b871387367869" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_NOISY_MAJOR_FRAME_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372" refid="sch__events_8h_1a7d5634d49287b21e94b50cef2b02172d" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SCHEDULE_TBL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388" refid="sch__events_8h_1aaf1c92d4e949026b4f85c2f79210b47a" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SCHEDULE_TABLE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406" refid="sch__events_8h_1a60de1571f084de6c9bde8353674f8b9a" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MESSAGE_TBL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422" refid="sch__events_8h_1a3a3ae4906a52675ab0f10b23605b28b2" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MESSAGE_TABLE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight></codeline>
+<codeline lineno="439" refid="sch__events_8h_1a333ecd3c41dbc9990b080c681cc4466f" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_NOOP_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451" refid="sch__events_8h_1a413a36e0a66d1471334fc7566d4f8aab" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_RESET_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466" refid="sch__events_8h_1ad4bc902a2dbfa52aac0f26b8016937fb" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENABLE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481" refid="sch__events_8h_1ab121f57cb66e52bf03ee5aebbd7b54c2" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_DISABLE_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="496" refid="sch__events_8h_1a10d7bdb94ef40f5f820e7665b67a0eac" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENA_GRP_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="511" refid="sch__events_8h_1a093d7419db5a9c6b9c6e5577a7b9a0cb" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_DIS_GRP_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>45</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="523" refid="sch__events_8h_1a16e0b6b024dea3ae0e43803b80506239" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENA_SYNC_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>46</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="524"><highlight class="normal"></highlight></codeline>
+<codeline lineno="535" refid="sch__events_8h_1aafd0af9dff5ed932aefd1a94cf6ee4b9" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SEND_DIAG_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>47</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551" refid="sch__events_8h_1a3c2b9df457018122b51e02c4a64ce08d" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENABLE_CMD_ARG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="569" refid="sch__events_8h_1ab25b9e84f06d75ae7644b19a5ccc9c86" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENABLE_CMD_ENTRY_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>51</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight></codeline>
+<codeline lineno="585" refid="sch__events_8h_1abbbdffaf3a9a53153aba67f76b346839" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_DISABLE_CMD_ARG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>52</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="586"><highlight class="normal"></highlight></codeline>
+<codeline lineno="603" refid="sch__events_8h_1a16f497f25d045c5e801b50cfaeea8ab1" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_DISABLE_CMD_ENTRY_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>53</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="604"><highlight class="normal"></highlight></codeline>
+<codeline lineno="615" refid="sch__events_8h_1af4161cac1856709b11fe34d4e4f30271" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENA_GRP_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>54</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"></highlight></codeline>
+<codeline lineno="631" refid="sch__events_8h_1a1693b293344b191bda7ef84366eb67b8" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENA_GRP_NOT_FOUND_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>55</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight></codeline>
+<codeline lineno="643" refid="sch__events_8h_1a7b3262d4162697944408caca0d77e53c" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_DIS_GRP_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>56</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="644"><highlight class="normal"></highlight></codeline>
+<codeline lineno="659" refid="sch__events_8h_1afc9ac9162862cc253aa6752f9144d97d" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_DIS_GRP_NOT_FOUND_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>57</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight></codeline>
+<codeline lineno="676" refid="sch__events_8h_1ae31e105060e10bea7f771a275990d6fb" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_CC_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>58</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"></highlight></codeline>
+<codeline lineno="690" refid="sch__events_8h_1a1b0be4d0a46e6c95e635156fbd702e81" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>59</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight></codeline>
+<codeline lineno="707" refid="sch__events_8h_1af4a0a7f8d400a0613ebbbd0994ef1b17" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_CMD_LEN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"></highlight></codeline>
+<codeline lineno="709" refid="sch__events_8h_1ad8507995231994fac553fcc32a6997bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_DEADLINE_REG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>61</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="710" refid="sch__events_8h_1a5ac8a2a5f59f561a8f39178638d8fe23" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_SLOT_DEADLINE_FULL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>62</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="711" refid="sch__events_8h_1ad3099d0430a10678d3003c12f3737316" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_SUB_ACTIVITY_DONE_REQ_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>63</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="712" refid="sch__events_8h_1a1b76a23d02e6b7dd7a7fc2e1669b1f66" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_UNEXPECTED_ACT_DONE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="713" refid="sch__events_8h_1ad6a1ae80f583b2e1d4ce10e860141408" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_MUTEX_CREATE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>65</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="714" refid="sch__events_8h_1a6ac8426f12012af423a8ebffed490c0a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_AD_CHILD_TASK_CREATE_ERR_EID<sp/><sp/><sp/><sp/><sp/>66</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="715" refid="sch__events_8h_1a2dd1b2d2fbb81908bd0926e8589bd828" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_AD_RCVD_UNEXPECTED_MSG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>67</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="716"><highlight class="normal"></highlight></codeline>
+<codeline lineno="717"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_sch_events_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/sch/fsw/src/sch_events.h"/>
+  </compounddef>
+</doxygen>

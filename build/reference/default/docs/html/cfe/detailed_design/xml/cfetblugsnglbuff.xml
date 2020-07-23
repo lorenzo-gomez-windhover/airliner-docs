@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetblugsnglbuff" kind="page">
+    <compoundname>cfetblugsnglbuff</compoundname>
+    <title>Single Buffered Tables</title>
+    <detaileddescription>
+<para>The default table type for a cFE Application to use is a single buffered table. The principle advantage of a single buffered table is that it can share one of several shared table buffers for uploaded and pending table images. Since many cFE Applications have relatively small tables that are not changed at time critical moments or are not changed very often during a mission, single buffered tables represent the most memory resource efficient method of being managed.</para><para>The number of single buffered tables that can have inactive table images being manipulated at one time is specified by a TBL Services configuration parameter (#CFE_TBL_MAX_SIMULTANEOUS_LOADS) found in the cfe_platform_cfg.h file associated with the processor in question. This parameter identifies the number of shared table buffers that are available.</para><para>Since inactive single buffered table images share a common resource, it may not be prudent for an operator to load an image and then delay on the image&apos;s activation for an extended period of time.</para><para>Single buffered tables are allowed to be critical (see <ref refid="cfetblugcritical" kindref="compound">Critical Tables</ref>), dump-only (see <ref refid="cfetblugdumponly" kindref="compound">Dump Only Tables</ref>) and/or have a user-defined address (see <ref refid="cfetbluguserdef" kindref="compound">User Defined Address Tables</ref>).</para><para>Next: <ref refid="cfetblugdblbuff" kindref="compound">Double Buffered Tables</ref> <linebreak/>
+ Up To: <ref refid="cfetblugtypes" kindref="compound">cFE Table Types and Table Options</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfshstbl" kind="page">
+    <compoundname>cfshstbl</compoundname>
+    <title>Health and Safety Table Definitions</title>
+    <detaileddescription>
+<para><table rows="1" cols="3"><row>
+<entry thead="no"><para><bold><ref refid="cfshscmds" kindref="compound">Health and Safety Commands</ref></bold> </para></entry><entry thead="no"><para><bold><ref refid="cfshstlm" kindref="compound">Health and Safety Telemetry</ref></bold>  </para></entry><entry thead="no"><para><bold><ref refid="cfshscfg" kindref="compound">Health and Safety Configuration Parameters</ref></bold> </para></entry></row>
+</table>
+<verbatim>  The CFS Health and Safety application utilizes three (if not using Execution Counter Reporting) or four tables.&lt;BR&gt;
+
+  &lt;H2&gt; Application Monitor Table (AMT) &lt;/H2&gt;
+
+  The AMT is the configuration table for the HS Application Monitor, defining when to take action and what action to take.&lt;BR&gt;
+
+  The AMT consists of an array of records numbering #HS_MAX_MONITORED_APPS . Each record contains field for: Application Name, Null Terminator, Cycle Count, and Action Type.&lt;BR&gt;
+
+  &lt;UL&gt;
+    &lt;LI&gt; The Application Name should be the name of the application as the system knows it: up to OS_MAX_API_NAME in length.
+    &lt;LI&gt; The Null Terminator must be 0: this exists as quick method making sure that the strings in the table are no longer than the maximum length.
+    &lt;LI&gt; The Cycle Count is the number of HS cycles that the named application&apos;s execution counter must not be incremented before the defined action is taken.
+    &lt;LI&gt; The Action Type is the action to take: 
+    &lt;UL&gt;
+        &lt;LI&gt; #HS_AMT_ACT_NOACT for a disabled entry.      
+        &lt;LI&gt; #HS_AMT_ACT_PROC_RESET for an entry that causes a processor reset.
+        &lt;LI&gt; #HS_AMT_ACT_APP_RESTART for an entry that restarts the named application.
+        &lt;LI&gt; #HS_AMT_ACT_EVENT for an entry that only generates an event message.
+        &lt;LI&gt; HS_AMT_ACT_MSG(num) for an entry that generates a message action, where &apos;num&apos; is the index into the Message Actions Table.
+    &lt;/UL&gt;  
+  &lt;/UL&gt;
+
+  While there is no valid AMT loaded, the HS Application Monitor will be disabled (it will be disabled again if an attempt to enable it is made).&lt;BR&gt;
+
+
+  &lt;H2&gt; Event Monitor Table (EMT) &lt;/H2&gt;
+
+  The EMT is the configuration table for the HS Event Monitor, defining when to take action and what action to take.&lt;BR&gt;
+
+  The EMT consists of an array of records numbering #HS_MAX_MONITORED_EVENTS . Each record contains field for: Application Name, Null Terminator, Event ID, and Action Type.&lt;BR&gt;
+
+  &lt;UL&gt;
+    &lt;LI&gt; The Application Name should be the name of the application as the system knows it: up to OS_MAX_API_NAME in length.
+    &lt;LI&gt; The Null Terminator must be 0: this exists as quick method making sure that the strings in the table are no longer than the maximum length.
+    &lt;LI&gt; The Event ID is the number of the event being monitored for.
+    &lt;LI&gt; The Action Type is the action to take: 
+    &lt;UL&gt;
+        &lt;LI&gt; #HS_EMT_ACT_NOACT for a disabled entry.      
+        &lt;LI&gt; #HS_EMT_ACT_PROC_RESET for an entry that causes a processor reset.
+        &lt;LI&gt; #HS_EMT_ACT_APP_RESTART for an entry that restarts the named application.
+        &lt;LI&gt; #HS_EMT_ACT_APP_DELETE for an entry that deletes the named application.
+        &lt;LI&gt; HS_EMT_ACT_MSG(num) for an entry that generates a message action, where &apos;num&apos; is the index into the Message Actions Table.
+    &lt;/UL&gt;
+  &lt;/UL&gt;
+  While there is no valid EMT loaded, the HS Event Monitor will be disabled (it will be disabled again if an attempt to enable it is made).&lt;BR&gt;
+
+
+  &lt;H2&gt; Message Actions Table (MAT) &lt;/H2&gt;
+
+  The MAT stores the messages sent by the HS Application Monitor or HS Event Monitor Message Action Type.&lt;BR&gt;
+
+  The MAT consists of an array of records numbering #HS_MAX_MSG_ACT_TYPES . Each record contains field for: Enable State, Cooldown, and Message.&lt;BR&gt;
+
+  &lt;UL&gt;
+    &lt;LI&gt; The Cooldown value determines how many cycles must be waited before a message can be sent again; a value of 0 means the message can be sent multiple times in one cycle, a value of 1 means the message can only be sent once per cycle, a value of 2 means the message could only be sent every other cycle, etc.
+    &lt;LI&gt; The Message is an array of bytes of length #HS_MAX_MSG_ACT_SIZE which contains the message to be sent. Keep byte-swapping issues in mind when populating this field.
+    &lt;LI&gt; The Enable State determines whether the message action in that record can be sent:
+    &lt;UL&gt; 
+        &lt;LI&gt; #HS_MAT_STATE_DISABLED for a disabled entry.
+        &lt;LI&gt; #HS_MAT_STATE_ENABLED for an enabled entry which will generate an event when sent.
+        &lt;LI&gt; #HS_MAT_STATE_NOEVENT for an enabled entry which will not generate an event when sent.
+    &lt;/UL&gt;
+  &lt;/UL&gt;
+
+  While there is no valid MAT loaded, no Message Actions will be sent.&lt;BR&gt;
+
+
+  &lt;H2&gt; Execution Counter Table (XCT) &lt;/H2&gt;
+
+  The EMT is the configuration table for the HS Execution Counter reporting, defining which counters are reported in telemetry.&lt;BR&gt;
+
+  The XCT consists of an array of records numbering #HS_MAX_EXEC_CNT_SLOTS. This table only exists if HS_MAX_EXEC_CNT_SLOTS is not equal to 0. Each record contains field for: Resource Name, Null Terminator, and Resource Type.&lt;BR&gt;
+  &lt;UL&gt;
+    &lt;LI&gt; The Resource Name should be the name of the application or child task as the system knows it: up to OS_MAX_API_NAME in length.
+    &lt;LI&gt; The Null Terminator must be 0: this exists as quick method making sure that the strings in the table are no longer than the maximum length.
+    &lt;LI&gt; The Resource Type is the type of resource being monitored: 
+    &lt;UL&gt; 
+      &lt;LI&gt; #HS_XCT_TYPE_NOTYPE for a disabled entry.      
+      &lt;LI&gt; #HS_XCT_TYPE_APP_MAIN for an Application Main Task.
+      &lt;LI&gt; #HS_XCT_TYPE_APP_CHILD for a Child Task.
+      &lt;LI&gt; #HS_XCT_TYPE_ISR for an ISR counter.
+      &lt;LI&gt; #HS_XCT_TYPE_DEVICE for a Device Driver counter.
+    &lt;/UL&gt;
+  &lt;/UL&gt;
+
+  While there is no valid XCT loaded, all Execution Counters in telemetry will be reported as invalid (0xFFFFFFFF).</verbatim> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

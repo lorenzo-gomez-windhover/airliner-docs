@@ -1,0 +1,832 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__private_8h" kind="file" language="C++">
+    <compoundname>cfe_private.h</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includes refid="cfe_8h" local="yes">cfe.h</includes>
+    <includes local="yes">cfe_platform_cfg.h</includes>
+    <includedby refid="cfe__es__cds__mempool_8h" local="yes">es/cfe_es_cds_mempool.h</includedby>
+    <includedby refid="cfe__evs__task_8h" local="yes">evs/cfe_evs_task.h</includedby>
+    <includedby refid="cfe__sb__priv_8h" local="yes">sb/cfe_sb_priv.h</includedby>
+    <incdepgraph>
+      <node id="746">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="740">
+        <label>stdarg.h</label>
+      </node>
+      <node id="734">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="760">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="744">
+        <label>stdlib.h</label>
+      </node>
+      <node id="761">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+      </node>
+      <node id="752">
+        <label>cfe_msgids.h</label>
+      </node>
+      <node id="741">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="755">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h"/>
+      </node>
+      <node id="757">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+      </node>
+      <node id="758">
+        <label>cfe_evs_msg.h</label>
+        <link refid="cfe__evs__msg_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="736" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+      </node>
+      <node id="742">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="743" relation="include">
+        </childnode>
+        <childnode refid="744" relation="include">
+        </childnode>
+        <childnode refid="745" relation="include">
+        </childnode>
+        <childnode refid="746" relation="include">
+        </childnode>
+      </node>
+      <node id="737">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="736">
+        <label>osapi.h</label>
+        <link refid="osapi_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="737" relation="include">
+        </childnode>
+        <childnode refid="738" relation="include">
+        </childnode>
+        <childnode refid="739" relation="include">
+        </childnode>
+        <childnode refid="742" relation="include">
+        </childnode>
+        <childnode refid="747" relation="include">
+        </childnode>
+        <childnode refid="748" relation="include">
+        </childnode>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="741" relation="include">
+        </childnode>
+      </node>
+      <node id="749">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="750">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="751">
+        <label>cfe_platform_cfg.h</label>
+      </node>
+      <node id="738">
+        <label>osconfig.h</label>
+      </node>
+      <node id="747">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="759">
+        <label>cfe_sb.h</label>
+        <link refid="cfe__sb_8h"/>
+        <childnode refid="738" relation="include">
+        </childnode>
+        <childnode refid="760" relation="include">
+        </childnode>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="761" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+      </node>
+      <node id="754">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h"/>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="755" relation="include">
+        </childnode>
+      </node>
+      <node id="735">
+        <label>cfe.h</label>
+        <link refid="cfe_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="736" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="753" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+        <childnode refid="756" relation="include">
+        </childnode>
+        <childnode refid="762" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="763" relation="include">
+        </childnode>
+        <childnode refid="760" relation="include">
+        </childnode>
+      </node>
+      <node id="756">
+        <label>cfe_evs.h</label>
+        <link refid="cfe__evs_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="758" relation="include">
+        </childnode>
+        <childnode refid="736" relation="include">
+        </childnode>
+        <childnode refid="759" relation="include">
+        </childnode>
+      </node>
+      <node id="748">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="762">
+        <label>cfe_fs.h</label>
+        <link refid="cfe__fs_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+      </node>
+      <node id="733">
+        <label>inc/private/cfe_private.h</label>
+        <link refid="cfe_private.h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="735" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+      </node>
+      <node id="763">
+        <label>cfe_tbl.h</label>
+        <link refid="cfe__tbl_8h"/>
+        <childnode refid="734" relation="include">
+        </childnode>
+        <childnode refid="757" relation="include">
+        </childnode>
+        <childnode refid="738" relation="include">
+        </childnode>
+      </node>
+      <node id="753">
+        <label>cfe_error.h</label>
+        <link refid="cfe__error_8h"/>
+        <childnode refid="736" relation="include">
+        </childnode>
+      </node>
+      <node id="743">
+        <label>stdio.h</label>
+      </node>
+      <node id="739">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="740" relation="include">
+        </childnode>
+        <childnode refid="741" relation="include">
+        </childnode>
+      </node>
+      <node id="745">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="765">
+        <label>es/cfe_es_cds_mempool.h</label>
+        <link refid="cfe__es__cds__mempool_8h"/>
+        <childnode refid="766" relation="include">
+        </childnode>
+      </node>
+      <node id="768">
+        <label>sb/cfe_sb_priv.h</label>
+        <link refid="cfe__sb__priv_8h"/>
+      </node>
+      <node id="767">
+        <label>evs/cfe_evs_task.h</label>
+        <link refid="cfe__evs__task_8h"/>
+      </node>
+      <node id="766">
+        <label>es/cfe_es_cds.h</label>
+        <link refid="cfe__es__cds_8h"/>
+      </node>
+      <node id="764">
+        <label>inc/private/cfe_private.h</label>
+        <link refid="cfe_private.h"/>
+        <childnode refid="765" relation="include">
+        </childnode>
+        <childnode refid="767" relation="include">
+        </childnode>
+        <childnode refid="768" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cfe__private_8h_1a64f2d9ffc4f3e6f8f718a15ee03c5d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_TIME_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_TIME_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para>cFE Core task entry point prototypes <simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE TIME Core Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1adb337fe95061313a383cb9db0d95e695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_SB_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE SB Core Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a25fbdc94e2c09c02264442c4b8ed906e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_EVS_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_EVS_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE EVS Core Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a6afbfeb972d2e5d767a63573580f92bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_ES_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_ES_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE ES Core Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a61d8c896a1a62d04a24d77eb06e02a54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_TBL_TaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_TBL_TaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Entry Point for cFE Table Services Core Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the entry point to the cFE Table Services Core Application. This Application provides the ground interface to the cFE Table Services.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a03453a917d882866305b6c05b99eb0b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_EVS_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_EVS_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para>cFE Core task early init prototypes <simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a10df878846322b41e32312d413be8da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_SB_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_SB_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a492b1a5fbf41261616af972af7b0540b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_TIME_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_TIME_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a6b6bd14ad2156d4d1ca50748a5d49c8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_TBL_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_TBL_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the Table Services API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the Table Services API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any TBL API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="158" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1affdb331f1b40f270906ac22ef1b8d87b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_ES_CDS_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_ES_CDS_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1aea2b5498886c7203bfe2d48862594f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_FS_EarlyInit</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_FS_EarlyInit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes the cFE core module API Library. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initializes the cFE core module API Library</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function MUST be called before any module API&apos;s are called. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="184" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1afaeb44923a3f529841f7e0f5a16cc712" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_TBL_CleanUpApp</definition>
+        <argsstring>(uint32 AppId)</argsstring>
+        <name>CFE_TBL_CleanUpApp</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>AppId</declname>
+        </param>
+        <briefdescription>
+<para>Removes TBL resources associated with specified Application. </para>        </briefdescription>
+        <detaileddescription>
+<para>cFE Core task clean up prototypes <simplesect kind="par"><title>Description</title><para>This function is called by cFE Executive Services to cleanup after an Application has been terminated. It frees TBL services resources that have been allocated to the specified Application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function DOES NOT remove any critical tables associated with the specified application from the Critical Data Store. </para></listitem></orderedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a3c4c1a5416dfb9987a3cb7924f07d852" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_SB_CleanUpApp</definition>
+        <argsstring>(uint32 AppId)</argsstring>
+        <name>CFE_SB_CleanUpApp</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>AppId</declname>
+        </param>
+        <briefdescription>
+<para>Removes SB resources associated with specified Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called by cFE Executive Services to cleanup after an Application has been terminated. It frees resources that have been allocated to the specified Application. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1aa67fd7909b80919d6a9d98444f4480ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_EVS_CleanUpApp</definition>
+        <argsstring>(uint32 AppId)</argsstring>
+        <name>CFE_EVS_CleanUpApp</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>AppId</declname>
+        </param>
+        <briefdescription>
+<para>Removes EVS resources associated with specified Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called by cFE Executive Services to cleanup after an Application has been terminated. It frees resources that have been allocated to the specified Application. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="233" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1a951c89bf4278618bb3716cb25f69c677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_TIME_CleanUpApp</definition>
+        <argsstring>(uint32 AppId)</argsstring>
+        <name>CFE_TIME_CleanUpApp</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+          <declname>AppId</declname>
+        </param>
+        <briefdescription>
+<para>Removes TIME resources associated with specified Application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is called by cFE Executive Services to cleanup after an Application has been terminated. It frees resources that have been allocated to the specified Application. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="245" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1aa2d0b1b06a987447ecc16efc4b46698b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_ES_RegisterCDSEx</definition>
+        <argsstring>(CFE_ES_CDSHandle_t *HandlePtr, int32 BlockSize, const char *Name, boolean CriticalTbl)</argsstring>
+        <name>CFE_ES_RegisterCDSEx</name>
+        <param>
+          <type><ref refid="cfe__es_8h_1aa976e86ad134f5b5ca774f2a89497168" kindref="member">CFE_ES_CDSHandle_t</ref> *</type>
+          <declname>HandlePtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+          <declname>BlockSize</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>Name</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member">boolean</ref></type>
+          <declname>CriticalTbl</declname>
+        </param>
+        <briefdescription>
+<para>Reserve space (or re-obtain previously reserved space) in the Critical Data Store (CDS) </para>        </briefdescription>
+        <detaileddescription>
+<para>cFE Core task other function call prototypes <simplesect kind="par"><title>Description</title><para>This routine is identical to <ref refid="cfe__es_8h_1a60638b671a23cda3eb9282b153a8dfb1" kindref="member">CFE_ES_RegisterCDS</ref> except it identifies the contents of the CDS as a critical table. This is crucial because a critical table CDS must only be deleted by cFE Table Services, not via an ES delete CDS command. Otherwise, Table Services may be out of sync with the contents of the CDS.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para><orderedlist>
+<listitem><para>This function assumes input parameters are error free and have met size/value restrictions.</para></listitem><listitem><para>The calling function is responsible for issuing any event messages associated with errors.</para></listitem></orderedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">HandlePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer Application&apos;s variable that will contain the CDS Memory Block Handle.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">BlockSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes needed in the CDS.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to character string containing the Application&apos;s local name for the CDS.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">CriticalTbl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Indicates whether the CDS is to be used as a Critical Table or not</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">*HandlePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The handle of the CDS block that can be used in <ref refid="cfe__es_8h_1a4e188008567eae18b36d80408f34e8f9" kindref="member">CFE_ES_CopyToCDS</ref> and <ref refid="cfe__es_8h_1ae84ae4564568be8f1cf30f4c8bf78077" kindref="member">CFE_ES_RestoreFromCDS</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>See return codes for <ref refid="cfe__es_8h_1a60638b671a23cda3eb9282b153a8dfb1" kindref="member">CFE_ES_RegisterCDS</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="287" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cfe__private_8h_1aaa8e9232510d63e6aa72ff105eb23d37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref></type>
+        <definition>int32 CFE_ES_DeleteCDS</definition>
+        <argsstring>(const char *CDSName, boolean CalledByTblServices)</argsstring>
+        <name>CFE_ES_DeleteCDS</name>
+        <param>
+          <type>const char *</type>
+          <declname>CDSName</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member">boolean</ref></type>
+          <declname>CalledByTblServices</declname>
+        </param>
+        <briefdescription>
+<para>Deletes the specified CDS from the CDS Registry and frees CDS Memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Removes the record of the specified CDS from the CDS Registry and frees the associated CDS memory for future use.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">CDSName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Pointer to character string containing complete CDS Name (of the format &quot;AppName.CDSName&quot;).</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">CalledByTblServices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Flag that identifies whether the CDS is supposed to be a Critical Table Image or not.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member">CFE_SUCCESS</ref> Operation was performed successfully </para></simplesect>
+<simplesect kind="return"><para><ref refid="cfe__error_8h_1a569d444dfdfbcc450879a8fc1471be09" kindref="member">CFE_ES_CDS_WRONG_TYPE_ERR</ref> Occurs when Table Services is trying to delete a Critical Data Store that is not a Critical Table Image or when Executive Services is trying to delete a Critical Table Image. </para></simplesect>
+<simplesect kind="return"><para><ref refid="cfe__error_8h_1ad6be372a21f906888f1d55201135878e" kindref="member">CFE_ES_CDS_OWNER_ACTIVE_ERR</ref> Occurs when an attempt was made to delete a CDS when an application with the same name associated with the CDS is still present. CDSs can ONLY be deleted when Applications that created them are not present in the system. </para></simplesect>
+<simplesect kind="return"><para><ref refid="cfe__error_8h_1a1a25151aeeca680bc059873d5e3c0a61" kindref="member">CFE_ES_CDS_NOT_FOUND_ERR</ref> Occurs when a search of the Critical Data Store Registry does not find a critical data store with the specified name. </para></simplesect>
+<simplesect kind="return"><para>Any of the return values from <ref refid="cfe__es__cds_8h_1a9d69dc7cbbb1155bb4e300ba6aefd6c7" kindref="member">CFE_ES_UpdateCDSRegistry</ref> </para></simplesect>
+<simplesect kind="return"><para>Any of the return values from <ref refid="cfe__es__cds__mempool_8h_1aeb7ce6df79dddc269e57744724b8d033" kindref="member">CFE_ES_PutCDSBlock</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/private/cfe_private.h" line="314" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>cfe_private.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Dec<sp/>3,<sp/>2013</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>jphickey</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CFE_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFE_PRIVATE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe_8h" kindref="compound">cfe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_platform_cfg.h&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">/*<sp/>Define<sp/>platform<sp/>configuration<sp/>parameters<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>All<sp/>cFE<sp/>core<sp/>apps<sp/>should<sp/>define<sp/>an<sp/>entry<sp/>point<sp/>and<sp/>the<sp/>prototype<sp/>should<sp/>be<sp/>here</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>These<sp/>may<sp/>also<sp/>be<sp/>called<sp/>from<sp/>the<sp/>unit<sp/>test</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="37"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1a64f2d9ffc4f3e6f8f718a15ee03c5d79" kindref="member">CFE_TIME_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="51"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1adb337fe95061313a383cb9db0d95e695" kindref="member">CFE_SB_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="65"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1a25fbdc94e2c09c02264442c4b8ed906e" kindref="member">CFE_EVS_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="79"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1a6afbfeb972d2e5d767a63573580f92bd" kindref="member">CFE_ES_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="95"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__private_8h_1a61d8c896a1a62d04a24d77eb06e02a54" kindref="member">CFE_TBL_TaskMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/>*<sp/>cFE<sp/>core<sp/>apps<sp/>may<sp/>define<sp/>an<sp/>early<sp/>init<sp/>function<sp/>and<sp/>the<sp/>prototype<sp/>should<sp/>be<sp/>here</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/>*<sp/>These<sp/>may<sp/>also<sp/>be<sp/>called<sp/>from<sp/>the<sp/>unit<sp/>test</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="119"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a03453a917d882866305b6c05b99eb0b1" kindref="member">CFE_EVS_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="132"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a10df878846322b41e32312d413be8da2" kindref="member">CFE_SB_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="145"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a492b1a5fbf41261616af972af7b0540b" kindref="member">CFE_TIME_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="158"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a6b6bd14ad2156d4d1ca50748a5d49c8f" kindref="member">CFE_TBL_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="171"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1affdb331f1b40f270906ac22ef1b8d87b" kindref="member">CFE_ES_CDS_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="184"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1aea2b5498886c7203bfe2d48862594f4d" kindref="member">CFE_FS_EarlyInit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="190"><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/>*<sp/>cFE<sp/>core<sp/>apps<sp/>may<sp/>define<sp/>a<sp/>clean<sp/>up<sp/>function<sp/>and<sp/>the<sp/>prototype<sp/>should<sp/>be<sp/>here</highlight></codeline>
+<codeline lineno="193"><highlight class="comment"><sp/>*<sp/>These<sp/>may<sp/>also<sp/>be<sp/>called<sp/>from<sp/>the<sp/>unit<sp/>test</highlight></codeline>
+<codeline lineno="194"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="209"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1afaeb44923a3f529841f7e0f5a16cc712" kindref="member">CFE_TBL_CleanUpApp</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>AppId);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="221"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a3c4c1a5416dfb9987a3cb7924f07d852" kindref="member">CFE_SB_CleanUpApp</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>AppId);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="233"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1aa67fd7909b80919d6a9d98444f4480ff" kindref="member">CFE_EVS_CleanUpApp</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>AppId);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="245"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1a951c89bf4278618bb3716cb25f69c677" kindref="member">CFE_TIME_CleanUpApp</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>AppId);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="250"><highlight class="comment">/*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="252"><highlight class="comment"><sp/>*<sp/>Functions<sp/>that<sp/>are<sp/>used<sp/>in<sp/>a<sp/>cFE<sp/>core<sp/>module<sp/>other<sp/>than<sp/>the<sp/>module<sp/>that</highlight></codeline>
+<codeline lineno="253"><highlight class="comment"><sp/>*<sp/>actually<sp/>defines<sp/>the<sp/>function<sp/>should<sp/>be<sp/>prototyped<sp/>here.</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/>*<sp/>Including<sp/>the<sp/>prototype<sp/>here<sp/>allows<sp/>the<sp/>function<sp/>to<sp/>be<sp/>called<sp/>properly</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/>*<sp/>without<sp/>redefining<sp/>it<sp/>at<sp/>the<sp/>point<sp/>of<sp/>use.</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><ref refid="cfe__private_8h_1aa2d0b1b06a987447ecc16efc4b46698b" kindref="member">CFE_ES_RegisterCDSEx</ref>(<ref refid="cfe__es_8h_1aa976e86ad134f5b5ca774f2a89497168" kindref="member">CFE_ES_CDSHandle_t</ref><sp/>*HandlePtr,<sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/>BlockSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*Name,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>CriticalTbl);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member">int32</ref><sp/><sp/><ref refid="cfe__private_8h_1aaa8e9232510d63e6aa72ff105eb23d37" kindref="member">CFE_ES_DeleteCDS</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*CDSName,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>CalledByTblServices);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CFE_PRIVATE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="inc/private/cfe_private.h"/>
+  </compounddef>
+</doxygen>

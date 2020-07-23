@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_f_m___open_files_pkt__t" kind="struct" language="C++" prot="public">
+    <compoundname>FM_OpenFilesPkt_t</compoundname>
+    <includes refid="fm__msg_8h" local="no">fm_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_m___open_files_pkt__t_1a2cbbc669295cc8eda09da86bb1c39d15" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_OpenFilesPkt_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE SB tlm hdr </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="413" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___open_files_pkt__t_1a783af4e82a695057eb43cf12faea1b52" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 FM_OpenFilesPkt_t::NumOpenFiles</definition>
+        <argsstring></argsstring>
+        <name>NumOpenFiles</name>
+        <briefdescription>
+<para>Number of files opened via cFE. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmtlmmnems_1_cfsfmtlmmnems000018"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_TotalOpenFiles</computeroutput> </bold> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="415" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___open_files_pkt__t_1a80743e95343dc6361e51b285e2bae8e1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___open_files_entry__t" kindref="compound">FM_OpenFilesEntry_t</ref></type>
+        <definition>FM_OpenFilesEntry_t FM_OpenFilesPkt_t::OpenFilesList[OS_MAX_NUM_OPEN_FILES]</definition>
+        <argsstring>[OS_MAX_NUM_OPEN_FILES]</argsstring>
+        <name>OpenFilesList</name>
+        <briefdescription>
+<para>List of files opened via cFE. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmtlmmnems_1_cfsfmtlmmnems000019"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_OpenFileList</computeroutput>[OS_MAX_NUM_OPEN_FILES</bold>] </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="417" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="cfsfmtlm_1_cfsfmtlm000004"><xreftitle>Name</xreftitle><xrefdescription><para>Get Open Files telemetry packet </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="68">
+        <label>FM_OpenFilesPkt_t</label>
+        <link refid="struct_f_m___open_files_pkt__t"/>
+        <childnode refid="69" relation="usage">
+          <edgelabel>OpenFilesList</edgelabel>
+        </childnode>
+      </node>
+      <node id="69">
+        <label>FM_OpenFilesEntry_t</label>
+        <link refid="struct_f_m___open_files_entry__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/fm/fsw/src/fm_msg.h" line="412" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="411" bodyend="419"/>
+    <listofallmembers>
+      <member refid="struct_f_m___open_files_pkt__t_1a783af4e82a695057eb43cf12faea1b52" prot="public" virt="non-virtual"><scope>FM_OpenFilesPkt_t</scope><name>NumOpenFiles</name></member>
+      <member refid="struct_f_m___open_files_pkt__t_1a80743e95343dc6361e51b285e2bae8e1" prot="public" virt="non-virtual"><scope>FM_OpenFilesPkt_t</scope><name>OpenFilesList</name></member>
+      <member refid="struct_f_m___open_files_pkt__t_1a2cbbc669295cc8eda09da86bb1c39d15" prot="public" virt="non-virtual"><scope>FM_OpenFilesPkt_t</scope><name>TlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="bat__events_8h" kind="file" language="C++">
+    <compoundname>bat_events.h</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816" prot="public" static="no">
+        <name>BAT_EventIds_t</name>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa16fc66b676f13301a42b34ce2d5de99" prot="public">
+          <name>BAT_RESERVED_EID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para><computeroutput> Value of zero is reserved, and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa92dcf106dca8144e89446cd5c716404" prot="public">
+          <name>BAT_INIT_INF_EID</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the BAT task has completed initialization.</para><para>The first <computeroutput>d</computeroutput> field contains the application major version defined in #BAT_MAJOR_VERSION. The second <computeroutput>d</computeroutput> field contains the application minor version defined in #BAT_MINOR_VERSION. The third <computeroutput>d</computeroutput> field contains the application revision number defined in #BAT_REVISION. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="bat__platform__cfg_8h_1a23f8fcba9a8b4745656ee13960fcada9" kindref="member">BAT_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c00c1fbe31a34191c790ee0ae20bfae" prot="public">
+          <name>BAT_CMD_NOOP_EID</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd NOOP. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task receives a NoOp command.</para><para>The first <computeroutput>u</computeroutput> field contains the application major version defined in #BAT_MAJOR_VERSION. The first <computeroutput>d</computeroutput> field contains the application major version defined in #BAT_MAJOR_VERSION. The second <computeroutput>d</computeroutput> field contains the application minor version defined in #BAT_MINOR_VERSION. The third <computeroutput>d</computeroutput> field contains the application revision number defined in #BAT_REVISION. The fourth <computeroutput>d</computeroutput> field contains the application revision number defined in <ref refid="bat__platform__cfg_8h_1a23f8fcba9a8b4745656ee13960fcada9" kindref="member">BAT_MISSION_REV</ref>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ab8d3df1a377bf41d03408a44fc32b32c" prot="public">
+          <name>BAT_SUBSCRIBE_ERR_EID</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Pipe failed to subscribe to %s. (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task fails to subscribe to a message at initialization.</para><para>The first <computeroutput>s</computeroutput> field contains the name of the pipe. The second <computeroutput>s</computeroutput> field contains the macro name of the message. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a4c1a62f0742ec18064c57896258a8d37" prot="public">
+          <name>BAT_PIPE_INIT_ERR_EID</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to create %s pipe (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to create %s pipe (0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task fails to create a CFE Software Bus pipe at initialization.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816acd72bc5fb635bddc99d4ea7d39b7dd15" prot="public">
+          <name>BAT_CFGTBL_MANAGE_ERR_EID</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to manage Config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a55f9e6ac951e3e2b1ff42787e5f8c57c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Manage</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a5a4378520f79c9d6605a8549cc9ce2c7" prot="public">
+          <name>BAT_CFGTBL_GETADDR_ERR_EID</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to get Config table&apos;s address (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1ab76032b8a226594789df60e8449cface" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_GetAddress</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ad0cc6ff73161b09785ab373dc8e7a802" prot="public">
+          <name>BAT_RCVMSG_ERR_EID</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s pipe read error (0x%08X).&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task has had an error reading from a pipe.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 32 bit hexadecimal number is the error code returned by CFE. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a46692bad00f811c9ad28f9900792ebcf" prot="public">
+          <name>BAT_MSGID_ERR_EID</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid %s msgId (0x%04X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task has received an invalid message ID.</para><para>The <computeroutput>s</computeroutput> field contains the name of the pipe. The 16 bit hexadecimal number is the actual message ID received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c915c00a838408f21ad9b7e4f35129a" prot="public">
+          <name>BAT_CC_ERR_EID</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Recvd invalid command code (%u)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task has received an invalid message ID.</para><para>The u field contains the actual command code received. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ae8a74757bc64784152c130e8a2cedd23" prot="public">
+          <name>BAT_MSGLEN_ERR_EID</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Rcvd invalid msgLen: msgId=0x%08X, cmdCode=%d, msgLen=%d, expectedLen=%d" </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BATTask has received a message with an invalid length.</para><para>The first <computeroutput>d</computeroutput> field contains the message ID. The second <computeroutput>d</computeroutput> field contains the command code. The third <computeroutput>d</computeroutput> field contains the actual length. The fourth <computeroutput>d</computeroutput> field contains the expected length. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a0fa01ebc5bf2660a52f0facff6b60137" prot="public">
+          <name>BAT_CFGTBL_REG_ERR_EID</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to register config table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task fails to register the BAT configuration table.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa4ab183528f6e358734bd2daa962c296" prot="public">
+          <name>BAT_CFGTBL_LOAD_ERR_EID</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to load Config Table (0x%08X)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task fails to load the BAT configuration table.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816adaa8087f19169326bd70cb1ce7232a23" prot="public">
+          <name>BAT_LISTENER_CREATE_CHDTASK_ERR_EID</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+<para><computeroutput> &apos;Listener child task failed. CFE_ES_CreateChildTask returned: 0x%08lX&apos; </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+<para><xrefsect id="cfsbatevents_1_cfsbatevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Listener child task failed. CFE_ES_CreateChildTask returned: 0x%08lX&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the CFS BAT Task fails to create the listener child task.</para><para>The 32 bit hexadecimal number is the error code returned by CFE <ref refid="cfe__es_8h_1a64768543df91e7856b4356fdc70ebe8c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_CreateChildTask</ref> function. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a631e50cf380a723f8761d1bd03d08b99" prot="public">
+          <name>BAT_EVT_CNT</name>
+          <briefdescription>
+<para><computeroutput> This is a count of all the app events and should not be used. </computeroutput> </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_events.h" line="51" column="1" bodyfile="apps/bat/fsw/src/bat_events.h" bodystart="51" bodyend="271"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BAT_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BAT_EVENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Conventions:<sp/>_EID<sp/>is<sp/>the<sp/>event<sp/>identifier.<sp/><sp/>_EVT_CNT<sp/>is<sp/>the<sp/>total<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>events<sp/>and<sp/>should<sp/>always<sp/>be<sp/>last.<sp/><sp/>Events<sp/>can<sp/>be<sp/>added<sp/>before<sp/>_EVT_CNT.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>For<sp/>long-term<sp/>maintenance,<sp/>consider<sp/>not<sp/>removing<sp/>an<sp/>event<sp/>but<sp/>replacing<sp/>it</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>with<sp/>an<sp/>unused,<sp/>reserved,<sp/>enum<sp/>to<sp/>preserve<sp/>the<sp/>IDs<sp/>later<sp/>in<sp/>the<sp/>list.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa16fc66b676f13301a42b34ce2d5de99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa16fc66b676f13301a42b34ce2d5de99" kindref="member">BAT_RESERVED_EID</ref><sp/>=<sp/>0,<sp/><sp/></highlight><highlight class="comment">/*<sp/>Do<sp/>not<sp/>use<sp/>this<sp/>event<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa92dcf106dca8144e89446cd5c716404" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa92dcf106dca8144e89446cd5c716404" kindref="member">BAT_INIT_INF_EID</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c00c1fbe31a34191c790ee0ae20bfae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c00c1fbe31a34191c790ee0ae20bfae" kindref="member">BAT_CMD_NOOP_EID</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ab8d3df1a377bf41d03408a44fc32b32c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ab8d3df1a377bf41d03408a44fc32b32c" kindref="member">BAT_SUBSCRIBE_ERR_EID</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a4c1a62f0742ec18064c57896258a8d37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a4c1a62f0742ec18064c57896258a8d37" kindref="member">BAT_PIPE_INIT_ERR_EID</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816acd72bc5fb635bddc99d4ea7d39b7dd15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816acd72bc5fb635bddc99d4ea7d39b7dd15" kindref="member">BAT_CFGTBL_MANAGE_ERR_EID</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a5a4378520f79c9d6605a8549cc9ce2c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a5a4378520f79c9d6605a8549cc9ce2c7" kindref="member">BAT_CFGTBL_GETADDR_ERR_EID</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ad0cc6ff73161b09785ab373dc8e7a802" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ad0cc6ff73161b09785ab373dc8e7a802" kindref="member">BAT_RCVMSG_ERR_EID</ref><sp/>=<sp/>7,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a46692bad00f811c9ad28f9900792ebcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a46692bad00f811c9ad28f9900792ebcf" kindref="member">BAT_MSGID_ERR_EID</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c915c00a838408f21ad9b7e4f35129a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c915c00a838408f21ad9b7e4f35129a" kindref="member">BAT_CC_ERR_EID</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ae8a74757bc64784152c130e8a2cedd23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ae8a74757bc64784152c130e8a2cedd23" kindref="member">BAT_MSGLEN_ERR_EID</ref><sp/>=<sp/>10,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a0fa01ebc5bf2660a52f0facff6b60137" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a0fa01ebc5bf2660a52f0facff6b60137" kindref="member">BAT_CFGTBL_REG_ERR_EID</ref><sp/>=<sp/>11,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa4ab183528f6e358734bd2daa962c296" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa4ab183528f6e358734bd2daa962c296" kindref="member">BAT_CFGTBL_LOAD_ERR_EID</ref><sp/>=<sp/>12,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816adaa8087f19169326bd70cb1ce7232a23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816adaa8087f19169326bd70cb1ce7232a23" kindref="member">BAT_LISTENER_CREATE_CHDTASK_ERR_EID</ref><sp/>=<sp/>13,</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a631e50cf380a723f8761d1bd03d08b99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a631e50cf380a723f8761d1bd03d08b99" kindref="member">BAT_EVT_CNT</ref></highlight></codeline>
+<codeline lineno="271"><highlight class="normal">}<sp/><ref refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816" kindref="member">BAT_EventIds_t</ref>;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BAT_EVENTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/bat/fsw/src/bat_events.h"/>
+  </compounddef>
+</doxygen>

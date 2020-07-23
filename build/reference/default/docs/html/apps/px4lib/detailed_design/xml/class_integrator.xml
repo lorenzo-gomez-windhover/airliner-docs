@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_integrator" kind="class" language="C++" prot="public">
+    <compoundname>Integrator</compoundname>
+    <includes refid="_integrator_8hpp" local="no">Integrator.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_integrator_1a62274bd568f983d7209526bf9b841b43" prot="private" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+        <definition>uint64 Integrator::_auto_reset_interval</definition>
+        <argsstring></argsstring>
+        <name>_auto_reset_interval</name>
+        <briefdescription>
+<para>The interval after which the content will be published and the integrator reset, 0 if no auto-reset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="158" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="158" bodyend="-1"/>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_1ab898f7e3a601c22d95f773e8e03da20a" prot="private" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+        <definition>uint64 Integrator::_last_integration_time</definition>
+        <argsstring></argsstring>
+        <name>_last_integration_time</name>
+        <briefdescription>
+<para>Timestamp of the last integration step. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="161" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="161" bodyend="-1"/>
+        <referencedby refid="class_integrator_1a53948016a44549eb7628945583f578a5" compoundref="_integrator_8cpp" startline="207" endline="221">_reset</referencedby>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+        <referencedby refid="class_integrator_1a9e15e0acb43381b9e6e35bd520c90c83" compoundref="_integrator_8cpp" startline="158" endline="175">put_with_interval</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_1afc3515183f07f6efb387eb917157f7a3" prot="private" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+        <definition>uint64 Integrator::_last_reset_time</definition>
+        <argsstring></argsstring>
+        <name>_last_reset_time</name>
+        <briefdescription>
+<para>Last auto-announcement of integral value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="164" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="164" bodyend="-1"/>
+        <referencedby refid="class_integrator_1a53948016a44549eb7628945583f578a5" compoundref="_integrator_8cpp" startline="207" endline="221">_reset</referencedby>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+        <referencedby refid="class_integrator_1a9e15e0acb43381b9e6e35bd520c90c83" compoundref="_integrator_8cpp" startline="158" endline="175">put_with_interval</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_1a666b2c7f9e8f6912277580fe92c49c0a" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref></type>
+        <definition>math::Vector3F Integrator::_alpha</definition>
+        <argsstring></argsstring>
+        <name>_alpha</name>
+        <briefdescription>
+<para>Integrated value before coning corrections are applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="167" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="167" bodyend="-1"/>
+        <referencedby refid="class_integrator_1a53948016a44549eb7628945583f578a5" compoundref="_integrator_8cpp" startline="207" endline="221">_reset</referencedby>
+        <referencedby refid="class_integrator_1a13d60f51eeac0d61cfee88ce79c7ce1a" compoundref="_integrator_8cpp" startline="179" endline="189">get</referencedby>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_1a77009d4a2990d40a2aa1a4b4e35c2518" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref></type>
+        <definition>math::Vector3F Integrator::_last_alpha</definition>
+        <argsstring></argsstring>
+        <name>_last_alpha</name>
+        <briefdescription>
+<para>Previous value of _alpha. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="170" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="170" bodyend="-1"/>
+        <referencedby refid="class_integrator_1a53948016a44549eb7628945583f578a5" compoundref="_integrator_8cpp" startline="207" endline="221">_reset</referencedby>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_1ae00849e9509929075599f304808bb0c3" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref></type>
+        <definition>math::Vector3F Integrator::_beta</definition>
+        <argsstring></argsstring>
+        <name>_beta</name>
+        <briefdescription>
+<para>Accumulated coning corrections. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="173" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="173" bodyend="-1"/>
+        <referencedby refid="class_integrator_1a53948016a44549eb7628945583f578a5" compoundref="_integrator_8cpp" startline="207" endline="221">_reset</referencedby>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_1a152623db73d2d4b36200846ebbc25343" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref></type>
+        <definition>math::Vector3F Integrator::_last_val</definition>
+        <argsstring></argsstring>
+        <name>_last_val</name>
+        <briefdescription>
+<para>Previous input. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="176" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="176" bodyend="-1"/>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+        <referencedby refid="class_integrator_1a9e15e0acb43381b9e6e35bd520c90c83" compoundref="_integrator_8cpp" startline="158" endline="175">put_with_interval</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_1a200138375bfd5bd426895a68be01dfb7" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref></type>
+        <definition>math::Vector3F Integrator::_last_delta_alpha</definition>
+        <argsstring></argsstring>
+        <name>_last_delta_alpha</name>
+        <briefdescription>
+<para>Integral from previous previous sampling interval. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="179" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="179" bodyend="-1"/>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_integrator_1a2906c3a613e9ff61621b4e53fdcd7072" prot="private" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean Integrator::_coning_comp_on</definition>
+        <argsstring></argsstring>
+        <name>_coning_comp_on</name>
+        <briefdescription>
+<para>True to turn on coning corrections. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="182" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="182" bodyend="-1"/>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_integrator_1a7e32eec0d7eb3f14bed66f82c7e1f728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Integrator::Integrator</definition>
+        <argsstring>(uint64 auto_reset_interval=4000, boolean coning_compensation=FALSE)</argsstring>
+        <name>Integrator</name>
+        <param>
+          <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+          <declname>auto_reset_interval</declname>
+          <defval>4000</defval>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+          <declname>coning_compensation</declname>
+          <defval><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">FALSE</ref></defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_integrator" kindref="compound">Integrator</ref> Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="65" column="1" bodyfile="apps/px4lib/fsw/src/math/Integrator.cpp" bodystart="71" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_1a951d50d45bd02af21f590741f83c0d73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Integrator::~Integrator</definition>
+        <argsstring>()</argsstring>
+        <name>~Integrator</name>
+        <briefdescription>
+<para><ref refid="class_integrator" kindref="compound">Integrator</ref> Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="77" column="1" bodyfile="apps/px4lib/fsw/src/math/Integrator.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean Integrator::put</definition>
+        <argsstring>(uint64 timestamp, math::Vector3F &amp;val, math::Vector3F &amp;integral, uint64 &amp;integral_dt)</argsstring>
+        <name>put</name>
+        <param>
+          <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref></type>
+          <declname>timestamp</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref> &amp;</type>
+          <declname>integral</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref> &amp;</type>
+          <declname>integral_dt</declname>
+        </param>
+        <briefdescription>
+<para>Put Value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function puts an item into the integral.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">timestamp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Timestamp of the current value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Item to put. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral Current integral in case the integrator did reset, else the value will not be modified </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral_dt Get the dt in us of the current integration (only if reset).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if putting the item triggered an integral reset and the integral should be published. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="98" column="1" bodyfile="apps/px4lib/fsw/src/math/Integrator.cpp" bodystart="91" bodyend="155"/>
+        <references refid="class_integrator_1a666b2c7f9e8f6912277580fe92c49c0a" compoundref="_integrator_8hpp" startline="167">_alpha</references>
+        <references refid="class_integrator_1a62274bd568f983d7209526bf9b841b43" compoundref="_integrator_8hpp" startline="158">_auto_reset_interval</references>
+        <references refid="class_integrator_1ae00849e9509929075599f304808bb0c3" compoundref="_integrator_8hpp" startline="173">_beta</references>
+        <references refid="class_integrator_1a2906c3a613e9ff61621b4e53fdcd7072" compoundref="_integrator_8hpp" startline="182">_coning_comp_on</references>
+        <references refid="class_integrator_1a77009d4a2990d40a2aa1a4b4e35c2518" compoundref="_integrator_8hpp" startline="170">_last_alpha</references>
+        <references refid="class_integrator_1a200138375bfd5bd426895a68be01dfb7" compoundref="_integrator_8hpp" startline="179">_last_delta_alpha</references>
+        <references refid="class_integrator_1ab898f7e3a601c22d95f773e8e03da20a" compoundref="_integrator_8hpp" startline="161">_last_integration_time</references>
+        <references refid="class_integrator_1afc3515183f07f6efb387eb917157f7a3" compoundref="_integrator_8hpp" startline="164">_last_reset_time</references>
+        <references refid="class_integrator_1a152623db73d2d4b36200846ebbc25343" compoundref="_integrator_8hpp" startline="176">_last_val</references>
+        <references refid="class_integrator_1a53948016a44549eb7628945583f578a5" compoundref="_integrator_8cpp" startline="207" endline="221">_reset</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_integrator_1a9e15e0acb43381b9e6e35bd520c90c83" compoundref="_integrator_8cpp" startline="158" endline="175">put_with_interval</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_1a9e15e0acb43381b9e6e35bd520c90c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+        <definition>boolean Integrator::put_with_interval</definition>
+        <argsstring>(uint32 interval_us, math::Vector3F &amp;val, math::Vector3F &amp;integral, uint64 &amp;integral_dt)</argsstring>
+        <name>put_with_interval</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>interval_us</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref> &amp;</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref> &amp;</type>
+          <declname>integral</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref> &amp;</type>
+          <declname>integral_dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Put an item into the integral but provide an interval instead of a timestamp.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interval_us</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Interval in us since last integration. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Item to put. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integral</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current integral in case the integrator did reset, else the value will not be modified </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integral_dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Get the dt in us of the current integration (only if reset). Note that this values might not be accurate vs. hrt_absolute_time because it is just the sum of the supplied intervals. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if putting the item triggered an integral reset and the integral should be published. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="112" column="1" bodyfile="apps/px4lib/fsw/src/math/Integrator.cpp" bodystart="158" bodyend="175"/>
+        <references refid="class_integrator_1ab898f7e3a601c22d95f773e8e03da20a" compoundref="_integrator_8hpp" startline="161">_last_integration_time</references>
+        <references refid="class_integrator_1afc3515183f07f6efb387eb917157f7a3" compoundref="_integrator_8hpp" startline="164">_last_reset_time</references>
+        <references refid="class_integrator_1a152623db73d2d4b36200846ebbc25343" compoundref="_integrator_8hpp" startline="176">_last_val</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</references>
+        <references refid="_integrator_8cpp_1abea3aaf39e3ca2be053ab8cc84cfd64e" compoundref="_integrator_8cpp" startline="50" endline="68">PX4LIB_GetPX4TimeUs</references>
+        <references refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a">uint64</references>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_1a13d60f51eeac0d61cfee88ce79c7ce1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref></type>
+        <definition>math::Vector3F Integrator::get</definition>
+        <argsstring>(boolean reset, uint64 &amp;integral_dt)</argsstring>
+        <name>get</name>
+        <param>
+          <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+          <declname>reset</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref> &amp;</type>
+          <declname>integral_dt</declname>
+        </param>
+        <briefdescription>
+<para>Get Value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function gets the current integral and reset the integrator if needed.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reset the integral to zero. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral_dt Get the dt in us of the current integration (only if reset).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+integral since the last read-reset </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="131" column="1" bodyfile="apps/px4lib/fsw/src/math/Integrator.cpp" bodystart="179" bodyend="189"/>
+        <references refid="class_integrator_1a666b2c7f9e8f6912277580fe92c49c0a" compoundref="_integrator_8hpp" startline="167">_alpha</references>
+        <references refid="class_integrator_1a53948016a44549eb7628945583f578a5" compoundref="_integrator_8cpp" startline="207" endline="221">_reset</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_1a3180fd935373b3d1623cd4146b5dad7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref></type>
+        <definition>math::Vector3F Integrator::get_and_filtered</definition>
+        <argsstring>(boolean reset, uint64 &amp;integral_dt, math::Vector3F &amp;filtered_val)</argsstring>
+        <name>get_and_filtered</name>
+        <param>
+          <type><ref refid="common__types_8h_1ac3ecf6d00ebd3dd79ea00efdc71d9c33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">boolean</ref></type>
+          <declname>reset</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref> &amp;</type>
+          <declname>integral_dt</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector3_f" kindref="compound">math::Vector3F</ref> &amp;</type>
+          <declname>filtered_val</declname>
+        </param>
+        <briefdescription>
+<para>Put Value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function gets the current integral and resets the integrator if needed. Additionally give the integral over the samples differentiated by the integration time (mean filtered values).</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reset the integral to zero. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral_dt Get the dt in us of the current integration (only if reset). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filtered_val The integral differentiated by the integration time.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if putting the item triggered an integral reset and the integral should be published. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="152" column="1" bodyfile="apps/px4lib/fsw/src/math/Integrator.cpp" bodystart="192" bodyend="204"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_integrator_1a4571e00d77587b17ac17282adcd0bb0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Integrator::Integrator</definition>
+        <argsstring>(const Integrator &amp;)</argsstring>
+        <name>Integrator</name>
+        <param>
+          <type>const <ref refid="class_integrator" kindref="compound">Integrator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_1abf3a66e04f720c866f5df8777c40f785" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_integrator" kindref="compound">Integrator</ref></type>
+        <definition>Integrator Integrator::operator=</definition>
+        <argsstring>(const Integrator &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_integrator" kindref="compound">Integrator</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Equal Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the set equals behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="201" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_integrator_1a53948016a44549eb7628945583f578a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Integrator::_reset</definition>
+        <argsstring>(uint64 &amp;integral_dt)</argsstring>
+        <name>_reset</name>
+        <param>
+          <type><ref refid="common__types_8h_1af8b7e3953afcaed80d23a662c9c4574a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint64</ref> &amp;</type>
+          <declname>integral_dt</declname>
+        </param>
+        <briefdescription>
+<para>Reset. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function resets the object</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>integral_dt Get the dt in us of the current integration. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="215" column="1" bodyfile="apps/px4lib/fsw/src/math/Integrator.cpp" bodystart="207" bodyend="221"/>
+        <references refid="class_integrator_1a666b2c7f9e8f6912277580fe92c49c0a" compoundref="_integrator_8hpp" startline="167">_alpha</references>
+        <references refid="class_integrator_1ae00849e9509929075599f304808bb0c3" compoundref="_integrator_8hpp" startline="173">_beta</references>
+        <references refid="class_integrator_1a77009d4a2990d40a2aa1a4b4e35c2518" compoundref="_integrator_8hpp" startline="170">_last_alpha</references>
+        <references refid="class_integrator_1ab898f7e3a601c22d95f773e8e03da20a" compoundref="_integrator_8hpp" startline="161">_last_integration_time</references>
+        <references refid="class_integrator_1afc3515183f07f6efb387eb917157f7a3" compoundref="_integrator_8hpp" startline="164">_last_reset_time</references>
+        <referencedby refid="class_integrator_1a13d60f51eeac0d61cfee88ce79c7ce1a" compoundref="_integrator_8cpp" startline="179" endline="189">get</referencedby>
+        <referencedby refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" compoundref="_integrator_8cpp" startline="91" endline="155">put</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="27">
+        <label>Integrator</label>
+        <link refid="class_integrator"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>_last_alpha</edgelabel>
+          <edgelabel>_last_val</edgelabel>
+          <edgelabel>_last_delta_alpha</edgelabel>
+          <edgelabel>_beta</edgelabel>
+          <edgelabel>_alpha</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>math::Vector3F</label>
+        <link refid="classmath_1_1_vector3_f"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/px4lib/fsw/public_inc/math/Integrator.hpp" line="52" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Integrator.hpp" bodystart="51" bodyend="216"/>
+    <listofallmembers>
+      <member refid="class_integrator_1a666b2c7f9e8f6912277580fe92c49c0a" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_alpha</name></member>
+      <member refid="class_integrator_1a62274bd568f983d7209526bf9b841b43" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_auto_reset_interval</name></member>
+      <member refid="class_integrator_1ae00849e9509929075599f304808bb0c3" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_beta</name></member>
+      <member refid="class_integrator_1a2906c3a613e9ff61621b4e53fdcd7072" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_coning_comp_on</name></member>
+      <member refid="class_integrator_1a77009d4a2990d40a2aa1a4b4e35c2518" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_last_alpha</name></member>
+      <member refid="class_integrator_1a200138375bfd5bd426895a68be01dfb7" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_last_delta_alpha</name></member>
+      <member refid="class_integrator_1ab898f7e3a601c22d95f773e8e03da20a" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_last_integration_time</name></member>
+      <member refid="class_integrator_1afc3515183f07f6efb387eb917157f7a3" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_last_reset_time</name></member>
+      <member refid="class_integrator_1a152623db73d2d4b36200846ebbc25343" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_last_val</name></member>
+      <member refid="class_integrator_1a53948016a44549eb7628945583f578a5" prot="private" virt="non-virtual"><scope>Integrator</scope><name>_reset</name></member>
+      <member refid="class_integrator_1a13d60f51eeac0d61cfee88ce79c7ce1a" prot="public" virt="non-virtual"><scope>Integrator</scope><name>get</name></member>
+      <member refid="class_integrator_1a3180fd935373b3d1623cd4146b5dad7f" prot="public" virt="non-virtual"><scope>Integrator</scope><name>get_and_filtered</name></member>
+      <member refid="class_integrator_1a7e32eec0d7eb3f14bed66f82c7e1f728" prot="public" virt="non-virtual"><scope>Integrator</scope><name>Integrator</name></member>
+      <member refid="class_integrator_1a4571e00d77587b17ac17282adcd0bb0e" prot="private" virt="non-virtual"><scope>Integrator</scope><name>Integrator</name></member>
+      <member refid="class_integrator_1abf3a66e04f720c866f5df8777c40f785" prot="private" virt="non-virtual"><scope>Integrator</scope><name>operator=</name></member>
+      <member refid="class_integrator_1ad19f27a56adf99bf526f50c201bcc8bd" prot="public" virt="non-virtual"><scope>Integrator</scope><name>put</name></member>
+      <member refid="class_integrator_1a9e15e0acb43381b9e6e35bd520c90c83" prot="public" virt="non-virtual"><scope>Integrator</scope><name>put_with_interval</name></member>
+      <member refid="class_integrator_1a951d50d45bd02af21f590741f83c0d73" prot="public" virt="virtual"><scope>Integrator</scope><name>~Integrator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

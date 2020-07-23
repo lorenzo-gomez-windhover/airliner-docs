@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeesugstartupterm" kind="page">
+    <compoundname>cfeesugstartupterm</compoundname>
+    <title>&quot;Startup Script&quot;</title>
+    <detaileddescription>
+<para>The startup script is a text file, written by the user that contains a list of entries (one entry for each application) and is used by the ES application for automating the startup of applications. The ES application allows the use of a volatile and nonvolatile startup scripts. The project may utilize zero, one or two startup scripts.</para><para>The fields in a single entry include: <table rows="8" cols="2"><row>
+<entry thead="no"><para>Object Type </para></entry><entry thead="no"><para><computeroutput>CFE_APP</computeroutput> for an Application, or <computeroutput>CFE_LIB</computeroutput> for a library. </para></entry></row>
+<row>
+<entry thead="no"><para>Path/Filename </para></entry><entry thead="no"><para>This is a cFE Virtual filename, not a vxWorks device/pathname </para></entry></row>
+<row>
+<entry thead="no"><para>Entry Point </para></entry><entry thead="no"><para>This is the name of the &quot;main&quot; function for App. </para></entry></row>
+<row>
+<entry thead="no"><para>CFE Name </para></entry><entry thead="no"><para>The cFE name for the APP or Library </para></entry></row>
+<row>
+<entry thead="no"><para>Priority </para></entry><entry thead="no"><para>This is the Priority of the App, not used for a Library </para></entry></row>
+<row>
+<entry thead="no"><para>Stack Size </para></entry><entry thead="no"><para>This is the Stack size for the App, not used for a Library </para></entry></row>
+<row>
+<entry thead="no"><para>Load Address </para></entry><entry thead="no"><para>This is the Optional Load Address for the App or Library. It is currently not implemented so it should always be 0x0. </para></entry></row>
+<row>
+<entry thead="no"><para>Exception Action </para></entry><entry thead="no"><para>This is the Action the cFE should take if the Application has an exception. <linebreak/>
+ <itemizedlist>
+<listitem>
+<para>0 = Do a cFE Processor Reset <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Non-Zero = Just restart the Application </para></listitem>
+</itemizedlist>
+</para></entry></row>
+</table>
+</para><para>Immediately after the cFE completes its initialization, the ES Application first looks for the volatile startup script. The location in the file system is defined by the cFE platform configuration parameter named #CFE_ES_VOLATILE_STARTUP_FILE. This configuration parameter contains a path as well as a filename. If the file is found, ES begins to startup the applications that are listed in the file. If ES does not find the file, it attempts to open the #CFE_ES_NONVOL_STARTUP_FILE.</para><para>If ES finds the volatile startup script, the attempt to open the nonvolatile startup script is bypassed.</para><para>Any errors encountered in the startup script processing are written to the <ref refid="cfeesugsyslogsrv" kindref="compound">System Log Service</ref>. The <ref refid="cfeesugsyslogsrv" kindref="compound">System Log Service</ref> may also contain positive acknowledge messages regarding the startup script processing.</para><para>Refer to the CFS Deployment Guide for more information regarding the startup script. The startup script delivered with the cFE (<computeroutput>cfe_es_startup.scr</computeroutput>) also has some detailed information about the fields and the settings.</para><para>Next: <ref refid="cfeesugswreset" kindref="compound">Software Reset Service</ref> <linebreak/>
+ Prev: <ref refid="cfeesugappstart" kindref="compound">Starting an Application</ref> <linebreak/>
+ Up To: <ref refid="cfeesugterm" kindref="compound">Terminology</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

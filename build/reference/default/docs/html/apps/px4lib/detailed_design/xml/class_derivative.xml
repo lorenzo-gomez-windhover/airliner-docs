@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_derivative" kind="class" language="C++" prot="public">
+    <compoundname>Derivative</compoundname>
+    <includes refid="_derivative_8hpp" local="no">Derivative.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_derivative_1ade6a5038f0d4d834892ff1d84dec0c0e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Derivative::m_Initialized</definition>
+        <argsstring></argsstring>
+        <name>m_Initialized</name>
+        <briefdescription>
+<para>Initialization flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Derivative.hpp" line="54" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Derivative.hpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_derivative_1a80c4773d31c235a7ab6e78dbb43f1d89" compoundref="_derivative_8cpp" startline="21" endline="45">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_derivative_1ac02c23644c1e3410c7c700278aa2f9a7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Derivative::m_PreviousValue</definition>
+        <argsstring></argsstring>
+        <name>m_PreviousValue</name>
+        <briefdescription>
+<para>Previous value of derivative. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Derivative.hpp" line="57" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Derivative.hpp" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_derivative_1a80c4773d31c235a7ab6e78dbb43f1d89" compoundref="_derivative_8cpp" startline="21" endline="45">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_derivative_1a6e686b432a816cf04dec7f91e8f162cc" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_low_pass_filter2p" kindref="compound">math::LowPassFilter2p</ref></type>
+        <definition>math::LowPassFilter2p Derivative::m_LowPass</definition>
+        <argsstring></argsstring>
+        <name>m_LowPass</name>
+        <briefdescription>
+<para>Low Pass Filter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Derivative.hpp" line="60" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Derivative.hpp" bodystart="60" bodyend="-1"/>
+        <referencedby refid="class_derivative_1a80c4773d31c235a7ab6e78dbb43f1d89" compoundref="_derivative_8cpp" startline="21" endline="45">Update</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_derivative_1adc03ec3ad150bc0de66a3e7200cd368f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Derivative::Derivative</definition>
+        <argsstring>()</argsstring>
+        <name>Derivative</name>
+        <briefdescription>
+<para><ref refid="class_derivative" kindref="compound">Derivative</ref> Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Derivative.hpp" line="21" column="1" bodyfile="apps/px4lib/fsw/src/math/Derivative.cpp" bodystart="4" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_derivative_1a7fc4ee53f460dfb98b3db2e9c9830cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Derivative::~Derivative</definition>
+        <argsstring>()</argsstring>
+        <name>~Derivative</name>
+        <briefdescription>
+<para><ref refid="class_derivative" kindref="compound">Derivative</ref> Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Derivative.hpp" line="33" column="1" bodyfile="apps/px4lib/fsw/src/math/Derivative.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_derivative_1a80c4773d31c235a7ab6e78dbb43f1d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Derivative::Update</definition>
+        <argsstring>(float value, float dt, float cutoff)</argsstring>
+        <name>Update</name>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cutoff</declname>
+        </param>
+        <briefdescription>
+<para>Update <ref refid="class_derivative" kindref="compound">Derivative</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function updates the derivative value</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying the input value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying delta time in us </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cutoff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #float specifying cutoff frequency </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Derivative.hpp" line="49" column="1" bodyfile="apps/px4lib/fsw/src/math/Derivative.cpp" bodystart="21" bodyend="45"/>
+        <references refid="classmath_1_1_low_pass_filter2p_1a560a894bf85c80e56091096e2e9fc253" compoundref="_low_pass_filter2p_8cpp" startline="68" endline="91">math::LowPassFilter2p::apply</references>
+        <references refid="class_derivative_1ade6a5038f0d4d834892ff1d84dec0c0e" compoundref="_derivative_8hpp" startline="54">m_Initialized</references>
+        <references refid="class_derivative_1a6e686b432a816cf04dec7f91e8f162cc" compoundref="_derivative_8hpp" startline="60">m_LowPass</references>
+        <references refid="class_derivative_1ac02c23644c1e3410c7c700278aa2f9a7" compoundref="_derivative_8hpp" startline="57">m_PreviousValue</references>
+        <references refid="classmath_1_1_low_pass_filter2p_1a5c1390c1bca03d0eb9229ddccfbede24" compoundref="_low_pass_filter2p_8cpp" startline="49" endline="66">math::LowPassFilter2p::set_cutoff_frequency</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="14">
+        <label>Derivative</label>
+        <link refid="class_derivative"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_LowPass</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>math::LowPassFilter2p</label>
+        <link refid="classmath_1_1_low_pass_filter2p"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/px4lib/fsw/public_inc/math/Derivative.hpp" line="8" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Derivative.hpp" bodystart="7" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_derivative_1adc03ec3ad150bc0de66a3e7200cd368f" prot="public" virt="non-virtual"><scope>Derivative</scope><name>Derivative</name></member>
+      <member refid="class_derivative_1ade6a5038f0d4d834892ff1d84dec0c0e" prot="private" virt="non-virtual"><scope>Derivative</scope><name>m_Initialized</name></member>
+      <member refid="class_derivative_1a6e686b432a816cf04dec7f91e8f162cc" prot="private" virt="non-virtual"><scope>Derivative</scope><name>m_LowPass</name></member>
+      <member refid="class_derivative_1ac02c23644c1e3410c7c700278aa2f9a7" prot="private" virt="non-virtual"><scope>Derivative</scope><name>m_PreviousValue</name></member>
+      <member refid="class_derivative_1a80c4773d31c235a7ab6e78dbb43f1d89" prot="public" virt="non-virtual"><scope>Derivative</scope><name>Update</name></member>
+      <member refid="class_derivative_1a7fc4ee53f460dfb98b3db2e9c9830cf9" prot="public" virt="non-virtual"><scope>Derivative</scope><name>~Derivative</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsvmovr" kind="page">
+    <compoundname>cfsvmovr</compoundname>
+    <title>VM Application Overview</title>
+    <detaileddescription>
+<para>The <ref refid="class_v_m" kindref="compound">VM</ref> Application (<ref refid="class_v_m" kindref="compound">VM</ref>) application enables safe vehicle commanding, additionally detects failure and executes contingent action.</para><para><heading level="1"><ref refid="class_v_m" kindref="compound">VM</ref> Design Overview </heading>
+</para><para>The <ref refid="class_v_m" kindref="compound">VM</ref> Application (<ref refid="class_v_m" kindref="compound">VM</ref>) has three components. <linebreak/>
+<orderedlist>
+<listitem><para>System Routines<linebreak/>
+</para></listitem><listitem><para>Arming State Machine<linebreak/>
+</para></listitem><listitem><para>Navigation State Machine<linebreak/>
+</para></listitem></orderedlist>
+</para><para><heading level="1">System Routines </heading>
+</para><para>The Routines performed by <ref refid="class_v_m" kindref="compound">VM</ref> include battery management, listening to RC commanding, checking for citicality and warnings.</para><para><heading level="1">Arming State Machine </heading>
+</para><para>The state machine initializes at a start state (Init) then moves to default state (Standby) and waits for further transitions.<linebreak/>
+ The state machine handles trasitions between states and guards against illeagal transitions of the states.<linebreak/>
+ The states that can be found in this state machine are:<linebreak/>
+<orderedlist>
+<listitem><para>Init<linebreak/>
+</para></listitem><listitem><para>Standby<linebreak/>
+</para></listitem><listitem><para>Armed<linebreak/>
+</para></listitem><listitem><para>StandbyError<linebreak/>
+</para></listitem><listitem><para>ArmedError<linebreak/>
+ <dotfile>Arming State Diagram</dotfile>
+</para></listitem></orderedlist>
+</para><para><heading level="1">Navigation State Machine </heading>
+</para><para>The state machine initializes at a start state (Init) then moves to default state (Manual) and waits for further transitions.<linebreak/>
+ The transitions can be invoked by either RC or from ground station.<linebreak/>
+ The state machine handles trasitions between states and guards against illeagal transitions of the states.<linebreak/>
+ The states that can be found in this state machine are:<linebreak/>
+<orderedlist>
+<listitem><para>Init<linebreak/>
+</para></listitem><listitem><para>Manual<linebreak/>
+</para></listitem><listitem><para>Altitude Control<linebreak/>
+</para></listitem><listitem><para>Position Control<linebreak/>
+</para></listitem><listitem><para>Acrobatic<linebreak/>
+</para></listitem><listitem><para>Rattitude<linebreak/>
+</para></listitem><listitem><para>Stabilize<linebreak/>
+</para></listitem><listitem><para>Auto Takeoff<linebreak/>
+</para></listitem><listitem><para>Auto Land<linebreak/>
+</para></listitem><listitem><para>Auto Loiter<linebreak/>
+</para></listitem><listitem><para>Auto RTL<linebreak/>
+ <dotfile>Navigation State Diagram</dotfile>
+ Prev: <ref refid="cfsvmintro" kindref="compound">VM Application Introduction</ref> <linebreak/>
+ Next: <ref refid="cfsvmopr" kindref="compound">VM Application Operation</ref> </para></listitem></orderedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_c_f_e___e_s___pool_stats_tlm__t" kind="struct" language="C++" prot="public">
+    <compoundname>CFE_ES_PoolStatsTlm_t</compoundname>
+    <includes refid="cfe__es__msg_8h" local="no">cfe_es_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_c_f_e___e_s___pool_stats_tlm__t_1a48f2e572159db6f106b1210d5ab7c769" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref></type>
+        <definition>uint8 CFE_ES_PoolStatsTlm_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE Software Bus Telemetry Message Header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_msg.h" line="1546" column="1" bodyfile="inc/cfe_es_msg.h" bodystart="1546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_f_e___e_s___pool_stats_tlm__t_1a316e2375e618dfe96c49959b5075f978" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_f_e___e_s___pool_stats_tlm___payload__t" kindref="compound">CFE_ES_PoolStatsTlm_Payload_t</ref></type>
+        <definition>CFE_ES_PoolStatsTlm_Payload_t CFE_ES_PoolStatsTlm_t::Payload</definition>
+        <argsstring></argsstring>
+        <name>Payload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_msg.h" line="1547" column="1" bodyfile="inc/cfe_es_msg.h" bodystart="1547" bodyend="-1"/>
+        <referencedby refid="cfe__es__task_8h_1ab8e2c0622ff73040123dda6b243bc08d" compoundref="cfe__es__task_8c" startline="2038" endline="2083">CFE_ES_TlmPoolStatsCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="152">
+        <label>CFE_ES_PoolStatsTlm_Payload_t</label>
+        <link refid="struct_c_f_e___e_s___pool_stats_tlm___payload__t"/>
+        <childnode refid="153" relation="usage">
+          <edgelabel>PoolStats</edgelabel>
+        </childnode>
+      </node>
+      <node id="154">
+        <label>CFE_ES_BlockStats_t</label>
+        <link refid="struct_c_f_e___e_s___block_stats__t"/>
+      </node>
+      <node id="153">
+        <label>CFE_ES_MemPoolStats_t</label>
+        <link refid="struct_c_f_e___e_s___mem_pool_stats__t"/>
+        <childnode refid="154" relation="usage">
+          <edgelabel>BlockStats</edgelabel>
+        </childnode>
+      </node>
+      <node id="151">
+        <label>CFE_ES_PoolStatsTlm_t</label>
+        <link refid="struct_c_f_e___e_s___pool_stats_tlm__t"/>
+        <childnode refid="152" relation="usage">
+          <edgelabel>Payload</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/cfe_es_msg.h" line="1545" column="1" bodyfile="inc/cfe_es_msg.h" bodystart="1544" bodyend="1548"/>
+    <listofallmembers>
+      <member refid="struct_c_f_e___e_s___pool_stats_tlm__t_1a316e2375e618dfe96c49959b5075f978" prot="public" virt="non-virtual"><scope>CFE_ES_PoolStatsTlm_t</scope><name>Payload</name></member>
+      <member refid="struct_c_f_e___e_s___pool_stats_tlm__t_1a48f2e572159db6f106b1210d5ab7c769" prot="public" virt="non-virtual"><scope>CFE_ES_PoolStatsTlm_t</scope><name>TlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsldopr" kind="page">
+    <compoundname>cfsldopr</compoundname>
+    <title>LD Application Operation</title>
+    <detaileddescription>
+<para>The following operations are carried out by the <ref refid="class_l_d" kindref="compound">LD</ref> Application: <heading level="2">1.Detect if vehicle is in free fall state </heading>
+</para><para>1) If parameter is set to zero or invalid, disable free-fall detection.<linebreak/>
+ 2) Get x,y,z accelerations acting on the vehicle and compute the net acceleration.<linebreak/>
+ 3) If acceleration is less than a predefined threshold, flag state to true.<linebreak/>
+ <heading level="2">2.Detect if vehicle is has ground contact state </heading>
+</para><para>1) If the vehicle is not armed then it is in ground contact state.<linebreak/>
+ 2) If vehicle is in manual mode never report landed. <orderedlist>
+<listitem>
+<para>If the user has more than idle throttle. </para></listitem>
+<listitem>
+<para>Check throttle and report no ground contact based on the pilots intent to take off. </para></listitem>
+</orderedlist>
+3) Increase acceptance thresholds for landed state after arming the vehicle so that the increasing motor speed and other effects do not trigger false negatives.<linebreak/>
+ 4) Mark vehicle state as ground contact if. <orderedlist>
+<listitem>
+<para>Not moving vertically. </para></listitem>
+<listitem>
+<para>Pilot reduces thrust, or in auto mode we are below minimum thrust. </para></listitem>
+<listitem>
+<para>We cannot move any further down. </para></listitem>
+</orderedlist>
+<heading level="2">3.Detect if vehicle is landed state </heading>
+</para><para>1) If the vehicle is not armed then it is in landed state.<linebreak/>
+ 2) If the vehicle is manually controlled and is idling, vehicle stays in landed state until the pilot increases throttle for takeoff. <orderedlist>
+<listitem>
+<para>If throttle is more than a given threshold, set ground contact state history to false. </para></listitem>
+</orderedlist>
+3) If the vehicle is not in altitude lock mode, check if the vehicle has minimum thrust and the drone stays that way of at least 8 seconds then mark state as landed.<linebreak/>
+ 4) Increase acceptance thresholds for landed state after arming the vehicle so that the increasing motor speed and other effects do not trigger false negatives.<linebreak/>
+ 5) Mark vehicle state as landed if. <orderedlist>
+<listitem>
+<para>Not moving horizontally. </para></listitem>
+<listitem>
+<para>Have no thrust. (look if all rotation angles are not moving) </para></listitem>
+<listitem>
+<para>Ground contact persists. </para></listitem>
+</orderedlist>
+<heading level="2">4.Determining current state of the vehicle </heading>
+</para><para>1) The state of the vehicle is determined by the land detector. A vehicle is said to be in landed state if it has seen a ground contact state previously.<linebreak/>
+</para><para>Next: <ref refid="cfsldreq" kindref="compound">LD Application Requirements</ref> <linebreak/>
+ Prev: <ref refid="cfsldovr" kindref="compound">LD Application Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

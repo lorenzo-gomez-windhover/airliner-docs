@@ -1,0 +1,495 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="sch__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>sch_platform_cfg.h</compoundname>
+    <includedby refid="sch__api_8c" local="yes">apps/sch/fsw/src/sch_api.c</includedby>
+    <includedby refid="sch__app_8c" local="yes">apps/sch/fsw/src/sch_app.c</includedby>
+    <includedby refid="sch__msgdefs_8h" local="yes">apps/sch/fsw/src/sch_msgdefs.h</includedby>
+    <invincdepgraph>
+      <node id="288">
+        <label>apps/sch/fsw/src/sch_msg.h</label>
+        <link refid="sch__msg_8h"/>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>apps/sch/fsw/src/sch_cmds.c</label>
+        <link refid="sch__cmds_8c"/>
+      </node>
+      <node id="286">
+        <label>apps/sch/fsw/src/sch_app.c</label>
+        <link refid="sch__app_8c"/>
+      </node>
+      <node id="289">
+        <label>apps/sch/fsw/src/sch_app.h</label>
+        <link refid="sch__app_8h"/>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="290" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>apps/sch/fsw/src/sch_msgdefs.h</label>
+        <link refid="sch__msgdefs_8h"/>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>apps/sch/fsw/platform_inc/sch_platform_cfg.h</label>
+        <link refid="sch_platform_cfg.h"/>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+      <node id="285">
+        <label>apps/sch/fsw/src/sch_api.c</label>
+        <link refid="sch__api_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a0efb7feeef71f7d97bbca9bae5dd7c36" prot="public" static="no">
+        <name>SCH_PIPE_DEPTH</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para>SCH Command Pipe Depth. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000001"><xreftitle>Purpose</xreftitle><xrefdescription><para>Software Bus Command Pipe Depth </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the number of messages to SCH that can be queued while awaiting processing by the SCH Application.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be greater than zero </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="39" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1ad886cda8185bba148e84832064efdf60" compoundref="sch__app_8c" startline="481" endline="558">SCH_SbInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a640d7089f602476608c00d5d9b613315" prot="public" static="no">
+        <name>SCH_TOTAL_SLOTS</name>
+        <initializer>100    /* SCH wake-up rate (Hz) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000002"><xreftitle>Purpose</xreftitle><xrefdescription><para>Minor Frame Frequency (in Hz) </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the number of minor frame slots within each Major Frame.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be 2 or more and less than 65536 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="53" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="sch__app_8c_1a9abddd3af384770e736d4461aebe7619" compoundref="sch__app_8c" startline="311" endline="335">SCH_CheckDeadlines</referencedby>
+        <referencedby refid="sch__cmds_8h_1a7d36f7c7881f03171058014b56d7c4d6" compoundref="sch__cmds_8c" startline="378" endline="438">SCH_DisableCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a25cca1d47d5337636c9343f2e58a86d7" compoundref="sch__cmds_8c" startline="308" endline="368">SCH_EnableCmd</referencedby>
+        <referencedby refid="sch__app_8c_1a3856f540045e2b62334820b83ee78848" compoundref="sch__app_8c" startline="1581" endline="1612">SCH_ProcessActivityComplete</referencedby>
+        <referencedby refid="sch__app_8h_1a58863cff7e97165f4302b72493711373" compoundref="sch__app_8c" startline="1014" endline="1121">SCH_ProcessNextEntry</referencedby>
+        <referencedby refid="sch__app_8h_1a7128e9225e88bcceaa22e9ba2807c263" compoundref="sch__app_8c" startline="952" endline="1004">SCH_ProcessNextSlot</referencedby>
+        <referencedby refid="sch__app_8h_1a205386d033f6fdfe0b6e6815373aae80" compoundref="sch__app_8c" startline="791" endline="942">SCH_ProcessScheduleTable</referencedby>
+        <referencedby refid="sch__app_8h_1adc2b38ac20df199eeac775c384f9d2df" compoundref="sch__app_8c" startline="568" endline="701">SCH_TblInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a191125a78975e2a0c581969c7d678b4e" prot="public" static="no">
+        <name>SCH_ENTRIES_PER_SLOT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000003"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of Activities per Minor Frame </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the number of activities that can be defined for each Minor Frame.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be at least one </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="65" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="sch__cmds_8h_1a7d36f7c7881f03171058014b56d7c4d6" compoundref="sch__cmds_8c" startline="378" endline="438">SCH_DisableCmd</referencedby>
+        <referencedby refid="sch__cmds_8h_1a25cca1d47d5337636c9343f2e58a86d7" compoundref="sch__cmds_8c" startline="308" endline="368">SCH_EnableCmd</referencedby>
+        <referencedby refid="sch__app_8h_1a7128e9225e88bcceaa22e9ba2807c263" compoundref="sch__app_8c" startline="952" endline="1004">SCH_ProcessNextSlot</referencedby>
+        <referencedby refid="sch__app_8h_1a8759e1b2bbfc770a43da32786599ba05" compoundref="sch__app_8c" startline="1190" endline="1380">SCH_ValidateScheduleData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a02550ee5880be5061544001811deecec" prot="public" static="no">
+        <name>SCH_MAX_MESSAGES</name>
+        <initializer>128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000004"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum Number of Message Definitions in Message Definition Table </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the number of messages that can be defined in Message Definition Table.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be at least one </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="77" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a58863cff7e97165f4302b72493711373" compoundref="sch__app_8c" startline="1014" endline="1121">SCH_ProcessNextEntry</referencedby>
+        <referencedby refid="sch__app_8h_1adc2b38ac20df199eeac775c384f9d2df" compoundref="sch__app_8c" startline="568" endline="701">SCH_TblInit</referencedby>
+        <referencedby refid="sch__app_8h_1a78763b84859de8d421ff68b1be39ac55" compoundref="sch__app_8c" startline="1390" endline="1499">SCH_ValidateMessageData</referencedby>
+        <referencedby refid="sch__app_8h_1a8759e1b2bbfc770a43da32786599ba05" compoundref="sch__app_8c" startline="1190" endline="1380">SCH_ValidateScheduleData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a9548b3ea10b92bc3ff1940d4a93d41dc" prot="public" static="no">
+        <name>SCH_MDT_MIN_MSG_ID</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000005"><xreftitle>Purpose</xreftitle><xrefdescription><para>Minimum Message ID allowed in Message Definition Table </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the minimum message ID that can be used in the Message Definition Table.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be less than or equal to SCH_MDT_MAX_MSG_ID and greater than or equal to 0 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="88" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="88" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a78763b84859de8d421ff68b1be39ac55" compoundref="sch__app_8c" startline="1390" endline="1499">SCH_ValidateMessageData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a2bd1b9c1ac55dfa973315131d4da9262" prot="public" static="no">
+        <name>SCH_MDT_MAX_MSG_ID</name>
+        <initializer>CFE_SB_HIGHEST_VALID_MSGID</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000006"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum Message ID allowed in Message Definition Table </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the maximum message ID that can be used in the Message Definition Table.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be less than or equal to #CFE_SB_HIGHEST_VALID_MSGID and greater than SCH_MDT_MIN_MSG_ID </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="99" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a78763b84859de8d421ff68b1be39ac55" compoundref="sch__app_8c" startline="1390" endline="1499">SCH_ValidateMessageData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1abae40b96462eac577fb95363ee030a38" prot="public" static="no">
+        <name>SCH_MAX_MSG_WORDS</name>
+        <initializer>64   /* max message length (in words) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000007"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum Length, in Words, of a Message </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the maximum number of words that can be assigned to a particular message in the Message Definition Table.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be at least large enough to hold the smallest possible message header ** (see <ref refid="cfe__sb_8h_1abf04f5fc43f637e617096626d357fb79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_TLM_HDR_SIZE</ref> and <ref refid="cfe__sb_8h_1acc49ae58990b23f72824e1b742c78cb8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CMD_HDR_SIZE</ref>) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="113" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a78763b84859de8d421ff68b1be39ac55" compoundref="sch__app_8c" startline="1390" endline="1499">SCH_ValidateMessageData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a3c0b63876d747b502eca1d357db4811b" prot="public" static="no">
+        <name>SCH_MAX_LAG_COUNT</name>
+        <initializer>(<ref refid="sch__platform__cfg_8h_1a640d7089f602476608c00d5d9b613315" kindref="member">SCH_TOTAL_SLOTS</ref> / 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000008"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum Number of slots allowed for catch-up before skipping </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the number of Minor Frames that will be processed in &quot;Catch Up&quot; mode before giving up and skipping ahead.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para></para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="129" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="129" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a205386d033f6fdfe0b6e6815373aae80" compoundref="sch__app_8c" startline="791" endline="942">SCH_ProcessScheduleTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1af171824906a7a855149ef5f2a6864f3c" prot="public" static="no">
+        <name>SCH_MAX_SLOTS_PER_WAKEUP</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000009"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum Number of Slots to be processed when in &quot;Catch Up&quot; mode </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the maximum number of slots SCH will process when trying to &quot;Catch Up&quot; to the correct slot for the current time.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be at least one </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="142" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="142" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a205386d033f6fdfe0b6e6815373aae80" compoundref="sch__app_8c" startline="791" endline="942">SCH_ProcessScheduleTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a713f29f56d23240c78fc018a571723d3" prot="public" static="no">
+        <name>SCH_MICROS_PER_MAJOR_FRAME</name>
+        <initializer>1000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000010"><xreftitle>Purpose</xreftitle><xrefdescription><para>Major Frame Period (in microseconds) </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the number microseconds in a Major Frame.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be greater than zero </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="156" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1afa493b73d6d26f4171bce55904f7989e" prot="public" static="no">
+        <name>SCH_SYNC_SLOT_DRIFT_WINDOW</name>
+        <initializer>5000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000011"><xreftitle>Purpose</xreftitle><xrefdescription><para>Additional time allowed in Sync Slot to wait for Major Frame Sync (in microseconds) </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the additional time allowed in the Syncronization Slot to allow the Major Frame Sync signal to be received and re-synchronize processing.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be less than the normal slot period </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="170" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a539ebcc2074bc1b010ab6127c63ccdb8" prot="public" static="no">
+        <name>SCH_STARTUP_SYNC_TIMEOUT</name>
+        <initializer>50000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000012"><xreftitle>Purpose</xreftitle><xrefdescription><para>Time, in milliseconds, to wait for all applications to be started and ready to run </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the timeout for the <ref refid="cfe__es_8h_1a7dc343ea775a0e5773ecdf700581d548" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_WaitForStartupSync</ref> call that SCH uses to wait for all of the Applications specified in the startup script to finish initialization. SCH will wait this amount of time before assuming all startup script applications have been started and will then begin nominal schedule processing.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="185" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a5cb6fe864442bd1e6a1a0f1050a14680" prot="public" static="no">
+        <name>SCH_STARTUP_PERIOD</name>
+        <initializer>(5*<ref refid="sch__platform__cfg_8h_1a713f29f56d23240c78fc018a571723d3" kindref="member">SCH_MICROS_PER_MAJOR_FRAME</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000013"><xreftitle>Purpose</xreftitle><xrefdescription><para>Time, in microseconds, to wait for first Major Frame Sync to arrive </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the time allowed for the first Major Frame sync signal to arrive before assuming it is not going to occur and switching to a freewheeling mode.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>Must be greater than or equal to the Major Frame Period </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="199" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a73f474fd107fc1572d7c19747f088cff" prot="public" static="no">
+        <name>SCH_MAX_NOISY_MAJORF</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000014"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum Number of consecutive Noisy Major Frame signals before they are ignored </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Dictates the number of consecutive &quot;Noisy&quot; Major Frame Signals (i.e. - signals that occur outside the expected window of their occurence) until the Major Frame signal is automatically ignored and the Minor Frame Timer is used instead.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>This value should never be set to less than two because a single &quot;noisy&quot; Major Frame signal is likely when turning on or switching the 1 Hz signal on the spacecraft. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="218" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a3e60196dcee964e40ea2fa02432ce9f1" prot="public" static="no">
+        <name>SCH_LIB_PRESENCE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000015"><xreftitle>Purpose</xreftitle><xrefdescription><para>Scheduler API Library Usage Status </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Determines whether or not the Scheduler application is using the API library allowing for external tasks to disable and enable schedule processing. Note that if the library is to be used it must be generated as a separate object, and loaded prior to the appplication.</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>This value must either be 0 when not using or including the library, or 1 if the library is going to be used. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="234" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a52bf5079eb88fd0172002e0e51f98968" prot="public" static="no">
+        <name>SCH_LIB_DIS_CTR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000016"><xreftitle>Purpose</xreftitle><xrefdescription><para>Scheduler API Library Initial Inhibition Count </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Sets the number of times the scheduler must be enabled following library initialization. This allows the scheduler to come up either enabled (set to 0) or disabled (set to a value greater than or equal to 1)</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>This value must be an unsigned 32 bit integer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="248" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="248" bodyend="-1"/>
+        <referencedby refid="sch__apipriv_8h_1a7961d6273b553bb2550ff822889ccbc3" compoundref="sch__api_8c" startline="43" endline="47">SCH_LibInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1aa0a00e5974aa67bfe91ce39d1f2db1d3" prot="public" static="no">
+        <name>SCH_SCHEDULE_FILENAME</name>
+        <initializer>&quot;/cf/apps/sch_def_schtbl.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000017"><xreftitle>Purpose</xreftitle><xrefdescription><para>Default SCH Schedule Definition Table Filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The value of this constant defines the default filename of the SCH Schedule Definition Table</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="263" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="263" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1adc2b38ac20df199eeac775c384f9d2df" compoundref="sch__app_8c" startline="568" endline="701">SCH_TblInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a052acaa8ebd6c01b4fcc35636ea3b265" prot="public" static="no">
+        <name>SCH_MESSAGE_FILENAME</name>
+        <initializer>&quot;/cf/apps/sch_def_msgtbl.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000018"><xreftitle>Purpose</xreftitle><xrefdescription><para>Default SCH Message Definition Table Filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The value of this constant defines the default filename of the SCH Message Definition Table</para></simplesect>
+<simplesect kind="par"><title>Limits</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="278" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="278" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1adc2b38ac20df199eeac775c384f9d2df" compoundref="sch__app_8c" startline="568" endline="701">SCH_TblInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a780b944ab488ad7a4c4e4e81161d23f5" prot="public" static="no">
+        <name>SCH_MISSION_REV</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsschcfg_1_cfsschcfg000019"><xreftitle>Purpose</xreftitle><xrefdescription><para>Mission specific version number for SCH application</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;sch_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="295" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="295" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1a9076cd8d41772ff69214a3f080d534de" compoundref="sch__app_8c" startline="346" endline="431">SCH_AppInit</referencedby>
+        <referencedby refid="sch__cmds_8h_1a7f939552655ab1716a0184a1f4678705" compoundref="sch__cmds_8c" startline="229" endline="252">SCH_NoopCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1affcab3f86660ff93f020c77f1ed274cc" prot="public" static="no">
+        <name>SCH_AD_PIPE_DEPTH</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="298" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="298" bodyend="-1"/>
+        <referencedby refid="sch__app_8h_1ad886cda8185bba148e84832064efdf60" compoundref="sch__app_8c" startline="481" endline="558">SCH_SbInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a8814e505d395033be579069f61fd1f1c" prot="public" static="no">
+        <name>SCH_AD_CHILD_TASK_PRIORITY</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="299" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="299" bodyend="-1"/>
+        <referencedby refid="sch__app_8c_1ab243a2d7f3f6f2c68fe22007f296c691" compoundref="sch__app_8c" startline="1503" endline="1545">SCH_ChildTaskInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1aba7e8394b91d67b79c83eaf6badd6215" prot="public" static="no">
+        <name>SCH_DEADLINES_PER_SLOT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="300" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="300" bodyend="-1"/>
+        <referencedby refid="sch__app_8c_1ac53a06143ede904091bb98f174290fa5" compoundref="sch__app_8c" startline="1125" endline="1143">SCH_GetAvailableActivityDeadline</referencedby>
+        <referencedby refid="sch__app_8c_1a80b8ad9433e4f3c6318a2defce16d13c" compoundref="sch__app_8c" startline="289" endline="307">SCH_GetOutstandingActivityCount</referencedby>
+        <referencedby refid="sch__app_8c_1a3856f540045e2b62334820b83ee78848" compoundref="sch__app_8c" startline="1581" endline="1612">SCH_ProcessActivityComplete</referencedby>
+        <referencedby refid="sch__app_8h_1adc2b38ac20df199eeac775c384f9d2df" compoundref="sch__app_8c" startline="568" endline="701">SCH_TblInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sch__platform__cfg_8h_1a3ff035f8a760b63ad6a7a105be0c2d1d" prot="public" static="no">
+        <name>SCH_AD_CHILD_TASK_FLAGS</name>
+        <initializer><ref refid="osapi-os-core_8h_1a1059ea6f1266dde89975fcc5fe04fe33" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_ENABLE_CORE_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h" line="301" column="9" bodyfile="apps/sch/fsw/platform_inc/sch_platform_cfg.h" bodystart="301" bodyend="-1"/>
+        <referencedby refid="sch__app_8c_1ab243a2d7f3f6f2c68fe22007f296c691" compoundref="sch__app_8c" startline="1503" endline="1545">SCH_ChildTaskInit</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>sch_platform_cfg.h<sp/>1.4<sp/>2017/06/21<sp/>15:28:58EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/>The<sp/>CFS<sp/>Scheduler<sp/>(SCH)<sp/>Application<sp/>platform<sp/>configuration<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_sch_platform_cfg_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_sch_platform_cfg_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Macro<sp/>definitions</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="sch__platform__cfg_8h_1a0efb7feeef71f7d97bbca9bae5dd7c36" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/>12<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Schedule<sp/>table<sp/>definitions...</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="sch__platform__cfg_8h_1a640d7089f602476608c00d5d9b613315" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_TOTAL_SLOTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>100<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>SCH<sp/>wake-up<sp/>rate<sp/>(Hz)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="sch__platform__cfg_8h_1a191125a78975e2a0c581969c7d678b4e" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_ENTRIES_PER_SLOT<sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="sch__platform__cfg_8h_1a02550ee5880be5061544001811deecec" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MAX_MESSAGES<sp/><sp/><sp/><sp/><sp/><sp/>128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="sch__platform__cfg_8h_1a9548b3ea10b92bc3ff1940d4a93d41dc" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MDT_MIN_MSG_ID<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="sch__platform__cfg_8h_1a2bd1b9c1ac55dfa973315131d4da9262" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MDT_MAX_MSG_ID<sp/><sp/><sp/><sp/>CFE_SB_HIGHEST_VALID_MSGID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="sch__platform__cfg_8h_1abae40b96462eac577fb95363ee030a38" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MAX_MSG_WORDS<sp/><sp/><sp/><sp/><sp/><sp/>64<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>max<sp/>message<sp/>length<sp/>(in<sp/>words)<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">**<sp/>Limits<sp/>for<sp/>how<sp/>far<sp/>we<sp/>can<sp/>get<sp/>behind<sp/>and<sp/>how<sp/>much<sp/>we<sp/>can<sp/>do<sp/>at<sp/>once...</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="129" refid="sch__platform__cfg_8h_1a3c0b63876d747b502eca1d357db4811b" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MAX_LAG_COUNT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SCH_TOTAL_SLOTS<sp/>/<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="sch__platform__cfg_8h_1af171824906a7a855149ef5f2a6864f3c" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MAX_SLOTS_PER_WAKEUP<sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="145"><highlight class="comment">**<sp/>Conversion<sp/>factor<sp/>for<sp/>how<sp/>many<sp/>microseconds<sp/>in<sp/>a<sp/>wake-up<sp/>period...</highlight></codeline>
+<codeline lineno="146"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="156" refid="sch__platform__cfg_8h_1a713f29f56d23240c78fc018a571723d3" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MICROS_PER_MAJOR_FRAME<sp/><sp/><sp/><sp/>1000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="sch__platform__cfg_8h_1afa493b73d6d26f4171bce55904f7989e" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SYNC_SLOT_DRIFT_WINDOW<sp/><sp/><sp/>5000<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="sch__platform__cfg_8h_1a539ebcc2074bc1b010ab6127c63ccdb8" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_STARTUP_SYNC_TIMEOUT<sp/><sp/><sp/>50000<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199" refid="sch__platform__cfg_8h_1a5cb6fe864442bd1e6a1a0f1050a14680" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_STARTUP_PERIOD<sp/><sp/><sp/>(5*SCH_MICROS_PER_MAJOR_FRAME)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="203"><highlight class="comment">**<sp/>Specifies<sp/>the<sp/>limit<sp/>on<sp/>the<sp/>number<sp/>of<sp/>consecutive<sp/>noisy<sp/>Major<sp/>Frame<sp/>signals</highlight></codeline>
+<codeline lineno="204"><highlight class="comment">**<sp/>before<sp/>we<sp/>begin<sp/>to<sp/>ignore<sp/>them.</highlight></codeline>
+<codeline lineno="205"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="218" refid="sch__platform__cfg_8h_1a73f474fd107fc1572d7c19747f088cff" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MAX_NOISY_MAJORF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="sch__platform__cfg_8h_1a3e60196dcee964e40ea2fa02432ce9f1" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_LIB_PRESENCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="sch__platform__cfg_8h_1a52bf5079eb88fd0172002e0e51f98968" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_LIB_DIS_CTR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="sch__platform__cfg_8h_1aa0a00e5974aa67bfe91ce39d1f2db1d3" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_SCHEDULE_FILENAME<sp/><sp/>&quot;/cf/apps/sch_def_schtbl.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="sch__platform__cfg_8h_1a052acaa8ebd6c01b4fcc35636ea3b265" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MESSAGE_FILENAME<sp/><sp/><sp/>&quot;/cf/apps/sch_def_msgtbl.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295" refid="sch__platform__cfg_8h_1a780b944ab488ad7a4c4e4e81161d23f5" refkind="member"><highlight class="preprocessor">#define<sp/>SCH_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="sch__platform__cfg_8h_1affcab3f86660ff93f020c77f1ed274cc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_AD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="sch__platform__cfg_8h_1a8814e505d395033be579069f61fd1f1c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_AD_CHILD_TASK_PRIORITY<sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="sch__platform__cfg_8h_1aba7e8394b91d67b79c83eaf6badd6215" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_DEADLINES_PER_SLOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="sch__platform__cfg_8h_1a3ff035f8a760b63ad6a7a105be0c2d1d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCH_AD_CHILD_TASK_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OS_ENABLE_CORE_0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_sch_platform_cfg_h_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/sch/fsw/platform_inc/sch_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="mm__verify_8h" kind="file" language="C++">
+    <compoundname>mm_verify.h</compoundname>
+    <includes refid="mm__mission__cfg_8h" local="yes">mm_mission_cfg.h</includes>
+    <includes refid="mm__platform__cfg_8h" local="yes">mm_platform_cfg.h</includes>
+    <includedby refid="mm__app_8c" local="yes">apps/mm/fsw/src/mm_app.c</includedby>
+    <incdepgraph>
+      <node id="753">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="752">
+        <label>mm_mission_cfg.h</label>
+        <link refid="mm__mission__cfg_8h"/>
+        <childnode refid="753" relation="include">
+        </childnode>
+      </node>
+      <node id="751">
+        <label>apps/mm/fsw/src/mm_verify.h</label>
+        <link refid="mm_verify.h"/>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="754" relation="include">
+        </childnode>
+      </node>
+      <node id="754">
+        <label>mm_platform_cfg.h</label>
+        <link refid="mm__platform__cfg_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="755">
+        <label>apps/mm/fsw/src/mm_verify.h</label>
+        <link refid="mm_verify.h"/>
+        <childnode refid="756" relation="include">
+        </childnode>
+      </node>
+      <node id="756">
+        <label>apps/mm/fsw/src/mm_app.c</label>
+        <link refid="mm__app_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>mm_verify.h<sp/>1.1<sp/>2015/07/28<sp/>12:22:08EDT<sp/>rperera<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>Contains<sp/>CFS<sp/>Memory<sp/>Manager<sp/>macros<sp/>that<sp/>run<sp/>preprocessor<sp/>checks</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/>on<sp/>mission<sp/>configurable<sp/>parameters</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>References:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.2</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>Development<sp/>Standards<sp/>Document</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>MM<sp/>Heritage<sp/>Analysis<sp/>Document</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>MM<sp/>CDR<sp/>Package</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/><sp/><sp/>$Log:<sp/>mm_verify.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.1<sp/>2015/07/28<sp/>12:22:08EDT<sp/>rperera<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/><sp/><sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/><sp/><sp/>Member<sp/>added<sp/>to<sp/>project<sp/>/CFS-APPs-PROJECT/mm/fsw/src/project.pj</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.7<sp/>2015/03/02<sp/>14:26:30EST<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>copyright<sp/>information</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.6<sp/>2011/11/30<sp/>15:54:48EST<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/><sp/><sp/>Deleted<sp/>tests<sp/>of<sp/>the<sp/>default<sp/>algorithm<sp/>definitions.</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.5<sp/>2010/11/29<sp/>13:28:52EST<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/><sp/><sp/>Updated<sp/>and<sp/>corrected<sp/>verification<sp/>tests.</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.4<sp/>2008/09/05<sp/>13:14:30EDT<sp/>dahardison<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>inclusion<sp/>of<sp/>mm_mission_cfg.h</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2008/05/19<sp/>15:23:42EDT<sp/>dahardison<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/><sp/><sp/>Version<sp/>after<sp/>completion<sp/>of<sp/>unit<sp/>testing</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_mm_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_mm_verify_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>Includes</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mm__mission__cfg_8h" kindref="compound">mm_mission_cfg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mm__platform__cfg_8h" kindref="compound">mm_platform_cfg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>Macro<sp/>Definitions</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/><sp/>Maximum<sp/>number<sp/>of<sp/>bytes<sp/>for<sp/>an<sp/>uninterruptable<sp/>load</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>MM_MAX_UNINTERRUPTABLE_DATA<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_UNINTERRUPTABLE_DATA<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>MM_MAX_UNINTERRUPTABLE_DATA<sp/>&gt;<sp/>255</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_UNINTERRUPTABLE_DATA<sp/>should<sp/>be<sp/>less<sp/>than<sp/>256<sp/>Bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_OPT_CODE_MEM32_MEMTYPE<sp/>!=<sp/>TRUE)<sp/>&amp;&amp;<sp/>(MM_OPT_CODE_MEM32_MEMTYPE<sp/>!=<sp/>FALSE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_OPT_CODE_MEM32_MEMTYPE<sp/>must<sp/>be<sp/>either<sp/>TRUE<sp/>or<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_OPT_CODE_MEM16_MEMTYPE<sp/>!=<sp/>TRUE)<sp/>&amp;&amp;<sp/>(MM_OPT_CODE_MEM16_MEMTYPE<sp/>!=<sp/>FALSE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_OPT_CODE_MEM16_MEMTYPE<sp/>must<sp/>be<sp/>either<sp/>TRUE<sp/>or<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_OPT_CODE_MEM8_MEMTYPE<sp/>!=<sp/>TRUE)<sp/>&amp;&amp;<sp/>(MM_OPT_CODE_MEM8_MEMTYPE<sp/>!=<sp/>FALSE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_OPT_CODE_MEM8_MEMTYPE<sp/>must<sp/>be<sp/>either<sp/>TRUE<sp/>or<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">**<sp/>Minimum<sp/>size<sp/>for<sp/>max<sp/>load<sp/>file<sp/>defaults</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>MM_MAX_LOAD_FILE_DATA_RAM<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_LOAD_FILE_DATA_RAM<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>MM_MAX_LOAD_FILE_DATA_EEPROM<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_LOAD_FILE_DATA_EEPROM<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">**<sp/>Minimum<sp/>size<sp/>for<sp/>max<sp/>load<sp/>data<sp/>segment</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>MM_MAX_LOAD_DATA_SEG<sp/>&lt;<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_LOAD_DATA_SEG<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">**<sp/>Minimum<sp/>size<sp/>for<sp/>max<sp/>fill<sp/>data<sp/>segment</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>MM_MAX_FILL_DATA_SEG<sp/>&lt;<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_FILL_DATA_SEG<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">**<sp/><sp/>Dump,<sp/>load,<sp/>and<sp/>fill<sp/>data<sp/>segment<sp/>sizes</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_LOAD_DATA_SEG<sp/>%<sp/>4)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_LOAD_DATA_SEG<sp/>should<sp/>be<sp/>longword<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_DUMP_DATA_SEG<sp/>%<sp/>4)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_DUMP_DATA_SEG<sp/>should<sp/>be<sp/>longword<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_FILL_DATA_SEG<sp/>%<sp/>4)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_FILL_DATA_SEG<sp/>should<sp/>be<sp/>longword<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="116"><highlight class="comment">**<sp/>Optional<sp/>MEM32<sp/>Configurable<sp/>Parameters<sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_OPT_CODE_MEM32_MEMTYPE<sp/>==<sp/>TRUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_LOAD_FILE_DATA_MEM32<sp/>%<sp/>4)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_LOAD_FILE_DATA_MEM32<sp/>should<sp/>be<sp/>longword<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_DUMP_FILE_DATA_MEM32<sp/>%<sp/>4)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_DUMP_FILE_DATA_MEM32<sp/>should<sp/>be<sp/>longword<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_FILL_DATA_MEM32<sp/>%<sp/>4)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_FILL_DATA_MEM32<sp/>should<sp/>be<sp/>longword<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>MM_OPT_CODE_MEM32_MEMTYPE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="135"><highlight class="comment">**<sp/>Optional<sp/>MEM16<sp/>Configurable<sp/>Parameters<sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_OPT_CODE_MEM16_MEMTYPE<sp/>==<sp/>TRUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_LOAD_FILE_DATA_MEM16<sp/>%<sp/>2)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_LOAD_FILE_DATA_MEM16<sp/>should<sp/>be<sp/>word<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_DUMP_FILE_DATA_MEM16<sp/>%<sp/>2)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_DUMP_FILE_DATA_MEM16<sp/>should<sp/>be<sp/>word<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MM_MAX_FILL_DATA_MEM16<sp/>%<sp/>2)<sp/>!=<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>MM_MAX_FILL_DATA_MEM16<sp/>should<sp/>be<sp/>word<sp/>aligned</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>MM_OPT_CODE_MEM16_MEMTYPE<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_mm_verify_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/mm/fsw/src/mm_verify.h"/>
+  </compounddef>
+</doxygen>

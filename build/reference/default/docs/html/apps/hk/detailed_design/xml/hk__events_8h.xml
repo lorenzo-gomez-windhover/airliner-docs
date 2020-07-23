@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="hk__events_8h" kind="file" language="C++">
+    <compoundname>hk_events.h</compoundname>
+    <includedby refid="hk__app_8c" local="yes">apps/hk/fsw/src/hk_app.c</includedby>
+    <includedby refid="hk__utils_8c" local="yes">apps/hk/fsw/src/hk_utils.c</includedby>
+    <invincdepgraph>
+      <node id="366">
+        <label>apps/hk/fsw/src/hk_utils.c</label>
+        <link refid="hk__utils_8c"/>
+      </node>
+      <node id="364">
+        <label>apps/hk/fsw/src/hk_events.h</label>
+        <link refid="hk_events.h"/>
+        <childnode refid="365" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>apps/hk/fsw/src/hk_app.c</label>
+        <link refid="hk__app_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hk__events_8h_1acf974d549aca92798562ae5f178c2003" prot="public" static="no">
+        <name>HK_INIT_EID</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;HK Initialized. Version %d.%d.%d.%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;HK Initialized. Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the Housekeeping App completes its initialization.</para><para>The <computeroutput>Version</computeroutput> fields contain the <ref refid="hk__version_8h_1a647c88dbbcf62a7adbfe9c4e188ccd42" kindref="member">HK_MAJOR_VERSION</ref>, <ref refid="hk__version_8h_1afd4b5cc9bab5d98880b3cc3c49ebe0b3" kindref="member">HK_MINOR_VERSION</ref>, <ref refid="hk__version_8h_1a293334d926e83d0d0655b9d3a6d2c600" kindref="member">HK_REVISION</ref>, and <ref refid="hk__platform__cfg_8h_1a69b8b4740cb0773c4a9a6361f6ddf856" kindref="member">HK_MISSION_REV</ref> version identifiers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="74" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a36cf88cf5c88f88054ef23be17aed179" compoundref="hk__app_8c" startline="169" endline="267">HK_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a7e74de87732214960b91a6a43e9774a6" prot="public" static="no">
+        <name>HK_CC_ERR_EID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cmd Msg with Invalid command code Rcvd <ndash/> ID = 0x%04X, CC = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cmd Msg with Invalid command code Rcvd <ndash/> ID = 0x%04X, CC = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application receives an unexpected command code </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="87" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="87" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a9f7ce560c0fdb69d8b192fc0d6182c19" compoundref="hk__app_8c" startline="370" endline="446">HK_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1aa07aaadae8c1525e6b7557db6264f6a5" prot="public" static="no">
+        <name>HK_CMD_LEN_ERR_EID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cmd Msg with Bad length Rcvd: ID = 0x%X, CC = %d, Exp Len = %d, Len = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cmd Msg with Bad length Rcvd: ID = 0x%X, CC = %d, Exp Len = %d, Len = %d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the actual command length does not equal the expected command length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="100" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a5f88b282ffc66cd8abac604cdf03f2c7" compoundref="hk__app_8c" startline="565" endline="590">HK_VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a5788efc6900791853e4de4032d19a513" prot="public" static="no">
+        <name>HK_NOOP_CMD_EID</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;HK No-op command, Version %d.%d.%d.%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;HK No-op command, Version %d.%d.%d.%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application successfully receives a <ref refid="hk__msgdefs_8h_1a4aaaf68fcc46a34be10ee4eda5616bff" kindref="member">No-op command. </ref> The command is used primarily as an indicator that the HK application can receive commands and generate telemetry.</para><para>The <computeroutput>Version</computeroutput> fields contain the <ref refid="hk__version_8h_1a647c88dbbcf62a7adbfe9c4e188ccd42" kindref="member">HK_MAJOR_VERSION</ref>, <ref refid="hk__version_8h_1afd4b5cc9bab5d98880b3cc3c49ebe0b3" kindref="member">HK_MINOR_VERSION</ref>, <ref refid="hk__version_8h_1a293334d926e83d0d0655b9d3a6d2c600" kindref="member">HK_REVISION</ref>, and <ref refid="hk__platform__cfg_8h_1a69b8b4740cb0773c4a9a6361f6ddf856" kindref="member">HK_MISSION_REV</ref> version identifiers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="118" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="118" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a3c4951b43da60c9b2de229887ecd725d" compoundref="hk__app_8c" startline="495" endline="517">HK_NoopCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1ad8a8401d2ad7a48126fc5fd318a15ffc" prot="public" static="no">
+        <name>HK_RESET_CNTRS_CMD_EID</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;HK Reset Counters command received&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;HK Reset Counters command received&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEUBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application receives a Reset Counters command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="131" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="131" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1abd9012125f915f5bfb6dca0d04537dcb" compoundref="hk__app_8c" startline="525" endline="541">HK_ResetCtrsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a651e5fdc084ff5312441905c761f6f72" prot="public" static="no">
+        <name>HK_ACCESSING_PAST_PACKET_END_EID</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;HK table definition exceeds packet length. MID:0x%04X, Length:%d, Count:%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;HK table definition exceeds packet length. MID:0x%04X, Length:%d, Count:%d&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the received input packet is not large enough to accommodate every entry in the copy table. The count indicates the total number of copy table entries that reference past the end of the input packet. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="144" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="hk__utils_8h_1ae7286d1e4f51da49121697a8325d2d62" compoundref="hk__utils_8c" startline="72" endline="135">HK_ProcessIncomingHkData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1aa16e1b8d95336380d2b1b030aafb127c" prot="public" static="no">
+        <name>HK_MEM_POOL_MALLOC_FAILED_EID</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;HK Processing New Table: ES_GetPoolBuf for size %d returned 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;HK Processing New Table: ES_GetPoolBuf for size %d returned 0x%04X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application receives an error when requesting memory from the ES memory pool </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="157" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="hk__utils_8h_1ad9afae14ec0acbb6217d891fd8c40ee6" compoundref="hk__utils_8c" startline="156" endline="294">HK_ProcessNewCopyTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a1c1f254b9630c936707090999ae593ab" prot="public" static="no">
+        <name>HK_CANT_SUBSCRIBE_TO_SB_PKT_EID</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;HK Processing New Table:SB_Subscribe for Mid 0x%04X returned 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;HK Processing New Table:SB_Subscribe for Mid 0x%04X returned 0x%04X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application receives an error while subscribing to the input messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="170" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="170" bodyend="-1"/>
+        <referencedby refid="hk__utils_8h_1ad9afae14ec0acbb6217d891fd8c40ee6" compoundref="hk__utils_8c" startline="156" endline="294">HK_ProcessNewCopyTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1ad500e237bb7880c37fb01d99f0a65d88" prot="public" static="no">
+        <name>HK_MEM_POOL_FREE_FAILED_EID</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;HK TearDown Old Table: ES_PutPoolBuf for pkt:0x%08X returned 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;HK TearDown Old Table: ES_PutPoolBuf for pkt:0x%08X returned 0x%04X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application receives an error while attempting to free the memory for an output message </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="183" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="hk__utils_8h_1aae6071365c0bc6462c78f1dbda0952b6" compoundref="hk__utils_8c" startline="302" endline="383">HK_TearDownOldCopyTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1ad5d7bb4a663f4dc8914809475eb378a2" prot="public" static="no">
+        <name>HK_UNEXPECTED_GETSTAT_RET_EID</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Unexpected CFE_TBL_GetStatus return (0x%08X) for Copy Table&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unexpected CFE_TBL_GetStatus return (0x%08X) for Copy Table&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application receives an unexpected return value when calling the CFE_TBL_GetStatus API for the copy table </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="196" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="196" bodyend="-1"/>
+        <referencedby refid="hk__utils_8h_1a6eef95cd7b6cef0cfbcd67993843ff71" compoundref="hk__utils_8c" startline="459" endline="538">HK_CheckStatusOfTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a08d823e55e311f40ebf9d1c01d16ac7b" prot="public" static="no">
+        <name>HK_UNKNOWN_COMBINED_PACKET_EID</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Combined HK Packet 0x%04X is not found in current HK Copy Table&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Combined HK Packet 0x%04X is not found in current HK Copy Table&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application receives a command to send a combined output message that is not listed in the copy table. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="209" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="209" bodyend="-1"/>
+        <referencedby refid="hk__utils_8h_1ab6167c95b9ae6c756bff1d7eed0a2a76" compoundref="hk__utils_8c" startline="393" endline="450">HK_SendCombinedHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a838ec32d246e6f688f681740acafb134" prot="public" static="no">
+        <name>HK_OUTPKT_MISSING_DATA_EID</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Combined Packet 0x%04X missing data from Input Pkt 0x%04X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Combined Packet 0x%04X missing data from Input Pkt 0x%04X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when at least one section of data is missing in an output message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="222" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="222" bodyend="-1"/>
+        <referencedby refid="hk__utils_8h_1ab6167c95b9ae6c756bff1d7eed0a2a76" compoundref="hk__utils_8c" startline="393" endline="450">HK_SendCombinedHkPacket</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1aded0b4a61b118e949d8bfd8ab378c3e0" prot="public" static="no">
+        <name>HK_CR_PIPE_ERR_EID</name>
+        <initializer>14</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Creating SB Pipe,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Creating SB Pipe,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_SB_CreatePipe during HK initialization returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="235" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="235" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a36cf88cf5c88f88054ef23be17aed179" compoundref="hk__app_8c" startline="169" endline="267">HK_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a31eb93a2aa35cb2a57c9bc2acf0906e9" prot="public" static="no">
+        <name>HK_SUB_CMB_ERR_EID</name>
+        <initializer>15</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Subscribing to 0x%04X,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Subscribing to 0x%04X,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_SB_Subscribe for the <ref refid="hk__msgids_8h_1af1d0c701d743a1c9dec8fbb7b9d36141" kindref="member">HK_SEND_COMBINED_PKT_MID</ref>, during HK initialization returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="249" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="249" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a36cf88cf5c88f88054ef23be17aed179" compoundref="hk__app_8c" startline="169" endline="267">HK_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a9d5be89da224ed535ff707b04061f341" prot="public" static="no">
+        <name>HK_SUB_REQ_ERR_EID</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Subscribing to HK Request,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Subscribing to HK Request,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_SB_Subscribe for the <ref refid="hk__msgids_8h_1a8a61ed97e1521ce29e32e3e80197eaf1" kindref="member">HK_SEND_HK_MID</ref>, during HK initialization returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="263" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="263" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a36cf88cf5c88f88054ef23be17aed179" compoundref="hk__app_8c" startline="169" endline="267">HK_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a5f2f5c7990b17354362e64a7a9f922b4" prot="public" static="no">
+        <name>HK_SUB_CMD_ERR_EID</name>
+        <initializer>17</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Subscribing to HK Gnd Cmds,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Subscribing to HK Gnd Cmds,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_SB_Subscribe for the <ref refid="hk__msgids_8h_1aa437a1103a1f7f1d9c92d83fdc104a1d" kindref="member">HK_CMD_MID</ref>, during HK initialization returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="277" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="277" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a36cf88cf5c88f88054ef23be17aed179" compoundref="hk__app_8c" startline="169" endline="267">HK_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a957191cc41e60302a48ff3091233958a" prot="public" static="no">
+        <name>HK_CR_POOL_ERR_EID</name>
+        <initializer>18</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Creating Memory Pool,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Creating Memory Pool,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_ES_PoolCreate during HK initialization returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="290" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="290" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a36cf88cf5c88f88054ef23be17aed179" compoundref="hk__app_8c" startline="169" endline="267">HK_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1ad7a5a56a3b64d5e82404c37d92c678b9" prot="public" static="no">
+        <name>HK_CPTBL_REG_ERR_EID</name>
+        <initializer>19</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Registering Copy Table,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Registering Copy Table,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_TBL_Register for the copy table returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="303" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="303" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1ad16d6c98227e3386c257f7a4d7e41d87" compoundref="hk__app_8c" startline="275" endline="362">HK_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a870c51c5a9ecc1d35b5c2d00983fc8bb" prot="public" static="no">
+        <name>HK_RTTBL_REG_ERR_EID</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Registering Runtime Table,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Registering Runtime Table,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_TBL_Register for the runtime table returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="316" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="316" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1ad16d6c98227e3386c257f7a4d7e41d87" compoundref="hk__app_8c" startline="275" endline="362">HK_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a07e5338ba4e35d4d3a1d380062fc6ff9" prot="public" static="no">
+        <name>HK_CPTBL_LD_ERR_EID</name>
+        <initializer>21</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Loading Copy Table,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Loading Copy Table,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_TBL_Load for the copy table returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="329" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="329" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1ad16d6c98227e3386c257f7a4d7e41d87" compoundref="hk__app_8c" startline="275" endline="362">HK_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1aeca09ff0916ba024018188aa471b0d9a" prot="public" static="no">
+        <name>HK_CPTBL_MNG_ERR_EID</name>
+        <initializer>22</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error from TBL Manage call for Copy Table,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error from TBL Manage call for Copy Table,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_TBL_Manage for the copy table returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="342" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="342" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1ad16d6c98227e3386c257f7a4d7e41d87" compoundref="hk__app_8c" startline="275" endline="362">HK_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a4c6aa904789319d7081bc81ee764c3e5" prot="public" static="no">
+        <name>HK_RTTBL_MNG_ERR_EID</name>
+        <initializer>23</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error from TBL Manage call for Runtime Table,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000022"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error from TBL Manage call for Runtime Table,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_TBL_Manage for the runtime table returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="355" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="355" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1ad16d6c98227e3386c257f7a4d7e41d87" compoundref="hk__app_8c" startline="275" endline="362">HK_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1ae625b5a10aae5fff66a5487cf5792857" prot="public" static="no">
+        <name>HK_CPTBL_GADR_ERR_EID</name>
+        <initializer>24</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Getting Adr for Cpy Tbl,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000023"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Getting Adr for Cpy Tbl,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_TBL_GetAddress for the copy table returns a value other than CFE_TBL_INFO_UPDATED </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="368" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="368" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1ad16d6c98227e3386c257f7a4d7e41d87" compoundref="hk__app_8c" startline="275" endline="362">HK_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a93482d95dec2b992bedae9273c2963cd" prot="public" static="no">
+        <name>HK_RTTBL_GADR_ERR_EID</name>
+        <initializer>25</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error Getting Adr for Runtime Table,RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000024"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error Getting Adr for Runtime Table,RC=0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_TBL_GetAddress for the runtime table returns a value other than CFE_SUCCESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="381" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="381" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1ad16d6c98227e3386c257f7a4d7e41d87" compoundref="hk__app_8c" startline="275" endline="362">HK_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a3e4992b32cccecd9eaad9c754c591a05" prot="public" static="no">
+        <name>HK_RCV_MSG_ERR_EID</name>
+        <initializer>26</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;HK_APP Exiting due to CFE_SB_RcvMsg error 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000025"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;HK_APP Exiting due to CFE_SB_RcvMsg error 0x%08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the call to CFE_SB_RcvMsg returns a value other than CFE_SUCCESS in the main loop </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="394" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="394" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1aca07ac7b2833b25b4a5f57ba98d79c20" compoundref="hk__app_8c" startline="91" endline="161">HK_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a5d918ad44c3f884d6d9862a3a7826498" prot="public" static="no">
+        <name>HK_UNEXPECTED_GETSTAT2_RET_EID</name>
+        <initializer>27</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Unexpected CFE_TBL_GetStatus return (0x%08X) for Runtime Table&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000026"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unexpected CFE_TBL_GetStatus return (0x%08X) for Runtime Table&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the HK application receives an unexpected return value when calling the CFE_TBL_GetStatus API for the dump table </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="407" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="407" bodyend="-1"/>
+        <referencedby refid="hk__utils_8h_1a6eef95cd7b6cef0cfbcd67993843ff71" compoundref="hk__utils_8c" startline="459" endline="538">HK_CheckStatusOfTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hk__events_8h_1a7c4d24c7a815a97ab2e6e2128a985227" prot="public" static="no">
+        <name>HK_MSG_LEN_ERR_EID</name>
+        <initializer>28</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Msg with Bad length Rcvd: ID = 0x%04X, Exp Len = %d, Len = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000027"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Msg with Bad length Rcvd: ID = 0x%04X, Exp Len = %d, Len = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event is issued when an internal message which has a length that is inconsistant with the expected length for its message id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hk/fsw/src/hk_events.h" line="420" column="9" bodyfile="apps/hk/fsw/src/hk_events.h" bodystart="420" bodyend="-1"/>
+        <referencedby refid="hk__app_8h_1a9f7ce560c0fdb69d8b192fc0d6182c19" compoundref="hk__app_8c" startline="370" endline="446">HK_AppPipe</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>hk_events.h<sp/>1.2<sp/>2015/11/10<sp/>16:49:33EST<sp/>lwalling<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/>The<sp/>CFS<sp/>Housekeeping<sp/>(HK)<sp/>Application<sp/>event<sp/>id<sp/>header<sp/>file</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/>$Log:<sp/>hk_events.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2015/11/10<sp/>16:49:33EST<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>Restore<sp/>data<sp/>lost<sp/>in<sp/>MKS<sp/>2010<sp/>from<sp/>MKS<sp/>2009</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2015/07/25<sp/>21:31:33EDT<sp/>rperera<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>/CFS-APPs-PROJECT/hk/fsw/src/project.pj</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>Revision<sp/>1.12<sp/>2015/03/04<sp/>15:00:46EST<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Added<sp/>copyright<sp/>information</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Revision<sp/>1.11<sp/>2014/06/20<sp/>15:50:59EDT<sp/>sjudy<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Deleted<sp/>unused<sp/>event<sp/>ID<sp/>def.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Revision<sp/>1.10<sp/>2012/08/23<sp/>17:12:32EDT<sp/>aschoeni<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Made<sp/>internal<sp/>commands<sp/>no<sp/>longer<sp/>increment<sp/>error<sp/>counters<sp/>(and<sp/>changed<sp/>event<sp/>message<sp/>slightly).</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2012/03/23<sp/>17:40:57EDT<sp/>lwalling<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Update<sp/>event<sp/>message<sp/>text<sp/>description<sp/>for<sp/>HK_ACCESSING_PAST_PACKET_END_EID</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2011/09/06<sp/>14:26:12EDT<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Updated<sp/>doxygen<sp/>comments<sp/>for<sp/>init<sp/>and<sp/>noop<sp/>event<sp/>messages.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2009/12/03<sp/>18:11:15EST<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Changed<sp/>the<sp/>event<sp/>definitions<sp/>for<sp/>no-op<sp/>received<sp/>and<sp/>reset<sp/>counters<sp/>received<sp/>to<sp/>make<sp/>them<sp/>descriptive.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2009/12/03<sp/>15:33:42EST<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Added<sp/>event<sp/>message<sp/>ID<sp/>27<sp/>for<sp/>dump<sp/>pending<sp/>status.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2009/12/03<sp/>15:08:32EST<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Updated<sp/>the<sp/>comments<sp/>for<sp/>the<sp/>&quot;No-op<sp/>received&quot;<sp/>message<sp/>to<sp/>include<sp/>the<sp/>version<sp/>information.</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2009/04/18<sp/>12:55:16EDT<sp/>dkobe<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Updates<sp/>to<sp/>correct<sp/>doxygen<sp/>comments</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2008/06/19<sp/>13:23:30EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>DCR3052:1<sp/>Replaced<sp/>event<sp/>id<sp/>10<sp/>(TABLE_UPDATE)<sp/>with<sp/>unexpected<sp/>GetStat<sp/>return</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2008/04/09<sp/>16:40:59EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>Member<sp/>moved<sp/>from<sp/>hk_events.h<sp/>in<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/CFS-REPOSITORY/hk/fsw/public_inc/project.pj<sp/>to<sp/>hk_events.h<sp/>in<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/CFS-REPOSITORY/hk/fsw/src/project.pj.</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/09<sp/>15:40:59ACT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/CFS-REPOSITORY/hk/fsw/public_inc/project.pj</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_hk_events_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_hk_events_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/>Macro<sp/>definitions</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="hk__events_8h_1acf974d549aca92798562ae5f178c2003" refkind="member"><highlight class="preprocessor">#define<sp/>HK_INIT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="hk__events_8h_1a7e74de87732214960b91a6a43e9774a6" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CC_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="hk__events_8h_1aa07aaadae8c1525e6b7557db6264f6a5" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CMD_LEN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="hk__events_8h_1a5788efc6900791853e4de4032d19a513" refkind="member"><highlight class="preprocessor">#define<sp/>HK_NOOP_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="hk__events_8h_1ad8a8401d2ad7a48126fc5fd318a15ffc" refkind="member"><highlight class="preprocessor">#define<sp/>HK_RESET_CNTRS_CMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="hk__events_8h_1a651e5fdc084ff5312441905c761f6f72" refkind="member"><highlight class="preprocessor">#define<sp/>HK_ACCESSING_PAST_PACKET_END_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="hk__events_8h_1aa16e1b8d95336380d2b1b030aafb127c" refkind="member"><highlight class="preprocessor">#define<sp/>HK_MEM_POOL_MALLOC_FAILED_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="hk__events_8h_1a1c1f254b9630c936707090999ae593ab" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CANT_SUBSCRIBE_TO_SB_PKT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="hk__events_8h_1ad500e237bb7880c37fb01d99f0a65d88" refkind="member"><highlight class="preprocessor">#define<sp/>HK_MEM_POOL_FREE_FAILED_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="hk__events_8h_1ad5d7bb4a663f4dc8914809475eb378a2" refkind="member"><highlight class="preprocessor">#define<sp/>HK_UNEXPECTED_GETSTAT_RET_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="hk__events_8h_1a08d823e55e311f40ebf9d1c01d16ac7b" refkind="member"><highlight class="preprocessor">#define<sp/>HK_UNKNOWN_COMBINED_PACKET_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="hk__events_8h_1a838ec32d246e6f688f681740acafb134" refkind="member"><highlight class="preprocessor">#define<sp/>HK_OUTPKT_MISSING_DATA_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="hk__events_8h_1aded0b4a61b118e949d8bfd8ab378c3e0" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CR_PIPE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="hk__events_8h_1a31eb93a2aa35cb2a57c9bc2acf0906e9" refkind="member"><highlight class="preprocessor">#define<sp/>HK_SUB_CMB_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="hk__events_8h_1a9d5be89da224ed535ff707b04061f341" refkind="member"><highlight class="preprocessor">#define<sp/>HK_SUB_REQ_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="hk__events_8h_1a5f2f5c7990b17354362e64a7a9f922b4" refkind="member"><highlight class="preprocessor">#define<sp/>HK_SUB_CMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="hk__events_8h_1a957191cc41e60302a48ff3091233958a" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CR_POOL_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="hk__events_8h_1ad7a5a56a3b64d5e82404c37d92c678b9" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CPTBL_REG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316" refid="hk__events_8h_1a870c51c5a9ecc1d35b5c2d00983fc8bb" refkind="member"><highlight class="preprocessor">#define<sp/>HK_RTTBL_REG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329" refid="hk__events_8h_1a07e5338ba4e35d4d3a1d380062fc6ff9" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CPTBL_LD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="hk__events_8h_1aeca09ff0916ba024018188aa471b0d9a" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CPTBL_MNG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355" refid="hk__events_8h_1a4c6aa904789319d7081bc81ee764c3e5" refkind="member"><highlight class="preprocessor">#define<sp/>HK_RTTBL_MNG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="hk__events_8h_1ae625b5a10aae5fff66a5487cf5792857" refkind="member"><highlight class="preprocessor">#define<sp/>HK_CPTBL_GADR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381" refid="hk__events_8h_1a93482d95dec2b992bedae9273c2963cd" refkind="member"><highlight class="preprocessor">#define<sp/>HK_RTTBL_GADR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394" refid="hk__events_8h_1a3e4992b32cccecd9eaad9c754c591a05" refkind="member"><highlight class="preprocessor">#define<sp/>HK_RCV_MSG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407" refid="hk__events_8h_1a5d918ad44c3f884d6d9862a3a7826498" refkind="member"><highlight class="preprocessor">#define<sp/>HK_UNEXPECTED_GETSTAT2_RET_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>27</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420" refid="hk__events_8h_1a7c4d24c7a815a97ab2e6e2128a985227" refkind="member"><highlight class="preprocessor">#define<sp/>HK_MSG_LEN_ERR_EID<sp/>28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_hk_events_h_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/hk/fsw/src/hk_events.h"/>
+  </compounddef>
+</doxygen>

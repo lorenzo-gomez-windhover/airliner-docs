@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_t_o___channel_tbl__t" kind="struct" language="C++" prot="public">
+    <compoundname>TO_ChannelTbl_t</compoundname>
+    <includes refid="to__tbldefs_8h" local="no">to_tbldefs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_o___channel_tbl__t_1ad34452ae0b201c05d15a7e81973f3d05" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelTbl_t::TableID</definition>
+        <argsstring></argsstring>
+        <name>TableID</name>
+        <briefdescription>
+<para>The table identifier, used to identify a specific config table. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title></title><para>Units: none.</para></simplesect>
+<simplesect kind="par"><title></title><para>Limits: must be greater than or equal to 0</para></simplesect>
+<simplesect kind="par"><title></title><para>Note: TableID value 0xFFFFFFFF is reserved for each channel&apos;s backup emergency table. The backup emergency tables are loaded when the channel&apos;s table file could not be loaded. It is the largest uint32 available 4294967295. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_tbldefs.h" line="104" column="1" bodyfile="apps/to/fsw/src/to_tbldefs.h" bodystart="104" bodyend="-1"/>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+        <referencedby refid="to__config__utils_8h_1a97f25a1bbc3ec688e421ba8ec2f5c292" compoundref="to__config__utils_8c" startline="201" endline="398">TO_ValidateConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_tbl__t_1ae60417a3f3d00d379ea4df60e897c701" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_o___message_flow__t" kindref="compound">TO_MessageFlow_t</ref></type>
+        <definition>TO_MessageFlow_t TO_ChannelTbl_t::MessageFlow[TO_MAX_MESSAGE_FLOWS]</definition>
+        <argsstring>[TO_MAX_MESSAGE_FLOWS]</argsstring>
+        <name>MessageFlow</name>
+        <briefdescription>
+<para>MessageFlow defines a single telemetry message flow entry. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title></title><para>Units: none.</para></simplesect>
+<simplesect kind="par"><title></title><para>Limits: The maximum number of message flows is defined in <ref refid="to__mission__cfg_8h" kindref="compound">to_mission_cfg.h</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_tbldefs.h" line="115" column="1" bodyfile="apps/to/fsw/src/to_tbldefs.h" bodystart="115" bodyend="-1"/>
+        <referencedby refid="to__message__flow_8h_1ac51818b6e7c41431c1a7136db222f786" compoundref="to__message__flow_8c" startline="246" endline="380">TO_MessageFlow_Add</referencedby>
+        <referencedby refid="to__message__flow_8h_1a87528f0f9c5d6de7bb0ec8b322008b0f" compoundref="to__message__flow_8c" startline="44" endline="84">TO_MessageFlow_Buildup</referencedby>
+        <referencedby refid="to__message__flow_8h_1a52b0500c028ef4ffccde67e1f7fc5736" compoundref="to__message__flow_8c" startline="164" endline="194">TO_MessageFlow_GetObject</referencedby>
+        <referencedby refid="to__message__flow_8h_1acdfd5a6f094812e6cc8eda61b18794cf" compoundref="to__message__flow_8c" startline="485" endline="556">TO_MessageFlow_Query</referencedby>
+        <referencedby refid="to__message__flow_8h_1a578514fd1ab8cedaeff6f2ed5007f30c" compoundref="to__message__flow_8c" startline="389" endline="476">TO_MessageFlow_Remove</referencedby>
+        <referencedby refid="to__message__flow_8h_1abc4d493e5a13c30f5f3605d75ffdf290" compoundref="to__message__flow_8c" startline="93" endline="131">TO_MessageFlow_TeardownAll</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+        <referencedby refid="to__config__utils_8h_1a97f25a1bbc3ec688e421ba8ec2f5c292" compoundref="to__config__utils_8c" startline="201" endline="398">TO_ValidateConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_tbl__t_1a21fcb0e8d539aa3110cc9679d3c5715b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_o___priority_queue__t" kindref="compound">TO_PriorityQueue_t</ref></type>
+        <definition>TO_PriorityQueue_t TO_ChannelTbl_t::PriorityQueue[TO_MAX_PRIORITY_QUEUES]</definition>
+        <argsstring>[TO_MAX_PRIORITY_QUEUES]</argsstring>
+        <name>PriorityQueue</name>
+        <briefdescription>
+<para>The Priority Queue defines a single priority queue entry. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title></title><para>Units: none.</para></simplesect>
+<simplesect kind="par"><title></title><para>Limits: The maximum number of priority queues is defined in <ref refid="to__mission__cfg_8h" kindref="compound">to_mission_cfg.h</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_tbldefs.h" line="126" column="1" bodyfile="apps/to/fsw/src/to_tbldefs.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="to__message__flow_8h_1ac317b7ccf8db87a5a1593c87902c5526" compoundref="to__message__flow_8c" startline="203" endline="237">TO_MessageFlow_GetPQueue</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a0eb5f5b64109fa09d2447a5de52732d1" compoundref="to__priority__queue_8c" startline="77" endline="138">TO_PriorityQueue_BuildupAll</referencedby>
+        <referencedby refid="to__priority__queue_8h_1aeac317e17702670f90c128ad16b04eac" compoundref="to__priority__queue_8c" startline="444" endline="461">TO_PriorityQueue_IsValid</referencedby>
+        <referencedby refid="to__priority__queue_8h_1ae8c51f4fbcf50eebff80861902009128" compoundref="to__priority__queue_8c" startline="369" endline="436">TO_PriorityQueue_Query</referencedby>
+        <referencedby refid="to__priority__queue_8h_1a77dc056f0fdda7855fc2795fe4d60130" compoundref="to__priority__queue_8c" startline="147" endline="231">TO_PriorityQueue_TeardownAll</referencedby>
+        <referencedby refid="to__scheduler_8h_1a5db204bafd76218aef545c50a8899bf5" compoundref="to__scheduler_8c" startline="44" endline="93">TO_Scheduler_Run</referencedby>
+        <referencedby refid="to__app_8h_1ae8a64d5b2b1542a84d189081a1978f29" compoundref="to__app_8c" startline="822" endline="1017">TO_SendDiag</referencedby>
+        <referencedby refid="to__config__utils_8h_1a97f25a1bbc3ec688e421ba8ec2f5c292" compoundref="to__config__utils_8c" startline="201" endline="398">TO_ValidateConfigTbl</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definition for a TO Configuration table. </para>    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="cfstotbl_1_cfstotbl000001"><xreftitle>Name</xreftitle><xrefdescription><para>TO Configuration Table </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="38">
+        <label>TO_PriorityQueue_t</label>
+        <link refid="struct_t_o___priority_queue__t"/>
+      </node>
+      <node id="36">
+        <label>TO_ChannelTbl_t</label>
+        <link refid="struct_t_o___channel_tbl__t"/>
+        <childnode refid="37" relation="usage">
+          <edgelabel>MessageFlow</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>PriorityQueue</edgelabel>
+        </childnode>
+      </node>
+      <node id="37">
+        <label>TO_MessageFlow_t</label>
+        <link refid="struct_t_o___message_flow__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/to/fsw/src/to_tbldefs.h" line="88" column="1" bodyfile="apps/to/fsw/src/to_tbldefs.h" bodystart="87" bodyend="128"/>
+    <listofallmembers>
+      <member refid="struct_t_o___channel_tbl__t_1ae60417a3f3d00d379ea4df60e897c701" prot="public" virt="non-virtual"><scope>TO_ChannelTbl_t</scope><name>MessageFlow</name></member>
+      <member refid="struct_t_o___channel_tbl__t_1a21fcb0e8d539aa3110cc9679d3c5715b" prot="public" virt="non-virtual"><scope>TO_ChannelTbl_t</scope><name>PriorityQueue</name></member>
+      <member refid="struct_t_o___channel_tbl__t_1ad34452ae0b201c05d15a7e81973f3d05" prot="public" virt="non-virtual"><scope>TO_ChannelTbl_t</scope><name>TableID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

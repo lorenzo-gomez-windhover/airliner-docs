@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="md__dwell__pkt_8h" kind="file" language="C++">
+    <compoundname>md_dwell_pkt.h</compoundname>
+    <includes local="yes">common_types.h</includes>
+    <includedby refid="md__app_8c" local="yes">apps/md/fsw/src/md_app.c</includedby>
+    <includedby refid="md__dwell__pkt_8c" local="yes">apps/md/fsw/src/md_dwell_pkt.c</includedby>
+    <incdepgraph>
+      <node id="612">
+        <label>apps/md/fsw/src/md_dwell_pkt.h</label>
+        <link refid="md_dwell_pkt.h"/>
+        <childnode refid="613" relation="include">
+        </childnode>
+      </node>
+      <node id="613">
+        <label>common_types.h</label>
+        <link refid="common__types_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="616">
+        <label>apps/md/fsw/src/md_dwell_pkt.c</label>
+        <link refid="md__dwell__pkt_8c"/>
+      </node>
+      <node id="614">
+        <label>apps/md/fsw/src/md_dwell_pkt.h</label>
+        <link refid="md_dwell_pkt.h"/>
+        <childnode refid="615" relation="include">
+        </childnode>
+        <childnode refid="616" relation="include">
+        </childnode>
+      </node>
+      <node id="615">
+        <label>apps/md/fsw/src/md_app.c</label>
+        <link refid="md__app_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="md__dwell__pkt_8h_1a53da6fce443ef60b7bb26e42b2e7553e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MD_DwellLoop</definition>
+        <argsstring>(void)</argsstring>
+        <name>MD_DwellLoop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Process Dwell Packets. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Look at each table. If the table is enabled and its countdown counter times out, add dwell data to dwell packet until a packet delay is reached or the dwell packet is completed. If dwell packet is completed, send the packet and reset the counter.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_dwell_pkt.h" line="48" column="1" bodyfile="apps/md/fsw/src/md_dwell_pkt.c" bodystart="34" bodyend="134"/>
+        <references refid="struct_m_d___dwell_packet_control__t_1a43ced3f094cd584dda0fc825c99983fd" compoundref="md__app_8h" startline="86">MD_DwellPacketControl_t::AddrCount</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1a7b7a49800de8c57951ac2fc901d15e82" compoundref="md__app_8h" startline="88">MD_DwellPacketControl_t::Countdown</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1afca8dc4714f232a93101774bb6f03fe7" compoundref="md__app_8h" startline="90">MD_DwellPacketControl_t::CurrentEntry</references>
+        <references refid="struct_m_d___dwell_control_entry__t_1a918d36c039f2f34a8fff2a00fa6c8c1f" compoundref="md__app_8h" startline="76">MD_DwellControlEntry_t::Delay</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1af66ea614088cda1856426e1997b5e445" compoundref="md__app_8h" startline="85">MD_DwellPacketControl_t::Enabled</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1a1ad3325859b3b45b464b234b689f4a94" compoundref="md__app_8h" startline="93">MD_DwellPacketControl_t::Entry</references>
+        <references refid="md__app_8h_1a04e6c120fd3f9704304509f20d1a598ea1f01b4f1c29e124337729659ed437d0c" compoundref="md__app_8h" startline="68">MD_DWELL_STREAM_ENABLED</references>
+        <references refid="struct_m_d___app_data__t_1a330c0c24c052fe9ef58274c06c75ed0b" compoundref="md__app_8h" startline="121">MD_AppData_t::MD_DwellTables</references>
+        <references refid="md__dwell__pkt_8c_1a9658c3ed8cfe7c7b80f0ad55c009456f" compoundref="md__dwell__pkt_8c" startline="138" endline="203">MD_GetDwellData</references>
+        <references refid="md__platform__cfg_8h_1a6624d8844a1a24a4e1df54487214d70d" compoundref="md__platform__cfg_8h" startline="57">MD_NUM_DWELL_TABLES</references>
+        <references refid="md__dwell__pkt_8c_1af5cda3af5cc3f888cb6307c255bd807a" compoundref="md__dwell__pkt_8c" startline="208" endline="244">MD_SendDwellPkt</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1ad7abd385f6d8a0c8bee5b0c5128e85f6" compoundref="md__app_8h" startline="89">MD_DwellPacketControl_t::PktOffset</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1aebdc00ce3c7948431286e00a0c7aa3ea" compoundref="md__app_8h" startline="87">MD_DwellPacketControl_t::Rate</references>
+        <referencedby refid="md__app_8h_1a5d22a04828b72821c0678c68dd6b4b9d" compoundref="md__app_8c" startline="48" endline="185">MD_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="md__dwell__pkt_8h_1a9658c3ed8cfe7c7b80f0ad55c009456f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MD_GetDwellData</definition>
+        <argsstring>(uint16 TblIndex, uint16 EntryIndex)</argsstring>
+        <name>MD_GetDwellData</name>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>TblIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>EntryIndex</declname>
+        </param>
+        <briefdescription>
+<para>Read a Single Dwell Address. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Copy memory value from a single dwell address to a dwell packet.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">TblIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifies source dwell table (0..)</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">EntryIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifies dwell entry within specified table (0..)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>CFE_SUCCESS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if copy was performed successfully; non-zero otherwise. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_dwell_pkt.h" line="67" column="1" bodyfile="apps/md/fsw/src/md_dwell_pkt.c" bodystart="138" bodyend="203"/>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_m_d___dwell_pkt__t_1ab470f38830377717de97701088720b03" compoundref="md__msg_8h" startline="177">MD_DwellPkt_t::Data</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1a1ad3325859b3b45b464b234b689f4a94" compoundref="md__app_8h" startline="93">MD_DwellPacketControl_t::Entry</references>
+        <references refid="struct_m_d___dwell_control_entry__t_1aab952491872f183f6ce47705a2583273" compoundref="md__app_8h" startline="75">MD_DwellControlEntry_t::Length</references>
+        <references refid="struct_m_d___app_data__t_1ae2db8fee72875af8dc769902b2cb11a3" compoundref="md__app_8h" startline="122">MD_AppData_t::MD_DwellPkt</references>
+        <references refid="struct_m_d___app_data__t_1a330c0c24c052fe9ef58274c06c75ed0b" compoundref="md__app_8h" startline="121">MD_AppData_t::MD_DwellTables</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1ad7abd385f6d8a0c8bee5b0c5128e85f6" compoundref="md__app_8h" startline="89">MD_DwellPacketControl_t::PktOffset</references>
+        <references refid="struct_m_d___dwell_control_entry__t_1ad2bc4277574eb6e471f97e62f18d6d7f" compoundref="md__app_8h" startline="77">MD_DwellControlEntry_t::ResolvedAddress</references>
+        <referencedby refid="md__dwell__pkt_8h_1a53da6fce443ef60b7bb26e42b2e7553e" compoundref="md__dwell__pkt_8c" startline="34" endline="134">MD_DwellLoop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="md__dwell__pkt_8h_1af5cda3af5cc3f888cb6307c255bd807a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MD_SendDwellPkt</definition>
+        <argsstring>(uint16 TableIndex)</argsstring>
+        <name>MD_SendDwellPkt</name>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>TableIndex</declname>
+        </param>
+        <briefdescription>
+<para>Send Memory Dwell Packet. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Send contents of memory pointed to by a table as a telemetry packet.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">TableIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifies source dwell table for the dwell packet.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_dwell_pkt.h" line="85" column="1" bodyfile="apps/md/fsw/src/md_dwell_pkt.c" bodystart="208" bodyend="244"/>
+        <references refid="struct_m_d___dwell_packet_control__t_1a43ced3f094cd584dda0fc825c99983fd" compoundref="md__app_8h" startline="86">MD_DwellPacketControl_t::AddrCount</references>
+        <references refid="struct_m_d___dwell_pkt__t_1ab7c18e88cfc01e2d5535251e7a18387b" compoundref="md__msg_8h" startline="162">MD_DwellPkt_t::AddrCount</references>
+        <references refid="struct_m_d___dwell_pkt__t_1ac0a4cbbaa509acec5ccc37bae86c981d" compoundref="md__msg_8h" startline="165">MD_DwellPkt_t::ByteCount</references>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1ae7bfd92ff974a7d5f43d49345ab4b806">CFE_SB_SetTotalMsgLength</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1ae84d0df6b09c30bda3451b80568a8017" compoundref="md__app_8h" startline="91">MD_DwellPacketControl_t::DataSize</references>
+        <references refid="md__msg_8h_1a4237ed64cc6a2e6215c3c0f24c7f3b68" compoundref="md__msg_8h" startline="183">MD_DWELL_PKT_LNGTH</references>
+        <references refid="md__platform__cfg_8h_1a2b1a6acbd1ce79e5c6979d700c88262b" compoundref="md__platform__cfg_8h" startline="68">MD_DWELL_TABLE_SIZE</references>
+        <references refid="struct_m_d___app_data__t_1ae2db8fee72875af8dc769902b2cb11a3" compoundref="md__app_8h" startline="122">MD_AppData_t::MD_DwellPkt</references>
+        <references refid="struct_m_d___app_data__t_1a330c0c24c052fe9ef58274c06c75ed0b" compoundref="md__app_8h" startline="121">MD_AppData_t::MD_DwellTables</references>
+        <references refid="md__platform__cfg_8h_1a0e9127fafaf3623855b21eb40ff8f214" compoundref="md__platform__cfg_8h" startline="100">MD_SIGNATURE_FIELD_LENGTH</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1aebdc00ce3c7948431286e00a0c7aa3ea" compoundref="md__app_8h" startline="87">MD_DwellPacketControl_t::Rate</references>
+        <references refid="struct_m_d___dwell_pkt__t_1a2c963ac50f87a6f1a5cb7ddf8c4e8e95" compoundref="md__msg_8h" startline="169">MD_DwellPkt_t::Rate</references>
+        <references refid="struct_m_d___dwell_pkt__t_1abcd434c12cfbf5d1c49690de22858bbc" compoundref="md__msg_8h" startline="159">MD_DwellPkt_t::TableId</references>
+        <referencedby refid="md__dwell__pkt_8h_1a53da6fce443ef60b7bb26e42b2e7553e" compoundref="md__dwell__pkt_8c" startline="34" endline="134">MD_DwellLoop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="md__dwell__pkt_8h_1a53bc9dba105d3dca51db27be42bd3471" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MD_StartDwellStream</definition>
+        <argsstring>(uint16 TableIndex)</argsstring>
+        <name>MD_StartDwellStream</name>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>TableIndex</declname>
+        </param>
+        <briefdescription>
+<para>Start Dwell Stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Initialize parameters used to control generation of dwell packets.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">TableIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifies source dwell table for the dwell packet.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/md/fsw/src/md_dwell_pkt.h" line="101" column="1" bodyfile="apps/md/fsw/src/md_dwell_pkt.c" bodystart="248" bodyend="254"/>
+        <references refid="struct_m_d___dwell_packet_control__t_1a7b7a49800de8c57951ac2fc901d15e82" compoundref="md__app_8h" startline="88">MD_DwellPacketControl_t::Countdown</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1afca8dc4714f232a93101774bb6f03fe7" compoundref="md__app_8h" startline="90">MD_DwellPacketControl_t::CurrentEntry</references>
+        <references refid="struct_m_d___app_data__t_1a330c0c24c052fe9ef58274c06c75ed0b" compoundref="md__app_8h" startline="121">MD_AppData_t::MD_DwellTables</references>
+        <references refid="struct_m_d___dwell_packet_control__t_1ad7abd385f6d8a0c8bee5b0c5128e85f6" compoundref="md__app_8h" startline="89">MD_DwellPacketControl_t::PktOffset</references>
+        <referencedby refid="md__app_8h_1ac7469b3a156f3511e9fe5b30ec6d1582" compoundref="md__app_8c" startline="382" endline="540">MD_InitTableServices</referencedby>
+        <referencedby refid="md__app_8h_1ac7734635b4ee37d82fb83191cd43eeac" compoundref="md__app_8c" startline="545" endline="620">MD_ManageDwellTable</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>md_dwell_pkt.h<sp/>1.3<sp/>2017/05/22<sp/>14:56:34EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>Specification<sp/>for<sp/>functions<sp/>used<sp/>to<sp/>populate<sp/>and<sp/>send<sp/>Memory<sp/>Dwell<sp/>packets.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Ensure<sp/>that<sp/>header<sp/>is<sp/>included<sp/>only<sp/>once...</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_md_dwell_pkt_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_md_dwell_pkt_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="48"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="md__dwell__pkt_8h_1a53da6fce443ef60b7bb26e42b2e7553e" kindref="member">MD_DwellLoop</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="md__dwell__pkt_8h_1a9658c3ed8cfe7c7b80f0ad55c009456f" kindref="member">MD_GetDwellData</ref>(<sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/>TblIndex,<sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/>EntryIndex<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="md__dwell__pkt_8h_1af5cda3af5cc3f888cb6307c255bd807a" kindref="member">MD_SendDwellPkt</ref>(<sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/>TableIndex<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">/*****************************************************************************/</highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="md__dwell__pkt_8h_1a53bc9dba105d3dca51db27be42bd3471" kindref="member">MD_StartDwellStream</ref><sp/>(<ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/>TableIndex<sp/>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_md_dwell_pkt_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/md/fsw/src/md_dwell_pkt.h"/>
+  </compounddef>
+</doxygen>

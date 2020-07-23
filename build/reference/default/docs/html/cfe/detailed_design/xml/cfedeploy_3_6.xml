@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_3_6" kind="page">
+    <compoundname>cfedeploy_3_6</compoundname>
+    <title>PC / Cygwin-Windows Platform</title>
+    <detaileddescription>
+<para><center> <heading level="4">cFE Core Configuration for the PC / Cygwin-Windows Platform </heading>
+</center></para><para><center> </center> <center> <bold> cfe-config.mak Settings </bold> </center> <table rows="5" cols="3"><row>
+<entry thead="no"><para><bold>cfe-config.mak variable </bold> </para></entry><entry thead="no"><para><bold>Required selection </bold> </para></entry><entry thead="no"><para><bold>Notes</bold> </para></entry></row>
+<row>
+<entry thead="no"><para>HWARCH </para></entry><entry thead="no"><para>x86 </para></entry></row>
+<row>
+<entry thead="no"><para>PLATFORM </para></entry><entry thead="no"><para>pc </para></entry></row>
+<row>
+<entry thead="no"><para>OS </para></entry><entry thead="no"><para>linux </para></entry></row>
+<row>
+<entry thead="no"><para>BSP </para></entry><entry thead="no"><para>cygwin </para></entry></row>
+</table>
+</para><para><center> <heading level="4">How to run the cFE on the PC / Cygwin-Windows Platform </heading>
+</center></para><para><center> </center></para><para><orderedlist>
+<listitem>
+<para>Create the directory to hold the non-volatile applications. <verbatim>        $ mkdir /tmp/eedev0/apps ( in DOS: C:\\cygwin\\tmp\\eedev0\\apps )</verbatim> </para></listitem>
+<listitem>
+<para>Change the extension of the files files listed in the startup script to <computeroutput>.dll</computeroutput> (from the default of <computeroutput>.o</computeroutput>) </para></listitem>
+<listitem>
+<para>Copy the files listed in the startup script (and the startup script) to the non-volatile directory. <verbatim>        ...fsw/build/cpu1]$cp exe/ci.dll /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/to.dll /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/sch.dll /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/tst_lib.dll /tmp/eedev0/apps
+        ...fsw/build/cpu1]$cp exe/cfe_es_startup.scr /tmp/eedev0/apps</verbatim> </para></listitem>
+<listitem>
+<para>To run the cFE, type the following: <verbatim>        ...fsw/build/cpu1]$ ./exe/core-cygwin.bin PO 1</verbatim> If running the cFE results in a <computeroutput>&apos;bad system call&apos;</computeroutput> error at startup, the user must 1) enable the cygserver and 2) export the <computeroutput>CGYWIN</computeroutput> environment variable to resolve the issue. <orderedlist>
+<listitem>
+<para>Enable the cygserver: <itemizedlist>
+<listitem>
+<para>You may have to be logged in as an Administrator to continue. </para></listitem>
+<listitem>
+<para>Type <computeroutput>&apos;cygserver-config&apos;</computeroutput> at the cygwin prompt. It may ask you to start the cygserver as a system service or overwrite a configuration script. Say yes to both. </para></listitem>
+<listitem>
+<para>You will either have to start the service using the &apos;Administration Tools&apos; -&gt; &apos;Services&apos; application or restart the computer (it is Windows, after all). </para></listitem>
+<listitem>
+<para>To verify that the service is running, go to Start -&gt; Run, type in <computeroutput>&apos;msconfig&apos;</computeroutput> and hit ENTER. Go to the &apos;Services&apos; tab and check the &apos;Hide all Microsoft services&apos;. After that you should see the cygserver listed in a state other than <computeroutput>&apos;stopped&apos;</computeroutput> or <computeroutput>&apos;not running&apos;</computeroutput>. </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>export an environment variable <itemizedlist>
+<listitem>
+<para>type <computeroutput>&apos;export CGYWIN=server&apos;</computeroutput> at the cygwin prompt. You&apos;ll have to do this every time you bring up a new cygwin shell to run the cFE, so you might as well put it in your <computeroutput>.bashrc</computeroutput> with your other environment variables. </para></listitem>
+<listitem>
+<para>If the above doesn&apos;t work, use <computeroutput>&apos;set CYGWIN=server&apos;</computeroutput>. </para></listitem>
+</itemizedlist>
+</para></listitem>
+</orderedlist>
+</para><para><bold>Note:</bold> See section called <ref refid="cfedeploy_3_6" kindref="compound">PC / Cygwin-Windows Platform</ref>. </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">Exception Handling </heading>
+</center></para><para><center> </center></para><para>This port does not install exception handlers. Exceptions will be caught by the operating system or debugger. The UNIX signal handler facility could be used to catch exceptions in the cFE.</para><para><center> <heading level="4">BSP Panic </heading>
+</center></para><para><center> </center></para><para>If the cFE core startup fails, the generic cFE code will call the #OS_BSPPanic routine. This is a target specific routine. If the cFE Startup fails and calls #OS_BSPPanic, this port will exit to the shell.</para><para><center> <heading level="4">Compressed file support </heading>
+</center></para><para><center> </center></para><para>The cFE supports loading compressed cFE Application files. The files must be compressed with the “gzip” utility. An example: “$ gzip ci.o “. This will produce the file “ci.o.gz”. When the cFE code detects the .gz file extension, it will uncompress the cFE application when loading it.</para><para>Next: <ref refid="cfedeploy_3_7" kindref="compound">Notes on Parameters to starting the cFE in Linux, OS X, and Cygwin</ref> <bold>OR</bold> <ref refid="cfedeploy_4" kindref="compound">cFE Tools</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_3_5" kindref="compound">PC / Linux Platform</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_3" kindref="compound">Target Specific Instructions</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

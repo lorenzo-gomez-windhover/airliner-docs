@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_multirotor_mixer" kind="class" language="C++" prot="public">
+    <compoundname>MultirotorMixer</compoundname>
+    <basecompoundref refid="class_mixer" prot="public" virt="non-virtual">Mixer</basecompoundref>
+    <includes refid="_multirotor_mixer_8h" local="no">MultirotorMixer.h</includes>
+    <innerclass refid="union_multirotor_mixer_1_1_saturation_status__t" prot="private">MultirotorMixer::SaturationStatus_t</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_multirotor_mixer_1a732c431a13aced12427e183a5024f6d9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MultirotorMixer::m_ThrustFactor</definition>
+        <argsstring></argsstring>
+        <name>m_ThrustFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="99" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" compoundref="_multirotor_mixer_8cpp" startline="86" endline="298">mix</referencedby>
+        <referencedby refid="class_multirotor_mixer_1a38799fea726a35e0668302cb5472ef68" compoundref="_multirotor_mixer_8cpp" startline="409" endline="412">set_thrust_factor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_multirotor_mixer_1a04b20b9cf6840af9cd7b253aaffda609" prot="private" static="no" mutable="no">
+        <type><ref refid="union_multirotor_mixer_1_1_saturation_status__t" kindref="compound">SaturationStatus_t</ref></type>
+        <definition>SaturationStatus_t MultirotorMixer::m_SaturationStatus</definition>
+        <argsstring></argsstring>
+        <name>m_SaturationStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="117" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.h" bodystart="117" bodyend="-1"/>
+        <referencedby refid="class_multirotor_mixer_1a77589d179cc9c51a43053f9f3f93937b" compoundref="_multirotor_mixer_8cpp" startline="399" endline="402">get_saturation_status</referencedby>
+        <referencedby refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" compoundref="_multirotor_mixer_8cpp" startline="86" endline="298">mix</referencedby>
+        <referencedby refid="class_multirotor_mixer_1af028bda3aea8eb59b39d02f598755457" compoundref="_multirotor_mixer_8cpp" startline="308" endline="390">update_saturation_status</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_multirotor_mixer_1a34bc609b0f48064772f3939f2c86d6ed" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MultirotorMixer::m_OutputsPrev[MULTIROTOR_MIXER_MAX_ROTOR_COUNT]</definition>
+        <argsstring>[MULTIROTOR_MIXER_MAX_ROTOR_COUNT]</argsstring>
+        <name>m_OutputsPrev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="121" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.h" bodystart="121" bodyend="-1"/>
+        <referencedby refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" compoundref="_multirotor_mixer_8cpp" startline="86" endline="298">mix</referencedby>
+        <referencedby refid="class_multirotor_mixer_1aacd3917ab58606b9d4d5bce69abab2ff" compoundref="_multirotor_mixer_8cpp" startline="61" endline="77">SetConfigTablePtr</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_multirotor_mixer_1a06036f886ad4e2ad1bc5a1c7ff56886a" prot="private" static="no" mutable="no">
+        <type><ref refid="_mixer_tables_8h_1a26f19c5e208dee2db2558ee3b62702d0" kindref="member">MultirotorMixer_ConfigTablePtr_t</ref></type>
+        <definition>MultirotorMixer_ConfigTablePtr_t MultirotorMixer::m_ConfigTablePtr</definition>
+        <argsstring></argsstring>
+        <name>m_ConfigTablePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="122" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.h" bodystart="122" bodyend="-1"/>
+        <referencedby refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" compoundref="_multirotor_mixer_8cpp" startline="86" endline="298">mix</referencedby>
+        <referencedby refid="class_multirotor_mixer_1aacd3917ab58606b9d4d5bce69abab2ff" compoundref="_multirotor_mixer_8cpp" startline="61" endline="77">SetConfigTablePtr</referencedby>
+        <referencedby refid="class_multirotor_mixer_1af028bda3aea8eb59b39d02f598755457" compoundref="_multirotor_mixer_8cpp" startline="308" endline="390">update_saturation_status</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_multirotor_mixer_1ae8193b98e58a7574ca3c8aa4d34c202c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultirotorMixer::MultirotorMixer</definition>
+        <argsstring>(ControlCallback control_cb, cpuaddr cb_handle)</argsstring>
+        <name>MultirotorMixer</name>
+        <param>
+          <type><ref refid="class_mixer_1a67fe5f496f271116bf6ecfd5285d2ffe" kindref="member">ControlCallback</ref></type>
+          <declname>control_cb</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1abddffd9b6badf27493baed70e95972b4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">cpuaddr</ref></type>
+          <declname>cb_handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>control_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback invoked to read inputs. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb_handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Passed to control_cb. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>geometry</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The selected geometry. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>roll_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scaling factor applied to roll inputs compared to thrust. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pitch_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scaling factor applied to pitch inputs compared to thrust. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaw_wcale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scaling factor applied to yaw inputs compared to thrust. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idle_speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum rotor control output value; usually tuned to ensure that rotors never stall at the low end of their control range. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="75" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1ac886d168a8e6936bdb9f3ab7e833e83c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultirotorMixer::~MultirotorMixer</definition>
+        <argsstring>()</argsstring>
+        <name>~MultirotorMixer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="79" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1aacd3917ab58606b9d4d5bce69abab2ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 MultirotorMixer::SetConfigTablePtr</definition>
+        <argsstring>(MultirotorMixer_ConfigTablePtr_t &amp;ConfigTablePtr)</argsstring>
+        <name>SetConfigTablePtr</name>
+        <param>
+          <type><ref refid="_mixer_tables_8h_1a26f19c5e208dee2db2558ee3b62702d0" kindref="member">MultirotorMixer_ConfigTablePtr_t</ref> &amp;</type>
+          <declname>ConfigTablePtr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="81" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="61" bodyend="77"/>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1ada77e18ff06b9603eab82d6203f4fc83" compoundref="_mixer_tables_8h" startline="75">MultirotorMixer_ConfigTable_t::IdleSpeed</references>
+        <references refid="class_multirotor_mixer_1a06036f886ad4e2ad1bc5a1c7ff56886a" compoundref="_multirotor_mixer_8h" startline="122">m_ConfigTablePtr</references>
+        <references refid="class_multirotor_mixer_1a34bc609b0f48064772f3939f2c86d6ed" compoundref="_multirotor_mixer_8h" startline="121">m_OutputsPrev</references>
+        <referencedby refid="class_a_m_c_1a30ba9286b7fe0a3db49ce51469fa3a63" compoundref="amc__app_8cpp" startline="428" endline="513">AMC::InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 MultirotorMixer::mix</definition>
+        <argsstring>(float *outputs, uint32 space, uint16 *status_reg)</argsstring>
+        <name>mix</name>
+        <reimplements refid="class_mixer_1ae34eba7df1860261a304427cdb082cb5">mix</reimplements>
+        <param>
+          <type>float *</type>
+          <declname>outputs</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>space</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref> *</type>
+          <declname>status_reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform the mixing function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array into which mixed output(s) should be placed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>space</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of available entries in the output array; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of entries in the output array that were populated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="83" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="86" bodyend="298"/>
+        <references refid="class_multirotor_mixer_1ac856f9e8c50ddcb5abbbebe38c124f37" compoundref="_multirotor_mixer_8cpp" startline="80" endline="83">Contrain</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1ab43e3d0b6cd96501d24404d82dc06a86" compoundref="_mixer_tables_8h" startline="76">MultirotorMixer_ConfigTable_t::DeltaOutMax</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1ae92a7bc0a2dc86f1dbe3d867e5be70de">MultirotorMixer::SaturationStatus_t::flags</references>
+        <references refid="class_mixer_1ae492183513f803721d05f63646f1bb96" compoundref="_mixer_8cpp" startline="56" endline="63">Mixer::get_control</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1ada77e18ff06b9603eab82d6203f4fc83" compoundref="_mixer_tables_8h" startline="75">MultirotorMixer_ConfigTable_t::IdleSpeed</references>
+        <references refid="class_multirotor_mixer_1a06036f886ad4e2ad1bc5a1c7ff56886a" compoundref="_multirotor_mixer_8h" startline="122">m_ConfigTablePtr</references>
+        <references refid="class_multirotor_mixer_1a34bc609b0f48064772f3939f2c86d6ed" compoundref="_multirotor_mixer_8h" startline="121">m_OutputsPrev</references>
+        <references refid="class_multirotor_mixer_1a04b20b9cf6840af9cd7b253aaffda609" compoundref="_multirotor_mixer_8h" startline="117">m_SaturationStatus</references>
+        <references refid="class_multirotor_mixer_1a732c431a13aced12427e183a5024f6d9" compoundref="_multirotor_mixer_8h" startline="99">m_ThrustFactor</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a2be0fde3df9e1b201856913998367a08" compoundref="_multirotor_mixer_8h" startline="104">MultirotorMixer::SaturationStatus_t::motor_neg</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a9e7e811ea5592e7040970affb0a275e3" compoundref="_multirotor_mixer_8h" startline="103">MultirotorMixer::SaturationStatus_t::motor_pos</references>
+        <references refid="struct_multirotor_mixer___rotor_config__t_1afa45bbd75e422beafe8b46a6757c0621" compoundref="_mixer_tables_8h" startline="67">MultirotorMixer_RotorConfig_t::OutScale</references>
+        <references refid="struct_multirotor_mixer___rotor_config__t_1a3434a3ba5f66c0dacfea646c4c13b27c" compoundref="_mixer_tables_8h" startline="65">MultirotorMixer_RotorConfig_t::PitchScale</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1a97ead85bfaf59fc1dcbc1b0ff19033e9" compoundref="_mixer_tables_8h" startline="73">MultirotorMixer_ConfigTable_t::PitchScale</references>
+        <references refid="struct_multirotor_mixer___rotor_config__t_1a8c324b27581c541621b32b486211a800" compoundref="_mixer_tables_8h" startline="64">MultirotorMixer_RotorConfig_t::RollScale</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1a3495afed3ff7195c502d15930e4d028d" compoundref="_mixer_tables_8h" startline="72">MultirotorMixer_ConfigTable_t::RollScale</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1aeee7c78321a002ddaf9673ac83a80913" compoundref="_mixer_tables_8h" startline="79">MultirotorMixer_ConfigTable_t::RotorConfig</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1a1deb6612574437c64f1560bb4dbbc20b" compoundref="_mixer_tables_8h" startline="77">MultirotorMixer_ConfigTable_t::RotorCount</references>
+        <references refid="class_multirotor_mixer_1af028bda3aea8eb59b39d02f598755457" compoundref="_multirotor_mixer_8cpp" startline="308" endline="390">update_saturation_status</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a91e90b40a7efe37dd19ef7e62254ef57" compoundref="_multirotor_mixer_8h" startline="114">MultirotorMixer::SaturationStatus_t::value</references>
+        <references refid="struct_multirotor_mixer___rotor_config__t_1a8f7c76aeaa34767a1f181839a418e613" compoundref="_mixer_tables_8h" startline="66">MultirotorMixer_RotorConfig_t::YawScale</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1a42ef884bddeb54a34c58b79ee2e36728" compoundref="_mixer_tables_8h" startline="74">MultirotorMixer_ConfigTable_t::YawScale</references>
+        <referencedby refid="class_a_m_c_1a1378d44bbac1c9e0b0cc912d0db6de96" compoundref="amc__app_8cpp" startline="993" endline="1056">AMC::UpdateMotors</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1a77589d179cc9c51a43053f9f3f93937b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+        <definition>uint16 MultirotorMixer::get_saturation_status</definition>
+        <argsstring>(void)</argsstring>
+        <name>get_saturation_status</name>
+        <reimplements refid="class_mixer_1a7edec3b8cf363ee4d9a5960b5ad70287">get_saturation_status</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the saturation status.</para><para><simplesect kind="return"><para>Integer bitmask containing saturation_status from multirotor_motor_limits.msg . </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="84" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="399" bodyend="402"/>
+        <references refid="class_multirotor_mixer_1a04b20b9cf6840af9cd7b253aaffda609" compoundref="_multirotor_mixer_8h" startline="117">m_SaturationStatus</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a91e90b40a7efe37dd19ef7e62254ef57" compoundref="_multirotor_mixer_8h" startline="114">MultirotorMixer::SaturationStatus_t::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1a7c7362c6416c1b854b44e8b9f82bcfd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MultirotorMixer::groups_required</definition>
+        <argsstring>(uint32 &amp;groups)</argsstring>
+        <name>groups_required</name>
+        <reimplements refid="class_mixer_1abfd08680054290a14e3a8753e5559986">groups_required</reimplements>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> &amp;</type>
+          <declname>groups</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Analyses the mix configuration and updates a bitmask of groups that are required.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>groups</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A bitmask of groups (0-31) that the mixer requires. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="85" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="393" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1ac856f9e8c50ddcb5abbbebe38c124f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float MultirotorMixer::Contrain</definition>
+        <argsstring>(float Value, float Minimum, float Maximum)</argsstring>
+        <name>Contrain</name>
+        <param>
+          <type>float</type>
+          <declname>Value</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Minimum</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Maximum</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="87" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="80" bodyend="83"/>
+        <referencedby refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" compoundref="_multirotor_mixer_8cpp" startline="86" endline="298">mix</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1abe62e269eb3816b4ad4638fc74e9dd0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 MultirotorMixer::set_trim</definition>
+        <argsstring>(float trim)</argsstring>
+        <name>set_trim</name>
+        <reimplements refid="class_mixer_1a66b49147d659eafe6480c9a8a62e2d87">set_trim</reimplements>
+        <param>
+          <type>float</type>
+          <declname>trim</declname>
+        </param>
+        <briefdescription>
+<para>Set trim offset for this mixer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of outputs this mixer feeds to </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="89" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="404" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1a38799fea726a35e0668302cb5472ef68" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MultirotorMixer::set_thrust_factor</definition>
+        <argsstring>(float val)</argsstring>
+        <name>set_thrust_factor</name>
+        <reimplements refid="class_mixer_1a40abfb73fb20c6cbe15a29978081a44e">set_thrust_factor</reimplements>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the thrust factor used to calculate mapping from desired thrust to pwm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="96" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="409" bodyend="412"/>
+        <references refid="class_multirotor_mixer_1a732c431a13aced12427e183a5024f6d9" compoundref="_multirotor_mixer_8h" startline="99">m_ThrustFactor</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_multirotor_mixer_1af028bda3aea8eb59b39d02f598755457" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MultirotorMixer::update_saturation_status</definition>
+        <argsstring>(uint32 index, bool clipping_high, bool clipping_low)</argsstring>
+        <name>update_saturation_status</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>clipping_high</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>clipping_low</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="119" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.cpp" bodystart="308" bodyend="390"/>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1ae92a7bc0a2dc86f1dbe3d867e5be70de">MultirotorMixer::SaturationStatus_t::flags</references>
+        <references refid="class_multirotor_mixer_1a06036f886ad4e2ad1bc5a1c7ff56886a" compoundref="_multirotor_mixer_8h" startline="122">m_ConfigTablePtr</references>
+        <references refid="class_multirotor_mixer_1a04b20b9cf6840af9cd7b253aaffda609" compoundref="_multirotor_mixer_8h" startline="117">m_SaturationStatus</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1acf72581644600aa888399a9e670419db" compoundref="_multirotor_mixer_8h" startline="108">MultirotorMixer::SaturationStatus_t::pitch_neg</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1aa63711756ee11773b0a7b5e82444c40a" compoundref="_multirotor_mixer_8h" startline="107">MultirotorMixer::SaturationStatus_t::pitch_pos</references>
+        <references refid="struct_multirotor_mixer___rotor_config__t_1a3434a3ba5f66c0dacfea646c4c13b27c" compoundref="_mixer_tables_8h" startline="65">MultirotorMixer_RotorConfig_t::PitchScale</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a4b715684bcee6a08297c11e862433b30" compoundref="_multirotor_mixer_8h" startline="106">MultirotorMixer::SaturationStatus_t::roll_neg</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a6c61b685ebe3e2bc4c850a69b108b85a" compoundref="_multirotor_mixer_8h" startline="105">MultirotorMixer::SaturationStatus_t::roll_pos</references>
+        <references refid="struct_multirotor_mixer___rotor_config__t_1a8c324b27581c541621b32b486211a800" compoundref="_mixer_tables_8h" startline="64">MultirotorMixer_RotorConfig_t::RollScale</references>
+        <references refid="struct_multirotor_mixer___config_table__t_1aeee7c78321a002ddaf9673ac83a80913" compoundref="_mixer_tables_8h" startline="79">MultirotorMixer_ConfigTable_t::RotorConfig</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a9059b7898682e94a3e1eb3d2a346bb3b" compoundref="_multirotor_mixer_8h" startline="112">MultirotorMixer::SaturationStatus_t::thrust_neg</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a05d8b808d36179d68c85763b4ca5d3bd" compoundref="_multirotor_mixer_8h" startline="111">MultirotorMixer::SaturationStatus_t::thrust_pos</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a05a90e47a470fa82d6d7b1bffeb587f2" compoundref="_multirotor_mixer_8h" startline="110">MultirotorMixer::SaturationStatus_t::yaw_neg</references>
+        <references refid="union_multirotor_mixer_1_1_saturation_status__t_1a438330bb00dd8e747244ca32b043f919" compoundref="_multirotor_mixer_8h" startline="109">MultirotorMixer::SaturationStatus_t::yaw_pos</references>
+        <references refid="struct_multirotor_mixer___rotor_config__t_1a8f7c76aeaa34767a1f181839a418e613" compoundref="_mixer_tables_8h" startline="66">MultirotorMixer_RotorConfig_t::YawScale</references>
+        <referencedby refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" compoundref="_multirotor_mixer_8cpp" startline="86" endline="298">mix</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1a06d7d14efe2d6b09c684aee71db99a6f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MultirotorMixer::MultirotorMixer</definition>
+        <argsstring>(const MultirotorMixer &amp;)</argsstring>
+        <name>MultirotorMixer</name>
+        <param>
+          <type>const <ref refid="class_multirotor_mixer" kindref="compound">MultirotorMixer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="125" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_multirotor_mixer_1a156cbba1a93fe1c933c6ceee3d75f3af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_multirotor_mixer" kindref="compound">MultirotorMixer</ref></type>
+        <definition>MultirotorMixer MultirotorMixer::operator=</definition>
+        <argsstring>(const MultirotorMixer &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_multirotor_mixer" kindref="compound">MultirotorMixer</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="126" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Supported multirotor geometries.</para><para>Values are generated by the multi_tables script and placed to mixer_multirotor.generated.h Multi-rotor mixer for pre-defined vehicle geometries.</para><para>Collects four inputs (roll, pitch, yaw, thrust) and mixes them to a set of outputs based on the configured geometry. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="25">
+        <label>Mixer</label>
+        <link refid="class_mixer"/>
+      </node>
+      <node id="24">
+        <label>MultirotorMixer</label>
+        <link refid="class_multirotor_mixer"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="28">
+        <label>MultirotorMixer::SaturationStatus_t</label>
+        <link refid="union_multirotor_mixer_1_1_saturation_status__t"/>
+      </node>
+      <node id="27">
+        <label>Mixer</label>
+        <link refid="class_mixer"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>m_Next</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>MultirotorMixer</label>
+        <link refid="class_multirotor_mixer"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>m_SaturationStatus</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_ConfigTablePtr</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>MultirotorMixer_ConfigTable_t</label>
+        <link refid="struct_multirotor_mixer___config_table__t"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>RotorConfig</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>MultirotorMixer_RotorConfig_t</label>
+        <link refid="struct_multirotor_mixer___rotor_config__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/amc/fsw/src/mixer/MultirotorMixer.h" line="57" column="1" bodyfile="apps/amc/fsw/src/mixer/MultirotorMixer.h" bodystart="56" bodyend="127"/>
+    <listofallmembers>
+      <member refid="class_multirotor_mixer_1ac856f9e8c50ddcb5abbbebe38c124f37" prot="public" virt="non-virtual"><scope>MultirotorMixer</scope><name>Contrain</name></member>
+      <member refid="class_mixer_1a67fe5f496f271116bf6ecfd5285d2ffe" prot="public" virt="non-virtual"><scope>MultirotorMixer</scope><name>ControlCallback</name></member>
+      <member refid="class_mixer_1ae492183513f803721d05f63646f1bb96" prot="protected" virt="non-virtual"><scope>MultirotorMixer</scope><name>get_control</name></member>
+      <member refid="class_multirotor_mixer_1a77589d179cc9c51a43053f9f3f93937b" prot="public" virt="virtual"><scope>MultirotorMixer</scope><name>get_saturation_status</name></member>
+      <member refid="class_multirotor_mixer_1a7c7362c6416c1b854b44e8b9f82bcfd6" prot="public" virt="virtual"><scope>MultirotorMixer</scope><name>groups_required</name></member>
+      <member refid="class_mixer_1a18d18543942e246ffe827af7098c7b2e" prot="protected" virt="non-virtual"><scope>MultirotorMixer</scope><name>m_CbHandle</name></member>
+      <member refid="class_multirotor_mixer_1a06036f886ad4e2ad1bc5a1c7ff56886a" prot="private" virt="non-virtual"><scope>MultirotorMixer</scope><name>m_ConfigTablePtr</name></member>
+      <member refid="class_mixer_1a389e7f35306cbe9e7f2bb51b5144651e" prot="protected" virt="non-virtual"><scope>MultirotorMixer</scope><name>m_ControlCb</name></member>
+      <member refid="class_mixer_1aad124dad50f89c91992136275dea28c4" prot="public" virt="non-virtual"><scope>MultirotorMixer</scope><name>m_Next</name></member>
+      <member refid="class_multirotor_mixer_1a34bc609b0f48064772f3939f2c86d6ed" prot="private" virt="non-virtual"><scope>MultirotorMixer</scope><name>m_OutputsPrev</name></member>
+      <member refid="class_multirotor_mixer_1a04b20b9cf6840af9cd7b253aaffda609" prot="private" virt="non-virtual"><scope>MultirotorMixer</scope><name>m_SaturationStatus</name></member>
+      <member refid="class_multirotor_mixer_1a732c431a13aced12427e183a5024f6d9" prot="private" virt="non-virtual"><scope>MultirotorMixer</scope><name>m_ThrustFactor</name></member>
+      <member refid="class_multirotor_mixer_1a2938a292396ed53d1032f86f6319d69c" prot="public" virt="virtual"><scope>MultirotorMixer</scope><name>mix</name></member>
+      <member refid="class_mixer_1a63cc05bb95a8576679d9052dc2cb8594" prot="public" virt="non-virtual"><scope>MultirotorMixer</scope><name>Mixer</name></member>
+      <member refid="class_multirotor_mixer_1ae8193b98e58a7574ca3c8aa4d34c202c" prot="public" virt="non-virtual"><scope>MultirotorMixer</scope><name>MultirotorMixer</name></member>
+      <member refid="class_multirotor_mixer_1a06d7d14efe2d6b09c684aee71db99a6f" prot="private" virt="non-virtual"><scope>MultirotorMixer</scope><name>MultirotorMixer</name></member>
+      <member refid="class_multirotor_mixer_1a156cbba1a93fe1c933c6ceee3d75f3af" prot="private" virt="non-virtual"><scope>MultirotorMixer</scope><name>operator=</name></member>
+      <member refid="class_mixer_1a3fd2f4fb9d64e58fb21ef683d1b05c16" prot="protected" virt="non-virtual"><scope>MultirotorMixer</scope><name>scale</name></member>
+      <member refid="class_mixer_1a08bd3788e2a1db3f9a1b207fd5fa643d" prot="protected" virt="non-virtual"><scope>MultirotorMixer</scope><name>scale_check</name></member>
+      <member refid="class_multirotor_mixer_1a38799fea726a35e0668302cb5472ef68" prot="public" virt="virtual"><scope>MultirotorMixer</scope><name>set_thrust_factor</name></member>
+      <member refid="class_multirotor_mixer_1abe62e269eb3816b4ad4638fc74e9dd0c" prot="public" virt="virtual"><scope>MultirotorMixer</scope><name>set_trim</name></member>
+      <member refid="class_multirotor_mixer_1aacd3917ab58606b9d4d5bce69abab2ff" prot="public" virt="non-virtual"><scope>MultirotorMixer</scope><name>SetConfigTablePtr</name></member>
+      <member refid="class_multirotor_mixer_1af028bda3aea8eb59b39d02f598755457" prot="private" virt="non-virtual"><scope>MultirotorMixer</scope><name>update_saturation_status</name></member>
+      <member refid="class_mixer_1af8db94e968ba1a3e03ffe9e377e0d6e9" prot="public" virt="virtual"><scope>MultirotorMixer</scope><name>~Mixer</name></member>
+      <member refid="class_multirotor_mixer_1ac886d168a8e6936bdb9f3ab7e833e83c" prot="public" virt="non-virtual"><scope>MultirotorMixer</scope><name>~MultirotorMixer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

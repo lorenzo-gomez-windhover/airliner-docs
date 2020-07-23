@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeesugtaskterm" kind="page">
+    <compoundname>cfeesugtaskterm</compoundname>
+    <title>&quot;Task&quot;</title>
+    <detaileddescription>
+<para>A Task is a thread of execution in the operating system, often associated with a cFE Application. Each cFE Application has a Main task providing its CPU context, stack and other OS resources. In addition, each cFE Application can create multiple Child Tasks which are closely associated with the Parent Task and cFE Application.</para><para>In a traditional Real Time Operating System such as vxWorks, the cFE Application Main task and child tasks end up being mapped to these OS tasks in the same shared memory space. For example, a Stored Command cFE Application that consists of a cFE Main Task and 10 Relative Time Sequence Child Tasks would have 11 tasks on a vxWorks system. The only association between these tasks exists in the cFE.</para><para>In a memory protected process oriented Operating System, the intention is to have a cFE Application implemented as a memory protected process with its own virtual address space. In this Process Model, each cFE Child Task would be a thread in the parent Process, much like a Unix process with multiple threads. In this model, the Stored Command example with a cFE Main Task and 10 Relative Time Sequence Child Tasks would consist of a Unix Process and 10 pthreads, all under the same virtual address space.</para><para>Next: <ref refid="cfeesugstartupterm" kindref="compound">&quot;Startup Script&quot;</ref> <linebreak/>
+ Prev: <ref refid="cfeesugappterm" kindref="compound">&quot;Application&quot; and &quot;cFE Application&quot;</ref> <linebreak/>
+ Up To: <ref refid="cfeesugterm" kindref="compound">Terminology</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

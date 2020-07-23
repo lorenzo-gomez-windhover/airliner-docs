@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_m_p_u9250___diag_packet__t" kind="struct" language="C++" prot="public">
+    <compoundname>MPU9250_DiagPacket_t</compoundname>
+    <includes refid="mpu9250__msg_8h" local="no">mpu9250_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_m_p_u9250___diag_packet__t_1aa2259c11025e15a928cdb90c487efc39" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 MPU9250_DiagPacket_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/src/mpu9250_msg.h" line="305" column="1" bodyfile="apps/mpu9250/fsw/src/mpu9250_msg.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_u9250___diag_packet__t_1acf6f8accadf59c229cdd81910e55a0ca" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_p_u9250___calibration_msg__t" kindref="compound">MPU9250_CalibrationMsg_t</ref></type>
+        <definition>MPU9250_CalibrationMsg_t MPU9250_DiagPacket_t::Calibration</definition>
+        <argsstring></argsstring>
+        <name>Calibration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All calibration info </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/src/mpu9250_msg.h" line="307" column="1" bodyfile="apps/mpu9250/fsw/src/mpu9250_msg.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_m_p_u9250___diag_packet__t_1a249739fbef08e447c3e396241ff05f79" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_m_p_u9250___conversion_msg__t" kindref="compound">MPU9250_ConversionMsg_t</ref></type>
+        <definition>MPU9250_ConversionMsg_t MPU9250_DiagPacket_t::Conversion</definition>
+        <argsstring></argsstring>
+        <name>Conversion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All conversion info </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/src/mpu9250_msg.h" line="309" column="1" bodyfile="apps/mpu9250/fsw/src/mpu9250_msg.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MPU9250 diagnostic data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>MPU9250_DiagPacket_t</label>
+        <link refid="struct_m_p_u9250___diag_packet__t"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>Conversion</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>Calibration</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MPU9250_ConversionMsg_t</label>
+        <link refid="struct_m_p_u9250___conversion_msg__t"/>
+      </node>
+      <node id="9">
+        <label>MPU9250_CalibrationMsg_t</label>
+        <link refid="struct_m_p_u9250___calibration_msg__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/mpu9250/fsw/src/mpu9250_msg.h" line="304" column="1" bodyfile="apps/mpu9250/fsw/src/mpu9250_msg.h" bodystart="303" bodyend="310"/>
+    <listofallmembers>
+      <member refid="struct_m_p_u9250___diag_packet__t_1acf6f8accadf59c229cdd81910e55a0ca" prot="public" virt="non-virtual"><scope>MPU9250_DiagPacket_t</scope><name>Calibration</name></member>
+      <member refid="struct_m_p_u9250___diag_packet__t_1a249739fbef08e447c3e396241ff05f79" prot="public" virt="non-virtual"><scope>MPU9250_DiagPacket_t</scope><name>Conversion</name></member>
+      <member refid="struct_m_p_u9250___diag_packet__t_1aa2259c11025e15a928cdb90c487efc39" prot="public" virt="non-virtual"><scope>MPU9250_DiagPacket_t</scope><name>TlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

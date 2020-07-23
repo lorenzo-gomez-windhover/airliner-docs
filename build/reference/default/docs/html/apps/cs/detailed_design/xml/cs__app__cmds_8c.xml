@@ -1,0 +1,929 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cs__app__cmds_8c" kind="file" language="C++">
+    <compoundname>cs_app_cmds.c</compoundname>
+    <includes local="yes">cfe.h</includes>
+    <includes refid="cs__app_8h" local="yes">cs_app.h</includes>
+    <includes refid="cs__events_8h" local="yes">cs_events.h</includes>
+    <includes refid="cs__utils_8h" local="yes">cs_utils.h</includes>
+    <includes refid="cs__compute_8h" local="yes">cs_compute.h</includes>
+    <includes refid="cs__app__cmds_8h" local="yes">cs_app_cmds.h</includes>
+    <incdepgraph>
+      <node id="950">
+        <label>cs_perfids.h</label>
+        <link refid="cs__perfids_8h"/>
+      </node>
+      <node id="933">
+        <label>cfe_error.h</label>
+        <link refid="cfe__error_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="924" relation="include">
+        </childnode>
+      </node>
+      <node id="947">
+        <label>cs_platform_cfg.h</label>
+        <link refid="cs__platform__cfg_8h"/>
+      </node>
+      <node id="940">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="932" relation="include">
+        </childnode>
+      </node>
+      <node id="945">
+        <label>cs_msg.h</label>
+        <link refid="cs__msg_8h"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+      </node>
+      <node id="925">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="942">
+        <label>cfe_tbl.h</label>
+        <link refid="cfe__tbl_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+      </node>
+      <node id="951">
+        <label>cs_verify.h</label>
+        <link refid="cs__verify_8h"/>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+      </node>
+      <node id="937">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+      </node>
+      <node id="926">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="927" relation="include">
+        </childnode>
+      </node>
+      <node id="932">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="928">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="935">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="943">
+        <label>cs_app.h</label>
+        <link refid="cs__app_8h"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+      </node>
+      <node id="929">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="924">
+        <label>osapi.h</label>
+        <link refid="osapi_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+        <childnode refid="929" relation="include">
+        </childnode>
+        <childnode refid="930" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="927" relation="include">
+        </childnode>
+      </node>
+      <node id="931">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="944">
+        <label>cs_tbldefs.h</label>
+        <link refid="cs__tbldefs_8h"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+      </node>
+      <node id="930">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="946">
+        <label>cs_msgdefs.h</label>
+        <link refid="cs__msgdefs_8h"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+      </node>
+      <node id="927">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="955">
+        <label>cs_compute.h</label>
+        <link refid="cs__compute_8h"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+      </node>
+      <node id="938">
+        <label>cfe_evs_msg.h</label>
+        <link refid="cfe__evs__msg_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+      </node>
+      <node id="949">
+        <label>cs_msgids.h</label>
+        <link refid="cs__msgids_8h"/>
+      </node>
+      <node id="922">
+        <label>cfe.h</label>
+        <link refid="cfe_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="932" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+        <childnode refid="936" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+      </node>
+      <node id="954">
+        <label>cs_utils.h</label>
+        <link refid="cs__utils_8h"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+      </node>
+      <node id="939">
+        <label>cfe_sb.h</label>
+        <link refid="cfe__sb_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="932" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+      </node>
+      <node id="948">
+        <label>cs_mission_cfg.h</label>
+        <link refid="cs__mission__cfg_8h"/>
+        <childnode refid="932" relation="include">
+        </childnode>
+      </node>
+      <node id="923">
+        <label>common_types.h</label>
+        <link refid="common__types_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="952">
+        <label>cs_version.h</label>
+        <link refid="cs__version_8h"/>
+      </node>
+      <node id="936">
+        <label>cfe_evs.h</label>
+        <link refid="cfe__evs_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+        <childnode refid="938" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+      </node>
+      <node id="934">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="932" relation="include">
+        </childnode>
+        <childnode refid="935" relation="include">
+        </childnode>
+      </node>
+      <node id="921">
+        <label>apps/cs/fsw/src/cs_app_cmds.c</label>
+        <link refid="cs_app_cmds.c"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="953" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="956" relation="include">
+        </childnode>
+      </node>
+      <node id="956">
+        <label>cs_app_cmds.h</label>
+        <link refid="cs__app__cmds_8h"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+      </node>
+      <node id="941">
+        <label>cfe_fs.h</label>
+        <link refid="cfe__fs_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+      </node>
+      <node id="953">
+        <label>cs_events.h</label>
+        <link refid="cs__events_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cs__app__cmds_8c_1a4cb805e21853b755ca47a98dcade56e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CS_DisableAppCmd</definition>
+        <argsstring>(CFE_SB_MsgPtr_t MessagePtr)</argsstring>
+        <name>CS_DisableAppCmd</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+          <declname>MessagePtr</declname>
+        </param>
+        <briefdescription>
+<para>Process a disable background checking for the App table command. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Disables background checking for the App table</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>In order for background checking of individual areas to checksum (OS code segment, cFE core, Eeprom, Memory, Tables, and App) to occur, the table must be enabled and overall checksumming must be enabled.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MessagePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref> pointer that references the software bus message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cs__msgdefs_8h_1aea3b7d4d73a6b8159ede963c44cf83c2" kindref="member">CS_DISABLE_APPS_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cs/fsw/src/cs_app_cmds.c" line="41" column="1" bodyfile="apps/cs/fsw/src/cs_app_cmds.c" bodystart="41" bodyend="62"/>
+        <references refid="struct_c_s___app_data__t_1a8abbc4fe04902b2e874be31cc2184a93" compoundref="cs__app_8h" startline="191">CS_AppData_t::AppCSState</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" compoundref="cs__app_8h" startline="186">CS_AppData_t::CmdCounter</references>
+        <references refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" compoundref="cs__app_8c" startline="45">CS_AppData</references>
+        <references refid="cs__events_8h_1a1d428b1cbef8039c14621950fb98636d" compoundref="cs__events_8h" startline="1263">CS_DISABLE_APP_INF_EID</references>
+        <references refid="cs__msgdefs_8h_1a71e5439a970f1a7d6259f26d23901fd7" compoundref="cs__msgdefs_8h" startline="1522">CS_STATE_DISABLED</references>
+        <references refid="cs__app_8c_1a3ff9bca2297b80b56080411259594763" compoundref="cs__app_8c" startline="955" endline="995">CS_UpdateCDS</references>
+        <references refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" compoundref="cs__utils_8c" startline="468" endline="493">CS_VerifyCmdLength</references>
+        <references refid="cs__utils_8c_1a5333067f024980fbb248a6285fcbb0dd" compoundref="cs__utils_8c" startline="94" endline="105">CS_ZeroAppTempValues</references>
+        <referencedby refid="cs__app_8c_1ad83f944b2dd3070bed226a3bb0f92ada" compoundref="cs__app_8c" startline="499" endline="799">CS_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cs__app__cmds_8c_1a1a5cca7ed5736e7353703d1da375802f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CS_EnableAppCmd</definition>
+        <argsstring>(CFE_SB_MsgPtr_t MessagePtr)</argsstring>
+        <name>CS_EnableAppCmd</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+          <declname>MessagePtr</declname>
+        </param>
+        <briefdescription>
+<para>Process an enable background checking for the App table command. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Allows the App table to be background checksummed.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>In order for background checking of individual areas to checksum (OS code segment, cFE core, Eeprom, Memory, Tables, and App) to occur, the table must be enabled and overall checksumming must be enabled.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MessagePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref> pointer that references the software bus message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cs__msgdefs_8h_1aed4bb67e617aeba8f6482104b024c017" kindref="member">CS_ENABLE_APPS_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cs/fsw/src/cs_app_cmds.c" line="69" column="1" bodyfile="apps/cs/fsw/src/cs_app_cmds.c" bodystart="69" bodyend="89"/>
+        <references refid="struct_c_s___app_data__t_1a8abbc4fe04902b2e874be31cc2184a93" compoundref="cs__app_8h" startline="191">CS_AppData_t::AppCSState</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" compoundref="cs__app_8h" startline="186">CS_AppData_t::CmdCounter</references>
+        <references refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" compoundref="cs__app_8c" startline="45">CS_AppData</references>
+        <references refid="cs__events_8h_1ac7dd07131543eb06a7db251fbf1881b0" compoundref="cs__events_8h" startline="1275">CS_ENABLE_APP_INF_EID</references>
+        <references refid="cs__msgdefs_8h_1a3ea2ccf95b5908ea1768ac86d01fa8de" compoundref="cs__msgdefs_8h" startline="1517">CS_STATE_ENABLED</references>
+        <references refid="cs__app_8c_1a3ff9bca2297b80b56080411259594763" compoundref="cs__app_8c" startline="955" endline="995">CS_UpdateCDS</references>
+        <references refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" compoundref="cs__utils_8c" startline="468" endline="493">CS_VerifyCmdLength</references>
+        <referencedby refid="cs__app_8c_1ad83f944b2dd3070bed226a3bb0f92ada" compoundref="cs__app_8c" startline="499" endline="799">CS_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cs__app__cmds_8c_1a539885a1a30cea535766484c817e8539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CS_ReportBaselineAppCmd</definition>
+        <argsstring>(CFE_SB_MsgPtr_t MessagePtr)</argsstring>
+        <name>CS_ReportBaselineAppCmd</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+          <declname>MessagePtr</declname>
+        </param>
+        <briefdescription>
+<para>Proccess a report baseline of a App command. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Reports the baseline checksum of the specified app if it has already been computed</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MessagePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref> pointer that references the software bus message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cs__msgdefs_8h_1a35404a3e7644efd89dc7a4d07dfdc2f4" kindref="member">CS_REPORT_BASELINE_APP_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cs/fsw/src/cs_app_cmds.c" line="96" column="1" bodyfile="apps/cs/fsw/src/cs_app_cmds.c" bodystart="96" bodyend="141"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" compoundref="cs__app_8h" startline="186">CS_AppData_t::CmdCounter</references>
+        <references refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" compoundref="cs__app_8h" startline="187">CS_AppData_t::CmdErrCounter</references>
+        <references refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" compoundref="cs__app_8c" startline="45">CS_AppData</references>
+        <references refid="cs__events_8h_1a5e66710bfe6d11c65a18fd5d11e07338" compoundref="cs__events_8h" startline="1292">CS_BASELINE_APP_INF_EID</references>
+        <references refid="cs__events_8h_1a32506c9b000e3d3c4d2169a31d14264c" compoundref="cs__events_8h" startline="1324">CS_BASELINE_INVALID_NAME_APP_ERR_EID</references>
+        <references refid="cs__utils_8c_1a037ff555a18fa3987dcfc9a4bb75a006" compoundref="cs__utils_8c" startline="265" endline="290">CS_GetAppResTblEntryByName</references>
+        <references refid="cs__events_8h_1a4690ac1cbf67521eaaee26a6340b8860" compoundref="cs__events_8h" startline="1307">CS_NO_BASELINE_APP_INF_EID</references>
+        <references refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" compoundref="cs__utils_8c" startline="468" endline="493">CS_VerifyCmdLength</references>
+        <references refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1">OS_MAX_API_NAME</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="cs__app_8c_1ad83f944b2dd3070bed226a3bb0f92ada" compoundref="cs__app_8c" startline="499" endline="799">CS_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cs__app__cmds_8c_1a95fc1168d42b055aa9246a3efc875c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CS_RecomputeBaselineAppCmd</definition>
+        <argsstring>(CFE_SB_MsgPtr_t MessagePtr)</argsstring>
+        <name>CS_RecomputeBaselineAppCmd</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+          <declname>MessagePtr</declname>
+        </param>
+        <briefdescription>
+<para>Process a recopmute baseline of a app command. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Recomputes the checksum of a app and use that value as the new baseline for that entry.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MessagePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref> pointer that references the software bus message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cs__msgdefs_8h_1a291e45f65f01cc3ebedb910f592f7c97" kindref="member">CS_RECOMPUTE_BASELINE_APP_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cs/fsw/src/cs_app_cmds.c" line="148" column="1" bodyfile="apps/cs/fsw/src/cs_app_cmds.c" bodystart="148" bodyend="228"/>
+        <references refid="cfe__es__api_8c_1a64768543df91e7856b4356fdc70ebe8c">CFE_ES_CreateChildTask</references>
+        <references refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e">CFE_EVS_DEBUG</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_c_s___app_data__t_1acc1361df31fc35962a75acb3ef17b919" compoundref="cs__app_8h" startline="119">CS_AppData_t::ChildTaskTable</references>
+        <references refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" compoundref="cs__app_8h" startline="186">CS_AppData_t::CmdCounter</references>
+        <references refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" compoundref="cs__app_8h" startline="187">CS_AppData_t::CmdErrCounter</references>
+        <references refid="cs__msgdefs_8h_1a17b98c35ae026d2aba2a4551d542187c" compoundref="cs__msgdefs_8h" startline="1509">CS_APP_TABLE</references>
+        <references refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" compoundref="cs__app_8c" startline="45">CS_AppData</references>
+        <references refid="cs__platform__cfg_8h_1a27ba0010641e5c062edba9f996298b45" compoundref="cs__platform__cfg_8h" startline="32">CS_CHILD_TASK_FLAGS</references>
+        <references refid="cs__platform__cfg_8h_1aab901627baca850a39716655cc6610db" compoundref="cs__platform__cfg_8h" startline="177">CS_CHILD_TASK_PRIORITY</references>
+        <references refid="cs__utils_8c_1a037ff555a18fa3987dcfc9a4bb75a006" compoundref="cs__utils_8c" startline="265" endline="290">CS_GetAppResTblEntryByName</references>
+        <references refid="cs__app_8h_1a2ec34d59ed4c2afa50c6da2fd8715c44" compoundref="cs__app_8h" startline="97">CS_RECOMP_APP_TASK_NAME</references>
+        <references refid="cs__events_8h_1ae2caa457ead67af459449fd9ebd6a421" compoundref="cs__events_8h" startline="1389">CS_RECOMPUTE_APP_CHDTASK_ERR_EID</references>
+        <references refid="cs__events_8h_1a03d77b12aac170bdc79ceb434c892068" compoundref="cs__events_8h" startline="1358">CS_RECOMPUTE_APP_CREATE_CHDTASK_ERR_EID</references>
+        <references refid="cs__events_8h_1a2a58bc7b4b9fadaac42d840effda3596" compoundref="cs__events_8h" startline="1339">CS_RECOMPUTE_APP_STARTED_DBG_EID</references>
+        <references refid="cs__events_8h_1a66dab7ee74048d800f544842d2edb711" compoundref="cs__events_8h" startline="1375">CS_RECOMPUTE_UNKNOWN_NAME_APP_ERR_EID</references>
+        <references refid="cs__compute_8c_1ad9108c1d9e9f81f891e9a0227bc923ce" compoundref="cs__compute_8c" startline="639" endline="758">CS_RecomputeAppChildTask</references>
+        <references refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" compoundref="cs__utils_8c" startline="468" endline="493">CS_VerifyCmdLength</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_c_s___app_data__t_1a17689ca77d9c1eb2a3dec0a52050af49" compoundref="cs__app_8h" startline="122">CS_AppData_t::OneShotInProgress</references>
+        <references refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1">OS_MAX_API_NAME</references>
+        <references refid="struct_c_s___app_data__t_1a5187249c4690ac633f73329a2dbd2a08" compoundref="cs__app_8h" startline="132">CS_AppData_t::RecomputeAppEntryPtr</references>
+        <references refid="struct_c_s___app_data__t_1a574d2b2e9bd291ed1b100881f6ef1316" compoundref="cs__app_8h" startline="121">CS_AppData_t::RecomputeInProgress</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="cs__app_8c_1ad83f944b2dd3070bed226a3bb0f92ada" compoundref="cs__app_8c" startline="499" endline="799">CS_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cs__app__cmds_8c_1a8d1e76bde2de87b57f7963d798ce20b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CS_DisableNameAppCmd</definition>
+        <argsstring>(CFE_SB_MsgPtr_t MessagePtr)</argsstring>
+        <name>CS_DisableNameAppCmd</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+          <declname>MessagePtr</declname>
+        </param>
+        <briefdescription>
+<para>Process a disable background checking for an App entry command. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Disables the specified App entry to be background checksummed.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>In order for background checking of individual entries to checksum to occur, the entry must be enabled, the table must be enabled, and overall checksumming must be enabled. This command updates both the results table and the definition table. If the entry exists in the results table but not in the definition table, the command is still successful, but the definition table is not updated. If the entry does not exist in the results table, neither table is updated.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MessagePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref> pointer that references the software bus message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cs__msgdefs_8h_1adbb8b118e5d2e0665663fcf1920af163" kindref="member">CS_DISABLE_NAME_APP_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cs/fsw/src/cs_app_cmds.c" line="235" column="1" bodyfile="apps/cs/fsw/src/cs_app_cmds.c" bodystart="235" bodyend="289"/>
+        <references refid="struct_c_s___app_data__t_1a00e1038e970efd7f07b67ec60caa219d" compoundref="cs__app_8h" startline="177">CS_AppData_t::AppResTablesTblPtr</references>
+        <references refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e">CFE_EVS_DEBUG</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__tbl_8h_1ace4437318fa89c22b50ce866adf36c26">CFE_TBL_Modified</references>
+        <references refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" compoundref="cs__app_8h" startline="186">CS_AppData_t::CmdCounter</references>
+        <references refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" compoundref="cs__app_8h" startline="187">CS_AppData_t::CmdErrCounter</references>
+        <references refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" compoundref="cs__app_8c" startline="45">CS_AppData</references>
+        <references refid="cs__events_8h_1a5bb5a6b2c21329d7771f9b4ad41dbfb3" compoundref="cs__events_8h" startline="2057">CS_DISABLE_APP_DEF_NOT_FOUND_DBG_EID</references>
+        <references refid="cs__events_8h_1ad03e3820da807601a1fc5e949f403c1d" compoundref="cs__events_8h" startline="1435">CS_DISABLE_APP_NAME_INF_EID</references>
+        <references refid="cs__events_8h_1a92ebe4d72701919da1c24d26abb58f08" compoundref="cs__events_8h" startline="1451">CS_DISABLE_APP_UNKNOWN_NAME_ERR_EID</references>
+        <references refid="cs__utils_8c_1a0d6e95e28b4143544fea3c0dd76ab504" compoundref="cs__utils_8c" startline="297" endline="322">CS_GetAppDefTblEntryByName</references>
+        <references refid="cs__utils_8c_1a037ff555a18fa3987dcfc9a4bb75a006" compoundref="cs__utils_8c" startline="265" endline="290">CS_GetAppResTblEntryByName</references>
+        <references refid="cs__utils_8c_1aeb18418af2b136ee4d85bdd60848ee78" compoundref="cs__utils_8c" startline="970" endline="982">CS_ResetTablesTblResultEntry</references>
+        <references refid="cs__msgdefs_8h_1a71e5439a970f1a7d6259f26d23901fd7" compoundref="cs__msgdefs_8h" startline="1522">CS_STATE_DISABLED</references>
+        <references refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" compoundref="cs__utils_8c" startline="468" endline="493">CS_VerifyCmdLength</references>
+        <references refid="struct_c_s___app_data__t_1ae1fecd9dc67b2d938e9d78e762a05d88" compoundref="cs__app_8h" startline="150">CS_AppData_t::DefAppTableHandle</references>
+        <references refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1">OS_MAX_API_NAME</references>
+        <referencedby refid="cs__app_8c_1ad83f944b2dd3070bed226a3bb0f92ada" compoundref="cs__app_8c" startline="499" endline="799">CS_AppPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cs__app__cmds_8c_1ada0834e50659f829efaad1817ff2d86c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CS_EnableNameAppCmd</definition>
+        <argsstring>(CFE_SB_MsgPtr_t MessagePtr)</argsstring>
+        <name>CS_EnableNameAppCmd</name>
+        <param>
+          <type><ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref></type>
+          <declname>MessagePtr</declname>
+        </param>
+        <briefdescription>
+<para>Process an enable background checking for an App entry command. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Allows the specified table to be background checksummed.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>In order for background checking of individual entries to checksum to occur, the entry must be enabled, the table must be enabled and, overall checksumming must be enabled. This command updates both the results table and the definition table. If the entry exists in the results table but not in the definition table, the command is still successful, but the definition table is not updated. If the entry does not exist in the results table, neither table is updated.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MessagePtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1ab774c47a48e3b6fb0bdd42fb2cb80ad8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref> pointer that references the software bus message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="cs__msgdefs_8h_1a56fe8c8d8bbd6b24e85e13b9b10eb17e" kindref="member">CS_ENABLE_NAME_APP_CC</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/cs/fsw/src/cs_app_cmds.c" line="296" column="1" bodyfile="apps/cs/fsw/src/cs_app_cmds.c" bodystart="296" bodyend="347"/>
+        <references refid="struct_c_s___app_data__t_1a00e1038e970efd7f07b67ec60caa219d" compoundref="cs__app_8h" startline="177">CS_AppData_t::AppResTablesTblPtr</references>
+        <references refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e">CFE_EVS_DEBUG</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__tbl_8h_1ace4437318fa89c22b50ce866adf36c26">CFE_TBL_Modified</references>
+        <references refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" compoundref="cs__app_8h" startline="186">CS_AppData_t::CmdCounter</references>
+        <references refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" compoundref="cs__app_8h" startline="187">CS_AppData_t::CmdErrCounter</references>
+        <references refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" compoundref="cs__app_8c" startline="45">CS_AppData</references>
+        <references refid="cs__events_8h_1a7f523c4bb41964f107a262c7da161f0a" compoundref="cs__events_8h" startline="2043">CS_ENABLE_APP_DEF_NOT_FOUND_DBG_EID</references>
+        <references refid="cs__events_8h_1aaecceb6232b36c14f1ac93bdb2728e40" compoundref="cs__events_8h" startline="1404">CS_ENABLE_APP_NAME_INF_EID</references>
+        <references refid="cs__events_8h_1a9b2b08ee62f3c2d562068418405804f9" compoundref="cs__events_8h" startline="1420">CS_ENABLE_APP_UNKNOWN_NAME_ERR_EID</references>
+        <references refid="cs__utils_8c_1a0d6e95e28b4143544fea3c0dd76ab504" compoundref="cs__utils_8c" startline="297" endline="322">CS_GetAppDefTblEntryByName</references>
+        <references refid="cs__utils_8c_1a037ff555a18fa3987dcfc9a4bb75a006" compoundref="cs__utils_8c" startline="265" endline="290">CS_GetAppResTblEntryByName</references>
+        <references refid="cs__utils_8c_1aeb18418af2b136ee4d85bdd60848ee78" compoundref="cs__utils_8c" startline="970" endline="982">CS_ResetTablesTblResultEntry</references>
+        <references refid="cs__msgdefs_8h_1a3ea2ccf95b5908ea1768ac86d01fa8de" compoundref="cs__msgdefs_8h" startline="1517">CS_STATE_ENABLED</references>
+        <references refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" compoundref="cs__utils_8c" startline="468" endline="493">CS_VerifyCmdLength</references>
+        <references refid="struct_c_s___app_data__t_1ae1fecd9dc67b2d938e9d78e762a05d88" compoundref="cs__app_8h" startline="150">CS_AppData_t::DefAppTableHandle</references>
+        <references refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1">OS_MAX_API_NAME</references>
+        <referencedby refid="cs__app_8c_1ad83f944b2dd3070bed226a3bb0f92ada" compoundref="cs__app_8c" startline="499" endline="799">CS_AppPipe</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>**<sp/><sp/><sp/>$Id:<sp/>cs_app_cmds.c<sp/>1.8<sp/>2017/03/29<sp/>17:28:59EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/><sp/><sp/>The<sp/>CFS<sp/>Checksum<sp/>(CS)<sp/>Application&apos;s<sp/>commands<sp/>for<sp/>checking<sp/>App</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>**<sp/>Include<sp/>section</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe_8h" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">cfe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cs__app_8h" kindref="compound">cs_app.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cs__events_8h" kindref="compound">cs_events.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cs__utils_8h" kindref="compound">cs_utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cs__compute_8h" kindref="compound">cs_compute.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cs__app__cmds_8h" kindref="compound">cs_app_cmds.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>**<sp/>Functions</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CS<sp/>Disable<sp/>background<sp/>checking<sp/>of<sp/>App<sp/>command<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="cs__app__cmds_8h_1a4cb805e21853b755ca47a98dcade56e2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cs__app__cmds_8c_1a4cb805e21853b755ca47a98dcade56e2" kindref="member">CS_DisableAppCmd</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref><sp/>MessagePtr)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>command<sp/>verification<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExpectedLength<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_s___no_args_cmd__t" kindref="compound">CS_NoArgsCmd_t</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Verify<sp/>command<sp/>packet<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" kindref="member">CS_VerifyCmdLength</ref><sp/>(MessagePtr,ExpectedLength)<sp/>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a8abbc4fe04902b2e874be31cc2184a93" kindref="member">AppCSState</ref><sp/>=<sp/><ref refid="cs__msgdefs_8h_1a71e5439a970f1a7d6259f26d23901fd7" kindref="member">CS_STATE_DISABLED</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__utils_8c_1a5333067f024980fbb248a6285fcbb0dd" kindref="member">CS_ZeroAppTempValues</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_PRESERVE_STATES_ON_PROCESSOR_RESET<sp/>==<sp/>TRUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1a3ff9bca2297b80b56080411259594763" kindref="member">CS_UpdateCDS</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a1d428b1cbef8039c14621950fb98636d" kindref="member">CS_DISABLE_APP_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_INFORMATION</ref>,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Checksumming<sp/>of<sp/>App<sp/>is<sp/>Disabled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" kindref="member">CmdCounter</ref>++;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>CS_DisableAppCmd<sp/>()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CS<sp/>Enable<sp/>background<sp/>checking<sp/>of<sp/>App<sp/>command<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="cs__app__cmds_8h_1a1a5cca7ed5736e7353703d1da375802f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cs__app__cmds_8c_1a1a5cca7ed5736e7353703d1da375802f" kindref="member">CS_EnableAppCmd</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref><sp/>MessagePtr)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>command<sp/>verification<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExpectedLength<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_s___no_args_cmd__t" kindref="compound">CS_NoArgsCmd_t</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Verify<sp/>command<sp/>packet<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" kindref="member">CS_VerifyCmdLength</ref><sp/>(MessagePtr,ExpectedLength)<sp/>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a8abbc4fe04902b2e874be31cc2184a93" kindref="member">AppCSState</ref><sp/>=<sp/><ref refid="cs__msgdefs_8h_1a3ea2ccf95b5908ea1768ac86d01fa8de" kindref="member">CS_STATE_ENABLED</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CS_PRESERVE_STATES_ON_PROCESSOR_RESET<sp/>==<sp/>TRUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1a3ff9bca2297b80b56080411259594763" kindref="member">CS_UpdateCDS</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1ac7dd07131543eb06a7db251fbf1881b0" kindref="member">CS_ENABLE_APP_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_INFORMATION</ref>,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Checksumming<sp/>of<sp/>App<sp/>is<sp/>Enabled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" kindref="member">CmdCounter</ref>++;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>CS_EnableAppCmd<sp/>()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CS<sp/>Report<sp/>the<sp/>baseline<sp/>checksum<sp/>of<sp/>an<sp/>entry<sp/>in<sp/>the<sp/>App<sp/>table<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="cs__app__cmds_8h_1a539885a1a30cea535766484c817e8539" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cs__app__cmds_8c_1a539885a1a30cea535766484c817e8539" kindref="member">CS_ReportBaselineAppCmd</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref><sp/>MessagePtr)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>command<sp/>verification<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExpectedLength<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>CmdPtr;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___res___app___table___entry__t" kindref="compound">CS_Res_App_Table_Entry_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>ResultsEntry;<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Baseline;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Verify<sp/>command<sp/>packet<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" kindref="member">CS_VerifyCmdLength</ref><sp/>(MessagePtr,ExpectedLength)<sp/>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>=<sp/>(<ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref><sp/>*)<sp/>MessagePtr;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name[<ref refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_MAX_API_NAME</ref><sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1a037ff555a18fa3987dcfc9a4bb75a006" kindref="member">CS_GetAppResTblEntryByName</ref>(&amp;ResultsEntry,<sp/>CmdPtr<sp/>-&gt;<sp/>Name))</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ResultsEntry<sp/>-&gt;<sp/>ComputedYet<sp/>==<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">TRUE</ref>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Baseline<sp/>=<sp/>ResultsEntry<sp/>-&gt;<sp/>ComparisonValue;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a5e66710bfe6d11c65a18fd5d11e07338" kindref="member">CS_BASELINE_APP_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_INFORMATION</ref>,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Report<sp/>baseline<sp/>of<sp/>app<sp/>%s<sp/>is<sp/>0x%08X&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Baseline);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a4690ac1cbf67521eaaee26a6340b8860" kindref="member">CS_NO_BASELINE_APP_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_INFORMATION</ref>,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Report<sp/>baseline<sp/>of<sp/>app<sp/>%s<sp/>has<sp/>not<sp/>been<sp/>computed<sp/>yet&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" kindref="member">CmdCounter</ref>++;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a32506c9b000e3d3c4d2169a31d14264c" kindref="member">CS_BASELINE_INVALID_NAME_APP_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;App<sp/>report<sp/>baseline<sp/>failed,<sp/>app<sp/>%s<sp/>not<sp/>found&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" kindref="member">CmdErrCounter</ref>++;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>CS_ReportBaselineAppCmd<sp/>()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CS<sp/>Recompute<sp/>the<sp/>baseline<sp/>of<sp/>an<sp/>entry<sp/>in<sp/>the<sp/>App<sp/>table<sp/>cmd<sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="cs__app__cmds_8h_1a95fc1168d42b055aa9246a3efc875c57" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cs__app__cmds_8c_1a95fc1168d42b055aa9246a3efc875c57" kindref="member">CS_RecomputeBaselineAppCmd</ref><sp/>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref><sp/>MessagePtr)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>command<sp/>verification<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExpectedLength<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ChildTaskID;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Status;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>CmdPtr;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___res___app___table___entry__t" kindref="compound">CS_Res_App_Table_Entry_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>ResultsEntry;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Verify<sp/>command<sp/>packet<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" kindref="member">CS_VerifyCmdLength</ref><sp/>(MessagePtr,ExpectedLength)<sp/>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>=<sp/>(<ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref><sp/>*)<sp/>MessagePtr;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a574d2b2e9bd291ed1b100881f6ef1316" kindref="member">RecomputeInProgress</ref><sp/>==<sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">FALSE</ref><sp/>&amp;&amp;<sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a17689ca77d9c1eb2a3dec0a52050af49" kindref="member">OneShotInProgress</ref><sp/>==<sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">FALSE</ref>)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>make<sp/>sure<sp/>the<sp/>entry<sp/>is<sp/>a<sp/>valid<sp/>number<sp/>and<sp/>is<sp/>defined<sp/>in<sp/>the<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name[<ref refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_MAX_API_NAME</ref><sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="cs__utils_8c_1a037ff555a18fa3987dcfc9a4bb75a006" kindref="member">CS_GetAppResTblEntryByName</ref>(&amp;ResultsEntry,<sp/>CmdPtr<sp/>-&gt;<sp/>Name))</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>There<sp/>is<sp/>no<sp/>child<sp/>task<sp/>running<sp/>right<sp/>now,<sp/>we<sp/>can<sp/>use<sp/>it*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a574d2b2e9bd291ed1b100881f6ef1316" kindref="member">RecomputeInProgress</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">TRUE</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>fill<sp/>in<sp/>child<sp/>task<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1acc1361df31fc35962a75acb3ef17b919" kindref="member">ChildTaskTable</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="cs__msgdefs_8h_1a17b98c35ae026d2aba2a4551d542187c" kindref="member">CS_APP_TABLE</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a5187249c4690ac633f73329a2dbd2a08" kindref="member">RecomputeAppEntryPtr</ref><sp/>=<sp/>ResultsEntry;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Status=<sp/><ref refid="cfe__es__api_8c_1a64768543df91e7856b4356fdc70ebe8c" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_CreateChildTask</ref>(&amp;ChildTaskID,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8h_1a2ec34d59ed4c2afa50c6da2fd8715c44" kindref="member">CS_RECOMP_APP_TASK_NAME</ref>,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__compute_8c_1ad9108c1d9e9f81f891e9a0227bc923ce" kindref="member">CS_RecomputeAppChildTask</ref>,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">NULL</ref>,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CFE_ES_DEFAULT_STACK_SIZE,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__platform__cfg_8h_1aab901627baca850a39716655cc6610db" kindref="member">CS_CHILD_TASK_PRIORITY</ref>,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__platform__cfg_8h_1a27ba0010641e5c062edba9f996298b45" kindref="member">CS_CHILD_TASK_FLAGS</ref>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Status<sp/>==<ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref>)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a2a58bc7b4b9fadaac42d840effda3596" kindref="member">CS_RECOMPUTE_APP_STARTED_DBG_EID</ref>,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_DEBUG</ref>,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Recompute<sp/>baseline<sp/>of<sp/>app<sp/>%s<sp/>started&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" kindref="member">CmdCounter</ref>++;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="comment">/*<sp/>child<sp/>task<sp/>creation<sp/>failed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a03d77b12aac170bdc79ceb434c892068" kindref="member">CS_RECOMPUTE_APP_CREATE_CHDTASK_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Recompute<sp/>baseline<sp/>of<sp/>app<sp/>%s<sp/>failed,<sp/>CFE_ES_CreateChildTask<sp/>returned:<sp/>0x%08X&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)Status);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" kindref="member">CmdErrCounter</ref>++;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a574d2b2e9bd291ed1b100881f6ef1316" kindref="member">RecomputeInProgress</ref><sp/>=<sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">FALSE</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a66dab7ee74048d800f544842d2edb711" kindref="member">CS_RECOMPUTE_UNKNOWN_NAME_APP_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;App<sp/>recompute<sp/>baseline<sp/>failed,<sp/>app<sp/>%s<sp/>not<sp/>found&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" kindref="member">CmdErrCounter</ref>++;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*send<sp/>event<sp/>that<sp/>we<sp/>can&apos;t<sp/>start<sp/>another<sp/>task<sp/>right<sp/>now<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1ae2caa457ead67af459449fd9ebd6a421" kindref="member">CS_RECOMPUTE_APP_CHDTASK_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;App<sp/>recompute<sp/>baseline<sp/>for<sp/>app<sp/>%s<sp/>failed:<sp/>child<sp/>task<sp/>in<sp/>use&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" kindref="member">CmdErrCounter</ref>++;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">}</highlight><highlight class="comment">/*<sp/>end<sp/>CS_RecomputeBaselineAppCmd<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CS<sp/>Disable<sp/>a<sp/>specific<sp/>entry<sp/>in<sp/>the<sp/>App<sp/>table<sp/>command<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="cs__app__cmds_8h_1a8d1e76bde2de87b57f7963d798ce20b3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cs__app__cmds_8c_1a8d1e76bde2de87b57f7963d798ce20b3" kindref="member">CS_DisableNameAppCmd</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref><sp/>MessagePtr)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>command<sp/>verification<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExpectedLength<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>CmdPtr;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___res___app___table___entry__t" kindref="compound">CS_Res_App_Table_Entry_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>ResultsEntry;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___def___app___table___entry__t" kindref="compound">CS_Def_App_Table_Entry_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>DefinitionEntry;<sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Verify<sp/>command<sp/>packet<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" kindref="member">CS_VerifyCmdLength</ref><sp/>(MessagePtr,ExpectedLength)<sp/><sp/>)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>=<sp/>(<ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref><sp/>*)<sp/>MessagePtr;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name[<ref refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_MAX_API_NAME</ref><sp/>-<sp/>1]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1a037ff555a18fa3987dcfc9a4bb75a006" kindref="member">CS_GetAppResTblEntryByName</ref>(<sp/>&amp;ResultsEntry,<sp/>CmdPtr<sp/>-&gt;<sp/>Name))</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ResultsEntry<sp/>-&gt;<sp/>State<sp/>=<sp/><ref refid="cs__msgdefs_8h_1a71e5439a970f1a7d6259f26d23901fd7" kindref="member">CS_STATE_DISABLED</ref>;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ResultsEntry<sp/>-&gt;<sp/>TempChecksumValue<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ResultsEntry<sp/>-&gt;<sp/>ByteOffset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1ad03e3820da807601a1fc5e949f403c1d" kindref="member">CS_DISABLE_APP_NAME_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_INFORMATION</ref>,</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Checksumming<sp/>of<sp/>app<sp/>%s<sp/>is<sp/>Disabled&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1a0d6e95e28b4143544fea3c0dd76ab504" kindref="member">CS_GetAppDefTblEntryByName</ref>(&amp;DefinitionEntry,<sp/>CmdPtr<sp/>-&gt;<sp/>Name))</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DefinitionEntry<sp/>-&gt;<sp/>State<sp/>=<sp/><ref refid="cs__msgdefs_8h_1a71e5439a970f1a7d6259f26d23901fd7" kindref="member">CS_STATE_DISABLED</ref>;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__utils_8c_1aeb18418af2b136ee4d85bdd60848ee78" kindref="member">CS_ResetTablesTblResultEntry</ref>(<ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a00e1038e970efd7f07b67ec60caa219d" kindref="member">AppResTablesTblPtr</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__tbl_8h_1ace4437318fa89c22b50ce866adf36c26" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Modified</ref>(<ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1ae1fecd9dc67b2d938e9d78e762a05d88" kindref="member">DefAppTableHandle</ref>);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a5bb5a6b2c21329d7771f9b4ad41dbfb3" kindref="member">CS_DISABLE_APP_DEF_NOT_FOUND_DBG_EID</ref>,</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_DEBUG</ref>,</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;CS<sp/>unable<sp/>to<sp/>update<sp/>apps<sp/>definition<sp/>table<sp/>for<sp/>entry<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" kindref="member">CmdCounter</ref>++;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a92ebe4d72701919da1c24d26abb58f08" kindref="member">CS_DISABLE_APP_UNKNOWN_NAME_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;App<sp/>disable<sp/>app<sp/>command<sp/>failed,<sp/>app<sp/>%s<sp/>not<sp/>found&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" kindref="member">CmdErrCounter</ref>++;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>CS_DisableNameAppCmd<sp/>()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>CS<sp/>Enable<sp/>a<sp/>specific<sp/>entry<sp/>in<sp/>the<sp/>App<sp/>table<sp/>command<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="cs__app__cmds_8h_1ada0834e50659f829efaad1817ff2d86c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cs__app__cmds_8c_1ada0834e50659f829efaad1817ff2d86c" kindref="member">CS_EnableNameAppCmd</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgPtr_t</ref><sp/>MessagePtr)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>command<sp/>verification<sp/>variables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExpectedLength<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref>);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>CmdPtr;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___res___app___table___entry__t" kindref="compound">CS_Res_App_Table_Entry_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>ResultsEntry;<sp/></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_s___def___app___table___entry__t" kindref="compound">CS_Def_App_Table_Entry_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>DefinitionEntry;<sp/></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Verify<sp/>command<sp/>packet<sp/>length<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1af0fd3fc5816fb75cd66b41c2296a99f9" kindref="member">CS_VerifyCmdLength</ref><sp/>(MessagePtr,ExpectedLength)<sp/>)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>=<sp/>(<ref refid="struct_c_s___app_name_cmd__t" kindref="compound">CS_AppNameCmd_t</ref><sp/>*)<sp/>MessagePtr;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name[<ref refid="stubs_8c_1a8419474683cbd73c491a3688a0b661c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_MAX_API_NAME</ref><sp/>-1<sp/>]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1a037ff555a18fa3987dcfc9a4bb75a006" kindref="member">CS_GetAppResTblEntryByName</ref>(&amp;ResultsEntry,CmdPtr<sp/>-&gt;<sp/>Name))</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ResultsEntry<sp/>-&gt;<sp/>State<sp/>=<sp/><ref refid="cs__msgdefs_8h_1a3ea2ccf95b5908ea1768ac86d01fa8de" kindref="member">CS_STATE_ENABLED</ref>;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1aaecceb6232b36c14f1ac93bdb2728e40" kindref="member">CS_ENABLE_APP_NAME_INF_EID</ref>,</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_INFORMATION</ref>,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Checksumming<sp/>of<sp/>app<sp/>%s<sp/>is<sp/>Enabled&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="cs__utils_8c_1a0d6e95e28b4143544fea3c0dd76ab504" kindref="member">CS_GetAppDefTblEntryByName</ref>(&amp;DefinitionEntry,<sp/>CmdPtr<sp/>-&gt;<sp/>Name))</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DefinitionEntry<sp/>-&gt;<sp/>State<sp/>=<sp/><ref refid="cs__msgdefs_8h_1a3ea2ccf95b5908ea1768ac86d01fa8de" kindref="member">CS_STATE_ENABLED</ref>;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__utils_8c_1aeb18418af2b136ee4d85bdd60848ee78" kindref="member">CS_ResetTablesTblResultEntry</ref>(<ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a00e1038e970efd7f07b67ec60caa219d" kindref="member">AppResTablesTblPtr</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__tbl_8h_1ace4437318fa89c22b50ce866adf36c26" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Modified</ref>(<ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1ae1fecd9dc67b2d938e9d78e762a05d88" kindref="member">DefAppTableHandle</ref>);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a7f523c4bb41964f107a262c7da161f0a" kindref="member">CS_ENABLE_APP_DEF_NOT_FOUND_DBG_EID</ref>,</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_DEBUG</ref>,</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;CS<sp/>unable<sp/>to<sp/>update<sp/>apps<sp/>definition<sp/>table<sp/>for<sp/>entry<sp/>%s&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1a9192d9decbc70e0d3e261bf033affc91" kindref="member">CmdCounter</ref>++;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_SendEvent</ref><sp/>(<ref refid="cs__events_8h_1a9b2b08ee62f3c2d562068418405804f9" kindref="member">CS_ENABLE_APP_UNKNOWN_NAME_ERR_EID</ref>,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_ERROR</ref>,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;App<sp/>enable<sp/>app<sp/>command<sp/>failed,<sp/>app<sp/>%s<sp/>not<sp/>found&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CmdPtr<sp/>-&gt;<sp/>Name);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cs__app_8c_1af75186bf149e3dcbbbaabe3063f9b850" kindref="member">CS_AppData</ref>.<ref refid="struct_c_s___app_data__t_1ad97ac55ce0dd90060f895b711d98f7b9" kindref="member">CmdErrCounter</ref>++;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>CS_EnableNameAppCmd<sp/>()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/cs/fsw/src/cs_app_cmds.c"/>
+  </compounddef>
+</doxygen>

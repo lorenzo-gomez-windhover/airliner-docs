@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsscfaqs" kind="page">
+    <compoundname>cfsscfaqs</compoundname>
+    <title>CFS Stored Command Frequently Asked Questions</title>
+    <detaileddescription>
+<para><bold> (Q) Is patching a capability of SC since it was in heritage missions? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> Answer is no. cFE Table Services do not allow this at the time. </emphasis> <linebreak/>
+<linebreak/>
+ <bold> (Q) Can an RTS start itself? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> Answer is Yes. Since the RTS is just a collection of commands, an RTS can include the StartRTS command. However, it is recommended that this be the last command in the RTS. </emphasis> <linebreak/>
+<linebreak/>
+ <bold> (Q) What precautions should be taken when using the ATP? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> Despite the many error checks built in to the ATP to assure that it does not cause any ill effects on the spacecraft, there is a crucial safety measure that is required of all ATS tables. The ATP relies on a word of zeroes at the end of an ATS table to signal the end of the ATS table (end of data marker). cFE Table Services, when loading a new table, unconditionally fills the table working buffer with the contents of the current table prior to placing the new table file contents into the buffer. If a newly loaded ATS table does not contain the sentinel word of zeroes at the end of the table and is smaller than the table that was previously loaded, the newly loaded table has potential to execute the &quot;old&quot; invalid commands that were part of the prior table load. It is therefore essential for operators to place the sentinel word of zeroes at the end of each ATS table including ATS append tables.</emphasis></para><para><emphasis> </emphasis> <linebreak/>
+<linebreak/>
+</para><para>Prev: <ref refid="cfssccons" kindref="compound">CFS Stored Command Constraints</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

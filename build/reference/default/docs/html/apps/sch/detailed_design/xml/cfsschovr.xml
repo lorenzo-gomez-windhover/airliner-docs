@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsschovr" kind="page">
+    <compoundname>cfsschovr</compoundname>
+    <title>CFS Scheduler Overview</title>
+    <detaileddescription>
+<para>The Scheduler (SCH) Application provides an operator with a method of generating messages on board the spacecraft at pre-determined timing intervals. This provides the operator and/or flight software systems engineer with a mechanism to configure the flight software to operate in a Time Division Multiplexed (TDM) fashion with deterministic behavior. The TDM major frame is defined by the Major Time Synchronization Signal used by the cFE TIME Services (typically 1 Hz) and the Minor Frame timing is defined using an <ref refid="sch__platform__cfg_8h_1a640d7089f602476608c00d5d9b613315" kindref="member">SCH Configuration Parameter </ref> that identifies the number of Minor Frame Slots that are executed within each Major Frame.</para><para>In each Minor Frame, SCH creates up to <ref refid="sch__platform__cfg_8h_1a191125a78975e2a0c581969c7d678b4e" kindref="member">SCH_ENTRIES_PER_SLOT</ref> messages, as they are defined by the operator, and sends them to any Applications that have requested the messages via a subscription with the <ulink url="../cfe/cfesbovr.html">cFE Software Bus (SB)</ulink>.</para><para>SCH is typically used to drive the generation of CFS Application&apos;s Housekeeping packets and the collection/generation of other telemetry data.</para><sect1 id="cfsschovr_1SCH">
+<title>Design Overview</title>
+<para>SCH is a time driven, single threaded application. A context diagram for the SCH Application is shown below:</para><para><image type="html" name="CFS_SCH_Context.jpg">SCH Context Diagram</image>
+</para><para>In the default design, it automatically associates itself with the <ulink url="../cfe/cfe__time_8h.html#e13a973062a2174417e4a30465a12146">Major Frame Synchronization Signal</ulink> tied to the <ulink url="../cfe/cfetimeovr.html">cFE TIME Service (TIME)</ulink>. It also creates an OSAL timer that it uses for doing Minor Frame Timing. Once all applications have successfully started or a user defined timeout has expired, SCH will begin to process the Schedule Definition Table (SDT). Each entry in the table identifies the Major/Minor Frame that a message, as defined in the Message Definition Table (MDT), will be generated and placed on the cFE Software Bus.</para><para>Prev: <ref refid="cfsschintro" kindref="compound">CFS Scheduler Introduction</ref> <linebreak/>
+ Next: <ref refid="cfsschopr" kindref="compound">CFS Scheduler Operation</ref> </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

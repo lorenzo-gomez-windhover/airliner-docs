@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfscftbl" kind="page">
+    <compoundname>cfscftbl</compoundname>
+    <title>CFS CF Tables</title>
+    <detaileddescription>
+<para>The CF application has one table used for configuration. This table is accessed during initialization and updated by CF when changes to the table parameters are made through CF commands.</para><para>The table contains default configuration settings. Many table configuration settings can be adjusted by command. These adjustments will modify the table and are therefore reflected if the table is dumped. These adjustments will also change the table checksum. The configuration table is loaded at the time the application is started. CF does not check for table updates during runtime.</para><para>CF does not allow the table to be loaded after CF initialization. If the operator attempts to do a table load after CF initializes, they must abort the attempt (via table cmd) or table services will be waiting forever to get the &apos;Update&apos; call from CF. If the abort is not executed, the operator will have trouble trying to dump or validate the table.</para><para>Prev: <ref refid="cfscftlm" kindref="compound">CFS CF Telemetry</ref> <linebreak/>
+ Next: <ref refid="cfscfcfg" kindref="compound">CFS CFDP Configuration Parameters</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

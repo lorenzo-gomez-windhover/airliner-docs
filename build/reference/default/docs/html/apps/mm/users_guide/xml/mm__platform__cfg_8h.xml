@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="mm__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>mm_platform_cfg.h</compoundname>
+    <includedby refid="mm__msg_8h" local="yes">apps/mm/fsw/src/mm_msg.h</includedby>
+    <invincdepgraph>
+      <node id="10">
+        <label>apps/mm/fsw/platform_inc/mm_platform_cfg.h</label>
+        <link refid="mm_platform_cfg.h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>apps/mm/fsw/src/mm_msg.h</label>
+        <link refid="mm__msg_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mm__platform__cfg_8h_1aa91ac64ce3b7aea88a7f985f470839c8" prot="public" static="no">
+        <name>MM_CFE_HDR_SUBTYPE</name>
+        <initializer>0x4D4D5354</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000004"><xreftitle>Purpose</xreftitle><xrefdescription><para>Memory Managment File <ndash/> cFE file header sub-type</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter defines the value that is used to identify a Memory Management file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The file header data type for the value is 32 bits unsigned, thus the value can be anything from zero to 4,294,967,295. (limit is not verified) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="67" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1ae7c4c2007f56b72df011acd0b976622a" prot="public" static="no">
+        <name>MM_CFE_HDR_DESCRIPTION</name>
+        <initializer>&quot;Memory Manager dump file&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000005"><xreftitle>Purpose</xreftitle><xrefdescription><para>Memory Management File <ndash/> cFE file header description</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter defines the text string that may be used to identify Memory Management files.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The string length (including string terminator) cannot exceed <ref refid="cfe__fs_8h_1a4d9ac8959636492a66b3305d55c855a1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_FS_HDR_DESC_MAX_LEN</ref>. (limit is not verified) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="81" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1ae105c9da23ad19833784455616557acd" prot="public" static="no">
+        <name>MM_MAX_LOAD_FILE_DATA_RAM</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000006"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file load to RAM memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into RAM from a single load file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="97" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1ac6f51877a5b9554d49a584ec4da6561e" prot="public" static="no">
+        <name>MM_MAX_LOAD_FILE_DATA_EEPROM</name>
+        <initializer>(128*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000007"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file load to EEPROM memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into EEPROM from a single load file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="112" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a79378120560b877f34e725c916d882db" prot="public" static="no">
+        <name>MM_MAX_UNINTERRUPTABLE_DATA</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000008"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for an uninterruptable load</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded with the &quot;memory load with interrupts disabled&quot; (<ref refid="mm__msgdefs_8h_1a87be0f7a66865cc497143773a5900f9e" kindref="member">MM_LOAD_MEM_WID_CC</ref>) command.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter is limited to the size of an uint8 which is the data type used to specify the number of bytes to load in the command message.</para></simplesect>
+If this data type is made bigger, changing this value to a large number will increase the amount of time interrupts are disabled during the load. It should also be kept small enough to avoid packet segmentation for the command protocal being used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="132" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1abd85b9f26919c0b7231bf71d4f1964f6" prot="public" static="no">
+        <name>MM_MAX_LOAD_DATA_SEG</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000009"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes per load data segment</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes MM will load per task cycle to prevent CPU hogging (segmented load).</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will decrease the amount of time available for other tasks to execute and increase MM CPU utilization during load operations. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="146" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a0c7021c3901e53b14a77a4dcb29a3cf5" prot="public" static="no">
+        <name>MM_MAX_DUMP_FILE_DATA_RAM</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000010"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file dump from RAM memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be dumped from RAM into a single dump file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="161" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1af4845f14fec97b078e357e680627b620" prot="public" static="no">
+        <name>MM_MAX_DUMP_FILE_DATA_EEPROM</name>
+        <initializer>(128*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000011"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file dump from EEPROM memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be dumped from EEPROM into a single dump file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="176" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a7ce47d969d8450940855a79bb891601e" prot="public" static="no">
+        <name>MM_MAX_DUMP_FILE_DATA_SYMTBL</name>
+        <initializer>(128*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000012"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a symbol table file dump</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be dumped from the symbol table into a single dump file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will impact the OSAL since it is responsible for generating the dump file. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="189" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a4911c439774214e7fb0651439e3f278a" prot="public" static="no">
+        <name>MM_MAX_DUMP_DATA_SEG</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000013"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes per dump data segment</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes MM will dump per task cycle to prevent CPU hogging (segmented dump).</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will decrease the amount of time available for other tasks to execute and increase MM CPU utilization during dump operations. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="203" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a662dfa7752daaec2b46fdde47c19e510" prot="public" static="no">
+        <name>MM_MAX_FILL_DATA_RAM</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000014"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a fill to RAM memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into RAM with a single memory fill command.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a fill operation is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="218" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a873e6c752139971a703e390108f07d5b" prot="public" static="no">
+        <name>MM_MAX_FILL_DATA_EEPROM</name>
+        <initializer>(128*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000015"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a fill to EEPROM memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into EEPROM with a single memory fill command.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a fill operation is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="233" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a6454d553e645f9d5e9315ac2e51210c0" prot="public" static="no">
+        <name>MM_MAX_FILL_DATA_SEG</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000016"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes per fill data segment</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes MM will fill per task cycle to prevent CPU hogging (segmented fill).</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will decrease the amount of time available for other tasks to execute and increase MM CPU utilization during memory fill operations. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="247" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1afcfed73e3bde036c22fc5189cc43c29c" prot="public" static="no">
+        <name>MM_OPT_CODE_MEM32_MEMTYPE</name>
+        <initializer><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000017"><xreftitle>Purpose</xreftitle><xrefdescription><para>Optional MEM32 compile switch</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Compile switch to include code for the optional MM_MEM32 memory. The value should be set to TRUE or FALSE. A value of TRUE will include the code.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>n/a </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="259" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a09c5e579a6e598f9024d514c83c99644" prot="public" static="no">
+        <name>MM_MAX_LOAD_FILE_DATA_MEM32</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000018"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file load to MEM32 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into the optional MEM32 memory type from a single load file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This value should be longword aligned. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="273" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a4dd211367370fb66446e0533b318f7c9" prot="public" static="no">
+        <name>MM_MAX_DUMP_FILE_DATA_MEM32</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000019"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file dump from MEM32 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be dumped from the optional MEM32 memory type to a single dump file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This value should be longword aligned. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="287" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1aca9dbf00faff57dd0bb85bd4857523df" prot="public" static="no">
+        <name>MM_MAX_FILL_DATA_MEM32</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000020"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a fill to MEM32 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into the optional MEM32 memory type with a single memory fill command.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This value should be longword aligned. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a memory fill operation is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="302" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1adf177ea652cff3b172c2f3dab84598c8" prot="public" static="no">
+        <name>MM_OPT_CODE_MEM16_MEMTYPE</name>
+        <initializer><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000021"><xreftitle>Purpose</xreftitle><xrefdescription><para>Optional MEM16 compile switch</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Compile switch to include code for the optional MM_MEM16 memory. The value should be set to TRUE or FALSE. A value of TRUE will include the code.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>n/a </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="314" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a3eb6abdc86fbfdc3ed78c9566a420d74" prot="public" static="no">
+        <name>MM_MAX_LOAD_FILE_DATA_MEM16</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000022"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file load to MEM16 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into the optional MEM16 memory type from a single load file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This value should be word aligned. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="328" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a7a05723164274d1c19f02f3d91dcdc12" prot="public" static="no">
+        <name>MM_MAX_DUMP_FILE_DATA_MEM16</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000023"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file dump from MEM16 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be dumped from the optional MEM16 memory type to a single dump file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This value should be word aligned. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="342" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a4949495bc4e68d2ee354afe06612b0f4" prot="public" static="no">
+        <name>MM_MAX_FILL_DATA_MEM16</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000024"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a fill to MEM16 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into the optional MEM16 memory type with a single memory fill command.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This value should be word aligned. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a memory fill operation is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="357" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1af91827aa0a752d6e614a736539de3894" prot="public" static="no">
+        <name>MM_OPT_CODE_MEM8_MEMTYPE</name>
+        <initializer><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000025"><xreftitle>Purpose</xreftitle><xrefdescription><para>Optional MEM8 compile switch</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Compile switch to include code for the optional MM_MEM8 memory. The value should be set to TRUE or FALSE. A value of TRUE will include the code.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>n/a </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="369" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1ae8b7038e2ef70c3e23ed66bfce7005af" prot="public" static="no">
+        <name>MM_MAX_LOAD_FILE_DATA_MEM8</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000026"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file load to MEM8 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into the optional MEM8 memory type from a single load file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="383" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a8afee1747ee1c8ad867caafa8748b616" prot="public" static="no">
+        <name>MM_MAX_DUMP_FILE_DATA_MEM8</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000027"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a file dump from MEM8 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be dumped from the optional MEM8 memory type to a single dump file.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a load or dump is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="397" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1ab2d1a15d20fd20792e0728424fe14ca0" prot="public" static="no">
+        <name>MM_MAX_FILL_DATA_MEM8</name>
+        <initializer>(1024*1024)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000028"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum number of bytes for a fill to MEM8 memory</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of bytes that can be loaded into the optional MEM8 memory type with a single memory fill command.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. Setting this value to a large number will increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a memory fill operation is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="412" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a1decb2f02ded02afc70b8592e198c4e7" prot="public" static="no">
+        <name>MM_PROCESSOR_CYCLE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000029"><xreftitle>Purpose</xreftitle><xrefdescription><para>Segment break processor delay</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>How many milliseconds to delay between segments for dump, load, and fill operations. A value of zero cycles through the OS scheduler, giving up what&apos;s left of the current timeslice.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>The MM app does not place a limit on this parameter. However, setting this value to a large number will increase the time required to process load, dump, and fill requests. It will also increase the likelyhood of MM being late responding to housekeeping requests since it cannot process such a request while a memory operation is in progress. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="429" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mm__platform__cfg_8h_1a3fe23678b97105c16f48852fdebb7f31" prot="public" static="no">
+        <name>MM_MISSION_REV</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsmmcfg_1_cfsmmcfg000030"><xreftitle>Purpose</xreftitle><xrefdescription><para>Mission specific version number for MM application</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;mm_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h" line="444" column="9" bodyfile="apps/mm/fsw/platform_inc/mm_platform_cfg.h" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>mm_platform_cfg.h<sp/>1.3<sp/>2016/10/31<sp/>16:33:42EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/><sp/>Specification<sp/>for<sp/>the<sp/>CFS<sp/>Memory<sp/>Manager<sp/>constants<sp/>that<sp/>can</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/>be<sp/>configured<sp/>from<sp/>one<sp/>platform<sp/>to<sp/>another</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/>References:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.2</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>Development<sp/>Standards<sp/>Document</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>MM<sp/>Heritage<sp/>Analysis<sp/>Document</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/><sp/><sp/>CFS<sp/>MM<sp/>CDR<sp/>Package</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/><sp/><sp/>$Log:<sp/>mm_platform_cfg.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2016/10/31<sp/>16:33:42EDT<sp/>mdeschu<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/><sp/><sp/>Change<sp/>MM<sp/>dump<sp/>file<sp/>CFE<sp/>subtype<sp/>from<sp/>0<sp/>to<sp/>4D4D5354<sp/>(MMST<sp/>in<sp/>ascii<sp/>hex)</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.2<sp/>2016/10/31<sp/>16:30:38EDT<sp/>mdeschu<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/><sp/><sp/>Move<sp/>CFE<sp/>subtype<sp/>and<sp/>description<sp/>to<sp/>public<sp/>platform<sp/>config<sp/>header</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.1<sp/>2015/07/28<sp/>12:21:20EDT<sp/>rperera<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/><sp/><sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/><sp/><sp/>Member<sp/>added<sp/>to<sp/>project<sp/>/CFS-APPs-PROJECT/mm/fsw/platform_inc/project.pj</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.9<sp/>2015/03/02<sp/>14:26:59EST<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>copyright<sp/>information</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.8<sp/>2010/11/29<sp/>13:34:44EST<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/><sp/><sp/>Changed<sp/>8,<sp/>16,<sp/>and<sp/>32-bit<sp/>memory<sp/>type<sp/>definitions<sp/>to<sp/>TRUE/FALSE.</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.7<sp/>2010/11/26<sp/>13:03:54EST<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/><sp/><sp/>Added<sp/>mission<sp/>revision<sp/>revision<sp/>number<sp/>(moved<sp/>from<sp/>mm_version.h)</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.6<sp/>2010/11/24<sp/>17:08:01EST<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/><sp/><sp/>Add<sp/>max<sp/>number<sp/>of<sp/>bytes<sp/>definition<sp/>for<sp/>symbol<sp/>table<sp/>dump</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.5<sp/>2008/09/05<sp/>13:15:30EDT<sp/>dahardison<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/><sp/><sp/>Moved<sp/>CRC<sp/>configuration<sp/>parameters<sp/>to<sp/>mm_mission_cfg.h<sp/>to<sp/>be<sp/>more</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/><sp/><sp/>consistent<sp/>with<sp/>other<sp/>CFS<sp/>applications</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.4<sp/>2008/05/22<sp/>15:03:09EDT<sp/>dahardison<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/><sp/><sp/>Moved<sp/>message<sp/>and<sp/>performance<sp/>monitor<sp/>IDs<sp/>to<sp/>mm_msgids.h<sp/>and</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/><sp/><sp/>mm_perfids.h</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2008/05/19<sp/>15:22:24EDT<sp/>dahardison<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/><sp/><sp/>Version<sp/>after<sp/>completion<sp/>of<sp/>unit<sp/>testing</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_mm_platform_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_mm_platform_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="mm__platform__cfg_8h_1aa91ac64ce3b7aea88a7f985f470839c8" refkind="member"><highlight class="preprocessor">#define<sp/>MM_CFE_HDR_SUBTYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x4D4D5354</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="mm__platform__cfg_8h_1ae7c4c2007f56b72df011acd0b976622a" refkind="member"><highlight class="preprocessor">#define<sp/>MM_CFE_HDR_DESCRIPTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Memory<sp/>Manager<sp/>dump<sp/>file&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="mm__platform__cfg_8h_1ae105c9da23ad19833784455616557acd" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_LOAD_FILE_DATA_RAM<sp/><sp/><sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="mm__platform__cfg_8h_1ac6f51877a5b9554d49a584ec4da6561e" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_LOAD_FILE_DATA_EEPROM<sp/><sp/>(128*1024)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="mm__platform__cfg_8h_1a79378120560b877f34e725c916d882db" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_UNINTERRUPTABLE_DATA<sp/><sp/><sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="mm__platform__cfg_8h_1abd85b9f26919c0b7231bf71d4f1964f6" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_LOAD_DATA_SEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>200<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="mm__platform__cfg_8h_1a0c7021c3901e53b14a77a4dcb29a3cf5" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_DUMP_FILE_DATA_RAM<sp/><sp/><sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="mm__platform__cfg_8h_1af4845f14fec97b078e357e680627b620" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_DUMP_FILE_DATA_EEPROM<sp/><sp/>(128*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="mm__platform__cfg_8h_1a7ce47d969d8450940855a79bb891601e" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_DUMP_FILE_DATA_SYMTBL<sp/><sp/>(128*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="mm__platform__cfg_8h_1a4911c439774214e7fb0651439e3f278a" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_DUMP_DATA_SEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>200<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="mm__platform__cfg_8h_1a662dfa7752daaec2b46fdde47c19e510" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_FILL_DATA_RAM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1024*1024)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="mm__platform__cfg_8h_1a873e6c752139971a703e390108f07d5b" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_FILL_DATA_EEPROM<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(128*1024)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="mm__platform__cfg_8h_1a6454d553e645f9d5e9315ac2e51210c0" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_FILL_DATA_SEG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="mm__platform__cfg_8h_1afcfed73e3bde036c22fc5189cc43c29c" refkind="member"><highlight class="preprocessor">#define<sp/>MM_OPT_CODE_MEM32_MEMTYPE<sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273" refid="mm__platform__cfg_8h_1a09c5e579a6e598f9024d514c83c99644" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_LOAD_FILE_DATA_MEM32<sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="mm__platform__cfg_8h_1a4dd211367370fb66446e0533b318f7c9" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_DUMP_FILE_DATA_MEM32<sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="mm__platform__cfg_8h_1aca9dbf00faff57dd0bb85bd4857523df" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_FILL_DATA_MEM32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="mm__platform__cfg_8h_1adf177ea652cff3b172c2f3dab84598c8" refkind="member"><highlight class="preprocessor">#define<sp/>MM_OPT_CODE_MEM16_MEMTYPE<sp/><sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328" refid="mm__platform__cfg_8h_1a3eb6abdc86fbfdc3ed78c9566a420d74" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_LOAD_FILE_DATA_MEM16<sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342" refid="mm__platform__cfg_8h_1a7a05723164274d1c19f02f3d91dcdc12" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_DUMP_FILE_DATA_MEM16<sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357" refid="mm__platform__cfg_8h_1a4949495bc4e68d2ee354afe06612b0f4" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_FILL_DATA_MEM16<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369" refid="mm__platform__cfg_8h_1af91827aa0a752d6e614a736539de3894" refkind="member"><highlight class="preprocessor">#define<sp/>MM_OPT_CODE_MEM8_MEMTYPE<sp/><sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383" refid="mm__platform__cfg_8h_1ae8b7038e2ef70c3e23ed66bfce7005af" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_LOAD_FILE_DATA_MEM8<sp/><sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397" refid="mm__platform__cfg_8h_1a8afee1747ee1c8ad867caafa8748b616" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_DUMP_FILE_DATA_MEM8<sp/><sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412" refid="mm__platform__cfg_8h_1ab2d1a15d20fd20792e0728424fe14ca0" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MAX_FILL_DATA_MEM8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1024*1024)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="429" refid="mm__platform__cfg_8h_1a1decb2f02ded02afc70b8592e198c4e7" refkind="member"><highlight class="preprocessor">#define<sp/>MM_PROCESSOR_CYCLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444" refid="mm__platform__cfg_8h_1a3fe23678b97105c16f48852fdebb7f31" refkind="member"><highlight class="preprocessor">#define<sp/>MM_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="445"><highlight class="normal"></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_mm_platform_cfg_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/mm/fsw/platform_inc/mm_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

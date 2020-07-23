@@ -1,0 +1,1500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__es__events_8h" kind="file" language="C++">
+    <compoundname>cfe_es_events.h</compoundname>
+    <includedby refid="cfe__es__perf_8h" local="yes">es/cfe_es_perf.h</includedby>
+    <invincdepgraph>
+      <node id="328">
+        <label>inc/cfe_es_events.h</label>
+        <link refid="cfe_es_events.h"/>
+        <childnode refid="329" relation="include">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>es/cfe_es_perf.h</label>
+        <link refid="cfe__es__perf_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cfe__es__events_8h_1ac61f820a43dd3add8d82049ce2aeef68" prot="public" static="no">
+        <name>CFE_ES_INIT_INF_EID</name>
+        <initializer>1    /* start up message &quot;informational&quot; */</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;cFE ES Initialized&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000001"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;cFE ES Initialized&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued when the Executive Services Task completes its Initialization. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="82" column="9" bodyfile="inc/cfe_es_events.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a2b6a52452b5b11cdb38751cce1846da1" prot="public" static="no">
+        <name>CFE_ES_INITSTATS_INF_EID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;cFE Version %d.%d.%d chksm %d, OSAL Version %d.%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000002"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;cFE Version %d.%d.%d chksm %d, OSAL Version %d.%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued when the Executive Services Task completes its Initialization.</para><para>The <computeroutput>Version</computeroutput> field identifies the tagged version for the cFE Build, the <computeroutput>chksm</computeroutput> field provides the 16-bit checksum of the cFE Build and the <computeroutput>OSAL</computeroutput> <computeroutput>Version</computeroutput> field identifies the version of the OS Abstraction Layer on which this particular version of the cFE was built. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="98" column="9" bodyfile="inc/cfe_es_events.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1aa421a4981f714596ff3e15b2d9e7a511" prot="public" static="no">
+        <name>CFE_ES_NOOP_INF_EID</name>
+        <initializer>3    /* processed command &quot;informational&quot; */</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;No-op command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000003"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;No-op command&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued in response to a cFE Executive Services <ref refid="cfe__es__msg_8h_1a810de2186f66125f52a27d2d320ba274" kindref="member">NO-OP command </ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="110" column="9" bodyfile="inc/cfe_es_events.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a3ba14b67b504980df8f769aff738ad3e" prot="public" static="no">
+        <name>CFE_ES_RESET_INF_EID</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Counters command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000004"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset Counters command&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued in response to a cFE Executive Services <ref refid="cfe__es__msg_8h_1a4ba1e1e404136bc38bf46c6063cefab1" kindref="member">Reset Counters command </ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="122" column="9" bodyfile="inc/cfe_es_events.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a36bc859c33de02fcb4509a5389539db9" prot="public" static="no">
+        <name>CFE_ES_SHELL_INF_EID</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invoked shell command %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000005"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invoked shell command %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued in response to a cFE Executive Services <ref refid="cfe__es__msg_8h_1aa92437b56dff2670f701ded15febf876" kindref="member">Shell Command </ref></para><para>The <computeroutput>&apos;s&apos;</computeroutput> string contains the actual shell command string issued. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="136" column="9" bodyfile="inc/cfe_es_events.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a784759a209f8476f12f35f6c250884b0" prot="public" static="no">
+        <name>CFE_ES_START_INF_EID</name>
+        <initializer>6</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Started %s from %s, AppID = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000006"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Started %s from %s, AppID = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is automatically issued upon successful completion of a cFE Executive Services <ref refid="cfe__es__msg_8h_1afe302667bda94ab954a03a4aedc17e75" kindref="member">Start Application command </ref></para><para>The first <computeroutput>&apos;s&apos;</computeroutput> string identifies the name of the started Application, the second <computeroutput>&apos;s&apos;</computeroutput> string identifies the filename from which the Application was loaded and the <computeroutput>AppId</computeroutput> field specifies the Application ID assigned to the newly started Application by the cFE Executive Services. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="153" column="9" bodyfile="inc/cfe_es_events.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a23ec611f2af9932d5c233384571d4757" prot="public" static="no">
+        <name>CFE_ES_STOP_DBG_EID</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Stop Application %s Initiated.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000007"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Stop Application %s Initiated.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful processing of the cFE Executive Services <ref refid="cfe__es__msg_8h_1a86a6a1f97a96264720c2dc5c3e4976b8" kindref="member">Stop Application command </ref> Note that when this event is displayed, the Application is not deleted. ES has accepted the request to delete the application, and it will be deleted after the app exits it&apos;s main loop, or times out.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application that will be stopped. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="170" column="9" bodyfile="inc/cfe_es_events.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1af23043ebd3fb53adaf06a7f9ad893c02" prot="public" static="no">
+        <name>CFE_ES_STOP_INF_EID</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Stop Application %s Completed.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000008"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Stop Application %s Completed.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the cFE finishes deleting the cFE Application That was started when the <ref refid="cfe__es__msg_8h_1a86a6a1f97a96264720c2dc5c3e4976b8" kindref="member">Stop Application command </ref> was issued.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application that was stopped. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="185" column="9" bodyfile="inc/cfe_es_events.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a27f12c0cc771eea27b60a39225c0259e" prot="public" static="no">
+        <name>CFE_ES_RESTART_APP_DBG_EID</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Restart Application %s Initiated.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000009"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Restart Application %s Initiated.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful processing of the cFE Executive Services <ref refid="cfe__es__msg_8h_1a9f7b847195dff91e89aa5a4f946bc6bf" kindref="member">Restart Application command </ref> Note that when this event is displayed, the Application is not restarted. ES has accepted the request to restart the application, and it will be restarted after the app exits it&apos;s main loop, or times out.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application that will be restarted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="202" column="9" bodyfile="inc/cfe_es_events.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1abccc428fb4f288988f96b025b203769b" prot="public" static="no">
+        <name>CFE_ES_RESTART_APP_INF_EID</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Restart Application %s Completed.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000010"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Restart Application %s Completed.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the cFE finishes Restarting the cFE Application That was started when the <ref refid="cfe__es__msg_8h_1a9f7b847195dff91e89aa5a4f946bc6bf" kindref="member">Restart Application command </ref> was issued.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application that was reloaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="217" column="9" bodyfile="inc/cfe_es_events.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a7bb8a24b2b09b29aadaf945818e465f2" prot="public" static="no">
+        <name>CFE_ES_RELOAD_APP_DBG_EID</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reload Application %s Initiated.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000011"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reload Application %s Initiated.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful processing of the cFE Executive Services <ref refid="cfe__es__msg_8h_1ad5e1273210c4ed43fc01db10d660b816" kindref="member">Reload Application command </ref> Note that when this event is displayed, the Application is not reloaded. ES has accepted the request to reload the application, and it will be reloaded after the app exits it&apos;s main loop, or times out.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application that will be reloaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="236" column="9" bodyfile="inc/cfe_es_events.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a5796f7d4cc6468a97379bdfc35d1e320" prot="public" static="no">
+        <name>CFE_ES_RELOAD_APP_INF_EID</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reload Application %s Completed.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000012"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reload Application %s Completed.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the cFE finishes Reloading the cFE Application That was started when the <ref refid="cfe__es__msg_8h_1ad5e1273210c4ed43fc01db10d660b816" kindref="member">Restart Application command </ref> was issued.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application that was reloaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="252" column="9" bodyfile="inc/cfe_es_events.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a1d61fc0e4b393db77c153cc7c4826cdc" prot="public" static="no">
+        <name>CFE_ES_EXIT_APP_INF_EID</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Exit Application %s Completed.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000013"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Exit Application %s Completed.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the cFE finishes exiting/cleaning up an application that called the CFE_ES_ExitApp API with the CFE_ES_APP_EXIT parameter. When an App calls this API, the request is recorded and the Executive Services App will actually delete cFE Application before issuing this event message.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application that was exited. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="268" column="9" bodyfile="inc/cfe_es_events.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ab4316d4a96066c989b0bcc17f8c4ef8c" prot="public" static="no">
+        <name>CFE_ES_ERREXIT_APP_INF_EID</name>
+        <initializer>14</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Exit Application %s Completed.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000014"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Exit Application %s Completed.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the cFE finishes exiting/cleaning up an application that called the CFE_ES_ExitApp API with an ERROR condition. When an App calls this API, with the CFE_ES_APP_ERROR parameter, it indicates that the Application exited due to an error condition. The details of the error that occurred should be given by the Application through an event message, System Log entry, or both. The request is recorded and the Executive Services App will actually delete cFE Application before issuing this event message.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application that was exited. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="288" column="9" bodyfile="inc/cfe_es_events.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a3f963f29e321bca3664d6dfea358b679" prot="public" static="no">
+        <name>CFE_ES_ONE_APP_EID</name>
+        <initializer>15</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Sent %s application data&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000015"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Sent %s application data&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful completion of the cFE Executive Services <ref refid="cfe__es__msg_8h_1a9f24c84d8bd934b80f024a01166d28f7" kindref="member">Query One Application command </ref></para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application whose Executive Services Application information has been telemetered. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="304" column="9" bodyfile="inc/cfe_es_events.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a5889ff6aeb037f23d1b608f6106f5f4a" prot="public" static="no">
+        <name>CFE_ES_ALL_APPS_EID</name>
+        <initializer>16</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;App Info file written to %s, Entries=%d, FileSize=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000016"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;App Info file written to %s, Entries=%d, FileSize=%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful completion of the cFE Executive Services <ref refid="cfe__es__msg_8h_1ada0d3b8e15c3165306e0ed914fe5acfc" kindref="member">Query All Applications command </ref></para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file to which all Executive Services Application data has been written. The <computeroutput>Entries</computeroutput> field identifies, in decimal, the number of Applications whose data was written and the <computeroutput>FileSize</computeroutput> field gives the total number of bytes written to the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="321" column="9" bodyfile="inc/cfe_es_events.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a6412e95e37d55f8c08fc7caeedcd48e2" prot="public" static="no">
+        <name>CFE_ES_SYSLOG1_INF_EID</name>
+        <initializer>17</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cleared Executive Services log data&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000017"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cleared Executive Services log data&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the cFE Executive Services <ref refid="cfe__es__msg_8h_1afdd73277ac170bbd037534891db38cca" kindref="member">Clear System Log command </ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="333" column="9" bodyfile="inc/cfe_es_events.h" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a00c87d9d5d6a2e40e3fc5c27236b778c" prot="public" static="no">
+        <name>CFE_ES_SYSLOG2_EID</name>
+        <initializer>18</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;%s written:Size=%d,Entries=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000018"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s written:Size=%d,Entries=%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the System Log has been successfully written to a file after receiving the cFE Executive Services <ref refid="cfe__es__msg_8h_1afdd73277ac170bbd037534891db38cca" kindref="member">Write Executive Services System Log command </ref></para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file written to, the <computeroutput>Size</computeroutput> field specifies, in decimal, the number of bytes written to the file and the <computeroutput>Entries</computeroutput> field identifies the number of System Log messages that were written. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="350" column="9" bodyfile="inc/cfe_es_events.h" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ab162a633cb43417eb42ff32671b6668e" prot="public" static="no">
+        <name>CFE_ES_ERLOG1_INF_EID</name>
+        <initializer>19</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cleared mode log data&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000019"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cleared mode log data&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of the cFE Executive Services <ref refid="cfe__es__msg_8h_1adc6cdd982e1599fb504d5ec27b51361b" kindref="member">Clear Exception Reset Log command </ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="362" column="9" bodyfile="inc/cfe_es_events.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1abd52b650720f645c255d22b8fb0938d1" prot="public" static="no">
+        <name>CFE_ES_ERLOG2_EID</name>
+        <initializer>20</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;%s written:Size=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000020"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s written:Size=%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the Exception Reset Log has been successfully written to a file after receiving the cFE Executive Services <ref refid="cfe__es__msg_8h_1a59dff1aa2ef7ea7646138d78609940bc" kindref="member">Write Executive Services Exception Reset Log command </ref></para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file written to and the <computeroutput>Size</computeroutput> field specifies, in decimal, the number of bytes written to the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="378" column="9" bodyfile="inc/cfe_es_events.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a44ead1861db910553ae7c372f3690265" prot="public" static="no">
+        <name>CFE_ES_MID_ERR_EID</name>
+        <initializer>21    /* invalid command packet &quot;error&quot; */</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid command pipe message ID: 0x%X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000021"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid command pipe message ID: 0x%X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a message has arrived on the cFE Executive Services Application&apos;s Message Pipe that has a Message ID that is neither #CFE_ES_SEND_HK_MID or #CFE_ES_CMD_MID. Most likely, the cFE Software Bus routing table has become corrupt and is sending messages targeted for other Applications to the cFE Executive Services Application.</para><para>The <computeroutput>ID</computeroutput> field in the event message identifies the message ID (in hex) that was found in the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="397" column="9" bodyfile="inc/cfe_es_events.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a574524ec8373b1595a4a71c84ee19087" prot="public" static="no">
+        <name>CFE_ES_CC1_ERR_EID</name>
+        <initializer>22</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid ground command code: ID = 0x%X, CC = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000022"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid ground command code: ID = 0x%X, CC = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a message with the #CFE_ES_CMD_MID message ID has arrived but whose Command Code is not one of the command codes specified in <ref refid="cfe__es__msg_8h_1a810de2186f66125f52a27d2d320ba274" kindref="member">cfe_es.h </ref>. This problem is most likely to occur when:<orderedlist>
+<listitem><para>A Message ID meant for another Application became corrupted and was set equal to #CFE_ES_CMD_MID.</para></listitem><listitem><para>The Command Code field in the Message became corrupted.</para></listitem><listitem><para>The command database at the ground station has been corrupted.</para></listitem></orderedlist>
+</para><para>The <computeroutput>ID</computeroutput> field in the event message specifies the Message ID (in hex) and the <computeroutput>CC</computeroutput> field specifies the Command Code (in decimal) found in the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="418" column="9" bodyfile="inc/cfe_es_events.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a400e1bcc45976116930b189c13eed356" prot="public" static="no">
+        <name>CFE_ES_LEN_ERR_EID</name>
+        <initializer>23</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid cmd length: ID = 0x%X, CC = %d, Exp Len = %d, Len = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000023"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid cmd length: ID = 0x%X, CC = %d, Exp Len = %d, Len = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when a message with the #CFE_ES_CMD_MID message ID has arrived but whose packet length does not match the expected length for the specified command code.</para><para>The <computeroutput>ID</computeroutput> field in the event message specifies the Message ID (in hex), the <computeroutput>CC</computeroutput> field specifies the Command Code (in decimal), the <computeroutput>Exp</computeroutput> Len field specified the Expected Length (in decimal ), and <computeroutput>Len</computeroutput> specifies the message Length (in decimal) found in the message. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="436" column="9" bodyfile="inc/cfe_es_events.h" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a1fcfa14bc87a7885f9872ccdf348274e" prot="public" static="no">
+        <name>CFE_ES_BOOT_ERR_EID</name>
+        <initializer>24    /* command specific &quot;error&quot; */</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Invalid cFE restart type %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000024"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Invalid cFE restart type %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued when the cFE Executive Services receives a <ref refid="cfe__es__msg_8h_1ad90d8d7dbb83b507ca21e89196143183" kindref="member">cFE Restart Command </ref> whose parameter identifying the restart type is not equal to either <ref refid="cfe__es_8h_1a07ba3fb69cb94ebb03b6a672250c02e3" kindref="member">CFE_ES_PROCESSOR_RESET</ref> or <ref refid="cfe__es_8h_1afade23e7a008fd1c205892c7a5282c63" kindref="member">CFE_ES_POWERON_RESET</ref>.</para><para>The &apos;d&apos; field identifies the numeric, in decimal, of the restart type found in the received cFE Restart Command Packet. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="453" column="9" bodyfile="inc/cfe_es_events.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a9aec9aaa5ef86066e558fea1a693e2d4" prot="public" static="no">
+        <name>CFE_ES_SHELL_ERR_EID</name>
+        <initializer>25</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to invoke shell command %s, rc = %08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000025"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to invoke shell command %s, rc = %08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated whenever the cFE Executive Services receives an OS Shell command, via the <ref refid="cfe__es__msg_8h_1aa92437b56dff2670f701ded15febf876" kindref="member">Executive Services Shell Command </ref>, and the underlying OS returns an error code.</para><para>The &apos;s&apos; field in the message identifies the shell command string that was issued and the <computeroutput>rc</computeroutput> field displays the shell&apos;s return code, in hex. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="469" column="9" bodyfile="inc/cfe_es_events.h" bodystart="469" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1abf378cd800a362d96fa8c4bccce7e3f1" prot="public" static="no">
+        <name>CFE_ES_START_ERR_EID</name>
+        <initializer>26</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to start %s from %s, RC = %08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000026"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to start %s from %s, RC = %08X&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated for an error encountered in response to an Executive Services <ref refid="cfe__es__msg_8h_1afe302667bda94ab954a03a4aedc17e75" kindref="member">Start Application Command </ref>.</para><para>This message is a general failure when the command passes the parameter validation, but fails when a call to CFE_ES_AppCreate is called.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> term identifies the name of the Application that was attempted to start. The second <computeroutput>&apos;s&apos;</computeroutput> field specifies the file from which the Application was loaded. The <computeroutput>&apos;X&apos;</computeroutput> field is the return code returned by the CFE_ES_AppCreate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="488" column="9" bodyfile="inc/cfe_es_events.h" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a578ea2d616aba7e8973261c6884e19f5" prot="public" static="no">
+        <name>CFE_ES_START_INVALID_FILENAME_ERR_EID</name>
+        <initializer>27</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CFE_ES_StartAppCmd: invalid filename: %s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000027"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CFE_ES_StartAppCmd: invalid filename: %s&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated for an error encountered in response to an Executive Services <ref refid="cfe__es__msg_8h_1afe302667bda94ab954a03a4aedc17e75" kindref="member">Start Application Command </ref>.</para><para>This message reports a command failure when the Start Appplication Command is given an invalid filename. ( Either NULL or too short to be a valid cFE file name ).</para><para>The <computeroutput>&apos;s&apos;</computeroutput> term identifies the invalid filename that was sent with the command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="505" column="9" bodyfile="inc/cfe_es_events.h" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a65aacade13ca93133e937a06d37b02ae" prot="public" static="no">
+        <name>CFE_ES_START_INVALID_ENTRY_POINT_ERR_EID</name>
+        <initializer>28</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CFE_ES_StartAppCmd: App Entry Point is NULL.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000028"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CFE_ES_StartAppCmd: App Entry Point is NULL.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated for an error encountered in response to an Executive Services <ref refid="cfe__es__msg_8h_1afe302667bda94ab954a03a4aedc17e75" kindref="member">Start Application Command </ref>.</para><para>This message reports a command failure when the Start Appplication Command is given a NULL Application Entry Point parameter. The command must contain an application entry point string. ( Example: &quot;SC_AppMain&quot; ). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="522" column="9" bodyfile="inc/cfe_es_events.h" bodystart="522" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a3f25081de088ee522b627854411d7d2d" prot="public" static="no">
+        <name>CFE_ES_START_NULL_APP_NAME_ERR_EID</name>
+        <initializer>29</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CFE_ES_StartAppCmd: App Name is NULL.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000029"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CFE_ES_StartAppCmd: App Name is NULL.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated for an error encountered in response to an Executive Services <ref refid="cfe__es__msg_8h_1afe302667bda94ab954a03a4aedc17e75" kindref="member">Start Application Command </ref>.</para><para>This message reports a command failure when the Start Appplication Command is given a NULL Application Name parameter. The command must contain an application name string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="537" column="9" bodyfile="inc/cfe_es_events.h" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ad23d1bbb70bbc3ac1a2a982d05461dd4" prot="public" static="no">
+        <name>CFE_ES_START_STACK_ERR_EID</name>
+        <initializer>30</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CFE_ES_StartAppCmd: Stack size is less than system Minimum: %d.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000030"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CFE_ES_StartAppCmd: Stack size is less than system Minimum: %d.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated for an error encountered in response to an Executive Services <ref refid="cfe__es__msg_8h_1afe302667bda94ab954a03a4aedc17e75" kindref="member">Start Application Command </ref>.</para><para>This message reports a command failure when the Application Stack Size parameter is less than the default stack size defined in the cfe_platform_cfg.h file: CFE_ES_DEFAULT_STACK_SIZE.</para><para>The <computeroutput>&apos;d&apos;</computeroutput> term identifies the size of the stack that was given in the command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="554" column="9" bodyfile="inc/cfe_es_events.h" bodystart="554" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ae3e3b74ece7e32a666e5e0cbaa2d2857" prot="public" static="no">
+        <name>CFE_ES_START_PRIORITY_ERR_EID</name>
+        <initializer>31</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CFE_ES_StartAppCmd: Priority is too large: %d.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000031"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CFE_ES_StartAppCmd: Priority is too large: %d.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated for an error encountered in response to an Executive Services <ref refid="cfe__es__msg_8h_1afe302667bda94ab954a03a4aedc17e75" kindref="member">Start Application Command </ref>.</para><para>This message reports a command failure when the Application priority greater than the maximum priority for a Task defined by the OS Abstraction Layer ( 256 ).</para><para>The <computeroutput>&apos;d&apos;</computeroutput> term identifies the priority that was given in the command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="571" column="9" bodyfile="inc/cfe_es_events.h" bodystart="571" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1afa6bef6952f12184b54afa2c0a52dd51" prot="public" static="no">
+        <name>CFE_ES_START_EXC_ACTION_ERR_EID</name>
+        <initializer>32</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CFE_ES_StartAppCmd: Invalid Exception Action: %d.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000032"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CFE_ES_StartAppCmd: Invalid Exception Action: %d.&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated for an error encountered in response to an Executive Services <ref refid="cfe__es__msg_8h_1afe302667bda94ab954a03a4aedc17e75" kindref="member">Start Application Command </ref>.</para><para>This message reports a command failure when the Application Exception Action parameter is invalid. The valid options for this parameter are: 0 = Application will restart on an exception 1 = Application cause a processor restart on exception.</para><para>The <computeroutput>&apos;d&apos;</computeroutput> term identifies the Exception Action parameter that was given in the command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="590" column="9" bodyfile="inc/cfe_es_events.h" bodystart="590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ab0d150e6c06ed311ca9223006b30bd47" prot="public" static="no">
+        <name>CFE_ES_ERREXIT_APP_ERR_EID</name>
+        <initializer>33</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Exit Application %s on Error Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000033"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Exit Application %s on Error Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when ES is completing the processing of the CFE_ES_ExitApp API call with the CFE_ES_APP_ERROR parameter and the call to CFE_ES_CleanUpApp fails. At this point the Application will likely be stopped or deleted, but it may be in an unknown state.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be reloaded and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="607" column="9" bodyfile="inc/cfe_es_events.h" bodystart="607" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ae1e9696bbc73be31f16b8b6d00984e37" prot="public" static="no">
+        <name>CFE_ES_STOP_ERR1_EID</name>
+        <initializer>35</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Stop Application %s Failed, RC = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000034"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Stop Application %s Failed, RC = 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1a86a6a1f97a96264720c2dc5c3e4976b8" kindref="member">Stop Application Command </ref> which fails.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be stopped and the <computeroutput>rc</computeroutput> field identifies the error code, in hex, that may identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="623" column="9" bodyfile="inc/cfe_es_events.h" bodystart="623" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a75a73885eda516e7efa8e394d5da51ed" prot="public" static="no">
+        <name>CFE_ES_STOP_ERR2_EID</name>
+        <initializer>36</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Stop Application %s, GetAppIDByName failed. RC = 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000035"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Stop Application %s, GetAppIDByName failed. RC = 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1a86a6a1f97a96264720c2dc5c3e4976b8" kindref="member">Stop Application Command </ref> which fails. This message is for a specific failure when the call to CFE_ES_GetAppIDByName fails. The application will not be deleted at this point.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be stopped and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="641" column="9" bodyfile="inc/cfe_es_events.h" bodystart="641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a7acce1955c664081585ea9b61d9b9a4e" prot="public" static="no">
+        <name>CFE_ES_STOP_ERR3_EID</name>
+        <initializer>37</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Stop Application %s Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000036"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Stop Application %s Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1a86a6a1f97a96264720c2dc5c3e4976b8" kindref="member">Stop Application Command </ref> which fails. This message is for a specific failure when the call to CFE_ES_GetAppIDByName fails. The application will not be deleted at this point.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be stopped and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="663" column="9" bodyfile="inc/cfe_es_events.h" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ae3659fbabac07fa89350d2c0d4fce3f6" prot="public" static="no">
+        <name>CFE_ES_RESTART_APP_ERR1_EID</name>
+        <initializer>38</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Restart Application %s Failed, RC = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000037"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Restart Application %s Failed, RC = 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a9f7b847195dff91e89aa5a4f946bc6bf" kindref="member">Restart Application Command </ref> fails.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be reset and the <computeroutput>rc</computeroutput> field identifies the error code, in hex, that may identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="680" column="9" bodyfile="inc/cfe_es_events.h" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a603ec4c72fbc63b656142a3ce4693462" prot="public" static="no">
+        <name>CFE_ES_RESTART_APP_ERR2_EID</name>
+        <initializer>39</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Restart Application %s, GetAppIDByName failed. RC = 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000038"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Restart Application %s, GetAppIDByName failed. RC = 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1a9f7b847195dff91e89aa5a4f946bc6bf" kindref="member">Restart Application Command </ref> which fails. This message is for a specific failure when the call to CFE_ES_GetAppIDByName fails. The application will not be restarted at this point.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be restarted and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="698" column="9" bodyfile="inc/cfe_es_events.h" bodystart="698" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a1e26cc476e663a992dfa2d4b51714020" prot="public" static="no">
+        <name>CFE_ES_RESTART_APP_ERR3_EID</name>
+        <initializer>40</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Restart Application %s Failed: AppCreate Error 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000039"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Restart Application %s Failed: AppCreate Error 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1a9f7b847195dff91e89aa5a4f946bc6bf" kindref="member">Restart Application Command </ref> which fails. This message is for a specific failure when the call to CFE_ES_AppCreate fails. The application will not be restarted at this point.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be restarted and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="720" column="9" bodyfile="inc/cfe_es_events.h" bodystart="720" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a96cfdc3277d670b778c4e6436e3b3a4c" prot="public" static="no">
+        <name>CFE_ES_RESTART_APP_ERR4_EID</name>
+        <initializer>41</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Restart Application %s Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000040"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Restart Application %s Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1a9f7b847195dff91e89aa5a4f946bc6bf" kindref="member">Restart Application Command </ref> which fails. This message is for a specific failure when the call to CFE_ES_CleanUpApp fails. The application will not be restarted at this point, but will likely be deleted or in an unknown state.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be restarted and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="739" column="9" bodyfile="inc/cfe_es_events.h" bodystart="739" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a71783e710ad25013141ce93da1063da5" prot="public" static="no">
+        <name>CFE_ES_RELOAD_APP_ERR1_EID</name>
+        <initializer>42</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to reload Application %s, rc = %08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000041"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to reload Application %s, rc = %08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1ad5e1273210c4ed43fc01db10d660b816" kindref="member">Reload Application Command </ref> fails.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be reloaded and the <computeroutput>rc</computeroutput> field identifies the error code, in hex, that may identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="756" column="9" bodyfile="inc/cfe_es_events.h" bodystart="756" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a9e47e73ce03272dfc31cdc81f0cd481c" prot="public" static="no">
+        <name>CFE_ES_RELOAD_APP_ERR2_EID</name>
+        <initializer>43</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reload Application %s, GetAppIDByName failed. RC = 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000042"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reload Application %s, GetAppIDByName failed. RC = 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1ad5e1273210c4ed43fc01db10d660b816" kindref="member">Reload Application Command </ref> which fails. This message is for a specific failure when the call to CFE_ES_GetAppIDByName fails. The application will not be reloaded at this point.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be reloaded and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="774" column="9" bodyfile="inc/cfe_es_events.h" bodystart="774" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a67da4fd4adebffd767906d25068d9601" prot="public" static="no">
+        <name>CFE_ES_RELOAD_APP_ERR3_EID</name>
+        <initializer>44</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reload Application %s Failed: AppCreate Error 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000043"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reload Application %s Failed: AppCreate Error 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1ad5e1273210c4ed43fc01db10d660b816" kindref="member">Reload Application Command </ref> which fails. This message is for a specific failure when the call to CFE_ES_AppCreate fails. The application will not be reloaded at this point.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be reloaded and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="793" column="9" bodyfile="inc/cfe_es_events.h" bodystart="793" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a628fff408b778c17187a852263636b8a" prot="public" static="no">
+        <name>CFE_ES_RELOAD_APP_ERR4_EID</name>
+        <initializer>45</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reload Application %s Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000044"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reload Application %s Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an Executive Services <ref refid="cfe__es__msg_8h_1ad5e1273210c4ed43fc01db10d660b816" kindref="member">Reload Application Command </ref> which fails. This message is for a specific failure when the call to CFE_ES_CleanUpApp fails. The application will not be reloaded at this point, and will likely be deleted or in an unknown state.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be reloaded and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="812" column="9" bodyfile="inc/cfe_es_events.h" bodystart="812" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a95e8aade4413f4da6d637a89520917a2" prot="public" static="no">
+        <name>CFE_ES_EXIT_APP_ERR_EID</name>
+        <initializer>46</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Exit Application %s Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000045"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Exit Application %s Failed: CleanUpApp Error 0x%08X.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when ES is completing the processing of the CFE_ES_ExitApp API call and the call to CFE_ES_CleanUpApp fails. At this point the Application will likely be stopped or deleted, but it may be in an unknown state.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which was attempted to be reloaded and the <computeroutput>RC</computeroutput> field identifies the error code, in hex, that will identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="830" column="9" bodyfile="inc/cfe_es_events.h" bodystart="830" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a67742c87c92b38d660d917c6a504b95f" prot="public" static="no">
+        <name>CFE_ES_PCR_ERR1_EID</name>
+        <initializer>47</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ES_ProcControlReq: Invalid State (EXCEPTION) Application %s.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000046"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ES_ProcControlReq: Invalid State (EXCEPTION) Application %s.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when ES is processing it&apos;s internal Application table and encounters an App with the EXCEPTION state. Because exceptions are supposed to be processed immediately, this is an invalid state and should not happen. It may indicate some sort of memory corruption or other problem. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="844" column="9" bodyfile="inc/cfe_es_events.h" bodystart="844" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a9f475d0ed3b4db09492bffb224398cdc" prot="public" static="no">
+        <name>CFE_ES_PCR_ERR2_EID</name>
+        <initializer>48</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;ES_ProcControlReq: Unknown State ( %d ) Application %s.&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000047"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;ES_ProcControlReq: Unknown State ( %d ) Application %s.&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when ES is processing it&apos;s internal Application table and encounters an App with an unknown state. If this message occurs, it might be an indication of a memory corruption or other problem. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="861" column="9" bodyfile="inc/cfe_es_events.h" bodystart="861" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a771ca5a2935f2695ff1e1d33b22a118a" prot="public" static="no">
+        <name>CFE_ES_ONE_ERR_EID</name>
+        <initializer>49</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to send %s application data, RC = %08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000048"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to send %s application data, RC = %08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a9f24c84d8bd934b80f024a01166d28f7" kindref="member">Request Application Data Command </ref> failed.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application whose data was attempted to be telemetered and the <computeroutput>rc</computeroutput> field identifies the error code, in hex, that may identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="877" column="9" bodyfile="inc/cfe_es_events.h" bodystart="877" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a4aa79a71342dd60890c18a2149d08ae1" prot="public" static="no">
+        <name>CFE_ES_ONE_APPID_ERR_EID</name>
+        <initializer>50</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to send %s application data: GetAppIDByName Failed, RC = 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000049"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to send %s application data: GetAppIDByName Failed, RC = 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a9f24c84d8bd934b80f024a01166d28f7" kindref="member">Request Application Data Command </ref> failed.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application whose data was attempted to be telemetered and the <computeroutput>rc</computeroutput> field identifies the error code, in hex, that may identify the precise reason for the failure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="893" column="9" bodyfile="inc/cfe_es_events.h" bodystart="893" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a2b3f320862ca850ee77da0ad0e1f0545" prot="public" static="no">
+        <name>CFE_ES_OSCREATE_ERR_EID</name>
+        <initializer>51</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to write App Info file, OS_creat returned %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000050"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to write App Info file, OS_creat returned %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1ada0d3b8e15c3165306e0ed914fe5acfc" kindref="member">Dump Application Data Command </ref> fails to create the dump file.</para><para>The <computeroutput>&apos;d&apos;</computeroutput> parameter identifies, in decimal, the error code returned by <ref refid="osapi-os-filesys_8h_1a9e28b3226a066b1ea186650ed36b9b81" kindref="member">OS_creat</ref> when the attempt was made to create the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="909" column="9" bodyfile="inc/cfe_es_events.h" bodystart="909" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a160445390ee4141e8a03e87c1cc5a3b6" prot="public" static="no">
+        <name>CFE_ES_WRHDR_ERR_EID</name>
+        <initializer>52</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to write App Info file, WriteHdr rtnd %08X, exp %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000051"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to write App Info file, WriteHdr rtnd %08X, exp %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1ada0d3b8e15c3165306e0ed914fe5acfc" kindref="member">Dump Application Data Command </ref> fails while writing the cFE Standard File Header.</para><para>The <computeroutput>rtnd</computeroutput> field contains the error code returned by the <ref refid="cfe__fs_8h_1a7f0315f283029e5ec7ade9fdfd38875d" kindref="member">CFE_FS_WriteHeader</ref> API. Nominally, the returned result should have been equal to the <computeroutput>exp</computeroutput> field (i.e. - sizeof(<ref refid="struct_c_f_e___f_s___header__t" kindref="compound">CFE_FS_Header_t</ref>)). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="924" column="9" bodyfile="inc/cfe_es_events.h" bodystart="924" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1aa392fac450c0f2adf685d18d8c054e28" prot="public" static="no">
+        <name>CFE_ES_TASKWR_ERR_EID</name>
+        <initializer>53</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to write App Info file, Task write RC = 0x%08X, exp %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000052"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to write App Info file, Task write RC = 0x%08X, exp %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated whenever an Executive Services <ref refid="cfe__es__msg_8h_1ada0d3b8e15c3165306e0ed914fe5acfc" kindref="member">Dump Application Data Command </ref> fails while writing Application data to the specified file.</para><para>The <computeroutput>rtnd</computeroutput> field contains, in hex, the error code returned from the <ref refid="osapi-os-filesys_8h_1aa4cff610350a94b341e81af75941aecd" kindref="member">OS_write</ref> API. The expected return value is identified, in decimal, in the <computeroutput>exp</computeroutput> field. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="940" column="9" bodyfile="inc/cfe_es_events.h" bodystart="940" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1aad13698672ed5f16c5b20edbb8edd0a6" prot="public" static="no">
+        <name>CFE_ES_SYSLOG2_ERR_EID</name>
+        <initializer>55</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error creating file %s, stat=0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000053"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error creating file %s, stat=0x%x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1ab7c0800ece3c36763e7dd6e87fc46797" kindref="member">Dump System Log Command </ref> fails while attempting to create the specified file.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file that was attempted to be created and the <computeroutput>stat</computeroutput> field specifies, in hex, the error code returned by the <ref refid="osapi-os-filesys_8h_1a9e28b3226a066b1ea186650ed36b9b81" kindref="member">OS_creat</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="955" column="9" bodyfile="inc/cfe_es_events.h" bodystart="955" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a254fabb250070889bda8b5781ff509ec" prot="public" static="no">
+        <name>CFE_ES_ERLOG2_ERR_EID</name>
+        <initializer>56</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error creating file %s, stat=0x%x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000054"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error creating file %s, stat=0x%x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a59dff1aa2ef7ea7646138d78609940bc" kindref="member">Dump Exception Reset Log Command </ref> fails while attempting to create the specified file.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file that was attempted to be created and the <computeroutput>stat</computeroutput> field specifies, in hex, the error code returned by the <ref refid="osapi-os-filesys_8h_1a9e28b3226a066b1ea186650ed36b9b81" kindref="member">OS_creat</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="970" column="9" bodyfile="inc/cfe_es_events.h" bodystart="970" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a384d2d4416c962535e7da60a41b3acdd" prot="public" static="no">
+        <name>CFE_ES_PERF_STARTCMD_EID</name>
+        <initializer>57</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Start collecting performance data command, trigger mode = d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000055"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Start collecting performance data command, trigger mode = d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated in response to receiving an Executive Services <ref refid="cfe__es__msg_8h_1ad13babb46aecb539f6f602c4bd86bee1" kindref="member">Start Performance Analyzer Data Collection Command </ref></para><para>The <computeroutput>&apos;d&apos;</computeroutput> field identifies the requested trigger mode. Valid values are <ref refid="cfe__es__perf_8h_1a23d77fe8dbb20a35845cf2cc0797f070" kindref="member">CFE_ES_PerfMode_t</ref> CFE_ES_PERF_TRIGGER_START (0), <ref refid="cfe__es__perf_8h_1a23d77fe8dbb20a35845cf2cc0797f070" kindref="member">CFE_ES_PerfMode_t</ref> CFE_ES_PERF_TRIGGER_CENTER (1), and <ref refid="cfe__es__perf_8h_1a23d77fe8dbb20a35845cf2cc0797f070" kindref="member">CFE_ES_PerfMode_t</ref> CFE_ES_PERF_TRIGGER_END (2) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="985" column="9" bodyfile="inc/cfe_es_events.h" bodystart="985" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1aa35382e3cf9c095ca05fee74685d0a9d" prot="public" static="no">
+        <name>CFE_ES_PERF_STARTCMD_ERR_EID</name>
+        <initializer>58</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cannot start collecting performance data,perf data write in progress&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000056"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cannot start collecting performance data,perf data write in progress&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated in response to receiving an Executive Services <ref refid="cfe__es__msg_8h_1ad13babb46aecb539f6f602c4bd86bee1" kindref="member">Start Performance Analyzer Data Collection Command </ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="997" column="9" bodyfile="inc/cfe_es_events.h" bodystart="997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a96964208f61b9e89c898bf8a4fde30c0" prot="public" static="no">
+        <name>CFE_ES_PERF_STARTCMD_TRIG_ERR_EID</name>
+        <initializer>59</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cannot start collecting performance data, trigger mode (d) out of range (d to d)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000057"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cannot start collecting performance data, trigger mode (d) out of range (d to d)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1ad13babb46aecb539f6f602c4bd86bee1" kindref="member">Start Performance Analyzer Data Collection Command </ref> command is received with a bad value for the requested trigger mode.</para><para>The first <computeroutput>&apos;d&apos;</computeroutput> field identifies the received trigger mode value. The second and third <computeroutput>&apos;d&apos;</computeroutput> fields specify the valid range of values for the trigger mode. Valid values are <ref refid="cfe__es__perf_8h_1a23d77fe8dbb20a35845cf2cc0797f070" kindref="member">CFE_ES_PerfMode_t</ref> CFE_ES_PERF_TRIGGER_START (0), <ref refid="cfe__es__perf_8h_1a23d77fe8dbb20a35845cf2cc0797f070" kindref="member">CFE_ES_PerfMode_t</ref> CFE_ES_PERF_TRIGGER_CENTER (1), and <ref refid="cfe__es__perf_8h_1a23d77fe8dbb20a35845cf2cc0797f070" kindref="member">CFE_ES_PerfMode_t</ref> CFE_ES_PERF_TRIGGER_END (2). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1016" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1016" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1af1624e8b8b8ceb7595b7239fb273e0db" prot="public" static="no">
+        <name>CFE_ES_PERF_STOPCMD_EID</name>
+        <initializer>60</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Perf Stop Cmd Rcvd,%s will write %d entries.%dmS dly every %d entries&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000058"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Perf Stop Cmd Rcvd,%s will write %d entries.%dmS dly every %d entries&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of a successful Performance Data Stop Command after receiving the cFE Executive Services <ref refid="cfe__es__msg_8h_1a7afe278b7fda7f4e3b3f546cedfe8c58" kindref="member">Stop Performance Analyzer Data Collection Command </ref></para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file write task that has begun execution. The first <computeroutput>&apos;d&apos;</computeroutput> identifies the total number of performance entries(in decimal) that will be written to the file. A performance data entry is defined by an unsigned 32 bit data point and an unsigned 64 bit time stamp. The second <computeroutput>&apos;d&apos;</computeroutput> identifies the millisecond delay between writes and the third <computeroutput>&apos;d&apos;</computeroutput> identifies the number of entries written (in decimal) between delays. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1036" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1036" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a4503884d2c8a86c2af337d7324efd9c1" prot="public" static="no">
+        <name>CFE_ES_PERF_STOPCMD_ERR1_EID</name>
+        <initializer>61</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Stop performance data cmd,Error creating child task RC=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000059"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Stop performance data cmd,Error creating child task RC=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an unsuccessful Performance Data Stop Command after receiving the cFE Executive Services <ref refid="cfe__es__msg_8h_1a7afe278b7fda7f4e3b3f546cedfe8c58" kindref="member">Stop Performance Analyzer Data Collection Command </ref></para><para>The <computeroutput>&apos;RC&apos;</computeroutput> field specifies, in hex, the error code returned by the <ref refid="cfe__es_8h_1a64768543df91e7856b4356fdc70ebe8c" kindref="member">CFE_ES_CreateChildTask</ref> API </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1053" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1053" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a3772e46b87cf04eccb6da9cfae87e1d1" prot="public" static="no">
+        <name>CFE_ES_PERF_STOPCMD_ERR2_EID</name>
+        <initializer>62</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Stop performance data cmd ignored,perf data write in progress&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000060"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Stop performance data cmd ignored,perf data write in progress&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon receipt of an unsuccessful Performance Data Stop Command after receiving the cFE Executive Services <ref refid="cfe__es__msg_8h_1a7afe278b7fda7f4e3b3f546cedfe8c58" kindref="member">Stop Performance Analyzer Data Collection Command </ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1068" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1068" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1aeb3284af0b63ab5103683f590b3c9f10" prot="public" static="no">
+        <name>CFE_ES_PERF_FILTMSKCMD_EID</name>
+        <initializer>63</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Performance Filter Mask command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000061"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Performance Filter Mask command&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated in response to receiving an Executive Services <ref refid="cfe__es__msg_8h_1add6694d5c19ffb40cd4226fd2b1f4564" kindref="member">Set Performance Analyzer Filter Mask Command </ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1082" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1082" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a514d8b684590944a1bf771891d902ac7" prot="public" static="no">
+        <name>CFE_ES_PERF_FILTMSKERR_EID</name>
+        <initializer>64</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error:Performance Filter Mask Index value greater than CFE_ES_PERF_32BIT_WORDS_IN_MASK (which is a whole number derived from CFE_ES_PERF_MAX_IDS / 32)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000062"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error:Performance Filter Mask Index value greater than CFE_ES_PERF_32BIT_WORDS_IN_MASK (which is a whole number derived from CFE_ES_PERF_MAX_IDS / 32)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated in response to receiving an Executive Services <ref refid="cfe__es__msg_8h_1add6694d5c19ffb40cd4226fd2b1f4564" kindref="member">Set Performance Analyzer Filter Mask Command </ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1099" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1099" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1aff34396f21a8226c2700fcc6c34ccf20" prot="public" static="no">
+        <name>CFE_ES_PERF_TRIGMSKCMD_EID</name>
+        <initializer>65</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set Performance Trigger Mask command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000063"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set Performance Trigger Mask command&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated in response to receiving an Executive Services <ref refid="cfe__es__msg_8h_1a2491462258c4b11c064e08673a3def2a" kindref="member">Set Performance Analyzer Trigger Mask Command </ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1113" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a385abf1261a513720a1aae2c38e362ed" prot="public" static="no">
+        <name>CFE_ES_PERF_TRIGMSKERR_EID</name>
+        <initializer>66</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error: Performance Trigger Mask Index value greater than CFE_ES_PERF_32BIT_WORDS_IN_MASK (which is a whole number derived from CFE_ES_PERF_MAX_IDS / 32)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000064"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error: Performance Trigger Mask Index value greater than CFE_ES_PERF_32BIT_WORDS_IN_MASK (which is a whole number derived from CFE_ES_PERF_MAX_IDS / 32)&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated in response to receiving an Executive Services <ref refid="cfe__es__msg_8h_1a2491462258c4b11c064e08673a3def2a" kindref="member">Set Performance Analyzer Trigger Mask Command </ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1130" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a844e9b73880e448277af7043d51e2b3b" prot="public" static="no">
+        <name>CFE_ES_PERF_LOG_ERR_EID</name>
+        <initializer>67</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error creating file %s, stat=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000065"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error creating file %s, stat=%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a7afe278b7fda7f4e3b3f546cedfe8c58" kindref="member">Stop Performance Analyzer Data Collection Command </ref> fails to create the associated logic analyzer dump file.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file that was attempted to be created and the <computeroutput>stat</computeroutput> field specifies, in decimal, the error code returned by the <ref refid="osapi-os-filesys_8h_1a9e28b3226a066b1ea186650ed36b9b81" kindref="member">OS_creat</ref> API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1147" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a47fae8c71ea7fa5879159a8ec416248f" prot="public" static="no">
+        <name>CFE_ES_PERF_DATAWRITTEN_EID</name>
+        <initializer>68</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;%s written:Size=%d,EntryCount=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000066"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s written:Size=%d,EntryCount=%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when the Performance Log has been successfully written to a file after receiving the cFE Executive Services <ref refid="cfe__es__msg_8h_1a7afe278b7fda7f4e3b3f546cedfe8c58" kindref="member">Stop Performance Analyzer Data Collection Command </ref></para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file written to, the <computeroutput>Size</computeroutput> field specifies, in decimal, the number of bytes written to the file and the <computeroutput>EntryCount</computeroutput> field identifies the number of data entries that were written. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1165" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a56acc169cc09c0356f1dac6427fb855c" prot="public" static="no">
+        <name>CFE_ES_CDS_REGISTER_ERR_EID</name>
+        <initializer>69</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;%s Failed to Register CDS &apos;%s&apos;, Status=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000067"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;%s Failed to Register CDS &apos;%s&apos;, Status=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated whenever an Application calls the <ref refid="cfe__es_8h_1a60638b671a23cda3eb9282b153a8dfb1" kindref="member">CFE_ES_RegisterCDS</ref> API and fails to successfully create the desired CDS.</para><para>The first <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the Application which made the API call, the second <computeroutput>&apos;s&apos;</computeroutput> field specifies the name of the CDS as requested by the Application and the <computeroutput>Status</computeroutput> field provides the error code which identifies in more detail the nature of the failure (See return codes for the <ref refid="cfe__es_8h_1a60638b671a23cda3eb9282b153a8dfb1" kindref="member">CFE_ES_RegisterCDS</ref> API). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1182" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a9c82e2a444939ba031989209bf756bca" prot="public" static="no">
+        <name>CFE_ES_SYSLOGMODE_EID</name>
+        <initializer>70</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set OverWriteSysLog Command Received with Mode setting = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000068"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set OverWriteSysLog Command Received with Mode setting = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon successful completion of an Executive Services <ref refid="cfe__es__msg_8h_1a291f3a6b9436f8704d0e00a9476714f1" kindref="member">Set System Log Overwrite Mode Command </ref>.</para><para>The <computeroutput>setting</computeroutput> field identifies the newly chosen Overwrite Mode and should be equal to either <ref refid="cfe__es__log_8h_1a11b2e4668dc1ddbc73e5f3f07b0a5f44" kindref="member">CFE_ES_LOG_OVERWRITE</ref> or <ref refid="cfe__es__log_8h_1aaafc3ffb974bc13832e2e1b409293295" kindref="member">CFE_ES_LOG_DISCARD</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1197" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a38a38bf5d757930c007e0b71bb492670" prot="public" static="no">
+        <name>CFE_ES_ERR_SYSLOGMODE_EID</name>
+        <initializer>71</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Set OverWriteSysLog Command: Invalid Mode setting = %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000069"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Set OverWriteSysLog Command: Invalid Mode setting = %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated upon unsuccessful completion of an Executive Services <ref refid="cfe__es__msg_8h_1a291f3a6b9436f8704d0e00a9476714f1" kindref="member">Set System Log Overwrite Mode Command </ref>.</para><para>The <computeroutput>setting</computeroutput> field identifies the illegal Overwrite Mode found in the command message. The mode must be either <ref refid="cfe__es__log_8h_1a11b2e4668dc1ddbc73e5f3f07b0a5f44" kindref="member">CFE_ES_LOG_OVERWRITE</ref> (0) or <ref refid="cfe__es__log_8h_1aaafc3ffb974bc13832e2e1b409293295" kindref="member">CFE_ES_LOG_DISCARD</ref> (1). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1212" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ac7f657d19456e8ea5cab32f56871d011" prot="public" static="no">
+        <name>CFE_ES_RESET_PR_COUNT_EID</name>
+        <initializer>72</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Reset Processor Reset Count to Zero&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000070"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Reset Processor Reset Count to Zero&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always generated in response to the Executive Services <ref refid="cfe__es__msg_8h_1a445b7ed4356550a7a054e490c840a0ba" kindref="member">Set Processor Reset Counter to Zero Command </ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1224" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a62fac25e76061880d5b91c8a6d97273c" prot="public" static="no">
+        <name>CFE_ES_SET_MAX_PR_COUNT_EID</name>
+        <initializer>73</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Maximum Processor Reset Count set to: %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000071"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Maximum Processor Reset Count set to: %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always generated in response to the Executive Services <ref refid="cfe__es__msg_8h_1a445b7ed4356550a7a054e490c840a0ba" kindref="member">Set Maximum Processor Reset Limit Command </ref>.</para><para>The <computeroutput>&apos;d&apos;</computeroutput> field identifies, in decimal, the number of Processor Resets that will need to occur before a Power-On Reset is automatically performed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1239" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a23ebd9aee23cac9127b79a16d7bba87f" prot="public" static="no">
+        <name>CFE_ES_FILEWRITE_ERR_EID</name>
+        <initializer>74</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;File write,byte cnt err,file %s,request=%d,actual=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000072"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;File write,byte cnt err,file %s,request=%d,actual=%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated in response to any command requesting information to be written to a file and whose data is not completely written to the specified file.</para><para>The <computeroutput>file</computeroutput> field identifies the filename of the file to which the data failed to write completely, the <computeroutput>request</computeroutput> field specifies, in decimal, the number of bytes that were attempted to be written and the <computeroutput>actual</computeroutput> field indicates, in decimal, the actual number of bytes written to the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1255" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ae534e47efdf15e9c6833e72048c7371b" prot="public" static="no">
+        <name>CFE_ES_RST_ACCESS_EID</name>
+        <initializer>75</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error accessing ER Log,%s not written.Stat=0x%08x&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000073"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error accessing ER Log,%s not written.Stat=0x%08x&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated in response to an Exception Reset Log Dump command and there is an error obtaining the contents of the ER Log.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the filename of the file to which the data failed to write, the <computeroutput>Stat</computeroutput> field specifies, in hex, the error status returned from #CFE_PSP_GetResetArea. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1270" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a64e31d9dd979bc117fa8e6adaf5fcba7" prot="public" static="no">
+        <name>CFE_ES_CDS_DELETE_ERR_EID</name>
+        <initializer>76</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error while deleting &apos;%s&apos; from CDS, See SysLog.(Err=0x%08X)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000074"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error while deleting &apos;%s&apos; from CDS, See SysLog.(Err=0x%08X)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1abd40b7ca6e620853bb0a358e7d2a2ca8" kindref="member">Delete CDS Command </ref> fails to cleanly remove the specified CDS.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the CDS that was attempted to be deleted the <computeroutput>Err</computeroutput> field specifies, in hex, the error code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1286" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a83f18437b19f7c2141eb5aa4c7cd3349" prot="public" static="no">
+        <name>CFE_ES_CDS_NAME_ERR_EID</name>
+        <initializer>77</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Unable to locate &apos;%s&apos; in CDS Registry&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000075"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Unable to locate &apos;%s&apos; in CDS Registry&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1abd40b7ca6e620853bb0a358e7d2a2ca8" kindref="member">Delete CDS Command </ref> specifies a name for a CDS that cannot be found in the CDS Registry.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the CDS that was attempted to be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1301" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a1a2dda4659076c754159e17998f367d4" prot="public" static="no">
+        <name>CFE_ES_CDS_DELETED_INFO_EID</name>
+        <initializer>78</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Successfully removed &apos;%s&apos; from CDS&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000076"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Successfully removed &apos;%s&apos; from CDS&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1abd40b7ca6e620853bb0a358e7d2a2ca8" kindref="member">Delete CDS Command </ref> is successfully completed.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the CDS that was deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1316" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a4cc6fea9f48dd210ed9c3451bd59b27b" prot="public" static="no">
+        <name>CFE_ES_CDS_DELETE_TBL_ERR_EID</name>
+        <initializer>79</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CDS &apos;%s&apos; is a Critical Table CDS. Must be deleted via TBL Command&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000077"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CDS &apos;%s&apos; is a Critical Table CDS. Must be deleted via TBL Command&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1abd40b7ca6e620853bb0a358e7d2a2ca8" kindref="member">Delete CDS Command </ref> specifies a name for a CDS that is a Critical Table image. Critical Table images can only be deleted via a Table Services command (<ref refid="cfe__tbl__msg_8h_1a0b8f0a67aa8ae525a10fe3cc87c943d3" kindref="member">CFE_TBL_DELETE_CDS_CC</ref>).</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the CDS that was attempted to be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1333" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a789d0d792e9220f6af4e0cc5df0dd923" prot="public" static="no">
+        <name>CFE_ES_CDS_OWNER_ACTIVE_EID</name>
+        <initializer>80</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;CDS &apos;%s&apos; not deleted because owning app is active&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000078"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;CDS &apos;%s&apos; not deleted because owning app is active&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1abd40b7ca6e620853bb0a358e7d2a2ca8" kindref="member">Delete CDS Command </ref> specifies a name for a CDS whose prefix name identifies an application that is still registered in the system. CDSs can only be deleted when their owning applications have been removed from the system.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the CDS that was attempted to be deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1351" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1afcd5e1ae0c62ec8a8e743c5dea18a799" prot="public" static="no">
+        <name>CFE_ES_TLM_POOL_STATS_INFO_EID</name>
+        <initializer>81</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Successfully telemetered memory pool stats for 0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000079"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Successfully telemetered memory pool stats for 0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated following successful execution of the <ref refid="cfe__es__msg_8h_1a2b1c39432940423ef68c4c183abce3d8" kindref="member">Telemeter Memory Statistics Command </ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1363" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a3baac054014e41c90f6955aa4581c6d3" prot="public" static="no">
+        <name>CFE_ES_INVALID_POOL_HANDLE_ERR_EID</name>
+        <initializer>82</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Cannot telemeter memory pool stats. Illegal Handle (0x%08X)&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000080"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Cannot telemeter memory pool stats. Illegal Handle (0x%08X)&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a2b1c39432940423ef68c4c183abce3d8" kindref="member">Telemeter Memory Statistics Command </ref> specifies a memory pool handle that is invalid. A handle is determined to be invalid when any of the following are true:<orderedlist>
+<listitem><para>The handle does not contain a value that is an integral multiple of 4</para></listitem><listitem><para>The handle does not specify a valid area of memory</para></listitem><listitem><para>The handle does not point to an area of memory that contains the handle itself</para></listitem><listitem><para>The handle does not point to an area of memory whose Size field is an integral multiple of 4</para></listitem><listitem><para>The handle does not point to an area of memory whose End field is equal to the Start plus the Size</para></listitem></orderedlist>
+</para><para>The <computeroutput>&apos;08X&apos;</computeroutput> field identifies the handle that was found in the command. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1384" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1affdeef3f8103d8409cdd4ef9bfe0e7bd" prot="public" static="no">
+        <name>CFE_ES_CDS_REG_DUMP_INF_EID</name>
+        <initializer>83</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Successfully dumped CDS Registry to &apos;%s&apos;:Size=%d,Entries=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000081"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Successfully dumped CDS Registry to &apos;%s&apos;:Size=%d,Entries=%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a5f11957f91b93fb8956dec93cb200560" kindref="member">Dump Critical Data Store Registry Command </ref> is successfully executed. The specified file should have been created and contains the CDS Registry Entries.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the CDS Registry Dump Filename. The first <computeroutput>&apos;d&apos;</computeroutput> field specifies the size of the file (in bytes) The second <computeroutput>&apos;d&apos;</computeroutput> field specifies the number of CDS Registry Records that were written </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1402" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a46e742370cb011d0f233cbc6cbb1ddd3" prot="public" static="no">
+        <name>CFE_ES_CDS_DUMP_ERR_EID</name>
+        <initializer>84</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error writing CDS Registry to &apos;%s&apos;, Status=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000082"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error writing CDS Registry to &apos;%s&apos;, Status=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a5f11957f91b93fb8956dec93cb200560" kindref="member">Dump Critical Data Store Registry Command </ref> was being performed and it encountered a filesystem write error while writing a CDS Registry record.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the CDS Registry Dump Filename. The <computeroutput>&apos;08X&apos;</computeroutput> field identifies the error code returned from <ref refid="osapi-os-filesys_8h_1aa4cff610350a94b341e81af75941aecd" kindref="member">OS_write</ref> that caused the command to abort. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1419" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ac9b7598b7db06da5e0c1f16b809a3f14" prot="public" static="no">
+        <name>CFE_ES_WRITE_CFE_HDR_ERR_EID</name>
+        <initializer>85</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error writing cFE File Header to &apos;%s&apos;, Status=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000083"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error writing cFE File Header to &apos;%s&apos;, Status=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a5f11957f91b93fb8956dec93cb200560" kindref="member">Dump Critical Data Store Registry Command </ref> command successfully created the CDS Dump File onboard but encountered an error while writing the standard cFE File Header to the file.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the CDS Registry Dump Filename. The <computeroutput>&apos;08X&apos;</computeroutput> field identifies error code returned by the API <ref refid="cfe__fs_8h_1a7f0315f283029e5ec7ade9fdfd38875d" kindref="member">CFE_FS_WriteHeader</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1436" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1aca3ea6811850efa00cd1f825b0728a30" prot="public" static="no">
+        <name>CFE_ES_CREATING_CDS_DUMP_ERR_EID</name>
+        <initializer>86</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Error creating CDS dump file &apos;%s&apos;, Status=0x%08X&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000084"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Error creating CDS dump file &apos;%s&apos;, Status=0x%08X&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1a5f11957f91b93fb8956dec93cb200560" kindref="member">Dump Critical Data Store Registry Command </ref> is unable to create the specified file on the onboard filesystem.</para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the CDS Registry Dump Filename. The <computeroutput>&apos;08X&apos;</computeroutput> field identifies error code returned by the API <ref refid="osapi-os-filesys_8h_1a9e28b3226a066b1ea186650ed36b9b81" kindref="member">OS_creat</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1452" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1452" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ae19cb686cec48c38170201707e07b812" prot="public" static="no">
+        <name>CFE_ES_TASKINFO_EID</name>
+        <initializer>87</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Task Info file written to %s, Entries=%d, FileSize=%d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000085"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Task Info file written to %s, Entries=%d, FileSize=%d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: DEBUG</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is issued upon successful completion of the cFE Executive Services <ref refid="cfe__es__msg_8h_1ab79cd834cbd820ba1d4f6516d986ba7d" kindref="member">Query All Tasks command </ref></para><para>The <computeroutput>&apos;s&apos;</computeroutput> field identifies the name of the file to which all Executive Services Task data has been written. The <computeroutput>Entries</computeroutput> field identifies, in decimal, the number of Tasks whose data was written and the <computeroutput>FileSize</computeroutput> field gives the total number of bytes written to the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1470" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1470" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a32c7d3e094c4e6e1d9b56e7aa4e5420f" prot="public" static="no">
+        <name>CFE_ES_TASKINFO_OSCREATE_ERR_EID</name>
+        <initializer>88</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to write Task Info file, OS_creat returned %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000086"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to write Task Info file, OS_creat returned %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1ab79cd834cbd820ba1d4f6516d986ba7d" kindref="member">Dump Task Data Command </ref> fails to create the dump file.</para><para>The <computeroutput>&apos;d&apos;</computeroutput> parameter identifies, in decimal, the error code returned by <ref refid="osapi-os-filesys_8h_1a9e28b3226a066b1ea186650ed36b9b81" kindref="member">OS_creat</ref> when the attempt was made to create the file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1486" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ae754c1d6ac903a65096e81da8ac85eb0" prot="public" static="no">
+        <name>CFE_ES_TASKINFO_WRHDR_ERR_EID</name>
+        <initializer>89</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to write Task Info file, WriteHdr rtnd %08X, exp %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000087"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to write Task Info file, WriteHdr rtnd %08X, exp %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated when an Executive Services <ref refid="cfe__es__msg_8h_1ab79cd834cbd820ba1d4f6516d986ba7d" kindref="member">Dump Task Data Command </ref> fails while writing the cFE Standard File Header.</para><para>The <computeroutput>rtnd</computeroutput> field contains the error code returned by the <ref refid="cfe__fs_8h_1a7f0315f283029e5ec7ade9fdfd38875d" kindref="member">CFE_FS_WriteHeader</ref> API. Nominally, the returned result should have been equal to the <computeroutput>exp</computeroutput> field (i.e. - sizeof(<ref refid="struct_c_f_e___f_s___header__t" kindref="compound">CFE_FS_Header_t</ref>)). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1501" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a657bbac7b0014e61c4d964de38cd94fb" prot="public" static="no">
+        <name>CFE_ES_TASKINFO_WR_ERR_EID</name>
+        <initializer>90</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Failed to write Task Info file, Task write RC = 0x%08X, exp %d&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000088"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Failed to write Task Info file, Task write RC = 0x%08X, exp %d&apos; </computeroutput> </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: ERROR</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is generated whenever an Executive Services <ref refid="cfe__es__msg_8h_1ab79cd834cbd820ba1d4f6516d986ba7d" kindref="member">Dump Tasks Data Command </ref> fails while writing Tasks data to the specified file.</para><para>The <computeroutput>rtnd</computeroutput> field contains, in hex, the error code returned from the <ref refid="osapi-os-filesys_8h_1aa4cff610350a94b341e81af75941aecd" kindref="member">OS_write</ref> API. The expected return value is identified, in decimal, in the <computeroutput>exp</computeroutput> field. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1517" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1517" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1ae4519ec6de2878e86431b22d6eb8cb00" prot="public" static="no">
+        <name>CFE_ES_VERSION_INF_EID</name>
+        <initializer>91</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Mission s.s, s, s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000089"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Mission s.s, s, s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued when the Executive Services Task completes its Initialization</para><para>The <computeroutput>Mission</computeroutput> field identifies the tagged build identifiers and configuration name. If available, this will also indicate the revision control identifiers for CFE and OSAL that this binary was built with. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1534" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cfe__es__events_8h_1a2e538314dddd7f123615c57982b01738" prot="public" static="no">
+        <name>CFE_ES_BUILD_INF_EID</name>
+        <initializer>92</initializer>
+        <briefdescription>
+<para><computeroutput> &apos;Build s s&apos; </computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfeevents_1_cfeevents000090"><xreftitle>Event Message</xreftitle><xrefdescription><para><computeroutput> &apos;Build s s&apos; </computeroutput></para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Type: INFORMATION</title><para></para></simplesect>
+<simplesect kind="par"><title>Cause:</title><para></para></simplesect>
+This event message is always automatically issued when the Executive Services Task completes its Initialization, and as part of the Noop command.</para><para>The <computeroutput>Build</computeroutput> field identifies the build date, time, hostname and user identifier of the build host machine for the current running binary. The first string is the build date/time, and the second string is formatted as &quot;user@hostname&quot;</para><para>By default, if not specified/overridden, the default values of these variables will be: BUILDDATE ==&gt; the output of &quot;date +%Y%m%d%H%M&quot; HOSTNAME ==&gt; the output of &quot;hostname&quot; USER ==&gt; the output of &quot;whoami&quot;</para><para>The values can be overridden by setting an environment variable with the names above to the value desired for the field when running &quot;make&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_es_events.h" line="1558" column="9" bodyfile="inc/cfe_es_events.h" bodystart="1558" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/><sp/>File:<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/>cfe_es_events.h</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/>$Id:<sp/>cfe_es_events.h<sp/>1.6<sp/>2014/08/21<sp/>15:34:53GMT-05:00<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2006,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/>used,<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/>agreement.<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/><sp/>cFE<sp/>Executive<sp/>Services<sp/>(ES)<sp/>Event<sp/>IDs</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/><sp/>References:</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.0a</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/>cFE<sp/>Flight<sp/>Software<sp/>Application<sp/>Developers<sp/>Guide</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/><sp/>Notes:</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>$Log:<sp/>cfe_es_events.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2014/08/21<sp/>15:34:53GMT-05:00<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Updated<sp/>CFE_ES_ERREXIT_APP_ERR_EID<sp/>from<sp/>31<sp/>to<sp/>33</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2014/08/19<sp/>14:40:27EDT<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Fixed<sp/>doxygen<sp/>warnings</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2014/05/05<sp/>15:56:42EDT<sp/>acudmore<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Fixed<sp/>misleading<sp/>event<sp/>message<sp/>text.</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2010/11/04<sp/>16:17:43GMT-05:00<sp/>jmdagost<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Updated<sp/>Perf<sp/>Analyzer<sp/>start<sp/>message,<sp/>inserted<sp/>perf<sp/>analyzer<sp/>error<sp/>msg,<sp/>updated<sp/>subsequent<sp/>event<sp/>IDs.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2008/12/08<sp/>12:07:19EST<sp/>dkobe<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Updates<sp/>to<sp/>correct<sp/>doxygen<sp/>errors</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2008/04/17<sp/>08:05:19EDT<sp/>ruperera<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>project<sp/>c:/MKSDATA/MKS-REPOSITORY/MKS-CFE-PROJECT/fsw/cfe-core/src/inc/project.pj</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Revision<sp/>1.32<sp/>2007/09/20<sp/>10:52:56EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>Added<sp/>Query<sp/>All<sp/>Tasks<sp/>command,<sp/>file<sp/>definition,<sp/>events,<sp/>error<sp/>codes<sp/>etc.</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Revision<sp/>1.31<sp/>2007/09/18<sp/>16:39:10EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Updated<sp/>ES<sp/>invalid<sp/>command<sp/>length<sp/>event<sp/>message<sp/>to<sp/>make<sp/>it<sp/>clear.</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>Revision<sp/>1.30<sp/>2007/06/02<sp/>10:10:10EDT<sp/>dlkobe<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Added<sp/>doxygen<sp/>comments<sp/>for<sp/>User&apos;s<sp/>Guides</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">**<sp/>Revision<sp/>1.29<sp/>2007/05/25<sp/>11:51:39EDT<sp/>dlkobe<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">**<sp/>Modified<sp/>doxygen<sp/>to<sp/>improve<sp/>supporting<sp/>docs</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">**<sp/>Revision<sp/>1.28<sp/>2007/05/14<sp/>15:43:45EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment">**<sp/>Cleaned<sp/>up<sp/>events<sp/>and<sp/>disabled<sp/>debug<sp/>code<sp/>for<sp/>application<sp/>restart.</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">**<sp/>Revision<sp/>1.27<sp/>2007/05/11<sp/>11:59:05EDT<sp/>apcudmore<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment">**<sp/>Removed<sp/>Event<sp/>IDs<sp/>33<sp/>and<sp/>34.</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">**<sp/>They<sp/>were<sp/>no<sp/>longer<sp/>needed<sp/>with<sp/>the<sp/>revised<sp/>startup<sp/>sync<sp/>code.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>Revision<sp/>1.26<sp/>2007/05/11<sp/>10:15:07EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="comment">**<sp/>Added<sp/>information<sp/>to<sp/>comments<sp/>for<sp/>CFE_ES_PERF_STOPCMD_EID</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">**<sp/>Revision<sp/>1.25<sp/>2007/05/11<sp/>09:32:54EDT<sp/>rjmcgraw<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="comment">**<sp/>DCR3211:2<sp/>Added<sp/>3<sp/>new<sp/>perf<sp/>events<sp/>for<sp/>&apos;in<sp/>progress&apos;<sp/>checks</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">**<sp/>Revision<sp/>1.24<sp/>2007/05/09<sp/>12:41:24EDT<sp/>dlkobe<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="comment">**<sp/>Added<sp/>event<sp/>messages<sp/>associated<sp/>with<sp/>Dump<sp/>CDS<sp/>Registry<sp/>command</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cfe_es_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cfe_es_events_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">**<sp/>ES<sp/>task<sp/>event<sp/>message<sp/>ID&apos;s.</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="cfe__es__events_8h_1ac61f820a43dd3add8d82049ce2aeef68" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_INIT_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>start<sp/>up<sp/>message<sp/>&quot;informational&quot;<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="cfe__es__events_8h_1a2b6a52452b5b11cdb38751cce1846da1" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_INITSTATS_INF_EID<sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="cfe__es__events_8h_1aa421a4981f714596ff3e15b2d9e7a511" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_NOOP_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>processed<sp/>command<sp/>&quot;informational&quot;<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="cfe__es__events_8h_1a3ba14b67b504980df8f769aff738ad3e" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RESET_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="cfe__es__events_8h_1a36bc859c33de02fcb4509a5389539db9" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_SHELL_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="cfe__es__events_8h_1a784759a209f8476f12f35f6c250884b0" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_START_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="cfe__es__events_8h_1a23ec611f2af9932d5c233384571d4757" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_STOP_DBG_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="cfe__es__events_8h_1af23043ebd3fb53adaf06a7f9ad893c02" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_STOP_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="cfe__es__events_8h_1a27f12c0cc771eea27b60a39225c0259e" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RESTART_APP_DBG_EID<sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="cfe__es__events_8h_1abccc428fb4f288988f96b025b203769b" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RESTART_APP_INF_EID<sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="cfe__es__events_8h_1a7bb8a24b2b09b29aadaf945818e465f2" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RELOAD_APP_DBG_EID<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="cfe__es__events_8h_1a5796f7d4cc6468a97379bdfc35d1e320" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RELOAD_APP_INF_EID<sp/>12<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="cfe__es__events_8h_1a1d61fc0e4b393db77c153cc7c4826cdc" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_EXIT_APP_INF_EID<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="cfe__es__events_8h_1ab4316d4a96066c989b0bcc17f8c4ef8c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ERREXIT_APP_INF_EID<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="cfe__es__events_8h_1a3f963f29e321bca3664d6dfea358b679" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ONE_APP_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321" refid="cfe__es__events_8h_1a5889ff6aeb037f23d1b608f6106f5f4a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ALL_APPS_EID<sp/><sp/><sp/><sp/><sp/><sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333" refid="cfe__es__events_8h_1a6412e95e37d55f8c08fc7caeedcd48e2" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_SYSLOG1_INF_EID<sp/><sp/><sp/><sp/><sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350" refid="cfe__es__events_8h_1a00c87d9d5d6a2e40e3fc5c27236b778c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_SYSLOG2_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="cfe__es__events_8h_1ab162a633cb43417eb42ff32671b6668e" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ERLOG1_INF_EID<sp/><sp/><sp/><sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378" refid="cfe__es__events_8h_1abd52b650720f645c255d22b8fb0938d1" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ERLOG2_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397" refid="cfe__es__events_8h_1a44ead1861db910553ae7c372f3690265" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_MID_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>21<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>invalid<sp/>command<sp/>packet<sp/>&quot;error&quot;<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418" refid="cfe__es__events_8h_1a574524ec8373b1595a4a71c84ee19087" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CC1_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436" refid="cfe__es__events_8h_1a400e1bcc45976116930b189c13eed356" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_LEN_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="453" refid="cfe__es__events_8h_1a1fcfa14bc87a7885f9872ccdf348274e" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_BOOT_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>24<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>command<sp/>specific<sp/>&quot;error&quot;<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469" refid="cfe__es__events_8h_1a9aec9aaa5ef86066e558fea1a693e2d4" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_SHELL_ERR_EID<sp/><sp/><sp/><sp/><sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight></codeline>
+<codeline lineno="488" refid="cfe__es__events_8h_1abf378cd800a362d96fa8c4bccce7e3f1" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_START_ERR_EID<sp/><sp/><sp/><sp/><sp/>26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505" refid="cfe__es__events_8h_1a578ea2d616aba7e8973261c6884e19f5" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_START_INVALID_FILENAME_ERR_EID<sp/><sp/><sp/><sp/><sp/>27</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight></codeline>
+<codeline lineno="522" refid="cfe__es__events_8h_1a65aacade13ca93133e937a06d37b02ae" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_START_INVALID_ENTRY_POINT_ERR_EID<sp/><sp/><sp/><sp/><sp/>28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="523"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537" refid="cfe__es__events_8h_1a3f25081de088ee522b627854411d7d2d" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_START_NULL_APP_NAME_ERR_EID<sp/><sp/><sp/><sp/><sp/>29</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="538"><highlight class="normal"></highlight></codeline>
+<codeline lineno="554" refid="cfe__es__events_8h_1ad23d1bbb70bbc3ac1a2a982d05461dd4" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_START_STACK_ERR_EID<sp/><sp/><sp/><sp/><sp/>30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"></highlight></codeline>
+<codeline lineno="571" refid="cfe__es__events_8h_1ae3e3b74ece7e32a666e5e0cbaa2d2857" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_START_PRIORITY_ERR_EID<sp/><sp/><sp/><sp/><sp/>31</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="572"><highlight class="normal"></highlight></codeline>
+<codeline lineno="590" refid="cfe__es__events_8h_1afa6bef6952f12184b54afa2c0a52dd51" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_START_EXC_ACTION_ERR_EID<sp/><sp/><sp/><sp/><sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="591"><highlight class="normal"></highlight></codeline>
+<codeline lineno="607" refid="cfe__es__events_8h_1ab0d150e6c06ed311ca9223006b30bd47" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ERREXIT_APP_ERR_EID<sp/>33</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"></highlight></codeline>
+<codeline lineno="623" refid="cfe__es__events_8h_1ae1e9696bbc73be31f16b8b6d00984e37" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_STOP_ERR1_EID<sp/><sp/><sp/><sp/><sp/><sp/>35</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="624"><highlight class="normal"></highlight></codeline>
+<codeline lineno="641" refid="cfe__es__events_8h_1a75a73885eda516e7efa8e394d5da51ed" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_STOP_ERR2_EID<sp/><sp/><sp/><sp/><sp/><sp/>36</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="642"><highlight class="normal"></highlight></codeline>
+<codeline lineno="643"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="644"><highlight class="comment">**<sp/><sp/>&quot;Stop<sp/>Application<sp/>\%s<sp/>Failed:<sp/>CleanUpApp<sp/>Error<sp/>0x\%08X.&quot;</highlight></codeline>
+<codeline lineno="645"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="646"><highlight class="normal"></highlight></codeline>
+<codeline lineno="663" refid="cfe__es__events_8h_1a7acce1955c664081585ea9b61d9b9a4e" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_STOP_ERR3_EID<sp/><sp/><sp/><sp/><sp/><sp/>37</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"></highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight></codeline>
+<codeline lineno="680" refid="cfe__es__events_8h_1ae3659fbabac07fa89350d2c0d4fce3f6" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RESTART_APP_ERR1_EID<sp/>38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="698" refid="cfe__es__events_8h_1a603ec4c72fbc63b656142a3ce4693462" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RESTART_APP_ERR2_EID<sp/><sp/><sp/><sp/><sp/><sp/>39</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight></codeline>
+<codeline lineno="700"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="701"><highlight class="comment">**<sp/>&quot;Restart<sp/>Application<sp/>\%s<sp/>Failed:<sp/>AppCreate<sp/>Error<sp/>0x\%08X.&quot;</highlight></codeline>
+<codeline lineno="702"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight></codeline>
+<codeline lineno="720" refid="cfe__es__events_8h_1a1e26cc476e663a992dfa2d4b51714020" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RESTART_APP_ERR3_EID<sp/><sp/><sp/><sp/><sp/><sp/>40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight></codeline>
+<codeline lineno="722"><highlight class="normal"></highlight></codeline>
+<codeline lineno="739" refid="cfe__es__events_8h_1a96cfdc3277d670b778c4e6436e3b3a4c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RESTART_APP_ERR4_EID<sp/><sp/><sp/><sp/><sp/><sp/>41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"></highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight></codeline>
+<codeline lineno="756" refid="cfe__es__events_8h_1a71783e710ad25013141ce93da1063da5" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RELOAD_APP_ERR1_EID<sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="757"><highlight class="normal"></highlight></codeline>
+<codeline lineno="774" refid="cfe__es__events_8h_1a9e47e73ce03272dfc31cdc81f0cd481c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RELOAD_APP_ERR2_EID<sp/><sp/><sp/><sp/><sp/><sp/>43</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="775"><highlight class="normal"></highlight></codeline>
+<codeline lineno="776"><highlight class="normal"></highlight></codeline>
+<codeline lineno="793" refid="cfe__es__events_8h_1a67da4fd4adebffd767906d25068d9601" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RELOAD_APP_ERR3_EID<sp/><sp/><sp/><sp/><sp/><sp/>44</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="794"><highlight class="normal"></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"></highlight></codeline>
+<codeline lineno="812" refid="cfe__es__events_8h_1a628fff408b778c17187a852263636b8a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RELOAD_APP_ERR4_EID<sp/>45</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="813"><highlight class="normal"></highlight></codeline>
+<codeline lineno="814"><highlight class="normal"></highlight></codeline>
+<codeline lineno="830" refid="cfe__es__events_8h_1a95e8aade4413f4da6d637a89520917a2" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_EXIT_APP_ERR_EID<sp/>46</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="831"><highlight class="normal"></highlight></codeline>
+<codeline lineno="832"><highlight class="normal"></highlight></codeline>
+<codeline lineno="844" refid="cfe__es__events_8h_1a67742c87c92b38d660d917c6a504b95f" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PCR_ERR1_EID<sp/>47</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="845"><highlight class="normal"></highlight></codeline>
+<codeline lineno="846"><highlight class="normal"></highlight></codeline>
+<codeline lineno="847"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="848"><highlight class="comment">**<sp/>&quot;CFE_ES_CleanUpApp:<sp/>Unknown<sp/>State<sp/>(<sp/>\%d<sp/>)<sp/>Application<sp/>\%s.&quot;</highlight></codeline>
+<codeline lineno="849"><highlight class="comment">*/</highlight></codeline>
+<codeline lineno="861" refid="cfe__es__events_8h_1a9f475d0ed3b4db09492bffb224398cdc" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PCR_ERR2_EID<sp/>48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal"></highlight></codeline>
+<codeline lineno="877" refid="cfe__es__events_8h_1a771ca5a2935f2695ff1e1d33b22a118a" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ONE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>49</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="878"><highlight class="normal"></highlight></codeline>
+<codeline lineno="893" refid="cfe__es__events_8h_1a4aa79a71342dd60890c18a2149d08ae1" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ONE_APPID_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="894"><highlight class="normal"></highlight></codeline>
+<codeline lineno="895"><highlight class="normal"></highlight></codeline>
+<codeline lineno="909" refid="cfe__es__events_8h_1a2b3f320862ca850ee77da0ad0e1f0545" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_OSCREATE_ERR_EID<sp/><sp/>51</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="910"><highlight class="normal"></highlight></codeline>
+<codeline lineno="924" refid="cfe__es__events_8h_1a160445390ee4141e8a03e87c1cc5a3b6" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_WRHDR_ERR_EID<sp/><sp/><sp/><sp/><sp/>52</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"></highlight></codeline>
+<codeline lineno="940" refid="cfe__es__events_8h_1aa392fac450c0f2adf685d18d8c054e28" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_TASKWR_ERR_EID<sp/><sp/><sp/><sp/>53</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="941"><highlight class="normal"></highlight></codeline>
+<codeline lineno="955" refid="cfe__es__events_8h_1aad13698672ed5f16c5b20edbb8edd0a6" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_SYSLOG2_ERR_EID<sp/><sp/><sp/><sp/><sp/>55</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="956"><highlight class="normal"></highlight></codeline>
+<codeline lineno="970" refid="cfe__es__events_8h_1a254fabb250070889bda8b5781ff509ec" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ERLOG2_ERR_EID<sp/><sp/><sp/><sp/>56</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="971"><highlight class="normal"></highlight></codeline>
+<codeline lineno="985" refid="cfe__es__events_8h_1a384d2d4416c962535e7da60a41b3acdd" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_STARTCMD_EID<sp/><sp/><sp/><sp/><sp/><sp/>57</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="986"><highlight class="normal"></highlight></codeline>
+<codeline lineno="997" refid="cfe__es__events_8h_1aa35382e3cf9c095ca05fee74685d0a9d" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_STARTCMD_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>58</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="998"><highlight class="normal"></highlight></codeline>
+<codeline lineno="999"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1016" refid="cfe__es__events_8h_1a96964208f61b9e89c898bf8a4fde30c0" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_STARTCMD_TRIG_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>59</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1017"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1018"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1036" refid="cfe__es__events_8h_1af1624e8b8b8ceb7595b7239fb273e0db" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_STOPCMD_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1037"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1038"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1053" refid="cfe__es__events_8h_1a4503884d2c8a86c2af337d7324efd9c1" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_STOPCMD_ERR1_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>61</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1054"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1055"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1068" refid="cfe__es__events_8h_1a3772e46b87cf04eccb6da9cfae87e1d1" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_STOPCMD_ERR2_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>62</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1069"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1070"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1082" refid="cfe__es__events_8h_1aeb3284af0b63ab5103683f590b3c9f10" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_FILTMSKCMD_EID<sp/><sp/>63</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1083"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1099" refid="cfe__es__events_8h_1a514d8b684590944a1bf771891d902ac7" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_FILTMSKERR_EID<sp/><sp/>64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1113" refid="cfe__es__events_8h_1aff34396f21a8226c2700fcc6c34ccf20" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_TRIGMSKCMD_EID<sp/>65</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1130" refid="cfe__es__events_8h_1a385abf1261a513720a1aae2c38e362ed" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_TRIGMSKERR_EID<sp/>66</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1147" refid="cfe__es__events_8h_1a844e9b73880e448277af7043d51e2b3b" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_LOG_ERR_EID<sp/><sp/><sp/><sp/><sp/>67</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1165" refid="cfe__es__events_8h_1a47fae8c71ea7fa5879159a8ec416248f" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_PERF_DATAWRITTEN_EID<sp/><sp/><sp/><sp/><sp/>68</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1182" refid="cfe__es__events_8h_1a56acc169cc09c0356f1dac6427fb855c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CDS_REGISTER_ERR_EID<sp/><sp/><sp/><sp/><sp/>69</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1197" refid="cfe__es__events_8h_1a9c82e2a444939ba031989209bf756bca" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_SYSLOGMODE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>70</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1212" refid="cfe__es__events_8h_1a38a38bf5d757930c007e0b71bb492670" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_ERR_SYSLOGMODE_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>71</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1224" refid="cfe__es__events_8h_1ac7f657d19456e8ea5cab32f56871d011" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RESET_PR_COUNT_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>72</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1239" refid="cfe__es__events_8h_1a62fac25e76061880d5b91c8a6d97273c" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_SET_MAX_PR_COUNT_EID<sp/><sp/><sp/><sp/><sp/>73</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1255" refid="cfe__es__events_8h_1a23ebd9aee23cac9127b79a16d7bba87f" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_FILEWRITE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>74</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1270" refid="cfe__es__events_8h_1ae534e47efdf15e9c6833e72048c7371b" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_RST_ACCESS_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>75</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1286" refid="cfe__es__events_8h_1a64e31d9dd979bc117fa8e6adaf5fcba7" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CDS_DELETE_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/>76</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1301" refid="cfe__es__events_8h_1a83f18437b19f7c2141eb5aa4c7cd3349" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CDS_NAME_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>77</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1316" refid="cfe__es__events_8h_1a1a2dda4659076c754159e17998f367d4" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CDS_DELETED_INFO_EID<sp/><sp/><sp/><sp/><sp/>78</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1333" refid="cfe__es__events_8h_1a4cc6fea9f48dd210ed9c3451bd59b27b" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CDS_DELETE_TBL_ERR_EID<sp/><sp/><sp/>79</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1351" refid="cfe__es__events_8h_1a789d0d792e9220f6af4e0cc5df0dd923" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CDS_OWNER_ACTIVE_EID<sp/><sp/><sp/><sp/><sp/>80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1363" refid="cfe__es__events_8h_1afcd5e1ae0c62ec8a8e743c5dea18a799" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_TLM_POOL_STATS_INFO_EID<sp/><sp/>81</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1384" refid="cfe__es__events_8h_1a3baac054014e41c90f6955aa4581c6d3" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_INVALID_POOL_HANDLE_ERR_EID<sp/><sp/><sp/>82</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1402" refid="cfe__es__events_8h_1affdeef3f8103d8409cdd4ef9bfe0e7bd" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CDS_REG_DUMP_INF_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>83</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1419" refid="cfe__es__events_8h_1a46e742370cb011d0f233cbc6cbb1ddd3" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CDS_DUMP_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>84</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1436" refid="cfe__es__events_8h_1ac9b7598b7db06da5e0c1f16b809a3f14" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_WRITE_CFE_HDR_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>85</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1452" refid="cfe__es__events_8h_1aca3ea6811850efa00cd1f825b0728a30" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_CREATING_CDS_DUMP_ERR_EID<sp/><sp/><sp/><sp/><sp/><sp/>86</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1470" refid="cfe__es__events_8h_1ae19cb686cec48c38170201707e07b812" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_TASKINFO_EID<sp/><sp/><sp/><sp/><sp/><sp/>87</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1486" refid="cfe__es__events_8h_1a32c7d3e094c4e6e1d9b56e7aa4e5420f" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_TASKINFO_OSCREATE_ERR_EID<sp/><sp/>88</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1501" refid="cfe__es__events_8h_1ae754c1d6ac903a65096e81da8ac85eb0" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_TASKINFO_WRHDR_ERR_EID<sp/><sp/><sp/><sp/><sp/>89</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1502"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1503"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1517" refid="cfe__es__events_8h_1a657bbac7b0014e61c4d964de38cd94fb" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_TASKINFO_WR_ERR_EID<sp/><sp/><sp/><sp/>90</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1518"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1519"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1534" refid="cfe__es__events_8h_1ae4519ec6de2878e86431b22d6eb8cb00" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_VERSION_INF_EID<sp/><sp/><sp/><sp/>91</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1535"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1558" refid="cfe__es__events_8h_1a2e538314dddd7f123615c57982b01738" refkind="member"><highlight class="preprocessor">#define<sp/>CFE_ES_BUILD_INF_EID<sp/><sp/><sp/><sp/>92</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1559"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1560"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1561"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1562"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1563"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1564"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1565"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1566"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_cfe_es_events_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1567"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1568"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1569"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1570"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="inc/cfe_es_events.h"/>
+  </compounddef>
+</doxygen>

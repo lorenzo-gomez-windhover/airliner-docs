@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfesbugreset" kind="page">
+    <compoundname>cfesbugreset</compoundname>
+    <title>All Resets</title>
+    <detaileddescription>
+<para>The software bus does not preserve any information across a reset of any kind. The software bus initializes internal data structures and tables the same way regardless of the type of reset. The routing is reestablished as the system initializes. It is normal procedure for each task of the system to create the pipe or pipes it needs and do all of its subscriptions during task initialization.</para><para>After any reset the following statements are true:</para><para><itemizedlist>
+<listitem>
+<para>The routing table is cleared and does not contain any routes. <linebreak/>
+ </para></listitem>
+<listitem>
+<para>All subscriptions are lost and must be regenerated. <linebreak/>
+ </para></listitem>
+<listitem>
+<para>The pipe table contains no data, all pipes must be recreated. <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Any packets in transit at the time of the reset are lost. <linebreak/>
+ </para></listitem>
+<listitem>
+<para>The sequence counters for telemetry packets will begin again with a value of one. <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para><para>Next: <ref refid="cfesbugrouting" kindref="compound">Message Routing</ref> <linebreak/>
+ Prev: <ref refid="cfesbuginit" kindref="compound">Initialization</ref> <linebreak/>
+ Up To: <ref refid="cfesbugops" kindref="compound">Operation of the SB Software</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_f_m___free_space_pkt__t" kind="struct" language="C++" prot="public">
+    <compoundname>FM_FreeSpacePkt_t</compoundname>
+    <includes refid="fm__msg_8h" local="no">fm_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_m___free_space_pkt__t_1a72375dd8369d61af841dc2bdaf3fba7c" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_FreeSpacePkt_t::TlmHeader[CFE_SB_TLM_HDR_SIZE]</definition>
+        <argsstring>[CFE_SB_TLM_HDR_SIZE]</argsstring>
+        <name>TlmHeader</name>
+        <briefdescription>
+<para>cFE SB tlm hdr </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="448" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___free_space_pkt__t_1ab06a52f425f2d4052dff0a7cea5d9a33" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___free_space_pkt_entry__t" kindref="compound">FM_FreeSpacePktEntry_t</ref></type>
+        <definition>FM_FreeSpacePktEntry_t FM_FreeSpacePkt_t::FileSys[FM_TABLE_ENTRY_COUNT]</definition>
+        <argsstring>[FM_TABLE_ENTRY_COUNT]</argsstring>
+        <name>FileSys</name>
+        <briefdescription>
+<para>Array of file system free space entries. </para>        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfsfmtlmmnems_1_cfsfmtlmmnems000023"><xreftitle>Telemetry Mnemonic(s)</xreftitle><xrefdescription><para><bold><computeroutput>$sc_$cpu_FM_</computeroutput>?</bold>??? </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="450" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="450" bodyend="-1"/>
+        <referencedby refid="fm__cmds_8h_1a22d28bce401b7af457415f71e7ffd9f2" compoundref="fm__cmds_8c" startline="853" endline="911">FM_GetFreeSpaceCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="cfsfmtlm_1_cfsfmtlm000005"><xreftitle>Name</xreftitle><xrefdescription><para>Get Free Space telemetry packet </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="27">
+        <label>FM_FreeSpacePktEntry_t</label>
+        <link refid="struct_f_m___free_space_pkt_entry__t"/>
+      </node>
+      <node id="26">
+        <label>FM_FreeSpacePkt_t</label>
+        <link refid="struct_f_m___free_space_pkt__t"/>
+        <childnode refid="27" relation="usage">
+          <edgelabel>FileSys</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/fm/fsw/src/fm_msg.h" line="447" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="446" bodyend="452"/>
+    <listofallmembers>
+      <member refid="struct_f_m___free_space_pkt__t_1ab06a52f425f2d4052dff0a7cea5d9a33" prot="public" virt="non-virtual"><scope>FM_FreeSpacePkt_t</scope><name>FileSys</name></member>
+      <member refid="struct_f_m___free_space_pkt__t_1a72375dd8369d61af841dc2bdaf3fba7c" prot="public" virt="non-virtual"><scope>FM_FreeSpacePkt_t</scope><name>TlmHeader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfeesugperfstop" kind="page">
+    <compoundname>cfeesugperfstop</compoundname>
+    <title>Stopping the Collection of Performance Data</title>
+    <detaileddescription>
+<para>The <ref refid="cfe__es__msg_8h_1a7afe278b7fda7f4e3b3f546cedfe8c58" kindref="member">CFE_ES_PERF_STOPDATA_CC</ref> command is used to stop the data collection process and write the buffer data to a file. The path and filename may be specified in the command. If the filename command field contains an empty string, the configuration parameter #CFE_ES_DEFAULT_PERF_DUMP_FILENAME is used to specify the path and filename. The number of entries written to the file is determined by the &apos;data count&apos; variable, which is sent in the ES housekeeping telemetry packet. To ensure cpu hogging does not occur during the write process, ES creates a low priority child task to perform the file write operation. This child task will write a number of entries, then sleep for a short time to give tasks of lower priority a chance to run. The number of entries between delays, and the delay time is displayed in the debug event at the time the stop command is received.</para><para>Next: <ref refid="cfeesugperfview" kindref="compound">Viewing the Collection of Performance Data</ref> <linebreak/>
+ Prev: <ref refid="cfeesugperfmodes" kindref="compound">Performance Data Collection Modes</ref> <linebreak/>
+ Up To: <ref refid="cfeesugperfsrv" kindref="compound">Performance Data Collection Service</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

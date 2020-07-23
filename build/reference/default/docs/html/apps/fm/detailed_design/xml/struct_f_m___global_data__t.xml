@@ -1,0 +1,641 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_f_m___global_data__t" kind="struct" language="C++" prot="public">
+    <compoundname>FM_GlobalData_t</compoundname>
+    <includes refid="fm__msg_8h" local="no">fm_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a48dce8bae007845afd644c74edc98af9" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___free_space_table__t" kindref="compound">FM_FreeSpaceTable_t</ref> *</type>
+        <definition>FM_FreeSpaceTable_t* FM_GlobalData_t::FreeSpaceTablePtr</definition>
+        <argsstring></argsstring>
+        <name>FreeSpaceTablePtr</name>
+        <briefdescription>
+<para>File System Table Pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="558" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="558" bodyend="-1"/>
+        <referencedby refid="fm__tbl_8h_1a86ad8fdd8849817101644c6f6d9ed98e" compoundref="fm__tbl_8c" startline="198" endline="217">FM_AcquireTablePointers</referencedby>
+        <referencedby refid="fm__cmds_8h_1a22d28bce401b7af457415f71e7ffd9f2" compoundref="fm__cmds_8c" startline="853" endline="911">FM_GetFreeSpaceCmd</referencedby>
+        <referencedby refid="fm__tbl_8h_1ae5aa1fc348f1578ab054b7c3e1c0774a" compoundref="fm__tbl_8c" startline="226" endline="236">FM_ReleaseTablePointers</referencedby>
+        <referencedby refid="fm__cmds_8h_1a1a658988540f6dfbbc497fb697ede89a" compoundref="fm__cmds_8c" startline="920" endline="980">FM_SetTableStateCmd</referencedby>
+        <referencedby refid="fm__tbl_8h_1a33cd393cf5094320d110aaefee2fa4e6" compoundref="fm__tbl_8c" startline="41" endline="66">FM_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a9802d553b525871648ed43e54c2f7a44" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t FM_GlobalData_t::FreeSpaceTableHandle</definition>
+        <argsstring></argsstring>
+        <name>FreeSpaceTableHandle</name>
+        <briefdescription>
+<para>File System Table Handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="559" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="559" bodyend="-1"/>
+        <referencedby refid="fm__tbl_8h_1a86ad8fdd8849817101644c6f6d9ed98e" compoundref="fm__tbl_8c" startline="198" endline="217">FM_AcquireTablePointers</referencedby>
+        <referencedby refid="fm__tbl_8h_1ae5aa1fc348f1578ab054b7c3e1c0774a" compoundref="fm__tbl_8c" startline="226" endline="236">FM_ReleaseTablePointers</referencedby>
+        <referencedby refid="fm__cmds_8h_1a1a658988540f6dfbbc497fb697ede89a" compoundref="fm__cmds_8c" startline="920" endline="980">FM_SetTableStateCmd</referencedby>
+        <referencedby refid="fm__tbl_8h_1a33cd393cf5094320d110aaefee2fa4e6" compoundref="fm__tbl_8c" startline="41" endline="66">FM_TableInit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1ae3043a178c3d1377b530048d1b4122e9" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t FM_GlobalData_t::CmdPipe</definition>
+        <argsstring></argsstring>
+        <name>CmdPipe</name>
+        <briefdescription>
+<para>cFE software bus command pipe </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="561" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="561" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1a1d291a92a04c7fd196ac554c1d5c33b0" compoundref="fm__app_8c" startline="153" endline="232">FM_AppInit</referencedby>
+        <referencedby refid="fm__app_8h_1aa05f5a0caf01f64c86f288d456e9d48b" compoundref="fm__app_8c" startline="62" endline="144">FM_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1ab1ac60c7deb5bef92cf454331634b398" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 FM_GlobalData_t::ChildTaskID</definition>
+        <argsstring></argsstring>
+        <name>ChildTaskID</name>
+        <briefdescription>
+<para>Child task ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="563" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="563" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3dd7c87e5bc7606add8e69323e0795f1" compoundref="fm__child_8c" startline="54" endline="101">FM_ChildInit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a4c96d444916b205fb90555252551b1fc" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 FM_GlobalData_t::ChildSemaphore</definition>
+        <argsstring></argsstring>
+        <name>ChildSemaphore</name>
+        <briefdescription>
+<para>Child task wakeup counting semaphore. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="564" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="564" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1a1d291a92a04c7fd196ac554c1d5c33b0" compoundref="fm__app_8c" startline="153" endline="232">FM_AppInit</referencedby>
+        <referencedby refid="fm__child_8h_1a3dd7c87e5bc7606add8e69323e0795f1" compoundref="fm__child_8c" startline="54" endline="101">FM_ChildInit</referencedby>
+        <referencedby refid="fm__child_8h_1a04b7cf4ab2461b64d56c0016401e5455" compoundref="fm__child_8c" startline="153" endline="206">FM_ChildLoop</referencedby>
+        <referencedby refid="fm__child_8h_1ae1fcecb533fa5da32afa94345ad87d7f" compoundref="fm__child_8c" startline="110" endline="144">FM_ChildTask</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1ac9c86c0af3de1d880983c142daa81391" compoundref="fm__cmd__utils_8c" startline="578" endline="603">FM_InvokeChildTask</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1aab165c5c2ca675a8ac2e22901b6b10c2" compoundref="fm__cmd__utils_8c" startline="524" endline="569">FM_VerifyChildTask</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a252da43588c5ed504c3a9e4507162f31" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 FM_GlobalData_t::ChildQueueCountSem</definition>
+        <argsstring></argsstring>
+        <name>ChildQueueCountSem</name>
+        <briefdescription>
+<para>Child queue counter mutex semaphore. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="565" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="565" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1a1d291a92a04c7fd196ac554c1d5c33b0" compoundref="fm__app_8c" startline="153" endline="232">FM_AppInit</referencedby>
+        <referencedby refid="fm__child_8h_1a3dd7c87e5bc7606add8e69323e0795f1" compoundref="fm__child_8c" startline="54" endline="101">FM_ChildInit</referencedby>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1ac9c86c0af3de1d880983c142daa81391" compoundref="fm__cmd__utils_8c" startline="578" endline="603">FM_InvokeChildTask</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a8a3186f5da1ad8f35e988e4a3894d150" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::ChildCmdCounter</definition>
+        <argsstring></argsstring>
+        <name>ChildCmdCounter</name>
+        <briefdescription>
+<para>Child task command success counter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="567" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="567" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a56e7773f1b8ab3fea6e3511edbbce859" compoundref="fm__child_8c" startline="690" endline="861">FM_ChildConcatCmd</referencedby>
+        <referencedby refid="fm__child_8h_1ab443b52c6ce1682760dc98b74f675806" compoundref="fm__child_8c" startline="313" endline="349">FM_ChildCopyCmd</referencedby>
+        <referencedby refid="fm__child_8h_1aeff2a44bc96d3197178b65c2a3d8968d" compoundref="fm__child_8c" startline="1031" endline="1065">FM_ChildCreateDirCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a3a3dad84b3d793f17ec51fbccbabb24a" compoundref="fm__child_8c" startline="645" endline="681">FM_ChildDecompressCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a6ca53203cb0bd42a38f2e10c14e2b294" compoundref="fm__child_8c" startline="492" endline="636">FM_ChildDeleteAllCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a5cf5d58bf0f535d5028d348888d93fc6" compoundref="fm__child_8c" startline="446" endline="483">FM_ChildDeleteCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a88d72fce98a917ff068ae8aad857af13" compoundref="fm__child_8c" startline="1074" endline="1148">FM_ChildDeleteDirCmd</referencedby>
+        <referencedby refid="fm__child_8h_1aa0bc195d165713d7c107a09a55135d1a" compoundref="fm__child_8c" startline="1471" endline="1593">FM_ChildDirListFileLoop</referencedby>
+        <referencedby refid="fm__child_8h_1a9eb81011943d9b7efd2817d9eff72e03" compoundref="fm__child_8c" startline="1222" endline="1346">FM_ChildDirListPktCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+        <referencedby refid="fm__child_8h_1ab4328867626461a989a53c46556f29c9" compoundref="fm__child_8c" startline="358" endline="393">FM_ChildMoveCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a1189ef8aad610e70fe9d36d7a9f684a9" compoundref="fm__child_8c" startline="402" endline="437">FM_ChildRenameCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a4075be244ac10994f306259f9fbccd57" compoundref="fm__child_8c" startline="1354" endline="1381">FM_ChildSetPermissionsCmd</referencedby>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+        <referencedby refid="fm__cmds_8h_1a5572ad9869f665089bac999af6254f9a" compoundref="fm__cmds_8c" startline="73" endline="98">FM_ResetCountersCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1ab3c24048bd47e77c7b0a78cad02bdb6f" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::ChildCmdErrCounter</definition>
+        <argsstring></argsstring>
+        <name>ChildCmdErrCounter</name>
+        <briefdescription>
+<para>Child task command error counter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="568" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="568" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a56e7773f1b8ab3fea6e3511edbbce859" compoundref="fm__child_8c" startline="690" endline="861">FM_ChildConcatCmd</referencedby>
+        <referencedby refid="fm__child_8h_1ab443b52c6ce1682760dc98b74f675806" compoundref="fm__child_8c" startline="313" endline="349">FM_ChildCopyCmd</referencedby>
+        <referencedby refid="fm__child_8h_1aeff2a44bc96d3197178b65c2a3d8968d" compoundref="fm__child_8c" startline="1031" endline="1065">FM_ChildCreateDirCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a3a3dad84b3d793f17ec51fbccbabb24a" compoundref="fm__child_8c" startline="645" endline="681">FM_ChildDecompressCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a6ca53203cb0bd42a38f2e10c14e2b294" compoundref="fm__child_8c" startline="492" endline="636">FM_ChildDeleteAllCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a5cf5d58bf0f535d5028d348888d93fc6" compoundref="fm__child_8c" startline="446" endline="483">FM_ChildDeleteCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a88d72fce98a917ff068ae8aad857af13" compoundref="fm__child_8c" startline="1074" endline="1148">FM_ChildDeleteDirCmd</referencedby>
+        <referencedby refid="fm__child_8h_1af8674c8eb239138b4fc1b7bea8d857b8" compoundref="fm__child_8c" startline="1157" endline="1213">FM_ChildDirListFileCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a37da339a9867e1cb45d831c81d4a0a0a" compoundref="fm__child_8c" startline="1389" endline="1462">FM_ChildDirListFileInit</referencedby>
+        <referencedby refid="fm__child_8h_1aa0bc195d165713d7c107a09a55135d1a" compoundref="fm__child_8c" startline="1471" endline="1593">FM_ChildDirListFileLoop</referencedby>
+        <referencedby refid="fm__child_8h_1a9eb81011943d9b7efd2817d9eff72e03" compoundref="fm__child_8c" startline="1222" endline="1346">FM_ChildDirListPktCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a04b7cf4ab2461b64d56c0016401e5455" compoundref="fm__child_8c" startline="153" endline="206">FM_ChildLoop</referencedby>
+        <referencedby refid="fm__child_8h_1ab4328867626461a989a53c46556f29c9" compoundref="fm__child_8c" startline="358" endline="393">FM_ChildMoveCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__child_8h_1a1189ef8aad610e70fe9d36d7a9f684a9" compoundref="fm__child_8c" startline="402" endline="437">FM_ChildRenameCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a4075be244ac10994f306259f9fbccd57" compoundref="fm__child_8c" startline="1354" endline="1381">FM_ChildSetPermissionsCmd</referencedby>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+        <referencedby refid="fm__cmds_8h_1a5572ad9869f665089bac999af6254f9a" compoundref="fm__cmds_8c" startline="73" endline="98">FM_ResetCountersCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a828ef37cb969dd7acaad3d0ae9d63103" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::ChildCmdWarnCounter</definition>
+        <argsstring></argsstring>
+        <name>ChildCmdWarnCounter</name>
+        <briefdescription>
+<para>Child task command warning counter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="569" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="569" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a6ca53203cb0bd42a38f2e10c14e2b294" compoundref="fm__child_8c" startline="492" endline="636">FM_ChildDeleteAllCmd</referencedby>
+        <referencedby refid="fm__child_8h_1aa0bc195d165713d7c107a09a55135d1a" compoundref="fm__child_8c" startline="1471" endline="1593">FM_ChildDirListFileLoop</referencedby>
+        <referencedby refid="fm__child_8h_1a9eb81011943d9b7efd2817d9eff72e03" compoundref="fm__child_8c" startline="1222" endline="1346">FM_ChildDirListPktCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+        <referencedby refid="fm__cmds_8h_1a5572ad9869f665089bac999af6254f9a" compoundref="fm__cmds_8c" startline="73" endline="98">FM_ResetCountersCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a936653889030b685683dd8ddc68ea98d" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::ChildWriteIndex</definition>
+        <argsstring></argsstring>
+        <name>ChildWriteIndex</name>
+        <briefdescription>
+<para>Array index for next write to command args. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="571" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="571" bodyend="-1"/>
+        <referencedby refid="fm__cmds_8h_1a1e0f804987928b47ee0adcb6e86774ab" compoundref="fm__cmds_8c" startline="463" endline="518">FM_ConcatFilesCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1af7b3897a02746febd5b39dd10d14856c" compoundref="fm__cmds_8c" startline="107" endline="169">FM_CopyFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a5fcf69c1170e59372afe376bc4c55188" compoundref="fm__cmds_8c" startline="626" endline="665">FM_CreateDirectoryCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1aeb70765146cda5280ee2f432eb375a69" compoundref="fm__cmds_8c" startline="407" endline="454">FM_DecompressFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a9cbb8c1d8bd3982b24b836fa4bd94499" compoundref="fm__cmds_8c" startline="353" endline="398">FM_DeleteAllFilesCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a6de49e43b04468f049ccedc1952be290" compoundref="fm__cmds_8c" startline="674" endline="713">FM_DeleteDirectoryCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a3a28115b8264be91ac5d489e209f2b48" compoundref="fm__cmds_8c" startline="305" endline="344">FM_DeleteFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a7fe11f5ba185c987429ebfbd5b4d92e4" compoundref="fm__cmds_8c" startline="722" endline="788">FM_GetDirListFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1aaa7b87dc34b2a2e822418eca838ecf92" compoundref="fm__cmds_8c" startline="797" endline="844">FM_GetDirListPktCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a66da86060eb3c7adcd7598e312e8c4b7" compoundref="fm__cmds_8c" startline="527" endline="578">FM_GetFileInfoCmd</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1ac9c86c0af3de1d880983c142daa81391" compoundref="fm__cmd__utils_8c" startline="578" endline="603">FM_InvokeChildTask</referencedby>
+        <referencedby refid="fm__cmds_8h_1a72c7234c737e4e799fa6171b89a57c59" compoundref="fm__cmds_8c" startline="178" endline="240">FM_MoveFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1ad5115365489fbc7bec549c8453c17893" compoundref="fm__cmds_8c" startline="249" endline="296">FM_RenameFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1aa85951292940f7b849ad51b4406344a9" compoundref="fm__cmds_8c" startline="989" endline="1034">FM_SetPermissionsCmd</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1aab165c5c2ca675a8ac2e22901b6b10c2" compoundref="fm__cmd__utils_8c" startline="524" endline="569">FM_VerifyChildTask</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1ab1a8ce69edcc6a01fc81f96f252cc4bd" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::ChildReadIndex</definition>
+        <argsstring></argsstring>
+        <name>ChildReadIndex</name>
+        <briefdescription>
+<para>Array index for next read from command args. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="572" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="572" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a04b7cf4ab2461b64d56c0016401e5455" compoundref="fm__child_8c" startline="153" endline="206">FM_ChildLoop</referencedby>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a145677a299584ed8f7661cf67980dce6" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::ChildQueueCount</definition>
+        <argsstring></argsstring>
+        <name>ChildQueueCount</name>
+        <briefdescription>
+<para>Number of pending commands in queue. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="573" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="573" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a04b7cf4ab2461b64d56c0016401e5455" compoundref="fm__child_8c" startline="153" endline="206">FM_ChildLoop</referencedby>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1ac9c86c0af3de1d880983c142daa81391" compoundref="fm__cmd__utils_8c" startline="578" endline="603">FM_InvokeChildTask</referencedby>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1aab165c5c2ca675a8ac2e22901b6b10c2" compoundref="fm__cmd__utils_8c" startline="524" endline="569">FM_VerifyChildTask</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a4cc0e2f3e70fcd7f1f611bd88bb0fab9" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::CommandCounter</definition>
+        <argsstring></argsstring>
+        <name>CommandCounter</name>
+        <briefdescription>
+<para>Application command success counter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="575" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="575" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+        <referencedby refid="fm__cmds_8h_1a5572ad9869f665089bac999af6254f9a" compoundref="fm__cmds_8c" startline="73" endline="98">FM_ResetCountersCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1affe1624e4c39365d4ed1e4ae3b2fc7bc" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::CommandErrCounter</definition>
+        <argsstring></argsstring>
+        <name>CommandErrCounter</name>
+        <briefdescription>
+<para>Application command error counter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="576" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="576" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1afcc3ddfd95099a8f71059bea1245507b" compoundref="fm__app_8c" startline="277" endline="384">FM_ProcessCmd</referencedby>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+        <referencedby refid="fm__cmds_8h_1a5572ad9869f665089bac999af6254f9a" compoundref="fm__cmds_8c" startline="73" endline="98">FM_ResetCountersCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1ac97ca7a69ef645ed59921fca9b318dcc" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::Spare8a</definition>
+        <argsstring></argsstring>
+        <name>Spare8a</name>
+        <briefdescription>
+<para>Placeholder for unused command warning counter. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="577" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a8e817c673fa32a0c5f6c0bd97dde52c0" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::ChildCurrentCC</definition>
+        <argsstring></argsstring>
+        <name>ChildCurrentCC</name>
+        <briefdescription>
+<para>Command code currently executing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="579" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="579" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a56e7773f1b8ab3fea6e3511edbbce859" compoundref="fm__child_8c" startline="690" endline="861">FM_ChildConcatCmd</referencedby>
+        <referencedby refid="fm__child_8h_1ab443b52c6ce1682760dc98b74f675806" compoundref="fm__child_8c" startline="313" endline="349">FM_ChildCopyCmd</referencedby>
+        <referencedby refid="fm__child_8h_1aeff2a44bc96d3197178b65c2a3d8968d" compoundref="fm__child_8c" startline="1031" endline="1065">FM_ChildCreateDirCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a3a3dad84b3d793f17ec51fbccbabb24a" compoundref="fm__child_8c" startline="645" endline="681">FM_ChildDecompressCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a6ca53203cb0bd42a38f2e10c14e2b294" compoundref="fm__child_8c" startline="492" endline="636">FM_ChildDeleteAllCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a5cf5d58bf0f535d5028d348888d93fc6" compoundref="fm__child_8c" startline="446" endline="483">FM_ChildDeleteCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a88d72fce98a917ff068ae8aad857af13" compoundref="fm__child_8c" startline="1074" endline="1148">FM_ChildDeleteDirCmd</referencedby>
+        <referencedby refid="fm__child_8h_1af8674c8eb239138b4fc1b7bea8d857b8" compoundref="fm__child_8c" startline="1157" endline="1213">FM_ChildDirListFileCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a9eb81011943d9b7efd2817d9eff72e03" compoundref="fm__child_8c" startline="1222" endline="1346">FM_ChildDirListPktCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+        <referencedby refid="fm__child_8h_1ab4328867626461a989a53c46556f29c9" compoundref="fm__child_8c" startline="358" endline="393">FM_ChildMoveCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a1189ef8aad610e70fe9d36d7a9f684a9" compoundref="fm__child_8c" startline="402" endline="437">FM_ChildRenameCmd</referencedby>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a19ad449daffa1d4c54fa0689a7fc3ba5" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::ChildPreviousCC</definition>
+        <argsstring></argsstring>
+        <name>ChildPreviousCC</name>
+        <briefdescription>
+<para>Command code previously executed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="580" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="580" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a56e7773f1b8ab3fea6e3511edbbce859" compoundref="fm__child_8c" startline="690" endline="861">FM_ChildConcatCmd</referencedby>
+        <referencedby refid="fm__child_8h_1ab443b52c6ce1682760dc98b74f675806" compoundref="fm__child_8c" startline="313" endline="349">FM_ChildCopyCmd</referencedby>
+        <referencedby refid="fm__child_8h_1aeff2a44bc96d3197178b65c2a3d8968d" compoundref="fm__child_8c" startline="1031" endline="1065">FM_ChildCreateDirCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a3a3dad84b3d793f17ec51fbccbabb24a" compoundref="fm__child_8c" startline="645" endline="681">FM_ChildDecompressCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a6ca53203cb0bd42a38f2e10c14e2b294" compoundref="fm__child_8c" startline="492" endline="636">FM_ChildDeleteAllCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a5cf5d58bf0f535d5028d348888d93fc6" compoundref="fm__child_8c" startline="446" endline="483">FM_ChildDeleteCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a88d72fce98a917ff068ae8aad857af13" compoundref="fm__child_8c" startline="1074" endline="1148">FM_ChildDeleteDirCmd</referencedby>
+        <referencedby refid="fm__child_8h_1af8674c8eb239138b4fc1b7bea8d857b8" compoundref="fm__child_8c" startline="1157" endline="1213">FM_ChildDirListFileCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a9eb81011943d9b7efd2817d9eff72e03" compoundref="fm__child_8c" startline="1222" endline="1346">FM_ChildDirListPktCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+        <referencedby refid="fm__child_8h_1ab4328867626461a989a53c46556f29c9" compoundref="fm__child_8c" startline="358" endline="393">FM_ChildMoveCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a1189ef8aad610e70fe9d36d7a9f684a9" compoundref="fm__child_8c" startline="402" endline="437">FM_ChildRenameCmd</referencedby>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1aa041b8dbab5cea3df2cea4e6b1ec4b60" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+        <definition>uint8 FM_GlobalData_t::Spare8b</definition>
+        <argsstring></argsstring>
+        <name>Spare8b</name>
+        <briefdescription>
+<para>Structure alignment spare. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="581" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a28ff4f42c6d5ec33c65a26db44639ef9" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 FM_GlobalData_t::FileStatTime</definition>
+        <argsstring></argsstring>
+        <name>FileStatTime</name>
+        <briefdescription>
+<para>Modify time from most recent OS_stat. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="583" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="583" bodyend="-1"/>
+        <referencedby refid="fm__cmds_8h_1a66da86060eb3c7adcd7598e312e8c4b7" compoundref="fm__cmds_8c" startline="527" endline="578">FM_GetFileInfoCmd</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1afe8ea141831a4e9ff8c09dd79236321e" compoundref="fm__cmd__utils_8c" startline="136" endline="230">FM_GetFilenameState</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a1fcb17f2133be8dc06598559771daae5" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 FM_GlobalData_t::FileStatSize</definition>
+        <argsstring></argsstring>
+        <name>FileStatSize</name>
+        <briefdescription>
+<para>File size from most recent OS_stat. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="584" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="584" bodyend="-1"/>
+        <referencedby refid="fm__cmds_8h_1a66da86060eb3c7adcd7598e312e8c4b7" compoundref="fm__cmds_8c" startline="527" endline="578">FM_GetFileInfoCmd</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1afe8ea141831a4e9ff8c09dd79236321e" compoundref="fm__cmd__utils_8c" startline="136" endline="230">FM_GetFilenameState</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a4c8ee2573a1f81d966f230b4939b2ee5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___dir_list_file_stats__t" kindref="compound">FM_DirListFileStats_t</ref></type>
+        <definition>FM_DirListFileStats_t FM_GlobalData_t::DirListFileStats</definition>
+        <argsstring></argsstring>
+        <name>DirListFileStats</name>
+        <briefdescription>
+<para>Get dir list to file statistics structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="586" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="586" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a37da339a9867e1cb45d831c81d4a0a0a" compoundref="fm__child_8c" startline="1389" endline="1462">FM_ChildDirListFileInit</referencedby>
+        <referencedby refid="fm__child_8h_1aa0bc195d165713d7c107a09a55135d1a" compoundref="fm__child_8c" startline="1471" endline="1593">FM_ChildDirListFileLoop</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a2131954e5df81a49a6a5e0983deed924" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___dir_list_pkt__t" kindref="compound">FM_DirListPkt_t</ref></type>
+        <definition>FM_DirListPkt_t FM_GlobalData_t::DirListPkt</definition>
+        <argsstring></argsstring>
+        <name>DirListPkt</name>
+        <briefdescription>
+<para>Get dir list to packet telemetry packet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="588" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="588" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a9eb81011943d9b7efd2817d9eff72e03" compoundref="fm__child_8c" startline="1222" endline="1346">FM_ChildDirListPktCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a8251d966a7a9b02bec5745f23ebea57a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___free_space_pkt__t" kindref="compound">FM_FreeSpacePkt_t</ref></type>
+        <definition>FM_FreeSpacePkt_t FM_GlobalData_t::FreeSpacePkt</definition>
+        <argsstring></argsstring>
+        <name>FreeSpacePkt</name>
+        <briefdescription>
+<para>Get free space telemetry packet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="590" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="590" bodyend="-1"/>
+        <referencedby refid="fm__cmds_8h_1a22d28bce401b7af457415f71e7ffd9f2" compoundref="fm__cmds_8c" startline="853" endline="911">FM_GetFreeSpaceCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1ab04d63649dbe8d53acf9bce4dcaa6d60" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___file_info_pkt__t" kindref="compound">FM_FileInfoPkt_t</ref></type>
+        <definition>FM_FileInfoPkt_t FM_GlobalData_t::FileInfoPkt</definition>
+        <argsstring></argsstring>
+        <name>FileInfoPkt</name>
+        <briefdescription>
+<para>Get file info telemetry packet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="592" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="592" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1acdf88ed0126c434ab11661a6405fcf90" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___open_files_pkt__t" kindref="compound">FM_OpenFilesPkt_t</ref></type>
+        <definition>FM_OpenFilesPkt_t FM_GlobalData_t::OpenFilesPkt</definition>
+        <argsstring></argsstring>
+        <name>OpenFilesPkt</name>
+        <briefdescription>
+<para>Get open files telemetry packet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="594" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="594" bodyend="-1"/>
+        <referencedby refid="fm__cmds_8h_1aa006ba7f6566a67cc7dc3e43afd4a2ce" compoundref="fm__cmds_8c" startline="587" endline="617">FM_GetOpenFilesCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1aa277d619c9e3756a6cce2b25ea94d90b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___housekeeping_pkt__t" kindref="compound">FM_HousekeepingPkt_t</ref></type>
+        <definition>FM_HousekeepingPkt_t FM_GlobalData_t::HousekeepingPkt</definition>
+        <argsstring></argsstring>
+        <name>HousekeepingPkt</name>
+        <briefdescription>
+<para>Application housekeeping telemetry packet. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="596" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="596" bodyend="-1"/>
+        <referencedby refid="fm__app_8h_1a3c4057219dd914cf082bd436ff9441b4" compoundref="fm__app_8c" startline="393" endline="441">FM_ReportHK</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1aad1e50b4015ed83fbd4fa9fcffc23b98" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char FM_GlobalData_t::ChildBuffer[FM_CHILD_FILE_BLOCK_SIZE]</definition>
+        <argsstring>[FM_CHILD_FILE_BLOCK_SIZE]</argsstring>
+        <name>ChildBuffer</name>
+        <briefdescription>
+<para>Child task file I/O buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="598" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="598" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a56e7773f1b8ab3fea6e3511edbbce859" compoundref="fm__child_8c" startline="690" endline="861">FM_ChildConcatCmd</referencedby>
+        <referencedby refid="fm__child_8h_1a02cd414b57bf1a531f26419fbdb0f941" compoundref="fm__child_8c" startline="870" endline="1022">FM_ChildFileInfoCmd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_f_m___global_data__t_1a843f6fbceda7b12674959b382409119d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_f_m___child_queue_entry__t" kindref="compound">FM_ChildQueueEntry_t</ref></type>
+        <definition>FM_ChildQueueEntry_t FM_GlobalData_t::ChildQueue[FM_CHILD_QUEUE_DEPTH]</definition>
+        <argsstring>[FM_CHILD_QUEUE_DEPTH]</argsstring>
+        <name>ChildQueue</name>
+        <briefdescription>
+<para>Child task command queue. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/fm/fsw/src/fm_msg.h" line="600" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="600" bodyend="-1"/>
+        <referencedby refid="fm__child_8h_1a3fc80ba42ab816e891167a85c640f9bf" compoundref="fm__child_8c" startline="215" endline="304">FM_ChildProcess</referencedby>
+        <referencedby refid="fm__cmds_8h_1a1e0f804987928b47ee0adcb6e86774ab" compoundref="fm__cmds_8c" startline="463" endline="518">FM_ConcatFilesCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1af7b3897a02746febd5b39dd10d14856c" compoundref="fm__cmds_8c" startline="107" endline="169">FM_CopyFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a5fcf69c1170e59372afe376bc4c55188" compoundref="fm__cmds_8c" startline="626" endline="665">FM_CreateDirectoryCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1aeb70765146cda5280ee2f432eb375a69" compoundref="fm__cmds_8c" startline="407" endline="454">FM_DecompressFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a9cbb8c1d8bd3982b24b836fa4bd94499" compoundref="fm__cmds_8c" startline="353" endline="398">FM_DeleteAllFilesCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a6de49e43b04468f049ccedc1952be290" compoundref="fm__cmds_8c" startline="674" endline="713">FM_DeleteDirectoryCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a3a28115b8264be91ac5d489e209f2b48" compoundref="fm__cmds_8c" startline="305" endline="344">FM_DeleteFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a7fe11f5ba185c987429ebfbd5b4d92e4" compoundref="fm__cmds_8c" startline="722" endline="788">FM_GetDirListFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1aaa7b87dc34b2a2e822418eca838ecf92" compoundref="fm__cmds_8c" startline="797" endline="844">FM_GetDirListPktCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a66da86060eb3c7adcd7598e312e8c4b7" compoundref="fm__cmds_8c" startline="527" endline="578">FM_GetFileInfoCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1a72c7234c737e4e799fa6171b89a57c59" compoundref="fm__cmds_8c" startline="178" endline="240">FM_MoveFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1ad5115365489fbc7bec549c8453c17893" compoundref="fm__cmds_8c" startline="249" endline="296">FM_RenameFileCmd</referencedby>
+        <referencedby refid="fm__cmds_8h_1aa85951292940f7b849ad51b4406344a9" compoundref="fm__cmds_8c" startline="989" endline="1034">FM_SetPermissionsCmd</referencedby>
+        <referencedby refid="fm__cmd__utils_8h_1aab165c5c2ca675a8ac2e22901b6b10c2" compoundref="fm__cmd__utils_8c" startline="524" endline="569">FM_VerifyChildTask</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="cfsfmtlm_1_cfsfmtlm000007"><xreftitle>Name</xreftitle><xrefdescription><para>Application global data structure </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="51">
+        <label>FM_FreeSpacePktEntry_t</label>
+        <link refid="struct_f_m___free_space_pkt_entry__t"/>
+      </node>
+      <node id="46">
+        <label>FM_ChildQueueEntry_t</label>
+        <link refid="struct_f_m___child_queue_entry__t"/>
+      </node>
+      <node id="56">
+        <label>FM_TableEntry_t</label>
+        <link refid="struct_f_m___table_entry__t"/>
+      </node>
+      <node id="55">
+        <label>FM_FreeSpaceTable_t</label>
+        <link refid="struct_f_m___free_space_table__t"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>FileSys</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>FM_FileInfoPkt_t</label>
+        <link refid="struct_f_m___file_info_pkt__t"/>
+      </node>
+      <node id="44">
+        <label>FM_GlobalData_t</label>
+        <link refid="struct_f_m___global_data__t"/>
+        <childnode refid="45" relation="usage">
+          <edgelabel>FileInfoPkt</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>ChildQueue</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>OpenFilesPkt</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>HousekeepingPkt</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>FreeSpacePkt</edgelabel>
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>DirListPkt</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>DirListFileStats</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>FreeSpaceTablePtr</edgelabel>
+        </childnode>
+      </node>
+      <node id="54">
+        <label>FM_DirListFileStats_t</label>
+        <link refid="struct_f_m___dir_list_file_stats__t"/>
+      </node>
+      <node id="52">
+        <label>FM_DirListPkt_t</label>
+        <link refid="struct_f_m___dir_list_pkt__t"/>
+        <childnode refid="53" relation="usage">
+          <edgelabel>FileList</edgelabel>
+        </childnode>
+      </node>
+      <node id="50">
+        <label>FM_FreeSpacePkt_t</label>
+        <link refid="struct_f_m___free_space_pkt__t"/>
+        <childnode refid="51" relation="usage">
+          <edgelabel>FileSys</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>FM_OpenFilesPkt_t</label>
+        <link refid="struct_f_m___open_files_pkt__t"/>
+        <childnode refid="48" relation="usage">
+          <edgelabel>OpenFilesList</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>FM_DirListEntry_t</label>
+        <link refid="struct_f_m___dir_list_entry__t"/>
+      </node>
+      <node id="48">
+        <label>FM_OpenFilesEntry_t</label>
+        <link refid="struct_f_m___open_files_entry__t"/>
+      </node>
+      <node id="49">
+        <label>FM_HousekeepingPkt_t</label>
+        <link refid="struct_f_m___housekeeping_pkt__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/fm/fsw/src/fm_msg.h" line="557" column="1" bodyfile="apps/fm/fsw/src/fm_msg.h" bodystart="556" bodyend="602"/>
+    <listofallmembers>
+      <member refid="struct_f_m___global_data__t_1aad1e50b4015ed83fbd4fa9fcffc23b98" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildBuffer</name></member>
+      <member refid="struct_f_m___global_data__t_1a8a3186f5da1ad8f35e988e4a3894d150" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildCmdCounter</name></member>
+      <member refid="struct_f_m___global_data__t_1ab3c24048bd47e77c7b0a78cad02bdb6f" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildCmdErrCounter</name></member>
+      <member refid="struct_f_m___global_data__t_1a828ef37cb969dd7acaad3d0ae9d63103" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildCmdWarnCounter</name></member>
+      <member refid="struct_f_m___global_data__t_1a8e817c673fa32a0c5f6c0bd97dde52c0" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildCurrentCC</name></member>
+      <member refid="struct_f_m___global_data__t_1a19ad449daffa1d4c54fa0689a7fc3ba5" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildPreviousCC</name></member>
+      <member refid="struct_f_m___global_data__t_1a843f6fbceda7b12674959b382409119d" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildQueue</name></member>
+      <member refid="struct_f_m___global_data__t_1a145677a299584ed8f7661cf67980dce6" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildQueueCount</name></member>
+      <member refid="struct_f_m___global_data__t_1a252da43588c5ed504c3a9e4507162f31" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildQueueCountSem</name></member>
+      <member refid="struct_f_m___global_data__t_1ab1a8ce69edcc6a01fc81f96f252cc4bd" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildReadIndex</name></member>
+      <member refid="struct_f_m___global_data__t_1a4c96d444916b205fb90555252551b1fc" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildSemaphore</name></member>
+      <member refid="struct_f_m___global_data__t_1ab1ac60c7deb5bef92cf454331634b398" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildTaskID</name></member>
+      <member refid="struct_f_m___global_data__t_1a936653889030b685683dd8ddc68ea98d" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>ChildWriteIndex</name></member>
+      <member refid="struct_f_m___global_data__t_1ae3043a178c3d1377b530048d1b4122e9" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>CmdPipe</name></member>
+      <member refid="struct_f_m___global_data__t_1a4cc0e2f3e70fcd7f1f611bd88bb0fab9" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>CommandCounter</name></member>
+      <member refid="struct_f_m___global_data__t_1affe1624e4c39365d4ed1e4ae3b2fc7bc" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>CommandErrCounter</name></member>
+      <member refid="struct_f_m___global_data__t_1a4c8ee2573a1f81d966f230b4939b2ee5" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>DirListFileStats</name></member>
+      <member refid="struct_f_m___global_data__t_1a2131954e5df81a49a6a5e0983deed924" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>DirListPkt</name></member>
+      <member refid="struct_f_m___global_data__t_1ab04d63649dbe8d53acf9bce4dcaa6d60" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>FileInfoPkt</name></member>
+      <member refid="struct_f_m___global_data__t_1a1fcb17f2133be8dc06598559771daae5" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>FileStatSize</name></member>
+      <member refid="struct_f_m___global_data__t_1a28ff4f42c6d5ec33c65a26db44639ef9" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>FileStatTime</name></member>
+      <member refid="struct_f_m___global_data__t_1a8251d966a7a9b02bec5745f23ebea57a" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>FreeSpacePkt</name></member>
+      <member refid="struct_f_m___global_data__t_1a9802d553b525871648ed43e54c2f7a44" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>FreeSpaceTableHandle</name></member>
+      <member refid="struct_f_m___global_data__t_1a48dce8bae007845afd644c74edc98af9" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>FreeSpaceTablePtr</name></member>
+      <member refid="struct_f_m___global_data__t_1aa277d619c9e3756a6cce2b25ea94d90b" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>HousekeepingPkt</name></member>
+      <member refid="struct_f_m___global_data__t_1acdf88ed0126c434ab11661a6405fcf90" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>OpenFilesPkt</name></member>
+      <member refid="struct_f_m___global_data__t_1ac97ca7a69ef645ed59921fca9b318dcc" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>Spare8a</name></member>
+      <member refid="struct_f_m___global_data__t_1aa041b8dbab5cea3df2cea4e6b1ec4b60" prot="public" virt="non-virtual"><scope>FM_GlobalData_t</scope><name>Spare8b</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

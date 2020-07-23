@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="mpc__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>mpc_platform_cfg.h</compoundname>
+    <includedby refid="mpc__app_8h" local="yes">apps/mpc/fsw/src/mpc_app.h</includedby>
+    <includedby refid="mpc__tbldefs_8h" local="yes">apps/mpc/fsw/src/mpc_tbldefs.h</includedby>
+    <invincdepgraph>
+      <node id="225">
+        <label>apps/mpc/fsw/src/mpc_config_utils.cpp</label>
+        <link refid="mpc__config__utils_8cpp"/>
+      </node>
+      <node id="222">
+        <label>apps/mpc/fsw/platform_inc/mpc_platform_cfg.h</label>
+        <link refid="mpc_platform_cfg.h"/>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>apps/mpc/fsw/src/mpc_app.h</label>
+        <link refid="mpc__app_8h"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>apps/mpc/fsw/src/mpc_app.cpp</label>
+        <link refid="mpc__app_8cpp"/>
+      </node>
+      <node id="226">
+        <label>apps/mpc/fsw/src/mpc_tbldefs.h</label>
+        <link refid="mpc__tbldefs_8h"/>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1a582414283b32891945dae283a99ec71f" prot="public" static="no">
+        <name>MPC_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for <ref refid="class_m_p_c" kindref="compound">MPC</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;amc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="25" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1ab8a4798e904a026595cb05123b163d0b" compoundref="mpc__app_8cpp" startline="366" endline="415">MPC::InitApp</referencedby>
+        <referencedby refid="class_m_p_c_1adc61839f100c43c8403e410501dbf2ba" compoundref="mpc__app_8cpp" startline="652" endline="807">MPC::ProcessAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1a945525c838dbf3c8deded662cdfde9f9" prot="public" static="no">
+        <name>MPC_SCH_PIPE_DEPTH</name>
+        <initializer>(15)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="32" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1ab58f7dadd6c6186f7b56e218c00fcae7" compoundref="mpc__app_8cpp" startline="108" endline="257">MPC::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1ab1f8a0508782ba0f95bef6d683e0251f" prot="public" static="no">
+        <name>MPC_SCH_PIPE_NAME</name>
+        <initializer>(&quot;MPC_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="39" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1ab58f7dadd6c6186f7b56e218c00fcae7" compoundref="mpc__app_8cpp" startline="108" endline="257">MPC::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1a432a993c334b7f2be86cff5f43ec0679" prot="public" static="no">
+        <name>MPC_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="49" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1a9b7afd8e591f9f2c18e3d61ae6dfbf34" compoundref="mpc__app_8cpp" startline="957" endline="1007">MPC::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1a385cb80e7f0eb5ea02d1cb72aad2880d" prot="public" static="no">
+        <name>MPC_WAKEUP_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the MPC_WAKEUP_MID_MAX_MSG_COUNT and MPC_SEND_HK_MID_MAX_MSG_COUNT must be less than MPC_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="58" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1ab58f7dadd6c6186f7b56e218c00fcae7" compoundref="mpc__app_8cpp" startline="108" endline="257">MPC::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1a9ee389eb60c7bc571dada4654acdd47c" prot="public" static="no">
+        <name>MPC_SEND_HK_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the MPC_WAKEUP_MID_MAX_MSG_COUNT and MPC_SEND_HK_MID_MAX_MSG_COUNT must be less than MPC_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="67" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1ab58f7dadd6c6186f7b56e218c00fcae7" compoundref="mpc__app_8cpp" startline="108" endline="257">MPC::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1afb533b3ffaee05f6e0275cfe088961fa" prot="public" static="no">
+        <name>MPC_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="74" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1ab58f7dadd6c6186f7b56e218c00fcae7" compoundref="mpc__app_8cpp" startline="108" endline="257">MPC::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1afa8890844978997718905ffcb2f64e23" prot="public" static="no">
+        <name>MPC_CMD_PIPE_NAME</name>
+        <initializer>(&quot;MPC_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="81" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1ab58f7dadd6c6186f7b56e218c00fcae7" compoundref="mpc__app_8cpp" startline="108" endline="257">MPC::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1a7b182786d23013f621b3cd98a78ba1e7" prot="public" static="no">
+        <name>MPC_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/mpc_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="89" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1aed508a5970bc3c452a769361b106658e" compoundref="mpc__config__utils_8cpp" startline="51" endline="89">MPC::InitConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1ac3fa5a38ef7303119d2d65bd21f89efc" prot="public" static="no">
+        <name>MPC_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="96" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1a9b7afd8e591f9f2c18e3d61ae6dfbf34" compoundref="mpc__app_8cpp" startline="957" endline="1007">MPC::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpc__platform__cfg_8h_1a6a925c647dbc92c55f327b3feb405af6" prot="public" static="no">
+        <name>DIRECTION_CHANGE_TRIGGER_TIME_US</name>
+        <initializer>(100000)</initializer>
+        <briefdescription>
+<para>Time for direction change hysteresis. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" line="99" column="9" bodyfile="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="class_m_p_c_1a91e54228f0392642bd441fc87d5770e7" compoundref="mpc__app_8cpp" startline="266" endline="357">MPC::InitData</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MPC_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPC_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/>MPC<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="mpc__platform__cfg_8h_1a582414283b32891945dae283a99ec71f" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="mpc__platform__cfg_8h_1a945525c838dbf3c8deded662cdfde9f9" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(15)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="mpc__platform__cfg_8h_1ab1f8a0508782ba0f95bef6d683e0251f" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;MPC_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="mpc__platform__cfg_8h_1a432a993c334b7f2be86cff5f43ec0679" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="mpc__platform__cfg_8h_1a385cb80e7f0eb5ea02d1cb72aad2880d" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_WAKEUP_MID_MAX_MSG_COUNT<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="mpc__platform__cfg_8h_1a9ee389eb60c7bc571dada4654acdd47c" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_SEND_HK_MID_MAX_MSG_COUNT<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="mpc__platform__cfg_8h_1afb533b3ffaee05f6e0275cfe088961fa" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="mpc__platform__cfg_8h_1afa8890844978997718905ffcb2f64e23" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;MPC_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="mpc__platform__cfg_8h_1a7b182786d23013f621b3cd98a78ba1e7" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/mpc_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="mpc__platform__cfg_8h_1ac3fa5a38ef7303119d2d65bd21f89efc" refkind="member"><highlight class="preprocessor">#define<sp/>MPC_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="mpc__platform__cfg_8h_1a6a925c647dbc92c55f327b3feb405af6" refkind="member"><highlight class="preprocessor">#define<sp/>DIRECTION_CHANGE_TRIGGER_TIME_US<sp/><sp/><sp/><sp/>(100000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MPC_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/mpc/fsw/platform_inc/mpc_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

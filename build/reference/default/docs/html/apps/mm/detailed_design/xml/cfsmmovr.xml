@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsmmovr" kind="page">
+    <compoundname>cfsmmovr</compoundname>
+    <title>CFS Memory Manager Overview</title>
+    <innerpage refid="cfsmmugmemtypes">Memory Types</innerpage>
+    <innerpage refid="cfsmmugfileformat">File Format</innerpage>
+    <innerpage refid="cfsmmugsymbols">Symbolic Address Arguments</innerpage>
+    <detaileddescription>
+<para>The Memory Manager (MM) component of the Core Flight System (CFS) is responsible for the loading and dumping of flight system memory. MM is basically the operator interface for the PSP (Platform Support Package) and OSAL (Operating System Abstraction Layer) memory manipulation functions. Memory Manager provides the ability to load and dump memory via commands as well as from files. If the operating system supports symbolic addressing, Memory Manager allows specifying the memory address using a symbolic address.</para><para>Since MM makes use of the PSP and OSAL when interfacing to memory, it relies on PSP and OSAL routines to access processor memory as well as memory that is not directly accessible (i.e. requires address translation). MM does no memory manipulation that bypasses the OSAL. Address checking is performed using the PSP and any addresses specified outside of defined legal address ranges will be considered invalid and an error event will be issued.</para><para>MM performs data transfers between memory and files, but does not handle file transfers to (or from) the ground. That function must be done with a file transfer application such as the CFS CFDP application. MM also does not have responsibility for file management operations or directory manipulations. That function is allocated to the CFS FM (File Manager) application.</para><para>MM is a command driven, single threaded application. It will pend indefinitely on the software bus message queue until commands are recieved and then process them sequentially in the order they arrived. Memory Manager segments loads and dumps in order to prevent CPU hogging. Despite this, careful consideration should be made when loading and dumping large amounts of memory. See <ref refid="cfsmmdg" kindref="compound">CFS Memory Manager Deployment Guide</ref>.</para><para>For additional details see the following sections:</para><para><itemizedlist>
+<listitem>
+<para><ref refid="cfsmmugmemtypes" kindref="compound">Memory Types</ref> </para></listitem>
+<listitem>
+<para><ref refid="cfsmmugfileformat" kindref="compound">File Format</ref> </para></listitem>
+<listitem>
+<para><ref refid="cfsmmugsymbols" kindref="compound">Symbolic Address Arguments</ref> </para></listitem>
+</itemizedlist>
+<linebreak/>
+<linebreak/>
+ Prev: <ref refid="cfsmmintro" kindref="compound">CFS Memory Manager Introduction</ref> <linebreak/>
+ Next: <ref refid="cfsmmopr" kindref="compound">CFS Memory Manager Operation</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

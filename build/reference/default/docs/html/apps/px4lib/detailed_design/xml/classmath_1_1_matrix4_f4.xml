@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classmath_1_1_matrix4_f4" kind="class" language="C++" prot="public">
+    <compoundname>math::Matrix4F4</compoundname>
+    <includes refid="_matrix4_f4_8hpp" local="no">Matrix4F4.hpp</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmath_1_1_matrix4_f4_1a3c3fd89d839f54d6368f1b15e5f66b34" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int math::Matrix4F4::SIZE</definition>
+        <argsstring></argsstring>
+        <name>SIZE</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+<para>Number of rows and columns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="15" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmath_1_1_matrix4_f4_1ac1d3ac9763117b00ae20b56eed73f881" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref></type>
+        <definition>Vector4F math::Matrix4F4::data[SIZE]</definition>
+        <argsstring>[SIZE]</argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>Rotation lookup enumeration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="18" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classmath_1_1_matrix4_f4_1a6c37a83b56dff61b61266908d8e37245" compoundref="_matrix4_f4_8cpp" startline="57" endline="64">operator*</referencedby>
+        <referencedby refid="classmath_1_1_matrix4_f4_1a9c7e53f482a4dbb3dc20548bf626ba1e" compoundref="_matrix4_f4_8cpp" startline="30" endline="40">operator[]</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmath_1_1_matrix4_f4_1a3d0ec74a0698de984fd2364784c89e2e" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref></type>
+        <definition>Vector4F math::Matrix4F4::nan</definition>
+        <argsstring></argsstring>
+        <name>nan</name>
+        <briefdescription>
+<para>Vector of NaN row data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="21" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classmath_1_1_matrix4_f4_1aa606547da56fccc0862511eeb92f2731" compoundref="_matrix4_f4_8cpp" startline="6" endline="10">Matrix4F4</referencedby>
+        <referencedby refid="classmath_1_1_matrix4_f4_1a9c7e53f482a4dbb3dc20548bf626ba1e" compoundref="_matrix4_f4_8cpp" startline="30" endline="40">operator[]</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmath_1_1_matrix4_f4_1a161ad0a6d9ed0be80cfa78a978d8ede6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix4F4::Matrix4F4</definition>
+        <argsstring>()</argsstring>
+        <name>Matrix4F4</name>
+        <briefdescription>
+<para>Matrix Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="34" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix4F4.cpp" bodystart="13" bodyend="22"/>
+        <references refid="classmath_1_1_matrix4_f4_1a3d0ec74a0698de984fd2364784c89e2e" compoundref="_matrix4_f4_8hpp" startline="21">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix4_f4_1aa606547da56fccc0862511eeb92f2731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix4F4::Matrix4F4</definition>
+        <argsstring>(Vector4F m0, Vector4F m1, Vector4F m2, Vector4F m3)</argsstring>
+        <name>Matrix4F4</name>
+        <param>
+          <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref></type>
+          <declname>m0</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref></type>
+          <declname>m1</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref></type>
+          <declname>m2</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref></type>
+          <declname>m3</declname>
+        </param>
+        <briefdescription>
+<para>Matrix Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes the object with passed values.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">m0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector4F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector4F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector4F specifying a row </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">m3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector4F specifying a row </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="51" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix4F4.cpp" bodystart="6" bodyend="10"/>
+        <references refid="classmath_1_1_matrix4_f4_1a3d0ec74a0698de984fd2364784c89e2e" compoundref="_matrix4_f4_8hpp" startline="21">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix4_f4_1a262f21fb5ccf6c50c88131669148ade1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Matrix4F4::~Matrix4F4</definition>
+        <argsstring>()</argsstring>
+        <name>~Matrix4F4</name>
+        <briefdescription>
+<para>Matrix Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function destructs the object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="63" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix4F4.cpp" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix4_f4_1a9c7e53f482a4dbb3dc20548bf626ba1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref> &amp;</type>
+        <definition>Vector4F &amp; Matrix4F4::operator[]</definition>
+        <argsstring>(uint32 i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Index Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the [] behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> specifying a row</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="81" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix4F4.cpp" bodystart="30" bodyend="40"/>
+        <references refid="classmath_1_1_matrix4_f4_1ac1d3ac9763117b00ae20b56eed73f881" compoundref="_matrix4_f4_8hpp" startline="18">data</references>
+        <references refid="classmath_1_1_matrix4_f4_1a3d0ec74a0698de984fd2364784c89e2e" compoundref="_matrix4_f4_8hpp" startline="21">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix4_f4_1aa378ef74baf1539301cfeec205aadb40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref></type>
+        <definition>Vector4F Matrix4F4::operator[]</definition>
+        <argsstring>(uint32 i) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Index Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the [] behavior when used on this object.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref> specifying a row</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the matrix </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="99" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix4F4.cpp" bodystart="43" bodyend="53"/>
+        <references refid="classmath_1_1_matrix4_f4_1ac1d3ac9763117b00ae20b56eed73f881" compoundref="_matrix4_f4_8hpp" startline="18">data</references>
+        <references refid="classmath_1_1_matrix4_f4_1a3d0ec74a0698de984fd2364784c89e2e" compoundref="_matrix4_f4_8hpp" startline="21">nan</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1_matrix4_f4_1a6c37a83b56dff61b61266908d8e37245" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref></type>
+        <definition>Vector4F Matrix4F4::operator*</definition>
+        <argsstring>(const Vector4F &amp;v) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classmath_1_1_vector4_f" kindref="compound">Vector4F</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication Operator Override. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function overrides the multiplication behavior when used on this object and a #Vector4F.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vecIn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A #Vector4F to perform this operation on</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of the multiplication as #Vector4F </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="118" column="1" bodyfile="apps/px4lib/fsw/src/math/Matrix4F4.cpp" bodystart="57" bodyend="64"/>
+        <references refid="classmath_1_1_matrix4_f4_1ac1d3ac9763117b00ae20b56eed73f881" compoundref="_matrix4_f4_8hpp" startline="18">data</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="83">
+        <label>math::Matrix4F4</label>
+        <link refid="classmath_1_1_matrix4_f4"/>
+        <childnode refid="84" relation="usage">
+          <edgelabel>nan</edgelabel>
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="84">
+        <label>math::Vector4F</label>
+        <link refid="classmath_1_1_vector4_f"/>
+      </node>
+    </collaborationgraph>
+    <location file="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" line="12" column="1" bodyfile="apps/px4lib/fsw/public_inc/math/Matrix4F4.hpp" bodystart="11" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classmath_1_1_matrix4_f4_1ac1d3ac9763117b00ae20b56eed73f881" prot="private" virt="non-virtual"><scope>math::Matrix4F4</scope><name>data</name></member>
+      <member refid="classmath_1_1_matrix4_f4_1a161ad0a6d9ed0be80cfa78a978d8ede6" prot="public" virt="non-virtual"><scope>math::Matrix4F4</scope><name>Matrix4F4</name></member>
+      <member refid="classmath_1_1_matrix4_f4_1aa606547da56fccc0862511eeb92f2731" prot="public" virt="non-virtual"><scope>math::Matrix4F4</scope><name>Matrix4F4</name></member>
+      <member refid="classmath_1_1_matrix4_f4_1a3d0ec74a0698de984fd2364784c89e2e" prot="private" virt="non-virtual"><scope>math::Matrix4F4</scope><name>nan</name></member>
+      <member refid="classmath_1_1_matrix4_f4_1a6c37a83b56dff61b61266908d8e37245" prot="public" virt="non-virtual"><scope>math::Matrix4F4</scope><name>operator*</name></member>
+      <member refid="classmath_1_1_matrix4_f4_1a9c7e53f482a4dbb3dc20548bf626ba1e" prot="public" virt="non-virtual"><scope>math::Matrix4F4</scope><name>operator[]</name></member>
+      <member refid="classmath_1_1_matrix4_f4_1aa378ef74baf1539301cfeec205aadb40" prot="public" virt="non-virtual"><scope>math::Matrix4F4</scope><name>operator[]</name></member>
+      <member refid="classmath_1_1_matrix4_f4_1a3c3fd89d839f54d6368f1b15e5f66b34" prot="private" virt="non-virtual"><scope>math::Matrix4F4</scope><name>SIZE</name></member>
+      <member refid="classmath_1_1_matrix4_f4_1a262f21fb5ccf6c50c88131669148ade1" prot="public" virt="non-virtual"><scope>math::Matrix4F4</scope><name>~Matrix4F4</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsschdg" kind="page">
+    <compoundname>cfsschdg</compoundname>
+    <title>CFS Scheduler Deployment Guide</title>
+    <detaileddescription>
+<para>In order to successfully integrate the Scheduler Application into a system, the cFE must first be configured to allow for the following: <linebreak/>
+</para><para><itemizedlist>
+<listitem>
+<para>The  CFE Software Bus must be configured to have sufficient Pipe resources to allocate one pipe to SCH (see #CFE_SB_MAX_PIPES) with a pipe depth as specified by <ref refid="sch__platform__cfg_8h_1a0efb7feeef71f7d97bbca9bae5dd7c36" kindref="member">SCH_PIPE_DEPTH</ref> <linebreak/>
+ </para></listitem>
+<listitem>
+<para>The  CFE Table Services must be configured to allow SCH to have two single buffered tables (see #CFE_TBL_MAX_NUM_TABLES) <linebreak/>
+ </para></listitem>
+<listitem>
+<para>The  CFE Table Services must be configured to allow for Single Buffered Tables as large as the largest of the SCH Schedule Definition Table and the Message Definition Table. The Schedule Definition Table&apos;s size can be determined with the following equation: <linebreak/>
+<linebreak/>
+ SDT Size (in bytes) = <ref refid="sch__platform__cfg_8h_1a640d7089f602476608c00d5d9b613315" kindref="member">SCH_TOTAL_SLOTS</ref> * <ref refid="sch__platform__cfg_8h_1a191125a78975e2a0c581969c7d678b4e" kindref="member">SCH_ENTRIES_PER_SLOT</ref> * 12 (sizeof one SDT record)<linebreak/>
+<linebreak/>
+ The size of the Message Definition Table can be determined with the following equation:<linebreak/>
+<linebreak/>
+ MDT Size (in bytes) = <ref refid="sch__platform__cfg_8h_1abae40b96462eac577fb95363ee030a38" kindref="member">SCH_MAX_MSG_WORDS</ref> * <ref refid="sch__platform__cfg_8h_1a02550ee5880be5061544001811deecec" kindref="member">SCH_MAX_MESSAGES</ref> <linebreak/>
+<linebreak/>
+ </para></listitem>
+<listitem>
+<para>The <ref refid="sch__msgids_8h_1a6b68abc81890d0891f1562df904fca7d" kindref="member">SCH Housekeeping Request Message </ref> needs to be put into the SCH Schedule Definition Table and the SCH Message Definition Table in order to notify SCH when the SCH Housekeeping message should be generated <linebreak/>
+ </para></listitem>
+<listitem>
+<para>The default SCH Schedule Definition Table (location specified by the <ref refid="sch__platform__cfg_8h_1aa0a00e5974aa67bfe91ce39d1f2db1d3" kindref="member">SCH_SCHEDULE_FILENAME</ref> configuration parameter) must be available before the SCH is started <linebreak/>
+ </para></listitem>
+<listitem>
+<para>The default SCH Message Definition Table (location specified by the <ref refid="sch__platform__cfg_8h_1a052acaa8ebd6c01b4fcc35636ea3b265" kindref="member">SCH_MESSAGE_FILENAME</ref> configuration parameter) must be available before the SCH is started <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para><para><heading level="3">Scheduler Timing Customization</heading>
+</para><para>The Scheduler application contains the file <computeroutput>sch_custom.c</computeroutput> which can be adapted to take advantage of platform specific functionality concerning Major Frame timing, Minor Frame timing, and current slot determiniation. While no changes are required to this file for SCH to be functional, it may be possible to obtain better accuracy or increase processing efficiency by modifying the contents. <linebreak/>
+</para><para>This customizable section of code includes four required functions for interface purposes: <itemizedlist>
+<listitem>
+<para><ref refid="sch__custom_8h_1a460799de20a37103670e068ec0cd3854" kindref="member">SCH_CustomEarlyInit</ref> </para></listitem>
+<listitem>
+<para><ref refid="sch__custom_8h_1a769b51f7ffc7c7711cc7bf0856702a77" kindref="member">SCH_CustomLateInit</ref> </para></listitem>
+<listitem>
+<para><ref refid="sch__custom_8h_1a0f0feaac769ebba7a790a5575edfa482" kindref="member">SCH_CustomGetCurrentSlotNumber</ref> </para></listitem>
+<listitem>
+<para><ref refid="sch__custom_8h_1a521f028b851995a3755ed7e4294f3b9e" kindref="member">SCH_CustomCleanup</ref> </para></listitem>
+</itemizedlist>
+</para><para>It also contains two important local functions that act as interrupt handlers: <itemizedlist>
+<listitem>
+<para><ref refid="sch__custom_8h_1a18afe2a56ba0bfdd348e88f0d8a9d55b" kindref="member">SCH_MajorFrameCallback</ref> </para></listitem>
+<listitem>
+<para><ref refid="sch__custom_8h_1af2799afed4a19fadc0a75dc7419a93ca" kindref="member">SCH_MinorFrameCallback</ref> </para></listitem>
+</itemizedlist>
+These Callback functions should not require significant modification if just changing the timing source. It is very important to note, however, that SCH_MinorFrameCallback currently assumes that it is using a timing function similar to <ref refid="ostimer_8c_1a415e9a85f738c4363588bbd3f24e2839" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_TimerSet</ref> that allows both a first and a subsequent repeated time setting. If a time setting function that only allows a single time to be set is used, a further case must be added that will allow the <ref refid="sch__app_8h_1a5068ec87789623b20525a5728ffbd99d" kindref="member">SCH_SHORT_SLOT_PERIOD</ref> to be set back to <ref refid="sch__app_8h_1ac54c643d5da1ccdd6be33d7156868b62" kindref="member">SCH_NORMAL_SLOT_PERIOD</ref> on the next minor frame call if the major frame is no longer being used. <linebreak/>
+</para><para><heading level="3">Stopping/Starting Scheduler During Critical Activities</heading>
+</para><para>The Scheduler application has an associated Scheduler Library that can be used to enable and disable schedule processing if <ref refid="sch__platform__cfg_8h_1a3e60196dcee964e40ea2fa02432ce9f1" kindref="member">SCH_LIB_PRESENCE</ref> is set to 1 (if it is set to 0, the library is not used, and does not even need to exist). The library consists of three APIs: <itemizedlist>
+<listitem>
+<para><ref refid="sch__api_8h_1aab71b469c1425ea9d7614b32e7d7df61" kindref="member">SCH_EnableProcessing</ref> </para></listitem>
+<listitem>
+<para><ref refid="sch__api_8h_1aad38183597fbb62abc726897709bafe6" kindref="member">SCH_DisableProcessing</ref> </para></listitem>
+<listitem>
+<para><ref refid="sch__api_8h_1a295c643b60c7ae27f4d3dd9114fcc091" kindref="member">SCH_GetProcessingState</ref> </para></listitem>
+</itemizedlist>
+SCH_EnableProcessing must be called as many times as SCH_DisableProcessing has previously been called to re-enable processing. Note that while processing is disabled, SCH will not respond to ground commands.</para><para>Next: <ref refid="cfsschcmds" kindref="compound">CFS Scheduler Commands</ref> <linebreak/>
+ Prev: <ref refid="cfsschreq" kindref="compound">CFS Scheduler Requirements</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

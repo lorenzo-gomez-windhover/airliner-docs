@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__psp__timer_8c" kind="file" language="C++">
+    <compoundname>cfe_psp_timer.c</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includes refid="osapi_8h" local="yes">osapi.h</includes>
+    <includes refid="cfe__es_8h" local="yes">cfe_es.h</includes>
+    <includes local="yes">cfe_platform_cfg.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="yes">cfe_psp.h</includes>
+    <incdepgraph>
+      <node id="9563">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="9557">
+        <label>stdarg.h</label>
+      </node>
+      <node id="9552">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="9571">
+        <label>cfe_psp.h</label>
+      </node>
+      <node id="9561">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9551">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c</label>
+        <link refid="cfe_psp_timer.c"/>
+        <childnode refid="9552" relation="include">
+        </childnode>
+        <childnode refid="9553" relation="include">
+        </childnode>
+        <childnode refid="9567" relation="include">
+        </childnode>
+        <childnode refid="9570" relation="include">
+        </childnode>
+        <childnode refid="9560" relation="include">
+        </childnode>
+        <childnode refid="9561" relation="include">
+        </childnode>
+        <childnode refid="9571" relation="include">
+        </childnode>
+      </node>
+      <node id="9558">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="9569">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h"/>
+      </node>
+      <node id="9559">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="9560" relation="include">
+        </childnode>
+        <childnode refid="9561" relation="include">
+        </childnode>
+        <childnode refid="9562" relation="include">
+        </childnode>
+        <childnode refid="9563" relation="include">
+        </childnode>
+      </node>
+      <node id="9554">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="9553">
+        <label>osapi.h</label>
+        <link refid="osapi_8h"/>
+        <childnode refid="9552" relation="include">
+        </childnode>
+        <childnode refid="9554" relation="include">
+        </childnode>
+        <childnode refid="9555" relation="include">
+        </childnode>
+        <childnode refid="9556" relation="include">
+        </childnode>
+        <childnode refid="9559" relation="include">
+        </childnode>
+        <childnode refid="9564" relation="include">
+        </childnode>
+        <childnode refid="9565" relation="include">
+        </childnode>
+        <childnode refid="9566" relation="include">
+        </childnode>
+        <childnode refid="9558" relation="include">
+        </childnode>
+      </node>
+      <node id="9566">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="9568">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h"/>
+      </node>
+      <node id="9570">
+        <label>cfe_platform_cfg.h</label>
+      </node>
+      <node id="9555">
+        <label>osconfig.h</label>
+      </node>
+      <node id="9564">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="9567">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h"/>
+        <childnode refid="9568" relation="include">
+        </childnode>
+        <childnode refid="9569" relation="include">
+        </childnode>
+      </node>
+      <node id="9565">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="9560">
+        <label>stdio.h</label>
+      </node>
+      <node id="9556">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="9557" relation="include">
+        </childnode>
+        <childnode refid="9558" relation="include">
+        </childnode>
+      </node>
+      <node id="9562">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cfe__psp__timer_8c_1af6a0340c0c715611f16f10bfd90fc353" prot="public" static="no">
+        <name>CFE_PSP_TIMER_TICKS_PER_SECOND</name>
+        <initializer>1000000     /* Resolution of the least significant 32 bits of the 64 bit
+                                                           time stamp returned by OS_BSPGet_Timebase in timer ticks per second.
+                                                           The timer resolution for accuracy should not be any slower than 1000000
+                                                           ticks per second or 1 us per tick */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" line="55" column="9" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" bodystart="52" bodyend="-1"/>
+        <referencedby refid="cfe__psp__timer_8c_1ab7e610784e2bc66f0b78b6ffe2af344f" compoundref="cfe__psp__timer_8c" startline="116" endline="119">CFE_PSP_GetTimerTicksPerSecond</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="cfe__psp__timer_8c_1af17aca85174caccf8a9ad91a040d7f7e" prot="public" static="no">
+        <name>CFE_PSP_TIMER_LOW32_ROLLOVER</name>
+        <initializer>1000000     /* The number that the least significant 32 bits of the 64 bit
+                                                           time stamp returned by OS_BSPGet_Timebase rolls over.  If the lower 32
+                                                           bits rolls at 1 second, then the OS_BSP_TIMER_LOW32_ROLLOVER will be 1000000.
+                                                           if the lower 32 bits rolls at its maximum value (2^32) then
+                                                           OS_BSP_TIMER_LOW32_ROLLOVER will be 0. */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" line="60" column="9" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" bodystart="56" bodyend="-1"/>
+        <referencedby refid="cfe__psp__timer_8c_1abf61dd86b7642dbf08458d4d5522e1b8" compoundref="cfe__psp__timer_8c" startline="137" endline="140">CFE_PSP_GetTimerLow32Rollover</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cfe__psp__timer_8c_1add2a8221c2845259665176cbafc8be23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_PSP_GetTime</definition>
+        <argsstring>(OS_time_t *LocalTime)</argsstring>
+        <name>CFE_PSP_GetTime</name>
+        <param>
+          <type><ref refid="struct_o_s__time__t" kindref="compound">OS_time_t</ref> *</type>
+          <declname>LocalTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" line="70" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" bodystart="70" bodyend="78"/>
+        <references refid="osapi-os-core_8h_1a810b1f61b670190cbdbd8f89e4d5fb95" compoundref="stubs_8c" startline="155" endline="161">OS_GetLocalTime</references>
+        <referencedby refid="cfe__time__utils_8h_1a91581fd8e0fa1b66495ab62f3b563dda" compoundref="cfe__time__utils_8c" startline="91" endline="109">CFE_TIME_LatchClock</referencedby>
+        <referencedby refid="psp__testcase_8c_1ac7ea46f3c6d1ae869639254de2e6f43e" compoundref="psp__testcase_8c" startline="653" endline="672">Test_CFE_PSP_GetTime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__psp__timer_8c_1ac9493b2a82897545981a18baa09655ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+        <definition>uint32 CFE_PSP_Get_Timer_Tick</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_PSP_Get_Timer_Tick</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" line="95" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" bodystart="95" bodyend="99"/>
+        <referencedby refid="psp__testcase_8c_1a28e397f75e5a43ef06afdf925fb8db36" compoundref="psp__testcase_8c" startline="675" endline="693">Test_CFE_PSP_Get_Timer_Tick</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__psp__timer_8c_1ab7e610784e2bc66f0b78b6ffe2af344f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+        <definition>uint32 CFE_PSP_GetTimerTicksPerSecond</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_PSP_GetTimerTicksPerSecond</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" line="116" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" bodystart="116" bodyend="119"/>
+        <references refid="cfe__psp__timer_8c_1af6a0340c0c715611f16f10bfd90fc353" compoundref="cfe__psp__timer_8c" startline="52">CFE_PSP_TIMER_TICKS_PER_SECOND</references>
+        <referencedby refid="cfe__es__start_8h_1a2dc8e1e4b02be6755f2a3311beca7983" compoundref="cfe__es__perf_8c" startline="102" endline="159">CFE_ES_SetupPerfVariables</referencedby>
+        <referencedby refid="psp__testcase_8c_1a08d802afa22ad7c3c0aba090d263974f" compoundref="psp__testcase_8c" startline="697" endline="715">Test_CFE_PSP_GetTimerTicksPerSecond</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__psp__timer_8c_1abf61dd86b7642dbf08458d4d5522e1b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+        <definition>uint32 CFE_PSP_GetTimerLow32Rollover</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_PSP_GetTimerLow32Rollover</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" line="137" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" bodystart="137" bodyend="140"/>
+        <references refid="cfe__psp__timer_8c_1af17aca85174caccf8a9ad91a040d7f7e" compoundref="cfe__psp__timer_8c" startline="56">CFE_PSP_TIMER_LOW32_ROLLOVER</references>
+        <referencedby refid="cfe__es__start_8h_1a2dc8e1e4b02be6755f2a3311beca7983" compoundref="cfe__es__perf_8c" startline="102" endline="159">CFE_ES_SetupPerfVariables</referencedby>
+        <referencedby refid="psp__testcase_8c_1a81efa4dbdcf1f81409522d2fee3ccd22" compoundref="psp__testcase_8c" startline="719" endline="737">Test_CFE_PSP_GetTimerLow32Rollover</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__psp__timer_8c_1a63385d5f64fc3a76e17e2cfeb18ca773" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CFE_PSP_Get_Timebase</definition>
+        <argsstring>(uint32 *Tbu, uint32 *Tbl)</argsstring>
+        <name>CFE_PSP_Get_Timebase</name>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref> *</type>
+          <declname>Tbu</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref> *</type>
+          <declname>Tbl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" line="155" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" bodystart="155" bodyend="162"/>
+        <references refid="struct_o_s__time__t_1acad716a15e85ab4da15d801d9b9831dd" compoundref="osapi-os-core_8h" startline="129">OS_time_t::microsecs</references>
+        <references refid="osapi-os-core_8h_1a810b1f61b670190cbdbd8f89e4d5fb95" compoundref="stubs_8c" startline="155" endline="161">OS_GetLocalTime</references>
+        <references refid="struct_o_s__time__t_1ac2b783772312bf20342afbbb0859d128" compoundref="osapi-os-core_8h" startline="128">OS_time_t::seconds</references>
+        <referencedby refid="cfe__es__perf_8c_1ae98119fd462f141607f20aa28e46c692" compoundref="cfe__es__perf_8c" startline="482" endline="561">CFE_ES_PerfLogAdd</referencedby>
+        <referencedby refid="psp__testcase_8c_1a6b1ae1d6d9ef0208fd09a95490f7570c" compoundref="psp__testcase_8c" startline="747" endline="767">Test_CFE_PSP_Get_Timebase</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="cfe__psp__timer_8c_1a03b6a7b3ae42c0b81d4ee0275903936e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref></type>
+        <definition>uint32 CFE_PSP_Get_Dec</definition>
+        <argsstring>(void)</argsstring>
+        <name>CFE_PSP_Get_Dec</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" line="178" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c" bodystart="178" bodyend="182"/>
+        <referencedby refid="psp__testcase_8c_1a5ad79d8e0ab2ed8ba4d0b8e44b8b8434" compoundref="psp__testcase_8c" startline="770" endline="788">Test_CFE_PSP_Get_Dec</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:<sp/><sp/>cfe_psp_timer.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2006,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA<sp/>Goddard</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>software<sp/>may<sp/>be<sp/>used<sp/>only<sp/>pursuant<sp/>to<sp/>a<sp/>United<sp/>States<sp/>government</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>sponsored<sp/>project<sp/>and<sp/>the<sp/>United<sp/>States<sp/>government<sp/>may<sp/>not<sp/>be<sp/>charged</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>use<sp/>thereof.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/>Purpose:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>file<sp/>contains<sp/>glue<sp/>routines<sp/>between<sp/>the<sp/>cFE<sp/>and<sp/>the<sp/>OS<sp/>Board<sp/>Support<sp/>Package<sp/>(<sp/>BSP<sp/>).</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/><sp/><sp/>The<sp/>functions<sp/>here<sp/>allow<sp/>the<sp/>cFE<sp/>to<sp/>interface<sp/>functions<sp/>that<sp/>are<sp/>board<sp/>and<sp/>OS<sp/>specific</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**<sp/><sp/><sp/>and<sp/>usually<sp/>dont<sp/>fit<sp/>well<sp/>in<sp/>the<sp/>OS<sp/>abstraction<sp/>layer.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>History:</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/><sp/><sp/>2005/06/05<sp/><sp/>K.Audra<sp/><sp/><sp/><sp/>|<sp/>Initial<sp/>version,</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*************************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/><sp/>Include<sp/>Files</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>cFE<sp/>includes</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi_8h" kindref="compound">osapi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe__es_8h" kindref="compound">cfe_es.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>For<sp/>reset<sp/>types<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_platform_cfg.h&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>processor<sp/>ID<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/><sp/>System<sp/>Include<sp/>Files</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**<sp/>Types<sp/>and<sp/>prototypes<sp/>for<sp/>this<sp/>module</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cfe_psp.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*******************<sp/>Macro<sp/>Definitions<sp/>***********************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="cfe__psp__timer_8c_1af6a0340c0c715611f16f10bfd90fc353" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFE_PSP_TIMER_TICKS_PER_SECOND<sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000000<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Resolution<sp/>of<sp/>the<sp/>least<sp/>significant<sp/>32<sp/>bits<sp/>of<sp/>the<sp/>64<sp/>bit</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>stamp<sp/>returned<sp/>by<sp/>OS_BSPGet_Timebase<sp/>in<sp/>timer<sp/>ticks<sp/>per<sp/>second.</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>timer<sp/>resolution<sp/>for<sp/>accuracy<sp/>should<sp/>not<sp/>be<sp/>any<sp/>slower<sp/>than<sp/>1000000</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ticks<sp/>per<sp/>second<sp/>or<sp/>1<sp/>us<sp/>per<sp/>tick<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="cfe__psp__timer_8c_1af17aca85174caccf8a9ad91a040d7f7e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFE_PSP_TIMER_LOW32_ROLLOVER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000000<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>number<sp/>that<sp/>the<sp/>least<sp/>significant<sp/>32<sp/>bits<sp/>of<sp/>the<sp/>64<sp/>bit</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>stamp<sp/>returned<sp/>by<sp/>OS_BSPGet_Timebase<sp/>rolls<sp/>over.<sp/><sp/>If<sp/>the<sp/>lower<sp/>32</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bits<sp/>rolls<sp/>at<sp/>1<sp/>second,<sp/>then<sp/>the<sp/>OS_BSP_TIMER_LOW32_ROLLOVER<sp/>will<sp/>be<sp/>1000000.</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>the<sp/>lower<sp/>32<sp/>bits<sp/>rolls<sp/>at<sp/>its<sp/>maximum<sp/>value<sp/>(2^32)<sp/>then</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OS_BSP_TIMER_LOW32_ROLLOVER<sp/>will<sp/>be<sp/>0.<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_PSP_GetTime()</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">**<sp/><sp/>Purpose:<sp/>Gets<sp/>the<sp/>value<sp/>of<sp/>the<sp/>time<sp/>from<sp/>the<sp/>hardware</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">**<sp/><sp/>Arguments:<sp/>LocalTime<sp/>-<sp/>where<sp/>the<sp/>time<sp/>is<sp/>returned<sp/>through</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="cfe__psp__timer_8c_1add2a8221c2845259665176cbafc8be23" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__psp__timer_8c_1add2a8221c2845259665176cbafc8be23" kindref="member">CFE_PSP_GetTime</ref>(<sp/><ref refid="struct_o_s__time__t" kindref="compound">OS_time_t</ref><sp/>*LocalTime)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>since<sp/>we<sp/>don&apos;t<sp/>have<sp/>a<sp/>hardware<sp/>register<sp/>to<sp/>access<sp/>like<sp/>the<sp/>mcp750,</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>we<sp/>use<sp/>a<sp/>call<sp/>to<sp/>the<sp/>OS<sp/>to<sp/>get<sp/>the<sp/>time<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a810b1f61b670190cbdbd8f89e4d5fb95" kindref="member">OS_GetLocalTime</ref>(LocalTime);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight><highlight class="comment">/*<sp/>end<sp/>CFE_PSP_GetLocalTime<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_PSP_Get_Timer_Tick()</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="85"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="86"><highlight class="comment">**<sp/><sp/><sp/><sp/>Provides<sp/>a<sp/>common<sp/>interface<sp/>to<sp/>system<sp/>clock<sp/>tick.<sp/>This<sp/>routine</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">**<sp/><sp/><sp/><sp/>is<sp/>in<sp/>the<sp/>BSP<sp/>because<sp/>it<sp/>is<sp/>sometimes<sp/>implemented<sp/>in<sp/>hardware<sp/>and</highlight></codeline>
+<codeline lineno="88"><highlight class="comment">**<sp/><sp/><sp/><sp/>sometimes<sp/>taken<sp/>care<sp/>of<sp/>by<sp/>the<sp/>RTOS.</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">**<sp/><sp/>OS<sp/>system<sp/>clock<sp/>ticks<sp/>per<sp/>second</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="cfe__psp__timer_8c_1ac9493b2a82897545981a18baa09655ff" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><ref refid="cfe__psp__timer_8c_1ac9493b2a82897545981a18baa09655ff" kindref="member">CFE_PSP_Get_Timer_Tick</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>SUB<sp/>-add<sp/>function<sp/>call<sp/>code*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(0);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="102"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_PSP_GetTimerTicksPerSecond()</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="104"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="105"><highlight class="comment">**<sp/><sp/><sp/><sp/>Provides<sp/>the<sp/>resolution<sp/>of<sp/>the<sp/>least<sp/>significant<sp/>32<sp/>bits<sp/>of<sp/>the<sp/>64<sp/>bit</highlight></codeline>
+<codeline lineno="106"><highlight class="comment">**<sp/><sp/><sp/><sp/>time<sp/>stamp<sp/>returned<sp/>by<sp/>OS_BSPGet_Timebase<sp/>in<sp/>timer<sp/>ticks<sp/>per<sp/>second.</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">**<sp/><sp/><sp/><sp/>The<sp/>timer<sp/>resolution<sp/>for<sp/>accuracy<sp/>should<sp/>not<sp/>be<sp/>any<sp/>slower<sp/>than<sp/>1000000</highlight></codeline>
+<codeline lineno="108"><highlight class="comment">**<sp/><sp/><sp/><sp/>ticks<sp/>per<sp/>second<sp/>or<sp/>1<sp/>us<sp/>per<sp/>tick</highlight></codeline>
+<codeline lineno="109"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="110"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="111"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="112"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="113"><highlight class="comment">**<sp/><sp/><sp/><sp/>The<sp/>number<sp/>of<sp/>timer<sp/>ticks<sp/>per<sp/>second<sp/>of<sp/>the<sp/>time<sp/>stamp<sp/>returned</highlight></codeline>
+<codeline lineno="114"><highlight class="comment">**<sp/><sp/><sp/><sp/>by<sp/>CFE_PSP_Get_Timebase</highlight></codeline>
+<codeline lineno="115"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="cfe__psp__timer_8c_1ab7e610784e2bc66f0b78b6ffe2af344f" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><ref refid="cfe__psp__timer_8c_1ab7e610784e2bc66f0b78b6ffe2af344f" kindref="member">CFE_PSP_GetTimerTicksPerSecond</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(<ref refid="cfe__psp__timer_8c_1af6a0340c0c715611f16f10bfd90fc353" kindref="member">CFE_PSP_TIMER_TICKS_PER_SECOND</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="122"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_PSP_GetTimerLow32Rollover()</highlight></codeline>
+<codeline lineno="123"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="124"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="125"><highlight class="comment">**<sp/><sp/><sp/><sp/>Provides<sp/>the<sp/>number<sp/>that<sp/>the<sp/>least<sp/>significant<sp/>32<sp/>bits<sp/>of<sp/>the<sp/>64<sp/>bit</highlight></codeline>
+<codeline lineno="126"><highlight class="comment">**<sp/><sp/><sp/><sp/>time<sp/>stamp<sp/>returned<sp/>by<sp/>CFE_PSP_Get_Timebase<sp/>rolls<sp/>over.<sp/><sp/>If<sp/>the<sp/>lower<sp/>32</highlight></codeline>
+<codeline lineno="127"><highlight class="comment">**<sp/><sp/><sp/><sp/>bits<sp/>rolls<sp/>at<sp/>1<sp/>second,<sp/>then<sp/>the<sp/>CFE_PSP_TIMER_LOW32_ROLLOVER<sp/>will<sp/>be<sp/>1000000.</highlight></codeline>
+<codeline lineno="128"><highlight class="comment">**<sp/><sp/><sp/><sp/>if<sp/>the<sp/>lower<sp/>32<sp/>bits<sp/>rolls<sp/>at<sp/>its<sp/>maximum<sp/>value<sp/>(2^32)<sp/>then</highlight></codeline>
+<codeline lineno="129"><highlight class="comment">**<sp/><sp/><sp/><sp/>CFE_PSP_TIMER_LOW32_ROLLOVER<sp/>will<sp/>be<sp/>0.</highlight></codeline>
+<codeline lineno="130"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="131"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="132"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="133"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="134"><highlight class="comment">**<sp/><sp/><sp/><sp/>The<sp/>number<sp/>that<sp/>the<sp/>least<sp/>significant<sp/>32<sp/>bits<sp/>of<sp/>the<sp/>64<sp/>bit<sp/>time<sp/>stamp</highlight></codeline>
+<codeline lineno="135"><highlight class="comment">**<sp/><sp/><sp/><sp/>returned<sp/>by<sp/>CFE_PSP_Get_Timebase<sp/>rolls<sp/>over.</highlight></codeline>
+<codeline lineno="136"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="cfe__psp__timer_8c_1abf61dd86b7642dbf08458d4d5522e1b8" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><ref refid="cfe__psp__timer_8c_1abf61dd86b7642dbf08458d4d5522e1b8" kindref="member">CFE_PSP_GetTimerLow32Rollover</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(<ref refid="cfe__psp__timer_8c_1af17aca85174caccf8a9ad91a040d7f7e" kindref="member">CFE_PSP_TIMER_LOW32_ROLLOVER</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="143"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_PSP_Get_Timebase()</highlight></codeline>
+<codeline lineno="144"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="145"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="146"><highlight class="comment">**<sp/><sp/><sp/><sp/>Provides<sp/>a<sp/>common<sp/>interface<sp/>to<sp/>system<sp/>timebase.<sp/>This<sp/>routine</highlight></codeline>
+<codeline lineno="147"><highlight class="comment">**<sp/><sp/><sp/><sp/>is<sp/>in<sp/>the<sp/>BSP<sp/>because<sp/>it<sp/>is<sp/>sometimes<sp/>implemented<sp/>in<sp/>hardware<sp/>and</highlight></codeline>
+<codeline lineno="148"><highlight class="comment">**<sp/><sp/><sp/><sp/>sometimes<sp/>taken<sp/>care<sp/>of<sp/>by<sp/>the<sp/>RTOS.</highlight></codeline>
+<codeline lineno="149"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="150"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="151"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="152"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">**<sp/><sp/>Timebase<sp/>register<sp/>value</highlight></codeline>
+<codeline lineno="154"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="cfe__psp__timer_8c_1a63385d5f64fc3a76e17e2cfeb18ca773" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="cfe__psp__timer_8c_1a63385d5f64fc3a76e17e2cfeb18ca773" kindref="member">CFE_PSP_Get_Timebase</ref>(<ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/>*Tbu,<sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref>*<sp/>Tbl)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><ref refid="struct_o_s__time__t" kindref="compound">OS_time_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><ref refid="osapi-os-core_8h_1a810b1f61b670190cbdbd8f89e4d5fb95" kindref="member">OS_GetLocalTime</ref>(&amp;time);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/>*Tbu<sp/>=<sp/>time.<ref refid="struct_o_s__time__t_1ac2b783772312bf20342afbbb0859d128" kindref="member">seconds</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/>*Tbl<sp/>=<sp/>time.<ref refid="struct_o_s__time__t_1acad716a15e85ab4da15d801d9b9831dd" kindref="member">microsecs</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="165"><highlight class="comment">**<sp/><sp/>Function:<sp/><sp/>CFE_PSP_Get_Dec()</highlight></codeline>
+<codeline lineno="166"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="167"><highlight class="comment">**<sp/><sp/>Purpose:</highlight></codeline>
+<codeline lineno="168"><highlight class="comment">**<sp/><sp/><sp/><sp/>Provides<sp/>a<sp/>common<sp/>interface<sp/>to<sp/>decrementer<sp/>counter.<sp/>This<sp/>routine</highlight></codeline>
+<codeline lineno="169"><highlight class="comment">**<sp/><sp/><sp/><sp/>is<sp/>in<sp/>the<sp/>PSP<sp/>because<sp/>it<sp/>is<sp/>sometimes<sp/>implemented<sp/>in<sp/>hardware<sp/>and</highlight></codeline>
+<codeline lineno="170"><highlight class="comment">**<sp/><sp/><sp/><sp/>sometimes<sp/>taken<sp/>care<sp/>of<sp/>by<sp/>the<sp/>RTOS.</highlight></codeline>
+<codeline lineno="171"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="172"><highlight class="comment">**<sp/><sp/>Arguments:</highlight></codeline>
+<codeline lineno="173"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="174"><highlight class="comment">**<sp/><sp/>Return:</highlight></codeline>
+<codeline lineno="175"><highlight class="comment">**<sp/><sp/>Timebase<sp/>register<sp/>value</highlight></codeline>
+<codeline lineno="176"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="cfe__psp__timer_8c_1a03b6a7b3ae42c0b81d4ee0275903936e" refkind="member"><highlight class="normal"><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member">uint32</ref><sp/><ref refid="cfe__psp__timer_8c_1a03b6a7b3ae42c0b81d4ee0275903936e" kindref="member">CFE_PSP_Get_Dec</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>SUB<sp/>-add<sp/>function<sp/>call<sp/>code*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(0);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_timer.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_t_o___channel_tbl__t" kind="struct" language="C++" prot="public">
+    <compoundname>TO_ChannelTbl_t</compoundname>
+    <includes refid="to__tbldefs_8h" local="no">to_tbldefs.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_o___channel_tbl__t_1ad34452ae0b201c05d15a7e81973f3d05" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 TO_ChannelTbl_t::TableID</definition>
+        <argsstring></argsstring>
+        <name>TableID</name>
+        <briefdescription>
+<para>The table identifier, used to identify a specific config table. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title></title><para>Units: none.</para></simplesect>
+<simplesect kind="par"><title></title><para>Limits: must be greater than or equal to 0</para></simplesect>
+<simplesect kind="par"><title></title><para>Note: TableID value 0xFFFFFFFF is reserved for each channel&apos;s backup emergency table. The backup emergency tables are loaded when the channel&apos;s table file could not be loaded. It is the largest uint32 available 4294967295. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_tbldefs.h" line="104" column="1" bodyfile="apps/to/fsw/src/to_tbldefs.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_tbl__t_1ae60417a3f3d00d379ea4df60e897c701" prot="public" static="no" mutable="no">
+        <type>TO_MessageFlow_t</type>
+        <definition>TO_MessageFlow_t TO_ChannelTbl_t::MessageFlow[TO_MAX_MESSAGE_FLOWS]</definition>
+        <argsstring>[TO_MAX_MESSAGE_FLOWS]</argsstring>
+        <name>MessageFlow</name>
+        <briefdescription>
+<para>MessageFlow defines a single telemetry message flow entry. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title></title><para>Units: none.</para></simplesect>
+<simplesect kind="par"><title></title><para>Limits: The maximum number of message flows is defined in <ref refid="to__mission__cfg_8h" kindref="compound">to_mission_cfg.h</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_tbldefs.h" line="115" column="1" bodyfile="apps/to/fsw/src/to_tbldefs.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_o___channel_tbl__t_1a21fcb0e8d539aa3110cc9679d3c5715b" prot="public" static="no" mutable="no">
+        <type>TO_PriorityQueue_t</type>
+        <definition>TO_PriorityQueue_t TO_ChannelTbl_t::PriorityQueue[TO_MAX_PRIORITY_QUEUES]</definition>
+        <argsstring>[TO_MAX_PRIORITY_QUEUES]</argsstring>
+        <name>PriorityQueue</name>
+        <briefdescription>
+<para>The Priority Queue defines a single priority queue entry. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title></title><para>Units: none.</para></simplesect>
+<simplesect kind="par"><title></title><para>Limits: The maximum number of priority queues is defined in <ref refid="to__mission__cfg_8h" kindref="compound">to_mission_cfg.h</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/to/fsw/src/to_tbldefs.h" line="126" column="1" bodyfile="apps/to/fsw/src/to_tbldefs.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definition for a TO Configuration table. </para>    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="cfstotbl_1_cfstotbl000001"><xreftitle>Name</xreftitle><xrefdescription><para>TO Configuration Table </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <location file="apps/to/fsw/src/to_tbldefs.h" line="88" column="1" bodyfile="apps/to/fsw/src/to_tbldefs.h" bodystart="87" bodyend="128"/>
+    <listofallmembers>
+      <member refid="struct_t_o___channel_tbl__t_1ae60417a3f3d00d379ea4df60e897c701" prot="public" virt="non-virtual"><scope>TO_ChannelTbl_t</scope><name>MessageFlow</name></member>
+      <member refid="struct_t_o___channel_tbl__t_1a21fcb0e8d539aa3110cc9679d3c5715b" prot="public" virt="non-virtual"><scope>TO_ChannelTbl_t</scope><name>PriorityQueue</name></member>
+      <member refid="struct_t_o___channel_tbl__t_1ad34452ae0b201c05d15a7e81973f3d05" prot="public" virt="non-virtual"><scope>TO_ChannelTbl_t</scope><name>TableID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

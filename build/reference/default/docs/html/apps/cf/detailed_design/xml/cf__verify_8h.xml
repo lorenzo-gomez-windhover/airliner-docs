@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cf__verify_8h" kind="file" language="C++">
+    <compoundname>cf_verify.h</compoundname>
+    <includedby refid="cf__app_8c" local="yes">apps/cf/fsw/src/cf_app.c</includedby>
+    <includedby refid="cf__callbacks_8c" local="yes">apps/cf/fsw/src/cf_callbacks.c</includedby>
+    <includedby refid="cf__cmds_8c" local="yes">apps/cf/fsw/src/cf_cmds.c</includedby>
+    <includedby refid="cf__playback_8c" local="yes">apps/cf/fsw/src/cf_playback.c</includedby>
+    <includedby refid="cf__utils_8c" local="yes">apps/cf/fsw/src/cf_utils.c</includedby>
+    <invincdepgraph>
+      <node id="3139">
+        <label>apps/cf/fsw/src/cf_cmds.c</label>
+        <link refid="cf__cmds_8c"/>
+      </node>
+      <node id="3140">
+        <label>apps/cf/fsw/src/cf_playback.c</label>
+        <link refid="cf__playback_8c"/>
+      </node>
+      <node id="3137">
+        <label>apps/cf/fsw/src/cf_app.c</label>
+        <link refid="cf__app_8c"/>
+      </node>
+      <node id="3136">
+        <label>apps/cf/fsw/src/cf_verify.h</label>
+        <link refid="cf_verify.h"/>
+        <childnode refid="3137" relation="include">
+        </childnode>
+        <childnode refid="3138" relation="include">
+        </childnode>
+        <childnode refid="3139" relation="include">
+        </childnode>
+        <childnode refid="3140" relation="include">
+        </childnode>
+        <childnode refid="3141" relation="include">
+        </childnode>
+      </node>
+      <node id="3138">
+        <label>apps/cf/fsw/src/cf_callbacks.c</label>
+        <link refid="cf__callbacks_8c"/>
+      </node>
+      <node id="3141">
+        <label>apps/cf/fsw/src/cf_utils.c</label>
+        <link refid="cf__utils_8c"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/><sp/><sp/>$Id:<sp/>cf_verify.h<sp/>1.11.1.1<sp/>2015/03/06<sp/>15:30:44EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/><sp/>Define<sp/>the<sp/>CFS<sp/>CF<sp/>Application<sp/>compile-time<sp/>checks</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">**<sp/>$Log:<sp/>cf_verify.h<sp/><sp/>$</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">**<sp/>Revision<sp/>1.11.1.1<sp/>2015/03/06<sp/>15:30:44EST<sp/>sstrege<sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">**<sp/>Added<sp/>copyright<sp/>information</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**<sp/>Revision<sp/>1.11<sp/>2011/05/19<sp/>15:32:06EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>DCR15033:1<sp/>Add<sp/>auto<sp/>suspend<sp/>processing</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**<sp/>Revision<sp/>1.10<sp/>2011/05/19<sp/>13:15:14EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**<sp/>DCR14532:1<sp/>Let<sp/>user<sp/>select<sp/>fix<sp/>or<sp/>variable<sp/>size<sp/>outgoing<sp/>PDU<sp/>pkts</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">**<sp/>Revision<sp/>1.9<sp/>2011/05/13<sp/>14:59:27EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>DCR13439:1<sp/>Added<sp/>platform<sp/>config<sp/>param<sp/>CF_STARTUP_SYNC_TIMEOUT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>Revision<sp/>1.8<sp/>2010/10/25<sp/>11:21:52EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">**<sp/>DCR12573:1<sp/>Changes<sp/>to<sp/>allow<sp/>more<sp/>than<sp/>one<sp/>incoming<sp/>PDU<sp/>MsgId</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">**<sp/>Revision<sp/>1.7<sp/>2010/10/20<sp/>10:13:31EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**<sp/>DCR12982:1<sp/>Moved<sp/>4th<sp/>digit<sp/>in<sp/>version<sp/>to<sp/>platform<sp/>cfg<sp/>file</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>Revision<sp/>1.6<sp/>2010/08/06<sp/>18:45:58EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**<sp/>Dcr11510:1<sp/>Fixed<sp/>cfg<sp/>params<sp/>with<sp/>buffer<sp/>sizes</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**<sp/>Revision<sp/>1.5<sp/>2010/08/04<sp/>15:17:38EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">**<sp/>DCR11510:1<sp/>Changes<sp/>prior<sp/>to<sp/>release</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">**<sp/>Revision<sp/>1.4<sp/>2010/07/20<sp/>14:37:42EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Dcr11510:1<sp/>Remove<sp/>Downlink<sp/>buffer<sp/>references</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">**<sp/>Revision<sp/>1.3<sp/>2010/07/07<sp/>17:42:45EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment">**<sp/>DCR11510:1<sp/>Changed<sp/>checks<sp/>to<sp/>match<sp/>new<sp/>platform<sp/>cfg<sp/>name<sp/>Incoming<sp/>pdu<sp/>buf</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>Revision<sp/>1.2<sp/>2010/04/26<sp/>10:14:47EDT<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="comment">**<sp/>DCR11510:1<sp/>Added<sp/>compile<sp/>time<sp/>checks</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">**<sp/>Revision<sp/>1.1<sp/>2009/11/24<sp/>12:48:58EST<sp/>rmcgraw<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="comment">**<sp/>Initial<sp/>revision</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">**<sp/>Member<sp/>added<sp/>to<sp/>CFS<sp/>CF<sp/>project</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_cf_verify_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_cf_verify_h_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_PIPE_DEPTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_PIPE_DEPTH<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_PIPE_DEPTH<sp/><sp/>&lt;<sp/><sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_PIPE_DEPTH<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_PIPE_DEPTH<sp/><sp/>&gt;<sp/><sp/>CFE_SB_MAX_PIPE_DEPTH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_PIPE_DEPTH<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>CFE_SB_MAX_PIPE_DEPTH!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_PIPE_NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_PIPE_NAME<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_MAX_SIMULTANEOUS_TRANSACTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MAX_SIMULTANEOUS_TRANSACTIONS<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_MAX_SIMULTANEOUS_TRANSACTIONS<sp/><sp/>&lt;<sp/><sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MAX_SIMULTANEOUS_TRANSACTIONS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_INCOMING_PDU_BUF_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_INCOMING_PDU_BUF_SIZE<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_INCOMING_PDU_BUF_SIZE<sp/><sp/>&lt;<sp/><sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_INCOMING_PDU_BUF_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_INCOMING_PDU_BUF_SIZE<sp/><sp/>&gt;<sp/><sp/>65535)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_INCOMING_PDU_BUF_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>64K<sp/>CCSDS<sp/>Pkt<sp/>Size<sp/>Limit!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_OUTGOING_PDU_BUF_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_OUTGOING_PDU_BUF_SIZE<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_OUTGOING_PDU_BUF_SIZE<sp/><sp/>&lt;<sp/><sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_OUTGOING_PDU_BUF_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_OUTGOING_PDU_BUF_SIZE<sp/><sp/>&lt;<sp/><sp/>CF_INCOMING_PDU_BUF_SIZE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_OUTGOING_PDU_BUF_SIZE<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>CF_INCOMING_PDU_BUF_SIZE!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_OUTGOING_PDU_BUF_SIZE<sp/><sp/>&gt;<sp/><sp/>65535)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_OUTGOING_PDU_BUF_SIZE<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>64K<sp/>CCSDS<sp/>Pkt<sp/>Size<sp/>Limit!<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_ENGINE_TEMP_FILE_PREFIX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_ENGINE_TEMP_FILE_PREFIX<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_CONFIG_TABLE_NAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_CONFIG_TABLE_NAME<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_CONFIG_TABLE_FILENAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_CONFIG_TABLE_FILENAME<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_NUM_INPUT_CHANNELS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_NUM_INPUT_CHANNELS<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_NUM_INPUT_CHANNELS<sp/><sp/>&lt;<sp/><sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_NUM_INPUT_CHANNELS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_NUM_INPUT_CHANNELS<sp/><sp/>&gt;<sp/><sp/>255)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_NUM_INPUT_CHANNELS<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>255!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_MAX_PLAYBACK_CHANNELS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MAX_PLAYBACK_CHANNELS<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_MAX_PLAYBACK_CHANNELS<sp/><sp/>&lt;<sp/><sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MAX_PLAYBACK_CHANNELS<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_MAX_PLAYBACK_CHANNELS<sp/><sp/>&gt;<sp/><sp/>255)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MAX_PLAYBACK_CHANNELS<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>255!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_MAX_POLLING_DIRS_PER_CHAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MAX_POLLING_DIRS_PER_CHAN<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_MAX_POLLING_DIRS_PER_CHAN<sp/><sp/>&lt;<sp/><sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MAX_POLLING_DIRS_PER_CHAN<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>1!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_MAX_POLLING_DIRS_PER_CHAN<sp/><sp/>&gt;<sp/><sp/>255)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MAX_POLLING_DIRS_PER_CHAN<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>255!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_MEMORY_POOL_BYTES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MEMORY_POOL_BYTES<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_MEMORY_POOL_BYTES<sp/><sp/>&lt;<sp/><sp/>256)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MEMORY_POOL_BYTES<sp/>cannot<sp/>be<sp/>less<sp/>than<sp/>256!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_MEMORY_POOL_BYTES<sp/><sp/>&gt;<sp/><sp/>4294967296)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MEMORY_POOL_BYTES<sp/>cannot<sp/>be<sp/>greater<sp/>than<sp/>4294967296!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>((CF_MEMORY_POOL_BYTES<sp/>%<sp/>4)<sp/>!=<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MEMORY_POOL_BYTES<sp/>must<sp/>be<sp/>a<sp/>multiple<sp/>of<sp/>4!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_DEFAULT_QUEUE_INFO_FILENAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_DEFAULT_QUEUE_INFO_FILENAME<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CF_STARTUP_SYNC_TIMEOUT<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_STARTUP_SYNC_TIMEOUT<sp/>can<sp/>not<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CF_STARTUP_SYNC_TIMEOUT<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_STARTUP_SYNC_TIMEOUT<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CF_SEND_FIXED_SIZE_PKTS<sp/>&lt;<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_SEND_FIXED_SIZE_PKTS<sp/>can<sp/>not<sp/>be<sp/>less<sp/>than<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CF_SEND_FIXED_SIZE_PKTS<sp/>&gt;<sp/>CFE_SB_MAX_SB_MSG_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_SEND_FIXED_SIZE_PKTS<sp/>can<sp/>not<sp/>exceed<sp/>CFE_SB_MAX_SB_MSG_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CF_AUTOSUSPEND_MAX_TRANS<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_AUTOSUSPEND_MAX_TRANS<sp/>can<sp/>not<sp/>be<sp/>less<sp/>than<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>CF_AUTOSUSPEND_MAX_TRANS<sp/>&gt;<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_AUTOSUSPEND_MAX_TRANS<sp/>can<sp/>not<sp/>exceed<sp/>4294967295</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_MISSION_REV</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MISSION_REV<sp/>must<sp/>be<sp/>defined!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(CF_MISSION_REV<sp/>&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>CF_MISSION_REV<sp/>must<sp/>be<sp/>greater<sp/>than<sp/>or<sp/>equal<sp/>to<sp/>zero!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_cf_verify_h_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/cf/fsw/src/cf_verify.h"/>
+  </compounddef>
+</doxygen>

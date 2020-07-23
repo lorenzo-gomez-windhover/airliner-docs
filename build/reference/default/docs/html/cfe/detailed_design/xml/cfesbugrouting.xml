@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfesbugrouting" kind="page">
+    <compoundname>cfesbugrouting</compoundname>
+    <title>Message Routing</title>
+    <detaileddescription>
+<para>In the software bus, all messages are processed in a similar way. The software bus uses the Message ID and the packet length fields (contained in the header) for routing the message to the destination pipe. If either of these two fields do not pass validation, the software bus generates an error event and aborts the delivery process. The software bus performs some validation checks by simply checking message header values against mission or platform configuration parameters. Messages originating from various tasks or instruments are routed to one or more pipes, where they wait until read by a task. The routing configuration for each message is established when applications call one of the SB subscribe APIs. The subscribe APIs take a Message ID and a Pipe ID as parameters. The routing for each packet is stored in SB memory and may be requested at any time by sending the &apos;Send Routing Info&apos; command. The software bus also provides a set of figures regarding capacity, current utilization and high water marks relevant to the routing. This information may be requested by sending the command to dump the SB statistics packet.</para><para>Next: <ref refid="cfesbugpktseqvals" kindref="compound">Packet Sequence Values</ref> <linebreak/>
+ Prev: <ref refid="cfesbugreset" kindref="compound">All Resets</ref> <linebreak/>
+ Up To: <ref refid="cfesbugops" kindref="compound">Operation of the SB Software</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

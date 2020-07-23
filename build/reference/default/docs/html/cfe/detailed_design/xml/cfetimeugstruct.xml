@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetimeugstruct" kind="page">
+    <compoundname>cfetimeugstruct</compoundname>
+    <title>Time Structure</title>
+    <detaileddescription>
+<para>The cFE implementation of the <bold>System Time Structure</bold> is a modified version of the CCSDS Unsegmented Time Code (CUC) which includes 4 bytes of seconds, and 4 bytes of subseconds, where a subsecond is equivalent to 1/(2^32) seconds. The system time structure is used by TIME to store current time, time at the tone, time since the tone, the MET, the STCF and command arguments for time adjustments. Note that only the 32 bits of seconds and the upper 16 bits of subseconds are used for time stamping CCSDS packets.</para><para>The system time structure is defined as follows:</para><para><verbatim>typedef struct {
+      uint32      Seconds;      /* Number of seconds */
+      uint32      Subseconds;   /* Number of 2^(-32) subseconds */
+} CFE_TIME_SysTime_t;
+</verbatim></para><para>Next: <ref refid="cfetimeugformat" kindref="compound">Time Formats</ref> <linebreak/>
+ Prev: <ref refid="cfetimeugcomponents" kindref="compound">Time Components</ref> <linebreak/>
+ Up To: <ref refid="cfetimeovr" kindref="compound">cFE Time Services Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="sc__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>sc_platform_cfg.h</compoundname>
+    <includedby refid="sc__app_8h" local="yes">apps/sc/fsw/src/sc_app.h</includedby>
+    <includedby refid="sc__tbldefs_8h" local="yes">apps/sc/fsw/src/sc_tbldefs.h</includedby>
+    <includedby refid="sc__msg_8h" local="yes">apps/sc/fsw/src/sc_msg.h</includedby>
+    <includedby refid="sc__verify_8h" local="yes">apps/sc/fsw/src/sc_verify.h</includedby>
+    <invincdepgraph>
+      <node id="596">
+        <label>apps/sc/fsw/src/sc_tbldefs.h</label>
+        <link refid="sc__tbldefs_8h"/>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+      </node>
+      <node id="586">
+        <label>apps/sc/fsw/platform_inc/sc_platform_cfg.h</label>
+        <link refid="sc_platform_cfg.h"/>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="596" relation="include">
+        </childnode>
+        <childnode refid="597" relation="include">
+        </childnode>
+        <childnode refid="598" relation="include">
+        </childnode>
+      </node>
+      <node id="594">
+        <label>apps/sc/fsw/src/sc_state.c</label>
+        <link refid="sc__state_8c"/>
+      </node>
+      <node id="588">
+        <label>apps/sc/fsw/src/sc_app.c</label>
+        <link refid="sc__app_8c"/>
+      </node>
+      <node id="587">
+        <label>apps/sc/fsw/src/sc_app.h</label>
+        <link refid="sc__app_8h"/>
+        <childnode refid="588" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+        <childnode refid="592" relation="include">
+        </childnode>
+        <childnode refid="593" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+      </node>
+      <node id="598">
+        <label>apps/sc/fsw/src/sc_verify.h</label>
+        <link refid="sc__verify_8h"/>
+      </node>
+      <node id="591">
+        <label>apps/sc/fsw/src/sc_cmds.c</label>
+        <link refid="sc__cmds_8c"/>
+      </node>
+      <node id="593">
+        <label>apps/sc/fsw/src/sc_rtsrq.c</label>
+        <link refid="sc__rtsrq_8c"/>
+      </node>
+      <node id="597">
+        <label>apps/sc/fsw/src/sc_msg.h</label>
+        <link refid="sc__msg_8h"/>
+        <childnode refid="587" relation="include">
+        </childnode>
+      </node>
+      <node id="592">
+        <label>apps/sc/fsw/src/sc_loads.c</label>
+        <link refid="sc__loads_8c"/>
+      </node>
+      <node id="595">
+        <label>apps/sc/fsw/src/sc_utils.c</label>
+        <link refid="sc__utils_8c"/>
+      </node>
+      <node id="590">
+        <label>apps/sc/fsw/src/sc_atsrq.c</label>
+        <link refid="sc__atsrq_8c"/>
+      </node>
+      <node id="589">
+        <label>apps/sc/fsw/src/sc_utils.h</label>
+        <link refid="sc__utils_8h"/>
+        <childnode refid="590" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+        <childnode refid="592" relation="include">
+        </childnode>
+        <childnode refid="593" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+        <childnode refid="595" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a2be6567285840d1c4f1615fd7ef214ec" prot="public" static="no">
+        <name>SC_MAX_CMDS_PER_SEC</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000001"><xreftitle>Purpose</xreftitle><xrefdescription><para>Max number of commands per second</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of commands that can be sent out by SC in any given second.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535), but should be kepoot relatively small to avoid SC hogging the CPU </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="70" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="sc__cmds_8h_1a939d9876c5d8b746680c1e323c1cd3a4" compoundref="sc__cmds_8c" startline="613" endline="720">SC_ProcessRequest</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1ad698f831ae59d3e135dfeefcbe977b10" prot="public" static="no">
+        <name>SC_NUMBER_OF_RTS</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000002"><xreftitle>Purpose</xreftitle><xrefdescription><para>Number of RTS&apos;s</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The number of RTS&apos;s allowed in the system</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than 999.This parameter will dicate the size of The RTS Info Table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="82" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="sc__rtsrq_8h_1af2b821691ddac2445954ff04e9f14f44" compoundref="sc__rtsrq_8c" startline="390" endline="425">SC_DisableRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a81978a02722b4746afd15230104b30aa" compoundref="sc__rtsrq_8c" startline="434" endline="481">SC_DisableRtsGrpCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af9e2c25188ff805eaf63980273a53e9b" compoundref="sc__rtsrq_8c" startline="489" endline="528">SC_EnableRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ad50bc01bb2645d329678fcaf5c64a332" compoundref="sc__rtsrq_8c" startline="537" endline="584">SC_EnableRtsGrpCmd</referencedby>
+        <referencedby refid="sc__app_8h_1acb1d8388822e74ecfd9c622d9d680e44" compoundref="sc__app_8c" startline="558" endline="607">SC_GetLoadTablePointers</referencedby>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__state_8h_1a95e18f6fab756db5f6bdec408fdec63d" compoundref="sc__state_8c" startline="68" endline="106">SC_GetNextRtsTime</referencedby>
+        <referencedby refid="sc__app_8h_1ae9708b454e3538a95c056827ea94a895" compoundref="sc__app_8c" startline="278" endline="340">SC_InitTables</referencedby>
+        <referencedby refid="sc__app_8h_1af79d790d3ceade4d1e3cc1a2a63b418c" compoundref="sc__app_8c" startline="616" endline="652">SC_LoadDefaultTables</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4c3bc209f79cd25a755aa5fbd58df762" compoundref="sc__cmds_8c" startline="358" endline="469">SC_ProcessRtpCommand</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__app_8h_1a90250887c96acd58620e72b81df541bd" compoundref="sc__app_8c" startline="661" endline="709">SC_RegisterManageCmds</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1af3256232b4e0cdd7688bf3d9772094d5" compoundref="sc__rtsrq_8c" startline="219" endline="283">SC_StartRtsGrpCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ad580bebe10c9142749c255510786d732" compoundref="sc__rtsrq_8c" startline="291" endline="326">SC_StopRtsCmd</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1a0c33d7aeb1626bfa209777235f6c3637" compoundref="sc__rtsrq_8c" startline="335" endline="382">SC_StopRtsGrpCmd</referencedby>
+        <referencedby refid="sc__cmds_8h_1a2fb1b61c3b849971ac458d890e644109" compoundref="sc__cmds_8c" startline="824" endline="887">SC_TableManageCmd</referencedby>
+        <referencedby refid="sc__state_8h_1a6758b9fc9107b2b46e0e04c4ae5e6664" compoundref="sc__state_8c" startline="113" endline="151">SC_UpdateNextTime</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a5a6823770db1b0799a5835f459799ad5" prot="public" static="no">
+        <name>SC_ATS_BUFF_SIZE</name>
+        <initializer>8000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000003"><xreftitle>Purpose</xreftitle><xrefdescription><para>Max buffer size for an ATS in uint16s</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The max sizeof an ATS buffer in words (not bytes) </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="93" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="93" bodyend="-1"/>
+        <referencedby refid="sc__atsrq_8h_1a3f66fd506dce0cf0c0c9764222e2f387" compoundref="sc__atsrq_8c" startline="749" endline="809">SC_AppendAtsCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a816bc81fa048a45b1f65be72695a11bc" compoundref="sc__loads_8c" startline="99" endline="233">SC_LoadAts</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__cmds_8h_1a4554418b6a6846e29de6ec3b1519b213" compoundref="sc__cmds_8c" startline="476" endline="560">SC_SendHkPacket</referencedby>
+        <referencedby refid="sc__loads_8h_1a865d6bcdf3a1995a57e2057d761bb1d0" compoundref="sc__loads_8c" startline="388" endline="397">SC_ValidateAts</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1ad13d7fe4d1d7befb877253962c1a792e" prot="public" static="no">
+        <name>SC_APPEND_BUFF_SIZE</name>
+        <initializer>(<ref refid="sc__platform__cfg_8h_1a5a6823770db1b0799a5835f459799ad5" kindref="member">SC_ATS_BUFF_SIZE</ref> / 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000004"><xreftitle>Purpose</xreftitle><xrefdescription><para>Max buffer size for an Append ATS in uint16s</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The max sizeof an Append ATS buffer in words (not bytes) </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter cannot be larger than SC_ATS_BUFF_SIZE. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="103" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__loads_8h_1a2d0f5e99af744f8018f7b2e1f084e434" compoundref="sc__loads_8c" startline="568" endline="632">SC_UpdateAppend</referencedby>
+        <referencedby refid="sc__loads_8h_1ae3235bb169089e1ec0aa9517e9636be1" compoundref="sc__loads_8c" startline="551" endline="560">SC_ValidateAppend</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1af34c920689afd5bacf09815aae605339" prot="public" static="no">
+        <name>SC_RTS_BUFF_SIZE</name>
+        <initializer>150</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000005"><xreftitle>Purpose</xreftitle><xrefdescription><para>Max buffer size for an RTS in uint16s</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The max size of an RTS buffer in WORDS (not bytes) </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="114" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__loads_8h_1ac7b67e66865beec1ad565b03b7b7c3fc" compoundref="sc__loads_8c" startline="405" endline="515">SC_ParseRts</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1af08662efd00a262389f7b19ce4e9af12" prot="public" static="no">
+        <name>SC_MAX_ATS_CMDS</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000006"><xreftitle>Purpose</xreftitle><xrefdescription><para>Max number of commands in each ATS</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The maximum number of commands that are allowed in each ATS</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter can&apos;t be larger than an unsigned 16 bit integer (65535). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="126" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="sc__loads_8h_1a94efe79f312de6e2ddfc93602a80f3e2" compoundref="sc__loads_8c" startline="241" endline="266">SC_BuildTimeIndexTable</referencedby>
+        <referencedby refid="sc__loads_8h_1a0cc5434df420502c5d7269b9be5e7ff6" compoundref="sc__loads_8c" startline="343" endline="359">SC_InitAtsTables</referencedby>
+        <referencedby refid="sc__app_8h_1ae9708b454e3538a95c056827ea94a895" compoundref="sc__app_8c" startline="278" endline="340">SC_InitTables</referencedby>
+        <referencedby refid="sc__loads_8h_1a816bc81fa048a45b1f65be72695a11bc" compoundref="sc__loads_8c" startline="99" endline="233">SC_LoadAts</referencedby>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+        <referencedby refid="sc__loads_8h_1a2d0f5e99af744f8018f7b2e1f084e434" compoundref="sc__loads_8c" startline="568" endline="632">SC_UpdateAppend</referencedby>
+        <referencedby refid="sc__loads_8h_1a3f19d8f64fe2a9ea12cfb1e6280234b5" compoundref="sc__loads_8c" startline="785" endline="890">SC_VerifyAtsEntry</referencedby>
+        <referencedby refid="sc__loads_8h_1ad052ce81eb4c3902c22a6209c2a2323f" compoundref="sc__loads_8c" startline="718" endline="777">SC_VerifyAtsTable</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1ab5258ccd1cfd9a3c2aa16d89e33c7c9d" prot="public" static="no">
+        <name>SC_LAST_RTS_WITH_EVENTS</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000007"><xreftitle>Purpose</xreftitle><xrefdescription><para>The last RTS that will be sent with an <ref refid="sc__events_8h_1a27f4adca6c515ff390fe26a4dc4bb43f" kindref="member">SC_RTS_START_INF_EID</ref> event message </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>When all RTS&apos;s are started, the <ref refid="sc__events_8h_1a27f4adca6c515ff390fe26a4dc4bb43f" kindref="member">SC_RTS_START_INF_EID</ref> event message is sent out. This parameter suppreses that message for all RTS&apos;s over this number</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter needs to be less than or equal to SC_NUMBER_OF_RTS </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="138" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a22e370f3f81ab559113e63c1f628699c" prot="public" static="no">
+        <name>SC_PACKET_MIN_SIZE</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000008"><xreftitle>Purpose</xreftitle><xrefdescription><para>Minimum Packet Size</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter specifies the minumum size for an ATS or RTS command. </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter must be greater than or equal to CFE_SB_CMD_HDR_SIZE and less than or equal to CFE_SB_MAX_SB_MSG_SIZE. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="149" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="149" bodyend="-1"/>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__loads_8h_1a816bc81fa048a45b1f65be72695a11bc" compoundref="sc__loads_8c" startline="99" endline="233">SC_LoadAts</referencedby>
+        <referencedby refid="sc__loads_8h_1ac7b67e66865beec1ad565b03b7b7c3fc" compoundref="sc__loads_8c" startline="405" endline="515">SC_ParseRts</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a2d0f5e99af744f8018f7b2e1f084e434" compoundref="sc__loads_8c" startline="568" endline="632">SC_UpdateAppend</referencedby>
+        <referencedby refid="sc__loads_8h_1a3f19d8f64fe2a9ea12cfb1e6280234b5" compoundref="sc__loads_8c" startline="785" endline="890">SC_VerifyAtsEntry</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a737df303b42938fe37a7d4d9329138c8" prot="public" static="no">
+        <name>SC_PACKET_MAX_SIZE</name>
+        <initializer>250</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000009"><xreftitle>Purpose</xreftitle><xrefdescription><para>Maximum Packet Size</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter specifies the maximum size for an ATS or RTS command. </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter must be greater than or equal to SC_PACKET_MIN_SIZE and less than or equal to CFE_SB_MAX_SB_MSG_SIZE. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="160" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="sc__state_8h_1a3d9d9fbd921455c4430527ae9463ca13" compoundref="sc__state_8c" startline="158" endline="334">SC_GetNextRtsCommand</referencedby>
+        <referencedby refid="sc__loads_8h_1a816bc81fa048a45b1f65be72695a11bc" compoundref="sc__loads_8c" startline="99" endline="233">SC_LoadAts</referencedby>
+        <referencedby refid="sc__loads_8h_1ac7b67e66865beec1ad565b03b7b7c3fc" compoundref="sc__loads_8c" startline="405" endline="515">SC_ParseRts</referencedby>
+        <referencedby refid="sc__rtsrq_8h_1ac25e36fd8fda93a24adee193999dd643" compoundref="sc__rtsrq_8c" startline="76" endline="210">SC_StartRtsCmd</referencedby>
+        <referencedby refid="sc__loads_8h_1a2d0f5e99af744f8018f7b2e1f084e434" compoundref="sc__loads_8c" startline="568" endline="632">SC_UpdateAppend</referencedby>
+        <referencedby refid="sc__loads_8h_1a3f19d8f64fe2a9ea12cfb1e6280234b5" compoundref="sc__loads_8c" startline="785" endline="890">SC_VerifyAtsEntry</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a49dfbe98b21623f265c1c8cfd2a56452" prot="public" static="no">
+        <name>SC_PIPE_DEPTH</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000010"><xreftitle>Purpose</xreftitle><xrefdescription><para>Command Pipe Depth</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Maximum number of messages that will be allowed in the SC command pipe at one time. Used during initialization in the call to <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref></para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>This parameter must be greater than zero and less than or equal to CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="174" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1aaa02040bf2df0101ce6f5e11142793f6" prot="public" static="no">
+        <name>SC_ATS_FILE_NAME</name>
+        <initializer>&quot;/cf/apps/sc_ats&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000011"><xreftitle>Purpose</xreftitle><xrefdescription><para>ATS Table Filenames </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Filenames for the ATS tables loaded at startup are constructed by appending a one digit table identifier plus the extension &quot;.tbl&quot; to the base portion of the filename defined here.</para></simplesect>
+The default definitions will create ATS filenames as follows: &quot;/cf/apps/sc_ats1.tbl or /cf/apps/sc_ats2.tbl&quot;</para><para><simplesect kind="par"><title>Limits:</title><para>SC requires that this name be defined, but otherwise places no limits on the definition. If the named table file does not exist at run time, or the table fails validation, then the table load will fail. Refer to #OS_MAX_PATH_LEN for filename length limits. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="193" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1aa3fc753d8b7865891c9c63a54cc1ad52" prot="public" static="no">
+        <name>SC_APPEND_FILE_NAME</name>
+        <initializer>&quot;/cf/apps/sc_append.tbl&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000012"><xreftitle>Purpose</xreftitle><xrefdescription><para>Append ATS Table Filename</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This name describes the default append ATS filename loaded at startup. Often the default Append ATS file contains only a single unused table entry, and is used only to initialize the table state as having data that may be patched.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>SC requires that this name be defined, but otherwise places no limits on the definition. If the named table file does not exist at run time, or the table fails validation, then the table load will fail. Refer to #OS_MAX_PATH_LEN for filename length limits. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="210" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1ac9337b61aaca7a2b7e153ae65b91caf1" prot="public" static="no">
+        <name>SC_RTS_FILE_NAME</name>
+        <initializer>&quot;/cf/apps/sc_rts&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000013"><xreftitle>Purpose</xreftitle><xrefdescription><para>RTS Table Filenames </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Filenames for the RTS tables loaded at startup are constructed by appending a one digit table identifier plus the extension &quot;.tbl&quot; to the base portion of the filename defined here.</para></simplesect>
+The default definitions will create RTS filenames as follows: &quot;/cf/apps/sc_rts001.tbl, /cf/apps/sc_rts002.tbl, etc&quot;</para><para><simplesect kind="par"><title>Limits:</title><para>SC requires that this name be defined, but otherwise places no limits on the definition. If the named table file does not exist at run time, or the table fails validation, then the table load will fail. Refer to #OS_MAX_PATH_LEN for filename length limits. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="229" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="229" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1af79d790d3ceade4d1e3cc1a2a63b418c" compoundref="sc__app_8c" startline="616" endline="652">SC_LoadDefaultTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1afd6cfe0224e8b5b9f147e4e61a98652d" prot="public" static="no">
+        <name>SC_ATS_TABLE_NAME</name>
+        <initializer>&quot;ATS_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000014"><xreftitle>Purpose</xreftitle><xrefdescription><para>ATS Table Object Names </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Unique table object names are required for each table registered with cFE Table Services. ATS table object names are constructed by appending a one digit table identifier to the base portion of the object name defined here.</para></simplesect>
+The default definitions will create ATS object names as follows: &quot;ATS_TBL1 or ATS_TBL2&quot;</para><para><simplesect kind="par"><title>Limits:</title><para>SC requires that this name be defined, but otherwise places no limits on the definition. Refer to <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> for specific information on limits related to table object names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="248" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="248" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a96fb1a345ef7b834ca664ecf49496cab" prot="public" static="no">
+        <name>SC_APPEND_TABLE_NAME</name>
+        <initializer>&quot;APPEND_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000015"><xreftitle>Purpose</xreftitle><xrefdescription><para>Append ATS Table Object Names</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Unique table object names are required for each table registered with cFE Table Services. This is the table object name for the Append ATS table.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>SC requires that this name be defined, but otherwise places no limits on the definition. Refer to <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> for specific information on limits related to table object names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="263" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="263" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a23348eaa39160aee4ca05bc41572b024" prot="public" static="no">
+        <name>SC_RTS_TABLE_NAME</name>
+        <initializer>&quot;RTS_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000016"><xreftitle>Purpose</xreftitle><xrefdescription><para>RTS Table Object Names </para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Unique table object names are required for each table registered with cFE Table Services. RTS table object names are constructed by appending a three digit table identifier to the base portion of the object name defined here.</para></simplesect>
+The default definitions will create RTS object names as follows: &quot;RTS_TBL001, RTS_TBL002, etc&quot;</para><para><simplesect kind="par"><title>Limits:</title><para>SC requires that this name be defined, but otherwise places no limits on the definition. Refer to <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> for specific information on limits related to table object names. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="282" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="282" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1ab9079aea903d77e22314819f2c7f4f26" prot="public" static="no">
+        <name>SC_RTSINFO_TABLE_NAME</name>
+        <initializer>&quot;RTSINF_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000017"><xreftitle>Purpose</xreftitle><xrefdescription><para>Name of the RTS Infomation Table</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Name of the RTS Information Table </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be less than <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="292" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="292" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a0258b2e695c42f9612304a14a432ba1b" prot="public" static="no">
+        <name>SC_RTP_CTRL_TABLE_NAME</name>
+        <initializer>&quot;RTPCTR_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000018"><xreftitle>Purpose</xreftitle><xrefdescription><para>Name of the RTP Control block table</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Name of the RTP Control Block Table </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be less than <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="302" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="302" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a682fbea2427b18a0103afd546e895142" prot="public" static="no">
+        <name>SC_ATSINFO_TABLE_NAME</name>
+        <initializer>&quot;ATSINF_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000019"><xreftitle>Purpose</xreftitle><xrefdescription><para>Name of the ATS Infomation Table</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Name of the ATS Information Table </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be less than <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="312" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="312" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a3da79d60e8de368e379fb713a7cc332e" prot="public" static="no">
+        <name>SC_APPENDINFO_TABLE_NAME</name>
+        <initializer>&quot;APPINF_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000020"><xreftitle>Purpose</xreftitle><xrefdescription><para>Name of the Append ATS Infomation Table</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Name of the Append ATS Information Table </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be less than <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="322" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="322" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a09baa1d1a125395fb6a5afefad1ea746" prot="public" static="no">
+        <name>SC_ATS_CTRL_TABLE_NAME</name>
+        <initializer>&quot;ATPCTR_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000021"><xreftitle>Purpose</xreftitle><xrefdescription><para>Name of the ATP Control block table</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>Name of the ATP Control Block Table </para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be less than <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="332" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="332" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a60e43fa5c527dcde106483ca604a0da5" prot="public" static="no">
+        <name>SC_ATS_CMD_STAT_TABLE_NAME</name>
+        <initializer>&quot;ATSCMD_TBL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000022"><xreftitle>Purpose</xreftitle><xrefdescription><para>Name Prefix of ATS Cmd Status Table</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>The prefix of the ATS Command Status table names. Note that actual table names will have a 1 digit number postfixed to it depending on the ATS number</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Total length must be less than <ref refid="cfe__mission__cfg_8h_1a57b941daf6cdf4df9790ead1d1aa842d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_MAX_NAME_LENGTH</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="345" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="345" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1a34e26cea8988d358bc234c7352639816" compoundref="sc__app_8c" startline="349" endline="476">SC_RegisterAllTables</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a2669dc2b41cb3eec0dff5701f0d0bcdb" prot="public" static="no">
+        <name>SC_CONT_ON_FAILURE_START</name>
+        <initializer><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000023"><xreftitle>Purpose</xreftitle><xrefdescription><para>Defnies default state of Continue-Ats-On-Checksum-Failure Flag</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter specifies the default state to continue an ATS when a command in the ATS fails checksum validation</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be TUE or FALSE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="357" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="357" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a2837e8a58fa404358d6b0d6b433d36c2" prot="public" static="no">
+        <name>SC_TIME_TO_USE</name>
+        <initializer><ref refid="sc__msgdefs_8h_1a0fe33807a5abcf478ae5ec035f964c93" kindref="member">SC_USE_CFE_TIME</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000024"><xreftitle>Purpose</xreftitle><xrefdescription><para>Defines the TIME SC should use for its commands</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter defines what type of time SC should use for sending uot its commands</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be SC_USE_CFE_TIME, SC_USE_TAI, or SC_USE_UTC </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="368" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1ab93d60be9ff3f8c09a2bc50bd48420c2" prot="public" static="no">
+        <name>SC_ENABLE_GROUP_COMMANDS</name>
+        <initializer><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000025"><xreftitle>Purpose</xreftitle><xrefdescription><para>Define inclusion state for RTS group commands</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>This parameter specifies the inclusion state for the following RTS group commands: Start RTS group, Stop RTS group, Enable RTS group and Disable RTS group. RTS group commands affect a range of consecutive RTS numbers. When set to TRUE, this definition results in the inclusion of the group command handlers into the SC source code.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as TRUE or FALSE </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="385" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sc__platform__cfg_8h_1a9aab66a6eb179df6577207d4f061e2e9" prot="public" static="no">
+        <name>SC_MISSION_REV</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="cfssccfg_1_cfssccfg000026"><xreftitle>Purpose</xreftitle><xrefdescription><para>Mission specific version number for SC application</para></xrefdescription></xrefsect></para><para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;sc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h" line="401" column="9" bodyfile="apps/sc/fsw/platform_inc/sc_platform_cfg.h" bodystart="401" bodyend="-1"/>
+        <referencedby refid="sc__app_8h_1aaa9ab9c0b12ccef929114790f78f53dd" compoundref="sc__app_8c" startline="179" endline="269">SC_AppInit</referencedby>
+        <referencedby refid="sc__cmds_8h_1af1473559ad6d652f81e7a0f1fef31145" compoundref="sc__cmds_8c" startline="592" endline="605">SC_NoOpCmd</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>**<sp/>File:</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>**<sp/><sp/><sp/>$Id:<sp/>sc_platform_cfg.h<sp/>1.2<sp/>2015/11/20<sp/>12:03:20EST<sp/>sstrege<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>**<sp/><sp/>Copyright<sp/>©<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>Purpose:<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/><sp/><sp/>This<sp/>file<sp/>contains<sp/>the<sp/>platform<sp/>configuration<sp/>parameters<sp/>used<sp/>by</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Stored<sp/>Command</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**<sp/>References:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Flight<sp/>Software<sp/>Branch<sp/>C<sp/>Coding<sp/>Standard<sp/>Version<sp/>1.2</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>**<sp/><sp/><sp/>CFS<sp/>Development<sp/>Standards<sp/>Document</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>**<sp/>Notes:</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>**<sp/><sp/><sp/>$Log:<sp/>sc_platform_cfg.h<sp/><sp/>$<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.2<sp/>2015/11/20<sp/>12:03:20EST<sp/>sstrege<sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Restoration<sp/>from<sp/>MKS<sp/>2009<sp/>Trunk<sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.13<sp/>2015/03/02<sp/>12:58:43EST<sp/>sstrege<sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Added<sp/>copyright<sp/>information<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.12<sp/>2011/09/26<sp/>13:39:35EDT<sp/>lwalling<sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Remove<sp/>definition<sp/>for<sp/>SC_SAVE_TO_CDS<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.11<sp/>2011/09/23<sp/>14:25:09EDT<sp/>lwalling<sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Made<sp/>group<sp/>commands<sp/>conditional<sp/>on<sp/>configuration<sp/>definition<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.10<sp/>2010/10/08<sp/>13:19:44EDT<sp/>lwalling<sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Move<sp/>mission<sp/>rev<sp/>definition<sp/>to<sp/>platform<sp/>config<sp/>header<sp/>file<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.9<sp/>2010/04/05<sp/>11:44:21EDT<sp/>lwalling<sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Create<sp/>definitions<sp/>for<sp/>Append<sp/>ATS<sp/>data<sp/>and<sp/>info<sp/>tables<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.8<sp/>2010/03/30<sp/>18:11:33EDT<sp/>lwalling<sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Change<sp/>SC_MAX_ATS_CMDS<sp/>from<sp/>999<sp/>to<sp/>1000<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.7<sp/>2010/03/11<sp/>16:27:23EST<sp/>lwalling<sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Create<sp/>table<sp/>file<sp/>name<sp/>definition<sp/>separate<sp/>from<sp/>table<sp/>object<sp/>name<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.6<sp/>2010/03/10<sp/>17:23:57EST<sp/>lwalling<sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Corrected<sp/>typo<sp/>in<sp/>max<sp/>cmd<sp/>packet<sp/>size<sp/>from<sp/>256<sp/>to<sp/>250<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.5<sp/>2010/03/09<sp/>15:10:08EST<sp/>lwalling<sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Update<sp/>SB<sp/>msg<sp/>size<sp/>comments,<sp/>change<sp/>CDS<sp/>cfg<sp/>def<sp/>from<sp/>ifdef<sp/>or<sp/>ifndef<sp/>to<sp/>if<sp/>true<sp/>or<sp/>if<sp/>false<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.4<sp/>2009/02/19<sp/>10:07:08EST<sp/>nyanchik<sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Update<sp/>SC<sp/>To<sp/>work<sp/>with<sp/>cFE<sp/>5.2<sp/>Config<sp/>parameters<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.3<sp/>2009/01/26<sp/>14:47:14EST<sp/>nyanchik<sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Check<sp/>in<sp/>of<sp/>Unit<sp/>test<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Revision<sp/>1.2<sp/>2009/01/05<sp/>08:26:40EST<sp/>nyanchik<sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>**<sp/><sp/><sp/>Check<sp/>in<sp/>after<sp/>code<sp/>review<sp/>changes<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_sc_platform_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_sc_platform_cfg_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>**<sp/>Macro<sp/>Definitions</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="70" refid="sc__platform__cfg_8h_1a2be6567285840d1c4f1615fd7ef214ec" refkind="member"><highlight class="preprocessor">#define<sp/>SC_MAX_CMDS_PER_SEC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="sc__platform__cfg_8h_1ad698f831ae59d3e135dfeefcbe977b10" refkind="member"><highlight class="preprocessor">#define<sp/>SC_NUMBER_OF_RTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>64<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="sc__platform__cfg_8h_1a5a6823770db1b0799a5835f459799ad5" refkind="member"><highlight class="preprocessor">#define<sp/>SC_ATS_BUFF_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8000<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="sc__platform__cfg_8h_1ad13d7fe4d1d7befb877253962c1a792e" refkind="member"><highlight class="preprocessor">#define<sp/>SC_APPEND_BUFF_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(SC_ATS_BUFF_SIZE<sp/>/<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="sc__platform__cfg_8h_1af34c920689afd5bacf09815aae605339" refkind="member"><highlight class="preprocessor">#define<sp/>SC_RTS_BUFF_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>150</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="sc__platform__cfg_8h_1af08662efd00a262389f7b19ce4e9af12" refkind="member"><highlight class="preprocessor">#define<sp/>SC_MAX_ATS_CMDS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="sc__platform__cfg_8h_1ab5258ccd1cfd9a3c2aa16d89e33c7c9d" refkind="member"><highlight class="preprocessor">#define<sp/>SC_LAST_RTS_WITH_EVENTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="sc__platform__cfg_8h_1a22e370f3f81ab559113e63c1f628699c" refkind="member"><highlight class="preprocessor">#define<sp/>SC_PACKET_MIN_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="sc__platform__cfg_8h_1a737df303b42938fe37a7d4d9329138c8" refkind="member"><highlight class="preprocessor">#define<sp/>SC_PACKET_MAX_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>250</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="sc__platform__cfg_8h_1a49dfbe98b21623f265c1c8cfd2a56452" refkind="member"><highlight class="preprocessor">#define<sp/>SC_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="sc__platform__cfg_8h_1aaa02040bf2df0101ce6f5e11142793f6" refkind="member"><highlight class="preprocessor">#define<sp/>SC_ATS_FILE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/sc_ats&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="sc__platform__cfg_8h_1aa3fc753d8b7865891c9c63a54cc1ad52" refkind="member"><highlight class="preprocessor">#define<sp/>SC_APPEND_FILE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/sc_append.tbl&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="sc__platform__cfg_8h_1ac9337b61aaca7a2b7e153ae65b91caf1" refkind="member"><highlight class="preprocessor">#define<sp/>SC_RTS_FILE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;/cf/apps/sc_rts&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="sc__platform__cfg_8h_1afd6cfe0224e8b5b9f147e4e61a98652d" refkind="member"><highlight class="preprocessor">#define<sp/>SC_ATS_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ATS_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="sc__platform__cfg_8h_1a96fb1a345ef7b834ca664ecf49496cab" refkind="member"><highlight class="preprocessor">#define<sp/>SC_APPEND_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;APPEND_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282" refid="sc__platform__cfg_8h_1a23348eaa39160aee4ca05bc41572b024" refkind="member"><highlight class="preprocessor">#define<sp/>SC_RTS_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;RTS_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="sc__platform__cfg_8h_1ab9079aea903d77e22314819f2c7f4f26" refkind="member"><highlight class="preprocessor">#define<sp/>SC_RTSINFO_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;RTSINF_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="sc__platform__cfg_8h_1a0258b2e695c42f9612304a14a432ba1b" refkind="member"><highlight class="preprocessor">#define<sp/>SC_RTP_CTRL_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;RTPCTR_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="sc__platform__cfg_8h_1a682fbea2427b18a0103afd546e895142" refkind="member"><highlight class="preprocessor">#define<sp/>SC_ATSINFO_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ATSINF_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="sc__platform__cfg_8h_1a3da79d60e8de368e379fb713a7cc332e" refkind="member"><highlight class="preprocessor">#define<sp/>SC_APPENDINFO_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;APPINF_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332" refid="sc__platform__cfg_8h_1a09baa1d1a125395fb6a5afefad1ea746" refkind="member"><highlight class="preprocessor">#define<sp/>SC_ATS_CTRL_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;ATPCTR_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345" refid="sc__platform__cfg_8h_1a60e43fa5c527dcde106483ca604a0da5" refkind="member"><highlight class="preprocessor">#define<sp/>SC_ATS_CMD_STAT_TABLE_NAME<sp/><sp/><sp/><sp/><sp/><sp/>&quot;ATSCMD_TBL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357" refid="sc__platform__cfg_8h_1a2669dc2b41cb3eec0dff5701f0d0bcdb" refkind="member"><highlight class="preprocessor">#define<sp/>SC_CONT_ON_FAILURE_START<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="sc__platform__cfg_8h_1a2837e8a58fa404358d6b0d6b433d36c2" refkind="member"><highlight class="preprocessor">#define<sp/>SC_TIME_TO_USE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SC_USE_CFE_TIME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385" refid="sc__platform__cfg_8h_1ab93d60be9ff3f8c09a2bc50bd48420c2" refkind="member"><highlight class="preprocessor">#define<sp/>SC_ENABLE_GROUP_COMMANDS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401" refid="sc__platform__cfg_8h_1a9aab66a6eb179df6577207d4f061e2e9" refkind="member"><highlight class="preprocessor">#define<sp/>SC_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_sc_platform_cfg_*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/sc/fsw/platform_inc/sc_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

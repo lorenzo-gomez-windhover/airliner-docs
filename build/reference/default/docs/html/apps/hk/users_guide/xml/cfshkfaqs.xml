@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfshkfaqs" kind="page">
+    <compoundname>cfshkfaqs</compoundname>
+    <title>CFS Housekeeping Frequently Asked Questions</title>
+    <detaileddescription>
+<para><bold> (Q) Does the protocol for collecting telemetry use a single housekeeping request command for all apps or a unique housekeeping request command for each app? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> It is unknown to the HK application because HK does not send the housekeeping request command(s). These commands are usually sent by the scheduler. However, each CFS application is capable of receiving a unique housekeeping request command. The message ID of this command is specified in the XX_msgids.h header file using the format of XX_SEND_HK_CMD for the #define. The &apos;XX&apos; refers to the application acronym. Having unique defines for each application gives the system engineer the option of having individual housekeeping request commands for each app or using a single command for all apps. In the latter case, all the defines would be set to the same value. </emphasis></para><para><bold> (Q) What is the basic flow of the application? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The HK application uses a common application format. When the app starts, initialization is performed, then the app enters an infinite loop waiting for commands from the software bus. </emphasis></para><para><bold> (Q) In general, what is done during initialization? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> During initialization, HK does the typical cFE initialization steps (create pipes, register events etc) then processes the copy table. Processing the copy table involves registering the copy table and run-time (dump-only) table, loading the copy table, subscribing to input messages defined in the copy table, allocating memory for the output messages and initializing the runtime variables. If any error is encountered during initialization, the application will send an event or syslog message, then terminate. </emphasis></para><para><bold> (Q) How does the app react if the file to load the copy table (during initialization) is not found? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> HK will send an error event or a syslog message, then terminate. </emphasis></para><para><bold> (Q) At what frequency is the housekeeping request command sent to the system applications? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The HK application does not send the housekeeping request command to the system applications. The frequency of the housekeeping request commands is typically specified in the scheduler table and sent by the scheduler application. </emphasis></para><para><bold> (Q) What factor controls the input message timing? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> In a common implementation when HK is used to combine housekeeping data, the input message timing is based on the period of the housekeeping request command(s). The housekeeping request command(s) are not sent by the HK application. Rather, it is typically sent by the scheduler application. </emphasis></para><para><bold> (Q) What determines the timing of the combined output messages? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The output messages are sent (via the Software Bus) only on command. A common implementation would have the scheduler sending HK the &apos;Send Output Message x&apos; command periodically. Where &apos;x&apos; is a parameter in the command that specifies the message ID of the output message to send. </emphasis></para><para><bold> (Q) How is the format of the combined output messages defined? </bold> <linebreak/>
+ <linebreak/>
+ <emphasis> The output message format is defined by the entries in the copy table. If a format change to one or more output messages is needed, a new table must be loaded. </emphasis> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

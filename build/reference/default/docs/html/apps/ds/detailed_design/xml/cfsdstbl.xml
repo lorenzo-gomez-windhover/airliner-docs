@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsdstbl" kind="page">
+    <compoundname>cfsdstbl</compoundname>
+    <title>CFS Data Storage Table Definitions</title>
+    <detaileddescription>
+<para>Next: <ref refid="cfsdscfg" kindref="compound">CFS Data Storage Configuration Parameters</ref> <linebreak/>
+ Prev: <ref refid="cfsdstlm" kindref="compound">CFS Data Storage Telemetry</ref> <linebreak/>
+</para><para><table rows="1" cols="3"><row>
+<entry thead="no"><para><bold><ref refid="cfsdscmds" kindref="compound">CFS Data Storage Commands</ref></bold> </para></entry><entry thead="no"><para><bold><ref refid="cfsdstlm" kindref="compound">CFS Data Storage Telemetry</ref></bold>  </para></entry><entry thead="no"><para><bold><ref refid="cfsdscfg" kindref="compound">CFS Data Storage Configuration Parameters</ref></bold> </para></entry></row>
+</table>
+</para><para><linebreak/>
+<linebreak/>
+ <heading level="2">Destination File Table</heading>
+</para><para>The Destination File Table is defined by <ref refid="struct_d_s___dest_file_table__t" kindref="compound">DS_DestFileTable_t</ref>. This table contains a description and <ref refid="ds__platform__cfg_8h_1adf44edecb8d1f9e04270a5e151278a0b" kindref="member">DS_DEST_FILE_CNT</ref> entries. Each entry is defined by <ref refid="struct_d_s___dest_file_entry__t" kindref="compound">DS_DestFileEntry_t</ref> and described below. <orderedlist>
+<listitem>
+<para>Pathname - The path portion of the filename </para></listitem>
+<listitem>
+<para>BaseName - The optional base portion of the filename </para></listitem>
+<listitem>
+<para>Extension - The extension portion of the filename </para></listitem>
+<listitem>
+<para>FileNameType - The filename type <ref refid="ds__appdefs_8h_1af4d9845964b8e6a08dba11fee4349948" kindref="member">DS_BY_COUNT</ref> or <ref refid="ds__appdefs_8h_1a51e908e4bcbd642c2f7d1f390ed0e3bf" kindref="member">DS_BY_TIME</ref> </para></listitem>
+<listitem>
+<para>EnableState - The state of this entry <ref refid="ds__appdefs_8h_1a872fbccb3088613032048e39ff3ce417" kindref="member">DS_ENABLED</ref> or <ref refid="ds__appdefs_8h_1aee387d68ee1956b52357def66dd1ad5a" kindref="member">DS_DISABLED</ref> </para></listitem>
+<listitem>
+<para>MaxFileSize - The maximum number of bytes to store in this file </para></listitem>
+<listitem>
+<para>MaxFileAge - The number of seconds that this file remains open </para></listitem>
+<listitem>
+<para>SequenceCount - The sequence count portion of the filename if the file type is <ref refid="ds__appdefs_8h_1af4d9845964b8e6a08dba11fee4349948" kindref="member">DS_BY_COUNT</ref></para></listitem>
+</orderedlist>
+</para><para><linebreak/>
+<linebreak/>
+ <heading level="2">Filter Table</heading>
+</para><para>The Filter Table is defined by <ref refid="struct_d_s___filter_table__t" kindref="compound">DS_FilterTable_t</ref>. This table contains a description and <ref refid="ds__platform__cfg_8h_1ad6315c7be4ab1892fea8a5a5919fec2b" kindref="member">DS_PACKETS_IN_FILTER_TABLE</ref> entries. Each entry is defined by <ref refid="struct_d_s___packet_entry__t" kindref="compound">DS_PacketEntry_t</ref>. Each Packet entry contains the Message ID for DS to store and <ref refid="ds__platform__cfg_8h_1ac063a33ce14a4fc12d1d8c1c975432ae" kindref="member">DS_FILTERS_PER_PACKET</ref> entries defined by <ref refid="struct_d_s___filter_parms__t" kindref="compound">DS_FilterParms_t</ref>. These entries are described below. <orderedlist>
+<listitem>
+<para>FileTableIndex - The zero based index into the Destination File table </para></listitem>
+<listitem>
+<para>FilterType - The type of filter used by this entry <ref refid="ds__appdefs_8h_1af4d9845964b8e6a08dba11fee4349948" kindref="member">DS_BY_COUNT</ref> or <ref refid="ds__appdefs_8h_1a51e908e4bcbd642c2f7d1f390ed0e3bf" kindref="member">DS_BY_TIME</ref> </para></listitem>
+<listitem>
+<para>Algorithm_N - The N argument passed into the Filter algorithm </para></listitem>
+<listitem>
+<para>Algorithm_X - The X argument passed into the Filter algorithm </para></listitem>
+<listitem>
+<para>Algorithm_O - The O argument passed into the Filter algorithm</para></listitem>
+</orderedlist>
+</para><para><linebreak/>
+<linebreak/>
+</para><para>The Data Storage (DS) application attempts to load the File and Filter Tables from DS_DEF_DEST_FILENAME and DS_DEF_FILTER_FILENAME upon startup. If the load fails for either of these tables, DS will still start in the mode of operation as defined by the DS_DEF_ENABLE_STATE configuration parameter. If this configuration parameter is set to ENABLED mode and either the File and/or Filter Table failed to load, DS will not store any messages until both tables are loaded with valid data. This can be accomplished by using the cFE Table Services commands after creating a table load image file and uploading it to the spacecraft&apos;s file system. Until both tables are loaded with valid data, DS will increment the #DS_IGNOREDPKTCNT for each received packet that is discarded. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

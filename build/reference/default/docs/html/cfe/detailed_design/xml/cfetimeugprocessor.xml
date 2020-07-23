@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfetimeugprocessor" kind="page">
+    <compoundname>cfetimeugprocessor</compoundname>
+    <title>Processor Reset</title>
+    <detaileddescription>
+<para>In the event of a processor reset, the following time values are preserved: <linebreak/>
+ <itemizedlist>
+<listitem>
+<para>MET <linebreak/>
+ </para></listitem>
+<listitem>
+<para>STCF <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Leap Seconds <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Clock Signal Selection <linebreak/>
+ </para></listitem>
+<listitem>
+<para>Current Time Client Delay (if applicable) <linebreak/>
+ </para></listitem>
+</itemizedlist>
+</para><para>Note that since it is virtually impossible for TIME services to validate the actual data that is saved across a processor reset, a signature pattern is written to the preserved area. On a processor reset, TIME queries that signature to make sure that it matches what is expected. If the signature does not match, then TIME is initialized as if a cFE power-on reset occurred.</para><para>Next: <ref refid="cfetimeugnormal" kindref="compound">Normal Operation</ref> <linebreak/>
+ Prev: <ref refid="cfetimeugpoweron" kindref="compound">Power-On Reset</ref> <linebreak/>
+ Up To: <ref refid="cfetimeuginit" kindref="compound">Initialization</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

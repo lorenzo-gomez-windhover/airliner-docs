@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_c_f_e___s_b___sub_rprt_msg__t" kind="struct" language="C++" prot="public">
+    <compoundname>CFE_SB_SubRprtMsg_t</compoundname>
+    <includes refid="cfe__sb__msg_8h" local="no">cfe_sb_msg.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_c_f_e___s_b___sub_rprt_msg__t_1aa82eecfc129a4d4e44364046a4a75179" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_f_e___s_b___tlm_hdr__t" kindref="compound">CFE_SB_TlmHdr_t</ref></type>
+        <definition>CFE_SB_TlmHdr_t CFE_SB_SubRprtMsg_t::Hdr</definition>
+        <argsstring></argsstring>
+        <name>Hdr</name>
+        <briefdescription>
+<para>cFE Software Bus Telemetry Message Header </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="727" column="1" bodyfile="inc/cfe_sb_msg.h" bodystart="727" bodyend="-1"/>
+        <referencedby refid="cfe__sb__task_8c_1a4802e15e16324c6129743be7aa076917" compoundref="cfe__sb__task_8c" startline="192" endline="352">CFE_SB_AppInit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_f_e___s_b___sub_rprt_msg__t_1afe13117555fd527552588256645eeba3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t" kindref="compound">CFE_SB_SubRprtMsg_Payload_t</ref></type>
+        <definition>CFE_SB_SubRprtMsg_Payload_t CFE_SB_SubRprtMsg_t::Payload</definition>
+        <argsstring></argsstring>
+        <name>Payload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="inc/cfe_sb_msg.h" line="728" column="1" bodyfile="inc/cfe_sb_msg.h" bodystart="728" bodyend="-1"/>
+        <referencedby refid="cfe__sb__priv_8h_1ac5d1727dd8072b5548cb7b7e028fbe09" compoundref="cfe__sb__api_8c" startline="606" endline="768">CFE_SB_SubscribeFull</referencedby>
+        <referencedby refid="cfe__sb__priv_8h_1a48e6859da8820f497b806df05027bf1c" compoundref="cfe__sb__api_8c" startline="903" endline="1023">CFE_SB_UnsubscribeFull</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="412">
+        <label>CCSDS_PriHdr_t</label>
+        <link refid="struct_c_c_s_d_s___pri_hdr__t"/>
+      </node>
+      <node id="414">
+        <label>CFE_SB_SubRprtMsg_Payload_t</label>
+        <link refid="struct_c_f_e___s_b___sub_rprt_msg___payload__t"/>
+        <childnode refid="415" relation="usage">
+          <edgelabel>Qos</edgelabel>
+        </childnode>
+      </node>
+      <node id="415">
+        <label>CFE_SB_Qos_t</label>
+        <link refid="struct_c_f_e___s_b___qos__t"/>
+      </node>
+      <node id="413">
+        <label>CCSDS_TlmSecHdr_t</label>
+        <link refid="struct_c_c_s_d_s___tlm_sec_hdr__t"/>
+      </node>
+      <node id="411">
+        <label>CFE_SB_TlmHdr_t</label>
+        <link refid="struct_c_f_e___s_b___tlm_hdr__t"/>
+        <childnode refid="412" relation="usage">
+          <edgelabel>Pri</edgelabel>
+        </childnode>
+        <childnode refid="413" relation="usage">
+          <edgelabel>Sec</edgelabel>
+        </childnode>
+      </node>
+      <node id="410">
+        <label>CFE_SB_SubRprtMsg_t</label>
+        <link refid="struct_c_f_e___s_b___sub_rprt_msg__t"/>
+        <childnode refid="411" relation="usage">
+          <edgelabel>Hdr</edgelabel>
+        </childnode>
+        <childnode refid="414" relation="usage">
+          <edgelabel>Payload</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="inc/cfe_sb_msg.h" line="726" column="1" bodyfile="inc/cfe_sb_msg.h" bodystart="726" bodyend="729"/>
+    <listofallmembers>
+      <member refid="struct_c_f_e___s_b___sub_rprt_msg__t_1aa82eecfc129a4d4e44364046a4a75179" prot="public" virt="non-virtual"><scope>CFE_SB_SubRprtMsg_t</scope><name>Hdr</name></member>
+      <member refid="struct_c_f_e___s_b___sub_rprt_msg__t_1afe13117555fd527552588256645eeba3" prot="public" virt="non-virtual"><scope>CFE_SB_SubRprtMsg_t</scope><name>Payload</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

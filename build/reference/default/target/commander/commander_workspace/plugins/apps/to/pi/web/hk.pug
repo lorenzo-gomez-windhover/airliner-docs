@@ -1,0 +1,27 @@
+table.table.table-condensed
+  tbody
+    tr
+      th Cmd Count
+      td
+        div(data-cdr={tlm:[{name:'/TO/TO_HkTlm_t/usCmdCnt'}]}) ---
+    tr
+      th Error Count
+      td
+        div(data-cdr={tlm:[{name:'/TO/TO_HkTlm_t/usCmdErrCnt'}]}) ---
+    tr
+      th Total Bytes Sent
+      td
+        div(data-cdr={tlm:[{name:'/TO/TO_HkTlm_t/SentBytes'}]}) ---
+    tr
+      th Total Messages Dropped
+      td
+        div(data-cdr={tlm:[{name:'/TO/TO_HkTlm_t/usTotalMsgDropped'}]}) ---
+    tr
+      th Max Channel Memory
+      td
+        div(data-cdr={tlm:[{name:'/TO/TO_HkTlm_t/ChannelMaxMem'}]}) ---
+              
+footer.btn-group(role="group")      
+  button.btn.cdr-primary(data-cdr={cmd:{name:'/TO/Noop'}}) No-Op    
+  button.btn.cdr-primary(data-cdr={cmd:{name:'/TO/Reset'}}) Reset   
+

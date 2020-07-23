@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfslctbl" kind="page">
+    <compoundname>cfslctbl</compoundname>
+    <title>CFS Limit Checker Table Definitions</title>
+    <detaileddescription>
+<para><table rows="1" cols="3"><row>
+<entry thead="no"><para><bold><ref refid="cfslccmds" kindref="compound">CFS Limit Checker Commands</ref></bold> </para></entry><entry thead="no"><para><bold><ref refid="cfslctlm" kindref="compound">CFS Limit Checker Telemetry</ref></bold>  </para></entry><entry thead="no"><para><bold><ref refid="cfslccfg" kindref="compound">CFS Limit Checker Configuration Parameters</ref></bold> </para></entry></row>
+</table>
+</para><para><linebreak/>
+<linebreak/>
+ <heading level="2">Watchpoint Definition Table (WDT)</heading>
+</para><para>The structure of a single watchpoint definition is defined by <ref refid="struct_l_c___w_d_t_entry__t" kindref="compound">LC_WDTEntry_t</ref>. The WDT is an array of these entries sized by the configuration parameter <ref refid="lc__platform__cfg_8h_1a3b43c5fab123709355610bb6382804d3" kindref="member">LC_MAX_WATCHPOINTS</ref>. The zero based index into this table is used by LC as the Watchpoint ID.</para><para>Brief description of WDT fields: <table rows="19" cols="3"><row>
+<entry thead="no"><para><bold>DataType</bold> </para></entry><entry thead="no"><para>Watchpoint Data Type. Enumerated type that must be one of the following: </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1ab375eb9a6810f8ed483616227b37846c" kindref="member">LC_WATCH_NOT_USED</ref> </para></entry><entry thead="no"><para>Used to mark unused entries </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a91b60c922e73e83d3b2af956667a4e12" kindref="member">LC_DATA_BYTE</ref>, <ref refid="lc__tbldefs_8h_1ae41549e9caee6fc4a193d7c14c1440d5" kindref="member">LC_DATA_UBYTE</ref> </para></entry><entry thead="no"><para>Signed or unsigned byte </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1ac307b33c3f2bf6ae154e07eb94f9afa9" kindref="member">LC_DATA_WORD_BE</ref>, <ref refid="lc__tbldefs_8h_1a1317e31d8439396c33f8b5508c9e1071" kindref="member">LC_DATA_WORD_LE</ref> </para></entry><entry thead="no"><para>Signed word, big or little endian </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a10173156d27255ba9b7913d3fbbb1d23" kindref="member">LC_DATA_UWORD_BE</ref>, <ref refid="lc__tbldefs_8h_1ad5fb3e315cfab68863890e49440c4866" kindref="member">LC_DATA_UWORD_LE</ref> </para></entry><entry thead="no"><para>Unsigned word, big or little endian </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a2d54600104c4fb3c19df2a6e15a4c765" kindref="member">LC_DATA_DWORD_BE</ref>, <ref refid="lc__tbldefs_8h_1a961e3f3e8995c4465677132cb235077c" kindref="member">LC_DATA_DWORD_LE</ref> </para></entry><entry thead="no"><para>Signed double word, big or little endian </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1acd57943bfd56ff9f225d56bc813940a0" kindref="member">LC_DATA_UDWORD_BE</ref>, <ref refid="lc__tbldefs_8h_1ac044788699a69206413c99ff79581b52" kindref="member">LC_DATA_UDWORD_LE</ref> </para></entry><entry thead="no"><para>Unsized double word, big or little endian </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1acac087e06f44c14a08d2bdcaa5d9cd61" kindref="member">LC_DATA_FLOAT_BE</ref>, <ref refid="lc__tbldefs_8h_1acac087e06f44c14a08d2bdcaa5d9cd61" kindref="member">LC_DATA_FLOAT_BE</ref> </para></entry><entry thead="no"><para>32 bit float, big or little endian</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>OperatorID</bold></para></entry><entry thead="no"><para>Comparison type. Enumerated type that must be one of the following: </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1ac07f5f6b256f9daf102b17dfbf1352ee" kindref="member">LC_NO_OPER</ref> </para></entry><entry thead="no"><para>Can be used for unused entries (optional) </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a71afc99146cd25a4a933675324ecdddf" kindref="member">LC_OPER_LT</ref>, <ref refid="lc__tbldefs_8h_1a0a1f43732b16548c0d80e06a572a880b" kindref="member">LC_OPER_LE</ref> </para></entry><entry thead="no"><para>Less Than, Less Than or Equal </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a4899524f7ed062c7b311af543aa557e9" kindref="member">LC_OPER_NE</ref>, <ref refid="lc__tbldefs_8h_1a14f3a372cba17012bb7f75c817d9d01a" kindref="member">LC_OPER_EQ</ref> </para></entry><entry thead="no"><para>Not Equal, Equal </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a0f05d0f087c7320999a5e18a3a4c159e" kindref="member">LC_OPER_GT</ref>, <ref refid="lc__tbldefs_8h_1a4de50302ba6fc68af3b53e54f6e3343b" kindref="member">LC_OPER_GE</ref> </para></entry><entry thead="no"><para>Greater Than, Greater Than or Equal </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a641b55ad4210e3a2700b0bc929809cb9" kindref="member">LC_OPER_CUSTOM</ref> </para></entry><entry thead="no"><para>No compare, call custom function</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>MessageID</bold></para></entry><entry thead="no"><para>Message ID for the message containing the watchpoint</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>WatchpointOffset</bold></para></entry><entry thead="no"><para>Zero based byte offset from the beginning of the message (including any headers) to the first byte of the watchpoint data</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>BitMask</bold></para></entry><entry thead="no"><para>Value to be masked with watchpoint data prior to comparison. Use the constant <ref refid="lc__tbldefs_8h_1a7e009458f514dfdc0b7f98ed3fdc927b" kindref="member">LC_NO_BITMASK</ref> when no masking is desired</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>ComparisonValue</bold></para></entry><entry thead="no"><para>Value watchpoint data is to be compared against. This field uses the <ref refid="union_l_c___multi_type__t" kindref="compound">LC_MultiType_t</ref> union to store different data types in a fixed 32-bit field. See lc_def_wdt.c for examples of how to set this value.</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>CustomFuncArgument</bold></para></entry><entry thead="no"><para>Optional 32 bit data to be passed to the custom function. Can be used for any mission-defined purpose.  </para></entry></row>
+</table>
+</para><para><linebreak/>
+<linebreak/>
+ <heading level="2">Actionpoint Definition Table (ADT)</heading>
+</para><para>The structure of a single actionpoint definition is defined by <ref refid="struct_l_c___a_d_t_entry__t" kindref="compound">LC_ADTEntry_t</ref>. The ADT is an array of these entries sized by the configuration parameter <ref refid="lc__platform__cfg_8h_1ab49788ed10c3f7f4aaaa876a48b49ba3" kindref="member">LC_MAX_ACTIONPOINTS</ref>. The zero based index into this table is used by LC as the Actionpoint ID.</para><para>Brief description of ADT fields:<linebreak/>
+</para><para><table rows="12" cols="3"><row>
+<entry thead="no"><para><bold>DefaultState</bold> </para></entry><entry thead="no"><para>Default (initial) state for this AP. Enumerated type that must be one of the following: </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__msgdefs_8h_1ac156605f5aaa3c12b9c2ad2af5b28569" kindref="member">LC_ACTION_NOT_USED</ref></para></entry><entry thead="no"><para>Used to mark unused entries </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__msgdefs_8h_1a8d7d19346c3a24515ee300e89c0fbcf6" kindref="member">LC_APSTATE_ACTIVE</ref>, <ref refid="lc__msgdefs_8h_1a50c3fd705ae749e6b015d926e4183c54" kindref="member">LC_APSTATE_PASSIVE</ref>, <ref refid="lc__msgdefs_8h_1abebab7aac8a748c086cdf4b74dcdd489" kindref="member">LC_APSTATE_DISABLED</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>RTSId</bold></para></entry><entry thead="no"><para>RTS to request if this AP fails</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>MaxFailsBeforeRTS</bold></para></entry><entry thead="no"><para>How may consecutive failures before an RTS request is sent</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>RPNEquation [<ref refid="lc__platform__cfg_8h_1a07c8b8ac7460b8cad7133355c728ded0" kindref="member">LC_MAX_RPN_EQU_SIZE</ref>]</bold></para></entry><entry thead="no"><para>Reverse Polish Equation that specifies when this actionpoint should fail. Combination of Watchpoint IDs and the following enumerated RPN operators: </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a7eff768cf1073351108b801cfb034d85" kindref="member">LC_RPN_AND</ref>, <ref refid="lc__tbldefs_8h_1a3a7a06457f0f82435ef0bc6af2da874c" kindref="member">LC_RPN_OR</ref>, <ref refid="lc__tbldefs_8h_1af11fe3e1e16cfd82a163328a8e399480" kindref="member">LC_RPN_XOR</ref>, <ref refid="lc__tbldefs_8h_1a7b92076b8a37a289969c35fbe7d72eac" kindref="member">LC_RPN_NOT</ref>, <ref refid="lc__tbldefs_8h_1a3e871bdd485d90c49b4f856de0954ca2" kindref="member">LC_RPN_EQUAL</ref> </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para>See lc_def_adt.c for examples of how to construct this expression </para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>EventType</bold></para></entry><entry thead="no"><para>Event type used for event message if AP fails. Enumerated type that must be one of the following: </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_INFORMATION</ref>, <ref refid="cfe__evs_8h_1a5551720d052dd752fcf22af0dcdc9d4e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_DEBUG</ref>, <ref refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_ERROR</ref>, <ref refid="cfe__evs_8h_1a1156ee6e07581bab1f36b88f208f0633" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_CRITICAL</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>EventID</bold></para></entry><entry thead="no"><para>Event ID used for event message if AP fails </para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>EventText[<ref refid="lc__platform__cfg_8h_1a9f9c133d264af28e15893ae485569c8f" kindref="member">LC_MAX_ACTION_TEXT</ref>]</bold></para></entry><entry thead="no"><para>Text used for the event msg when this AP fails LC appends the trailer text <ref refid="lc__action_8h_1aea7444106073d0662c1c4124504ebadb" kindref="member">LC_AP_EVENT_TAIL_STR</ref> to this string when reporting actionpoint failures. </para></entry></row>
+</table>
+</para><para><linebreak/>
+<linebreak/>
+ <heading level="2">Watchpoint Results Table (WRT)</heading>
+</para><para>The structure of a single watchpoint results table entry is defined by <ref refid="struct_l_c___w_r_t_entry__t" kindref="compound">LC_WRTEntry_t</ref>. The WRT is an array of these entries sized by the configuration parameter <ref refid="lc__platform__cfg_8h_1a3b43c5fab123709355610bb6382804d3" kindref="member">LC_MAX_WATCHPOINTS</ref>. The index into this table is the same Watchpoint ID used for the corresponding definition table entry.</para><para>Brief description of WRT fields: <linebreak/>
+ <table rows="8" cols="2"><row>
+<entry thead="no"><para><bold>WatchResult</bold></para></entry><entry thead="no"><para>Result for the last evaluation of this watchpoint. Enumerated type that will be one of the following: </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a460943a8ab1a97e5b296e3b974877abf" kindref="member">LC_WATCH_TRUE</ref>, <ref refid="lc__tbldefs_8h_1ad3dfc9c5fed52150fb7d7f252cbb5fe3" kindref="member">LC_WATCH_FALSE</ref>, #LC_WATCH_NOT_MEASURED, <ref refid="lc__tbldefs_8h_1ac92b16019803fd9448eab79d1266973c" kindref="member">LC_WATCH_ERROR</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>EvaluationCount</bold></para></entry><entry thead="no"><para>How many times this watchpoint has been evaluated</para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>FalseToTrueCount</bold></para></entry><entry thead="no"><para>How many times this watchpoint has transitioned from <ref refid="lc__tbldefs_8h_1ad3dfc9c5fed52150fb7d7f252cbb5fe3" kindref="member">LC_WATCH_FALSE</ref> to <ref refid="lc__tbldefs_8h_1a460943a8ab1a97e5b296e3b974877abf" kindref="member">LC_WATCH_TRUE</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>ConsecutiveTrueCount</bold></para></entry><entry thead="no"><para>Number of consecutive times this watchpoint has evaluated to <ref refid="lc__tbldefs_8h_1a460943a8ab1a97e5b296e3b974877abf" kindref="member">LC_WATCH_TRUE</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>CumulativeTrueCount</bold></para></entry><entry thead="no"><para>Total number of times this watchpoint has evaluated to <ref refid="lc__tbldefs_8h_1a460943a8ab1a97e5b296e3b974877abf" kindref="member">LC_WATCH_TRUE</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>LastFalseToTrue</bold></para></entry><entry thead="no"><para>Watchpoint value and timestamp at the last transition from <ref refid="lc__tbldefs_8h_1ad3dfc9c5fed52150fb7d7f252cbb5fe3" kindref="member">LC_WATCH_FALSE</ref> (or #LC_WATCH_NOT_MEASURED) to <ref refid="lc__tbldefs_8h_1a460943a8ab1a97e5b296e3b974877abf" kindref="member">LC_WATCH_TRUE</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>LastTrueToFalse</bold></para></entry><entry thead="no"><para>Watchpoint value and timestamp at the last transition from <ref refid="lc__tbldefs_8h_1a460943a8ab1a97e5b296e3b974877abf" kindref="member">LC_WATCH_TRUE</ref> to <ref refid="lc__tbldefs_8h_1ad3dfc9c5fed52150fb7d7f252cbb5fe3" kindref="member">LC_WATCH_FALSE</ref> </para></entry></row>
+</table>
+</para><para>The timestamp used for the LastFalseToTrue and LastTrueToFalse fields is taken from the header of the message that contained the watchpoint. If the message timestamp is zero, LC will use the time returned by the <ref refid="cfe__time__api_8c_1abf540f01ef8e0b2c7f2ec755148b6ac6" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TIME_GetTime</ref> function instead.</para><para><linebreak/>
+<linebreak/>
+ <heading level="2">Actionpoint Results Table (ART)</heading>
+</para><para>The structure of a single actionpoint results table entry is defined by <ref refid="struct_l_c___a_r_t_entry__t" kindref="compound">LC_ARTEntry_t</ref>. The ART is an array of these entries sized by the configuration parameter <ref refid="lc__platform__cfg_8h_1ab49788ed10c3f7f4aaaa876a48b49ba3" kindref="member">LC_MAX_ACTIONPOINTS</ref>. The index into this table is the same Actionpoint ID used for the corresponding definition table entry.</para><para>Brief description of ART fields: <linebreak/>
+</para><para><table rows="9" cols="2"><row>
+<entry thead="no"><para><bold>ActionResult</bold></para></entry><entry thead="no"><para>Result for the last sample of this actionpoint. Enumerated type that will be one of the following: </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__tbldefs_8h_1a0d820b4ac78559654a530fca07d3618d" kindref="member">LC_ACTION_PASS</ref>, <ref refid="lc__tbldefs_8h_1a9b113f330c8222236cf4e92732e024c5" kindref="member">LC_ACTION_FAIL</ref>, #LC_ACTION_NOT_MEASURED, <ref refid="lc__tbldefs_8h_1a69b1f15ea8bd9f62b4f3ea9eab7dcfa6" kindref="member">LC_ACTION_ERROR</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>CurrentState</bold></para></entry><entry thead="no"><para>Current state of this actionpoint. Enumerated type that will be one of the following: </para></entry></row>
+<row>
+<entry thead="no"><para></para></entry><entry thead="no"><para><ref refid="lc__msgdefs_8h_1ac156605f5aaa3c12b9c2ad2af5b28569" kindref="member">LC_ACTION_NOT_USED</ref>, <ref refid="lc__msgdefs_8h_1a8d7d19346c3a24515ee300e89c0fbcf6" kindref="member">LC_APSTATE_ACTIVE</ref>, <ref refid="lc__msgdefs_8h_1a50c3fd705ae749e6b015d926e4183c54" kindref="member">LC_APSTATE_PASSIVE</ref>, <ref refid="lc__msgdefs_8h_1abebab7aac8a748c086cdf4b74dcdd489" kindref="member">LC_APSTATE_DISABLED</ref>, <ref refid="lc__msgdefs_8h_1a96216b9bd442bbfb94406364260ea711" kindref="member">LC_APSTATE_PERMOFF</ref> </para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>FailToPassCount</bold></para></entry><entry thead="no"><para>How many times this actionpoint has transitioned from <ref refid="lc__tbldefs_8h_1a9b113f330c8222236cf4e92732e024c5" kindref="member">LC_ACTION_FAIL</ref> to <ref refid="lc__tbldefs_8h_1a0d820b4ac78559654a530fca07d3618d" kindref="member">LC_ACTION_PASS</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>PassToFailCount</bold></para></entry><entry thead="no"><para>How many times this actionpoint has transitioned from <ref refid="lc__tbldefs_8h_1a0d820b4ac78559654a530fca07d3618d" kindref="member">LC_ACTION_PASS</ref> to <ref refid="lc__tbldefs_8h_1a9b113f330c8222236cf4e92732e024c5" kindref="member">LC_ACTION_FAIL</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>ConsecutiveFailCount</bold></para></entry><entry thead="no"><para>Number of consecutive times this actionpoint has evaluated <ref refid="lc__tbldefs_8h_1a9b113f330c8222236cf4e92732e024c5" kindref="member">LC_ACTION_FAIL</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>CumulativeFailCount</bold></para></entry><entry thead="no"><para>Total number of times this actionpoint has evaluated to <ref refid="lc__tbldefs_8h_1a9b113f330c8222236cf4e92732e024c5" kindref="member">LC_ACTION_FAIL</ref></para><para></para></entry></row>
+<row>
+<entry thead="no"><para><bold>CumulativeRTSExecCount</bold></para></entry><entry thead="no"><para>Total number of times an RTS request has been sent for this actionpoint </para></entry></row>
+</table>
+</para><para><linebreak/>
+<linebreak/>
+</para><para>The entire WDT is searched anytime a message is received that may contain watchpoints. For this reason, it is important that unused entries are properly marked by setting the WDT parameter DataType to <ref refid="lc__tbldefs_8h_1ab375eb9a6810f8ed483616227b37846c" kindref="member">LC_WATCH_NOT_USED</ref>.</para><para>The entire ADT is processed anytime a sample request is received that specifies an actionpoint equal to <ref refid="lc__msgids_8h_1a50337ddbcfd1a95eee220d44654a1326" kindref="member">LC_ALL_ACTIONPOINTS</ref>. For this reason, it is important that unused entries are properly marked by setting the ADT parameter DefaultState to <ref refid="lc__msgdefs_8h_1ac156605f5aaa3c12b9c2ad2af5b28569" kindref="member">LC_ACTION_NOT_USED</ref>.</para><para>When either the WDT or ADT are updated, the corresponding results table (WRT or ART) is reset to initialization values. For each entry in the WRT, WatchResult is set to #LC_WATCH_NOT_MEASURED and all other values are zeroed. For each entry in the ART, ActionResult is set to #LC_ACTION_NOT_MEASURED, the CurrentState is set to the value of the actionpoint&apos;s DefaultState specified in the ADT, and all other values are zeroed.</para><para>These are also the values used (for the entries specified in the command) when the <ref refid="lc__msgdefs_8h_1a3c3a4a2329644e392441e0e271eb0f90" kindref="member">LC_RESET_AP_STATS_CC</ref> or <ref refid="lc__msgdefs_8h_1a8c47e49846b71cf6addd1750396953f8" kindref="member">LC_RESET_WP_STATS_CC</ref> ground command is received. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

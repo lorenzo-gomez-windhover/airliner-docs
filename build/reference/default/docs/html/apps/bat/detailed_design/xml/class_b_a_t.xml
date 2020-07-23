@@ -1,0 +1,1544 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_b_a_t" kind="class" language="C++" prot="public">
+    <compoundname>BAT</compoundname>
+    <includes refid="bat__app_8h" local="no">bat_app.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_b_a_t_1aa87bc1d4f2400fcd3a61558111537b1c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_f_e___e_v_s___bin_filter__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_BinFilter_t</ref></type>
+        <definition>CFE_EVS_BinFilter_t BAT::EventTbl[BAT_EVT_CNT]</definition>
+        <argsstring>[BAT_EVT_CNT]</argsstring>
+        <name>EventTbl</name>
+        <briefdescription>
+<para>CFE Event Table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="105" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1ac64961857759249a0437acb0a15d290f" compoundref="bat__app_8cpp" startline="47" endline="106">InitEvent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a0c761eb2f55d548a5a3be3792e269da8" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t BAT::SchPipeId</definition>
+        <argsstring></argsstring>
+        <name>SchPipeId</name>
+        <briefdescription>
+<para>Scheduling Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="108" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a4b5896cbb41a90e08da84d24c3c22167" compoundref="bat__app_8cpp" startline="113" endline="208">InitPipe</referencedby>
+        <referencedby refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" compoundref="bat__app_8cpp" startline="310" endline="368">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a89a9dc4703aa586e9d4d70f36fc6be9b" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t BAT::CmdPipeId</definition>
+        <argsstring></argsstring>
+        <name>CmdPipeId</name>
+        <briefdescription>
+<para>Command Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="111" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="111" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a4b5896cbb41a90e08da84d24c3c22167" compoundref="bat__app_8cpp" startline="113" endline="208">InitPipe</referencedby>
+        <referencedby refid="class_b_a_t_1ac6295b60b9098e39e1e946ad4b7837e7" compoundref="bat__app_8cpp" startline="375" endline="415">ProcessCmdPipe</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a065fcc3d08751b941fafed7d08665195" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref></type>
+        <definition>CFE_SB_PipeId_t BAT::DataPipeId</definition>
+        <argsstring></argsstring>
+        <name>DataPipeId</name>
+        <briefdescription>
+<para>Data Pipe ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="114" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a4b5896cbb41a90e08da84d24c3c22167" compoundref="bat__app_8cpp" startline="113" endline="208">InitPipe</referencedby>
+        <referencedby refid="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" compoundref="bat__app_8cpp" startline="423" endline="469">ProcessDataPipe</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1aa1bf9c8624cbb8d21a03e9569326b06d" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 BAT::uiRunStatus</definition>
+        <argsstring></argsstring>
+        <name>uiRunStatus</name>
+        <briefdescription>
+<para>Task Run Status. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="119" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a16fcc881a5cec988e836da9a533c4c81" compoundref="bat__app_8cpp" startline="590" endline="643">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a60040122811d5fc1faba2ac9f8394788" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref></type>
+        <definition>CFE_TBL_Handle_t BAT::ConfigTblHdl</definition>
+        <argsstring></argsstring>
+        <name>ConfigTblHdl</name>
+        <briefdescription>
+<para>Config Table Handle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="124" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="124" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1ad2cf85a12845cf641f71779820062592" compoundref="bat__config__utils_8cpp" startline="175" endline="217">AcquireConfigPointers</referencedby>
+        <referencedby refid="class_b_a_t_1ad96311afc3071aa674940be7f2f1f48c" compoundref="bat__config__utils_8cpp" startline="51" endline="89">InitConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a3384c4ed46cd5aa566707c6e5dabc790" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_b_a_t___config_tbl__t" kindref="compound">BAT_ConfigTbl_t</ref> *</type>
+        <definition>BAT_ConfigTbl_t* BAT::ConfigTblPtr</definition>
+        <argsstring></argsstring>
+        <name>ConfigTblPtr</name>
+        <briefdescription>
+<para>Config Table Pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="127" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="127" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1ad2cf85a12845cf641f71779820062592" compoundref="bat__config__utils_8cpp" startline="175" endline="217">AcquireConfigPointers</referencedby>
+        <referencedby refid="class_b_a_t_1a39e23f4307465dbd9f0a3c50296c71bb" compoundref="bat__app_8cpp" startline="855" endline="904">GetRemaining</referencedby>
+        <referencedby refid="class_b_a_t_1a0272a435e73a5afce7c0242a0e16039d" compoundref="bat__app_8cpp" startline="926" endline="947">GetScale</referencedby>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1aa15df434788949c6a53340afcc3087e2" prot="public" static="no" mutable="no">
+        <type>PX4_BatteryStatusMsg_t</type>
+        <definition>PX4_BatteryStatusMsg_t BAT::BatteryStatusMsg</definition>
+        <argsstring></argsstring>
+        <name>BatteryStatusMsg</name>
+        <briefdescription>
+<para>Output Data published at the end of cycle. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="130" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a71d02f0bcf6121d6dfb844c18a062232" compoundref="bat__app_8cpp" startline="774" endline="794">GetFilteredCurrent</referencedby>
+        <referencedby refid="class_b_a_t_1a752c490e2cdee72a2ea559280bb33646" compoundref="bat__app_8cpp" startline="752" endline="772">GetFilteredVoltage</referencedby>
+        <referencedby refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" compoundref="bat__app_8cpp" startline="215" endline="234">InitData</referencedby>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+        <referencedby refid="class_b_a_t_1ac1d9d8c3bcdf085f9706509315ed709c" compoundref="bat__app_8cpp" startline="645" endline="653">PublishBatteryStatus</referencedby>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">ReportHousekeeping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_b_a_t___hk_tlm__t" kindref="compound">BAT_HkTlm_t</ref></type>
+        <definition>BAT_HkTlm_t BAT::HkTlm</definition>
+        <argsstring></argsstring>
+        <name>HkTlm</name>
+        <briefdescription>
+<para>Housekeeping Telemetry for downlink. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="133" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="133" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" compoundref="bat__app_8cpp" startline="215" endline="234">InitData</referencedby>
+        <referencedby refid="class_b_a_t_1a2cd42f569b73c9b363763b65bc80a489" compoundref="bat__app_8cpp" startline="477" endline="515">ProcessAppCmds</referencedby>
+        <referencedby refid="class_b_a_t_1ac6295b60b9098e39e1e946ad4b7837e7" compoundref="bat__app_8cpp" startline="375" endline="415">ProcessCmdPipe</referencedby>
+        <referencedby refid="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" compoundref="bat__app_8cpp" startline="423" endline="469">ProcessDataPipe</referencedby>
+        <referencedby refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" compoundref="bat__app_8cpp" startline="310" endline="368">RcvSchPipeMsg</referencedby>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">ReportHousekeeping</referencedby>
+        <referencedby refid="class_b_a_t_1abd1595e48951cbef868d45939350d50e" compoundref="bat__app_8cpp" startline="547" endline="571">VerifyCmdLength</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a3573499097dd3ef7dc89bf742d403f98" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 BAT::ListenerTaskID</definition>
+        <argsstring></argsstring>
+        <name>ListenerTaskID</name>
+        <briefdescription>
+<para>ID of listener child task. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="136" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="136" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a8d852b6a5632aa44798affe62e7c9763" compoundref="bat__app_8cpp" startline="673" endline="708">InitListenerTask</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref></type>
+        <definition>uint32 BAT::BatteryMutex</definition>
+        <argsstring></argsstring>
+        <name>BatteryMutex</name>
+        <briefdescription>
+<para>Mutex for publishing and modifying data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="139" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="139" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1ad2cf85a12845cf641f71779820062592" compoundref="bat__config__utils_8cpp" startline="175" endline="217">AcquireConfigPointers</referencedby>
+        <referencedby refid="class_b_a_t_1a49fd7da8ed474b9331db6a09c0a24820" compoundref="bat__app_8cpp" startline="655" endline="664">ChildContinueExec</referencedby>
+        <referencedby refid="class_b_a_t_1a8d852b6a5632aa44798affe62e7c9763" compoundref="bat__app_8cpp" startline="673" endline="708">InitListenerTask</referencedby>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+        <referencedby refid="class_b_a_t_1ac1d9d8c3bcdf085f9706509315ed709c" compoundref="bat__app_8cpp" startline="645" endline="653">PublishBatteryStatus</referencedby>
+        <referencedby refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">ReportHousekeeping</referencedby>
+        <referencedby refid="class_b_a_t_1abe0015a93b9006f452af0b83da73da8f" compoundref="bat__app_8cpp" startline="666" endline="671">StopChild</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a6e7be4da903d2d77364f6fc421777a1a" prot="public" static="no" mutable="no">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool BAT::m_ChildContinueFlag</definition>
+        <argsstring></argsstring>
+        <name>m_ChildContinueFlag</name>
+        <briefdescription>
+<para>Flag for continueing listener thread execution. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="142" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="142" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a49fd7da8ed474b9331db6a09c0a24820" compoundref="bat__app_8cpp" startline="655" endline="664">ChildContinueExec</referencedby>
+        <referencedby refid="class_b_a_t_1a8d852b6a5632aa44798affe62e7c9763" compoundref="bat__app_8cpp" startline="673" endline="708">InitListenerTask</referencedby>
+        <referencedby refid="class_b_a_t_1abe0015a93b9006f452af0b83da73da8f" compoundref="bat__app_8cpp" startline="666" endline="671">StopChild</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a26f0f891cc3b85f1f364228adc0d90c1" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_f_e___t_i_m_e___sys_time__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TIME_SysTime_t</ref></type>
+        <definition>CFE_TIME_SysTime_t BAT::m_SampleTime</definition>
+        <argsstring></argsstring>
+        <name>m_SampleTime</name>
+        <briefdescription>
+<para>CFE time for comparision. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="145" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1ae0ef0d8961f2abe7a5a65d87341af76a" compoundref="bat__app_8cpp" startline="818" endline="852">GetDischarged</referencedby>
+        <referencedby refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" compoundref="bat__app_8cpp" startline="215" endline="234">InitData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1ac6c8b9bc2138c54c1182e8a312ab6009" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT::m_RemainingVoltage</definition>
+        <argsstring></argsstring>
+        <name>m_RemainingVoltage</name>
+        <briefdescription>
+<para>Remaining voltage estimate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="148" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="148" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a39e23f4307465dbd9f0a3c50296c71bb" compoundref="bat__app_8cpp" startline="855" endline="904">GetRemaining</referencedby>
+        <referencedby refid="class_b_a_t_1a0272a435e73a5afce7c0242a0e16039d" compoundref="bat__app_8cpp" startline="926" endline="947">GetScale</referencedby>
+        <referencedby refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" compoundref="bat__app_8cpp" startline="215" endline="234">InitData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1ad3ec766c03c92d3e8a1cf95c332b46ef" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT::m_RemainingCapacity</definition>
+        <argsstring></argsstring>
+        <name>m_RemainingCapacity</name>
+        <briefdescription>
+<para>Remaining capacity estimate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="151" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="151" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a39e23f4307465dbd9f0a3c50296c71bb" compoundref="bat__app_8cpp" startline="855" endline="904">GetRemaining</referencedby>
+        <referencedby refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" compoundref="bat__app_8cpp" startline="215" endline="234">InitData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1ad61832bbf5fe01498bd0e5c4f3228aa0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT::m_Discharged</definition>
+        <argsstring></argsstring>
+        <name>m_Discharged</name>
+        <briefdescription>
+<para>Discharged current estimate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="154" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="154" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1ae0ef0d8961f2abe7a5a65d87341af76a" compoundref="bat__app_8cpp" startline="818" endline="852">GetDischarged</referencedby>
+        <referencedby refid="class_b_a_t_1a39e23f4307465dbd9f0a3c50296c71bb" compoundref="bat__app_8cpp" startline="855" endline="904">GetRemaining</referencedby>
+        <referencedby refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" compoundref="bat__app_8cpp" startline="215" endline="234">InitData</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a4647763e1192b4173c0dba1c218ecab2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BAT::m_ThrottleFiltered</definition>
+        <argsstring></argsstring>
+        <name>m_ThrottleFiltered</name>
+        <briefdescription>
+<para>Filtered throttle value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="157" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="157" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1a71018f90264a328975fcad8368b3f21d" compoundref="bat__app_8cpp" startline="796" endline="816">GetFilteredThrottle</referencedby>
+        <referencedby refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" compoundref="bat__app_8cpp" startline="215" endline="234">InitData</referencedby>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_a_t_1a4bddde3c1dea7aea21eaf14dc5459815" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_b_a_t___current_value_table__t" kindref="compound">BAT_CurrentValueTable_t</ref></type>
+        <definition>BAT_CurrentValueTable_t BAT::CVT</definition>
+        <argsstring></argsstring>
+        <name>CVT</name>
+        <briefdescription>
+<para>Current value table for subscribed messages. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="160" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+        <referencedby refid="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" compoundref="bat__app_8cpp" startline="423" endline="469">ProcessDataPipe</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_a_t_1a6c2a15b06d3ca69f753185939eea3ab6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BAT::BAT</definition>
+        <argsstring>()</argsstring>
+        <name>BAT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="101" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ad28f92c6587acef61625b86475f14a3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BAT::~BAT</definition>
+        <argsstring>()</argsstring>
+        <name>~BAT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="102" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a16fcc881a5cec988e836da9a533c4c81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::AppMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>AppMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Battery Monitor (<ref refid="class_b_a_t" kindref="compound">BAT</ref>) application entry point. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Battery Monitor Task application entry point. This function performs app initialization, then waits for the cFE ES Startup Sync, then executes the main processing loop.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>If there is an unrecoverable failure during initialization the main loop is never executed and the application will exit. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="175" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="590" bodyend="643"/>
+        <references refid="class_b_a_t_1ad2cf85a12845cf641f71779820062592" compoundref="bat__config__utils_8cpp" startline="175" endline="217">AcquireConfigPointers</references>
+        <references refid="bat__perfids_8h_1a861fdf65390185b17f611b0f35546a65" compoundref="bat__perfids_8h" startline="8">BAT_MAIN_TASK_PERF_ID</references>
+        <references refid="bat__platform__cfg_8h_1a3b72998c04ec4055016b36374bab1882" compoundref="bat__platform__cfg_8h" startline="51">BAT_SCH_PIPE_PEND_TIME</references>
+        <references refid="bat__platform__cfg_8h_1a57e77c9d779c143b2a224fc402e03eee" compoundref="bat__platform__cfg_8h" startline="98">BAT_STARTUP_TIMEOUT_MSEC</references>
+        <references refid="cfe__es_8h_1abeabe0f94cccfa5bfcfc2f43796da8d1">CFE_ES_APP_ERROR</references>
+        <references refid="cfe__es_8h_1a033dfcc82849cfb9a474a2cece5c9803">CFE_ES_APP_RUN</references>
+        <references refid="cfe__es__api_8c_1ad5d888f9bca5038624a04d04efce8325">CFE_ES_ExitApp</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__es__api_8c_1a426ef8e1796ccebba16c63c8e86fb842">CFE_ES_RegisterApp</references>
+        <references refid="cfe__es__api_8c_1ae8598bcba38a594d1c868924999da953">CFE_ES_RunLoop</references>
+        <references refid="cfe__es__api_8c_1a7dc343ea775a0e5773ecdf700581d548">CFE_ES_WaitForStartupSync</references>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_b_a_t_1a76a0d96ba1e4bc61db1dc9813616a538">CloseDevice</references>
+        <references refid="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" compoundref="bat__app_8cpp" startline="241" endline="302">InitApp</references>
+        <references refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" compoundref="bat__app_8cpp" startline="310" endline="368">RcvSchPipeMsg</references>
+        <references refid="class_b_a_t_1abe0015a93b9006f452af0b83da73da8f" compoundref="bat__app_8cpp" startline="666" endline="671">StopChild</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="class_b_a_t_1aa1bf9c8624cbb8d21a03e9569326b06d" compoundref="bat__app_8h" startline="119">uiRunStatus</references>
+        <referencedby refid="bat__app_8cpp_1a39dc1fc7b8dfd2b4b51e2e0fc7d1317b" compoundref="bat__app_8cpp" startline="579" endline="582">BAT_AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::InitApp</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitApp</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the Battery Monitor (<ref refid="class_b_a_t" kindref="compound">BAT</ref>) application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>Battery Monitor application initialization routine. This function performs all the required startup steps to initialize (or restore from CDS) <ref refid="class_b_a_t" kindref="compound">BAT</ref> data structures and get the application registered with the cFE services so it can begin to receive command messages and send events.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="7" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__es_8h_1a426ef8e1796ccebba16c63c8e86fb842" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_ES_RegisterApp</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #BAT_InitEvent  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #BAT_InitPipe  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #BAT_InitData  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #BAT_InitConfigTbl  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="osapi_8c_1a0de425c8dba312f44cf8803a69e7ca5e" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">OS_TaskInstallDeleteHandler</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="201" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="241" bodyend="302"/>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa92dcf106dca8144e89446cd5c716404" compoundref="bat__events_8h" startline="75">BAT_INIT_INF_EID</references>
+        <references refid="bat__version_8h_1ae6eba0886f814a7dc739319d67d77998" compoundref="bat__version_8h" startline="53">BAT_MAJOR_VERSION</references>
+        <references refid="bat__version_8h_1ab32e9aeacdfbd881d38bd622ee9b5627" compoundref="bat__version_8h" startline="67">BAT_MINOR_VERSION</references>
+        <references refid="bat__platform__cfg_8h_1a23f8fcba9a8b4745656ee13960fcada9" compoundref="bat__platform__cfg_8h" startline="27">BAT_MISSION_REV</references>
+        <references refid="bat__version_8h_1a0bc98412af9ea62defa367a7690747a7" compoundref="bat__version_8h" startline="81">BAT_REVISION</references>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_b_a_t_1ad96311afc3071aa674940be7f2f1f48c" compoundref="bat__config__utils_8cpp" startline="51" endline="89">InitConfigTbl</references>
+        <references refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" compoundref="bat__app_8cpp" startline="215" endline="234">InitData</references>
+        <references refid="class_b_a_t_1a6e9c792ac00ffb42b1040e6902efe0fc">InitDevice</references>
+        <references refid="class_b_a_t_1ac64961857759249a0437acb0a15d290f" compoundref="bat__app_8cpp" startline="47" endline="106">InitEvent</references>
+        <references refid="class_b_a_t_1a8d852b6a5632aa44798affe62e7c9763" compoundref="bat__app_8cpp" startline="673" endline="708">InitListenerTask</references>
+        <references refid="class_b_a_t_1a4b5896cbb41a90e08da84d24c3c22167" compoundref="bat__app_8cpp" startline="113" endline="208">InitPipe</references>
+        <referencedby refid="class_b_a_t_1a16fcc881a5cec988e836da9a533c4c81" compoundref="bat__app_8cpp" startline="590" endline="643">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ac64961857759249a0437acb0a15d290f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::InitEvent</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitEvent</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Event Services and Event tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup cFE Event Services for use by the <ref refid="class_b_a_t" kindref="compound">BAT</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__evs_8h_1aff6913e2ab9a37ae699382c482fdb786" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_EVS_Register</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="219" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="47" bodyend="106"/>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c915c00a838408f21ad9b7e4f35129a" compoundref="bat__events_8h" startline="202">BAT_CC_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a5a4378520f79c9d6605a8549cc9ce2c7" compoundref="bat__events_8h" startline="157">BAT_CFGTBL_GETADDR_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa4ab183528f6e358734bd2daa962c296" compoundref="bat__events_8h" startline="251">BAT_CFGTBL_LOAD_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816acd72bc5fb635bddc99d4ea7d39b7dd15" compoundref="bat__events_8h" startline="144">BAT_CFGTBL_MANAGE_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a0fa01ebc5bf2660a52f0facff6b60137" compoundref="bat__events_8h" startline="235">BAT_CFGTBL_REG_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c00c1fbe31a34191c790ee0ae20bfae" compoundref="bat__events_8h" startline="98">BAT_CMD_NOOP_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a631e50cf380a723f8761d1bd03d08b99" compoundref="bat__events_8h" startline="270">BAT_EVT_CNT</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa92dcf106dca8144e89446cd5c716404" compoundref="bat__events_8h" startline="75">BAT_INIT_INF_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816adaa8087f19169326bd70cb1ce7232a23" compoundref="bat__events_8h" startline="267">BAT_LISTENER_CREATE_CHDTASK_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a46692bad00f811c9ad28f9900792ebcf" compoundref="bat__events_8h" startline="188">BAT_MSGID_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ae8a74757bc64784152c130e8a2cedd23" compoundref="bat__events_8h" startline="219">BAT_MSGLEN_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a4c1a62f0742ec18064c57896258a8d37" compoundref="bat__events_8h" startline="131">BAT_PIPE_INIT_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ad0cc6ff73161b09785ab373dc8e7a802" compoundref="bat__events_8h" startline="173">BAT_RCVMSG_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa16fc66b676f13301a42b34ce2d5de99" compoundref="bat__events_8h" startline="54">BAT_RESERVED_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ab8d3df1a377bf41d03408a44fc32b32c" compoundref="bat__events_8h" startline="115">BAT_SUBSCRIBE_ERR_EID</references>
+        <references refid="cfe__es__api_8c_1a23ab8bea54cfcb05fba77f4d866df646">CFE_ES_WriteToSysLog</references>
+        <references refid="cfe__evs_8h_1a9c74cb368c56aff83d050a4807132460">CFE_EVS_BINARY_FILTER</references>
+        <references refid="cfe__evs_8h_1a26a77de85eafef643d4dcbfdf7b77422">CFE_EVS_NO_FILTER</references>
+        <references refid="cfe__evs_8c_1a991c19d964b501bf0908bb60812fda28">CFE_EVS_Register</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1a41a96a173a28d042e012dce9bebf793e">CFE_EVS_BinFilter_t::EventID</references>
+        <references refid="class_b_a_t_1aa87bc1d4f2400fcd3a61558111537b1c" compoundref="bat__app_8h" startline="105">EventTbl</references>
+        <references refid="struct_c_f_e___e_v_s___bin_filter__t_1ab9881e02d2317fe2205379a25bc679b2">CFE_EVS_BinFilter_t::Mask</references>
+        <referencedby refid="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" compoundref="bat__app_8cpp" startline="241" endline="302">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::InitData</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize global variables used by <ref refid="class_b_a_t" kindref="compound">BAT</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to initialize the <ref refid="class_b_a_t" kindref="compound">BAT</ref> application data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="232" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="215" bodyend="234"/>
+        <references refid="bat__app_8h_1a830a8cf794af7241fae102e267fbb481" compoundref="bat__app_8h" startline="83">BAT_CURRENT_FILTER_INIT_VALUE</references>
+        <references refid="bat__msgids_8h_1afef1f14c057d57d4e9fc039bc5decc73" compoundref="bat__msgids_8h" startline="8">BAT_HK_TLM_MID</references>
+        <references refid="bat__app_8h_1ab574f423aa47514c7f4698b03954768d" compoundref="bat__app_8h" startline="85">BAT_THROTTLE_FILTER_INIT_VALUE</references>
+        <references refid="bat__app_8h_1a7e321cec2c0412d614bdceba2ce19d3e" compoundref="bat__app_8h" startline="84">BAT_VOLTAGE_FILTER_INIT_VALUE</references>
+        <references refid="class_b_a_t_1aa15df434788949c6a53340afcc3087e2" compoundref="bat__app_8h" startline="130">BatteryStatusMsg</references>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0">CFE_SB_InitMsg</references>
+        <references refid="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" compoundref="bat__app_8h" startline="133">HkTlm</references>
+        <references refid="class_b_a_t_1ad61832bbf5fe01498bd0e5c4f3228aa0" compoundref="bat__app_8h" startline="154">m_Discharged</references>
+        <references refid="class_b_a_t_1ad3ec766c03c92d3e8a1cf95c332b46ef" compoundref="bat__app_8h" startline="151">m_RemainingCapacity</references>
+        <references refid="class_b_a_t_1ac6c8b9bc2138c54c1182e8a312ab6009" compoundref="bat__app_8h" startline="148">m_RemainingVoltage</references>
+        <references refid="class_b_a_t_1a26f0f891cc3b85f1f364228adc0d90c1" compoundref="bat__app_8h" startline="145">m_SampleTime</references>
+        <references refid="class_b_a_t_1a4647763e1192b4173c0dba1c218ecab2" compoundref="bat__app_8h" startline="157">m_ThrottleFiltered</references>
+        <references refid="struct_c_f_e___t_i_m_e___sys_time__t_1ac10c014228075ee87ea7938348a98c1c">CFE_TIME_SysTime_t::Seconds</references>
+        <references refid="struct_c_f_e___t_i_m_e___sys_time__t_1a2af2ad470fa81d8eb5c23f68b54ab81a">CFE_TIME_SysTime_t::Subseconds</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" compoundref="bat__app_8cpp" startline="241" endline="302">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a4b5896cbb41a90e08da84d24c3c22167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::InitPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize message pipes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function performs the steps required to setup initialize the cFE Software Bus message pipes and subscribe to messages for the <ref refid="class_b_a_t" kindref="compound">BAT</ref> application.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1ac169b781c59074e6cbab49325726c4e2" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_CreatePipe</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a5939c3681044a3d953d0fe72dd577889" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_SubscribeEx</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1afc2c2db1a504f544b430f33f28be769b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Subscribe</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="253" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="113" bodyend="208"/>
+        <references refid="bat__msgids_8h_1a6bdf40735e5b4a359b0fe5523ef0f319" compoundref="bat__msgids_8h" startline="11">BAT_CMD_MID</references>
+        <references refid="bat__platform__cfg_8h_1ac472f2167481f05081a0ab9bc79ed235" compoundref="bat__platform__cfg_8h" startline="76">BAT_CMD_PIPE_DEPTH</references>
+        <references refid="bat__platform__cfg_8h_1af986f1fdb9af2c0e538303ac6f70dd4a" compoundref="bat__platform__cfg_8h" startline="83">BAT_CMD_PIPE_NAME</references>
+        <references refid="bat__app_8h_1a8b92a2585543764e6e0975927d5da7a8" compoundref="bat__app_8h" startline="66">BAT_DATA_PIPE_DEPTH</references>
+        <references refid="bat__app_8h_1ac73596028fa16a75354c6fbcdc226314" compoundref="bat__app_8h" startline="73">BAT_DATA_PIPE_NAME</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a4c1a62f0742ec18064c57896258a8d37" compoundref="bat__events_8h" startline="131">BAT_PIPE_INIT_ERR_EID</references>
+        <references refid="bat__platform__cfg_8h_1a7ae53944f2620d8b9d80a3cf848e8483" compoundref="bat__platform__cfg_8h" startline="34">BAT_SCH_PIPE_DEPTH</references>
+        <references refid="bat__platform__cfg_8h_1a4e0f261a462b3acb989171c30ec6d07e" compoundref="bat__platform__cfg_8h" startline="41">BAT_SCH_PIPE_NAME</references>
+        <references refid="bat__msgids_8h_1a30217cf6faea02822392d41e9ec9b9f0" compoundref="bat__msgids_8h" startline="9">BAT_SEND_HK_MID</references>
+        <references refid="bat__platform__cfg_8h_1a5ac1fcbb2ef2bbd7330ca3204c7a36da" compoundref="bat__platform__cfg_8h" startline="69">BAT_SEND_HK_MID_MAX_MSG_COUNT</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ab8d3df1a377bf41d03408a44fc32b32c" compoundref="bat__events_8h" startline="115">BAT_SUBSCRIBE_ERR_EID</references>
+        <references refid="bat__msgids_8h_1a0c0c1fd0ba000d394dc0a268d701f829" compoundref="bat__msgids_8h" startline="10">BAT_WAKEUP_MID</references>
+        <references refid="bat__platform__cfg_8h_1a3204d16f7d92b0c9a9acfd5caa2979ab" compoundref="bat__platform__cfg_8h" startline="60">BAT_WAKEUP_MID_MAX_MSG_COUNT</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1ac169b781c59074e6cbab49325726c4e2">CFE_SB_CreatePipe</references>
+        <references refid="cfe__sb_8h_1aa20e8d7fe06a65514dd39e65a7be5ca5">CFE_SB_Default_Qos</references>
+        <references refid="cfe__sb_8h_1afc2c2db1a504f544b430f33f28be769b">CFE_SB_Subscribe</references>
+        <references refid="cfe__sb_8h_1a5939c3681044a3d953d0fe72dd577889">CFE_SB_SubscribeEx</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_b_a_t_1a89a9dc4703aa586e9d4d70f36fc6be9b" compoundref="bat__app_8h" startline="111">CmdPipeId</references>
+        <references refid="class_b_a_t_1a065fcc3d08751b941fafed7d08665195" compoundref="bat__app_8h" startline="114">DataPipeId</references>
+        <references refid="class_b_a_t_1a0c761eb2f55d548a5a3be3792e269da8" compoundref="bat__app_8h" startline="108">SchPipeId</references>
+        <referencedby refid="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" compoundref="bat__app_8cpp" startline="241" endline="302">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::RcvSchPipeMsg</definition>
+        <argsstring>(int32 iBlocking)</argsstring>
+        <name>RcvSchPipeMsg</name>
+        <param>
+          <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+          <declname>iBlocking</declname>
+        </param>
+        <briefdescription>
+<para>Receive and process messages from the scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function receives and processes messages for the <ref refid="class_b_a_t" kindref="compound">BAT</ref> application from the SCH pipe. This function will pend for the type defined by iBlocking, allowing it to wait for messages, i.e. wakeup messages from scheduler.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">iBlocking</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="cfe__sb_8h_1acc9e6f66cd026d1c987c4c3de827366f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PEND_FOREVER</ref>, <ref refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_POLL</ref> or millisecond timeout</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="2" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__sb__api_8c_1a54840fe06aeb08b1e2c8df420474780d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_RcvMsg</ref>  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="276" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="310" bodyend="368"/>
+        <references refid="bat__perfids_8h_1a861fdf65390185b17f611b0f35546a65" compoundref="bat__perfids_8h" startline="8">BAT_MAIN_TASK_PERF_ID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a46692bad00f811c9ad28f9900792ebcf" compoundref="bat__events_8h" startline="188">BAT_MSGID_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ad0cc6ff73161b09785ab373dc8e7a802" compoundref="bat__events_8h" startline="173">BAT_RCVMSG_ERR_EID</references>
+        <references refid="bat__msgids_8h_1a30217cf6faea02822392d41e9ec9b9f0" compoundref="bat__msgids_8h" startline="9">BAT_SEND_HK_MID</references>
+        <references refid="bat__msgids_8h_1a0c0c1fd0ba000d394dc0a268d701f829" compoundref="bat__msgids_8h" startline="10">BAT_WAKEUP_MID</references>
+        <references refid="cfe__es_8h_1a9ef217a6193ed3db2235b850d5219625">CFE_ES_PerfLogEntry</references>
+        <references refid="cfe__es_8h_1a19d8dd9bb016a1bec9fdae7cfeb3fbd4">CFE_ES_PerfLogExit</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1a68b8b8ed93cecb670c945388a797e970">CFE_SB_TIME_OUT</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" compoundref="bat__app_8h" startline="133">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_b_a_t_1ac6295b60b9098e39e1e946ad4b7837e7" compoundref="bat__app_8cpp" startline="375" endline="415">ProcessCmdPipe</references>
+        <references refid="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" compoundref="bat__app_8cpp" startline="423" endline="469">ProcessDataPipe</references>
+        <references refid="class_b_a_t_1ac1d9d8c3bcdf085f9706509315ed709c" compoundref="bat__app_8cpp" startline="645" endline="653">PublishBatteryStatus</references>
+        <references refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" compoundref="bat__app_8cpp" startline="522" endline="540">ReportHousekeeping</references>
+        <references refid="class_b_a_t_1a0c761eb2f55d548a5a3be3792e269da8" compoundref="bat__app_8h" startline="108">SchPipeId</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1ab82361ab2f64e2635930530b21e0e06c" compoundref="bat__msg_8h" startline="189">BAT_HkTlm_t::WakeupCount</references>
+        <referencedby refid="class_b_a_t_1a16fcc881a5cec988e836da9a533c4c81" compoundref="bat__app_8cpp" startline="590" endline="643">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ac6295b60b9098e39e1e946ad4b7837e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::ProcessCmdPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessCmdPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Battery Monitor Task incoming command processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes incoming commands subscribed by <ref refid="class_b_a_t" kindref="compound">BAT</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="289" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="375" bodyend="415"/>
+        <references refid="bat__msgids_8h_1a6bdf40735e5b4a359b0fe5523ef0f319" compoundref="bat__msgids_8h" startline="11">BAT_CMD_MID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a46692bad00f811c9ad28f9900792ebcf" compoundref="bat__events_8h" startline="188">BAT_MSGID_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ad0cc6ff73161b09785ab373dc8e7a802" compoundref="bat__events_8h" startline="173">BAT_RCVMSG_ERR_EID</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a">CFE_SB_POLL</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_b_a_t_1a89a9dc4703aa586e9d4d70f36fc6be9b" compoundref="bat__app_8h" startline="111">CmdPipeId</references>
+        <references refid="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" compoundref="bat__app_8h" startline="133">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="class_b_a_t_1a2cd42f569b73c9b363763b65bc80a489" compoundref="bat__app_8cpp" startline="477" endline="515">ProcessAppCmds</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1acdd73c1def3bf35786c4910ad7ed2bdf" compoundref="bat__msg_8h" startline="153">BAT_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" compoundref="bat__app_8cpp" startline="310" endline="368">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::ProcessDataPipe</definition>
+        <argsstring>(void)</argsstring>
+        <name>ProcessDataPipe</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Battery Monitor Task incoming data processing. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes incoming data subscribed by <ref refid="class_b_a_t" kindref="compound">BAT</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="302" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="423" bodyend="469"/>
+        <references refid="struct_b_a_t___current_value_table__t_1a9085f2754b80a0e5336c26ce34742db6" compoundref="bat__app_8h" startline="92">BAT_CurrentValueTable_t::ActuatorArmed</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1a61798814214f62a327cb35c84f2cac99" compoundref="bat__msg_8h" startline="195">BAT_HkTlm_t::ActuatorArmedMsgCount</references>
+        <references refid="struct_b_a_t___current_value_table__t_1a2fd2774a089f19cbdb3969a93f8c15bb" compoundref="bat__app_8h" startline="91">BAT_CurrentValueTable_t::ActuatorControls0</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1adf9f904f7e276a8f048e9753e30a4046" compoundref="bat__msg_8h" startline="192">BAT_HkTlm_t::ActuatorControls0MsgCount</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a46692bad00f811c9ad28f9900792ebcf" compoundref="bat__events_8h" startline="188">BAT_MSGID_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ad0cc6ff73161b09785ab373dc8e7a802" compoundref="bat__events_8h" startline="173">BAT_RCVMSG_ERR_EID</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__error_8h_1aa9ebdcf79be28ce49c79c12f20ce53b7">CFE_SB_NO_MESSAGE</references>
+        <references refid="cfe__sb_8h_1a0c0ca8cca37a759bd5e68e81e73ce67a">CFE_SB_POLL</references>
+        <references refid="cfe__sb_8h_1a54840fe06aeb08b1e2c8df420474780d">CFE_SB_RcvMsg</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_b_a_t_1a4bddde3c1dea7aea21eaf14dc5459815" compoundref="bat__app_8h" startline="160">CVT</references>
+        <references refid="class_b_a_t_1a065fcc3d08751b941fafed7d08665195" compoundref="bat__app_8h" startline="114">DataPipeId</references>
+        <references refid="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" compoundref="bat__app_8h" startline="133">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1acdd73c1def3bf35786c4910ad7ed2bdf" compoundref="bat__msg_8h" startline="153">BAT_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" compoundref="bat__app_8cpp" startline="310" endline="368">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a2cd42f569b73c9b363763b65bc80a489" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::ProcessAppCmds</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr)</argsstring>
+        <name>ProcessAppCmds</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <briefdescription>
+<para>Battery Monitor Task application commands. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function processes command messages specific to the <ref refid="class_b_a_t" kindref="compound">BAT</ref> application</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="318" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="477" bodyend="515"/>
+        <references refid="struct_b_a_t___hk_tlm__t_1a61798814214f62a327cb35c84f2cac99" compoundref="bat__msg_8h" startline="195">BAT_HkTlm_t::ActuatorArmedMsgCount</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1adf9f904f7e276a8f048e9753e30a4046" compoundref="bat__msg_8h" startline="192">BAT_HkTlm_t::ActuatorControls0MsgCount</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c915c00a838408f21ad9b7e4f35129a" compoundref="bat__events_8h" startline="202">BAT_CC_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a1c00c1fbe31a34191c790ee0ae20bfae" compoundref="bat__events_8h" startline="98">BAT_CMD_NOOP_EID</references>
+        <references refid="bat__version_8h_1ae6eba0886f814a7dc739319d67d77998" compoundref="bat__version_8h" startline="53">BAT_MAJOR_VERSION</references>
+        <references refid="bat__version_8h_1ab32e9aeacdfbd881d38bd622ee9b5627" compoundref="bat__version_8h" startline="67">BAT_MINOR_VERSION</references>
+        <references refid="bat__platform__cfg_8h_1a23f8fcba9a8b4745656ee13960fcada9" compoundref="bat__platform__cfg_8h" startline="27">BAT_MISSION_REV</references>
+        <references refid="bat__msg_8h_1adb602f8b015b3ed0b7b54232360de687" compoundref="bat__msg_8h" startline="90">BAT_NOOP_CC</references>
+        <references refid="bat__msg_8h_1a758aadd6c7de5f1016d9b59636b901db" compoundref="bat__msg_8h" startline="123">BAT_RESET_CC</references>
+        <references refid="bat__version_8h_1a0bc98412af9ea62defa367a7690747a7" compoundref="bat__version_8h" startline="81">BAT_REVISION</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8h_1a9bc5a36744c852941ce1aa5e07932ff4">CFE_EVS_INFORMATION</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" compoundref="bat__app_8h" startline="133">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1acb5d7dfa8c174b07270bcf5da9f605fc" compoundref="bat__msg_8h" startline="149">BAT_HkTlm_t::usCmdCnt</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1acdd73c1def3bf35786c4910ad7ed2bdf" compoundref="bat__msg_8h" startline="153">BAT_HkTlm_t::usCmdErrCnt</references>
+        <referencedby refid="class_b_a_t_1ac6295b60b9098e39e1e946ad4b7837e7" compoundref="bat__app_8cpp" startline="375" endline="415">ProcessCmdPipe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::ReportHousekeeping</definition>
+        <argsstring>(void)</argsstring>
+        <name>ReportHousekeeping</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sends <ref refid="class_b_a_t" kindref="compound">BAT</ref> housekeeping message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function sends the housekeeping message</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="330" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="522" bodyend="540"/>
+        <references refid="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" compoundref="bat__app_8h" startline="139">BatteryMutex</references>
+        <references refid="class_b_a_t_1aa15df434788949c6a53340afcc3087e2" compoundref="bat__app_8h" startline="130">BatteryStatusMsg</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1aad23de1372ef63840068509975dccf52" compoundref="bat__msg_8h" startline="180">BAT_HkTlm_t::CellCount</references>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1aa3944f6dae824f99572e46652637e030" compoundref="bat__msg_8h" startline="183">BAT_HkTlm_t::Connected</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1a660985a99dde96b8e928ec5c55c0be4e" compoundref="bat__msg_8h" startline="165">BAT_HkTlm_t::Current</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1a4396bd3fc4b50e5fd044c8044cacd184" compoundref="bat__msg_8h" startline="168">BAT_HkTlm_t::CurrentFiltered</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1aeb230770f88ab880b088f77a9b25278c" compoundref="bat__msg_8h" startline="171">BAT_HkTlm_t::Discharged</references>
+        <references refid="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" compoundref="bat__app_8h" startline="133">HkTlm</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1a3a7d642377cf7a99c2d05816675d8063" compoundref="bat__msg_8h" startline="174">BAT_HkTlm_t::Remaining</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1aee0e2b8b60062b8a487b54f8a12c75f1" compoundref="bat__msg_8h" startline="177">BAT_HkTlm_t::Scale</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1a3d963d7a4279035bb19e8c24095c5e07" compoundref="bat__msg_8h" startline="156">BAT_HkTlm_t::Timestamp</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1a93c787be35e0740de49fc1d22a2ad43c" compoundref="bat__msg_8h" startline="159">BAT_HkTlm_t::Voltage</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1a0e3707e551d6da4ceb45b8a1d975d28d" compoundref="bat__msg_8h" startline="162">BAT_HkTlm_t::VoltageFiltered</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1a7e3c69b1ef9bc2740fb074938118eb65" compoundref="bat__msg_8h" startline="186">BAT_HkTlm_t::Warning</references>
+        <referencedby refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" compoundref="bat__app_8cpp" startline="310" endline="368">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1abd1595e48951cbef868d45939350d50e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool BAT::VerifyCmdLength</definition>
+        <argsstring>(CFE_SB_Msg_t *MsgPtr, uint16 usExpectedLen)</argsstring>
+        <name>VerifyCmdLength</name>
+        <param>
+          <type><ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> *</type>
+          <declname>MsgPtr</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref></type>
+          <declname>usExpectedLen</declname>
+        </param>
+        <briefdescription>
+<para>Verify Command Length. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function verifies the command message length.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">MsgPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref> pointer that references the software bus message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">usExpectedLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected length of the message</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if the message length matches expectations, FALSE if it does not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="350" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="547" bodyend="571"/>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816ae8a74757bc64784152c130e8a2cedd23" compoundref="bat__events_8h" startline="219">BAT_MSGLEN_ERR_EID</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__sb_8h_1a7b1204be89237bd230fc79ecc88718b5">CFE_SB_GetCmdCode</references>
+        <references refid="cfe__sb_8h_1afd43694dea8b3cb74af4c2969493256d">CFE_SB_GetMsgId</references>
+        <references refid="cfe__sb_8h_1ac32b86cf9e1d12a547792853c35f6aa1">CFE_SB_GetTotalMsgLength</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" compoundref="bat__app_8h" startline="133">HkTlm</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <references refid="struct_b_a_t___hk_tlm__t_1acdd73c1def3bf35786c4910ad7ed2bdf" compoundref="bat__msg_8h" startline="153">BAT_HkTlm_t::usCmdErrCnt</references>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::ListenerTaskMain</definition>
+        <argsstring>(void)</argsstring>
+        <name>ListenerTaskMain</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Listener Task Main. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the executing function of the child task</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="653" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="710" bodyend="750"/>
+        <references refid="struct_b_a_t___current_value_table__t_1a9085f2754b80a0e5336c26ce34742db6" compoundref="bat__app_8h" startline="92">BAT_CurrentValueTable_t::ActuatorArmed</references>
+        <references refid="struct_b_a_t___current_value_table__t_1a2fd2774a089f19cbdb3969a93f8c15bb" compoundref="bat__app_8h" startline="91">BAT_CurrentValueTable_t::ActuatorControls0</references>
+        <references refid="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" compoundref="bat__app_8h" startline="139">BatteryMutex</references>
+        <references refid="class_b_a_t_1aa15df434788949c6a53340afcc3087e2" compoundref="bat__app_8h" startline="130">BatteryStatusMsg</references>
+        <references refid="cfe__es__api_8c_1a263795095b7eda1070864d75add8d91a">CFE_ES_ExitChildTask</references>
+        <references refid="cfe__es__api_8c_1a1e008c905bb89083293355b71ce4bc2d">CFE_ES_RegisterChildTask</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_b_a_t_1a49fd7da8ed474b9331db6a09c0a24820" compoundref="bat__app_8cpp" startline="655" endline="664">ChildContinueExec</references>
+        <references refid="class_b_a_t_1a3384c4ed46cd5aa566707c6e5dabc790" compoundref="bat__app_8h" startline="127">ConfigTblPtr</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a89ecb422f0d477362e88a2d2becfe247" compoundref="bat__tbldefs_8h" startline="242">BAT_ConfigTbl_t::CurrentScale</references>
+        <references refid="class_b_a_t_1a4bddde3c1dea7aea21eaf14dc5459815" compoundref="bat__app_8h" startline="160">CVT</references>
+        <references refid="class_b_a_t_1ae0ef0d8961f2abe7a5a65d87341af76a" compoundref="bat__app_8cpp" startline="818" endline="852">GetDischarged</references>
+        <references refid="class_b_a_t_1a71d02f0bcf6121d6dfb844c18a062232" compoundref="bat__app_8cpp" startline="774" endline="794">GetFilteredCurrent</references>
+        <references refid="class_b_a_t_1a71018f90264a328975fcad8368b3f21d" compoundref="bat__app_8cpp" startline="796" endline="816">GetFilteredThrottle</references>
+        <references refid="class_b_a_t_1a752c490e2cdee72a2ea559280bb33646" compoundref="bat__app_8cpp" startline="752" endline="772">GetFilteredVoltage</references>
+        <references refid="class_b_a_t_1a39e23f4307465dbd9f0a3c50296c71bb" compoundref="bat__app_8cpp" startline="855" endline="904">GetRemaining</references>
+        <references refid="class_b_a_t_1a0272a435e73a5afce7c0242a0e16039d" compoundref="bat__app_8cpp" startline="926" endline="947">GetScale</references>
+        <references refid="class_b_a_t_1ac35fea58e98e7cc634159065fa2d6e3c" compoundref="bat__app_8cpp" startline="906" endline="924">GetWarningSeverity</references>
+        <references refid="class_b_a_t_1a4647763e1192b4173c0dba1c218ecab2" compoundref="bat__app_8h" startline="157">m_ThrottleFiltered</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a710edd0d564509545da8fd20b606ef75" compoundref="bat__tbldefs_8h" startline="138">BAT_ConfigTbl_t::NumCells</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <references refid="class_b_a_t_1ab13d843b496de4b96447ee31e8dde7c5">ReadDevice</references>
+        <references refid="struct_b_a_t___config_tbl__t_1aa6750fcb176039f29b96b5cb1e063467" compoundref="bat__tbldefs_8h" startline="239">BAT_ConfigTbl_t::VoltageScale</references>
+        <referencedby refid="bat__app_8h_1ad54718904ca92290119c7c85e38762ea" compoundref="bat__app_8cpp" startline="949" endline="952">BAT_ListenerTaskMain</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_b_a_t_1ad96311afc3071aa674940be7f2f1f48c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::InitConfigTbl</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitConfigTbl</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the <ref refid="class_b_a_t" kindref="compound">BAT</ref> configuration tables. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function initializes <ref refid="class_b_a_t" kindref="compound">BAT</ref>&apos;s configuration table.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="4" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__tbl__api_8c_1a02649cb295b154981365de11e0bb6683" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Register</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from <ref refid="cfe__tbl__api_8c_1a5f631dc4d2527e27968f0838a93a8d50" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Load</ref>  </para></entry></row>
+<row>
+<entry thead="no"><para>Return codes from #BAT_AcquireConfigPointers  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="370" column="1" bodyfile="apps/bat/fsw/src/bat_config_utils.cpp" bodystart="51" bodyend="89"/>
+        <references refid="class_b_a_t_1ad2cf85a12845cf641f71779820062592" compoundref="bat__config__utils_8cpp" startline="175" endline="217">AcquireConfigPointers</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816aa4ab183528f6e358734bd2daa962c296" compoundref="bat__events_8h" startline="251">BAT_CFGTBL_LOAD_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a0fa01ebc5bf2660a52f0facff6b60137" compoundref="bat__events_8h" startline="235">BAT_CFGTBL_REG_ERR_EID</references>
+        <references refid="bat__platform__cfg_8h_1a3120d7b372b05ab2b477e3386d0ed63d" compoundref="bat__platform__cfg_8h" startline="91">BAT_CONFIG_TABLE_FILENAME</references>
+        <references refid="bat__tbldefs_8h_1ac23e58e7311475349959a3fcfb925695" compoundref="bat__tbldefs_8h" startline="77">BAT_CONFIG_TABLENAME</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="cfe__tbl_8h_1a5f631dc4d2527e27968f0838a93a8d50">CFE_TBL_Load</references>
+        <references refid="cfe__tbl_8h_1a1cdd818488b284d4ec7be6cab93d2462">CFE_TBL_OPT_DEFAULT</references>
+        <references refid="cfe__tbl_8h_1a02649cb295b154981365de11e0bb6683">CFE_TBL_Register</references>
+        <references refid="cfe__tbl_8h_1a0b3eb338d875c3c700856e88947bc927ae367f0dfc5bef4a6200af4fffb8333be">CFE_TBL_SRC_FILE</references>
+        <references refid="class_b_a_t_1a60040122811d5fc1faba2ac9f8394788" compoundref="bat__app_8h" startline="124">ConfigTblHdl</references>
+        <references refid="class_b_a_t_1a0267a491d66cf31d8744c9e694053403" compoundref="bat__config__utils_8cpp" startline="97" endline="167">ValidateConfigTbl</references>
+        <referencedby refid="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" compoundref="bat__app_8cpp" startline="241" endline="302">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ad2cf85a12845cf641f71779820062592" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::AcquireConfigPointers</definition>
+        <argsstring>(void)</argsstring>
+        <name>AcquireConfigPointers</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Obtain <ref refid="class_b_a_t" kindref="compound">BAT</ref> configuration tables data pointers. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function manages the configuration tables and obtains a pointer to their data.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="1" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="387" column="1" bodyfile="apps/bat/fsw/src/bat_config_utils.cpp" bodystart="175" bodyend="217"/>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816a5a4378520f79c9d6605a8549cc9ce2c7" compoundref="bat__events_8h" startline="157">BAT_CFGTBL_GETADDR_ERR_EID</references>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816acd72bc5fb635bddc99d4ea7d39b7dd15" compoundref="bat__events_8h" startline="144">BAT_CFGTBL_MANAGE_ERR_EID</references>
+        <references refid="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" compoundref="bat__app_8h" startline="139">BatteryMutex</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="cfe__tbl_8h_1ab76032b8a226594789df60e8449cface">CFE_TBL_GetAddress</references>
+        <references refid="cfe__error_8h_1a16d909d1b698830edc62f26fdb8c85c5">CFE_TBL_INFO_UPDATED</references>
+        <references refid="cfe__tbl_8h_1a55f9e6ac951e3e2b1ff42787e5f8c57c">CFE_TBL_Manage</references>
+        <references refid="cfe__tbl_8h_1a9707adcc7701671aaa4aa39f1608159a">CFE_TBL_ReleaseAddress</references>
+        <references refid="class_b_a_t_1a60040122811d5fc1faba2ac9f8394788" compoundref="bat__app_8h" startline="124">ConfigTblHdl</references>
+        <references refid="class_b_a_t_1a3384c4ed46cd5aa566707c6e5dabc790" compoundref="bat__app_8h" startline="127">ConfigTblPtr</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <referencedby refid="class_b_a_t_1a16fcc881a5cec988e836da9a533c4c81" compoundref="bat__app_8cpp" startline="590" endline="643">AppMain</referencedby>
+        <referencedby refid="class_b_a_t_1ad96311afc3071aa674940be7f2f1f48c" compoundref="bat__config__utils_8cpp" startline="51" endline="89">InitConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a49fd7da8ed474b9331db6a09c0a24820" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool BAT::ChildContinueExec</definition>
+        <argsstring>(void)</argsstring>
+        <name>ChildContinueExec</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Child Continue Execution. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function is evaluated in the child task loop to determine if the child task should continue cycling</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="1" cols="1"><row>
+<entry thead="no"><para><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">TRUE</ref> if yes <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">FALSE</ref> if not  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="404" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="655" bodyend="664"/>
+        <references refid="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" compoundref="bat__app_8h" startline="139">BatteryMutex</references>
+        <references refid="class_b_a_t_1a6e7be4da903d2d77364f6fc421777a1a" compoundref="bat__app_8h" startline="142">m_ChildContinueFlag</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1abe0015a93b9006f452af0b83da73da8f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::StopChild</definition>
+        <argsstring>(void)</argsstring>
+        <name>StopChild</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Stop Child Task Execution. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function stops execution of the child task by setting the continue execution flag to false</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="417" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="666" bodyend="671"/>
+        <references refid="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" compoundref="bat__app_8h" startline="139">BatteryMutex</references>
+        <references refid="class_b_a_t_1a6e7be4da903d2d77364f6fc421777a1a" compoundref="bat__app_8h" startline="142">m_ChildContinueFlag</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <referencedby refid="class_b_a_t_1a16fcc881a5cec988e836da9a533c4c81" compoundref="bat__app_8cpp" startline="590" endline="643">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a8d852b6a5632aa44798affe62e7c9763" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::InitListenerTask</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitListenerTask</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Listener Task. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function intitializes the child task with CFE</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="1" cols="1"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> if success, error code otherwise  </para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="433" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="673" bodyend="708"/>
+        <references refid="bat__events_8h_1a3850459cebd182970a9b3b7948cc0816adaa8087f19169326bd70cb1ce7232a23" compoundref="bat__events_8h" startline="267">BAT_LISTENER_CREATE_CHDTASK_ERR_EID</references>
+        <references refid="bat__platform__cfg_8h_1a44f39681c4fc056d149967a6c4ca18e4" compoundref="bat__platform__cfg_8h" startline="8">BAT_LISTENER_TASK_FLAGS</references>
+        <references refid="bat__app_8h_1a3cef95b55bf245df7492440a4a5fa1aa" compoundref="bat__app_8h" startline="80">BAT_LISTENER_TASK_NAME</references>
+        <references refid="bat__app_8h_1a0d6577e8737db56ed03d99a544fa4069" compoundref="bat__app_8h" startline="81">BAT_LISTENER_TASK_PRIORITY</references>
+        <references refid="bat__platform__cfg_8h_1a12c9cc1c645de070b4c76774f2e550b2" compoundref="bat__platform__cfg_8h" startline="101">BAT_LISTENER_TASK_STACK_SIZE</references>
+        <references refid="bat__app_8cpp_1ad54718904ca92290119c7c85e38762ea" compoundref="bat__app_8cpp" startline="949" endline="952">BAT_ListenerTaskMain</references>
+        <references refid="bat__app_8h_1a2b4ccf7dca220c90bbe852bdc1351c36" compoundref="bat__app_8h" startline="82">BAT_MUTEX_NAME</references>
+        <references refid="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" compoundref="bat__app_8h" startline="139">BatteryMutex</references>
+        <references refid="cfe__es__api_8c_1a64768543df91e7856b4356fdc70ebe8c">CFE_ES_CreateChildTask</references>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="class_b_a_t_1a3573499097dd3ef7dc89bf742d403f98" compoundref="bat__app_8h" startline="136">ListenerTaskID</references>
+        <references refid="class_b_a_t_1a6e7be4da903d2d77364f6fc421777a1a" compoundref="bat__app_8h" startline="142">m_ChildContinueFlag</references>
+        <references refid="common__types_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</references>
+        <references refid="osapi-os-core_8h_1a1cec40bf769e2db8614c1ef6d9906a8d">OS_MutSemCreate</references>
+        <referencedby refid="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" compoundref="bat__app_8cpp" startline="241" endline="302">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a752c490e2cdee72a2ea559280bb33646" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BAT::GetFilteredVoltage</definition>
+        <argsstring>(float Voltage)</argsstring>
+        <name>GetFilteredVoltage</name>
+        <param>
+          <type>float</type>
+          <declname>Voltage</declname>
+        </param>
+        <briefdescription>
+<para>Get Filtered Voltage. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the filtered voltage value</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Voltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of current voltage</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+voltage </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="451" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="752" bodyend="772"/>
+        <references refid="class_b_a_t_1aa15df434788949c6a53340afcc3087e2" compoundref="bat__app_8h" startline="130">BatteryStatusMsg</references>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a71d02f0bcf6121d6dfb844c18a062232" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BAT::GetFilteredCurrent</definition>
+        <argsstring>(float Current)</argsstring>
+        <name>GetFilteredCurrent</name>
+        <param>
+          <type>float</type>
+          <declname>Current</declname>
+        </param>
+        <briefdescription>
+<para>Get Filtered Current. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the filtered current value</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of current value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+Current </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="469" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="774" bodyend="794"/>
+        <references refid="class_b_a_t_1aa15df434788949c6a53340afcc3087e2" compoundref="bat__app_8h" startline="130">BatteryStatusMsg</references>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a71018f90264a328975fcad8368b3f21d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BAT::GetFilteredThrottle</definition>
+        <argsstring>(float Throttle)</argsstring>
+        <name>GetFilteredThrottle</name>
+        <param>
+          <type>float</type>
+          <declname>Throttle</declname>
+        </param>
+        <briefdescription>
+<para>Get Filtered Throttle. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the filtered throttle vlaue</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Throttle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of current throttle</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+thottle </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="487" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="796" bodyend="816"/>
+        <references refid="class_b_a_t_1a4647763e1192b4173c0dba1c218ecab2" compoundref="bat__app_8h" startline="157">m_ThrottleFiltered</references>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ae0ef0d8961f2abe7a5a65d87341af76a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BAT::GetDischarged</definition>
+        <argsstring>(float Current)</argsstring>
+        <name>GetDischarged</name>
+        <param>
+          <type>float</type>
+          <declname>Current</declname>
+        </param>
+        <briefdescription>
+<para>Get Discharged Amount. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns amount of mAh discharged from the battery</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of current value</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+amount </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="505" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="818" bodyend="852"/>
+        <references refid="cfe__time_8h_1abd11fb8c23847440915308528c2e4470">CFE_TIME_Compare</references>
+        <references refid="cfe__time_8h_1a7db3d8878781fdce28aa67bcf981fd0fa5bfe2555e735df286570d2463bb46848">CFE_TIME_EQUAL</references>
+        <references refid="cfe__time_8h_1ad27faa0574e0d4dbec7269be1233da1e">CFE_TIME_GetMET</references>
+        <references refid="cfe__time_8h_1a6262446f4ca15369dec1ca68c8c15f54">CFE_TIME_Sub2MicroSecs</references>
+        <references refid="cfe__time_8h_1a50e8edf09dc85ff930021cfa69b445f6">CFE_TIME_Subtract</references>
+        <references refid="class_b_a_t_1ad61832bbf5fe01498bd0e5c4f3228aa0" compoundref="bat__app_8h" startline="154">m_Discharged</references>
+        <references refid="class_b_a_t_1a26f0f891cc3b85f1f364228adc0d90c1" compoundref="bat__app_8h" startline="145">m_SampleTime</references>
+        <references refid="struct_c_f_e___t_i_m_e___sys_time__t_1ac10c014228075ee87ea7938348a98c1c">CFE_TIME_SysTime_t::Seconds</references>
+        <references refid="struct_c_f_e___t_i_m_e___sys_time__t_1a2af2ad470fa81d8eb5c23f68b54ab81a">CFE_TIME_SysTime_t::Subseconds</references>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a39e23f4307465dbd9f0a3c50296c71bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BAT::GetRemaining</definition>
+        <argsstring>(float Voltage, float Current, float ThrottleNormalized, osalbool Armed)</argsstring>
+        <name>GetRemaining</name>
+        <param>
+          <type>float</type>
+          <declname>Voltage</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Current</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ThrottleNormalized</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+          <declname>Armed</declname>
+        </param>
+        <briefdescription>
+<para>Get Charge Remaining. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the amount of charge remaining.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Voltage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of current voltage </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of current value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ThrottleNormalized</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>#float of current filtered throttle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Armed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref> of current voltage</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of battery remaining </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="526" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="855" bodyend="904"/>
+        <references refid="struct_b_a_t___config_tbl__t_1ab2e535b61835810bccdf0ac88c74cc53" compoundref="bat__tbldefs_8h" startline="153">BAT_ConfigTbl_t::Capacity</references>
+        <references refid="class_b_a_t_1a3384c4ed46cd5aa566707c6e5dabc790" compoundref="bat__app_8h" startline="127">ConfigTblPtr</references>
+        <references refid="class_b_a_t_1ad61832bbf5fe01498bd0e5c4f3228aa0" compoundref="bat__app_8h" startline="154">m_Discharged</references>
+        <references refid="class_b_a_t_1ad3ec766c03c92d3e8a1cf95c332b46ef" compoundref="bat__app_8h" startline="151">m_RemainingCapacity</references>
+        <references refid="class_b_a_t_1ac6c8b9bc2138c54c1182e8a312ab6009" compoundref="bat__app_8h" startline="148">m_RemainingVoltage</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a710edd0d564509545da8fd20b606ef75" compoundref="bat__tbldefs_8h" startline="138">BAT_ConfigTbl_t::NumCells</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a4bd17e7ab5f295d4c91ba14266afa355" compoundref="bat__tbldefs_8h" startline="186">BAT_ConfigTbl_t::RInternal</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a85d468859be1d7901465726347dc1b3c" compoundref="bat__tbldefs_8h" startline="97">BAT_ConfigTbl_t::VEmpty</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a99193dba8be8e649e7f49a5f4db3f23f" compoundref="bat__tbldefs_8h" startline="111">BAT_ConfigTbl_t::VFull</references>
+        <references refid="struct_b_a_t___config_tbl__t_1ae1296cc6e0a31200eb15d7a8bedc4a5b" compoundref="bat__tbldefs_8h" startline="172">BAT_ConfigTbl_t::VLoadDrop</references>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ac35fea58e98e7cc634159065fa2d6e3c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PX4_BatteryWarningSeverity_t</type>
+        <definition>PX4_BatteryWarningSeverity_t BAT::GetWarningSeverity</definition>
+        <argsstring>(float Remaining)</argsstring>
+        <name>GetWarningSeverity</name>
+        <param>
+          <type>float</type>
+          <declname>Remaining</declname>
+        </param>
+        <briefdescription>
+<para>Get Warning Severity. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the current severity of battery level based on configured values</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+for current severity level </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="543" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="906" bodyend="924"/>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a0272a435e73a5afce7c0242a0e16039d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BAT::GetScale</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetScale</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get Voltage Scale. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the voltage scale</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+of voltage scale </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="559" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="926" bodyend="947"/>
+        <references refid="class_b_a_t_1a3384c4ed46cd5aa566707c6e5dabc790" compoundref="bat__app_8h" startline="127">ConfigTblPtr</references>
+        <references refid="class_b_a_t_1ac6c8b9bc2138c54c1182e8a312ab6009" compoundref="bat__app_8h" startline="148">m_RemainingVoltage</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a85d468859be1d7901465726347dc1b3c" compoundref="bat__tbldefs_8h" startline="97">BAT_ConfigTbl_t::VEmpty</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a99193dba8be8e649e7f49a5f4db3f23f" compoundref="bat__tbldefs_8h" startline="111">BAT_ConfigTbl_t::VFull</references>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ac1d9d8c3bcdf085f9706509315ed709c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::PublishBatteryStatus</definition>
+        <argsstring>(void)</argsstring>
+        <name>PublishBatteryStatus</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Publish Battery Status. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function publishes the battery status message to the CFE SB</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="1" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="575" column="1" bodyfile="apps/bat/fsw/src/bat_app.cpp" bodystart="645" bodyend="653"/>
+        <references refid="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" compoundref="bat__app_8h" startline="139">BatteryMutex</references>
+        <references refid="class_b_a_t_1aa15df434788949c6a53340afcc3087e2" compoundref="bat__app_8h" startline="130">BatteryStatusMsg</references>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="osapi-os-core_8h_1a48964b6567f9ceda86a51ebc02fb88c5">OS_MutSemGive</references>
+        <references refid="osapi-os-core_8h_1a77239ad1acd87f235cdc45142cc0d39f">OS_MutSemTake</references>
+        <referencedby refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" compoundref="bat__app_8cpp" startline="310" endline="368">RcvSchPipeMsg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a6e9c792ac00ffb42b1040e6902efe0fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::InitDevice</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitDevice</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize Device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function intializes the custom layer for the battery driver</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if success, error code otherwise  </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="591" column="1"/>
+        <referencedby refid="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" compoundref="bat__app_8cpp" startline="241" endline="302">InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1a76a0d96ba1e4bc61db1dc9813616a538" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BAT::CloseDevice</definition>
+        <argsstring>(void)</argsstring>
+        <name>CloseDevice</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Close Device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function closes the custom layer driver</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="603" column="1"/>
+        <referencedby refid="class_b_a_t_1a16fcc881a5cec988e836da9a533c4c81" compoundref="bat__app_8cpp" startline="590" endline="643">AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_b_a_t_1ab13d843b496de4b96447ee31e8dde7c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::ReadDevice</definition>
+        <argsstring>(float &amp;Voltage, float &amp;Current)</argsstring>
+        <name>ReadDevice</name>
+        <param>
+          <type>float &amp;</type>
+          <declname>Voltage</declname>
+        </param>
+        <param>
+          <type>float &amp;</type>
+          <declname>Current</declname>
+        </param>
+        <briefdescription>
+<para>Read Device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function reads the battery information from the connected device</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Voltage Pointer to #float of voltage </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>[in/out]</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current Pointer to #float of current</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="0" cols="0"></table>
+if success, error code otherwise  </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="622" column="1"/>
+        <referencedby refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" compoundref="bat__app_8cpp" startline="710" endline="750">ListenerTaskMain</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_b_a_t_1a0267a491d66cf31d8744c9e694053403" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref></type>
+        <definition>int32 BAT::ValidateConfigTbl</definition>
+        <argsstring>(void *)</argsstring>
+        <name>ValidateConfigTbl</name>
+        <param>
+          <type>void *</type>
+          <defname>ConfigTblPtr</defname>
+        </param>
+        <briefdescription>
+<para>Validate <ref refid="class_b_a_t" kindref="compound">BAT</ref> configuration table. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function validates <ref refid="class_b_a_t" kindref="compound">BAT</ref>&apos;s configuration table</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ConfigTblPtr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the table to validate.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><table rows="1" cols="2"><row>
+<entry thead="no"><para><ref refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SUCCESS</ref> </para></entry><entry thead="no"><para></para></entry></row>
+</table>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/bat/fsw/src/bat_app.h" line="641" column="1" bodyfile="apps/bat/fsw/src/bat_config_utils.cpp" bodystart="97" bodyend="167"/>
+        <references refid="bat__tbldefs_8h_1a8c4775fd978651ce0c2521f96478011f" compoundref="bat__tbldefs_8h" startline="61">BAT_CAPACITY_MAX</references>
+        <references refid="bat__tbldefs_8h_1aea4c09183cd28340933c4cf5753d1f35" compoundref="bat__tbldefs_8h" startline="60">BAT_CAPACITY_MIN</references>
+        <references refid="bat__tbldefs_8h_1aaea00d172f8b538495dbf476bd8accf3" compoundref="bat__tbldefs_8h" startline="65">BAT_CRIT_THR_MAX</references>
+        <references refid="bat__tbldefs_8h_1a104deefb928b404211d0deb3a9df2fcc" compoundref="bat__tbldefs_8h" startline="64">BAT_CRIT_THR_MIN</references>
+        <references refid="bat__tbldefs_8h_1a74b07781999ace0e17e22c3c460c2499" compoundref="bat__tbldefs_8h" startline="67">BAT_EMERGEN_THR_MAX</references>
+        <references refid="bat__tbldefs_8h_1a96f891f0c2d57667e9f5da86311fcc27" compoundref="bat__tbldefs_8h" startline="66">BAT_EMERGEN_THR_MIN</references>
+        <references refid="bat__tbldefs_8h_1ae3a1d48166b713f1dce465ace1c365a1" compoundref="bat__tbldefs_8h" startline="63">BAT_LOW_THR_MAX</references>
+        <references refid="bat__tbldefs_8h_1a4bbcabe2a429dc5c6d59fe3c384e7c79" compoundref="bat__tbldefs_8h" startline="62">BAT_LOW_THR_MIN</references>
+        <references refid="bat__tbldefs_8h_1a328be5ef03bb9de7e04514e257246290" compoundref="bat__tbldefs_8h" startline="59">BAT_N_CELLS_MAX</references>
+        <references refid="bat__tbldefs_8h_1a6417f18952bd085461299579cd162776" compoundref="bat__tbldefs_8h" startline="58">BAT_N_CELLS_MIN</references>
+        <references refid="bat__tbldefs_8h_1a73e8fb83e2c0782c33092e15a91a4ad2" compoundref="bat__tbldefs_8h" startline="71">BAT_R_INTERNAL_MAX</references>
+        <references refid="bat__tbldefs_8h_1afc67eb97a2058399bd2f7633e8e4c8cf" compoundref="bat__tbldefs_8h" startline="70">BAT_R_INTERNAL_MIN</references>
+        <references refid="bat__tbldefs_8h_1adb0bac84a7d461f201c71ed5f68b59d0" compoundref="bat__tbldefs_8h" startline="57">BAT_V_CHARGED_MAX</references>
+        <references refid="bat__tbldefs_8h_1a4a48d54d0fb1a24e5fe186beadab7e21" compoundref="bat__tbldefs_8h" startline="56">BAT_V_CHARGED_MIN</references>
+        <references refid="bat__tbldefs_8h_1a5e9034ab13e7bb4be03051b7f7fbedfb" compoundref="bat__tbldefs_8h" startline="55">BAT_V_EMPTY_MAX</references>
+        <references refid="bat__tbldefs_8h_1af2d2c1f9973d3bce565aec6749db585e" compoundref="bat__tbldefs_8h" startline="54">BAT_V_EMPTY_MIN</references>
+        <references refid="bat__tbldefs_8h_1ad157341511beaa41e9a643d21630e642" compoundref="bat__tbldefs_8h" startline="69">BAT_V_LOAD_DROP_MAX</references>
+        <references refid="bat__tbldefs_8h_1a34973293b2d392354d133adfedcc5fb9" compoundref="bat__tbldefs_8h" startline="68">BAT_V_LOAD_DROP_MIN</references>
+        <references refid="struct_b_a_t___config_tbl__t_1ab2e535b61835810bccdf0ac88c74cc53" compoundref="bat__tbldefs_8h" startline="153">BAT_ConfigTbl_t::Capacity</references>
+        <references refid="cfe__error_8h_1ab2b6b188c32c70b8ca0578b7a7bc091b">CFE_SUCCESS</references>
+        <references refid="struct_b_a_t___config_tbl__t_1acef6c0f4ca4ab3b39a4aaf7d5b4c9fae" compoundref="bat__tbldefs_8h" startline="219">BAT_ConfigTbl_t::CriticalThreshold</references>
+        <references refid="struct_b_a_t___config_tbl__t_1acde37aacb5c061cfd4443ac1d47abe4d" compoundref="bat__tbldefs_8h" startline="236">BAT_ConfigTbl_t::EmergencyThreshold</references>
+        <references refid="struct_b_a_t___config_tbl__t_1ad89f282ae06f6973990f724183ccde48" compoundref="bat__tbldefs_8h" startline="202">BAT_ConfigTbl_t::LowThreshold</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a710edd0d564509545da8fd20b606ef75" compoundref="bat__tbldefs_8h" startline="138">BAT_ConfigTbl_t::NumCells</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a4bd17e7ab5f295d4c91ba14266afa355" compoundref="bat__tbldefs_8h" startline="186">BAT_ConfigTbl_t::RInternal</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a85d468859be1d7901465726347dc1b3c" compoundref="bat__tbldefs_8h" startline="97">BAT_ConfigTbl_t::VEmpty</references>
+        <references refid="struct_b_a_t___config_tbl__t_1a99193dba8be8e649e7f49a5f4db3f23f" compoundref="bat__tbldefs_8h" startline="111">BAT_ConfigTbl_t::VFull</references>
+        <references refid="struct_b_a_t___config_tbl__t_1ae1296cc6e0a31200eb15d7a8bedc4a5b" compoundref="bat__tbldefs_8h" startline="172">BAT_ConfigTbl_t::VLoadDrop</references>
+        <referencedby refid="class_b_a_t_1ad96311afc3071aa674940be7f2f1f48c" compoundref="bat__config__utils_8cpp" startline="51" endline="89">InitConfigTbl</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_b_a_t" kindref="compound">BAT</ref> Application Class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>BAT_ConfigTbl_t</label>
+        <link refid="struct_b_a_t___config_tbl__t"/>
+      </node>
+      <node id="6">
+        <label>BAT_HkTlm_t</label>
+        <link refid="struct_b_a_t___hk_tlm__t"/>
+      </node>
+      <node id="2">
+        <label>CFE_TIME_SysTime_t</label>
+        <link refid="struct_c_f_e___t_i_m_e___sys_time__t" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="4">
+        <label>BAT_CurrentValueTable_t</label>
+        <link refid="struct_b_a_t___current_value_table__t"/>
+      </node>
+      <node id="3">
+        <label>CFE_EVS_BinFilter_t</label>
+        <link refid="struct_c_f_e___e_v_s___bin_filter__t" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="1">
+        <label>BAT</label>
+        <link refid="class_b_a_t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_SampleTime</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>EventTbl</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>CVT</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ConfigTblPtr</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>HkTlm</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/bat/fsw/src/bat_app.h" line="99" column="1" bodyfile="apps/bat/fsw/src/bat_app.h" bodystart="98" bodyend="654"/>
+    <listofallmembers>
+      <member refid="class_b_a_t_1ad2cf85a12845cf641f71779820062592" prot="private" virt="non-virtual"><scope>BAT</scope><name>AcquireConfigPointers</name></member>
+      <member refid="class_b_a_t_1a16fcc881a5cec988e836da9a533c4c81" prot="public" virt="non-virtual"><scope>BAT</scope><name>AppMain</name></member>
+      <member refid="class_b_a_t_1a6c2a15b06d3ca69f753185939eea3ab6" prot="public" virt="non-virtual"><scope>BAT</scope><name>BAT</name></member>
+      <member refid="class_b_a_t_1a94479daaad3e68581e93091bb952ddc6" prot="public" virt="non-virtual"><scope>BAT</scope><name>BatteryMutex</name></member>
+      <member refid="class_b_a_t_1aa15df434788949c6a53340afcc3087e2" prot="public" virt="non-virtual"><scope>BAT</scope><name>BatteryStatusMsg</name></member>
+      <member refid="class_b_a_t_1a49fd7da8ed474b9331db6a09c0a24820" prot="private" virt="non-virtual"><scope>BAT</scope><name>ChildContinueExec</name></member>
+      <member refid="class_b_a_t_1a76a0d96ba1e4bc61db1dc9813616a538" prot="private" virt="non-virtual"><scope>BAT</scope><name>CloseDevice</name></member>
+      <member refid="class_b_a_t_1a89a9dc4703aa586e9d4d70f36fc6be9b" prot="public" virt="non-virtual"><scope>BAT</scope><name>CmdPipeId</name></member>
+      <member refid="class_b_a_t_1a60040122811d5fc1faba2ac9f8394788" prot="public" virt="non-virtual"><scope>BAT</scope><name>ConfigTblHdl</name></member>
+      <member refid="class_b_a_t_1a3384c4ed46cd5aa566707c6e5dabc790" prot="public" virt="non-virtual"><scope>BAT</scope><name>ConfigTblPtr</name></member>
+      <member refid="class_b_a_t_1a4bddde3c1dea7aea21eaf14dc5459815" prot="public" virt="non-virtual"><scope>BAT</scope><name>CVT</name></member>
+      <member refid="class_b_a_t_1a065fcc3d08751b941fafed7d08665195" prot="public" virt="non-virtual"><scope>BAT</scope><name>DataPipeId</name></member>
+      <member refid="class_b_a_t_1aa87bc1d4f2400fcd3a61558111537b1c" prot="public" virt="non-virtual"><scope>BAT</scope><name>EventTbl</name></member>
+      <member refid="class_b_a_t_1ae0ef0d8961f2abe7a5a65d87341af76a" prot="private" virt="non-virtual"><scope>BAT</scope><name>GetDischarged</name></member>
+      <member refid="class_b_a_t_1a71d02f0bcf6121d6dfb844c18a062232" prot="private" virt="non-virtual"><scope>BAT</scope><name>GetFilteredCurrent</name></member>
+      <member refid="class_b_a_t_1a71018f90264a328975fcad8368b3f21d" prot="private" virt="non-virtual"><scope>BAT</scope><name>GetFilteredThrottle</name></member>
+      <member refid="class_b_a_t_1a752c490e2cdee72a2ea559280bb33646" prot="private" virt="non-virtual"><scope>BAT</scope><name>GetFilteredVoltage</name></member>
+      <member refid="class_b_a_t_1a39e23f4307465dbd9f0a3c50296c71bb" prot="private" virt="non-virtual"><scope>BAT</scope><name>GetRemaining</name></member>
+      <member refid="class_b_a_t_1a0272a435e73a5afce7c0242a0e16039d" prot="private" virt="non-virtual"><scope>BAT</scope><name>GetScale</name></member>
+      <member refid="class_b_a_t_1ac35fea58e98e7cc634159065fa2d6e3c" prot="private" virt="non-virtual"><scope>BAT</scope><name>GetWarningSeverity</name></member>
+      <member refid="class_b_a_t_1ab5bd631e84c200aa46b71df35ae077c0" prot="public" virt="non-virtual"><scope>BAT</scope><name>HkTlm</name></member>
+      <member refid="class_b_a_t_1a5b7a52a585298c816694601a532ebc38" prot="public" virt="non-virtual"><scope>BAT</scope><name>InitApp</name></member>
+      <member refid="class_b_a_t_1ad96311afc3071aa674940be7f2f1f48c" prot="private" virt="non-virtual"><scope>BAT</scope><name>InitConfigTbl</name></member>
+      <member refid="class_b_a_t_1a98af421c0df5ea76f6ed23a70712a926" prot="public" virt="non-virtual"><scope>BAT</scope><name>InitData</name></member>
+      <member refid="class_b_a_t_1a6e9c792ac00ffb42b1040e6902efe0fc" prot="private" virt="non-virtual"><scope>BAT</scope><name>InitDevice</name></member>
+      <member refid="class_b_a_t_1ac64961857759249a0437acb0a15d290f" prot="public" virt="non-virtual"><scope>BAT</scope><name>InitEvent</name></member>
+      <member refid="class_b_a_t_1a8d852b6a5632aa44798affe62e7c9763" prot="private" virt="non-virtual"><scope>BAT</scope><name>InitListenerTask</name></member>
+      <member refid="class_b_a_t_1a4b5896cbb41a90e08da84d24c3c22167" prot="public" virt="non-virtual"><scope>BAT</scope><name>InitPipe</name></member>
+      <member refid="class_b_a_t_1a3573499097dd3ef7dc89bf742d403f98" prot="public" virt="non-virtual"><scope>BAT</scope><name>ListenerTaskID</name></member>
+      <member refid="class_b_a_t_1ad750fe7d84d6a3aebd0caf9c8f844065" prot="public" virt="non-virtual"><scope>BAT</scope><name>ListenerTaskMain</name></member>
+      <member refid="class_b_a_t_1a6e7be4da903d2d77364f6fc421777a1a" prot="public" virt="non-virtual"><scope>BAT</scope><name>m_ChildContinueFlag</name></member>
+      <member refid="class_b_a_t_1ad61832bbf5fe01498bd0e5c4f3228aa0" prot="public" virt="non-virtual"><scope>BAT</scope><name>m_Discharged</name></member>
+      <member refid="class_b_a_t_1ad3ec766c03c92d3e8a1cf95c332b46ef" prot="public" virt="non-virtual"><scope>BAT</scope><name>m_RemainingCapacity</name></member>
+      <member refid="class_b_a_t_1ac6c8b9bc2138c54c1182e8a312ab6009" prot="public" virt="non-virtual"><scope>BAT</scope><name>m_RemainingVoltage</name></member>
+      <member refid="class_b_a_t_1a26f0f891cc3b85f1f364228adc0d90c1" prot="public" virt="non-virtual"><scope>BAT</scope><name>m_SampleTime</name></member>
+      <member refid="class_b_a_t_1a4647763e1192b4173c0dba1c218ecab2" prot="public" virt="non-virtual"><scope>BAT</scope><name>m_ThrottleFiltered</name></member>
+      <member refid="class_b_a_t_1a2cd42f569b73c9b363763b65bc80a489" prot="public" virt="non-virtual"><scope>BAT</scope><name>ProcessAppCmds</name></member>
+      <member refid="class_b_a_t_1ac6295b60b9098e39e1e946ad4b7837e7" prot="public" virt="non-virtual"><scope>BAT</scope><name>ProcessCmdPipe</name></member>
+      <member refid="class_b_a_t_1a626002d3d3260d00ed28742af3490c61" prot="public" virt="non-virtual"><scope>BAT</scope><name>ProcessDataPipe</name></member>
+      <member refid="class_b_a_t_1ac1d9d8c3bcdf085f9706509315ed709c" prot="private" virt="non-virtual"><scope>BAT</scope><name>PublishBatteryStatus</name></member>
+      <member refid="class_b_a_t_1a7818d293e42b44c2bb4b58fee7157ae0" prot="public" virt="non-virtual"><scope>BAT</scope><name>RcvSchPipeMsg</name></member>
+      <member refid="class_b_a_t_1ab13d843b496de4b96447ee31e8dde7c5" prot="private" virt="non-virtual"><scope>BAT</scope><name>ReadDevice</name></member>
+      <member refid="class_b_a_t_1a2226073175fd1ab63e512bdec09df4bc" prot="public" virt="non-virtual"><scope>BAT</scope><name>ReportHousekeeping</name></member>
+      <member refid="class_b_a_t_1a0c761eb2f55d548a5a3be3792e269da8" prot="public" virt="non-virtual"><scope>BAT</scope><name>SchPipeId</name></member>
+      <member refid="class_b_a_t_1abe0015a93b9006f452af0b83da73da8f" prot="private" virt="non-virtual"><scope>BAT</scope><name>StopChild</name></member>
+      <member refid="class_b_a_t_1aa1bf9c8624cbb8d21a03e9569326b06d" prot="public" virt="non-virtual"><scope>BAT</scope><name>uiRunStatus</name></member>
+      <member refid="class_b_a_t_1a0267a491d66cf31d8744c9e694053403" prot="public" virt="non-virtual"><scope>BAT</scope><name>ValidateConfigTbl</name></member>
+      <member refid="class_b_a_t_1abd1595e48951cbef868d45939350d50e" prot="public" virt="non-virtual"><scope>BAT</scope><name>VerifyCmdLength</name></member>
+      <member refid="class_b_a_t_1ad28f92c6587acef61625b86475f14a3e" prot="public" virt="non-virtual"><scope>BAT</scope><name>~BAT</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

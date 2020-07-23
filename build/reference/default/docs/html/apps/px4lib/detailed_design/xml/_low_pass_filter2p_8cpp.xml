@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="_low_pass_filter2p_8cpp" kind="file" language="C++">
+    <compoundname>LowPassFilter2p.cpp</compoundname>
+    <includes refid="_low_pass_filter2p_8hpp" local="no">math/filters/LowPassFilter2p.hpp</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="4653">
+        <label>cmath</label>
+      </node>
+      <node id="4651">
+        <label>apps/px4lib/fsw/src/math/filters/LowPassFilter2p.cpp</label>
+        <link refid="LowPassFilter2p.cpp"/>
+        <childnode refid="4652" relation="include">
+        </childnode>
+        <childnode refid="4653" relation="include">
+        </childnode>
+      </node>
+      <node id="4652">
+        <label>math/filters/LowPassFilter2p.hpp</label>
+        <link refid="_low_pass_filter2p_8hpp"/>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacemath">math</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_low_pass_filter2p_8cpp_1ab9c3c609e1d02430671de0a109410ac8" prot="public" static="no">
+        <name>M_PI_F</name>
+        <initializer>3.14159265f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/px4lib/fsw/src/math/filters/LowPassFilter2p.cpp" line="44" column="9" bodyfile="apps/px4lib/fsw/src/math/filters/LowPassFilter2p.cpp" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classmath_1_1_low_pass_filter2p_1a5c1390c1bca03d0eb9229ddccfbede24" compoundref="_low_pass_filter2p_8cpp" startline="49" endline="66">math::LowPassFilter2p::set_cutoff_frequency</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>-*-<sp/>tab-width:<sp/>4;<sp/>Mode:<sp/>C++;<sp/>c-basic-offset:<sp/>4;<sp/>indent-tabs-mode:<sp/>nil<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2012<sp/>PX4<sp/>Development<sp/>Team.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>PX4<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its<sp/>contributors<sp/>may<sp/>be</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from<sp/>this<sp/>software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;px4_defines.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_low_pass_filter2p_8hpp" kindref="compound">math/filters/LowPassFilter2p.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_low_pass_filter2p_8cpp_1ab9c3c609e1d02430671de0a109410ac8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M_PI_F<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.14159265f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="namespacemath" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemath" kindref="compound">math</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classmath_1_1_low_pass_filter2p_1a5c1390c1bca03d0eb9229ddccfbede24" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a5c1390c1bca03d0eb9229ddccfbede24" kindref="member">LowPassFilter2p::set_cutoff_frequency</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sample_freq,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cutoff_freq)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a932e6b2dfabb87a3aa9729b5877fc603" kindref="member">_cutoff_freq</ref><sp/>=<sp/>cutoff_freq;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classmath_1_1_low_pass_filter2p_1a932e6b2dfabb87a3aa9729b5877fc603" kindref="member">_cutoff_freq</ref><sp/>&lt;=<sp/>0.0f)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>filtering</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fr<sp/>=<sp/>sample_freq<sp/>/<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a932e6b2dfabb87a3aa9729b5877fc603" kindref="member">_cutoff_freq</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ohm<sp/>=<sp/>tanf(<ref refid="_low_pass_filter2p_8cpp_1ab9c3c609e1d02430671de0a109410ac8" kindref="member">M_PI_F</ref><sp/>/<sp/>fr);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>1.0f<sp/>+<sp/>2.0f<sp/>*<sp/>cosf(<ref refid="_low_pass_filter2p_8cpp_1ab9c3c609e1d02430671de0a109410ac8" kindref="member">M_PI_F</ref><sp/>/<sp/>4.0f)<sp/>*<sp/>ohm<sp/>+<sp/>ohm<sp/>*<sp/>ohm;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1aae28346578c8f9cfbaaa8c5f7cbf20e6" kindref="member">_b0</ref><sp/>=<sp/>ohm<sp/>*<sp/>ohm<sp/>/<sp/>c;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a5231ef0811b298712b556271ee32c4a6" kindref="member">_b1</ref><sp/>=<sp/>2.0f<sp/>*<sp/><ref refid="classmath_1_1_low_pass_filter2p_1aae28346578c8f9cfbaaa8c5f7cbf20e6" kindref="member">_b0</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a88049d2601ac0b8eb1283c1fb2444993" kindref="member">_b2</ref><sp/>=<sp/><ref refid="classmath_1_1_low_pass_filter2p_1aae28346578c8f9cfbaaa8c5f7cbf20e6" kindref="member">_b0</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a9bd9b32df2455fa79e05834bd49dd58c" kindref="member">_a1</ref><sp/>=<sp/>2.0f<sp/>*<sp/>(ohm<sp/>*<sp/>ohm<sp/>-<sp/>1.0f)<sp/>/<sp/>c;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a8580f848fd39fbe6fbb35350077ac678" kindref="member">_a2</ref><sp/>=<sp/>(1.0f<sp/>-<sp/>2.0f<sp/>*<sp/>cosf(<ref refid="_low_pass_filter2p_8cpp_1ab9c3c609e1d02430671de0a109410ac8" kindref="member">M_PI_F</ref><sp/>/<sp/>4.0f)<sp/>*<sp/>ohm<sp/>+<sp/>ohm<sp/>*<sp/>ohm)<sp/>/<sp/>c;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classmath_1_1_low_pass_filter2p_1a560a894bf85c80e56091096e2e9fc253" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a560a894bf85c80e56091096e2e9fc253" kindref="member">LowPassFilter2p::apply</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sample)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classmath_1_1_low_pass_filter2p_1a932e6b2dfabb87a3aa9729b5877fc603" kindref="member">_cutoff_freq</ref><sp/>&lt;=<sp/>0.0f)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>filtering</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sample;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>the<sp/>filtering</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delay_element_0<sp/>=<sp/>sample<sp/>-<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a4fb74d16d4253ccd0737d98ce1117894" kindref="member">_delay_element_1</ref><sp/>*<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a9bd9b32df2455fa79e05834bd49dd58c" kindref="member">_a1</ref><sp/>-<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a2e5be286b6088a13e6294bed066cb920" kindref="member">_delay_element_2</ref><sp/>*<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a8580f848fd39fbe6fbb35350077ac678" kindref="member">_a2</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(!PX4_ISFINITE(delay_element_0))<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!std::isfinite(delay_element_0))<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>allow<sp/>bad<sp/>values<sp/>to<sp/>propagate<sp/>via<sp/>the<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay_element_0<sp/>=<sp/>sample;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>output<sp/>=<sp/>delay_element_0<sp/>*<sp/><ref refid="classmath_1_1_low_pass_filter2p_1aae28346578c8f9cfbaaa8c5f7cbf20e6" kindref="member">_b0</ref><sp/>+<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a4fb74d16d4253ccd0737d98ce1117894" kindref="member">_delay_element_1</ref><sp/>*<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a5231ef0811b298712b556271ee32c4a6" kindref="member">_b1</ref><sp/>+<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a2e5be286b6088a13e6294bed066cb920" kindref="member">_delay_element_2</ref><sp/>*<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a88049d2601ac0b8eb1283c1fb2444993" kindref="member">_b2</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a2e5be286b6088a13e6294bed066cb920" kindref="member">_delay_element_2</ref><sp/>=<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a4fb74d16d4253ccd0737d98ce1117894" kindref="member">_delay_element_1</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a4fb74d16d4253ccd0737d98ce1117894" kindref="member">_delay_element_1</ref><sp/>=<sp/>delay_element_0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>the<sp/>value.<sp/><sp/>Should<sp/>be<sp/>no<sp/>need<sp/>to<sp/>check<sp/>limits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="classmath_1_1_low_pass_filter2p_1ab2350f530aabeaed83f7a3dd4d2746f8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1_low_pass_filter2p_1ab2350f530aabeaed83f7a3dd4d2746f8" kindref="member">LowPassFilter2p::reset</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sample)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dval<sp/>=<sp/>sample<sp/>/<sp/>(<ref refid="classmath_1_1_low_pass_filter2p_1aae28346578c8f9cfbaaa8c5f7cbf20e6" kindref="member">_b0</ref><sp/>+<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a5231ef0811b298712b556271ee32c4a6" kindref="member">_b1</ref><sp/>+<sp/><ref refid="classmath_1_1_low_pass_filter2p_1a88049d2601ac0b8eb1283c1fb2444993" kindref="member">_b2</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a4fb74d16d4253ccd0737d98ce1117894" kindref="member">_delay_element_1</ref><sp/>=<sp/>dval;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a2e5be286b6088a13e6294bed066cb920" kindref="member">_delay_element_2</ref><sp/>=<sp/>dval;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1_low_pass_filter2p_1a560a894bf85c80e56091096e2e9fc253" kindref="member">apply</ref>(sample);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>math</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/px4lib/fsw/src/math/filters/LowPassFilter2p.cpp"/>
+  </compounddef>
+</doxygen>

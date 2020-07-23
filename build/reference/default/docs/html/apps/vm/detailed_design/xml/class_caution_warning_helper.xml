@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="class_caution_warning_helper" kind="class" language="C++" prot="public">
+    <compoundname>CautionWarningHelper</compoundname>
+    <includes refid="_caution_warning_helper_8hpp" local="no">CautionWarningHelper.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_caution_warning_helper_1a0afe07beda2b32686d3685783a0136ae" prot="private" static="no" mutable="no">
+        <type><ref refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1" kindref="member">CAWS_States_t</ref></type>
+        <definition>CAWS_States_t CautionWarningHelper::m_State</definition>
+        <argsstring></argsstring>
+        <name>m_State</name>
+        <briefdescription>
+<para>Caution and Warning System current state. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This contains the current state of the Caution and Warning System (CAWS).</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="119" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.hpp" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_caution_warning_helper_1a532579af592ae6f9f41edb14c1f21977" compoundref="_caution_warning_helper_8cpp" startline="87" endline="94">DeInitCAWS</referencedby>
+        <referencedby refid="class_caution_warning_helper_1ab3a8cb14873bb94ae7071d3a688a1ab4" compoundref="_caution_warning_helper_8cpp" startline="135" endline="138">GetState</referencedby>
+        <referencedby refid="class_caution_warning_helper_1a10e34b2fce30c4a3f4c665bcc72c3de2" compoundref="_caution_warning_helper_8cpp" startline="67" endline="78">InitCAWS</referencedby>
+        <referencedby refid="class_caution_warning_helper_1ab54b442de19e3a6a0ff7bf7a73497c69" compoundref="_caution_warning_helper_8cpp" startline="147" endline="231">SetState</referencedby>
+        <referencedby refid="class_caution_warning_helper_1a33dc664dcf004dc2541a8c8cb422f3ec" compoundref="_caution_warning_helper_8cpp" startline="241" endline="448">SetStatus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_caution_warning_helper_1a51ca5c78208b3277f2c6f99ff2b12339" prot="private" static="no" mutable="no">
+        <type>PX4_LedControlMsg_t</type>
+        <definition>PX4_LedControlMsg_t CautionWarningHelper::m_LedControlMsg</definition>
+        <argsstring></argsstring>
+        <name>m_LedControlMsg</name>
+        <briefdescription>
+<para>LED Control Message. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the message that will be sent to the RGBLED application if/when state changes.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="132" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.hpp" bodystart="132" bodyend="-1"/>
+        <referencedby refid="class_caution_warning_helper_1a10e34b2fce30c4a3f4c665bcc72c3de2" compoundref="_caution_warning_helper_8cpp" startline="67" endline="78">InitCAWS</referencedby>
+        <referencedby refid="class_caution_warning_helper_1a6ab804e8f8135ca328eef31b074aac93" compoundref="_caution_warning_helper_8cpp" startline="103" endline="113">InitRGBLED</referencedby>
+        <referencedby refid="class_caution_warning_helper_1a6ac957a40a43fe1a038c0ed6323b1efa" compoundref="_caution_warning_helper_8cpp" startline="457" endline="468">RGBLedSetColorAndMode</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_caution_warning_helper_1a6ac957a40a43fe1a038c0ed6323b1efa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CautionWarningHelper::RGBLedSetColorAndMode</definition>
+        <argsstring>(LED_Colors_t color, LED_Modes_t mode, uint8 blinks, uint8 prio)</argsstring>
+        <name>RGBLedSetColorAndMode</name>
+        <param>
+          <type><ref refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77" kindref="member">LED_Colors_t</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type><ref refid="_caution_warning_helper_8hpp_1a7fbcdfb103e00b2a25eed43c2ae30952" kindref="member">LED_Modes_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>blinks</declname>
+        </param>
+        <param>
+          <type><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref></type>
+          <declname>prio</declname>
+        </param>
+        <briefdescription>
+<para>Set RGB LED color and mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is function is used internally to send the command to the RGB LED application to actually set the color and mode.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="145" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="457" bodyend="468"/>
+        <references refid="cfe__sb_8h_1a91b4b63f7d168bd78dc92d894ad7f77d">CFE_SB_SendMsg</references>
+        <references refid="cfe__sb_8h_1aaab4db240d18fa4017741f0f7680e4e1">CFE_SB_TimeStampMsg</references>
+        <references refid="class_caution_warning_helper_1a51ca5c78208b3277f2c6f99ff2b12339" compoundref="_caution_warning_helper_8hpp" startline="132">m_LedControlMsg</references>
+        <referencedby refid="class_caution_warning_helper_1ab54b442de19e3a6a0ff7bf7a73497c69" compoundref="_caution_warning_helper_8cpp" startline="147" endline="231">SetState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_caution_warning_helper_1a6ab804e8f8135ca328eef31b074aac93" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CautionWarningHelper::InitRGBLED</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitRGBLED</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the CAWS RGBLED component. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is function is called internally to initialize internal variables required by the Caution and Warning System.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="158" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="103" bodyend="113"/>
+        <references refid="cfe__sb_8h_1a67765875dfff1d3d6d7cbc4a7ae2f8f0">CFE_SB_InitMsg</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77afea1b6d1e36efeb9177297ad5b634bdd" compoundref="_caution_warning_helper_8hpp" startline="46">LED_COLOR_OFF</references>
+        <references refid="_caution_warning_helper_8hpp_1a7fbcdfb103e00b2a25eed43c2ae30952a5a472505476f1d9c473bacb9450dd003" compoundref="_caution_warning_helper_8hpp" startline="63">LED_MODE_OFF</references>
+        <references refid="class_caution_warning_helper_1a51ca5c78208b3277f2c6f99ff2b12339" compoundref="_caution_warning_helper_8hpp" startline="132">m_LedControlMsg</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_caution_warning_helper_1a195e8bb1bd21b17a44f88b22af917112" compoundref="_caution_warning_helper_8cpp" startline="122" endline="126">DeInitRGBLED</referencedby>
+        <referencedby refid="class_caution_warning_helper_1a10e34b2fce30c4a3f4c665bcc72c3de2" compoundref="_caution_warning_helper_8cpp" startline="67" endline="78">InitCAWS</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_caution_warning_helper_1a195e8bb1bd21b17a44f88b22af917112" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CautionWarningHelper::DeInitRGBLED</definition>
+        <argsstring>(void)</argsstring>
+        <name>DeInitRGBLED</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>De-initialize the CAWS RGBLED component. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is function is called internally to deinitialize internal variables required by the Caution and Warning System.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="171" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="122" bodyend="126"/>
+        <references refid="class_caution_warning_helper_1a6ab804e8f8135ca328eef31b074aac93" compoundref="_caution_warning_helper_8cpp" startline="103" endline="113">InitRGBLED</references>
+        <referencedby refid="class_caution_warning_helper_1a532579af592ae6f9f41edb14c1f21977" compoundref="_caution_warning_helper_8cpp" startline="87" endline="94">DeInitCAWS</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_caution_warning_helper_1ab54b442de19e3a6a0ff7bf7a73497c69" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool CautionWarningHelper::SetState</definition>
+        <argsstring>(CAWS_States_t state)</argsstring>
+        <name>SetState</name>
+        <param>
+          <type><ref refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1" kindref="member">CAWS_States_t</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Set the current state of the Caution and Warning System. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is function is called internally to set the state of the Caution and Warning System.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="184" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="147" bodyend="231"/>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a261ab9aa42bdebcbde0c911939f1df30" compoundref="_caution_warning_helper_8hpp" startline="87">CAWS_ALTCTL</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1abba733c962bc56ede370b752bf482d06" compoundref="_caution_warning_helper_8hpp" startline="89">CAWS_AUTO</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a2a15a9197a5438c7cd3828b706f8ef45" compoundref="_caution_warning_helper_8hpp" startline="86">CAWS_FAILSAFE</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a3ca333a584baa788326d36eb31d41712" compoundref="_caution_warning_helper_8hpp" startline="80">CAWS_HOME_SET</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1aef2a419bf0d75865b9d808f47e1f9ba9" compoundref="_caution_warning_helper_8hpp" startline="82">CAWS_MISSION_FAIL</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a93f52207bbb39c9ad6203014bdfef9a6" compoundref="_caution_warning_helper_8hpp" startline="81">CAWS_MISSION_OK</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a94d486a9443d5cd24c82e6d43e94b735" compoundref="_caution_warning_helper_8hpp" startline="85">CAWS_NEGATIVE</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a78132e6205ffbf28bc8f0e7ba7983a33" compoundref="_caution_warning_helper_8hpp" startline="84">CAWS_NEUTRAL</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a7e1fbcbc80138f20bc1a63175b1289f4" compoundref="_caution_warning_helper_8hpp" startline="88">CAWS_POSCTL</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1ab556f827f7dd3bb800bc4e803b392e52" compoundref="_caution_warning_helper_8hpp" startline="83">CAWS_POSITIVE</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77ac0cfbd35cad8f56a965ccf6c0e43c1e9" compoundref="_caution_warning_helper_8hpp" startline="50">LED_COLOR_AMBER</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77a457a1e8f0680efd8cf6d76d1a6465b2b" compoundref="_caution_warning_helper_8hpp" startline="49">LED_COLOR_BLUE</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77a64cda76c497793915fcf24c216d0f37c" compoundref="_caution_warning_helper_8hpp" startline="48">LED_COLOR_GREEN</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77abc94ee3b9f2ff2553c77741c2a530647" compoundref="_caution_warning_helper_8hpp" startline="52">LED_COLOR_PURPLE</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77a20c3f7e3db2eca4ce0fe784975373384" compoundref="_caution_warning_helper_8hpp" startline="47">LED_COLOR_RED</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77ae0568a71373a19d68ac019a67fcb2c3b" compoundref="_caution_warning_helper_8hpp" startline="54">LED_COLOR_WHITE</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77ab792f0e1b8644f6f22f3f0ab799bd3a9" compoundref="_caution_warning_helper_8hpp" startline="51">LED_COLOR_YELLOW</references>
+        <references refid="_caution_warning_helper_8hpp_1a7fbcdfb103e00b2a25eed43c2ae30952ac5a6ac5071ad0d0794f5af505d535277" compoundref="_caution_warning_helper_8hpp" startline="68">LED_MODE_BLINK_FAST</references>
+        <references refid="class_caution_warning_helper_1a0afe07beda2b32686d3685783a0136ae" compoundref="_caution_warning_helper_8hpp" startline="119">m_State</references>
+        <references refid="class_caution_warning_helper_1a6ac957a40a43fe1a038c0ed6323b1efa" compoundref="_caution_warning_helper_8cpp" startline="457" endline="468">RGBLedSetColorAndMode</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_caution_warning_helper_1a33dc664dcf004dc2541a8c8cb422f3ec" compoundref="_caution_warning_helper_8cpp" startline="241" endline="448">SetStatus</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_caution_warning_helper_1a14979b5faaa9c12d89e64c295fa64c18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CautionWarningHelper::CautionWarningHelper</definition>
+        <argsstring>()</argsstring>
+        <name>CautionWarningHelper</name>
+        <briefdescription>
+<para><ref refid="class_caution_warning_helper" kindref="compound">CautionWarningHelper</ref> default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the default constructor of the <ref refid="class_caution_warning_helper" kindref="compound">CautionWarningHelper</ref> class.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="199" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_caution_warning_helper_1a63caaac6f73a4a033c7e9b3fcba315cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CautionWarningHelper::~CautionWarningHelper</definition>
+        <argsstring>()</argsstring>
+        <name>~CautionWarningHelper</name>
+        <briefdescription>
+<para><ref refid="class_caution_warning_helper" kindref="compound">CautionWarningHelper</ref> destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is the destructor for the <ref refid="class_caution_warning_helper" kindref="compound">CautionWarningHelper</ref> class.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="212" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_caution_warning_helper_1a10e34b2fce30c4a3f4c665bcc72c3de2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CautionWarningHelper::InitCAWS</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitCAWS</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initialize the Caution and Warning System. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function should be called after object creation, to initialize the Caution and Warning System.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="225" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="67" bodyend="78"/>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1abb6f9eef16712d3e07c3e21c1c0ed1d0" compoundref="_caution_warning_helper_8hpp" startline="79">CAWS_INITIALIZED</references>
+        <references refid="class_caution_warning_helper_1a6ab804e8f8135ca328eef31b074aac93" compoundref="_caution_warning_helper_8cpp" startline="103" endline="113">InitRGBLED</references>
+        <references refid="_caution_warning_helper_8hpp_1ad28ebe3c60688da717cd2166c6725b77afea1b6d1e36efeb9177297ad5b634bdd" compoundref="_caution_warning_helper_8hpp" startline="46">LED_COLOR_OFF</references>
+        <references refid="_caution_warning_helper_8hpp_1a7fbcdfb103e00b2a25eed43c2ae30952a5a472505476f1d9c473bacb9450dd003" compoundref="_caution_warning_helper_8hpp" startline="63">LED_MODE_OFF</references>
+        <references refid="class_caution_warning_helper_1a51ca5c78208b3277f2c6f99ff2b12339" compoundref="_caution_warning_helper_8hpp" startline="132">m_LedControlMsg</references>
+        <references refid="class_caution_warning_helper_1a0afe07beda2b32686d3685783a0136ae" compoundref="_caution_warning_helper_8hpp" startline="119">m_State</references>
+        <referencedby refid="class_caution_warning_helper_1a532579af592ae6f9f41edb14c1f21977" compoundref="_caution_warning_helper_8cpp" startline="87" endline="94">DeInitCAWS</referencedby>
+        <referencedby refid="class_v_m_1a25434a92b5ba0c939414e9bde5d11092" compoundref="vm__app_8cpp" startline="413" endline="474">VM::InitApp</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_caution_warning_helper_1a532579af592ae6f9f41edb14c1f21977" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CautionWarningHelper::DeInitCAWS</definition>
+        <argsstring>(void)</argsstring>
+        <name>DeInitCAWS</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Deinitialize the Caution and Warning System. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This is an optional function that can be called before the object is detroyed.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="238" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="87" bodyend="94"/>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a103896963ff04545a2e8447628c02f18" compoundref="_caution_warning_helper_8hpp" startline="78">CAWS_UNINITIALIZED</references>
+        <references refid="class_caution_warning_helper_1a195e8bb1bd21b17a44f88b22af917112" compoundref="_caution_warning_helper_8cpp" startline="122" endline="126">DeInitRGBLED</references>
+        <references refid="class_caution_warning_helper_1a10e34b2fce30c4a3f4c665bcc72c3de2" compoundref="_caution_warning_helper_8cpp" startline="67" endline="78">InitCAWS</references>
+        <references refid="class_caution_warning_helper_1a0afe07beda2b32686d3685783a0136ae" compoundref="_caution_warning_helper_8hpp" startline="119">m_State</references>
+      </memberdef>
+      <memberdef kind="function" id="class_caution_warning_helper_1ab3a8cb14873bb94ae7071d3a688a1ab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1" kindref="member">CAWS_States_t</ref></type>
+        <definition>CAWS_States_t CautionWarningHelper::GetState</definition>
+        <argsstring>(void)</argsstring>
+        <name>GetState</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get Caution and Warning System State. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function returns the current state of the Caution and Warning System.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>InitCAWS has been called. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="251" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="135" bodyend="138"/>
+        <references refid="class_caution_warning_helper_1a0afe07beda2b32686d3685783a0136ae" compoundref="_caution_warning_helper_8hpp" startline="119">m_State</references>
+      </memberdef>
+      <memberdef kind="function" id="class_caution_warning_helper_1a33dc664dcf004dc2541a8c8cb422f3ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="common__types_8h_1a1a0d7c4c11a131b0d46ebcb64832e293" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">osalbool</ref></type>
+        <definition>osalbool CautionWarningHelper::SetStatus</definition>
+        <argsstring>(const PX4_VehicleStatusMsg_t *status)</argsstring>
+        <name>SetStatus</name>
+        <param>
+          <type>const PX4_VehicleStatusMsg_t *</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Set Caution and Warning System Status. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function sets the Caution and Warning System status from the PX4_VehicleStatusMsg message. Call this when a new PX4_VehicleStatusMsg is received.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>InitCAWS has been called. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="265" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.cpp" bodystart="241" bodyend="448"/>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a261ab9aa42bdebcbde0c911939f1df30" compoundref="_caution_warning_helper_8hpp" startline="87">CAWS_ALTCTL</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1abba733c962bc56ede370b752bf482d06" compoundref="_caution_warning_helper_8hpp" startline="89">CAWS_AUTO</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a2a15a9197a5438c7cd3828b706f8ef45" compoundref="_caution_warning_helper_8hpp" startline="86">CAWS_FAILSAFE</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a94d486a9443d5cd24c82e6d43e94b735" compoundref="_caution_warning_helper_8hpp" startline="85">CAWS_NEGATIVE</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a78132e6205ffbf28bc8f0e7ba7983a33" compoundref="_caution_warning_helper_8hpp" startline="84">CAWS_NEUTRAL</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1a7e1fbcbc80138f20bc1a63175b1289f4" compoundref="_caution_warning_helper_8hpp" startline="88">CAWS_POSCTL</references>
+        <references refid="_caution_warning_helper_8hpp_1a8861af202195d61d7af9ebca7a770bd1ab556f827f7dd3bb800bc4e803b392e52" compoundref="_caution_warning_helper_8hpp" startline="83">CAWS_POSITIVE</references>
+        <references refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1">FALSE</references>
+        <references refid="class_caution_warning_helper_1a0afe07beda2b32686d3685783a0136ae" compoundref="_caution_warning_helper_8hpp" startline="119">m_State</references>
+        <references refid="class_caution_warning_helper_1ab54b442de19e3a6a0ff7bf7a73497c69" compoundref="_caution_warning_helper_8cpp" startline="147" endline="231">SetState</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_v_m_1a27608a3beb9cdf5ecd14c84f9d144333" compoundref="vm__app_8cpp" startline="483" endline="569">VM::RcvSchPipeMsg</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Caution and Warning Helper class. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This class provides functions to assist with sending the RGB LED commands to change colors and modes.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>    </detaileddescription>
+    <location file="apps/vm/fsw/src/CautionWarningHelper.hpp" line="106" column="1" bodyfile="apps/vm/fsw/src/CautionWarningHelper.hpp" bodystart="105" bodyend="267"/>
+    <listofallmembers>
+      <member refid="class_caution_warning_helper_1a14979b5faaa9c12d89e64c295fa64c18" prot="public" virt="non-virtual"><scope>CautionWarningHelper</scope><name>CautionWarningHelper</name></member>
+      <member refid="class_caution_warning_helper_1a532579af592ae6f9f41edb14c1f21977" prot="public" virt="non-virtual"><scope>CautionWarningHelper</scope><name>DeInitCAWS</name></member>
+      <member refid="class_caution_warning_helper_1a195e8bb1bd21b17a44f88b22af917112" prot="private" virt="non-virtual"><scope>CautionWarningHelper</scope><name>DeInitRGBLED</name></member>
+      <member refid="class_caution_warning_helper_1ab3a8cb14873bb94ae7071d3a688a1ab4" prot="public" virt="non-virtual"><scope>CautionWarningHelper</scope><name>GetState</name></member>
+      <member refid="class_caution_warning_helper_1a10e34b2fce30c4a3f4c665bcc72c3de2" prot="public" virt="non-virtual"><scope>CautionWarningHelper</scope><name>InitCAWS</name></member>
+      <member refid="class_caution_warning_helper_1a6ab804e8f8135ca328eef31b074aac93" prot="private" virt="non-virtual"><scope>CautionWarningHelper</scope><name>InitRGBLED</name></member>
+      <member refid="class_caution_warning_helper_1a51ca5c78208b3277f2c6f99ff2b12339" prot="private" virt="non-virtual"><scope>CautionWarningHelper</scope><name>m_LedControlMsg</name></member>
+      <member refid="class_caution_warning_helper_1a0afe07beda2b32686d3685783a0136ae" prot="private" virt="non-virtual"><scope>CautionWarningHelper</scope><name>m_State</name></member>
+      <member refid="class_caution_warning_helper_1a6ac957a40a43fe1a038c0ed6323b1efa" prot="private" virt="non-virtual"><scope>CautionWarningHelper</scope><name>RGBLedSetColorAndMode</name></member>
+      <member refid="class_caution_warning_helper_1ab54b442de19e3a6a0ff7bf7a73497c69" prot="private" virt="non-virtual"><scope>CautionWarningHelper</scope><name>SetState</name></member>
+      <member refid="class_caution_warning_helper_1a33dc664dcf004dc2541a8c8cb422f3ec" prot="public" virt="non-virtual"><scope>CautionWarningHelper</scope><name>SetStatus</name></member>
+      <member refid="class_caution_warning_helper_1a63caaac6f73a4a033c7e9b3fcba315cd" prot="public" virt="non-virtual"><scope>CautionWarningHelper</scope><name>~CautionWarningHelper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

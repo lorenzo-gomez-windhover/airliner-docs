@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="struct_d_s___packet_entry__t" kind="struct" language="C++" prot="public">
+    <compoundname>DS_PacketEntry_t</compoundname>
+    <includes refid="ds__table_8h" local="no">ds_table.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_s___packet_entry__t_1a2d35078e8d913cb71e2f1a952157e8dd" prot="public" static="no" mutable="no">
+        <type><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgId_t</ref></type>
+        <definition>CFE_SB_MsgId_t DS_PacketEntry_t::MessageID</definition>
+        <argsstring></argsstring>
+        <name>MessageID</name>
+        <briefdescription>
+<para>Packet MessageID (may be cmd or tlm) </para>        </briefdescription>
+        <detaileddescription>
+<para>DS defines ID zero to be unused </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_table.h" line="66" column="1" bodyfile="apps/ds/fsw/src/ds_table.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_s___packet_entry__t_1a4e38df81140d5603aa701eb300cbfe01" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_s___filter_parms__t" kindref="compound">DS_FilterParms_t</ref></type>
+        <definition>DS_FilterParms_t DS_PacketEntry_t::Filter[DS_FILTERS_PER_PACKET]</definition>
+        <argsstring>[DS_FILTERS_PER_PACKET]</argsstring>
+        <name>Filter</name>
+        <briefdescription>
+<para>One entry for each packet destination. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/ds/fsw/src/ds_table.h" line="69" column="1" bodyfile="apps/ds/fsw/src/ds_table.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="56">
+        <label>DS_FilterParms_t</label>
+        <link refid="struct_d_s___filter_parms__t"/>
+      </node>
+      <node id="55">
+        <label>DS_PacketEntry_t</label>
+        <link refid="struct_d_s___packet_entry__t"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>Filter</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="apps/ds/fsw/src/ds_table.h" line="65" column="1" bodyfile="apps/ds/fsw/src/ds_table.h" bodystart="64" bodyend="71"/>
+    <listofallmembers>
+      <member refid="struct_d_s___packet_entry__t_1a4e38df81140d5603aa701eb300cbfe01" prot="public" virt="non-virtual"><scope>DS_PacketEntry_t</scope><name>Filter</name></member>
+      <member refid="struct_d_s___packet_entry__t_1a2d35078e8d913cb71e2f1a952157e8dd" prot="public" virt="non-virtual"><scope>DS_PacketEntry_t</scope><name>MessageID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

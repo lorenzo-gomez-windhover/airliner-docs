@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsdsopr" kind="page">
+    <compoundname>cfsdsopr</compoundname>
+    <title>CFS Data Storage Operation</title>
+    <detaileddescription>
+<para>When DS receives a message that passes the filtering algorithm, the message is stored in a file or files based upon the File Table information for that message ID. Once a message is stored, the DS Housekeeping packet displays information about the open file. Each houskeeping cycle, DS evaluates the open files to determine if their age has been exceeded. If this determination is true, the file is closed by the DS application. Also, each time a message is to be stored, DS determines if the message will fit in the open file. If the determination is false, the open file will be closed and a new file created containing the message. A minimum of one message will be stored each file.</para><para><heading level="2">Filtering</heading>
+</para><para>Filtering is based upon message IDs. The Filter Table determines what messages DS will store. The DS application supports two types of filtering: <orderedlist>
+<listitem>
+<para>Sequence number based filtering </para></listitem>
+<listitem>
+<para>Time based filtering. </para></listitem>
+</orderedlist>
+Each filtering type relies on three filter factors, N, X, and O where N of X messages will be stored starting at offset O. <heading level="3">Sequence based Filtering</heading>
+</para><para>This type of filtering uses the packet sequence number to determine if the message should be filtered or not. If X is greated than zero, the message shall be stored if and only if the sequence number modulo X is less than N. For example, N=4, X=6 and O=2 will store 4 of 6 messages starting at offset 2. <heading level="3">Time based Filtering</heading>
+</para><para>This type of filtering uses the spacecraft time code found in the CCSDS packet secondary header. Fifteen bits out of the 64-bit CCSDS time code field are used. The constructed 15-bit time stamp used for DS filtering consists of the 11 Least Significant Bits (LSB) of the seconds field and the 4 Most Significant Bits (MSB) of the sub-seconds field. Messages will be stored if and only if the constructed 15-bit time stamp modulo X is less than N. This type of filtering is rare in that the N value must be set to the desired 15-bit time stamp which is hard to specify. Testing used simulated values for the spacecraft time code.</para><para>Next: <ref refid="cfsdsreq" kindref="compound">CFS Data Storage Requirements</ref> <linebreak/>
+ Prev: <ref refid="cfsdsovr" kindref="compound">CFS Data Storage Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

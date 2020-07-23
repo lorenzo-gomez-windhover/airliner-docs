@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfshkreq" kind="page">
+    <compoundname>cfshkreq</compoundname>
+    <title>CFS Housekeeping Requirements</title>
+    <detaileddescription>
+<para><heading level="2">Subsystem Requirements:</heading>
+</para><para><bold>CFS-100</bold> The CFS shall provide the capability to combine housekeeping data from system applications into output messages</para><para><heading level="2">Basic Command Requirements:</heading>
+</para><para><bold>HK1000</bold> Upon receipt of a No-Op command, HK shall increment the HK Valid Command Counter and generate an event message.</para><para><bold>HK1001</bold> Upon receipt of a Reset command, HK shall reset the following housekeeping variables to a value of zero:<linebreak/>
+ a) HK Valid Command Counter <linebreak/>
+ b) HK Command Rejected Counter <linebreak/>
+ c) Number of Output Messages Sent <linebreak/>
+ d) Missing Data Counter <linebreak/>
+</para><para><bold>HK1002</bold> For all HK commands, if the length contained in the message header is not equal to the expected length, HK shall reject the command.</para><para><bold>HK1003</bold> If HK accepts any command as valid, HK shall execute the command, increment the HK Valid Command Counter and issue an event message</para><para><bold>HK1004</bold> If HK rejects any command, HK shall abort the command execution, increment the HK Command Rejected Counter and issue an error event message</para><para><heading level="2">Operational Requirements:</heading>
+</para><para><bold>HK2000</bold> HK shall collect flight software housekeeping data from table-specified input messages.</para><para><bold>HK2001</bold> HK shall output table-defined messages, at the scheduled rate, by combining input message data starting at the table-defined offset and table-defined number of bytes to the table-defined offset in the output message.</para><para><bold>HK2001.1</bold> Upon a table update, HK shall update the output message formats specified in the table during normal execution.</para><para><bold>HK2001.2</bold> If HK does not receive a message from an application, HK shall use all values associated with last received message for that application in the combined message for that telemetry collection period.</para><para><bold>HK2001.3</bold> If HK does not receive a message from an application, HK app shall increment the missing data counter and send an event specifying the message ID for the missing message</para><para><bold>HK2001.5</bold> If the input message offset + bytes for any input message specified in the HK table is greater than the received message length then HK shall use the last received data associated with that message and issue an event message</para><para><heading level="2">Status Reporting Requirements:</heading>
+</para><para><bold>HK3000</bold> HK shall generate a housekeeping message containing the following:<linebreak/>
+ a) Valid Command Counter <linebreak/>
+ b) Command Rejected Counter <linebreak/>
+ c) Number of Output Messages Sent <linebreak/>
+ d) Missing Data Counter <linebreak/>
+</para><para><heading level="2">Initialization Requirements:</heading>
+</para><para><bold>HK4000</bold> Upon initialization of the HK Application, HK shall initialize the following data to zero:<linebreak/>
+ a) Valid Command Counter <linebreak/>
+ b) Command Rejected Counter <linebreak/>
+ c) Number of Output Messages Sent <linebreak/>
+ d) Missing Data Counter <linebreak/>
+</para><para>Next: <ref refid="cfshkdg" kindref="compound">CFS Housekeeping Deployment Guide</ref> <linebreak/>
+ Prev: <ref refid="cfshkopr" kindref="compound">CFS Housekeeping Operation</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

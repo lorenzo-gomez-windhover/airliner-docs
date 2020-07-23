@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsmdopr" kind="page">
+    <compoundname>cfsmdopr</compoundname>
+    <title>CFS Memory Dwell Operation</title>
+    <detaileddescription>
+<para>The operational interface of the MD application consists of ground commands, dwell table loads, and housekeeping telemetry. The following items detail the operational interface: <linebreak/>
+</para><para><orderedlist>
+<listitem><para><bold>The application version number </bold> - The application version number is displayed in the <ref refid="md__events_8h_1acf8c8def166ef56ec58015b2b875abf2" kindref="member">Initialization event message </ref> and the <ref refid="md__events_8h_1aa2fb319cf8ff0cc23299b0b4262f18bf" kindref="member">No-op event message</ref>. Both events are &apos;informational&apos; type and are unfiltered by default.<linebreak/>
+<linebreak/>
+</para></listitem><listitem><para><bold>Loading a Dwell Table </bold> - Memory Dwell supports a configurable number of dwell tables. Each of these dwell tables can be loaded by way of a file. A new dwell table may be loaded at any time. The steps to load a new Copy Table are:<linebreak/>
+<linebreak/>
+ a) Transfer the table file to the on-board file system <linebreak/>
+ b) Send the <ref refid="cfe__tbl__msg_8h_1a9b03cc36b2894db18e00a70c89a1795f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE Table load </ref> command <linebreak/>
+ c) Send the <ref refid="cfe__tbl__msg_8h_1aafeae2981c35e35e8773a8c60b7553c9" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE Table validate </ref> command <linebreak/>
+ d) Send the <ref refid="cfe__tbl__msg_8h_1ab3fa1511e81c576198b96de7f10ba397" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE Table activate </ref> command <linebreak/>
+<linebreak/>
+</para></listitem><listitem><para><bold>Sending the No-op Command </bold> - To verify connectivity with the Memory Dwell application, the ground may send an <ref refid="md__msgdefs_8h_1a6833eee2fdf32adcf0524d6885f59b10" kindref="member">MD No-op command </ref>. If the packet length field in the command is set to the value expected by the MD app, then the command counter will increment and a <ref refid="md__events_8h_1acf8c8def166ef56ec58015b2b875abf2" kindref="member">No-op informational event message </ref> will be sent. This no-op event will show the version number of the MD application.<linebreak/>
+<linebreak/>
+</para></listitem><listitem><para><bold>Sending the reset counters command</bold> - The reset counters command will reset only the telemetry points listed here:<linebreak/>
+<linebreak/>
+ a) <ref refid="struct_m_d___hk_tlm__t_1a2d32b71b27d287a13d511cf1d4a552f8" kindref="member">$sc_$cpu_MD_CMDPC </ref> - Number of accepted commands <linebreak/>
+ b) <ref refid="struct_m_d___hk_tlm__t_1a92de7c26bc050208f77b5615d3a6f12c" kindref="member">$sc_$cpu_MD_CMDEC </ref> - Number of rejected commands <linebreak/>
+<linebreak/>
+</para></listitem><listitem><para><bold>Monitoring the command counter</bold> - The command counter, MD_CMDPC, will increment when the MD application receives any valid command.<linebreak/>
+<linebreak/>
+</para></listitem><listitem><para><bold>Monitoring the command error counter</bold> - The command error counter will increment under the following conditions:<linebreak/>
+<linebreak/>
+ a) Invalid command code <linebreak/>
+ b) Unexpected packet length field for <ref refid="md__msgids_8h_1a34383dbc7ac1e3c4848fb1bad62ccac3" kindref="member">&apos;MD Wakeup&apos; command </ref> <linebreak/>
+ c) Unexpected packet length field for <ref refid="md__msgids_8h_1a36f029aa38cbbacf0c92f6e1a2c9444f" kindref="member">&apos;Send MD Housekeeping&apos; command </ref> <linebreak/>
+ d) Unexpected packet length field for a ground command <linebreak/>
+ e) Invalid command argument <linebreak/>
+<linebreak/>
+</para></listitem><listitem><para><bold>Enabling and Disabling Dwell Packet Streams</bold> - The enabled/disabled state of dwell packet streams can be modified using the start and stop ground commands. The enabled/disabled state is also controlled by the enabled flag in the dwell load table.Note that a dwell packet stream will not actively operate if the total delay count is zero, no matter what the enabled/disabled state is.<linebreak/>
+<linebreak/>
+</para></listitem><listitem><para><bold>Specifying a memory dwell stream</bold> - Each Memory Dwell Table consists of <ref refid="md__platform__cfg_8h_1a2b1a6acbd1ce79e5c6979d700c88262b" kindref="member">MD_DWELL_TABLE_SIZE</ref> entries. Each entry serves either as an individual dwell definition or a null entry. The MD will build packets beginning with the dwell specified in the first slot, adding additional dwells until it reaches either a null entry or the end of the table. Each individual memory dwell definition is specified by a memory address, the number of delay counts before the next read, and the dwell length. The number of delay counts is the number of wakeup calls the application will receive before the next memory dwell read. A valid Dwell Table entry which is an individual memory dwell definition must have:<linebreak/>
+<linebreak/>
+ a) a valid memory address (Symbol name, if any, must be in operating system Symbol Table, and resolved address i.e. symbol plus offset must be in a valid range), <linebreak/>
+ b) a value of 1, 2, or 4 for dwell length.<linebreak/>
+<linebreak/>
+ A valid Dwell Table entry which is a null entry must have a zero value for dwell length.</para></listitem></orderedlist>
+</para><para>Next: <ref refid="cfsmdreq" kindref="compound">CFS Memory Dwell Requirements</ref> <linebreak/>
+ Prev: <ref refid="cfsmdovr" kindref="compound">CFS Memory Dwell Overview</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

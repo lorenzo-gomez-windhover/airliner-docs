@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="mpu9250__platform__cfg_8h" kind="file" language="C++">
+    <compoundname>mpu9250_platform_cfg.h</compoundname>
+    <includes local="yes">math.h</includes>
+    <includedby refid="mpu9250__app_8h" local="yes">apps/mpu9250/fsw/src/mpu9250_app.h</includedby>
+    <includedby refid="mpu9250__tbldefs_8h" local="yes">apps/mpu9250/fsw/src/mpu9250_tbldefs.h</includedby>
+    <incdepgraph>
+      <node id="231">
+        <label>apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h</label>
+        <link refid="mpu9250_platform_cfg.h"/>
+        <childnode refid="232" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>math.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="234">
+        <label>apps/mpu9250/fsw/src/mpu9250_app.h</label>
+        <link refid="mpu9250__app_8h"/>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>apps/mpu9250/fsw/src/mpu9250_app.cpp</label>
+        <link refid="mpu9250__app_8cpp"/>
+      </node>
+      <node id="236">
+        <label>apps/mpu9250/fsw/src/mpu9250_config_utils.cpp</label>
+        <link refid="mpu9250__config__utils_8cpp"/>
+      </node>
+      <node id="237">
+        <label>apps/mpu9250/fsw/src/mpu9250_tbldefs.h</label>
+        <link refid="mpu9250__tbldefs_8h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h</label>
+        <link refid="mpu9250_platform_cfg.h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a73ca82292c7081bdc5de313ba76cf8cb" prot="public" static="no">
+        <name>MPU9250_MISSION_REV</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Mission specific version number for <ref refid="class_m_p_u9250" kindref="compound">MPU9250</ref> application. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>An application version number consists of four parts: major version number, minor version number, revision number and mission specific revision number. The mission specific revision number is defined here and the other parts are defined in &quot;amc_version.h&quot;.</para></simplesect>
+<simplesect kind="par"><title>Limits:</title><para>Must be defined as a numeric value that is greater than or equal to zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="27" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a5fb272033ed169d0a4a271f991695bfe" compoundref="mpu9250__app_8cpp" startline="285" endline="405">MPU9250::InitApp</referencedby>
+        <referencedby refid="class_m_p_u9250_1a8c2772d0e3b5a1145992b4ead98dd4f9" compoundref="mpu9250__app_8cpp" startline="550" endline="608">MPU9250::ProcessAppCmds</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1abdacdbd93838b3cf02901118b8ce2929" prot="public" static="no">
+        <name>MPU9250_SCH_PIPE_DEPTH</name>
+        <initializer>(2)</initializer>
+        <briefdescription>
+<para>Pipe depth for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="34" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1abf4c4f583be3fdb7ba64ac3550a923e6" compoundref="mpu9250__app_8cpp" startline="145" endline="233">MPU9250::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a44f7ac8e9f541026ee97d943205802f6" prot="public" static="no">
+        <name>MPU9250_SCH_PIPE_NAME</name>
+        <initializer>(&quot;MPU9250_SCH_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="41" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1abf4c4f583be3fdb7ba64ac3550a923e6" compoundref="mpu9250__app_8cpp" startline="145" endline="233">MPU9250::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a256c52a38b841987ea6643f1d4e64d8c" prot="public" static="no">
+        <name>MPU9250_SCH_PIPE_PEND_TIME</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>The SB pend behavior type for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>One of: CFE_SB_POLL, CFE_SB_PEND_FOREVER, or the number of milliseconds to wait for a new message (recommended). Note, using CFE_SB_PEND_FOREVER may cause an unresponsive application if no messages arrive on this pipe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="51" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a8ba16b9250142dd91846ec90e323ac2a" compoundref="mpu9250__app_8cpp" startline="714" endline="763">MPU9250::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1aff096784ec269b34d5bed55a65aeb685" prot="public" static="no">
+        <name>MPU9250_PARAM_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the params pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="58" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1aa40c8a4b00a552dfd8cbc79e250e3343" prot="public" static="no">
+        <name>MPU9250_PARAM_PIPE_NAME</name>
+        <initializer>(&quot;MPU9250_PARAM_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the params pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="65" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a83da3cf79f91dbe2e78960970d59ded7" prot="public" static="no">
+        <name>MPU9250_MEASURE_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of WAKEUP messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max limited to CFE_SB_MAX_PIPE_DEPTH-1. Note the MPU9250_MEASURE_MID_MAX_MSG_COUNT and MPU9250_SEND_HK_MID_MAX_MSG_COUNT must be less than MPU9250_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="74" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1abf4c4f583be3fdb7ba64ac3550a923e6" compoundref="mpu9250__app_8cpp" startline="145" endline="233">MPU9250::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a61045e04f969f13a97a6ba62942aba9c" prot="public" static="no">
+        <name>MPU9250_SEND_HK_MID_MAX_MSG_COUNT</name>
+        <initializer>(1)</initializer>
+        <briefdescription>
+<para>The number of SEND_HK messages to reserve on the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. Note the MPU9250_MEASURE_MID_MAX_MSG_COUNT and MPU9250_SEND_HK_MID_MAX_MSG_COUNT must be less than MPU9250_SCH_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="83" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1abf4c4f583be3fdb7ba64ac3550a923e6" compoundref="mpu9250__app_8cpp" startline="145" endline="233">MPU9250::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a95ac877741f819227c66d5807d1cfabb" prot="public" static="no">
+        <name>MPU9250_CMD_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the command pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="90" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1abf4c4f583be3fdb7ba64ac3550a923e6" compoundref="mpu9250__app_8cpp" startline="145" endline="233">MPU9250::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a9a33f25a37d66ada64edb3b0cbade9d8" prot="public" static="no">
+        <name>MPU9250_CMD_PIPE_NAME</name>
+        <initializer>(&quot;MPU9250_CMD_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="97" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1abf4c4f583be3fdb7ba64ac3550a923e6" compoundref="mpu9250__app_8cpp" startline="145" endline="233">MPU9250::InitPipe</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1aad3bd200ebe261be714226bb31fc2296" prot="public" static="no">
+        <name>MPU9250_DATA_PIPE_DEPTH</name>
+        <initializer>(4)</initializer>
+        <briefdescription>
+<para>Pipe depth for the data pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>minimum of 1, max of CFE_SB_MAX_PIPE_DEPTH. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="104" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a9aa7cd7106366953408c448cfbe045f6" prot="public" static="no">
+        <name>MPU9250_DATA_PIPE_NAME</name>
+        <initializer>(&quot;MPU9250_DATA_PIPE&quot;)</initializer>
+        <briefdescription>
+<para>Pipe name for the Scheduler pipe. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>Note, this name must fit in OS_MAX_API_NAME. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="111" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a71cd638e057e89952cf47656fe8582bd" prot="public" static="no">
+        <name>MPU9250_CONFIG_TABLE_FILENAME</name>
+        <initializer>(&quot;/cf/apps/mpu9250_config.tbl&quot;)</initializer>
+        <briefdescription>
+<para>The config table default filename. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>The length of each string, including the NULL terminator cannot exceed the #OS_MAX_PATH_LEN value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="119" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="119" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1affcd0c531c53c16b429dbe1457832415" compoundref="mpu9250__config__utils_8cpp" startline="51" endline="89">MPU9250::InitConfigTbl</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a21cba826d5d8456e4cc896ce1f5abe5c" prot="public" static="no">
+        <name>MPU9250_STARTUP_TIMEOUT_MSEC</name>
+        <initializer>(1000)</initializer>
+        <briefdescription>
+<para>The timeout value, in milliseconds, to wait for ES application startup sync. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>This parameter must be at least 1000 (ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="126" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="126" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a8ba16b9250142dd91846ec90e323ac2a" compoundref="mpu9250__app_8cpp" startline="714" endline="763">MPU9250::AppMain</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a7a4fdfc1ce5507e52da132533d0b25c2" prot="public" static="no">
+        <name>MPU9250_ACCEL_PX4_DEVICE_ID</name>
+        <initializer>(6789478)</initializer>
+        <briefdescription>
+<para>Fake accel device ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="130" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="130" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a429a91965b28d31e71f6f52d66f05bab" compoundref="mpu9250__app_8cpp" startline="770" endline="952">MPU9250::ReadDevice</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a20c9ac0df9ba31f7dac61a37b2c4f2b6" prot="public" static="no">
+        <name>MPU9250_GYRO_PX4_DEVICE_ID</name>
+        <initializer>(3467548)</initializer>
+        <briefdescription>
+<para>Fake gyro device ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="132" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="132" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a429a91965b28d31e71f6f52d66f05bab" compoundref="mpu9250__app_8cpp" startline="770" endline="952">MPU9250::ReadDevice</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1ac5901e44af15207c39ccc8a7da5b3fe4" prot="public" static="no">
+        <name>MPU9250_ACCEL_INT_PUB_RATE</name>
+        <initializer>(1000000 / 400)</initializer>
+        <briefdescription>
+<para>Integration publish rate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="134" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1adf3f39c5447971e654d1abf423a4ae74" prot="public" static="no">
+        <name>MPU9250_GYRO_INT_PUB_RATE</name>
+        <initializer>(1000000 / 400)</initializer>
+        <briefdescription>
+<para>Integration publish rate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="136" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1af586c8604b52e7f5022ae00518ead623" prot="public" static="no">
+        <name>MPU9250_ACC_SCALE</name>
+        <initializer>(16)</initializer>
+        <briefdescription>
+<para>Accel scale. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="138" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="138" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a48e855e4c27c0d364de8915051be8e0e" compoundref="mpu9250__app_8cpp" startline="241" endline="277">MPU9250::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1aa2a88635535db90810856d57396a81d1" prot="public" static="no">
+        <name>MPU9250_GYRO_SCALE</name>
+        <initializer>(2000)</initializer>
+        <briefdescription>
+<para>Gyro scale. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="140" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="140" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a48e855e4c27c0d364de8915051be8e0e" compoundref="mpu9250__app_8cpp" startline="241" endline="277">MPU9250::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a092098780bd0aed8ed79b4075db85d46" prot="public" static="no">
+        <name>MPU9250_AK8963_ID</name>
+        <initializer>(0x48)</initializer>
+        <briefdescription>
+<para>Magnetometer device ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="142" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1afcc0b660a72d58121e2fc0e167f37a37" prot="public" static="no">
+        <name>MPU9250_DEVICE_ID</name>
+        <initializer>(0x71)</initializer>
+        <briefdescription>
+<para>IMU device ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="144" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1afc782f4600d5ab5a0f0d08232723f9f8" compoundref="mpu9250__app_8cpp" startline="959" endline="995">MPU9250::ValidateDevice</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a2db5f64e375bbaf59c3105fb83359e17" prot="public" static="no">
+        <name>MPU9250_ACCEL_SAMPLE_RATE</name>
+        <initializer>(200)</initializer>
+        <briefdescription>
+<para>IMU accelerometer sample rate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="146" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1aa92a12903b1dc7eb309696be4cacbad8" prot="public" static="no">
+        <name>MPU9250_ACCEL_FILTER_CUTOFF_FREQ</name>
+        <initializer>(30)</initializer>
+        <briefdescription>
+<para>IMU accelerometer filter cutoff frequency. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="148" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a87554cba0446198dd4b4ac1450aae42f" prot="public" static="no">
+        <name>MPU9250_GYRO_SAMPLE_RATE</name>
+        <initializer>(200)</initializer>
+        <briefdescription>
+<para>IMU gyroscope sample rate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="150" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1ac4457951152529e3ced870713169aa43" prot="public" static="no">
+        <name>MPU9250_GYRO_FILTER_CUTOFF_FREQ</name>
+        <initializer>(30)</initializer>
+        <briefdescription>
+<para>IMU gyroscope filter cutoff frequency. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="152" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a6b2263ab2b55aa60b807e5c605779a67" prot="public" static="no">
+        <name>MPU9250_NEVER_AUTOPUBLISH_US</name>
+        <initializer>(0)</initializer>
+        <briefdescription>
+<para>Set to never publish (0) in PX4 mpu9250 wrapper. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="154" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a6a1cefbfee367dbacb6f7c5aefc77d1b" prot="public" static="no">
+        <name>MPU9250_ONE_G</name>
+        <initializer>(9.80665f)</initializer>
+        <briefdescription>
+<para>One gravity. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="156" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="156" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a48e855e4c27c0d364de8915051be8e0e" compoundref="mpu9250__app_8cpp" startline="241" endline="277">MPU9250::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a78392cafc6f8a596cb193e627738a315" prot="public" static="no">
+        <name>MPU9250_RADIANS_PER_DEGREE</name>
+        <initializer>(0.0174532f)</initializer>
+        <briefdescription>
+<para>Radians per degree. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="158" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="158" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a48e855e4c27c0d364de8915051be8e0e" compoundref="mpu9250__app_8cpp" startline="241" endline="277">MPU9250::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1ae23e1da348359d6d72c7339726a27a32" prot="public" static="no">
+        <name>MPU9250_ROOM_TEMP_OFFSET</name>
+        <initializer>(0.0f)</initializer>
+        <briefdescription>
+<para>Room temperature offset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="160" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a48e855e4c27c0d364de8915051be8e0e" compoundref="mpu9250__app_8cpp" startline="241" endline="277">MPU9250::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="mpu9250__platform__cfg_8h_1a5f6190fc60baae0cf01802ba67267cfc" prot="public" static="no">
+        <name>MPU9250_TEMP_SENS</name>
+        <initializer>(361.0f)</initializer>
+        <briefdescription>
+<para>Temperature sensitivity. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" line="162" column="9" bodyfile="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="class_m_p_u9250_1a48e855e4c27c0d364de8915051be8e0e" compoundref="mpu9250__app_8cpp" startline="241" endline="277">MPU9250::InitData</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MPU9250_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MPU9250_PLATFORM_CFG_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;math.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/>MPU9250<sp/>Platform<sp/>Configuration<sp/>Parameter<sp/>Definitions</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="mpu9250__platform__cfg_8h_1a73ca82292c7081bdc5de313ba76cf8cb" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_MISSION_REV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="mpu9250__platform__cfg_8h_1abdacdbd93838b3cf02901118b8ce2929" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_SCH_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="mpu9250__platform__cfg_8h_1a44f7ac8e9f541026ee97d943205802f6" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_SCH_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;MPU9250_SCH_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="mpu9250__platform__cfg_8h_1a256c52a38b841987ea6643f1d4e64d8c" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_SCH_PIPE_PEND_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="mpu9250__platform__cfg_8h_1aff096784ec269b34d5bed55a65aeb685" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_PARAM_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="mpu9250__platform__cfg_8h_1aa40c8a4b00a552dfd8cbc79e250e3343" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_PARAM_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;MPU9250_PARAM_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="mpu9250__platform__cfg_8h_1a83da3cf79f91dbe2e78960970d59ded7" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_MEASURE_MID_MAX_MSG_COUNT<sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="mpu9250__platform__cfg_8h_1a61045e04f969f13a97a6ba62942aba9c" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_SEND_HK_MID_MAX_MSG_COUNT<sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="mpu9250__platform__cfg_8h_1a95ac877741f819227c66d5807d1cfabb" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_CMD_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="mpu9250__platform__cfg_8h_1a9a33f25a37d66ada64edb3b0cbade9d8" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_CMD_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;MPU9250_CMD_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="mpu9250__platform__cfg_8h_1aad3bd200ebe261be714226bb31fc2296" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_DATA_PIPE_DEPTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(4)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="mpu9250__platform__cfg_8h_1a9aa7cd7106366953408c448cfbe045f6" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_DATA_PIPE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;MPU9250_DATA_PIPE&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="mpu9250__platform__cfg_8h_1a71cd638e057e89952cf47656fe8582bd" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_CONFIG_TABLE_FILENAME<sp/><sp/><sp/><sp/><sp/><sp/>(&quot;/cf/apps/mpu9250_config.tbl&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="mpu9250__platform__cfg_8h_1a21cba826d5d8456e4cc896ce1f5abe5c" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_STARTUP_TIMEOUT_MSEC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="mpu9250__platform__cfg_8h_1a7a4fdfc1ce5507e52da132533d0b25c2" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_ACCEL_PX4_DEVICE_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(6789478)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="mpu9250__platform__cfg_8h_1a20c9ac0df9ba31f7dac61a37b2c4f2b6" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_GYRO_PX4_DEVICE_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(3467548)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="mpu9250__platform__cfg_8h_1ac5901e44af15207c39ccc8a7da5b3fe4" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_ACCEL_INT_PUB_RATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1000000<sp/>/<sp/>400)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="mpu9250__platform__cfg_8h_1adf3f39c5447971e654d1abf423a4ae74" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_GYRO_INT_PUB_RATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1000000<sp/>/<sp/>400)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="mpu9250__platform__cfg_8h_1af586c8604b52e7f5022ae00518ead623" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_ACC_SCALE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="mpu9250__platform__cfg_8h_1aa2a88635535db90810856d57396a81d1" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_GYRO_SCALE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="mpu9250__platform__cfg_8h_1a092098780bd0aed8ed79b4075db85d46" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_AK8963_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x48)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="mpu9250__platform__cfg_8h_1afcc0b660a72d58121e2fc0e167f37a37" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_DEVICE_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x71)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="mpu9250__platform__cfg_8h_1a2db5f64e375bbaf59c3105fb83359e17" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_ACCEL_SAMPLE_RATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="mpu9250__platform__cfg_8h_1aa92a12903b1dc7eb309696be4cacbad8" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_ACCEL_FILTER_CUTOFF_FREQ<sp/><sp/><sp/><sp/>(30)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="mpu9250__platform__cfg_8h_1a87554cba0446198dd4b4ac1450aae42f" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_GYRO_SAMPLE_RATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="mpu9250__platform__cfg_8h_1ac4457951152529e3ced870713169aa43" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_GYRO_FILTER_CUTOFF_FREQ<sp/><sp/><sp/><sp/><sp/>(30)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="mpu9250__platform__cfg_8h_1a6b2263ab2b55aa60b807e5c605779a67" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_NEVER_AUTOPUBLISH_US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="mpu9250__platform__cfg_8h_1a6a1cefbfee367dbacb6f7c5aefc77d1b" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_ONE_G<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(9.80665f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="mpu9250__platform__cfg_8h_1a78392cafc6f8a596cb193e627738a315" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_RADIANS_PER_DEGREE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0.0174532f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="mpu9250__platform__cfg_8h_1ae23e1da348359d6d72c7339726a27a32" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_ROOM_TEMP_OFFSET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0.0f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="mpu9250__platform__cfg_8h_1a5f6190fc60baae0cf01802ba67267cfc" refkind="member"><highlight class="preprocessor">#define<sp/>MPU9250_TEMP_SENS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(361.0f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MPU9250_PLATFORM_CFG_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="apps/mpu9250/fsw/platform_inc/mpu9250_platform_cfg.h"/>
+  </compounddef>
+</doxygen>

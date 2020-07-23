@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfe__psp__voltab_8c" kind="file" language="C++">
+    <compoundname>cfe_psp_voltab.c</compoundname>
+    <includes refid="common__types_8h" local="yes">common_types.h</includes>
+    <includes refid="osapi_8h" local="yes">osapi.h</includes>
+    <includes local="yes">osconfig.h</includes>
+    <incdepgraph>
+      <node id="9585">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="9579">
+        <label>stdarg.h</label>
+      </node>
+      <node id="9574">
+        <label>common_types.h</label>
+        <link refid="common__types_8h"/>
+      </node>
+      <node id="9583">
+        <label>stdlib.h</label>
+      </node>
+      <node id="9580">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h"/>
+      </node>
+      <node id="9581">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h"/>
+        <childnode refid="9582" relation="include">
+        </childnode>
+        <childnode refid="9583" relation="include">
+        </childnode>
+        <childnode refid="9584" relation="include">
+        </childnode>
+        <childnode refid="9585" relation="include">
+        </childnode>
+      </node>
+      <node id="9576">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h"/>
+      </node>
+      <node id="9575">
+        <label>osapi.h</label>
+        <link refid="osapi_8h"/>
+        <childnode refid="9574" relation="include">
+        </childnode>
+        <childnode refid="9576" relation="include">
+        </childnode>
+        <childnode refid="9577" relation="include">
+        </childnode>
+        <childnode refid="9578" relation="include">
+        </childnode>
+        <childnode refid="9581" relation="include">
+        </childnode>
+        <childnode refid="9586" relation="include">
+        </childnode>
+        <childnode refid="9587" relation="include">
+        </childnode>
+        <childnode refid="9588" relation="include">
+        </childnode>
+        <childnode refid="9580" relation="include">
+        </childnode>
+      </node>
+      <node id="9588">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h"/>
+      </node>
+      <node id="9573">
+        <label>/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_voltab.c</label>
+        <link refid="cfe_psp_voltab.c"/>
+        <childnode refid="9574" relation="include">
+        </childnode>
+        <childnode refid="9575" relation="include">
+        </childnode>
+        <childnode refid="9577" relation="include">
+        </childnode>
+      </node>
+      <node id="9577">
+        <label>osconfig.h</label>
+      </node>
+      <node id="9586">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h"/>
+      </node>
+      <node id="9587">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h"/>
+      </node>
+      <node id="9582">
+        <label>stdio.h</label>
+      </node>
+      <node id="9578">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h"/>
+        <childnode refid="9579" relation="include">
+        </childnode>
+        <childnode refid="9580" relation="include">
+        </childnode>
+      </node>
+      <node id="9584">
+        <label>dirent.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="cfe__psp__voltab_8c_1a1ab008564faa7b827678eb4ceed56db0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_o_s___volume_info__t" kindref="compound">OS_VolumeInfo_t</ref></type>
+        <definition>OS_VolumeInfo_t OS_VolumeTable[NUM_TABLE_ENTRIES]</definition>
+        <argsstring>[NUM_TABLE_ENTRIES]</argsstring>
+        <name>OS_VolumeTable</name>
+        <initializer>= 
+{
+
+{&quot;/ramdev0&quot;, &quot;./ram&quot;,       FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;/ramdev1&quot;, &quot;./ram1&quot;,      FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;/ramdev2&quot;, &quot;./ram2&quot;,      FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;/ramdev3&quot;, &quot;./ram3&quot;,      FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;/ramdev4&quot;, &quot;./ram4&quot;,      FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+
+
+{&quot;/eedev0&quot;,  &quot;./cf&quot;,      FS_BASED,        <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,    <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     &quot;CF&quot;,      &quot;/cf&quot;,     512   },
+
+{&quot;unused&quot;,   &quot;unused&quot;,    FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;unused&quot;,   &quot;unused&quot;,    FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;unused&quot;,   &quot;unused&quot;,    FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;unused&quot;,   &quot;unused&quot;,    FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;unused&quot;,   &quot;unused&quot;,    FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;unused&quot;,   &quot;unused&quot;,    FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;unused&quot;,   &quot;unused&quot;,    FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        },
+{&quot;unused&quot;,   &quot;unused&quot;,    FS_BASED,        <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,      <ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,     <ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,     &quot; &quot;,      &quot; &quot;,     0        }
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_voltab.c" line="30" column="1" bodyfile="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_voltab.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>File<sp/><sp/><sp/>:<sp/>cfe_psp_voltab.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>Author<sp/>:<sp/>Nicholas<sp/>Yanchik<sp/>/<sp/>GSFC<sp/>Code<sp/>582</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2004-2006,<sp/>United<sp/>States<sp/>government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>Space<sp/>Administration.<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>rights<sp/>reserved.<sp/>This<sp/>software(cFE)<sp/>was<sp/>created<sp/>at<sp/>NASA<sp/>Goddard<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>Space<sp/>Flight<sp/>Center<sp/>pursuant<sp/>to<sp/>government<sp/>contracts.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>software<sp/>may<sp/>be<sp/>used<sp/>only<sp/>pursuant<sp/>to<sp/>a<sp/>United<sp/>States<sp/>government<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>sponsored<sp/>project<sp/>and<sp/>the<sp/>United<sp/>States<sp/>government<sp/>may<sp/>not<sp/>be<sp/>charged</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>use<sp/>thereof.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**<sp/>cFE<sp/>PSP<sp/>Volume<sp/>table<sp/>for<sp/>file<sp/>systems</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/****************************************************************************************</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INCLUDE<sp/>FILES</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">****************************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="common__types_8h" kindref="compound">common_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="osapi_8h" kindref="compound">osapi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;osconfig.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment">**<sp/>OSAL<sp/>volume<sp/>table.<sp/>This<sp/>is<sp/>the<sp/>only<sp/>file<sp/>in<sp/>the<sp/>PSP<sp/>that<sp/>still<sp/>has<sp/>the<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">**<sp/>OS_<sp/>naming<sp/>convention,<sp/>since<sp/>it<sp/>belongs<sp/>to<sp/>the<sp/>OSAL.<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="osfilesys_8c_1a1ab008564faa7b827678eb4ceed56db0" refkind="member"><highlight class="normal"><ref refid="struct_o_s___volume_info__t" kindref="compound">OS_VolumeInfo_t</ref><sp/><ref refid="cfe__psp__voltab_8c_1a1ab008564faa7b827678eb4ceed56db0" kindref="member">OS_VolumeTable</ref><sp/>[<ref refid="osapi-os-filesys_8h_1ac7c07a2314a65fc8bc325a524cb30d1a" kindref="member">NUM_TABLE_ENTRIES</ref>]<sp/>=<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Dev<sp/>Name<sp/><sp/>Phys<sp/>Dev<sp/><sp/>Vol<sp/>Type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Volatile?<sp/><sp/>Free?<sp/><sp/><sp/><sp/><sp/>IsMounted?<sp/>Volname<sp/><sp/>MountPt<sp/>BlockSz<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;/ramdev0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;./ram&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;/ramdev1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;./ram1&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;/ramdev2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;./ram2&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;/ramdev3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;./ram3&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;/ramdev4&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;./ram4&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">**<sp/>The<sp/>following<sp/>entry<sp/>is<sp/>a<sp/>&quot;pre-mounted&quot;<sp/>path<sp/>to<sp/>a<sp/>non-volatile<sp/>device</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;/eedev0&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="stringliteral">&quot;./cf&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;CF&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/cf&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>512<sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;unused&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><ref refid="osapi-os-filesys_8h_1a84afcc5c9c19954890dba969ff6893d8" kindref="member">FS_BASED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>,<sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/vagrant/airliner/core/psp/fsw/pc-linux-wh/src/cfe_psp_voltab.c"/>
+  </compounddef>
+</doxygen>

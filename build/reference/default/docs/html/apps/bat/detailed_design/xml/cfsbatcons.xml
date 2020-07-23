@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfsbatcons" kind="page">
+    <compoundname>cfsbatcons</compoundname>
+    <title>BAT Application Operational Constraints</title>
+    <detaileddescription>
+<para><heading level="1">(Instructions to the author) </heading>
+</para><para>(Insert text that describes: 1) situations that would prevent the application from starting 2) causes for the application to terminate prematurely 3) commands that cannot be issued either out of order or without sufficient wait time, etc)</para><para><heading level="1">Application Termination </heading>
+</para><para>Potential causes for <ref refid="class_b_a_t" kindref="compound">BAT</ref> to terminate prematurely are an error return from the software bus in the application main loop or error return from one of the cFE table services functions when <ref refid="class_b_a_t" kindref="compound">BAT</ref> tries to do table management (check for updates, dump requests etc.) during each housekeeping cycle.</para><para><heading level="1">Critical Data Store Operation </heading>
+</para><para>When using the Critical Data Store (CDS), the results tables and housekeeping data will only be restored if the application was shut down through cFE Executive Services and exited clean. If this is not the case, default values will be used (see <ref refid="cfsbatfaqs" kindref="compound">BAT Application Frequently Asked Questions</ref>).</para><para>Next: <ref refid="cfsbatfaqs" kindref="compound">BAT Application Frequently Asked Questions</ref> <linebreak/>
+ Prev: <ref refid="cfsbattbl" kindref="compound">BAT Application Table Definitions</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="cfedeploy_5_2" kind="page">
+    <compoundname>cfedeploy_5_2</compoundname>
+    <title>Populating the Local Directory</title>
+    <detaileddescription>
+<para><center> <heading level="4">rdl Directory </heading>
+</center></para><para><center> </center></para><para><orderedlist>
+<listitem>
+<para>Extract all the files from MKS into the DESTINATION <computeroutput>&apos;rdl/template&apos;</computeroutput> directory. </para></listitem>
+<listitem>
+<para>Extract the <computeroutput>&apos;.rdl&apos;</computeroutput> files listed below from MKS <computeroutput>&apos;rdl&apos;</computeroutput> into DESTINATION <computeroutput>&apos;rdl&apos;</computeroutput> directory. <itemizedlist>
+<listitem>
+<para><computeroutput>ccsds_header.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>cfe_user_tlm.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>cfe_shell_tlm.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>ccsds_header_no_append.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>pseudo_tlm_file_info_3839.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>cfe_cmd_types.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>cfe_file_header.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>user_cmd.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>cfe_tbl_header.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>user_defs.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>cfe_types.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>user_tlm.rdl</computeroutput> </para></listitem>
+<listitem>
+<para><computeroutput>cfe_user_cmd.rdl</computeroutput> </para></listitem>
+</itemizedlist>
+</para></listitem>
+<listitem>
+<para>Edit the <computeroutput>user_cmd.rdl</computeroutput> and <computeroutput>user_tlm.rdl</computeroutput> files that exist in the rdl directory. Make sure that they include the <computeroutput>cfe_user_cmd.rdl</computeroutput> and <computeroutput>cfe_user_tlm.rdl</computeroutput> files. These files specify what command and telemetry rdls to include in the ASIST databases. </para></listitem>
+<listitem>
+<para>Create a link to the following files located in the appropriate flight software directory(ies). The directories listed below are the locations in the cFE MKS repository. The actual locations may vary depending upon the mission or OS. <verbatim>        -&gt; ln -s .../fsw/Build/inc/app_mission_cfg.h .
+        -&gt; ln -s .../fsw/Build/inc/cfe_mission_cfg.h .
+        -&gt; ln -s .../fsw/Build/cpu3/cfe/config/inc/cfe_platform_cfg.h .
+        -&gt; ln -s .../fsw/Build/cpu3/cfe/config/inc/osconfig.h .</verbatim> </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">prc Directory </heading>
+</center></para><para><center> </center></para><para><orderedlist>
+<listitem>
+<para>Extract the <computeroutput>&apos;template*.prc&apos;</computeroutput> files from MKS into the DESTINATION <computeroutput>&apos;prc/template&apos;</computeroutput> directory. </para></listitem>
+<listitem>
+<para>Extract the <computeroutput>&apos;local/prc&apos;</computeroutput> files from MKS into the DESTINATION <computeroutput>&apos;prc&apos;</computeroutput> directory. </para></listitem>
+<listitem>
+<para>Create a link to the following files located in the appropriate flight software directory(ies). The directories listed below are the locations in the cFE MKS repository. The actual locations may vary depending upon the mission or OS. <verbatim>        ln -s .../fsw/Build/inc/cfe_mission_cfg.h .
+        ln -s .../fsw/Build/cpu3/cfe/config/inc/cfe_platform_cfg.h .
+        ln -s .../fsw/Build/cpu3/cfe/config/inc /osconfig.h .</verbatim> </para></listitem>
+<listitem>
+<para>Change the file permissions on all procs so that they are writable. (<computeroutput>chmod 666 *.prc</computeroutput>) </para></listitem>
+<listitem>
+<para>Create links to the appropriate flight software <computeroutput>*events.h</computeroutput> files that are included in the most test procedure files. <verbatim>        ln -s .../fsw/cfe-core/src/inc/*events.h .
+        ln -s .../fsw/cfe-apps/to/to_events.h .
+        ln -s .../fsw/cfe-apps/tst_es/tst_es_events.h .
+        ln -s .../fsw/cfe-apps/tst_evs/tst_evs_events.h .
+        ln -s .../fsw/cfe-apps/tst_sb/tst_sb_events.h .
+        ln -s .../fsw/cfe-apps/tst_tbl/tst_tbl_events.h .
+        ln -s .../fsw/cfe-apps/tst_tbl2/tst_tbl2_events.h .
+        ln -s .../fsw/cfe-apps/tst_time/tst_time_events.h .</verbatim> </para></listitem>
+</orderedlist>
+</para><para><center> <heading level="4">Other Local Directories </heading>
+</center></para><para><center> </center></para><para><orderedlist>
+<listitem>
+<para>Extract the local <computeroutput>&apos;data&apos;</computeroutput>, <computeroutput>&apos;image&apos;</computeroutput>, and <computeroutput>&apos;tools&apos;</computeroutput> files (if any) from MKS into the DESTINATION <computeroutput>&apos;data&apos;</computeroutput>, <computeroutput>&apos;image&apos;</computeroutput>, and <computeroutput>&apos;tools&apos;</computeroutput> directories. </para></listitem>
+<listitem>
+<para>Change the file permissions to the appropriate level for any files extracted above. </para></listitem>
+<listitem>
+<para>Enter the following commands to create other required directories: <verbatim>        mkdir test_logs
+        mkdir apps
+        cd apps
+        mkdir cpu1
+        mkdir cpu2
+        mkdir cpu3</verbatim></para><para></para></listitem>
+<listitem>
+<para>Copy the test application object files from <computeroutput>cfelnx</computeroutput> to the <computeroutput>apps/cpux</computeroutput> directories. <bold>NOTE:</bold> This step requires a developer account on <computeroutput>cfelnx</computeroutput> with the privileges to create the test application object files required to execute test applications. </para></listitem>
+</orderedlist>
+</para><para>Next: <ref refid="cfedeploy_5_3" kindref="compound">Creating the Command and Telemetry Databases</ref> <linebreak/>
+ Prev: <ref refid="cfedeploy_5_1" kindref="compound">Populating the Global Directory</ref> <linebreak/>
+ Up To: <ref refid="cfedeploy_5" kindref="compound">Building the Ground Database and Pages</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

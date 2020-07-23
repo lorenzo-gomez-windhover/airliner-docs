@@ -1,0 +1,626 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="hmc5883__app_8h" kind="file" language="C++">
+    <compoundname>hmc5883_app.h</compoundname>
+    <includes local="yes">cfe.h</includes>
+    <includes refid="hmc5883__platform__cfg_8h" local="yes">hmc5883_platform_cfg.h</includes>
+    <includes local="yes">hmc5883_mission_cfg.h</includes>
+    <includes refid="hmc5883__perfids_8h" local="yes">hmc5883_perfids.h</includes>
+    <includes refid="hmc5883__msgids_8h" local="yes">hmc5883_msgids.h</includes>
+    <includes refid="hmc5883__msg_8h" local="yes">hmc5883_msg.h</includes>
+    <includes refid="hmc5883__events_8h" local="yes">hmc5883_events.h</includes>
+    <includes refid="hmc5883__tbldefs_8h" local="yes">hmc5883_tbldefs.h</includes>
+    <includes local="yes">px4_msgs.h</includes>
+    <includedby refid="hmc5883__app_8cpp" local="yes">apps/hmc5883/fsw/src/hmc5883_app.cpp</includedby>
+    <includedby refid="hmc5883__config__utils_8cpp" local="yes">apps/hmc5883/fsw/src/hmc5883_config_utils.cpp</includedby>
+    <incdepgraph>
+      <node id="318">
+        <label>hmc5883_mission_cfg.h</label>
+      </node>
+      <node id="307">
+        <label>cfe_error.h</label>
+        <link refid="cfe__error_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="298" relation="include">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>hmc5883_events.h</label>
+        <link refid="hmc5883__events_8h"/>
+      </node>
+      <node id="314">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+      </node>
+      <node id="299">
+        <label>osapi-version.h</label>
+        <link refid="osapi-version_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="316">
+        <label>cfe_tbl.h</label>
+        <link refid="cfe__tbl_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>hmc5883_msg.h</label>
+        <link refid="hmc5883__msg_8h"/>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="322" relation="include">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>px4_msgs.h</label>
+      </node>
+      <node id="311">
+        <label>cfe_time.h</label>
+        <link refid="cfe__time_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+      <node id="300">
+        <label>osapi-os-core.h</label>
+        <link refid="osapi-os-core_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="301" relation="include">
+        </childnode>
+      </node>
+      <node id="306">
+        <label>cfe_mission_cfg.h</label>
+        <link refid="cfe__mission__cfg_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="320">
+        <label>hmc5883_msgids.h</label>
+        <link refid="hmc5883__msgids_8h"/>
+      </node>
+      <node id="302">
+        <label>osapi-os-filesys.h</label>
+        <link refid="osapi-os-filesys_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="309">
+        <label>cfe_es_perfids.h</label>
+        <link refid="cfe__es__perfids_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="303">
+        <label>osapi-os-net.h</label>
+        <link refid="osapi-os-net_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="298">
+        <label>osapi.h</label>
+        <link refid="osapi_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+      </node>
+      <node id="305">
+        <label>osapi-os-timer.h</label>
+        <link refid="osapi-os-timer_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="304">
+        <label>osapi-os-loader.h</label>
+        <link refid="osapi-os-loader_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="324">
+        <label>hmc5883_tbldefs.h</label>
+        <link refid="hmc5883__tbldefs_8h"/>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+      </node>
+      <node id="317">
+        <label>hmc5883_platform_cfg.h</label>
+        <link refid="hmc5883__platform__cfg_8h"/>
+      </node>
+      <node id="301">
+        <label>osapi-os-rtm.h</label>
+        <link refid="osapi-os-rtm_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="319">
+        <label>hmc5883_perfids.h</label>
+        <link refid="hmc5883__perfids_8h"/>
+      </node>
+      <node id="312">
+        <label>cfe_evs_msg.h</label>
+        <link refid="cfe__evs__msg_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>cfe.h</label>
+        <link refid="cfe_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+      </node>
+      <node id="313">
+        <label>cfe_sb.h</label>
+        <link refid="cfe__sb_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+      </node>
+      <node id="297">
+        <label>common_types.h</label>
+        <link refid="common__types_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+      </node>
+      <node id="295">
+        <label>apps/hmc5883/fsw/src/hmc5883_app.h</label>
+        <link refid="hmc5883_app.h"/>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+        <childnode refid="320" relation="include">
+        </childnode>
+        <childnode refid="321" relation="include">
+        </childnode>
+        <childnode refid="323" relation="include">
+        </childnode>
+        <childnode refid="324" relation="include">
+        </childnode>
+        <childnode refid="322" relation="include">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>cfe_evs.h</label>
+        <link refid="cfe__evs_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+      </node>
+      <node id="308">
+        <label>cfe_es.h</label>
+        <link refid="cfe__es_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+      </node>
+      <node id="315">
+        <label>cfe_fs.h</label>
+        <link refid="cfe__fs_8h" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag"/>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="327">
+        <label>apps/hmc5883/fsw/src/hmc5883_config_utils.cpp</label>
+        <link refid="hmc5883__config__utils_8cpp"/>
+      </node>
+      <node id="326">
+        <label>apps/hmc5883/fsw/src/hmc5883_app.cpp</label>
+        <link refid="hmc5883__app_8cpp"/>
+      </node>
+      <node id="325">
+        <label>apps/hmc5883/fsw/src/hmc5883_app.h</label>
+        <link refid="hmc5883_app.h"/>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_h_m_c5883___params__t" prot="public">HMC5883_Params_t</innerclass>
+    <innerclass refid="class_h_m_c5883" prot="public">HMC5883</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hmc5883__app_8h_1a48689faf8dcdfce237dce2e9642a1c23" prot="public" static="no">
+        <name>HMC5883_BITS_CONFIG_B_RANGE_1GA3</name>
+        <initializer>(0x01 &lt;&lt; 5)</initializer>
+        <briefdescription>
+<para>Gain setting 1090 (default). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>Gain setting Recommended Sensor Field Range +- 1.3 Ga, Gain (LSb/Gauss) 1090, Digital Resoluation (mG/LSb) 0.92. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="67" column="9" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__app_8h_1a52454fa544e3e593692a6903e4f6f5ba" prot="public" static="no">
+        <name>HMC5883_BITS_CONFIG_B_RANGE_1GA9</name>
+        <initializer>(0x02 &lt;&lt; 5)</initializer>
+        <briefdescription>
+<para>Gain setting 820. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>Gain setting Recommended Sensor Field Range +- 1.9 Ga, Gain (LSb/Gauss) 820, Digital Resoluation (mG/LSb) 1.22. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="75" column="9" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" compoundref="hmc5883__app_8cpp" startline="207" endline="235">HMC5883::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__app_8h_1a5617d5e1226971b99d747300139d0703" prot="public" static="no">
+        <name>HMC5883_BITS_CONFIG_B_RANGE_2GA5</name>
+        <initializer>(0x03 &lt;&lt; 5)</initializer>
+        <briefdescription>
+<para>Gain setting 660. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>Gain setting Recommended Sensor Field Range +- 2.5 Ga, Gain (LSb/Gauss) 660, Digital Resoluation (mG/LSb) 1.52. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="83" column="9" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1a7b39e5e63689448cea56b1ce2e7255aa" compoundref="hmc5883__app_8cpp" startline="780" endline="908">HMC5883::SelfCalibrate</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__app_8h_1a7df4e95d651f57bb55a5164138c50376" prot="public" static="no">
+        <name>HMC5883_BITS_CONFIG_A_DEFAULT</name>
+        <initializer>(0x10)</initializer>
+        <briefdescription>
+<para>Configuration register A default value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>Data output rate default. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="90" column="9" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.h" bodystart="90" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" compoundref="hmc5883__app_8cpp" startline="207" endline="235">HMC5883::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__app_8h_1ad34d87c6de976900bdcd1c8fa4025053" prot="public" static="no">
+        <name>HMC5983_TEMP_SENSOR_ENABLE</name>
+        <initializer>(1 &lt;&lt; 7)</initializer>
+        <briefdescription>
+<para>Enabled temperature compensation (HMC5983). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Limits:</title><para>None. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="97" column="9" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" compoundref="hmc5883__app_8cpp" startline="207" endline="235">HMC5883::InitData</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__app_8h_1a6d25a957c7967296011bc6ad805cf5a6" prot="public" static="no">
+        <name>HMC5883_POS_BIAS_ENABLE</name>
+        <initializer>(0x01)</initializer>
+        <briefdescription>
+<para>Enable positive bias configuration for X, Y, and Z axes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>In this configuration, a positive current is forced across the resistive load for all three axes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="105" column="9" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hmc5883__app_8h_1a80ab6a8488922ded966c4032cd224445" prot="public" static="no">
+        <name>HMC5883_NEG_BIAS_ENABLE</name>
+        <initializer>(0x02)</initializer>
+        <briefdescription>
+<para>Enable negative bias configuration for X, Y, and Z axes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description:</title><para>In this configuration, a negative current is forced across the resistive load for all three axes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="113" column="9" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.h" bodystart="113" bodyend="-1"/>
+        <referencedby refid="class_h_m_c5883_1a7b39e5e63689448cea56b1ce2e7255aa" compoundref="hmc5883__app_8cpp" startline="780" endline="908">HMC5883::SelfCalibrate</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75dda" prot="public" static="no">
+        <name>HMC5883_Status_t</name>
+        <enumvalue id="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75ddaadbea7e38ff26dfcd9c83a9ea2444ffb3" prot="public">
+          <name>HMC5883_UNINITIALIZED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>App status uninitialized </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75ddaa1b8350297896c9fe990b719af08d79d9" prot="public">
+          <name>HMC5883_INITIALIZED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>App status uninitialized </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>application status </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="123" column="1" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.h" bodystart="122" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hmc5883__app_8h_1afb772a0325d80fb2f7a65f5747a15023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HMC5883_CleanupCallback</definition>
+        <argsstring>(void)</argsstring>
+        <name>HMC5883_CleanupCallback</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Cleanup prior to exit. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="par"><title>Description</title><para>This function handles any necessary cleanup prior to application exit.</para></simplesect>
+<simplesect kind="par"><title>Assumptions, External Events, and Notes:</title><para>None </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/hmc5883/fsw/src/hmc5883_app.h" line="539" column="1" bodyfile="apps/hmc5883/fsw/src/hmc5883_app.cpp" bodystart="1015" bodyend="1024"/>
+        <references refid="cfe__evs_8h_1ad98a59324d59e7f8a2f6162887197832">CFE_EVS_ERROR</references>
+        <references refid="cfe__evs_8c_1aab8630735c7be46fb4162323a112d298">CFE_EVS_SendEvent</references>
+        <references refid="class_h_m_c5883_1aae979e34abdb3e35d590af1cf9bf29db" compoundref="hmc5883__app_8h" startline="184">HMC5883::HkTlm</references>
+        <references refid="hmc5883__custom_8h_1a315edffb4bf1f339429c5081d50d1e37">HMC5883_Custom_Uninit</references>
+        <references refid="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75ddaa1b8350297896c9fe990b719af08d79d9" compoundref="hmc5883__app_8h" startline="127">HMC5883_INITIALIZED</references>
+        <references refid="hmc5883__events_8h_1a9f65614e7e6bd44b1b6bc5f65c971b8aac096c45484b5592c404c6b117be9a478" compoundref="hmc5883__events_8h" startline="262">HMC5883_UNINIT_ERR_EID</references>
+        <references refid="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75ddaadbea7e38ff26dfcd9c83a9ea2444ffb3" compoundref="hmc5883__app_8h" startline="125">HMC5883_UNINITIALIZED</references>
+        <references refid="struct_h_m_c5883___hk_tlm__t_1a48f7f136eeca863ec7c5138b48a2439e" compoundref="hmc5883__msg_8h" startline="261">HMC5883_HkTlm_t::State</references>
+        <references refid="common__types_8h_1aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</references>
+        <referencedby refid="class_h_m_c5883_1abe0ffdb0a9b372f95eade53f43f007b9" compoundref="hmc5883__app_8cpp" startline="243" endline="365">HMC5883::InitApp</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*<sp/><sp/><sp/>Copyright<sp/>(c)<sp/>2017<sp/>Windhover<sp/>Labs,<sp/>L.L.C.<sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/>Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*<sp/>modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">*<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">*<sp/>1.<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*<sp/>2.<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">*<sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*<sp/><sp/><sp/><sp/>the<sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">*<sp/><sp/><sp/><sp/>distribution.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">*<sp/>3.<sp/>Neither<sp/>the<sp/>name<sp/>Windhover<sp/>Labs<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*<sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">*<sp/><sp/><sp/><sp/>from<sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*<sp/>THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">*<sp/>&quot;AS<sp/>IS&quot;<sp/>AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">*<sp/>LIMITED<sp/>TO,<sp/>THE<sp/>IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">*<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR<sp/>CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">*<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF<sp/>SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS<sp/>INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">*<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>CONTRACT,<sp/>STRICT</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">*<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)<sp/>ARISING<sp/>IN</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">*<sp/>POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">*****************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HMC5883_APP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HMC5883_APP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>**<sp/>Pragmas</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>**<sp/>Includes</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cfe_8h" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">cfe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hmc5883__platform__cfg_8h" kindref="compound">hmc5883_platform_cfg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;hmc5883_mission_cfg.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hmc5883__perfids_8h" kindref="compound">hmc5883_perfids.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hmc5883__msgids_8h" kindref="compound">hmc5883_msgids.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hmc5883__msg_8h" kindref="compound">hmc5883_msg.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hmc5883__events_8h" kindref="compound">hmc5883_events.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hmc5883__tbldefs_8h" kindref="compound">hmc5883_tbldefs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;px4_msgs.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>**<sp/>Local<sp/>Defines</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*************************************************************************/</highlight></codeline>
+<codeline lineno="67" refid="hmc5883__app_8h_1a48689faf8dcdfce237dce2e9642a1c23" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_BITS_CONFIG_B_RANGE_1GA3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x01<sp/>&lt;&lt;<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="hmc5883__app_8h_1a52454fa544e3e593692a6903e4f6f5ba" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_BITS_CONFIG_B_RANGE_1GA9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x02<sp/>&lt;&lt;<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="hmc5883__app_8h_1a5617d5e1226971b99d747300139d0703" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_BITS_CONFIG_B_RANGE_2GA5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x03<sp/>&lt;&lt;<sp/>5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="hmc5883__app_8h_1a7df4e95d651f57bb55a5164138c50376" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_BITS_CONFIG_A_DEFAULT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x10)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="hmc5883__app_8h_1ad34d87c6de976900bdcd1c8fa4025053" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5983_TEMP_SENSOR_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="hmc5883__app_8h_1a6d25a957c7967296011bc6ad805cf5a6" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_POS_BIAS_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x01)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="hmc5883__app_8h_1a80ab6a8488922ded966c4032cd224445" refkind="member"><highlight class="preprocessor">#define<sp/>HMC5883_NEG_BIAS_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x02)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/>**<sp/>Local<sp/>Structure<sp/>Definitions</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*************************************************************************/</highlight></codeline>
+<codeline lineno="122" refid="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75dda" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125" refid="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75ddaadbea7e38ff26dfcd9c83a9ea2444ffb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75ddaadbea7e38ff26dfcd9c83a9ea2444ffb3" kindref="member">HMC5883_UNINITIALIZED</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="127" refid="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75ddaa1b8350297896c9fe990b719af08d79d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75ddaa1b8350297896c9fe990b719af08d79d9" kindref="member">HMC5883_INITIALIZED</ref><sp/><sp/><sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}<sp/><ref refid="hmc5883__app_8h_1a7891af54edb9a42f53356f40a4f75dda" kindref="member">HMC5883_Status_t</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="struct_h_m_c5883___params__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137" refid="struct_h_m_c5883___params__t_1ac7eb27389823fde031d4b624aa3eac02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_h_m_c5883___params__t_1ac7eb27389823fde031d4b624aa3eac02" kindref="member">x_scale</ref>;</highlight></codeline>
+<codeline lineno="139" refid="struct_h_m_c5883___params__t_1a94e1d2ef5070981eaf817298a7395092" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_h_m_c5883___params__t_1a94e1d2ef5070981eaf817298a7395092" kindref="member">y_scale</ref>;</highlight></codeline>
+<codeline lineno="141" refid="struct_h_m_c5883___params__t_1a1f997f9906a41e80ccd34275bc34d95c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_h_m_c5883___params__t_1a1f997f9906a41e80ccd34275bc34d95c" kindref="member">z_scale</ref>;</highlight></codeline>
+<codeline lineno="143" refid="struct_h_m_c5883___params__t_1a6d90ed07d42f7a12e1521e7ba33e61c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_h_m_c5883___params__t_1a6d90ed07d42f7a12e1521e7ba33e61c4" kindref="member">x_offset</ref>;</highlight></codeline>
+<codeline lineno="145" refid="struct_h_m_c5883___params__t_1a7992a6955dbc5df19ccd1af0b48a7395" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_h_m_c5883___params__t_1a7992a6955dbc5df19ccd1af0b48a7395" kindref="member">y_offset</ref>;</highlight></codeline>
+<codeline lineno="147" refid="struct_h_m_c5883___params__t_1a103291bdcecb0f89ac99bac8df3c29ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_h_m_c5883___params__t_1a103291bdcecb0f89ac99bac8df3c29ad" kindref="member">z_offset</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}<sp/><ref refid="struct_h_m_c5883___params__t" kindref="compound">HMC5883_Params_t</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="class_h_m_c5883" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_h_m_c5883" kindref="compound">HMC5883</ref></highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_m_c5883_1a04e1ea16759ee04852db668e4c5544d9" kindref="member">HMC5883</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_m_c5883_1a4aa5670423715357af2f89420a4a5110" kindref="member">~HMC5883</ref>();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="class_h_m_c5883_1a892d3bef64d8f0274aafc2efe178a168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref><sp/><ref refid="class_h_m_c5883_1a892d3bef64d8f0274aafc2efe178a168" kindref="member">SchPipeId</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="class_h_m_c5883_1a623716e771629940813e166e049ca4a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a9e7147bf0798bb7a3ebd165bdbdf320f" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_PipeId_t</ref><sp/><ref refid="class_h_m_c5883_1a623716e771629940813e166e049ca4a7" kindref="member">CmdPipeId</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Task-related<sp/>*/</highlight></codeline>
+<codeline lineno="168" refid="class_h_m_c5883_1aca6528716b4af270c80a2b54c4db865f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><ref refid="class_h_m_c5883_1aca6528716b4af270c80a2b54c4db865f" kindref="member">uiRunStatus</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Config<sp/>table-related<sp/>*/</highlight></codeline>
+<codeline lineno="172" refid="class_h_m_c5883_1ae4bacb7888e993ed236a75d400f442e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cfe__tbl_8h_1ac0bed00263988e1afca2f147c03bfd03" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_TBL_Handle_t</ref><sp/><ref refid="class_h_m_c5883_1ae4bacb7888e993ed236a75d400f442e4" kindref="member">ConfigTblHdl</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="class_h_m_c5883_1a7a6097f7651bffdf211ea846ebb8443e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_h_m_c5883___config_tbl__t" kindref="compound">HMC5883_ConfigTbl_t</ref>*<sp/><ref refid="class_h_m_c5883_1a7a6097f7651bffdf211ea846ebb8443e" kindref="member">ConfigTblPtr</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="class_h_m_c5883_1ac0beb5f071e8f0f25eab82389dc57517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>PX4_SensorMagMsg_t<sp/><ref refid="class_h_m_c5883_1ac0beb5f071e8f0f25eab82389dc57517" kindref="member">SensorMagMsg</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181" refid="class_h_m_c5883_1aa0158f68a19a72b2b9953130268dd843" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_h_m_c5883___params__t" kindref="compound">HMC5883_Params_t</ref><sp/><ref refid="class_h_m_c5883_1aa0158f68a19a72b2b9953130268dd843" kindref="member">m_Params</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="class_h_m_c5883_1aae979e34abdb3e35d590af1cf9bf29db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_h_m_c5883___hk_tlm__t" kindref="compound">HMC5883_HkTlm_t</ref><sp/><ref refid="class_h_m_c5883_1aae979e34abdb3e35d590af1cf9bf29db" kindref="member">HkTlm</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187" refid="class_h_m_c5883_1a1ed530babf3346401016fb01ca44fb18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_h_m_c5883___diag_packet__t" kindref="compound">HMC5883_DiagPacket_t</ref><sp/><ref refid="class_h_m_c5883_1a1ed530babf3346401016fb01ca44fb18" kindref="member">Diag</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a86f137fdd955b434664aef2bf33c2da5" kindref="member">AppMain</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="class_h_m_c5883_1abe0ffdb0a9b372f95eade53f43f007b9" kindref="member">InitApp</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="class_h_m_c5883_1acea53454a53301ae8c272b16f14cccb7" kindref="member">InitEvent</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1ac0a3dc606f5e50d9464078b4789f0f4c" kindref="member">InitData</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="class_h_m_c5883_1af277c5130af183468b2efd28ff60b6f7" kindref="member">InitPipe</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="class_h_m_c5883_1a38e108076a8dcf74620dc2a72a2e1bf4" kindref="member">RcvSchPipeMsg</ref>(<ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/>iBlocking);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a09196ecb6683566b1d4e1354e28bf0a2" kindref="member">ProcessCmdPipe</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a6f1a607e652f254f0966adb78cc8e1d4" kindref="member">ProcessAppCmds</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref>*<sp/>MsgPtr);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a067b73f3e9c4947c20698f68d66dad0a" kindref="member">ReportHousekeeping</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a8ed1af4f0aca3f0aa9ad2d09b8f12456" kindref="member">SendSensorMagMsg</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a9ca11860c438561f0ec203679ee4c788" kindref="member">SendDiag</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a32a09cf4a7a8fdb63620c807bd8402c9" kindref="member">VerifyCmdLength</ref>(<ref refid="union_c_f_e___s_b___msg__t" kindref="compound" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_Msg_t</ref>*<sp/>MsgPtr,<sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/>usExpectedLen);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a132fa15b431b8afcbf44bd1cef12613f" kindref="member">ReadDevice</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a7b39e5e63689448cea56b1ce2e7255aa" kindref="member">SelfCalibrate</ref>(<ref refid="struct_h_m_c5883___calibration_msg__t" kindref="compound">HMC5883_CalibrationMsg_t</ref><sp/>*Calibration);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a60b7a3909de48dc69fa3807e8c57bfc3" kindref="member">CheckScale</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>X,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Z);</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a6d116b17e9eb18e1bdfbdf386cc3cdc4" kindref="member">CheckOffset</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>X,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Z);</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><sp/><ref refid="class_h_m_c5883_1abb7c5ad0e317fb708bede38ee198e735" kindref="member">InitConfigTbl</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><sp/><ref refid="class_h_m_c5883_1ac17995b520e63837859dc8dd847a0bdc" kindref="member">AcquireConfigPointers</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><sp/><ref refid="class_h_m_c5883_1ae5a32fe09a1fbb19536e9a4475e6b28b" kindref="member">ValidateConfigTbl</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_m_c5883_1a0798aae0d03936e4e332ef48a2e564d3" kindref="member">UpdateParamsFromTable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a5eb512da689eec1a7472ab97e2ab6be3" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">int32</ref><sp/><ref refid="class_h_m_c5883_1a8b064f55eb31db49f808d0d9feae8ae4" kindref="member">UpdateCalibrationValues</ref>(<ref refid="struct_h_m_c5883___set_calibration_cmd__t" kindref="compound">HMC5883_SetCalibrationCmd_t</ref>*<sp/>CalibrationMsgPtr);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight><highlight class="comment">/************************************************************************/</highlight></codeline>
+<codeline lineno="539"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="hmc5883__app_8h_1afb772a0325d80fb2f7a65f5747a15023" kindref="member">HMC5883_CleanupCallback</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HMC5883_APP_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/>End<sp/>of<sp/>File<sp/>Comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight><highlight class="comment">/************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="apps/hmc5883/fsw/src/hmc5883_app.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="sch__tbldefs_8h" kind="file" language="C++">
+    <compoundname>sch_tbldefs.h</compoundname>
+    <innerclass refid="struct_s_c_h___schedule_entry__t" prot="public">SCH_ScheduleEntry_t</innerclass>
+    <innerclass refid="struct_s_c_h___message_entry__t" prot="public">SCH_MessageEntry_t</innerclass>
+    <innerclass refid="struct_s_c_h___activity_deadline_status__t" prot="public">SCH_ActivityDeadlineStatus_t</innerclass>
+    <innerclass refid="struct_s_c_h___slot_deadline_status__t" prot="public">SCH_SlotDeadlineStatus_t</innerclass>
+    <innerclass refid="struct_s_c_h___deadline_table__t" prot="public">SCH_DeadlineTable_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1" prot="public" static="no">
+        <name>SCH_ActivityDeadlineState_t</name>
+        <enumvalue id="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a70e1567e20b1b642bce922a1986fec21" prot="public">
+          <name>SCH_DEADLINE_STATE_UNKNOWN</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a04702c8346bf12bb4c66730a4a91310e" prot="public">
+          <name>SCH_DEADLINE_STATE_PENDED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a0785cd87edaab1809c146a4487e64061" prot="public">
+          <name>SCH_DEADLINE_STATE_IDLE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="apps/sch/fsw/src/sch_tbldefs.h" line="63" column="1" bodyfile="apps/sch/fsw/src/sch_tbldefs.h" bodystart="62" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>$Id:<sp/>sch_tbldefs.h<sp/>1.3<sp/>2017/06/21<sp/>15:29:42EDT<sp/>mdeschu<sp/>Exp<sp/><sp/>$</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/><sp/>Copyright<sp/>(c)<sp/>2007-2014<sp/>United<sp/>States<sp/>Government<sp/>as<sp/>represented<sp/>by<sp/>the<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/><sp/>Administrator<sp/>of<sp/>the<sp/>National<sp/>Aeronautics<sp/>and<sp/>Space<sp/>Administration.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">**<sp/><sp/>All<sp/>Other<sp/>Rights<sp/>Reserved.<sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>was<sp/>created<sp/>at<sp/>NASA&apos;s<sp/>Goddard<sp/>Space<sp/>Flight<sp/>Center.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">**<sp/><sp/>This<sp/>software<sp/>is<sp/>governed<sp/>by<sp/>the<sp/>NASA<sp/>Open<sp/>Source<sp/>Agreement<sp/>and<sp/>may<sp/>be<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">**<sp/><sp/>used,<sp/>distributed<sp/>and<sp/>modified<sp/>only<sp/>pursuant<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>that<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">**<sp/><sp/>agreement.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">**<sp/>Subsystem:<sp/>Scheduler<sp/>(SCH)<sp/>table<sp/>definitions</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**<sp/>Author:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">**<sp/>Notes:</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">**<sp/>Ensure<sp/>that<sp/>&quot;this&quot;<sp/>header<sp/>is<sp/>included<sp/>only<sp/>once</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_sch_tbldefs_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_sch_tbldefs_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">**<sp/>SCH<sp/>table<sp/>structure<sp/>definitions</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">**</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">**<sp/>Schedule<sp/>definition<sp/>table<sp/>entry</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="struct_s_c_h___schedule_entry__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41" refid="struct_s_c_h___schedule_entry__t_1a9b2c423933436be2fd6d9abed47d327f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/><sp/><sp/><sp/><ref refid="struct_s_c_h___schedule_entry__t_1a9b2c423933436be2fd6d9abed47d327f" kindref="member">EnableState</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="struct_s_c_h___schedule_entry__t_1a0d8fe221038749a9195738d49ff6316b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1adde6aaee8457bee49c2a92621fe22b79" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint8</ref><sp/><sp/><sp/><sp/><ref refid="struct_s_c_h___schedule_entry__t_1a0d8fe221038749a9195738d49ff6316b" kindref="member">Type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="struct_s_c_h___schedule_entry__t_1ac9e04865964c229207be4b4b08e3b3c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><ref refid="struct_s_c_h___schedule_entry__t_1ac9e04865964c229207be4b4b08e3b3c5" kindref="member">Frequency</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="struct_s_c_h___schedule_entry__t_1afed927177469e682cd7ac1f0fb18c4d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><ref refid="struct_s_c_h___schedule_entry__t_1afed927177469e682cd7ac1f0fb18c4d9" kindref="member">Remainder</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="struct_s_c_h___schedule_entry__t_1a0e98dbe9de02959165d823371b14cf0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/><ref refid="struct_s_c_h___schedule_entry__t_1a0e98dbe9de02959165d823371b14cf0b" kindref="member">MessageIndex</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="struct_s_c_h___schedule_entry__t_1aad89647f606b4a34a3a91e233c1e4dcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><sp/><sp/><ref refid="struct_s_c_h___schedule_entry__t_1aad89647f606b4a34a3a91e233c1e4dcf" kindref="member">GroupData</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="struct_s_c_h___schedule_entry__t_1aaffee4c57140325e1e27adac325cb486" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><sp/><sp/><ref refid="struct_s_c_h___schedule_entry__t_1aaffee4c57140325e1e27adac325cb486" kindref="member">Deadline</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/><ref refid="struct_s_c_h___schedule_entry__t" kindref="compound">SCH_ScheduleEntry_t</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">**<sp/>Message<sp/>definition<sp/>table<sp/>entry</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="struct_s_c_h___message_entry__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57" refid="struct_s_c_h___message_entry__t_1acabf07c295a2f53d2bbac2af8822d903" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a2e00abb078d312d1d8c4fbcd6be343d8" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint16</ref><sp/><sp/><sp/>MessageBuffer[<ref refid="sch__platform__cfg_8h_1abae40b96462eac577fb95363ee030a38" kindref="member">SCH_MAX_MSG_WORDS</ref>];<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/><ref refid="struct_s_c_h___message_entry__t" kindref="compound">SCH_MessageEntry_t</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64" refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a70e1567e20b1b642bce922a1986fec21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a70e1567e20b1b642bce922a1986fec21" kindref="member">SCH_DEADLINE_STATE_UNKNOWN</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="65" refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a04702c8346bf12bb4c66730a4a91310e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a04702c8346bf12bb4c66730a4a91310e" kindref="member">SCH_DEADLINE_STATE_PENDED</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="66" refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a0785cd87edaab1809c146a4487e64061" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1a0785cd87edaab1809c146a4487e64061" kindref="member">SCH_DEADLINE_STATE_IDLE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}<sp/><ref refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1" kindref="member">SCH_ActivityDeadlineState_t</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="struct_s_c_h___activity_deadline_status__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71" refid="struct_s_c_h___activity_deadline_status__t_1ae8536d7cf922bfc919fc9b121718bcfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cfe__sb_8h_1a213323eb4fb69a395a343ad66045ae74" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">CFE_SB_MsgId_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s_c_h___activity_deadline_status__t_1ae8536d7cf922bfc919fc9b121718bcfc" kindref="member">MsgID</ref>;</highlight></codeline>
+<codeline lineno="72" refid="struct_s_c_h___activity_deadline_status__t_1ac63a1732d8dc2c53c7bd4de9109cf6a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sch__tbldefs_8h_1a8c5a7beaf38fb8f358867eae9323b0c1" kindref="member">SCH_ActivityDeadlineState_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s_c_h___activity_deadline_status__t_1ac63a1732d8dc2c53c7bd4de9109cf6a8" kindref="member">State</ref>;</highlight></codeline>
+<codeline lineno="73" refid="struct_s_c_h___activity_deadline_status__t_1a42c801854b1396ae1453039816dca819" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="common__types_8h_1a9560e25c315bae45d1ed4e2ce49ce55a" kindref="member" external="/home/vagrant/airliner/build/reference/default/docs/html/cfe/detailed_design/cfe.tag">uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s_c_h___activity_deadline_status__t_1a42c801854b1396ae1453039816dca819" kindref="member">OverrunCount</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}<sp/><ref refid="struct_s_c_h___activity_deadline_status__t" kindref="compound">SCH_ActivityDeadlineStatus_t</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="struct_s_c_h___slot_deadline_status__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79" refid="struct_s_c_h___slot_deadline_status__t_1a9ae42d06b924a082195bed006754cdee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s_c_h___activity_deadline_status__t" kindref="compound">SCH_ActivityDeadlineStatus_t</ref><sp/>Status[<ref refid="sch__platform__cfg_8h_1aba7e8394b91d67b79c83eaf6badd6215" kindref="member">SCH_DEADLINES_PER_SLOT</ref>];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}<sp/><ref refid="struct_s_c_h___slot_deadline_status__t" kindref="compound">SCH_SlotDeadlineStatus_t</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="struct_s_c_h___deadline_table__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84" refid="struct_s_c_h___deadline_table__t_1ae96253ef9c62a8f0405ef3ba30e1c3c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_s_c_h___slot_deadline_status__t" kindref="compound">SCH_SlotDeadlineStatus_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Slot[<ref refid="sch__platform__cfg_8h_1a640d7089f602476608c00d5d9b613315" kindref="member">SCH_TOTAL_SLOTS</ref>];</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}<sp/><ref refid="struct_s_c_h___deadline_table__t" kindref="compound">SCH_DeadlineTable_t</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_sch_tbldefs_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="apps/sch/fsw/src/sch_tbldefs.h"/>
+  </compounddef>
+</doxygen>
