@@ -1,6 +1,12 @@
+### Dependencies
+1. `pip3 install sphinx`
+2. `pip3 install breathe`
+3. `pip3 install zerovm-sphinx-theme`
+
+
 ### To build. 
 1. `cd build/reference/default/docs`
-2. `make html`
+2. `make html'
 
 To open up the documentation you can run this command ` xdg-open build/html/index.html `
 
