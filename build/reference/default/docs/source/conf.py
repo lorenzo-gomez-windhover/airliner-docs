@@ -12,7 +12,7 @@
 #
 # import os
 import sys
-import zerovm_sphinx_theme
+import sphinx_bootstrap_theme
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -28,7 +28,7 @@ sys.path.append( "../ext/breathe/" )
 # The full version, including alpha/beta/rc tags
 release = '1.0'
 
-extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe',]
+extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe', "sphinxjp.themes.basicstrap",]
 breathe_projects = { "amc_detailed_design": "../html/apps/amc/detailed_design/xml",
 					"amc__users_guide": "../html/apps/amc/users_guide/xml",
 					"bat__users_guide": "../html/apps/bat/users_guide/xml",
@@ -79,9 +79,9 @@ highlight_language = 'cpp'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme_path = [zerovm_sphinx_theme.theme_path]
-html_theme = 'zerovm'
-print("THE PATH--->",zerovm_sphinx_theme.theme_path )
+html_theme_path = ["sphinx_bootstrap_theme.get_html_theme_path()"]
+html_theme = "bootstrap"
+print("THE PATH--->",sphinx_bootstrap_theme.get_html_theme_path() )
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
