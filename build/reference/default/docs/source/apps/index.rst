@@ -1,5 +1,5 @@
 
-airlner Apps API
+Airlner Apps API
 ================
 Here you can find all of the apps that can be loaded onto airliner.
 
@@ -7,7 +7,7 @@ Here you can find all of the apps that can be loaded onto airliner.
 .. toctree::
    :maxdepth: 1
    :name: toc-app-ref
-   :glob:
+   :hidden:
 
    amc/index
    bat/index

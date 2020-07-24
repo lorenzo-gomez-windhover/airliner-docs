@@ -14,7 +14,7 @@ Welcome to airliner's documentation!
    :caption: Apps reference
    :name: sec-app-ref
 
-   about
+   about/index
    apps/index
 
 Indices and tables

@@ -12,7 +12,7 @@
 #
 # import os
 import sys
-import zerovm_sphinx_theme
+import sphinx_rtd_theme
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -28,7 +28,7 @@ sys.path.append( "../ext/breathe/" )
 # The full version, including alpha/beta/rc tags
 release = '1.0'
 
-extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe',]
+extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe',"sphinx_rtd_theme"]
 breathe_projects = { "amc_detailed_design": "../html/apps/amc/detailed_design/xml",
 					"amc__users_guide": "../html/apps/amc/users_guide/xml",
 					"bat__users_guide": "../html/apps/bat/users_guide/xml",
@@ -79,11 +79,22 @@ highlight_language = 'cpp'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme_path = [zerovm_sphinx_theme.theme_path]
-html_theme = 'zerovm'
-print("THE PATH--->",zerovm_sphinx_theme.theme_path )
-
-
+#html_theme_path = [sphinx_rtd_theme.theme_path]
+#html_theme = "sphinx_rtd_theme"
+#print("THE PATH--->",sphinx_rtd_theme.theme_path )
+html_theme = "sphinx_rtd_theme"
+html_theme_options = {
+    'collapse_navigation': True,
+    'sticky_navigation': False,
+    'navigation_depth': 4,
+    'titles_only': True,
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'logo_only': True,
+    'style_nav_header_background': 'linear-gradient(180deg, #F36F31 20%, #EF402F 80%)'
+     }
+html_logo = "img/WindhoverLabs-Logo-Secondary-White.png"
+html_favicon = "img/index.png"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
