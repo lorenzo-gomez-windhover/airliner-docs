@@ -6,7 +6,7 @@
 
 ### To build. 
 1. `cd build/reference/default/docs`
-2. `make html'
+2. `make html`
 
 To open up the documentation you can run this command ` xdg-open build/html/index.html `
 
