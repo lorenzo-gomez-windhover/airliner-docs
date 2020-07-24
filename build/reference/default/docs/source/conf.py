@@ -13,6 +13,8 @@
 # import os
 import sys
 import zerovm_sphinx_theme
+import airliner_projecs import xml_paths
+
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -29,13 +31,8 @@ sys.path.append( "../ext/breathe/" )
 release = '1.0'
 
 extensions = ['sphinx.ext.imgmath', 'sphinx.ext.todo', 'breathe',]
-breathe_projects = { "amc_detailed_design": "../html/apps/amc/detailed_design/xml",
-					"amc__users_guide": "../html/apps/amc/users_guide/xml",
-					"bat__users_guide": "../html/apps/bat/users_guide/xml",
-					"cf__users_guide": "../html/apps/cf/users_guide/xml",
-					"sch__users_guide": "../html/apps/sch/detailed_design/xml",
-					"lc__detailed_design": "../html/apps/lc/detailed_design/xml"
-					}
+breathe_projects =  xml_paths
+					
 
 # -- General configuration ---------------------------------------------------
 
